@@ -14,7 +14,6 @@ public class DeviceService {
 
     @Transactional
     public void upsert(DeviceRegisterReqDto req) {
-        String platform = (req.platform() == null || req.platform().isBlank()) ? "iOS" : req.platform();
         String appVersion = (req.appVersion() == null || req.appVersion().isBlank()) ? "unknown" : req.appVersion();
 
         // ✅ 1) 같은 토큰이 다른 install_id에 있으면 비활성 처리
@@ -25,24 +24,29 @@ public class DeviceService {
                 req.installId(),
                 req.deviceToken(),
                 req.isNotificationEnabled() ? 1 : 0,
-                platform,
-                appVersion
-        );
+                appVersion);
     }
 
     @Transactional
     public void updateSettings(DeviceSettingsReqDto req) {
-        int updated = deviceQuery.updateSettings(
+        deviceQuery.updateSettings(
                 req.installId(),
-                req.isNotificationEnabled() ? 1 : 0,
-                req.startMinutes(),
-                req.endMinutes(),
-                req.timeZone()
-        );
+                req.isNotificationEnabled() ? 1 : 0);
 
         // ✅ 선택: install_id row가 아직 없으면(=register 안 됨) 업데이트 0건
         // 여기서 에러로 막고 싶으면 예외 던지면 됨.
-        // if (updated == 0) throw new IllegalStateException("device not registered yet: " + req.installId());
+        // if (updated == 0) throw new IllegalStateException("device not registered yet:
+        // " + req.installId());
     }
 
+    @Transactional(readOnly = true)
+    public com.bnz.stepmon.biz.spec.DeviceResDto getDevice(String installId) {
+        return deviceQuery.findById(installId);
+    }
+
+    @Transactional(readOnly = true)
+    public java.util.List<com.bnz.stepmon.biz.spec.DeviceResDto> searchDevices(
+            com.bnz.stepmon.biz.spec.DeviceSearchReqDto req) {
+        return deviceQuery.search(req);
+    }
 }
