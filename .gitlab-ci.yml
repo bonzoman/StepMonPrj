@@ -1,0 +1,14 @@
+# StepMon CI/CD Pipeline
+image: maven:3.9.6-eclipse-temurin-21 # 아까 설정한 JDK 21 빌드 환경
+
+stages:
+  - build
+
+build-job:
+  stage: build
+  script:
+    - echo "StepMon 빌드를 시작합니다..."
+    - mvn clean package -DskipTests
+  artifacts:
+    paths:
+      - target/*.jar
