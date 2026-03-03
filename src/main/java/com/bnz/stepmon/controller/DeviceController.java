@@ -2,11 +2,8 @@ package com.bnz.stepmon.controller;
 
 import com.bnz.stepmon.biz.DeviceService;
 import com.bnz.stepmon.biz.spec.DeviceRegisterReqDto;
-import com.bnz.stepmon.biz.spec.DeviceResDto;
-import com.bnz.stepmon.biz.spec.DeviceSearchReqDto;
 import com.bnz.stepmon.biz.spec.DeviceSettingsReqDto;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -15,27 +12,20 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @Tag(name = "Device", description = "디바이스 등록/설정/조회 API")
 @RestController
-@RequestMapping("/api/device")
 @RequiredArgsConstructor
 public class DeviceController {
 
         private final DeviceService deviceService;
 
         @Operation(summary = "디바이스 토큰 등록/갱신", description = "installId 기준으로 디바이스 토큰을 등록하거나 갱신합니다.")
-        @PostMapping("/register")
+        @PostMapping("/api/device/register")
         public ResponseEntity<?> register(
                         @io.swagger.v3.oas.annotations.parameters.RequestBody(required = true, description = "디바이스 등록 요청 정보", content = @Content(schema = @Schema(implementation = DeviceRegisterReqDto.class), examples = @ExampleObject(name = "iOS 등록 예시", value = """
                                         {
@@ -57,7 +47,7 @@ public class DeviceController {
                         @ApiResponse(responseCode = "400", description = "요청값 검증 실패", content = @Content),
                         @ApiResponse(responseCode = "500", description = "서버 오류", content = @Content)
         })
-        @PostMapping("/settings")
+        @PostMapping("/api/device/settings")
         public ResponseEntity<?> saveSettings(
                         @io.swagger.v3.oas.annotations.parameters.RequestBody(required = true, description = "알림 설정 저장 요청", content = @Content(schema = @Schema(implementation = DeviceSettingsReqDto.class), examples = {
                                         @ExampleObject(name = "한국 사용자 예시", summary = "Asia/Seoul 사용자 설정 예시", value = """
@@ -74,24 +64,11 @@ public class DeviceController {
                 return ResponseEntity.ok().build();
         }
 
-        @Operation(summary = "디바이스 정보 조회", description = "installId를 기반으로 해당 디바이스의 현재 등록 상태 정보를 조회합니다.")
-        @ApiResponses({
-                        @ApiResponse(responseCode = "200", description = "조회 성공", content = @Content(schema = @Schema(implementation = DeviceResDto.class))),
-                        @ApiResponse(responseCode = "404", description = "디바이스 정보 없음", content = @Content)
-        })
-        @GetMapping("/{installId}")
-        public ResponseEntity<DeviceResDto> getDevice(
-                        @Parameter(description = "조회할 기기의 installId", example = "11111111-2222-3333-4444-555555555555") @PathVariable String installId) {
-                DeviceResDto device = deviceService.getDevice(installId);
-                if (device == null) {
-                        return ResponseEntity.notFound().build();
-                }
-                return ResponseEntity.ok(device);
-        }
 
-        @Operation(summary = "디바이스 목록 검색", description = "다양한 조건으로 디바이스 목록을 검색합니다.")
-        @GetMapping("/search")
-        public ResponseEntity<List<DeviceResDto>> search(@ParameterObject DeviceSearchReqDto req) {
-                return ResponseEntity.ok(deviceService.searchDevices(req));
-        }
+
+//        @Operation(summary = "디바이스 목록 검색", description = "다양한 조건으로 디바이스 목록을 검색합니다.")
+//        @PostMapping("/api/device/search")
+//        public ResponseEntity<List<DeviceResDto>> search(@ParameterObject DeviceSearchReqDto req) {
+//                return ResponseEntity.ok(deviceService.searchDevices(req));
+//        }
 }

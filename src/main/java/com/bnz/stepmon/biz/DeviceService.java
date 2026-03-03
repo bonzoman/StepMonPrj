@@ -39,14 +39,15 @@ public class DeviceService {
         // " + req.installId());
     }
 
-    @Transactional(readOnly = true)
-    public com.bnz.stepmon.biz.spec.DeviceResDto getDevice(String installId) {
-        return deviceQuery.findById(installId);
-    }
 
     @Transactional(readOnly = true)
     public java.util.List<com.bnz.stepmon.biz.spec.DeviceResDto> searchDevices(
             com.bnz.stepmon.biz.spec.DeviceSearchReqDto req) {
-        return deviceQuery.search(req);
+        return deviceQuery.searchPaging(req);
+    }
+
+    @Transactional(readOnly = true)
+    public long countDevices(com.bnz.stepmon.biz.spec.DeviceSearchReqDto req) {
+        return deviceQuery.count(req);
     }
 }

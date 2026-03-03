@@ -1,0 +1,168 @@
+<div th:fragment="device-table" class="space-y-4" xmlns:th="http://www.thymeleaf.org">
+
+    <!-- Results Summary & Mobile Info -->
+    <div class="px-6 py-3 bg-slate-50 border-b border-slate-100 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Total Results:</span>
+            <span class="px-2 py-0.5 rounded-md bg-emerald-500 text-white text-xs font-bold shadow-sm"
+                th:text="${totalCount}">0</span>
+        </div>
+        <div class="md:hidden text-[10px] text-slate-400 font-medium italic">
+            * 옆으로 밀어서 더 보기
+        </div>
+    </div>
+
+    <!-- Table Container -->
+    <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse min-w-[800px] md:min-w-full">
+            <thead class="bg-slate-50/50 border-b border-slate-100">
+                <tr>
+                    <th
+                        class="px-4 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400 text-center w-12">
+                        #</th>
+                    <th class="px-6 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400">Install ID /
+                        App</th>
+                    <th class="px-6 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400">Device Token
+                    </th>
+                    <th class="px-6 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400 text-center">알림
+                        / 상태</th>
+                    <th class="px-6 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400">등록일 (현지)</th>
+                    <th class="px-6 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400">마지막 접속 (현지)
+                    </th>
+                    <th class="px-6 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400">푸시 결과</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 bg-white">
+                <!-- No Data -->
+                <tr th:if="${#lists.isEmpty(devices)}">
+                    <td colspan="7" class="px-6 py-20 text-center text-slate-400">
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 opacity-20" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.172 9.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <p class="font-medium">검색 결과가 없습니다.</p>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Data Row -->
+                <tr th:each="device, iterStat : ${devices}" class="hover:bg-slate-50/80 transition-colors group">
+                    <td class="px-4 py-4 text-center">
+                        <span class="text-[11px] font-bold text-slate-400"
+                            th:text="${searchReq.pageNumber * searchReq.pageSize + iterStat.count}">1</span>
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="flex flex-col">
+                            <span class="font-mono text-sm font-bold text-slate-700 cursor-help"
+                                th:title="${device.installId}"
+                                th:text="${#strings.abbreviate(device.installId, 12)}"></span>
+                            <span
+                                class="text-[10px] font-black text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full w-fit mt-1"
+                                th:text="'v' + ${device.appVersion}"></span>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="max-w-[150px] lg:max-w-[300px]">
+                            <span class="font-mono text-[10px] text-slate-500 break-all cursor-help block leading-tight"
+                                th:title="${device.deviceToken}"
+                                th:text="${#strings.abbreviate(device.deviceToken, 60)}"></span>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="flex flex-col items-center space-y-2">
+                            <span th:if="${device.isNotificationEnabled}"
+                                class="px-2 py-0.5 rounded-md text-[9px] font-black bg-blue-50 text-blue-600 border border-blue-100 uppercase">Enabled</span>
+                            <span th:unless="${device.isNotificationEnabled}"
+                                class="px-2 py-0.5 rounded-md text-[9px] font-black bg-slate-100 text-slate-400 uppercase border border-transparent">Disabled</span>
+                            <div
+                                th:class="${device.isActive ? 'h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_4px_rgba(16,185,129,0.5)]' : 'h-2 w-2 rounded-full bg-slate-300'}">
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="text-xs font-medium text-slate-500" th:data-utc="${device.firstSeenAt}"
+                            th:text="${device.firstSeenAt != null ? #temporals.format(device.firstSeenAt, 'MM-dd HH:mm') : '-'}"></span>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="text-xs font-bold text-slate-700" th:data-utc="${device.lastSeenAt}"
+                            th:text="${device.lastSeenAt != null ? #temporals.format(device.lastSeenAt, 'MM-dd HH:mm') : '-'}"></span>
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="flex flex-col">
+                                <span class="text-[9px] font-bold text-slate-300 uppercase">Push</span>
+                                <span class="text-[11px] font-semibold text-slate-500"
+                                    th:text="${device.lastPushAt != null ? #temporals.format(device.lastPushAt, 'HH:mm') : '-'}"></span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[9px] font-bold text-slate-300 uppercase">Fail</span>
+                                <span
+                                    th:class="${device.pushFailCount > 0 ? 'text-[11px] font-black text-red-500' : 'text-[11px] font-semibold text-slate-400'}"
+                                    th:text="${device.pushFailCount}"></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+        th:with="maxPage=${totalCount > 0 ? (totalCount - 1) / searchReq.pageSize : 0}, 
+                  currentPage=${searchReq.pageNumber}">
+
+        <div class="text-[11px] text-slate-400 font-medium">
+            Showing <span class="text-slate-700 font-bold" th:text="${currentPage * searchReq.pageSize + 1}">1</span>
+            to <span class="text-slate-700 font-bold"
+                th:text="${(currentPage + 1) * searchReq.pageSize < totalCount ? (currentPage + 1) * searchReq.pageSize : totalCount}">30</span>
+            of <span class="text-slate-700 font-bold" th:text="${totalCount}">100</span> items
+        </div>
+
+        <div class="flex items-center space-x-1" id="pagination-nav">
+            <!-- First -->
+            <button th:disabled="${currentPage == 0}"
+                class="p-2 rounded-lg bg-white border border-slate-200 text-slate-400 hover:text-emerald-500 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                th:onclick="|document.getElementById('search-page').value=0; document.getElementById('search-form').requestSubmit();|">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path>
+                </svg>
+            </button>
+
+            <!-- Prev -->
+            <button th:disabled="${currentPage == 0}"
+                class="p-2 rounded-lg bg-white border border-slate-200 text-slate-400 hover:text-emerald-500 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                th:onclick="|document.getElementById('search-page').value=${currentPage - 1}; document.getElementById('search-form').requestSubmit();|">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+
+            <!-- Page Info -->
+            <div class="px-4 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-black text-slate-700">
+                <span th:text="${currentPage + 1}">1</span> / <span th:text="${maxPage + 1}">5</span>
+            </div>
+
+            <!-- Next -->
+            <button th:disabled="${currentPage >= maxPage}"
+                class="p-2 rounded-lg bg-white border border-slate-200 text-slate-400 hover:text-emerald-500 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                th:onclick="|document.getElementById('search-page').value=${currentPage + 1}; document.getElementById('search-form').requestSubmit();|">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+
+            <!-- Last -->
+            <button th:disabled="${currentPage >= maxPage}"
+                class="p-2 rounded-lg bg-white border border-slate-200 text-slate-400 hover:text-emerald-500 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                th:onclick="|document.getElementById('search-page').value=${maxPage}; document.getElementById('search-form').requestSubmit();|">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>

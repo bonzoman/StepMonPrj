@@ -8,24 +8,24 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
+@Tag(name = "Apns", description = "Push API")
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/apns")
 public class ApnsController {
 
         private final ApnsService apnsService;
         private final DeviceQuery deviceQuery;
 
-        @PostMapping("/silent")
+        @PostMapping("/apns/silent")
         @Operation(summary = "Silent Push 전송 (단건)", description = "APNs로 background silent push를 단건 전송합니다.")
         public ResponseEntity<?> silent(
                         @io.swagger.v3.oas.annotations.parameters.RequestBody(description = "Silent Push 요청 바디", required = true, content = @Content(schema = @Schema(implementation = SilentPushRequest.class), examples = @ExampleObject(name = "silentExample", value = """

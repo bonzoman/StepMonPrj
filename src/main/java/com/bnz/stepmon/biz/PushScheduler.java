@@ -26,16 +26,16 @@ public class PushScheduler {
     private final AtomicBoolean isRunning = new AtomicBoolean(false);
     // ✅ 최초 1회 실행 확인용 플래그
     private final AtomicBoolean isFirstRun = new AtomicBoolean(true);
-    // 마지막 스케줄러 실행 시각 저장
-    private volatile Instant lastRunTime = Instant.now();
+    // 마지막 스케줄러 실행 시각 저장 (null이면 아직 한 번도 실행 안 됨)
+    private volatile Instant lastRunTime = null;
 
     /**
-     * 매 1분마다 실행
+     * 20분 후 매 1분마다 실행
      * - 발송 대상 기기 조회 후 Silent Push 전송
      * - 성공: last_push_at 갱신
      * - 실패: push_fail_count 증가
      */
-    @Scheduled(fixedDelay = 60_000)
+    @Scheduled(initialDelayString = "PT20M", fixedDelayString = "PT1M")
     public void schedulePush() {
         // 이미 실행 중이면 스킵 (중복 실행 방어)
         if (!isRunning.compareAndSet(false, true)) {
@@ -61,7 +61,7 @@ public class PushScheduler {
             log.info("[PushScheduler] 배치 완료 ✅✅✅");
         } catch (Exception e) {
             log.error("[PushScheduler] 배치 오류", e);
-            myTelegramBot.send("🚨 [PushScheduler] 배치 오류 발생: " + e.getMessage());
+            myTelegramBot.send("🚨 [PushScheduler] 배치 오류 발생: " + getErrorMessage(e));
         } finally {
             isRunning.set(false); // 플래그 반납
         }
@@ -72,8 +72,14 @@ public class PushScheduler {
      * 만약 메인 스케줄러(schedulePush)가 3분 이상 실행되지 않았다면
      * 런타임 예외 등으로 스레드가 멈춘 것으로 간주하고 강제로 일깨움
      */
-    @Scheduled(fixedRate = 300_000)
+    @Scheduled(initialDelayString = "PT25M", fixedDelayString = "PT5M")
     public void healthCheckAndRecover() {
+        // 메인 스케줄러가 한 번도 실행되지 않았다면 경보를 울리지 않음
+        if (lastRunTime == null) {
+            log.debug("[PushScheduler-Monitor] ✅ 메인 스케줄러 대기 중 (initialDelay 기간)");
+            return;
+        }
+
         long minutesSinceLastRun = ChronoUnit.MINUTES.between(lastRunTime, Instant.now());
 
         if (minutesSinceLastRun >= 3) {
@@ -85,5 +91,25 @@ public class PushScheduler {
         } else {
             log.debug("[PushScheduler-Monitor] ✅ 메인 스케줄러 정상 동작 중 (마지막 실행: {}분 전)", minutesSinceLastRun);
         }
+    }
+
+    /**
+     * 예외 객체에서 실질적인 에러 메시지를 추출 (재귀적으로 Cause 탐색)
+     */
+    private String getErrorMessage(Throwable e) {
+        if (e == null) {
+            return "알 수 없는 오류";
+        }
+
+        String msg = e.getMessage();
+        if (msg != null && !msg.trim().isEmpty()) {
+            return msg;
+        }
+
+        if (e.getCause() != null) {
+            return getErrorMessage(e.getCause());
+        }
+
+        return e.toString();
     }
 }

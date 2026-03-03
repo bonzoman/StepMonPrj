@@ -19,6 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 @Slf4j
 @Service
@@ -89,9 +91,27 @@ public class ApnsService {
             futures.add(future);
         }
 
-        // 모든 푸시 발송 완료 대기 및 결과 수집
+        // 모든 푸시 발송 완료 대기 (최대 2분 타임아웃 설정)
+        try {
+            CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]))
+                    .get(2, TimeUnit.MINUTES);
+        } catch (TimeoutException e) {
+            log.warn("[배치] 전체 푸시 발송 대기 중 타임아웃 발생 (2분 경과). 완료된 건만 처리합니다.");
+        } catch (Exception e) {
+            log.error("[배치] 푸시 결과 수집 중 예외 발생", e);
+        }
+
+        // 결과 수집 (완료된 것만 추출)
         List<PushResult> results = futures.stream()
-                .map(CompletableFuture::join)
+                .filter(CompletableFuture::isDone)
+                .map(f -> {
+                    try {
+                        return f.getNow(new PushResult(null, false));
+                    } catch (Exception e) {
+                        return new PushResult(null, false);
+                    }
+                })
+                .filter(r -> r.token() != null)
                 .toList();
 
         List<String> successTokens = results.stream()
