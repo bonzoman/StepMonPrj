@@ -1,14 +1,17 @@
-# StepMon CI/CD Pipeline
-image: maven:3.9.6-eclipse-temurin-21 # 아까 설정한 JDK 21 빌드 환경
-
 stages:
-  - build
+  - deploy
 
-build-job:
-  stage: build
+deploy-job:
+  stage: deploy
   script:
-    - echo "StepMon 빌드를 시작합니다..."
-    - mvn clean package -DskipTests
-  artifacts:
-    paths:
-      - target/*.jar
+    - docker build -t stepmon-api .
+    # 이미 실행 중인 컨테이너가 있으면 강제로 삭제 (없어도 에러 무시)
+    - docker rm -f stepmon-api || true
+    - docker run -d --name stepmon-api \
+      --network mysql_default \
+      -e SPRING_DATASOURCE_PASSWORD="${DB_PASS_VAR}" \
+      -e SERVER_PORT=5555 \
+      -p 5555:5555 \
+      -v /home/ubuntu/stepmon/keys:/keys \
+      --restart always \
+      stepmon-api

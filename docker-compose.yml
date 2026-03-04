@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  stepmon-api:
+    build: .
+    container_name: stepmon-api
+    networks:
+      - mysql_default
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/g2mDB?serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=g2m
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASS_VAR}
+      - SERVER_PORT=5555
+    ports:
+      - "5555:5555"
+    volumes:
+      - /home/ubuntu/stepmon/keys:/keys
+    restart: always
+
+networks:
+  mysql_default:
+    external: true
