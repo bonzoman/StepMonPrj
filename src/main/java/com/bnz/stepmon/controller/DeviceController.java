@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@Tag(name = "Device", description = "디바이스 등록/설정/조회 API.")
+@Tag(name = "Device", description = "디바이스 등록/설정/조회 API..")
 @RestController
 @RequiredArgsConstructor
 public class DeviceController {
