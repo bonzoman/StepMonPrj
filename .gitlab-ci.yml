@@ -9,11 +9,12 @@ deploy-job:
     - docker build -t stepmon-api .
     # 이미 실행 중인 컨테이너가 있으면 강제로 삭제 (없어도 에러 무시.)
     - docker rm -f stepmon-api || true
-    - docker run -d --name stepmon-api \
-      --network mysql_default \
-      -e SPRING_DATASOURCE_PASSWORD="${DB_PASS_VAR}" \
-      -e SERVER_PORT=5555 \
-      -p 5555:5555 \
-      -v /home/ubuntu/stepmon/keys:/keys \
-      --restart always \
+    - >
+      docker run -d --name stepmon-api
+      --network mysql_default
+      -e SPRING_DATASOURCE_PASSWORD="${DB_PASS_VAR}"
+      -e SERVER_PORT=5555
+      -p 5555:5555
+      -v /home/ubuntu/stepmon/keys:/keys
+      --restart always
       stepmon-api
