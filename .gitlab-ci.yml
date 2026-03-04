@@ -7,7 +7,7 @@ deploy-job:
   stage: deploy
   script:
     - docker build -t stepmon-api .
-    # 이미 실행 중인 컨테이너가 있으면 강제로 삭제 (없어도 에러 무시)
+    # 이미 실행 중인 컨테이너가 있으면 강제로 삭제 (없어도 에러 무시.)
     - docker rm -f stepmon-api || true
     - docker run -d --name stepmon-api \
       --network mysql_default \
