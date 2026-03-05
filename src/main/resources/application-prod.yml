@@ -1,5 +1,6 @@
 server:
   port: 5555
+  forward-headers-strategy: native
 
 spring:
   datasource:

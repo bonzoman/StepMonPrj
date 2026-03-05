@@ -15,9 +15,14 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
-        // 간단버전
-        http.csrf((csrfConfig) -> csrfConfig.disable()) // csrf 비활성화를 하지 않음
-                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll()); // 인증없이 모든 요청 접근 가능
+        http
+                .csrf(csrf -> csrf.disable()) // HTTPS 환경에서 POST 요청이 차단되지 않도록 CSRF 비활성화
+                .authorizeHttpRequests(auth -> auth
+                        .anyRequest().permitAll() // 현재 모든 요청 허용 상태 유지
+                )
+                .headers(headers -> headers
+                        .frameOptions(frame -> frame.sameOrigin()) // H2 콘솔이나 iFrame 사용 대비
+                );
 
         // 다른버전
         // @see
