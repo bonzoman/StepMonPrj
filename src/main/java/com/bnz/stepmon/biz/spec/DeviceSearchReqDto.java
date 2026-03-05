@@ -25,18 +25,6 @@ public class DeviceSearchReqDto {
         @Schema(description = "활성 상태 여부", example = "true")
         private Boolean isActive;
 
-        @Schema(description = "최초 등록 시작일", example = "2024-01-01T00:00:00Z")
-        private String firstSeenStart;
-
-        @Schema(description = "최초 등록 종료일", example = "2024-12-31T23:59:59Z")
-        private String firstSeenEnd;
-
-        @Schema(description = "마지막 접속 시작일", example = "2024-01-01T00:00:00Z")
-        private String lastSeenStart;
-
-        @Schema(description = "마지막 접속 종료일", example = "2024-12-31T23:59:59Z")
-        private String lastSeenEnd;
-
         @JsonProperty("pageNumber")
         @Schema(description = "페이지 번호 (0부터 시작)", example = "0")
         private Integer page;

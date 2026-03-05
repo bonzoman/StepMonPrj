@@ -131,7 +131,8 @@ public interface DeviceQuery {
                     deactivated_at      as deactivatedAt,
                     deactivated_reason  as deactivatedReason,
                     first_seen_at       as firstSeenAt,
-                    last_seen_at        as lastSeenAt
+                    last_seen_at        as lastSeenAt,
+                    time_zone           as timezone
                 FROM device_registration
                 <where>
                     <if test="installId != null and installId != ''">
@@ -171,24 +172,12 @@ public interface DeviceQuery {
                     <if test="isActive != null">
                         AND is_active = #{isActive}
                     </if>
-                    <if test="firstSeenStart != null and firstSeenStart != ''">
-                        AND first_seen_at &gt;= #{firstSeenStart}
-                    </if>
-                    <if test="firstSeenEnd != null and firstSeenEnd != ''">
-                        AND first_seen_at &lt;= #{firstSeenEnd}
-                    </if>
-                    <if test="lastSeenStart != null and lastSeenStart != ''">
-                        AND last_seen_at &gt;= #{lastSeenStart}
-                    </if>
-                    <if test="lastSeenEnd != null and lastSeenEnd != ''">
-                        AND last_seen_at &lt;= #{lastSeenEnd}
-                    </if>
                 </where>
                 </script>
             """)
     long count(com.bnz.stepmon.biz.spec.DeviceSearchReqDto req);
 
-    // ✅ 검색 조회 (페이징 및 날짜 필터 강화)
+    // ✅ 검색 조회 (페이징 및 날짜 필터 제거됨)
     @Select("""
                 <script>
                 SELECT
@@ -202,7 +191,8 @@ public interface DeviceQuery {
                     deactivated_at      as deactivatedAt,
                     deactivated_reason  as deactivatedReason,
                     first_seen_at       as firstSeenAt,
-                    last_seen_at        as lastSeenAt
+                    last_seen_at        as lastSeenAt,
+                    time_zone           as timezone
                 FROM device_registration
                 <where>
                     <if test="installId != null and installId != ''">
@@ -216,18 +206,6 @@ public interface DeviceQuery {
                     </if>
                     <if test="isActive != null">
                         AND is_active = #{isActive}
-                    </if>
-                    <if test="firstSeenStart != null and firstSeenStart != ''">
-                        AND first_seen_at &gt;= #{firstSeenStart}
-                    </if>
-                    <if test="firstSeenEnd != null and firstSeenEnd != ''">
-                        AND first_seen_at &lt;= #{firstSeenEnd}
-                    </if>
-                    <if test="lastSeenStart != null and lastSeenStart != ''">
-                        AND last_seen_at &gt;= #{lastSeenStart}
-                    </if>
-                    <if test="lastSeenEnd != null and lastSeenEnd != ''">
-                        AND last_seen_at &lt;= #{lastSeenEnd}
                     </if>
                 </where>
                 ORDER BY last_seen_at DESC

@@ -24,11 +24,12 @@
                         App</th>
                     <th class="px-6 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400">Device Token
                     </th>
-                    <th class="px-6 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400 text-center">알림
-                        / 상태</th>
-                    <th class="px-6 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400">등록일 (현지)</th>
-                    <th class="px-6 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400">마지막 접속 (현지)
-                    </th>
+                    <th
+                        class="px-6 py-4 text-center text-[10px] font-black uppercase tracking-wider text-slate-400 w-24">
+                        알림 / 상태</th>
+                    <th class="px-6 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400">등록 / 마지막 접속
+                        (현지)</th>
+                    <th class="px-6 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400">타임존</th>
                     <th class="px-6 py-4 text-[10px] font-black uppercase tracking-wider text-slate-400">푸시 결과</th>
                 </tr>
             </thead>
@@ -81,12 +82,23 @@
                         </div>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                        <span class="text-xs font-medium text-slate-500" th:data-utc="${device.firstSeenAt}"
-                            th:text="${device.firstSeenAt != null ? #temporals.format(device.firstSeenAt, 'MM-dd HH:mm') : '-'}"></span>
+                        <div class="flex flex-col space-y-1">
+                            <div class="flex items-center space-x-1">
+                                <span class="text-[9px] font-black text-slate-300 uppercase w-8">Reg</span>
+                                <span class="text-[11px] font-medium text-slate-500" th:data-utc="${device.firstSeenAt}"
+                                    th:text="${device.firstSeenAt != null ? #temporals.format(device.firstSeenAt, 'MM-dd HH:mm') : '-'}"></span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <span class="text-[9px] font-black text-emerald-300 uppercase w-8">Last</span>
+                                <span class="text-[11px] font-bold text-slate-700" th:data-utc="${device.lastSeenAt}"
+                                    th:text="${device.lastSeenAt != null ? #temporals.format(device.lastSeenAt, 'MM-dd HH:mm') : '-'}"></span>
+                            </div>
+                        </div>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                        <span class="text-xs font-bold text-slate-700" th:data-utc="${device.lastSeenAt}"
-                            th:text="${device.lastSeenAt != null ? #temporals.format(device.lastSeenAt, 'MM-dd HH:mm') : '-'}"></span>
+                        <span
+                            class="text-[10px] font-bold text-slate-400 bg-slate-50 px-2 py-1 rounded-md border border-slate-100"
+                            th:text="${device.timezone != null ? device.timezone : '-'}">Asia/Seoul</span>
                     </td>
                     <td class="px-6 py-4">
                         <div class="flex items-center space-x-3">

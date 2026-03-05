@@ -42,9 +42,14 @@
                 StepMon Admin
             </h1>
             <div class="flex items-center space-x-4">
-                <span class="text-sm font-medium text-slate-500">Device Management</span>
-                <div
-                    class="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">
+                <select id="global-timezone" class="text-xs font-bold bg-white/50 border border-slate-200 rounded-lg px-2 py-1 outline-none focus:border-emerald-500 transition-all text-slate-600">
+                    <option value="UTC">UTC (Standard)</option>
+                    <option value="Asia/Seoul" selected>Asia/Seoul (KST)</option>
+                    <option value="America/New_York">America/New_York (EST/EDT)</option>
+                    <option value="Europe/London">Europe/London (GMT/BST)</option>
+                    <option value="Asia/Tokyo">Asia/Tokyo (JST)</option>
+                </select>
+                <div class="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">
                     A</div>
             </div>
         </div>
@@ -111,32 +116,6 @@
                         </select>
                     </div>
 
-                    <!-- 시간 범위 검색 -->
-                    <div class="space-y-1">
-                        <label class="text-xs font-bold text-slate-500 ml-1 uppercase">최초 등록일 범위</label>
-                        <div class="flex items-center space-x-2">
-                            <input
-                                class="flex-1 px-3 py-2 rounded-xl bg-slate-50 border-transparent text-xs text-slate-700 outline-none focus:bg-white focus:border-emerald-500 transition-all"
-                                name="firstSeenStart" th:value="${searchReq.firstSeenStart}" type="date">
-                            <span class="text-slate-300">~</span>
-                            <input
-                                class="flex-1 px-3 py-2 rounded-xl bg-slate-50 border-transparent text-xs text-slate-700 outline-none focus:bg-white focus:border-emerald-500 transition-all"
-                                name="firstSeenEnd" th:value="${searchReq.firstSeenEnd}" type="date">
-                        </div>
-                    </div>
-
-                    <div class="space-y-1">
-                        <label class="text-xs font-bold text-slate-500 ml-1 uppercase">마지막 접속일 범위</label>
-                        <div class="flex items-center space-x-2">
-                            <input
-                                class="flex-1 px-3 py-2 rounded-xl bg-slate-50 border-transparent text-xs text-slate-700 outline-none focus:bg-white focus:border-emerald-500 transition-all"
-                                name="lastSeenStart" th:value="${searchReq.lastSeenStart}" type="date">
-                            <span class="text-slate-300">~</span>
-                            <input
-                                class="flex-1 px-3 py-2 rounded-xl bg-slate-50 border-transparent text-xs text-slate-700 outline-none focus:bg-white focus:border-emerald-500 transition-all"
-                                name="lastSeenEnd" th:value="${searchReq.lastSeenEnd}" type="date">
-                        </div>
-                    </div>
 
                     <div class="space-y-1">
                         <label class="text-xs font-bold text-slate-500 ml-1 uppercase" for="size">표시 건수</label>
@@ -208,8 +187,9 @@
     </footer>
 
     <script>
-        // UTC -> Local Time 변환 함수
+        // UTC -> 선택된 타임존 시간 변환 함수
         function convertUtcToLocal() {
+            const tz = document.getElementById('global-timezone').value;
             document.querySelectorAll('[data-utc]').forEach(el => {
                 const utcStr = el.getAttribute('data-utc');
                 if (!utcStr || utcStr === 'null') return;
@@ -218,12 +198,14 @@
                     const date = new Date(utcStr);
                     if (isNaN(date.getTime())) return;
 
-                    const options = {
+                    const formatter = new Intl.DateTimeFormat('ko-KR', {
                         year: 'numeric', month: '2-digit', day: '2-digit',
                         hour: '2-digit', minute: '2-digit', second: '2-digit',
-                        hour12: false
-                    };
-                    el.innerText = date.toLocaleString('ko-KR', options);
+                        hour12: false,
+                        timeZone: tz
+                    });
+                    
+                    el.innerText = formatter.format(date);
                 } catch (e) {
                     console.error('Time conversion error:', e);
                 }
@@ -239,10 +221,13 @@
         document.addEventListener('DOMContentLoaded', function () {
             convertUtcToLocal();
 
+            // 타임존 변경 시 즉시 변환
+            document.getElementById('global-timezone').addEventListener('change', convertUtcToLocal);
+
             // 검색 버튼 클릭 시 0페이지로 리셋
             const searchForm = document.getElementById('search-form');
             if (searchForm) {
-                // 모든 input/select 변경 시 페이지를 0으로 리셋 (단, page hidden input은 제외)
+                // 모든 input/select 변경 시 페이지를 0으로 리셋 (단, page/timezone hidden input은 제외)
                 searchForm.querySelectorAll('input:not(#search-page), select').forEach(el => {
                     el.addEventListener('change', () => {
                         document.getElementById('search-page').value = 0;
