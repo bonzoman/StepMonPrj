@@ -28,7 +28,7 @@ apns:
   key-id: "M48CNFDVZQ"
   p8-path: "keys/AuthKey_M48CNFDVZQ.p8"
   topic: "com.bnz.StepMon"
-  use-sandbox: false
+  use-sandbox: true
 
 logging:
   level:
