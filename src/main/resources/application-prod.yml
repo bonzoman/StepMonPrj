@@ -26,7 +26,7 @@ telegram:
 apns:
   team-id: "6N5396RU93"
   key-id: "M48CNFDVZQ"
-  p8-path: "/keys/AuthKey_M48CNFDVZQ.p8"
+  p8-path: "keys/AuthKey_M48CNFDVZQ.p8"
   topic: "com.bnz.StepMon"
   use-sandbox: false
 
