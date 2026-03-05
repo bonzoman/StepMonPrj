@@ -10,8 +10,8 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 @Component
 public class MyTelegramBot extends TelegramLongPollingBot {
 
-    // 테스트용 채팅 ID (원하시는 실제 채팅 ID로 바꿔주세요)
-    private static final String TEST_CHAT_ID = "-1001163615391";
+    @Value("${telegram.chat.id}")
+    private String chatId;
     @Value("${telegram.bot.username}")
     private String botUsername;
 
@@ -41,7 +41,7 @@ public class MyTelegramBot extends TelegramLongPollingBot {
     // @PostConstruct
     public void send(String text) {
         SendMessage msg = SendMessage.builder()
-                .chatId(TEST_CHAT_ID)
+                .chatId(chatId)
                 .text(text)
                 .build();
         try {

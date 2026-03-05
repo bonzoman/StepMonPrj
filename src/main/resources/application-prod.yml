@@ -17,10 +17,11 @@ mybatis:
 
 telegram:
   bot:
-    token: ${TELEGRAM_BOT_TOKEN:777630358:AAElntpm3KBBIshGfBMqL_65VYKqbX3Xn-I}
-    username: bzNotiTestBot
+    token: ${TELEGRAM_BOT_TOKEN:705235033:AAGj-wAEDiRf4APwWyjXRtx9aq_A6MafvHs}
+    username: bzNotiBot
   chat:
-    id: -1001163615391
+    # @stepmonxyz 채널
+    id: -1003320387761
 
 apns:
   team-id: "6N5396RU93"
