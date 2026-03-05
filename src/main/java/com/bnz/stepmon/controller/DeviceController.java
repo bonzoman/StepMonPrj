@@ -32,7 +32,9 @@ public class DeviceController {
                                           "installId": "11111111-2222-3333-4444-555555555555",
                                           "deviceToken": "abcd1234ef567890abcd1234ef567890",
                                           "isNotificationEnabled": true,
-                                          "platform": "iOS",
+                                          "startMinutes": 480,
+                                          "endMinutes": 1320,
+                                          "timeZone": "Asia/Seoul",
                                           "appVersion": "1.0.0",
                                           "sentAt": "2026-02-16T12:00:00Z"
                                         }
@@ -54,6 +56,9 @@ public class DeviceController {
                                                         {
                                                           "installId": "123e4567-e89b-12d3-a456-426614174000",
                                                           "isNotificationEnabled": true,
+                                                          "startMinutes": 480,
+                                                          "endMinutes": 1320,
+                                                          "timeZone": "Asia/Seoul",
                                                           "sentAt": "2026-02-16T11:32:00Z"
                                                         }
                                                         """)
@@ -64,11 +69,10 @@ public class DeviceController {
                 return ResponseEntity.ok().build();
         }
 
-
-
-//        @Operation(summary = "디바이스 목록 검색", description = "다양한 조건으로 디바이스 목록을 검색합니다.")
-//        @PostMapping("/api/device/search")
-//        public ResponseEntity<List<DeviceResDto>> search(@ParameterObject DeviceSearchReqDto req) {
-//                return ResponseEntity.ok(deviceService.searchDevices(req));
-//        }
+        // @Operation(summary = "디바이스 목록 검색", description = "다양한 조건으로 디바이스 목록을 검색합니다.")
+        // @PostMapping("/api/device/search")
+        // public ResponseEntity<List<DeviceResDto>> search(@ParameterObject
+        // DeviceSearchReqDto req) {
+        // return ResponseEntity.ok(deviceService.searchDevices(req));
+        // }
 }

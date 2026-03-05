@@ -7,9 +7,12 @@ import java.time.OffsetDateTime;
 
 @Builder
 public record DeviceRegisterReqDto(
-        @NotBlank String installId,
-        @NotBlank String deviceToken,
-        @NotNull Boolean isNotificationEnabled,
-        String appVersion,
-        OffsetDateTime sentAt) {
+                @NotBlank String installId,
+                @NotBlank String deviceToken,
+                @NotNull Boolean isNotificationEnabled,
+                Integer startMinutes,
+                Integer endMinutes,
+                String timeZone,
+                String appVersion,
+                OffsetDateTime sentAt) {
 }

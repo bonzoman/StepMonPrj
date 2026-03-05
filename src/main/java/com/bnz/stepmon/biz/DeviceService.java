@@ -24,6 +24,9 @@ public class DeviceService {
                 req.installId(),
                 req.deviceToken(),
                 req.isNotificationEnabled() ? 1 : 0,
+                req.startMinutes(),
+                req.endMinutes(),
+                req.timeZone(),
                 appVersion);
     }
 
@@ -31,14 +34,16 @@ public class DeviceService {
     public void updateSettings(DeviceSettingsReqDto req) {
         deviceQuery.updateSettings(
                 req.installId(),
-                req.isNotificationEnabled() ? 1 : 0);
+                req.isNotificationEnabled() ? 1 : 0,
+                req.startMinutes(),
+                req.endMinutes(),
+                req.timeZone());
 
         // ✅ 선택: install_id row가 아직 없으면(=register 안 됨) 업데이트 0건
         // 여기서 에러로 막고 싶으면 예외 던지면 됨.
         // if (updated == 0) throw new IllegalStateException("device not registered yet:
         // " + req.installId());
     }
-
 
     @Transactional(readOnly = true)
     public java.util.List<com.bnz.stepmon.biz.spec.DeviceResDto> searchDevices(
