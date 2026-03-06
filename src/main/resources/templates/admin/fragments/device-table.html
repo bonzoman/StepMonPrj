@@ -7,13 +7,18 @@
             <span class="px-2 py-0.5 rounded-md bg-emerald-500 text-white text-xs font-bold shadow-sm"
                 th:text="${totalCount}">0</span>
         </div>
-        <div class="md:hidden text-[10px] text-slate-400 font-medium italic">
-            * 옆으로 밀어서 더 보기
+        <div
+            class="md:hidden flex items-center space-x-1.5 text-[10px] text-emerald-600 font-bold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100 animate-pulse">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+            <span>옆으로 밀어서 더 보기</span>
         </div>
     </div>
 
     <!-- Table Container -->
-    <div class="overflow-x-auto">
+    <div class="overflow-x-auto" style="-webkit-overflow-scrolling: touch;">
         <table class="w-full text-left border-collapse min-w-[800px] md:min-w-full">
             <thead class="bg-slate-50/50 border-b border-slate-100">
                 <tr>
@@ -105,6 +110,7 @@
                             <div class="flex flex-col">
                                 <span class="text-[9px] font-bold text-slate-300 uppercase">Push</span>
                                 <span class="text-[11px] font-semibold text-slate-500"
+                                    th:data-utc="${device.lastPushAt}"
                                     th:text="${device.lastPushAt != null ? #temporals.format(device.lastPushAt, 'HH:mm') : '-'}"></span>
                             </div>
                             <div class="flex flex-col">
