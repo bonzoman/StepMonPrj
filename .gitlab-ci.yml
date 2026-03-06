@@ -18,6 +18,7 @@ deploy-job:
       docker run -d --name stepmon-api
       --network mysql_default
       -e SPRING_DATASOURCE_PASSWORD="${DB_PASS_VAR}"
+      -e TELEGRAM_BOT_TOKEN="${TELEGRAM_BOT_TOKEN}"
       -e SERVER_PORT=5555
       -p 5555:5555
       -v /home/ubuntu/stepmon/keys:/keys

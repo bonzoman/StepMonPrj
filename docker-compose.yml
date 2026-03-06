@@ -9,6 +9,7 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/g2mDB?serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
       - SPRING_DATASOURCE_USERNAME=g2m
       - SPRING_DATASOURCE_PASSWORD=${DB_PASS_VAR}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
       - SERVER_PORT=5555
     ports:
       - "5555:5555"

@@ -20,7 +20,7 @@ mybatis:
 
 telegram:
   bot:
-    token: ${TELEGRAM_BOT_TOKEN:705235033:AAGj-wAEDiRf4APwWyjXRtx9aq_A6MafvHs}
+    token: ${TELEGRAM_BOT_TOKEN}
     username: bzNotiBot
   chat:
     # @stepmonxyz 채널
@@ -33,7 +33,3 @@ apns:
   topic: "com.bnz.StepMon"
   use-sandbox: true
 
-logging:
-  level:
-    root: INFO
-    com.bnz: DEBUG
