@@ -18,38 +18,23 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable()) // HTTPS 환경에서 POST 요청이 차단되지 않도록 CSRF 비활성화
                 .authorizeHttpRequests(auth -> auth
-                        .anyRequest().permitAll() // 현재 모든 요청 허용 상태 유지
+                        .requestMatchers("/login", "/css/**", "/js/**", "/images/**", "/webjars/**", "/favicon.ico").permitAll()
+                        .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll() // Swagger 허용
+                        .anyRequest().authenticated() // 그 외 모든 요청은 인증 필요
+                )
+                .formLogin(form -> form
+                        .loginPage("/login")
+                        .defaultSuccessUrl("/", true)
+                        .permitAll()
+                )
+                .logout(logout -> logout
+                        .logoutUrl("/logout")
+                        .logoutSuccessUrl("/login?logout")
+                        .permitAll()
                 )
                 .headers(headers -> headers
                         .frameOptions(frame -> frame.sameOrigin()) // H2 콘솔이나 iFrame 사용 대비
                 );
-
-        // 다른버전
-        // @see
-        // https://velog.io/@woosim34/Spring-Spring-Security-설정-및-구현SessionSpring-boot3.0-이상
-
-        // http
-        // .csrf((csrfConfig) -> csrfConfig.disable()) // 1번
-        // .csrf(AbstractHttpConfigurer::disable) // 1번(Lambda)
-        // .headers((headerConfig) -> headerConfig.frameOptions(frameOptionsConfig ->
-        // frameOptionsConfig.disable()))// 2번
-        // .headers((headerConfig) ->
-        // headerConfig.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable))//
-        // 2번(Lambda)
-        // .authorizeHttpRequests((auth) ->
-        // auth
-        // .requestMatchers(PathRequest.toH2Console()).permitAll()
-        // .requestMatchers("/**").permitAll()
-        // .requestMatchers("/", "/v3/**","/swagger-ui/**","/login/**").permitAll()
-        // .requestMatchers("/posts/**", "/api/v1/posts/**").hasRole(Role.USER.name())
-        // .requestMatchers("/admins/**",
-        // "/api/v1/admins/**").hasRole(Role.ADMIN.name())
-        // .anyRequest().authenticated()
-        // )// 3번
-        // .exceptionHandling((exceptionConfig) ->
-        // exceptionConfig.authenticationEntryPoint(unauthorizedEntryPoint).accessDeniedHandler(accessDeniedHandler)
-        // ) // 401 403 관련 예외처리
-        ;
 
         return http.build();
     }

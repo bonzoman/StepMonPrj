@@ -47,9 +47,16 @@
                     <option value="Europe/London">Europe/London (GMT/BST)</option>
                     <option value="Asia/Tokyo">Asia/Tokyo (JST)</option>
                 </select>
-                <div
-                    class="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">
-                    A</div>
+                <div class="flex items-center space-x-2">
+                    <div
+                        class="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">
+                        A</div>
+                    <form th:action="@{/logout}" method="post" class="inline">
+                        <button type="submit" class="text-xs font-bold text-slate-500 hover:text-slate-800 transition-colors">
+                            로그아웃
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </nav>
