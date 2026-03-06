@@ -10,7 +10,6 @@ services:
       - SPRING_DATASOURCE_USERNAME=g2m
       - SPRING_DATASOURCE_PASSWORD=${DB_PASS_VAR}
       - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
-      - TZ=Asia/Seoul
       - SERVER_PORT=5555
     ports:
       - "5555:5555"
