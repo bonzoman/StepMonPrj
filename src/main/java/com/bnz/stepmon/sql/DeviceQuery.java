@@ -220,11 +220,13 @@ public interface DeviceQuery {
                     install_id      as installId,
                     device_token    as deviceToken
                 FROM device_registration
-                      WHERE is_active = 1
-                        AND is_notification_enabled = 1
-                        AND push_fail_count < 5
-                        AND (last_push_at IS NULL OR last_push_at <= UTC_TIMESTAMP(3) - INTERVAL 20 MINUTE)
-                        AND last_seen_at >= UTC_TIMESTAMP(3) - INTERVAL 30 DAY
+                WHERE is_active = 1
+                  AND is_notification_enabled = 1
+                  AND push_fail_count < 5
+                  AND (last_push_at IS NULL OR last_push_at <= UTC_TIMESTAMP(3) - INTERVAL 20 MINUTE)
+                  AND last_seen_at >= UTC_TIMESTAMP(3) - INTERVAL 30 DAY
+                  AND (HOUR(CONVERT_TZ(UTC_TIMESTAMP(), 'UTC', time_zone)) * 60 + MINUTE(CONVERT_TZ(UTC_TIMESTAMP(), 'UTC', time_zone)))
+                      BETWEEN start_minutes AND end_minutes
             """)
     List<PushTargetDto> findPushTargets();
 }
