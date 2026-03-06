@@ -21,15 +21,12 @@
         }
 
         .htmx-indicator {
-            display: none;
+            display: none !important;
         }
 
+        .htmx-request.htmx-indicator,
         .htmx-request .htmx-indicator {
-            display: inline-block;
-        }
-
-        .htmx-request.htmx-indicator {
-            display: inline-block;
+            display: flex !important;
         }
     </style>
 </head>
@@ -42,14 +39,16 @@
                 StepMon Admin
             </h1>
             <div class="flex items-center space-x-4">
-                <select id="global-timezone" class="text-xs font-bold bg-white/50 border border-slate-200 rounded-lg px-2 py-1 outline-none focus:border-emerald-500 transition-all text-slate-600">
+                <select id="global-timezone"
+                    class="text-xs font-bold bg-white/50 border border-slate-200 rounded-lg px-2 py-1 outline-none focus:border-emerald-500 transition-all text-slate-600">
                     <option value="UTC">UTC (Standard)</option>
                     <option value="Asia/Seoul" selected>Asia/Seoul (KST)</option>
                     <option value="America/New_York">America/New_York (EST/EDT)</option>
                     <option value="Europe/London">Europe/London (GMT/BST)</option>
                     <option value="Asia/Tokyo">Asia/Tokyo (JST)</option>
                 </select>
-                <div class="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">
+                <div
+                    class="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">
                     A</div>
             </div>
         </div>
@@ -204,7 +203,7 @@
                         hour12: false,
                         timeZone: tz
                     });
-                    
+
                     el.innerText = formatter.format(date);
                 } catch (e) {
                     console.error('Time conversion error:', e);
