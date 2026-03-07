@@ -68,11 +68,4 @@ public class DeviceController {
                 deviceService.updateSettings(req);
                 return ResponseEntity.ok().build();
         }
-
-        // @Operation(summary = "디바이스 목록 검색", description = "다양한 조건으로 디바이스 목록을 검색합니다.")
-        // @PostMapping("/api/device/search")
-        // public ResponseEntity<List<DeviceResDto>> search(@ParameterObject
-        // DeviceSearchReqDto req) {
-        // return ResponseEntity.ok(deviceService.searchDevices(req));
-        // }
 }

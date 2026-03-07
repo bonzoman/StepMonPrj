@@ -25,7 +25,7 @@ public class ApnsController {
         private final ApnsService apnsService;
         private final DeviceQuery deviceQuery;
 
-        @PostMapping("/apns/silent")
+        @PostMapping("/api/apns/silent")
         @Operation(summary = "Silent Push 전송 (단건)", description = "APNs로 background silent push를 단건 전송합니다.")
         public ResponseEntity<?> silent(
                         @io.swagger.v3.oas.annotations.parameters.RequestBody(description = "Silent Push 요청 바디", required = true, content = @Content(schema = @Schema(implementation = SilentPushRequest.class), examples = @ExampleObject(name = "silentExample", value = """
