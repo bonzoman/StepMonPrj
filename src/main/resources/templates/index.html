@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepMon - Home</title>
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --primary-hover: #4f46e5;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass-bg: rgba(255, 255, 255, 0.9);
+            --text-color: #1f2937;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-gradient);
+            padding: 2rem;
+        }
+
+        .container {
+            background: var(--glass-bg);
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: var(--text-color);
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+
+        .info-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+
+        .info-item {
+            margin-bottom: 0.75rem;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            color: #6b7280;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .info-value {
+            font-size: 1.125rem;
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            outline: none;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid #d1d5db;
+            color: #374151;
+            margin-top: 1rem;
+        }
+
+        .btn-outline:hover {
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>StepMon</h1>
+            <p>Your Health Journey Starts Here</p>
+        </div>
+
+        <!-- 로그인 된 경우 -->
+        <div th:if="${username != null}">
+            <div class="info-box">
+                <div class="info-item">
+                    <p class="info-label">Logged in as</p>
+                    <p class="info-value" th:text="${username}">User ID</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Roles</p>
+                    <p class="info-value" th:text="${roles}">ROLE_USER</p>
+                </div>
+            </div>
+            <a href="/admin/devices" class="btn btn-primary">Go to Dashboard</a>
+            <form th:action="@{/logout}" method="post">
+                <button type="submit" class="btn btn-outline">Logout</button>
+            </form>
+        </div>
+
+        <!-- 로그인 안 된 경우 -->
+        <div th:unless="${username != null}">
+            <form th:action="@{/login}" method="post">
+                <div class="form-group">
+                    <label for="username">ID</label>
+                    <input type="text" id="username" name="username" class="form-input" placeholder="Enter your ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <p style="margin-top: 1.5rem; font-size: 0.875rem; color: #6b7280;">
+                Access to admin pages requires authentication.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
