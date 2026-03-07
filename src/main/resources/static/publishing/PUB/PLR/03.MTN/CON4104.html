@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>사고상세조회 | 통합사고조회 | 보상 | 유지관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-20]	① 팝업에서 바닥 페이지로 변경
+	*					② 하단버튼 삭제
+	*	[M 2022-10-27]	① 텍스트 변경 사고자명 > 피보험자
+	*					② 피해현황 UI변경 및 데이터 항목 변경(다건일 경우 아코디언탭으로 구성)
+	*					③ 사고정보 변경
+	**************************************************************************
+-->
+<!-- [M 2022-09-20] 팝업 삭제
+<div class="popup-wrapper">
+	<article>
+-->
+
+<main id="wrapper"> <!-- [M 2022-09-20] 바닥 페이지 추가 -->
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 팝업 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="#none" class="icon-prev">이전페이지</a> <!-- [M 2022-09-20] 이전버튼 추가 -->
+		<h1>사고상세조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a> <!-- [M 2022-09-20] 전체메뉴 추가 -->
+		<!-- <button type="button" data-btn="pop-close">사고상세조회 닫기</button> [M 2022-09-20] 팝업 삭제 -->
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<h2 class="info4 ic1">장기사고</h2>
+			<dl class="data4">
+				<dt>사고접수번호</dt>
+				<dd>202203-00012</dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [사고정보] -->
+		<!-- ######################### -->
+		<div class="wrap-section1">
+			<h3 class="tit-sub1">사고정보</h3>
+
+			<!-- [CASE1] : 장기사고 -->
+			<div class="info-con1">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>
+						<div>LA202211111111111</div>
+						<div class="area-btn4"><button type="button" class="btn-sub3 c2">계약조회</button></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>상품명</dt>
+					<dd>롯데힐링케어 건강보험</dd>
+				</dl>
+				<dl>
+					<dt>사고일자</dt>
+					<dd>2022.11.22</dd>
+				</dl>
+				<dl>
+					<dt>접수일자</dt>
+					<dd>2022.11.22</dd>
+				</dl>
+				<dl>
+					<dt>진행상태</dt>
+					<dd>사고접수(진행중)</dd>
+				</dl>
+				<dl>
+					<dt>접수구분</dt>
+					<dd>신규접수</dd>
+				</dl>
+				<dl>
+					<dt>지급보험금</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>담당자</dt>
+					<dd>하다미</dd>
+				</dl>
+				<dl>
+					<dt>담당자연락처</dt>
+					<dd>010-2222-3333</dd>
+				</dl>
+			</div>
+
+			<!-- [CASE2] 자동차사고 -->
+			<!-- 2022-10-27 변경 -->
+			<div class="info-con1">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>
+						<div>LA202211111111111</div>
+						<div class="area-btn4"><button type="button" class="btn-sub3 c2">계약조회</button></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>상품명</dt>
+					<dd>Let:way개인용자동차보험</dd>
+				</dl>
+				<dl>
+					<dt>사고차량</dt>
+					<dd data-masking="true"><span class="txt-masking">****</span>1234</dd>
+				</dl>
+				<dl>
+					<dt>운전자</dt>
+					<dd data-masking="true">하<span class="txt-masking">*</span>미</dd>
+				</dl>
+				<dl>
+					<dt>사고일자</dt>
+					<dd>2022.11.22</dd>
+				</dl>
+				<dl>
+					<dt>접수일자</dt>
+					<dd>2022.11.22</dd>
+				</dl>
+				<dl>
+					<dt>사고유형</dt>
+					<dd>차대차(접촉)</dd>
+				</dl>
+				<dl>
+					<dt>사고장소</dt>
+					<dd>144-79 경기 부천시 원미구 춘의동 부천북부역 프리존빌딩</dd>
+				</dl>
+				<dl>
+					<dt>사고내용</dt>
+					<dd>교차로내 자차 신호위반(적색) 좌회전중 대항방향에서 신호위반(적색) 직진하던 이륜차와 충돌한 사고임</dd>
+				</dl>
+			</div>
+			<!-- //2022-10-27 변경 -->
+
+			<!-- [CASE3] : 일반사고 -->
+			<div class="info-con1">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>
+						<div>LA202211111111111</div>
+						<div class="area-btn4"><button type="button" class="btn-sub3 c2">계약조회</button></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>상품명</dt>
+					<dd>해외여행보험(&#8545;)</dd>
+				</dl>
+				<dl>
+					<dt>보종구분</dt>
+					<dd>[재물,배상,해상]</dd>
+				</dl>
+				<dl>
+					<dt>피보험자</dt> <!-- 2022-10-27 텍스트 변경 사고자명 > 피보험자 -->
+					<dd>하다미</dd>
+				</dl>
+				<dl>
+					<dt>사고일자</dt>
+					<dd>2022.11.22</dd>
+				</dl>
+				<dl>
+					<dt>접수일자</dt>
+					<dd>2022.11.22</dd>
+				</dl>
+				<dl>
+					<dt>진행상태</dt>
+					<dd>종결(종결)</dd>
+				</dl>
+				<dl>
+					<dt>접수구분</dt>
+					<dd>사고종결(추가청구)</dd>
+				</dl>
+				<dl>
+					<dt>지급보험금</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>담당자</dt>
+					<dd>하다미</dd>
+				</dl>
+				<dl>
+					<dt>담당자연락처</dt>
+					<dd>010-2222-3333</dd>
+				</dl>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [피해현황] -->
+		<!-- ######################### -->
+		<div class="wrap-section3 line">
+			<h3 class="tit-sub1">피해현황</h3>
+
+			<!-- 2022-10-27 단건일경우 -->
+			<section>
+				<h4 class="tit-sub2">대인</h4>
+				<!-- 2022-10-27 순서및 항목변경 -->
+				<div class="info-con1">
+					<dl>
+						<dt>피해자</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>피해자연락처</dt>
+						<dd data-masking="true">010-<span class="txt-masking">*</span><span class="txt-masking">*</span><span class="txt-masking">*</span><span class="txt-masking">*</span>-1231</dd>
+					</dl>
+					<dl>
+						<dt>지급금액</dt>
+						<dd class="data-num1"><strong>1,200,000</strong><span>원</span></dd>
+					</dl>
+					<dl>
+						<dt>담당자</dt>
+						<dd>보상1센터 홍길동 수석</dd>
+					</dl>
+					<dl>
+						<dt>담당자연락처</dt>
+						<dd>010-0000-1111</dd>
+					</dl>
+					<dl>
+						<dt>진행상태</dt>
+						<dd>사고처리진행중</dd>
+					</dl>
+					<dl>
+						<dt>피해상황</dt>
+						<dd>부상</dd>
+					</dl>
+				</div>
+				<!-- //2022-10-27 순서및 항목변경 -->
+			</section>
+			<!-- //2022-10-27 단건일경우 -->
+
+			<!-- 2022-10-27 단건일경우 아코디언으로 변경 -->
+			<section>
+				<div id="uiTabSection1" class="area-toggle1 ui-tabcon active" data-autoset="toggle">
+					<ul>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>대인001</strong>
+								<dl class="data1">
+									<dt>고객 이름</dt>
+									<dd data-masking="true">홍 <span class="txt-masking">*</span> 동</dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</div>
+							<div data-toggle="content">
+								<div class="info-con1">
+									<dl>
+										<dt>피해자</dt>
+										<dd>하다미</dd>
+									</dl>
+									<dl>
+										<dt>피해자연락처</dt>
+										<dd data-masking="true">010-<span class="txt-masking">*</span><span class="txt-masking">*</span><span class="txt-masking">*</span><span class="txt-masking">*</span>-1231</dd>
+									</dl>
+									<dl>
+										<dt>지급금액</dt>
+										<dd class="data-num1"><strong>1,200,000</strong><span>원</span></dd>
+									</dl>
+									<dl>
+										<dt>담당자</dt>
+										<dd>보상1센터 홍길동 수석</dd>
+									</dl>
+									<dl>
+										<dt>담당자연락처</dt>
+										<dd>010-0000-1111</dd>
+									</dl>
+									<dl>
+										<dt>진행상태</dt>
+										<dd>사고처리진행중</dd>
+									</dl>
+									<dl>
+										<dt>피해상황</dt>
+										<dd>부상</dd>
+									</dl>
+								</div>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>자차001</strong>
+								<dl class="data1">
+									<dt>고객 이름</dt>
+									<dd data-masking="true">홍 <span class="txt-masking">*</span> 동</dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</div>
+							<div data-toggle="content">
+								<div class="info-con1">
+									<dl>
+										<dt>피해물</dt>
+										<dd>123가1234</dd>
+									</dl>
+									<dl>
+										<dt>피해물명</dt>
+										<dd>올뉴쏘렌토</dd>
+									</dl>
+									<dl>
+										<dt>피해자연락처</dt>
+										<dd><span data-masking="true">010-****-1231</span></dd>
+									</dl>
+									<dl>
+										<dt>지급금액</dt>
+										<dd class="data-num1"><strong>1,200,000</strong><span>원</span></dd>
+									</dl>
+									<dl>
+										<dt>담당자</dt>
+										<dd>보상1센터 홍길동 책임</dd>
+									</dl>
+									<dl>
+										<dt>담당자연락처</dt>
+										<dd>010-0000-1111</dd>
+									</dl>
+									<dl>
+										<dt>진행상태</dt>
+										<dd>사고처리진행중</dd>
+									</dl>
+									<dl>
+										<dt>피해상황</dt>
+										<dd>분손(수리)</dd>
+									</dl>
+								</div>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>대물</strong>
+								<dl class="data1">
+									<dt>고객 이름</dt>
+									<dd data-masking="true">홍 <span class="txt-masking">*</span> 동</dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</div>
+							<div data-toggle="content">
+								<div class="info-con1">
+									<dl>
+										<dt>피해물</dt>
+										<dd>123가1234</dd>
+									</dl>
+									<dl>
+										<dt>피해물명</dt>
+										<dd>올뉴쏘렌토</dd>
+									</dl>
+									<dl>
+										<dt>피해자연락처</dt>
+										<dd><span data-masking="true">010-****-1231</span></dd>
+									</dl>
+									<dl>
+										<dt>지급금액</dt>
+										<dd class="data-num1"><strong>1,200,000</strong><span>원</span></dd>
+									</dl>
+									<dl>
+										<dt>담당자</dt>
+										<dd>보상1센터 홍길동 책임</dd>
+									</dl>
+									<dl>
+										<dt>담당자연락처</dt>
+										<dd>010-0000-1111</dd>
+									</dl>
+									<dl>
+										<dt>진행상태</dt>
+										<dd>사고처리진행중</dd>
+									</dl>
+									<dl>
+										<dt>피해상황</dt>
+										<dd>분손(수리)</dd>
+									</dl>
+								</div>
+							</div>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+			</section>
+			<!-- //2022-10-27 아코디언으로 변경 -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### [M 2022-09-20] 삭제
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">확인</button>
+		</div>
+		 -->
+		<!-- ######################### -->
+	</div>
+</main> <!-- [M 2022-09-20] 바닥 페이지 추가 -->
+
+<!-- [M 2022-09-20] 팝업 삭제
+	</article>
+</div>
+-->
+<!-- ################################################### -->
+</body>
+</html>

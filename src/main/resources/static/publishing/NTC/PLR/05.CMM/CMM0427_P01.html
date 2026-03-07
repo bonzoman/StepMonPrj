@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]해시태그 추가 | 게시판 | 노하우</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>해시태그 추가</h1>
+			<button type="button" data-btn="pop-close">해시태그 추가 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [해시태그선택] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>해시태그 선택</legend>
+
+				<!-- # 연령 # -->
+				<dl class="form">
+					<dt>연령 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<!-- [CASE1] 일반 -->
+						<div class="label-btn1 col3">
+							<label>
+								<input type="radio" name="uiFormRadio1" checked>
+								<span>#10대</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>#20대</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>#30대</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>#40대</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>#50대</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>#60대 이상</span>
+							</label>
+						</div>
+
+						<!-- [CASE2] NO.1 설계사 : 선택불가 -->
+						<div class="label-btn1 col3">
+							<label>
+								<input type="radio" name="uiFormRadio5" checked disabled>
+								<span>#10대</span>
+							</label>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 보험료 : NO.1 설계사 노하우 작성 미노출 # -->
+				<dl class="form">
+					<dt>보험료 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="label-btn1 col3">
+							<label>
+								<input type="radio" name="uiFormRadio2" checked>
+								<span>#10만원 이하</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio2">
+								<span>#10만원 이상</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio2">
+								<span>#20만원 이상</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 고객특성 : NO.1 설계사 노하우 작성 미노출 # -->
+				<dl class="form">
+					<dt>고객특성(선택)</dt>
+					<dd>
+						<div class="label-btn1 col3">
+							<label>
+								<input type="radio" name="uiFormRadio3" checked>
+								<span>#기혼</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3">
+								<span>#미혼</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3">
+								<span>#사회초년생</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3">
+								<span>#은퇴</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3">
+								<span>#무직</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3">
+								<span>#학생</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 직접입력 # -->
+				<!-- [M 2022-07-19] 문구변경 및 input 태그 1개로 변경 -->
+				<dl class="form">
+					<dt>직접입력</dt>
+					<dd><input type="text" class="text" title="사용자 희망 해시태그" placeholder="최대10글자로 입력해주세요."></dd>
+				</dl>
+				<!-- // -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">초기화</button>
+				<button type="button" class="btn-action c1">적용</button>
+				<!-- <button type="button" class="btn-action c1" disabled>적용</button> : 비활성화 -->
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

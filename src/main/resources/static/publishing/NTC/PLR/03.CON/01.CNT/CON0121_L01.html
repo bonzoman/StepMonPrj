@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 조회불가 | 차량번호확정변경 | 계약변경 | 자동차 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 가능한업무 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCON0121L01" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>조회 불가</dt>
+		<dd>
+			<!-- [CASE1] 본인명의 아닌 경우 -->
+			본인명의 자동차만 조회할 수 있습니다. 업무요청으로 진행하시겠습니까?
+			<!-- [CASE2] 차량번호 없는 경우
+			존재하지 않는 차량번호입니다. 업무요청으로 진행하시겠습니까?
+			-->
+		</dd>
+		<!-- // -->
+		<dd class="area-action">
+			<button type="button" class="btn-action" data-btn="pop-close">아니요</button>
+			<button type="button" class="btn-action c1">예</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCON0121L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPCON0121L01').trigger('outputOpen');
+//-->
+</script>
+<!-- ################################################### -->
+</body>
+</html>

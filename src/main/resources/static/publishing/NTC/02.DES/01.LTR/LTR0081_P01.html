@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 예상환급금(장기) | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>예상환급금(장기)</h1>
+			<button type="button" data-btn="pop-close">예상환급금(장기) 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 계약정보 -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit">let:smile 종합검강보험 종합건강보험(더채움 베이직)(2201)</h2>
+				<div class="info">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA123456789</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [본문영역] 예상환급금 -->
+			<!-- ######################### -->
+			<!-- ### 필터영역 ### -->
+			<div class="area-info1 line2">
+				<p>기준일자 <strong>2022.08.04</strong></p>
+				<div class="side">
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">조회간격</span>
+							<span data-select="text" data-value="1">기본</span>
+						</button>
+						<div class="list">
+							<div data-label="조회간격">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion0" value="1"><span>기본</span></label>
+									<label><input type="radio" name="selectOpeion0" value="2"><span>매월</span></label>
+									<label><input type="radio" name="selectOpeion0" value="3"><span>매 3개월</span></label>
+									<label><input type="radio" name="selectOpeion0" value="4"><span>매년</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ### 최저보증이율 ### -->
+			<div class="wrap-section1">
+				<div class="tit-sub1">
+					<h3>최저보증이율</h3>
+					<p>2022년 1월 현재 공시이율(1.4%) 적용 시</p>
+				</div>
+				<div class="tbl-data1">
+					<table>
+						<caption>최저보증이율 납입보험료 및 예상환급금</caption>
+						<colgroup>
+							<col style="width:20%">
+							<col style="width:40%">
+							<col style="width:40%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">기간</th>
+								<th scope="col">납입보험료</th>
+								<th scope="col">예상환급금 (환급률)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1년</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(32.5%)</span></td>
+							</tr>
+							<tr>
+								<td>2년</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(50.5%)</span></td>
+							</tr>
+							<tr>
+								<td>3년</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(32.5%)</span></td>
+							</tr>
+							<tr>
+								<td>5년</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(32.5%)</span></td>
+							</tr>
+							<tr>
+								<td>7년</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(32.5%)</span></td>
+							</tr>
+							<tr>
+								<td>10년</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(32.5%)</span></td>
+							</tr>
+							<tr>
+								<td>만기</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(32.5%)</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p class="txt-bul4">실손의료비 제외</p>
+			</div>
+
+			<!-- ### 평균공시이율 ### -->
+			<div class="wrap-section1">
+				<div class="tit-sub1">
+					<h3>평균공시이율</h3>
+					<p>2022년 1월 현재 공시이율(1.4%) 적용 시</p>
+				</div>
+				<div class="tbl-data1">
+					<table>
+						<caption>평균공시이율 납입보험료 및 예상환급금</caption>
+						<colgroup>
+							<col style="width:20%">
+							<col style="width:40%">
+							<col style="width:40%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">기간</th>
+								<th scope="col">납입보험료</th>
+								<th scope="col">예상환급금 (환급률)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1년</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(32.5%)</span></td>
+							</tr>
+							<tr>
+								<td>2년</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(50.5%)</span></td>
+							</tr>
+							<tr>
+								<td>3년</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(32.5%)</span></td>
+							</tr>
+							<tr>
+								<td>5년</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(32.5%)</span></td>
+							</tr>
+							<tr>
+								<td>7년</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(32.5%)</span></td>
+							</tr>
+							<tr>
+								<td>10년</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(32.5%)</span></td>
+							</tr>
+							<tr>
+								<td>만기</td>
+								<td class="data-num1"><strong>999,999,999</strong><span>원</span></td>
+								<td class="right data-num1"><strong>999,999,999</strong><span>원(32.5%)</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p class="txt-bul4">실손의료비 제외</p>
+			</div>
+
+			<!-- ### 버튼영역 ### -->
+			<div class="area-btn1">
+				<button type="button" class="btn-com1">연금지급예시</button>
+			</div>
+
+			<!-- ### 안내사항 ### -->
+			<ul class="txt-bul1">
+				<li>
+					기본계약 및 특약담보(실손의료비를 제외한 갱신담보)의 납입보험료는 각 담보별 갱신 종료일까지 납입할 예상 보험료의 합계액입니다.
+					실손의료비의 납입보험료는 재가입 이후 보험료를 제외한 최대 14회차(노후실손 의료비 담보의 경우 2회차)까지 갱신하는 것을 가정하여 예시합니다.
+				</li>
+				<li>적용이율(평균공시이율)은 공시이율을 한도로 합니다.</li>
+				<li>평균공시이율은 전체 보험회사 공시이율의 평균으로 보험업감독규정 제1-2조(정의) 제13호, 보험업감독업 무시행세칙 제 4-4조(평균공시이율)의 기준에 따라 산출된 이율을 말합니다.</li>
+				<li>최저보증이율은 가입설계서를 참조하시기 바랍니다.</li>
+				<li>노후실손의료비 보장 가입 시 실손의료비 항목에 노후실손의료비 보험료가 표시됩니다.</li>
+			</ul>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

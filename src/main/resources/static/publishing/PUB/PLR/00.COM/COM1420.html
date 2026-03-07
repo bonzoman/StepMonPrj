@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>캘린더 | 캘린더 | 일정관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<!-- <a href="javascript:void(0);" class="icon-prev">이전페이지</a> -->
+		<h1>일정관리</h1>
+		<button type="button" class="btn-t1 icon-com1 ic2">검색</button>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [캘린더 영역] -->
+		<!-- ######################### -->
+		<div class="wrap-calendar">
+			<!-- // -->
+			<div class="area-ctrl" data-sticky="top">
+				<div class="area-toggle1 active">
+					<div class="tit">
+						<strong></strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">일정관리 상세보기</button>
+					</div>
+					<!-- area-data 달력 -->
+					<div data-toggle="content" class="area-data">
+						<ul class="swiper-t1" data-slider="list1" data-loop="true" data-callback-load="uiCalendarSlider"><!-- [D] data-callback="함수명" : 체인징 될때 함수 호출 -->
+							<!-- 이전 달 -->
+							<li>
+								<div class="days">
+									<div class="day">일</div>
+									<div class="day">월</div>
+									<div class="day">화</div>
+									<div class="day">수</div>
+									<div class="day">목</div>
+									<div class="day">금</div>
+									<div class="day">토</div>
+								</div>
+								<div class="dates"></div>
+							</li>
+							<!-- //이전 달 -->
+
+							<!-- 현재 달 -->
+							<li data-calendar="true">
+								<div class="days">
+									<div class="day">일</div>
+									<div class="day">월</div>
+									<div class="day">화</div>
+									<div class="day">수</div>
+									<div class="day">목</div>
+									<div class="day">금</div>
+									<div class="day">토</div>
+								</div>
+								<div class="dates"></div>
+							</li>
+							<!-- //현재 달 -->
+
+							<!-- 다음 달 -->
+							<li>
+								<div class="days">
+									<div class="day">일</div>
+									<div class="day">월</div>
+									<div class="day">화</div>
+									<div class="day">수</div>
+									<div class="day">목</div>
+									<div class="day">금</div>
+									<div class="day">토</div>
+								</div>
+								<div class="dates"></div>
+							</li>
+							<!-- //다음 달 -->
+						</ul>
+					</div>
+					<div class="side">
+						<button type="button" class="btn-sub3 c2" onclick="goToday()">오늘</button>
+					</div>
+				</div>
+			</div>
+			<!-- // -->
+
+			<!-- // -->
+			<div class="area-list">
+				<h2 class="tit"><strong>15.수</strong><span>음력 02.03</span></h2>
+				<!-- 2022-11-24 링크 삽입 -->
+				<ul>
+					<li>
+						<em>종일</em>
+						<div class="data1 t1">
+							<a href="javascript:;" onclick="">
+								<div class="tit">
+									<strong>김강남</strong>
+									<span>(1970.04.19)님 생일</span>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li>
+						<em>09:00</em>
+						<div class="data1 t2">
+							<a href="javascript:;" onclick="">
+								<strong>본사교육</strong>
+								<span>09:00~10:00</span>
+								<!-- <span class="name">홍길동</span> --> <!-- 2022-12-28 본사교육일시 이름노출 X -->
+								<span class="btn-sub3 c2">바로가기</span>
+							</a>
+						</div>
+					</li>
+					<!-- 현재시간 -->
+					<li class="current-time">
+						<em>10:00</em>
+						<div class="data1 t4"> <!-- 2022-12-28 클래스 변경 -->
+							<a href="javascript:;" onclick="">
+								<strong>옆집아줌마, 후보자방문</strong>
+								<span>10:00~11:00</span>
+								<span class="name">홍길동</span> <!-- 2022-12-28 추가 -->
+								<div class="data-word2">
+									<span>#60대이상</span>
+									<span>#기혼</span>
+									<span>#실손</span>
+								</div>
+								<span class="btn-sub3 c2">상세보기</span>
+							</a>
+						</div>
+						<div class="data1 t4"> <!-- 2022-12-28 클래스 변경 -->
+							<a href="javascript:;" onclick="">
+								<strong>떡집 아저씨, 후보자방문떡집 아저씨, 후보자방문떡집 아저씨, 후보자방문떡집 아저씨, 후보자방문떡집 아저씨, 후보자방문떡집 아저씨, 후보자방문떡집 아저씨, 후보자방문떡집 아저씨, 후보자방문떡집 아저씨, 후보자방문</strong>
+								<span>10:00~11:00</span>
+								<span class="name">홍길동</span> <!-- 2022-12-28 추가 -->
+								<span class="btn-sub3 c2">상세보기</span>
+							</a>
+						</div>
+					</li>
+					<!-- //현재시간 -->
+					<li>
+						<em>11:00</em>
+						<div class="data1 t3"> <!-- 2022-12-28 클래스 변경 -->
+							<a href="javascript:;" onclick="">
+								<strong>MOT 일정</strong>
+								<span>11:00~12:00</span>
+								<span class="name">홍길동</span> <!-- 2022-12-28 추가 -->
+								<span class="btn-sub3 c2">바로가기</span>
+							</a>
+						</div>
+						<div class="data1 t3"> <!-- 2022-12-28 클래스 변경 -->
+							<a href="javascript:;" onclick="">
+								<strong>MOT 일정 2</strong>
+								<span>11:00~12:00</span>
+								<span class="name">홍길동</span> <!-- 2022-12-28 추가 -->
+								<span class="btn-sub3 c2">바로가기</span>
+							</a>
+						</div>
+					</li>
+				</ul>
+				<!-- //2022-11-24 링크 삽입 -->
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단버튼] -->
+		<!-- ######################### -->
+		<button type="button" class="btn-util1 ic1" data-sticky="bottom">일정등록</button>
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer"></footer>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+
+	//<!--
+		$plugin.togglecon('.area-toggle1',{
+			selector_group:false
+		});
+	//-->
+
+
+//<!--
+	/* ****************************************
+	* [샘플] 슬라이드 체인징 이벤트
+	* uiCalendarSlider() : 함수명 임시 적용
+	* slide 가 Change 될때마다 함수 호출
+	**************************************** */
+	function uiCalendarSlider(e){
+		var area_toggle = $('[data-toggle="btn"]'); //토글버튼
+		var _el = $(e.$wrapperEl).find('[data-calendar]').index(); //현재 진행중 슬라이드
+		e.slideTo(_el, 0); //현재 진행중 슬라이드 이동
+
+		$(e.$wrapperEl).find('> li').each(function(i, obj){
+			if(i == 1) renderCalender(2);
+		});
+
+		// 달력 펼칠시 슬라이드 동작
+		area_toggle.on('click', function(){
+			var _parents = $(this).parents('.area-toggle1');
+			if(_parents.hasClass('active')) {
+				e.allowTouchMove = false;
+				_parents.attr('data-mode','week');
+
+				var date = ($(e.slides[e.activeIndex]).find('.active').length > 0) ? new Date($('.this.active').data('date')) : new Date();
+				var weekSun = date.getDate() - date.getDay();
+				var weekSunNum = $(e.slides[e.activeIndex]).find('.this[data-date$="'+ weekSun +'"]').parent().index();
+				weekSunNum = weekSunNum < 0 ? 0 : weekSunNum;
+				var week = weekSunNum + 7;
+				var day = date.getDay();
+
+				if($(e.slides[e.activeIndex]).find('.active').length == 0){
+					if($(e.slides[e.activeIndex]).find('.today').length == 0){
+						weekSunNum = 0;
+						week = 7;
+					}else{
+						$(e.slides[e.activeIndex]).find('.day').eq(date.getDay()).addClass('show');
+					}
+				}
+
+				for(var i = weekSunNum; i < week; i++){
+					$(e.slides[e.activeIndex]).find('.date').eq(i).addClass('show');
+				}
+
+			}else{
+				e.allowTouchMove = true;
+				_parents.attr('data-mode','month');
+				$(e.slides[e.activeIndex]).find('.date, .day').removeClass('show');
+			}
+
+		});
+
+		// 슬라이드 이동될때마다 이벤트
+		e.on('slideChange', function () {
+			if(this.activeIndex == 2){
+				date.setMonth(date.getMonth() + 1);
+				renderCalender(3);
+			}else if(this.activeIndex == 0){
+				date.setMonth(date.getMonth() - 1);
+				renderCalender(1);
+			}
+		});
+
+		// 슬라이드 이동 후 달력 세로 생성
+		e.on('transitionEnd', function() {
+			if(this.activeIndex == 2) {
+				var calendar = $('.area-data .slide').eq(2).html();
+				this.appendSlide('<li class="slide">'+ calendar +'</li>');
+				e.removeSlide($('.slide').index(0));
+			}else if(this.activeIndex == 0){
+				var calendar = $('.area-data .slide').eq(0).html();
+				this.prependSlide('<li class="slide">'+ calendar +'</li>');
+				e.removeSlide($('.slide').length -1);
+			}
+		});
+	}
+	/* *************************************** */
+
+	let date = new Date();
+	String.prototype.lpad = function(padLen, padStr){
+		var str = this;
+
+		if(padStr.length > padLen) {
+			return str + "";
+		}
+
+		while (str.length < padLen)
+			str = padStr + str;
+			str = str.length >= padLen ? str.substring(0, padLen) : str;
+			return str;
+	};
+
+	let arr = [{
+		evtDt : "2022-09-01"
+		},{
+		evtDt : "2022-09-10"
+		},{
+		evtDt : "2022-09-15"
+	}]
+
+	function renderCalender(el){
+		const num = el;
+		// 현재 년도
+		const viewYear = date.getFullYear();
+		// 현재 달
+		const viewMonth = date.getMonth();
+		// 기간 표시
+		document.querySelector(".wrap-calendar > .area-ctrl .tit > strong").textContent = `${viewYear}년 ${viewMonth + 1}월`;
+
+		const prevLast = new Date(viewYear, viewMonth, 0);
+		const thisLast = new Date(viewYear, viewMonth + 1, 0);
+
+		const PLDate = prevLast.getDate(); // 이전달의 마지막일
+		const PLDay = prevLast.getDay();
+
+		const TLDate = thisLast.getDate(); // 현재달의 마지막일
+		const TLDay = thisLast.getDay();
+
+		const prevDates = [];
+		const thisDates = [...Array(TLDate + 1).keys()].slice(1);
+		const nextDates = [];
+
+		if (PLDay !== 6) {
+			for (let i = 0; i < PLDay + 1; i++) {
+				prevDates.unshift(PLDate - i);
+			}
+		}
+
+		for (let i = 1; i < 7 - TLDay; i++) {
+			nextDates.push(i);
+		}
+
+		//이전달과 현재달을 병합처리
+		const dates = prevDates.concat(thisDates, nextDates);
+		const firstDateIndex = dates.indexOf(1);
+		const lastDateIndex = dates.lastIndexOf(TLDate);
+
+		let formatDate = "";
+		let todayClass = "";
+
+		dates.forEach(function(date, i){
+			const condition = (i >= firstDateIndex && i < lastDateIndex + 1) ? 'this' : 'other';
+			const today = new Date();
+
+			if (condition == 'this'){
+				formatDate = (viewYear).toString()+(viewMonth + 1).toString().lpad(2,'0') +(date).toString().lpad(2, '0');
+				formatDate = moment(formatDate).format('YYYY-MM-DD');
+
+				let evtDt = arr.some(function(element){
+					return element.evtDt == moment(formatDate).format('YYYY-MM-DD');
+				});
+
+				// 오늘날짜 클래스 추가
+				if (viewMonth === today.getMonth() && viewYear === today.getFullYear()){
+					todayClass = ((date) === today.getDate())? 'today' : '';
+				}
+
+				if(evtDt){
+					dates[i] = `<div class="date dd"><span class='${condition} ${todayClass}' data-date=${formatDate}>${date}</span><span class="ic1">MOT</span><span class="ic2">등록일정</span><span class="ic3">본사일정</span></div>`;
+				}else{
+					dates[i] = `<div class="date dd"><span class='${condition} ${todayClass}' data-date=${formatDate}>${date}</span></div>`;
+				}
+			}else{
+				if(i < lastDateIndex + 1){
+					if (viewMonth + 1 == 1){
+						privYear = new Date(viewYear, viewMonth, 0).getFullYear();
+						privMonth = new Date(viewYear, viewMonth, 0).getMonth() + 1;
+					}else{
+						privYear = viewYear;
+						privMonth = viewMonth;
+					}
+					formatDate = (privYear).toString()+(privMonth).toString().lpad(2, '0') +(date).toString().lpad(2, '0');
+					formatDate = moment(formatDate).format('YYYY-MM-DD');
+					dates[i] = `<div class="date"><span class='${condition} ${todayClass}' data-date=${formatDate}>${date}</span></div>`;
+				}
+				if(i >= firstDateIndex){
+					let lastYear = 0, lastMonth = 0;
+
+					if(viewMonth + 1 == 12){
+						lastYear = new Date(viewYear, viewMonth, 0).getFullYear() + 1;
+						lastMonth = 1;
+					}else{
+						lastYear = viewYear;
+						lastMonth = viewMonth + 2;
+					}
+
+					formatDate = (lastYear).toString()+(lastMonth).toString().lpad(2, '0') +(date).toString().lpad(2, '0');
+					formatDate = moment(formatDate).format('YYYY-MM-DD');
+					dates[i] = `<div class="date"><span class='${condition} ${todayClass}' data-date=${formatDate}>${date}</span></div>`;
+				}
+			}
+		});
+
+		document.querySelector(`li:nth-child(${num}) .dates`).innerHTML = dates.join("");
+	}
+
+	function prevMonth(){
+		date.setMonth(date.getMonth() - 1);
+		renderCalender();
+	};
+
+	function nextMonth(){
+		date.setMonth(date.getMonth() + 1);
+		renderCalender();
+	};
+
+	function goToday(){
+		date = new Date();
+		renderCalender(2);
+	};
+
+	//클릭이벤트
+	$(document).on('click', '.this', function(){
+		var _day = new Date($(this).data('date'));
+		var _eq = _day.getDay();
+		$('.this').removeClass('active');
+		$(this).addClass('active');
+		$(this).parents('li').find('.day').eq(_eq).addClass('active').siblings().removeClass('active');
+	});
+
+//-->
+</script>
+</body>
+</html>

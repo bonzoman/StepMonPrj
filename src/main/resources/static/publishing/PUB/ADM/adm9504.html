@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>리포트 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-20]	1. 툴팁 수정
+	*	[M 2022-10-26]	1. 포인트 적립 슬라이드 값 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!--
+		리포트 통합조회 에서는  header , breadcrumb 사용하지 않음
+	-->
+	<h2 class="page-title">리포트 통합조회 결과</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<div class="report-search active">
+			<div class="search-top">
+				<h3>리포트 통합조회</h3>
+				<div class="sub">
+					<div class="fav-item">
+						<button type="button" class="fav-txt">보장성 및 수급률 저조 LP</button>
+						<button type="button" class="fav-del">삭제</button>
+					</div>
+					<div class="fav-item">
+						<button type="button" class="fav-txt">보장성 및 수급률 저조 LP</button>
+						<button type="button" class="fav-del">삭제</button>
+					</div>
+					<button type="button" disabled class="btn-fav"></button>
+					<button type="button" class="btn-fav"></button>
+					<button type="button" class="search-toggle"></button>
+				</div>
+			</div>
+			<div class="search-cont">
+				<div class="search-row2">
+					<div class="search-tit">
+						<strong>업적</strong>
+						<span>PERFORMANCE</span>
+					</div>
+					<div class="row">
+						<div class="col-3">
+							<div class="item">
+								<h4 class="item-tit">보장성 실적</h4>
+								<div class="slider-wrap" data-default="0,2">
+									<!-- 2022-12-06 삭제 -->
+									<div class="slider"></div>
+									<div class="info2">
+										<span>0</span>
+										<span>5</span>
+										<span>20</span>
+										<span>40</span>
+										<span>60~</span>
+									</div>
+									<!-- //2022-12-06 삭제 -->
+									<div class="info1">
+										<div class="input">
+											<input type="text" data-val="slide1">
+											<span>만원</span>
+										</div>
+										<span>-</span>
+										<div class="input">
+											<input type="text" data-val="slide2">
+											<span>만원</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<h4 class="item-tit">보장성 동영업일 대비 실적</h4>
+
+								<div class="report-check1">
+									<label>
+										<input type="radio" name="fr1" checked>
+										<span>감소</span>
+									</label>
+									<label>
+										<input type="radio" name="fr1">
+										<span>증가</span>
+									</label>
+								</div>
+							</div>
+							<div class="item">
+								<h4 class="item-tit">보장성 전속그룹 대비 실적</h4>
+								<div class="report-check1">
+									<label>
+										<input type="radio" name="fr2" checked>
+										<span>높음</span>
+									</label>
+									<label>
+										<input type="radio" name="fr2">
+										<span>낮음</span>
+									</label>
+								</div>
+							</div>
+							<div class="item">
+								<h4 class="item-tit">실가동</h4>
+								<div class="report-check1">
+									<label>
+										<input type="radio" name="fr3" checked>
+										<span>가동</span>
+									</label>
+									<label>
+										<input type="radio" name="fr3">
+										<span>비가동</span>
+									</label>
+									<label>
+										<input type="radio" name="fr3">
+										<span>가동전환</span>
+									</label>
+									<label>
+										<input type="radio" name="fr3">
+										<span>비가동전환</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-3">
+
+							<div class="item">
+								<h4 class="item-tit">수금률</h4>
+								<div class="slider-wrap" data-default="0,2">
+									<div class="slider"></div>
+									<div class="info2">
+										<span>0</span>
+										<span>80</span>
+										<span>90</span>
+										<span>95</span>
+										<span>100</span>
+									</div>
+									<div class="info1">
+										<div class="input">
+											<input type="text" data-val="slide1">
+											<span>%</span>
+										</div>
+										<span>-</span>
+										<div class="input">
+											<input type="text" data-val="slide2">
+											<span>%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<h4 class="item-tit">퀘스트 달성률</h4>
+								<div class="slider-wrap" data-default="0,2">
+									<div class="slider"></div>
+									<div class="info2">
+										<span>0</span>
+										<span>30</span>
+										<span>50</span>
+										<span>70</span>
+										<span>100</span>
+									</div>
+									<div class="info1">
+										<div class="input">
+											<input type="text" data-val="slide1">
+											<span>%</span>
+										</div>
+										<span>-</span>
+										<div class="input">
+											<input type="text" data-val="slide2">
+											<span>%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<h4 class="item-tit">전월대비 퀘스트 달성률</h4>
+								<div class="report-check1 col3">
+									<label>
+										<input type="radio" name="fr4" checked>
+										<span>감소</span>
+									</label>
+									<label>
+										<input type="radio" name="fr4">
+										<span>유지</span>
+									</label>
+									<label>
+										<input type="radio" name="fr4">
+										<span>증가</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="item">
+								<h4 class="item-tit">이탈예상 설계사</h4>
+								<div class="report-check1">
+									<label>
+										<input type="radio" name="fr5" checked>
+										<span>대상</span>
+									</label>
+									<label>
+										<input type="radio" name="fr5">
+										<span>미대상</span>
+									</label>
+								</div>
+							</div>
+							<div class="item">
+								<h4 class="item-tit">휴면설계사</h4>
+								<div class="report-check1">
+									<label>
+										<input type="radio" name="fr6" checked>
+										<span>대상</span>
+									</label>
+									<label>
+										<input type="radio" name="fr6">
+										<span>미대상</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search-row2">
+					<div class="search-tit">
+						<strong>혜택</strong>
+						<span>BENEFIT</span>
+					</div>
+					<div class="row">
+						<div class="col-3">
+							<div class="item">
+								<h4 class="item-tit">소득구간</h4>
+								<div class="slider-wrap" data-default="0,2">
+									<div class="slider"></div>
+									<div class="info2">
+										<span>0</span>
+										<span>50</span>
+										<span>100</span>
+										<span>250</span>
+										<span>500~</span>
+									</div>
+									<div class="info1">
+										<div class="input">
+											<input type="text" data-val="slide1">
+											<span>만원</span>
+										</div>
+										<span>-</span>
+										<div class="input">
+											<input type="text" data-val="slide2">
+											<span>만원</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="item">
+								<h4 class="item-tit">포인트 적립</h4>
+								<div class="slider-wrap" data-default="0,2">
+									<div class="slider"></div>
+									<div class="info2">
+										<span>0만</span>
+										<span>3만</span>
+										<span>5만</span>
+										<span>10만</span>
+										<span>20만~</span>
+									</div>
+									<div class="info1">
+										<div class="input">
+											<input type="text" id="ex1" data-val="slide1"><!-- [M 2022-10-26] 포인트 적립 슬라이드 값 수정 : id 추가 -->
+											<span>P</span>
+										</div>
+										<span>-</span>
+										<div class="input">
+											<input type="text" id="ex2" data-val="slide2"><!-- [M 2022-10-26] 포인트 적립 슬라이드 값 수정 : id 추가 -->
+											<span>P</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="item">
+								<h4 class="item-tit">전월대비 소득
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">조회월 기준: 전월/전전월 비교<br>예) 9월 검색 후, 조회 시: 7,8월<br> 실적에 대한 소득 비교</div><!-- [M 2022-10-20] 툴팁 수정 -->
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</h4>
+								<div class="report-check1">
+									<label>
+										<input type="radio" name="fr7" checked>
+										<span>감소</span>
+									</label>
+									<label>
+										<input type="radio" name="fr7">
+										<span>증가</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search-row2">
+					<div class="search-tit">
+						<strong>조직</strong>
+						<span>PEOPLE</span>
+					</div>
+					<div class="row">
+						<div class="col-3">
+							<div class="item">
+								<h4 class="item-tit">교육대상자</h4>
+								<div class="report-check1 col3">
+									<label>
+										<input type="radio" name="fr8" checked>
+										<span>인큐베이터</span>
+									</label>
+									<label>
+										<input type="radio" name="fr8">
+										<span>어드밴스드</span>
+									</label>
+									<label>
+										<input type="radio" name="fr8">
+										<span>역량강화</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="item">
+								<h4 class="item-tit">교육수강여부</h4>
+								<div class="report-check1 ">
+									<label>
+										<input type="radio" name="fr9" checked>
+										<span>수강</span>
+									</label>
+									<label>
+										<input type="radio" name="fr9">
+										<span>미수강</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search-row2">
+					<div class="search-tit">
+						<strong>활동</strong>
+						<span>ACTIVITY</span>
+					</div>
+					<div class="row">
+						<div class="col-3">
+							<div class="item">
+								<h4 class="item-tit">월 평균 로그인 횟수</h4>
+								<div class="slider-wrap" data-default="0,2">
+									<div class="slider"></div>
+									<div class="info2">
+										<span>0</span>
+										<span>5</span>
+										<span>10</span>
+										<span>20</span>
+										<span>25~</span>
+									</div>
+									<div class="info1">
+										<div class="input">
+											<input type="text" data-val="slide1">
+											<span>회</span>
+										</div>
+										<span>-</span>
+										<div class="input">
+											<input type="text" data-val="slide2">
+											<span>회</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="item">
+								<h4 class="item-tit">일 평균 접속 시간</h4>
+								<div class="slider-wrap" data-default="0,2">
+									<div class="slider"></div>
+									<div class="info2">
+										<span>0</span>
+										<span>10</span>
+										<span>20</span>
+										<span>30</span>
+										<span>60~</span>
+									</div>
+									<div class="info1">
+										<div class="input">
+											<input type="text" data-val="slide1">
+											<span>분</span>
+										</div>
+										<span>-</span>
+										<div class="input">
+											<input type="text" data-val="slide2">
+											<span>분</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="item">
+								<h4 class="item-tit">전월대비 로그인 횟수</h4>
+								<div class="report-check1 col3">
+									<label>
+										<input type="radio" name="fr10" checked>
+										<span>감소</span>
+									</label>
+									<label>
+										<input type="radio" name="fr10">
+										<span>유지</span>
+									</label>
+									<label>
+										<input type="radio" name="fr10">
+										<span>증가</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search-btn">
+					<button class="btn-action c3">초기화</button>
+					<button class="btn-action">이전</button>
+					<button class="btn-action c1">검색</button>
+				</div>
+			</div>
+		</div>
+		<div class="contents">
+		</div>
+	</div>
+</div>
+
+<!-- [M 2022-10-26] 포인트 적립 슬라이드 값 수정 -->
+<script>
+	//포인트 샘플
+	$(document).on('change','#ex1, #ex2',function(){
+		var _val = 0;
+		if($(this).val() != 00000) _val = $(this).val() + '0000';
+		_val = _val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+		$(this).val(_val)
+	});
+</script>
+<!-- //[M 2022-10-26] 포인트 적립 슬라이드 값 수정 -->
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]보험계약자 확인사항 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>보험계약자 확인사항</h1>
+			<button type="button" data-btn="pop-close">보험계약자 확인사항 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 보험계약자 확인 안내 영역 -->
+			<!-- ######################### -->
+			<div class="tit-section"><p>보험모집인에게 상품설명을 듣고 <br>이해했음을 확인해주세요.</p></div> <!-- [M 2022-05-26] 0.8v UX Writing 적용 -->
+
+			<!-- [M 2022-05-26] 0.8v UX Writing 적용 -->
+			<div class="mes-t3">
+				<p>
+					보험모집인 <strong>@영업담당자이름@</strong>(은)는 보험계약자 <strong>@보험계약자이름@</strong>님을
+					직접 만나 상품 및 계약내용에 대해 충실히
+					설명하였고, 청약서 부본(각 항목 설명, 확인 및
+					동의서 포함) 및 약관을 전달했습니다.
+					보험계약자에게 제공되는 상품설명서의 내용과
+					보험모집인이 보험계약자에게 설명한 내용이
+					동일합니다.
+				</p>
+				<p>
+					위 내용에 대해 모든 책임을 질 것을
+					보험모집인이 <strong>2022.03.09</strong>에 확인 및
+					서명하였습니다.
+				</p>
+				<p>
+					보험모집인 <strong>@영업담당자이름@</strong>(으)로부터 직접 설명듣고
+					안내 받은 사실이 맞으면 자필서명하시기
+					바랍니다.
+				</p>
+			</div>
+			<!-- [M 2022-05-26] // -->
+
+			<!-- ######################### -->
+			<!-- [정보영역] 모집인 대면 확인 -->
+			<!-- ######################### -->
+			<div class="info-con1 line">
+				<dl>
+					<dt>설명방법</dt>
+					<dd>모바일자료</dd>
+				</dl>
+				<dl>
+					<dt>대면일시</dt>
+					<dd>2022.03.09  14:00</dd>
+				</dl>
+				<dl>
+					<dt>대면장소</dt>
+					<dd>사무실</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [내용확인] -->
+			<!-- ######################### -->
+			<div class="label-check1">
+				<label>
+					<input type="checkbox" name="form-check-box">
+					<span>위 내용을 확인했습니다.</span>
+				</label>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" disabled>서명하기</button>
+				<!-- <button type="button" class="btn-action c1">서명하기</button> -->
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+</body>
+</html>

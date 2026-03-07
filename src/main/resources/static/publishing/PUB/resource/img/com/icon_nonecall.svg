@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <path data-name="사각형 7854" style="fill:none" d="M0 0h16v16H0z"/>
+    <path d="M10.267 10.4c-.933.933-.933 1.867-1.867 1.867s-1.867-.934-2.8-1.867-1.867-1.867-1.867-2.8.934-.933 1.867-1.867S3.733 2 2.8 2 0 4.8 0 4.8c0 1.867 1.918 5.651 3.733 7.467S9.333 16 11.2 16c0 0 2.8-1.867 2.8-2.8s-2.8-3.733-3.733-2.8z" transform="translate(1 -1)" style="fill:#292929"/>
+    <path data-name="사각형 8424" transform="rotate(45 4.242 17.07)" style="fill:#e84427" d="M0 0h2v16H0z"/>
+</svg>

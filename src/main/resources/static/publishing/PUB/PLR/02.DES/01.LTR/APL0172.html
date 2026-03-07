@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>STEP4 | 내용확인 및 동의 | 스마트폰청약 | 표준설계 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>스마트폰 청약</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [진행상태] STEP 03 -->
+		<!-- ######################### -->
+		<div class="info-step1" data-autoset="toggle" data-sticky="top">
+			<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+			<ol data-toggle="content">
+				<li><button type="button">01. 보험계약자 확인</button></li>
+				<li><button type="button">02. 청약서류 확인</button></li>
+				<li aria-current="step"><button type="button">03. 내용확인 및 동의</button></li>
+				<li><button type="button" disabled>04. 기타동의</button></li>
+				<li><button type="button" disabled>05. 결제수단</button></li>
+				<li><button type="button" disabled>06. 전자서명</button></li>
+			</ol>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [상단문구] -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<div class="info-step3">
+				<p><strong>5</strong>개의 내용 중 <strong>4</strong>번째 입력</p>
+			</div>
+			<p>괄호 안의 문구를 선택하여 <br> 입력해주세요.</p><!-- [M 2022-05-26] 0.8v UX Writing 적용 -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [확인사항] -->
+		<!-- ######################### -->
+		<fieldset class="form-agree2">
+			<legend>계약자 확인사항</legend>
+			<div class="label-check1">
+				<label>
+					<input type="checkbox" required>
+					<span><strong>계약 전 알릴의무에 대한 내용 확인</strong></span>
+					<a href="javascript:void(0);" class="icon-com1 ic3 right simple">계약 전 알릴의무에 대한 내용 확인 상세보기</a>
+				</label>
+			</div>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [입력영역] 내용확인 -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap3">
+			<legend>계약 전 알릴의무에 대한 안내사항 및 동의사항</legend>
+
+			<!-- # // # -->
+			<div class="form">
+				<span>보험설계사는 계약전</span>
+				<div class="text2" data-label="알릴의무">
+					<input type="text" required>
+				</div> <span>사항에 대한 수령권한이 없으므로 과거의 진단 또는 치료 사실 등 중요한 내용을</span>
+				<div class="text2" data-label="구두">
+					<input type="text" required>
+				</div> <span>로만 알릴 경우 계약전 알릴의무를 이행한 것으로 인정되지 않아 향후 계약이</span>
+				<div class="text2" data-label="해지">
+					<input type="text" required>
+				</div> <span>되거나 보험금을 지급받지 못할 수 있습니다.</span>
+			</div>
+
+			<!-- # // # -->
+			<div class="form t1">
+				<span>계약자전</span>
+				<div class="text2" data-label="하다미">
+					<input type="text" required>
+				</div> <span>은(는) 보험설계사 </span>
+				<div class="text2" data-label="공지철">
+					<input type="text" required>
+				</div><span>(으)로 계약전 알릴의무 위반시의 효과(계약해지, 보장제한, 보험금미지급 등)에 대해 설명을 들었으며, 계약전 알릴의무 사항에 대해 사실대로 기재하였음을 확인합니다.</span><!-- [M 2022-05-26] 띄어쓰기 수정 -->
+			</div>
+			<!-- # // # -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [추가 내용 확인] 고혈압 -->
+		<!-- ######################### -->
+		<fieldset class="form-agree2">
+			<legend>추가 내용 확인 : 고혈압</legend>
+			<div class="label-check1">
+				<label>
+					<input type="checkbox" required>
+					<span>계약 전 알릴의무에 대한 추가 내용 확인<br> - 고혈압</span>
+					<a href="javascript:void(0);" class="icon-com1 ic3 right simple">계약 전 알릴의무에 대한 추가 내용 확인 - 고혈압 상세보기</a>
+				</label>
+			</div>
+			<div class="con-terms">
+				<p>본 설문지는 피보험자(계약자와 동일) 본인이 확인하였으며, 위 설문지의 내용이 사실과 다를 경우 인수가 불가하거나 계약이 취소될 수 있음에 동의합니다.</p>
+			</div>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [추가 내용 확인] 당뇨 -->
+		<!-- ######################### -->
+		<fieldset class="form-agree2">
+			<legend>추가 내용 확인 : 당뇨</legend>
+			<div class="label-check1">
+				<label>
+					<input type="checkbox" required>
+					<span>계약 전 알릴의무에 대한 추가 내용 확인<br> - 당뇨</span>
+					<a href="javascript:void(0);" class="icon-com1 ic3 right simple">계약 전 알릴의무에 대한 추가 내용 확인 - 당뇨 상세보기</a>
+				</label>
+			</div>
+			<div class="con-terms">
+				<p>본 설문지는 피보험자(계약자와 동일) 본인이 확인하였으며, 위 설문지의 내용이 사실과 다를 경우 인수가 불가하거나 계약이 취소될 수 있음에 동의합니다.</p>
+			</div>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [추가 내용 확인] -->
+		<!-- ######################### -->
+		<fieldset class="form-agree2">
+			<legend>추가 내용 확인 : 특정 신체부위</legend>
+			<div class="label-check1">
+				<label>
+					<input type="checkbox" required>
+					<span>특정 신체부위 &middot; 질병보장제한부 인수 특약 가입에 대한 내용 확인</span>
+					<a href="javascript:void(0);" class="icon-com1 ic3 right simple">특정 신체부위 &middot; 질병보장제한부 인수 특약 가입에 대한 내용 확인 상세보기</a>
+				</label>
+			</div>
+			<div class="con-terms">
+				<div>특정 신체부위 &middot; 질병보장제한부 인수 특약 가입 조건</div>
+				<div class="txt-bul3 txt1">보장제한에 대한 부위별 상세 설명은 해당 신청서를 참고해 주시기 바랍니다.</div>
+			</div>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [입력영역] 내용확인 -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap3">
+			<legend>특정 신체부위 및 질병보장제한부 인수 특약 가입 대한 안내사항 및 동의사항</legend>
+
+			<div class="form">
+				<span>귀사가 안내한 강기 특정 신체부위 &middot; 질병보장제한부 인수 특약의 내용 및 안내사항을</span>
+				<div class="text2" data-label="정확히이해">
+					<input type="text" required>
+				</div><span>하며, 이에 대한 이의가 없음을 확인하고 가입을 신청합니다.</span>
+			</div>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action ">이전</button>
+			<button type="button" class="btn-action c1" disabled>다음</button>
+			<!-- <button type="button" class="btn-action c1">다음</button> : 활성화 -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

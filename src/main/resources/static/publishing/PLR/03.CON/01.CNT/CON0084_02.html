@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[STEP1] | 서류발송 | 계약상세 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>서류발송</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [상단영역] 보험상품정보 -->
+		<!-- ######################### -->
+		<div class="info-summary2 t2">
+			<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+			<div class="info">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>LA123456789</dd>
+				</dl>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [진행상태] STEP 02 -->
+		<!-- ######################### -->
+		<div class="info-step1" data-autoset="toggle" data-sticky="top">
+			<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+			<ol data-toggle="content">
+				<li><span>01. 서류 및 발송방법 선택</span><button type="button" class="btn-sub3 c2">수정</button></li>
+				<li aria-current="step"><span>02. 정보입력 및 확인</span></li>
+			</ol>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [정보입력 및 확인] -->
+		<!-- ######################### -->
+		<div class="tit-section"><p>발송하실 방법에 따라<br>내용을 각각 입력해주세요.</p></div>
+
+		<!-- [CASE] : 온라인증권 선택 시 노출 영역 -->
+		<fieldset class="form-wrap1">
+			<legend>계약서 동의 및 재발행 사유</legend>
+
+			<div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<span >본인(계약자)동의 <i class="icon-required2">필수</i></span>
+				</label>
+			</div>
+
+			<dl class="form">
+				<dt>재발행 사유 <i class="icon-required2">필수</i></dt>
+				<dd>
+					<div class="select-wrap" data-autoset="select" data-callback="uiFunction2"> <!-- data-function="uiFunction2" : 함수호출 샘플 하단 참고 -->
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">재발행 사유</span>
+							<span data-select="text" data-value="1">증권분실</span>
+						</button>
+						<div class="list">
+							<div data-label="재발행 사유">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion" value="1"><span>증권분실</span></label>
+									<label><input type="radio" name="selectOpeion" value="2"><span>담보변경</span></label>
+									<label><input type="radio" name="selectOpeion" value="3"><span>주소변경</span></label>
+									<label><input type="radio" name="selectOpeion" value="4"><span>증권미수령</span></label>
+									<label><input type="radio" name="selectOpeion" value="5"><span>기타</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<div class="ui-tabcon" data-select-con="5">
+						<input type="text" class="text" placeholder="재발행 사유를 입력해주세요.">
+					</div>
+				</dd>
+			</dl>
+		</fieldset>
+		<!-- // -->
+
+		<!-- # [TAB] 버튼영역 # -->
+		<div class="tab-sub1" data-autoset="tab" data-sticky="top">
+			<ul>
+				<li class="active"><a href="#uiTab2Section1" aria-current="page">알림톡</a></li>
+				<li><a href="#uiTab2Section2">이메일</a></li>
+				<!-- <li><a href="#uiTab2Section3">팩스</a></li> --> <!-- 2022-12-21 팩스 삭제 -->
+			</ul>
+		</div>
+
+		<!-- # [TAB] 알림톡 # -->
+		<div id="uiTab2Section1" class="ui-tabcon active">
+			<fieldset class="form-wrap1">
+				<legend>알림톡 정보입력</legend>
+				<dl class="form">
+					<dt>고객명</dt>
+					<dd>
+						<data class="text" data-label="성함을 입력해주세요." value="조희란" aria-invalid="false">조희란</data>
+					</dd>
+				</dl>
+				<dl class="form">
+					<dt>내용</dt>
+					<dd>
+						<div class="textarea">
+							<data value="" data-disabled="true">[롯데손해보험]
+								온라인증권 재발송
+
+								사전에 등록된 알림톡 내용이 나옵니다.
+								직접 편집은 불가합니다.
+								알림톡은 서류별 등록되어 있음
+							</data>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+			</fieldset>
+			<dl class="txt-mark2 t1">
+				<dt>알림톡이 도착하지 않을 경우</dt>
+				<dd>롯데손해보험 알림톡 친구 추가</dd>
+				<dd>롯데손해보험 알림톡 수신차단 해제</dd>
+				<dd>카카오톡 최신 버전으로 업데이트</dd>
+				<dd>영업고객정보의 휴대폰번호 확인</dd>
+				<dd>실제 휴대폰번호와 카카오톡에 등록된 휴대폰번호 일치 여부 확인</dd>
+			</dl>
+			<p class="txt-bul1 t1">알림톡 발송 실패 시 문자메시지(LMS)로 전송됩니다.</p>
+		</div>
+
+		<!-- # [TAB] 이메일 # -->
+		<div id="uiTab2Section2" class="ui-tabcon">
+			<div class="form-wrap1">
+				<fieldset>
+					<legend>이메일 정보입력</legend>
+
+					<dl class="form">
+						<dt>고객명</dt>
+						<dd><data class="text" data-label="성함을 입력해주세요." value="조희란" aria-invalid="false">조희란</data></dd>
+					</dl>
+
+					<dl class="form">
+						<dt>수신메일</dt>
+						<dd><input type="email" class="text" placeholder="수신메일을 입력해주세요."></dd>
+					</dl>
+				</fieldset>
+
+				<fieldset>
+					<legend class="tit2">내용 입력</legend>
+					<div class="side"><button type="button" class="btn-sub2 c2 ic8">초기화</button></div>
+
+					<dl class="form">
+						<dt>제목</dt>
+						<dd><input type="text" class="text" placeholder="제목을 입력해주세요."></dd>
+					</dl>
+
+					<dl class="form">
+						<dt>내용</dt>
+						<dd>
+							<div class="textarea">
+								<textarea cols="50" rows="3" title="내용" placeholder="내용을 입력해주세요."></textarea>
+								<span class="util2"><strong>0</strong>/1,000자</span>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+			</div>
+		</div>
+
+		<!-- # [TAB] 팩스 # -->
+		<div id="uiTab2Section3" class="ui-tabcon">
+			<fieldset class="form-wrap1">
+				<legend>팩스 정보입력</legend>
+
+				<!-- # 표지 포함 선택 # -->
+				<div class="label-check1">
+					<label>
+						<input type="checkbox" checked>
+						<span >표지포함</span>
+					</label>
+				</div>
+				<dl class="form">
+					<dt>제목</dt>
+					<dd><input type="text" class="text" placeholder="표지 제목을 입력하세요."></dd> <!-- [D] 표지포함 해제시 disabled 추가 -->
+				</dl>
+				<dl class="form">
+					<dt>내용</dt>
+					<dd>
+						<div class="textarea">
+							<textarea cols="50" rows="3" title="내용" placeholder="표지 내용을 입력하세요."></textarea> <!-- [D] 표지포함 해제시 disabled 추가 -->
+							<span class="util2"><strong>0</strong>/1,000자</span>
+						</div>
+					</dd>
+				</dl>
+				<!-- # // # -->
+
+				<!-- // -->
+				<dl class="form line">
+					<dt>보내는사람</dt>
+					<dd><input type="text" class="text" value="롯데손해보험 조희란 설계사" placeholder="보내는사람을 입력해주세요."></dd>
+				</dl>
+				<dl class="form">
+					<dt>받는사람</dt>
+					<dd><input type="text" class="text" value="계약자이름" placeholder="받는사람을 입력해주세요."></dd>
+				</dl>
+				<dl class="form">
+					<dt>수신팩스번호</dt>
+					<dd><input type="tel" class="text" placeholder="숫자만 입력"></dd>
+				</dl>
+				<!-- // -->
+			</fieldset>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action">미리보기</button>
+			<button type="button" class="btn-action c1">발송</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	$plugin.togglecon('.area-toggle1 > section');
+
+	//샘플 : 재발행 상유
+	function uiFunction2(e){
+		var _select_val = e.val();
+
+		$('[data-select-con].ui-tabcon').removeClass('active');
+		$('[data-select-con="'+ _select_val +'"].ui-tabcon').addClass('active');
+	}
+//-->
+</script>
+</body>
+</html>

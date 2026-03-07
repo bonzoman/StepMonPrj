@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>이슈 컨텐츠 발송하기 | 이슈고객 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-27]	① textarea 문구입력
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>컨텐츠 발송</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [보내는 컨텐츠] -->
+		<!-- ######################### -->
+        <fieldset class="form-wrap1 wrap-section4">
+            <legend class="tit">보내는 컨텐츠</legend>
+            <div class="input-btn1">
+                <data class="selectbox" data-label="키즈보험"></data>
+                <button type="button">키즈보험</button>
+            </div>
+        </fieldset>
+
+		<!-- ######################### -->
+		<!-- [보내는 컨텐츠] -->
+		<!-- ######################### -->
+		<div class="wrap-section4">
+			<div class="tit-sub1">
+				<h3>받는 사람 정보<span>(최대 10명)</span></h3>
+			</div>
+
+			<!-- [D] 선택된 컨텐츠 리스트 노출 -->
+			<div class="info-data3">
+				<ul>
+					<li>
+						<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong data-masking="true">고객명</strong>
+							<span>
+								<span>0000.00.00</span>
+								<span>성별</span>
+							</span>
+						</div>
+						<div class="data1">
+							<span>휴대폰번호</span>
+							<strong><span data-masking="true">000 - **** - 0000</span></strong>
+						</div>
+						<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info2" data-value="107002">
+							<strong data-masking="true">하*미</strong>
+							<span>
+								<span>0000.00.00</span>
+								<span>여</span>
+							</span>
+						</div>
+						<div class="data1">
+							<span>휴대폰번호</span>
+							<strong><span data-masking="true">000 - **** - 0000</span></strong>
+						</div>
+						<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					</li>
+				</ul>
+			</div>
+			<!-- // -->
+			<div class="area-btn1">
+				<button type="button" class="btn-com1 ic3">고객 추가</button> <!-- [D] 비활성화 시 disabled 추가 -->
+				<button type="button" class="btn-com1 ic3" disabled>직원 추가</button>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [보내실 내용] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1 wrap-section4">
+			<legend class="tit">보내실 내용</legend>
+            <dl class="form">
+                <dt class="hide">보내실 내용</dt>
+                <dd>
+                    <div class="textarea">
+						<!-- 2022-10-27 문구입력 -->
+                        <textarea cols="50" rows="3" title="등록내용" placeholder="내용을 입력해주세요.">
+고객님 안녕하세요~ 롯데손해보험 박만찬 LP입니다.
+추천드릴 만한 미니보험이 있어 소개해드립니다. 자세한 내용은 링크를 눌러 확인해주세요.</textarea>
+						<!-- //2022-10-27 문구입력 -->
+                        <span class="util2"><strong>0</strong>/20,000자</span>
+                    </div>
+                </dd>
+                <dd>
+                    <p class="txt-bul4">내용을 수정하지 않을 경우, 설정된 내용이 그대로 발송됩니다.</p>
+                </dd>
+            </dl>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">컨텐츠발송</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

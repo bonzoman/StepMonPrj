@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>내용확인 및 동의 | 스마트폰청약 | 표준설계 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>스마트폰 청약</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [상단문구] -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>괄호 안의 문구를 선택하여<br>입력해주세요.</p> <!-- [M 2022-05-26] 0.8v UX Writing 적용 -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [상품설명 내용확인서] -->
+		<!-- ######################### -->
+		<fieldset class="form-agree2">
+			<legend>표준항암진단비담보유무</legend>
+			<div class="label-check1">
+				<label>
+					<input type="checkbox" required>
+					<span><strong>표준항암진단비담보유무</strong></span>
+					<a href="javascript:void(0);" class="icon-com1 ic3 right simple">표준항암진단비담보유무 상세보기</a>
+				</label>
+			</div>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [입력영역] 내용확인 -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap3">
+			<legend>가입상품에 대한 안내사항 및 동의사항</legend>
+
+			<!-- # 보험계약자 확인 # -->
+			<dl class="form">
+				<dt>표적항암약물허가치료비 보장에 관한 사항</dt>
+				<dd>
+                    <span>1) 표적항암약물허가치료비는 암세포의 특정 분자를 표적 공격하여 암의 성장과 확산을 억제하는</span>
+					<!-- [CASE1] 기본 -->
+					<div class="text2" data-label="표적항암제"> <!-- [D] data-label="덧쓰기 텍스트" -->
+						<input type="text" maxlength="5" required>
+					</div>
+					<!-- [CASE2] 오류 : 클래스명(invalid) 추가  -->
+					<div class="text2 invalid" data-label="표적항암제">
+						<input type="text" maxlength="5" value="표적항암세" required>
+					</div>
+					<!-- [CASE3] 정상 : 클래스명(valid) 추가 -->
+					<div class="text2 valid" data-label="표적항암제">
+						<input type="text" maxlength="5" value="표적항암제" required>
+					</div>
+                    <span>의</span>
+					<div class="text2" data-label="처방">
+						<input type="text" maxlength="2" required>
+					</div><span>을 받은 경우 보험금을 지급합니다.</span>
+				</dd>
+				<dd>
+					<span>2) 표적항암약물허가치료비란 항암약물치료 방법 중 하나로 「표적항암제」의 투여 치료를 말하며, 다른 항암약물치료대비</span>
+					<div class="text2" data-label="발생빈도">
+						<input type="text" maxlength="4" required>
+					</div>
+					<span>는</span>
+					<div class="text2" data-label="낮지만">
+						<input type="text" maxlength="3" required>
+					</div>
+					<span>고가(高價)의 치료비용 발생 보장을 목적으로 합니다.</span>
+				</dd>
+				<dd>
+					<span>3) 표적항암약물허가치룐는 또는</span>
+					<div class="text2" data-label="식약처허가">
+						<input type="text" maxlength="5" required>
+					</div>
+					<span>또는</span>
+					<div class="text2" data-label="심평원승인">
+						<input type="text" maxlength="5" required>
+					</div>
+					<span>요법에 한해</span>
+					<div class="text2" data-label="처방시점">
+						<input type="text" maxlength="4" required>
+					</div>
+					<span>을</span>
+					<div class="text2" data-label="기준">
+						<input type="text" maxlength="2" required>
+					</div>
+					<span>으로 보장하며,</span>
+					<div class="text2" data-label="호르몬">
+						<input type="text" maxlength="3" required>
+					</div>
+					<div class="text2" data-label="관련치료제">
+						<input type="text" maxlength="5" required>
+					</div>
+					<div class="text2" data-label="세포독성">
+						<input type="text" maxlength="4" required>
+					</div>
+					<div class="text2" data-label="항암제">
+						<input type="text" maxlength="3" required>
+					</div>
+					<span>및</span>
+					<div class="text2" data-label="생물학">
+						<input type="text" maxlength="3" required>
+					</div>
+					<span>적</span>
+					<div class="text2" data-label="반응">
+						<input type="text" maxlength="2" required>
+					</div>
+					<div class="text2" data-label="조절제">
+						<input type="text" maxlength="3" required>
+					</div>
+					<span>는 보장에서</span>
+					<div class="text2" data-label="제외">
+						<input type="text" maxlength="2" required>
+					</div>
+					<span>합니다.</span>
+				</dd>
+			</dl>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">확인</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+//<!--
+	//[샘플] 덧쓰기
+	$('.text2').each(function(i, obj){
+		var _input = $(obj).find('> input');
+		var _text = $(obj).data('label');
+
+		_input.keyup(function(e) {
+			$(obj).removeClass('valid invalid');
+		}).blur(function(e){//덧쓰기 끝났을 때
+			if (_input.val() == _text) {
+				$(obj).addClass('valid');
+			}else if(_input.val() == _text || _input.val() != ''){
+				$(obj).addClass('invalid');
+			};
+		});
+	});
+//-->
+</script>
+</body>
+</html>

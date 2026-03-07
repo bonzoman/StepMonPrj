@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>모의고사 진행</title>
+	<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+	<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/ui.plugin.js"></script>
+	<script src="../../resource/js/ui.common.js?20220913"></script>
+	<script src="../../resource/js/ui.common.cnd.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-17]	1. 문제 바로가기 레이어팝업 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] #popup ### -->
+<!-- ################################################### -->
+<article class="popup-mockexam">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 팝업 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>1형</h1>
+		<p>기출문제</p>
+		<div class="timer">
+			<button class="btn_play" onclick="TimerStart()">play</button>
+			<button class="btn_pause" onclick="TimerPause()">pause</button>
+			<span class="time">00:00</span>
+		</div>
+		<button type="button" data-btn="pop-close" aria-controls="uiPOPID1" class="icon-out" onclick="TimerPause()">모의고사 나가기</button>
+
+		<!-- 진행률 표시 -->
+		<div class="progress-bar">
+			<span>번 문제</span>
+		</div>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<div>
+			<!-- 문제 바로가기  -->
+			<div class="location">
+				<button class="value-data">
+					<em>07</em>/50
+				</button>
+				<div class="location-selection">
+					<!-- [M 2022-10-17] 문제 바로가기 레이어팝업 수정 -->
+					<div class="swiper-container">
+						<div class="swiper-pagination"></div>
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">
+								<!-- 손해보험 -->
+								<div class="example-num">
+									<!-- 정답 체크한 문제 -->
+									<a href="javascript:void(0);">01</a>
+									<a href="javascript:void(0);">02</a>
+									<a href="javascript:void(0);">03</a>
+									<a href="javascript:void(0);">04</a>
+									<a href="javascript:void(0);">05</a>
+									<a href="javascript:void(0);">06</a>
+									<!-- 현재 문제 위치 -->
+									<a href="javascript:void(0);" class="current">07</a>
+									<!-- 정답 체크하지 않은 문제 -->
+									<a href="javascript:void(0);" class="non-check">08</a>
+									<a href="javascript:void(0);">09</a>
+									<a href="javascript:void(0);">10</a>
+									<a href="javascript:void(0);">11</a>
+									<a href="javascript:void(0);">12</a>
+									<a href="javascript:void(0);">13</a>
+									<a href="javascript:void(0);">14</a>
+									<a href="javascript:void(0);">15</a>
+									<a href="javascript:void(0);">16</a>
+									<a href="javascript:void(0);">17</a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<!-- 제3보험 -->
+								<div class="example-num">
+									<a href="javascript:void(0);">18</a>
+									<a href="javascript:void(0);">19</a>
+									<a href="javascript:void(0);">20</a>
+									<a href="javascript:void(0);">21</a>
+									<a href="javascript:void(0);">22</a>
+									<a href="javascript:void(0);">23</a>
+									<!-- 정답 체크하지 않은 문제 -->
+									<a href="javascript:void(0);" class="non-check">24</a>
+									<a href="javascript:void(0);" class="non-check">25</a>
+									<a href="javascript:void(0);" class="non-check">26</a>
+									<a href="javascript:void(0);" class="non-check">27</a>
+									<a href="javascript:void(0);">28</a>
+									<a href="javascript:void(0);" class="non-check">29</a>
+									<a href="javascript:void(0);" class="non-check">30</a>
+									<a href="javascript:void(0);" class="non-check">31</a>
+									<a href="javascript:void(0);" class="non-check">32</a>
+									<a href="javascript:void(0);" class="non-check">33</a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<!-- 공통 -->
+								<div class="example-num">
+									<a href="javascript:void(0);" class="non-check">34</a>
+									<a href="javascript:void(0);" class="non-check">35</a>
+									<a href="javascript:void(0);" class="non-check">36</a>
+									<a href="javascript:void(0);" class="non-check">37</a>
+									<a href="javascript:void(0);" class="non-check">38</a>
+									<a href="javascript:void(0);" class="non-check">39</a>
+									<a href="javascript:void(0);" class="non-check">40</a>
+									<a href="javascript:void(0);" class="non-check">41</a>
+									<a href="javascript:void(0);" class="non-check">42</a>
+									<a href="javascript:void(0);" class="non-check">43</a>
+									<a href="javascript:void(0);" class="non-check">44</a>
+									<a href="javascript:void(0);" class="non-check">45</a>
+									<a href="javascript:void(0);" class="non-check">46</a>
+									<a href="javascript:void(0);" class="non-check">47</a>
+									<a href="javascript:void(0);" class="non-check">48</a>
+									<a href="javascript:void(0);" class="non-check">49</a>
+									<a href="javascript:void(0);" class="non-check">50</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- // [M 2022-10-17] 문제 바로가기 레이어팝업 수정 -->
+				</div>
+			</div>
+
+			<!-- 지문 -->
+			<div class="example-problem">
+				<p>다음 중 운전자 연령한정운전특약 위반 시에도 보상되는 담보를 모두 고른 것은? [3점]</p>
+				<!-- 문제 영역 -->
+				<ul class="tag">
+					<li>#손해보험</li>
+					<li>#자주 출제되는 문제</li>
+				</ul>
+			</div>
+
+			<!-- 예문 -->
+			<div class="example-sentence">
+				<!--
+					예문 글머리 기호
+					class="disc"		: ·
+					class="hyphen"		: -
+					class="jaeum"		: ㄱ. ㄴ. ㄷ.
+					class="jaeum-circle": ㉠, ㉡, ㉢
+					class="hangul"		: 가. 나. 다.
+					class="hangul-deco": 가) 나) 다)
+					class="alphabet"	: a. b. c.
+				-->
+				<ul class="disc">
+					<li>대인배상1</li>
+					<li>대인배상2</li>
+					<li>대물배상 (가입금액 2천만원)</li>
+					<li>자기신체사고</li>
+					<li>자기차량손해</li>
+				</ul>
+			</div>
+
+			<!-- 정답 입력란 -->
+			<div class="answer-choice">
+				<!-- 객관식 선택 -->
+				<label>
+					<input type="radio" name="radio-item">
+					<span>폭발에 따른 직접손해 및 화재진압과정에서 발생하는 손해</span>
+				</label>
+				<label>
+					<input type="radio" name="radio-item" checked>
+					<span>변압기, 배전반 등 전기장치의 전기적 사고로 생긴 손해</span>
+				</label>
+				<label>
+					<input type="radio" name="radio-item">
+					<span>보험목적물의 자연발화로 생긴 손해</span>
+				</label>
+				<label>
+					<input type="radio" name="radio-item">
+					<span>폭발사고 시 발생한 도난 또는 분실로 생긴 손해</span>
+				</label>
+
+				<!-- 주관식 입력 -->
+				<input type="text" placeholder="답을 입력해주세요.">
+			</div>
+
+
+		</div>
+
+		<div class="area-action t1" data-sticky="bottom">
+			<!-- 합격률 확인 -->
+			<div class="pass-rate">
+				<button class="btn">합격률</button>
+				<div class="balloon">
+					<strong>합격 가능성</strong>
+					<ul class="graph">
+						<li>
+							<div>손해보험</div>
+							<span>
+								<i></i>
+							</span>
+							<em>100%</em>
+						</li>
+						<li>
+							<div>제3보험</div>
+							<span>
+								<i></i>
+							</span>
+							<em>39%</em>
+						</li>
+					</ul>
+					<button class="close">닫기</button>
+				</div>
+			</div>
+			<!-- 힌트 확인 - 15초 후 활성화 -->
+			<div class="hint">
+				<button class="btn">힌트</button>
+				<div class="balloon">
+					<strong>Hint!</strong>
+					<p>주택화재보험에서 보상하는 손해에 해당하지 않는 것에는 도난, 자연발화 등이 있어요!</p>
+					<button class="close">닫기</button>
+				</div>
+			</div>
+			<a href="javascript:void(0);" class="btn-action">이전</a>
+			<a href="javascript:void(0);" class="btn-action c1">다음</a>
+		</div>
+	</div>
+</article>
+
+<!--[M : 2022-08-08 팝업 문구 수정]-->
+<!-- ##################################### -->
+<!-- # 모의고사 포기(나가기) 확인 팝업 -->
+<!-- ##################################### -->
+<div id="uiPOPID1" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>포기하지 마세요!</dt>
+		<dd class="mockexam-out">
+			남은 문제가 있습니다.<br>
+			그래도 나가시겠습니까?
+			<span>(모의고사 이력은 저장됩니다.)</span>
+		</dd>
+		<!-- // -->
+		<dd class="area-action">
+			<button type="button" class="btn-action">나가기</button>
+			<button type="button" class="btn-action c1" data-btn="pop-close">계속하기</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- // [M : 2022-08-08 팝업 문구 수정]-->
+<script>
+//<!--
+	$plugin.popmodal('#uiPOPID1');
+	TimerStart()
+	radiochecked()
+	LocationTabSize()
+
+
+	// 모의고사번호선택팝업 오픈
+	$(function(){
+		$(".location .value-data").trigger("click")
+	})
+
+	//[M 2022-10-17] 문제 바로가기 레이어팝업 수정
+	var exampleMenu = ['손해보험', '공통', '제3보험'];
+	var examplesState = ['completion', '', 'non-check']; // ['손해보험', '공통', '제3보험'] 상태값 ( 응시완료 completion, 미응시 non-check, default는 진행중  )
+	var exampleSwiper = new Swiper ('.swiper-container', {
+		spaceBetween: 16,
+		autoHeight: true,
+		pagination: {
+		el: '.swiper-pagination',
+				clickable: true,
+			renderBullet: function (index, className) {
+			return '<span class="' + className+ ' ' + examplesState[index] + '">' + (exampleMenu[index]) + '</span>';
+			},
+		},
+	})
+	exampleSwiper.slideTo(0, 1000, false);//swiper 슬라이드(index, speed, runCallbacks)
+//-->
+</script>
+</body>
+</html>

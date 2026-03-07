@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>출생후등록 대상계약 | 태아등재대상계약 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-20]	① 탭버튼 삭제
+	*					② 목록에 정상/해지 뱃지 추가
+	*	[M 2022-09-30]	① 텍스트 변경 출생예정월 = 출생예정월 기준, 월선택 달력변경
+	*	[M 2022-10-14]	1. 문구수정 : 취급자 강북사업단 > (사번번호로 변경)
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>출생후등록 대상계약</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [검색영역] 조회검색 -->
+		<!-- [토글정의]
+			 * [조회정보보기] [조회조건 재검색] 버튼 클릭시 (load)클래스 자동 추가 삭제 됨
+			 * [조회] 버튼 클릭시
+			 	ㄴ 기본 : _toggleSearch.outputClose(); // 토글 닫기
+				ㄴ 결과 있을 경우에만 : (active)클래스 추가
+			* 조회조건 샘플 : /PLR/02.DES/01.LTR/LTR0097.html 참고
+				ㄴ 조회구분 > 설계번호 선택 후 > 입력폼에 입력 후 조회 클릭시 목록이 보임.
+		-->
+		<!-- ######################### -->
+		<div id="uiFormSearch" class="form-search2" data-scroll-bg="1" data-togglecon="true">
+			<!-- ### [상단문구] ### -->
+			<div class="tit-section2">
+				<p>계약을 조회해보세요.</p>
+				<button type="button" data-toggle="btn" aria-expanded="false">조회정보보기</button>
+			</div>
+
+			<!-- ### [조회영역] ### -->
+			<fieldset class="form-wrap1">
+				<legend>조회정보 입력</legend>
+
+				<!-- # 조직구분 : [D] 설계사 로그인 시 미노출 영역 # -->
+				<dl class="form">
+					<dt>조직구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="label-btn1" data-autoset="form">
+							<label>
+								<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont1" checked>
+								<span>조직</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont2" >
+								<span>취급자</span>
+							</label>
+						</div>
+						<!-- [CASE] 조직 -->
+						<div class="ui-tabcon active" data-id="uiFormCont1">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="조직을 검색해주세요." value="" aria-invalid="true"></data><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+								<button type="button" class="icon-com1 ic2">조직찾기</button>
+							</div>
+							<div class="validation">조직구분을 선택해주세요.</div>
+							<!-- [D] 검색결과 : 조직 -->
+							<div class="info-data3 info">
+								<div class="info2 ic1">
+									<strong>장기지원팀</strong>
+									<span>A1234566</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+						</div>
+
+						<!-- [CASE] 취급자 -->
+						<div class="ui-tabcon" data-id="uiFormCont2">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="취급자를 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">취급자찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 취급자 -->
+							<div class="info-data3 info">
+								<div class="data-info1">
+									<span class="img"><img src="../../../resource/img/temp/@img_user3.png" alt=""></span>
+									<span><strong>공지철</strong><span>111111</span></span> <!-- 2022-10-14 사번으로 변경 -->
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+							<!-- // -->
+						</div>
+					</dd>
+				</dl>
+				<!-- # // # -->
+
+				<!-- # 조회구분 # -->
+				<dl class="form">
+					<dt>출생예정월 기준 <i class="icon-required2">필수</i></dt> <!-- 2022-09-30 텍스트 변경 -->
+					<!-- 2022-09-30 마크업 변경 -->
+					<dd class="input-date1 text">
+						<span>
+							<button type="button" data-btn="picker" class="icon-com1 ic4">출생예정월 선택</button>
+							<input type="text" title="출생예정월 선택" data-dateform="month" value="2022.02" placeholder="YYYY.MM" readonly="">
+						</span>
+					</dd>
+					<!-- //2022-09-30 마크업 변경 -->
+					<dd class="mes-info2">시작월로부터 최대 6개월까지 조회 가능합니다.</dd>
+				</dl>
+
+				<!-- # 검색버튼 # -->
+				<div class="area-btn1 col">
+					<button type="button" class="btn-com1 ic8 c3">초기화</button>
+					<button type="button" class="btn-com1 c1" data-btn="search">조회</button>
+				</div>
+				<!-- # // # -->
+			</fieldset>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색전] 안내문구 -->
+		<!-- ######################### -->
+		<div class="mes-result1 ic1">
+			<p>
+				<strong>조회조건을 선택하시어<br>계약을 조회해주세요</strong>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 결과없음 -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>선택하신 조건의 계약이 없습니다.</strong>
+				<span>조회조건을 바꾸어 조회해보세요.</span>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [요약정보] -->
+		<!-- ######################### -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>출생예정월</dt>
+				<dd class="ic0"><strong>2022.02~2022.03</strong></dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭버튼] -->
+		<!-- ######################### -->
+		<!-- [M 2022-09-20] 삭제
+		<div class="tab-sub1" data-sticky="top">
+			<ul>
+				<li class="active"><a href="#uiTabCont01" aria-current="page">정상</a></li>
+				<li><a href="#uiTabCont02">해지</a></li>
+			</ul>
+		</div>
+		 -->
+
+		<!-- ######################### -->
+		<!-- [안내문구] -->
+		<!-- ######################### -->
+		<p class="mes-info2 box">입력한 출생예정월이 지난 출생후미등록 건도 함께 조회됩니다.</p>
+
+		<!-- [M 2022-09-20] 탭버튼 삭제로 탭컨텐츠 영역 태그 <div id="uiTabCont01" class="ui-tabcon"> 삭제 -->
+		<!-- ######################### -->
+		<!-- [목록영역] -->
+		<!-- ######################### -->
+		<!-- # [총 건수] # -->
+		<div class="area-info1">
+			<p>총 <strong>00건</strong></p>
+		</div>
+
+		<!-- # [목록] # -->
+		<div class="info-data2">
+			<ul>
+				<li>
+					<!-- [상품명] -->
+					<strong class="tit">정상상품명</strong>
+
+					<!-- [상태 / 증권번호] -->
+					<div class="info">
+						<!-- [M 2022-09-20] 뱃지 추가 -->
+						<i class="icon-state2 ic3">정상</i>
+						<i class="icon-state2 ic7">해지</i>
+						<!--// [M 2022-09-20] -->
+						<i class="icon-state2 ic4">등재필요</i>
+						<span class="hide">증권번호</span>
+						<span>253220000000000</span>
+					</div>
+
+					<!-- [보험료 / 납입사항] -->
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>0000.00.00</span>
+								<span>성별</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>등록예정</dt>
+							<dd>0000.00</dd>
+						</dl>
+						<dl>
+							<dt>최종월도</dt>
+							<dd>0000.00</dd>
+						</dl>
+					</div>
+
+					<!-- [버튼] -->
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">출생후등록 요청</button>
+					</div>
+					<a href="javascript:void(0);" class="link">상세보기</a>
+					<!-- // -->
+				</li>
+				<!-- // -->
+				<li>
+					<strong class="tit">롯데태아보험</strong>
+					<div class="info">
+						<i class="icon-state2 ic3">정상</i> <!-- [M 2022-09-20] -->
+						<span class="hide">증권번호</span>
+						<span>253220000000000</span>
+					</div>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>1990.01.10</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>등록예정</dt>
+							<dd>0000.00</dd>
+						</dl>
+						<dl>
+							<dt>최종월도</dt>
+							<dd>2022.05</dd>
+						</dl>
+					</div>
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">출생후등록 요청</button>
+					</div>
+					<a href="javascript:void(0);" class="link">상세보기</a>
+				</li>
+				<!-- // -->
+				<li>
+					<strong class="tit">롯데태아보험</strong>
+					<div class="info">
+						<i class="icon-state2 ic7">해지</i> <!-- [M 2022-09-20] -->
+						<span class="hide">증권번호</span>
+						<span>253220000000000</span>
+					</div>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>1990.01.10</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>등록예정</dt>
+							<dd>0000.00</dd>
+						</dl>
+						<dl>
+							<dt>최종월도</dt>
+							<dd>2022.05</dd>
+						</dl>
+					</div>
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">출생후등록 요청</button>
+					</div>
+					<a href="javascript:void(0);" class="link">상세보기</a>
+				</li>
+				<!-- // -->
+			</ul>
+
+			<!-- 더보기(현재페이지/총페이지) -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- [M 2022-09-20] 삭제 -->
+		<!-- ######################### -->
+		<!-- [탭컨텐츠1] 해지 -->
+		<!-- ######################### -->
+		<!--
+			<div id="uiTabCont02" class="ui-tabcon">
+				<div class="area-info1">
+					<p>총 <strong>00건</strong></p>
+				</div>
+
+				<div class="info-data2">
+					<ul>
+						<li>
+							<strong class="tit">해지상품명</strong>
+							<div class="info">
+								<i class="icon-state2 ic4">등재필요</i>
+								<span class="hide">증권번호</span>
+								<span>253220000000000</span>
+							</div>
+							<div class="data1">
+								<dl>
+									<dt>계약자</dt>
+									<dd class="info2">
+										<strong data-masking="true">하*미</strong>
+										<span>0000.00.00</span>
+										<span>성별</span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>등록예정</dt>
+									<dd>0000.00</dd>
+								</dl>
+								<dl>
+									<dt>최종월도</dt>
+									<dd>0000.00</dd>
+								</dl>
+							</div>
+							<div class="area-btn1">
+								<button type="button" class="btn-com1">계약상세</button>
+								<button type="button" class="btn-com1 c1">출생후등록 요청</button>
+							</div>
+						</li>
+						<li>
+							<strong class="tit">롯데태아보험</strong>
+							<div class="info">
+								<span class="hide">증권번호</span>
+								<span>253220000000000</span>
+							</div>
+							<div class="data1">
+								<dl>
+									<dt>계약자</dt>
+									<dd class="info2">
+										<strong data-masking="true">하*미</strong>
+										<span>1990.01.10</span>
+										<span>여</span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>등록예정</dt>
+									<dd>0000.00</dd>
+								</dl>
+								<dl>
+									<dt>최종월도</dt>
+									<dd>2022.05</dd>
+								</dl>
+							</div>
+							<div class="area-btn1">
+								<button type="button" class="btn-com1 c1">출생후등록 요청</button>
+							</div>
+						</li>
+					</ul>
+
+					<div class="area-btn2">
+						<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+					</div>
+				</div>
+			</div>
+		-->
+		<!-- ######################### -->
+
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer"></footer>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+//<!--
+	/* ************************************
+	* 토글 호출
+	************************************ */
+	var _toggleSearch = $plugin.togglecon('#uiFormSearch', {
+		class_active : 'load',
+		selector_group : false,
+		callback_load :function(e){
+			//오픈이벤트
+		},
+		callback_after : function(e){
+			//닫기이벤트
+		}
+	});
+
+	//토글컨텐츠 강제 오픈
+	_toggleSearch.outputOpen();
+
+	/* ************************************
+	* 탭버튼 호출
+	************************************ */
+	/* [M 2022-09-20] 탭버튼 삭제
+	$plugin.togglecon('.tab-sub1',{
+		toggle_type : 'tab',
+		selector : '.tab-sub1 > ul > li',
+		selector_btn : '> a',
+		selector_con : '#href',
+		callback_load : function(e){
+			//오픈이벤트
+		}
+	});
+	*/
+
+	/* ************************************
+	* 샘플 : 조회구분 셀렉트
+	************************************ */
+	function uiSampleFunction(e){
+		var _select_val = e.val();
+		$('[data-select-con="'+ _select_val +'"].ui-tabcon').addClass('active').siblings().removeClass('active');
+	}
+//-->
+</script>
+</body>
+</html>

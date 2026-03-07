@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>인별 상세 진척률 조회 | 교육진척률 조회 | 조직관리</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">인별 상세 진척률 조회</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="tbl-view1">
+				<table>
+					<colgroup>
+						<col style="width:150px;">
+						<col>
+						<col style="width:150px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">성명</th>
+							<td>김크림(1120210)</td>
+							<th scope="row">성별</th>
+							<td>여성</td>
+						</tr>
+						<tr>
+							<th scope="row">소속</th>
+							<td>강남3 지점( 팀명)</td>
+							<th scope="row">차월</th>
+							<td>10</td>
+						</tr>
+						<tr>
+							<th scope="row">생년월일</th>
+							<td>1970.06.10</td>
+							<th scope="row">전화번호</th>
+							<td>010-4008-4820</td>
+						</tr>
+						<tr>
+							<th scope="row">이메일</th>
+							<td>jenny1970@naver.com</td>
+							<th scope="row">최근 접속 시간</th>
+							<td>1 시간 전</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- [CASE] 해당 대상이 이탈예상 설계사일 경우 -->
+			<p class="list-dot1">해당 설계사는 ‘이탈예상 설계사’로 탐지되었습니다.</p>
+			<!-- [CASE] 해당 대상이 휴면 설계사일 경우 안내 -->
+			<p class="list-dot1">해당 설계사는 ‘휴면 설계사’로 탐지되었습니다..</p>
+			<!-- // -->
+
+			<div class="tab-wrap">
+				<ul class="tab1">
+					<li><a href="#tab1-1" class="current">설계사 타임라인</a></li>
+					<li><a href="#tab1-2">교육 활동 현황</a></li>
+				</ul>
+				<!-- ############################## -->
+				<!-- [설계사 타임라인] -->
+				<!-- ############################## -->
+				<div id="tab1-1" class="tab-cont">
+					<div class="area-group">
+						<div class="box col-3">
+							<h3 class="tit-sub2">필수교육 수강 현황</h3>
+				
+							<ul class="toggle-list">
+								<li>
+									<div class="tit">
+										<dl>
+											<dt>상품숙지 필수교육</dt>
+											<dd>2022.05.02  까지</dd>
+										</dl>
+										<div class="side">
+											<span>4/5</span>
+											<strong class="point1">미수료</strong>
+										</div>
+										<button class="btn-more">상세보기</button>
+									</div>
+									<div class="detail">
+										<div class="data01">
+											<span>대상년도</span>
+											<select class="selectbox" style="width:150px;">
+												<option>2022년</option>
+												<option>2021년</option>
+											</select>
+											<p>수강기한: 2022.10.10 ~ 2023.10.09)</p>
+										</div>
+										<div class="data-table1">
+											<table>
+												<colgroup>
+													<col style="width:45%;">
+													<col style="width:25%;">
+													<col style="width:30%;">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">과목명​</th>
+														<th scope="col">수료여부</th>
+														<th scope="col">수료날짜​</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>윤리강화교육</td>
+														<td>미수료​</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<td>보험사기예방 교육</td>
+														<td>수료​</td>
+														<td>2022.05.22</td>
+													</tr>
+													<tr>
+														<td>장기서비스 이해</td>
+														<td>수료​</td>
+														<td>2022.05.22</td>
+													</tr>
+													<tr>
+														<td>일반서비스 이해</td>
+														<td>수료​</td>
+														<td>2022.05.22</td>
+													</tr>
+													<tr>
+														<td>자동차서비스 이해</td>
+														<td>수료​</td>
+														<td>2022.05.22</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<dl>
+											<dt>보수교육</dt>
+											<dd>2022.05.02  까지</dd>
+										</dl>
+										<div class="side">
+											<span>1/1</span>
+											<strong class="point2">수료</strong>
+										</div>
+										<button class="btn-more">상세보기</button>
+									</div>
+									<div class="detail">
+										<div class="data01">
+											<span>대상년도</span>
+											<select class="selectbox" style="width:150px;">
+												<option>2022년</option>
+												<option>2021년</option>
+											</select>
+											<p>수강기한: 2022.10.10 ~ 2023.10.09)</p>
+										</div>
+										<div class="data-table1">
+											<table>
+												<colgroup>
+													<col style="width:45%;">
+													<col style="width:25%;">
+													<col style="width:30%;">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">과목명​</th>
+														<th scope="col">수료여부</th>
+														<th scope="col">수료날짜​</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>보험사기예방 교육</td>
+														<td>수료​</td>
+														<td>2022.05.22</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<dl>
+											<dt>보수교육</dt>
+											<dd>2022.05.02  까지</dd>
+										</dl>
+										<div class="side">
+											<span>0/1</span>
+											<strong class="point1">미수료</strong>
+										</div>
+										<button class="btn-more">상세보기</button>
+									</div>
+									<div class="detail">
+										<div class="data01">
+											<span>대상년도</span>
+											<select class="selectbox" style="width:150px;">
+												<option>2022년</option>
+												<option>2021년</option>
+											</select>
+											<p>수강기한: 2022.10.10 ~ 2023.10.09)</p>
+										</div>
+										<div class="data-table1">
+											<table>
+												<colgroup>
+													<col style="width:45%;">
+													<col style="width:25%;">
+													<col style="width:30%;">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">과목명​</th>
+														<th scope="col">수료여부</th>
+														<th scope="col">수료날짜​</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>윤리강화교육</td>
+														<td>미수료​</td>
+														<td>-</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- ### 설계사 현황 ### -->
+						<div class="box col-3">
+							<h3 class="tit-sub2">설계사 현황</h3>
+							<div class="info01">
+								<dl>
+									<dt>역량강화 대상자</dt>
+									<dd>미선정 <button class="btn-sub1">이력 전체 보기</button></dd>
+								</dl>
+								<dl>
+									<dt>총 포인트</dt>
+									<dd>34,000P</dd>
+								</dl>
+								<dl class="full">
+									<dt>최근 1개월 포인트 현황</dt>
+									<dd>
+										<ul class="point">
+											<li>
+												<dl>
+													<dt>{데일리 퀴즈 참여} 성공</dt>
+													<dd class="data01"><span class="point1">+1,000</span> P​</dd>
+													<dd class="data02">퀘스트</dd>
+													<dd class="data03">2022.04.02 11:34:08​</dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt>{최초 글등록} 적립</dt>
+													<dd class="data01"><span class="point1">+50</span> P​</dd>
+													<dd class="data02">혜택</dd>
+													<dd class="data03">2022.04.02 11:34:08​</dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt>{위촉 축하 도입 포인트} 입금</dt>
+													<dd class="data01"><span class="point1">+1,000</span> P​</dd>
+													<dd class="data02">이동</dd>
+													<dd class="data03">2022.04.02 11:34:08​</dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt>{강의 수강} 성공</dt>
+													<dd class="data01"><span class="point1">+135,000</span> P​</dd>
+													<dd class="data02">이동</dd>
+													<dd class="data03">2022.04.02 11:34:08​</dd>
+												</dl>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+						</div>
+						
+						<!-- ### 후보자 히스토리 ### -->
+						<div class="box col-3">
+							<h3 class="tit-sub2">후보자 히스토리</h3>
+							<div class="info01">
+								<dl>
+									<dt>경력</dt>
+									<dd>경력</dd>
+								</dl>
+								<dl>
+									<dt>시험 합격일</dt>
+									<dd>2002. 10. 22</dd>
+								</dl>
+								<dl>
+									<dt>위촉일</dt>
+									<dd>2003. 01. 22</dd>
+								</dl>
+							</div>
+							
+							<h3 class="tit-sub2">시험 기록 내역</h3>
+							<div class="info01">
+								<dl>
+									<dt>시험날짜</dt>
+									<dd>
+										<input type="text" class="date-m" placeholder="년/월 선택">
+									</dd>
+								</dl>
+							</div>
+							<div class="data-table1">
+								<table>
+									<colgroup>
+										<col style="width:100px;">
+										<col>
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row" rowspan="2">시험​<br>점수​</th>
+											<th scope="col">손해</th>
+											<th scope="col">제3보</th>
+										</tr>
+										<tr>
+											<td>57</td>
+											<td>53</td>
+										</tr>
+										<tr>
+											<th scope="row" rowspan="2">판정<br>내용​</th>
+											<th scope="col">손해</th>
+											<th scope="col">제3보</th>
+										</tr>
+										<tr>
+											<td>점수미달</td>
+											<td>점수미달</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- ###### -->
+					</div>
+
+				</div>
+				<!-- ############################## -->
+				<!-- [교육 활동 현황] -->
+				<!-- ############################## -->
+				<div id="tab1-2" class="tab-cont" style="display:none;">
+					<div class="area-group">
+						<div class="col-3">
+							<div class="box">
+								<h3 class="tit-sub2">온라인 교육</h3>
+								<ul class="info02">
+									<li class="active">
+										<dl>
+											<dt>입과 단계</dt>
+											<dd>어드밴스드​</dd>
+										</dl>
+										<dl>
+											<dt>과정 입과일</dt>
+											<dd>2020. 10. 22</dd>
+										</dl>
+										<dl>
+											<dt>설계사 seg</dt>
+											<dd>행복추구형</dd>
+										</dl>
+										<dl>
+											<dt>진도율</dt>
+											<dd>30%</dd>
+										</dl>
+										<a class="btn" href="#tlink01">상세보기</a>
+									</li>
+									<li>
+										<dl>
+											<dt>입과 단계</dt>
+											<dd>인큐베이팅</dd>
+										</dl>
+										<dl>
+											<dt>과정 입과일</dt>
+											<dd>2020. 10. 22(+100일)​</dd>
+										</dl>
+										<dl>
+											<dt>진도율</dt>
+											<dd>100%​</dd>
+										</dl>
+										<a class="btn" href="#tlink02">상세보기</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="box">
+								<h3 class="tit-sub2">본사 교육</h3>
+								<ul class="info02">
+									<li>
+										<dl>
+											<dt>참여횟수</dt>
+											<dd>10회</dd>
+										</dl>
+										<dl>
+											<dt>진행 현황</dt>
+											<dd>교육 진행 중​</dd>
+										</dl>
+										<a class="btn" href="#tlink03">상세보기</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+						<!-- ### 어드밴스드 과정 ### -->
+						<div class="box col-4" id="tlink01">
+							<h3 class="tit-sub2">어드밴스드 과정 <span>2022. 05. 21 입과​</span></h3>
+							<div class="info03">
+								<dl>
+									<dt>진도율​</dt>
+									<dd><strong class="point1">50</strong>%</dd>
+								</dl>
+								<dl>
+									<dt>열린 강의​</dt>
+									<dd><strong class="point1">20</strong>건</dd>
+								</dl>
+								<dl>
+									<dt>수강 강의</dt>
+									<dd><strong class="point1">10</strong>건</dd>
+								</dl>
+								<div class="side">
+									<span class="date-range">
+										<input type="text" data-role="start" placeholder="시작일 선택">
+										<span class="util">~</span>
+										<input type="text" data-role="end" placeholder="종료일 선택">
+									</span>
+								</div>
+							</div>
+
+							<h4 class="tit-sub2">열린강의 총 20건</h4>
+							<ul class="toggle-list">
+								<!-- // -->
+								<li class="active">
+									<div class="tit">
+										<strong>2022.04</strong>
+										<button class="btn-more">상세보기</button>
+									</div>
+									<div class="detail">
+										<ul class="info04">
+											<li>
+												<dl>
+													<dt>행복추구형</dt>
+													<dd>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.​</dd>
+												</dl>
+												<div class="side">
+													<strong class="point1">미수강</strong>
+												</div>
+											</li>
+											<li>
+												<dl>
+													<dt>행복추구형</dt>
+													<dd>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.​</dd>
+												</dl>
+												<div class="side">
+													<strong class="point2">수강</strong>
+													<span>(2022.04.01 수강)​</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // -->
+								<li>
+									<div class="tit">
+										<strong>2022.03</strong>
+										<button class="btn-more">상세보기</button>
+									</div>
+									<div class="detail">
+										<ul class="info04">
+											<li>
+												<dl>
+													<dt>행복추구형</dt>
+													<dd>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.​</dd>
+												</dl>
+												<div class="side">
+													<strong class="point1">미수강</strong>
+												</div>
+											</li>
+											<li>
+												<dl>
+													<dt>행복추구형</dt>
+													<dd>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.​</dd>
+												</dl>
+												<div class="side">
+													<strong class="point2">수강</strong>
+													<span>(2022.04.01 수강)</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // -->
+								<li>
+									<div class="tit">
+										<strong>2022.02</strong>
+										<button class="btn-more">상세보기</button>
+									</div>
+									<div class="detail">
+										<ul class="info04">
+											<li>
+												<dl>
+													<dt>행복추구형</dt>
+													<dd>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.​</dd>
+												</dl>
+												<div class="side">
+													<strong class="point1">미수강</strong>
+												</div>
+											</li>
+											<li>
+												<dl>
+													<dt>행복추구형</dt>
+													<dd>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.​</dd>
+												</dl>
+												<div class="side">
+													<strong class="point2">수강</strong>
+													<span>(2022.04.01 수강)</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // -->
+							</ul>
+						</div>
+						<!-- ### 인큐베이팅 과정 ### -->
+						<div class="box col-4 hide" id="tlink02">
+							<h3 class="tit-sub2">인큐베이팅 과정 <span>2022. 05. 21 입과​</span></h3>
+							<div class="info03">
+								<dl>
+									<dt>진도율​</dt>
+									<dd><strong class="point1">50</strong>%</dd>
+								</dl>
+								<dl>
+									<dt>열린 강의​</dt>
+									<dd><strong class="point1">20</strong>건</dd>
+								</dl>
+								<dl>
+									<dt>수강 강의</dt>
+									<dd><strong class="point1">10</strong>건</dd>
+								</dl>
+								<div class="side">
+									<span class="date-range">
+										<input type="text" data-role="start" placeholder="시작일 선택">
+										<span class="util">~</span>
+										<input type="text" data-role="end" placeholder="종료일 선택">
+									</span>
+								</div>
+							</div>
+
+							<h4 class="tit-sub2">열린강의 총 20건</h4>
+							<ul class="toggle-list">
+								<!-- // -->
+								<li class="active">
+									<div class="tit">
+										<strong>2022.04</strong>
+										<button class="btn-more">상세보기</button>
+									</div>
+									<div class="detail">
+										<ul class="info04">
+											<li>
+												<dl>
+													<dt>행복추구형</dt>
+													<dd>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.​</dd>
+												</dl>
+												<div class="side">
+													<strong class="point1">미수강</strong>
+												</div>
+											</li>
+											<li>
+												<dl>
+													<dt>행복추구형</dt>
+													<dd>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.​</dd>
+												</dl>
+												<div class="side">
+													<strong class="point2">수강</strong>
+													<span>(2022.04.01 수강)​</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // -->
+								<li>
+									<div class="tit">
+										<strong>2022.03</strong>
+										<button class="btn-more">상세보기</button>
+									</div>
+									<div class="detail">
+										<ul class="info04">
+											<li>
+												<dl>
+													<dt>행복추구형</dt>
+													<dd>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.​</dd>
+												</dl>
+												<div class="side">
+													<strong class="point1">미수강</strong>
+												</div>
+											</li>
+											<li>
+												<dl>
+													<dt>행복추구형</dt>
+													<dd>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.​</dd>
+												</dl>
+												<div class="side">
+													<strong class="point2">수강</strong>
+													<span>(2022.04.01 수강)</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // -->
+								<li>
+									<div class="tit">
+										<strong>2022.02</strong>
+										<button class="btn-more">상세보기</button>
+									</div>
+									<div class="detail">
+										<ul class="info04">
+											<li>
+												<dl>
+													<dt>행복추구형</dt>
+													<dd>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.​</dd>
+												</dl>
+												<div class="side">
+													<strong class="point1">미수강</strong>
+												</div>
+											</li>
+											<li>
+												<dl>
+													<dt>행복추구형</dt>
+													<dd>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.​</dd>
+												</dl>
+												<div class="side">
+													<strong class="point2">수강</strong>
+													<span>(2022.04.01 수강)</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // -->
+							</ul>
+						</div>
+						<!-- ### 본사교육 참여 현황​ ### -->
+						<div class="box col-4 hide" id="tlink03">
+							<h3 class="tit-sub2">본사교육 참여 현황</h3>
+							<div class="info03">
+								<dl>
+									<dt>전체</dt>
+									<dd><strong class="point1">10</strong>건</dd>
+								</dl>
+								<dl>
+									<dt>수료​</dt>
+									<dd><strong class="point1">7</strong>건</dd>
+								</dl>
+								<dl>
+									<dt>미수료</dt>
+									<dd><strong class="point1">3</strong>건</dd>
+								</dl>
+								<div class="side">
+									<span class="date-range">
+										<input type="text" data-role="start" placeholder="시작일 선택">
+										<span class="util">~</span>
+										<input type="text" data-role="end" placeholder="종료일 선택">
+									</span>
+								</div>
+							</div>
+
+							<h4 class="tit-sub2">참여교육 총 20건</h4>
+							<ul class="toggle-list">
+								<!-- // -->
+								<li class="active">
+									<div class="tit">
+										<strong>2022.04</strong>
+										<button class="btn-more">상세보기</button>
+									</div>
+									<div class="detail">
+										<ul class="info04">
+											<li>
+												<div class="con">
+													<span class="ic01">교육 진행 중</span>
+													<p>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.</p>
+													<div class="data-table1">
+														<table>
+															<colgroup>
+																<col style="width:100px;">
+																<col>
+																<col style="width:100px;">
+																<col>
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th scope="row">교육일정</th>
+																	<td>2022.05.22 ~ 2022.05.28</td>
+																	<th scope="row">담당지점</th>
+																	<td>강남사업단</td>
+																</tr>
+																<tr>
+																	<th scope="row">대상</th>
+																	<td>설계사(1~3차월)</td>
+																	<th scope="row">출석횟수​</th>
+																	<td><a href="#" class="btn-link1">4/6회</a></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="con">
+													<p>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.</p>
+												</div>
+												<div class="side">
+													<strong class="point2">수료</strong>
+													<span>(2022.04.01 수강)</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // -->
+								<li>
+									<div class="tit">
+										<strong>2022.03</strong>
+										<button class="btn-more">상세보기</button>
+									</div>
+									<div class="detail">
+										<ul class="info04">
+											<li>
+												<div class="con">
+													<p>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.</p>
+												</div>
+												<div class="side">
+													<strong class="point1">미수료</strong>
+												</div>
+											</li>
+											<li>
+												<div class="con">
+													<p>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.</p>
+												</div>
+												<div class="side">
+													<strong class="point2">수료</strong>
+													<span>(2022.04.01 수강)</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // -->
+								<li>
+									<div class="tit">
+										<strong>2022.02</strong>
+										<button class="btn-more">상세보기</button>
+									</div>
+									<div class="detail">
+										<ul class="info04">
+											<li>
+												<div class="con">
+													<p>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.</p>
+												</div>
+												<div class="side">
+													<strong class="point1">미수료</strong>
+												</div>
+											</li>
+											<li>
+												<div class="con">
+													<p>교육제목 영역입니다. 교육 제목 영역입니다. 교육 제목 교육 제목 영역입니다.</p>
+												</div>
+												<div class="side">
+													<strong class="point2">수료</strong>
+													<span>(2022.04.01 수강)</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // -->
+							</ul>
+						</div>
+						<!-- ###### -->
+					</div>
+				</div>
+				<!-- ############################## -->
+			</div>
+
+		</div>
+	</div>
+</div>
+<script>
+	$(function(){
+		$('.toggle-list .btn-more').on('click',function(){
+			$(this).parents('li').toggleClass('active');
+		});
+
+		$('.area-group .info02 .btn').on('click',function(e){
+			$('.area-group .info02 li').removeClass('active');
+			$(this).parent('li').addClass('active');
+			$($(this).attr('href')).removeClass('hide').siblings('.box').addClass('hide')
+			e.preventDefault();
+		});
+		$('.area-group .info02 .btn:eq(0)').trigger('click');
+	})
+</script>
+</body>
+</html>

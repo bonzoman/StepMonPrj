@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, wistrongh=device-wistrongh">
+<meta name="format-detection" content="telephone=no, adivress=no, email=no">
+<title>[P] 이미지복사 | 설계(개인/업무/영업) | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-30]	① 전체선택 버튼 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>이미지복사</h1>
+			<button type="button" data-btn="pop-close">이미지복사 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [선택영역] -->
+			<!-- ######################### -->
+			<div class="info-data2 line">
+				<ul>
+					<!-- // -->
+					<li>
+						<!-- # 설계번호 # -->
+						<strong class="tit">CA220308111700</strong>
+						<!-- # 정보1 # -->
+						<div class="txt">2021.03.01~2022.03.01</div>
+						<!-- # 정보2 # -->
+						<!-- # 전체선택 # -->
+						<div class="label-check1 t1 col2">
+							<!-- 2022-09-30 전체선택 버튼 추가 -->
+							<label class="block">
+								<input type="checkbox" name="uiFormCheck1">
+								<span>전체</span>
+							</label>
+							<!-- //2022-09-30 전체선택 버튼 추가 -->
+							<label>
+								<input type="checkbox" name="uiFormCheck1">
+								<span>주행거리</span>
+							</label>
+							<label>
+								<input type="checkbox" name="uiFormCheck1">
+								<span>자녀할인</span>
+							</label>
+							<label>
+								<input type="checkbox" name="uiFormCheck1">
+								<span>블랙박스</span>
+							</label>
+							<label>
+								<input type="checkbox" name="uiFormCheck1">
+								<span>첨부서류</span>
+							</label>
+							<label>
+								<input type="checkbox" name="uiFormCheck1">
+								<span>차선이탈</span>
+							</label>
+							<label>
+								<input type="checkbox" name="uiFormCheck1">
+								<span>운행용도</span>
+							</label>
+							<label>
+								<input type="checkbox" name="uiFormCheck1">
+								<span>전방추돌</span>
+							</label>
+						</div>
+						<!-- # // # -->
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">CA220308111700</strong>
+						<div class="txt">2021.03.01~2022.03.01</div>
+						<div class="label-check1 t1 col2">
+							<!-- 2022-09-30 전체선택 버튼 추가 -->
+							<label class="block">
+								<input type="checkbox" name="uiFormCheck1">
+								<span>전체</span>
+							</label>
+							<!-- //2022-09-30 전체선택 버튼 추가 -->
+							<label>
+								<input type="checkbox" name="uiFormCheck2">
+								<span>주행거리</span>
+							</label>
+							<label>
+								<input type="checkbox" name="uiFormCheck2">
+								<span>자녀할인</span>
+							</label>
+							<label>
+								<input type="checkbox" name="uiFormCheck2">
+								<span>블랙박스</span>
+							</label>
+							<label>
+								<input type="checkbox" name="uiFormCheck2">
+								<span>첨부서류</span>
+							</label>
+							<label>
+								<input type="checkbox" name="uiFormCheck2">
+								<span>차선이탈</span>
+							</label>
+							<label>
+								<input type="checkbox" name="uiFormCheck2">
+								<span>운행용도</span>
+							</label>
+							<label>
+								<input type="checkbox" name="uiFormCheck2">
+								<span>전방추돌</span>
+							</label>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- [더보기] -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">이미지 복사</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//샘플 : 계약안에서 이미지 항목 선택시 다른계약의 이미지 항목 체크 해제
+	//샘플 : name은 임시이며, 그룹핑을 위한 명시함.
+	$(document).on('change','[name^="uiFormCheck"]',function(){
+		var _name = $(this).attr('name');
+		var _inputAll = $('[name^="uiFormCheck"]:not([name="'+_name+'"])');
+
+		if($(this).prop('checked')){
+			_inputAll.prop('checked',false);
+		}
+	})
+//-->
+</script>
+</body>
+</html>

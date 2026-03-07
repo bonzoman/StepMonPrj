@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 청약 진행방식 선택 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-10]	① 팝업으로 변겨
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<!-- 2022-11-10 팝업으로 변경 -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>청약 진행방식 선택</h1>
+			<button type="button" data-btn="pop-close">청약 진행방식 선택 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] -->
+			<!-- ######################### -->
+			<section class="wrap-section1">
+				<div class="label-img1 img-set1">
+					<label class="ic1">
+						<input type="radio" name="form-radio-img2">
+						<span>스마트폰 청약</span>
+					</label>
+					<label class="ic2">
+						<input type="radio" name="form-radio-img2">
+						<span>전자서명 URL 발송</span>
+					</label>
+				</div>
+	
+				<!-- [CASE] 알림톡 발송 시간이 아닐 경우 -->
+				<div class="label-img1 img-set1">
+					<label class="ic1">
+						<input type="radio" name="form-radio-img2">
+						<span>스마트폰 청약</span>
+					</label>
+					<label class="ic2">
+						<input type="radio" name="form-radio-img2" disabled>
+						<span>전자서명 발송<br>시간이 아닙니다</span>
+					</label>
+				</div>
+	
+				<!-- # 안내문구 # -->
+				<ul class="txt-bul1">
+					<li>알림톡 발송가능 시간: 청약당일 09:00~23:00 </li>
+					<li>청약당일의 전자서명만 유효합니다.</li>
+				</ul>
+
+				<fieldset class="form-wrap1 line">
+					<legend class="tit">모바일 실손정액중복 신청동의</legend>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd1">
+							<span>신청</span>
+						</label>
+						<label>
+							<input type="radio" name="rd1">
+							<span>미신청</span>
+						</label>
+					</div>
+				</fieldset>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+<!-- //2022-11-10 팝업으로 변경 -->
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>포인트현황조회 | 활동 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">포인트현황조회</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1">
+
+				<div class="form-field">
+					<dl class="form w1">
+						<dt>조회월</dt>
+						<dd>
+							<input type="text" class="date-m" value="2022.02" placeholder="월 선택">
+						</dd>
+					</dl>
+					<dl class="form w3"> <!-- 숨길때 hide-->
+						<dt>조직구분</dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>취급자</option>
+								</select>
+								<input type="text" name="" id="" class="text" style="width:80px;">
+								<input type="text" name="" id="" class="text" style="width:120px;" disabled>
+								<button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+			<div class="data-table1">
+				<table>
+					<colgroup>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">조회월</th>
+							<td>2022.04</td>
+							<th scope="row">대상건</th>
+							<td>132</td>
+							<th scope="row">보유포인트</th>
+							<td>100,000P</td>
+							<th scope="row">적립포인트</th>
+							<td>100,000P</td>
+						</tr>
+						<tr>
+							<th scope="row">사용포인트</th>
+							<td>100,000P</td>
+							<th scope="row">소멸포인트</th>
+							<td>100,000P</td>
+							<th scope="row">소멸예정포인트</th>
+							<td>100,000P</td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tit-sub2">
+				<h3 class="">전체<span>총 16건</span></h3>
+			</div>
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<col style="width:55px;">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col style="width:105px;">
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"><span class="sort">No</span></th>
+							<th scope="col"><span class="sort">사업단</span></th>
+							<th scope="col"><span class="sort">지점</span></th>
+							<th scope="col"><span class="sort">팀</span></th>
+							<th scope="col"><span class="sort">설계사</span></th>
+							<th scope="col">설계사 사번</th>
+							<th scope="col">조회월</th>
+							<th scope="col">조회기준월<br>보유포인트</th> <!-- 2022-12-28 변경 -->
+							<th scope="col">조회기준월<br>적립포인트</th> <!-- 2022-12-28 변경 -->
+							<th scope="col">조회기준월<br>사용포인트</th> <!-- 2022-12-28 변경 -->
+							<th scope="col">조회기준월<br>소멸포인트</th> <!-- 2022-12-28 변경 -->
+							<th scope="col">조회기준월<br>소멸예정포인트</th> <!-- 2022-12-28 변경 -->
+							<th scope="col">소멸예정일자</th> <!-- 2022-12-28 변경 -->
+							<!-- <th scope="col">마지막 소멸일자</th> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1-1팀</td>
+							<td>제이라이프대리점</td>
+							<td>12312312</td>
+							<td>2022.02</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>14,000</td>
+							<td>222,222</td>
+							<td>2022.02.22</td>
+							<td>36,800</td>
+							<!-- <td>2022.02.22</td> --> <!-- 2022-12-28 삭제 -->
+						</tr>
+					</tbody>
+				</table>
+				<div class="nodata hide">
+					조회결과가 없습니다.
+				</div>
+			</div>
+
+			<div class="paging">
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

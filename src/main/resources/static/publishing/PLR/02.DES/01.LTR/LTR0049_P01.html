@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 질병정보제공 동의 | 장기보험 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>질병정보제공 동의</h1>
+			<button type="button" data-btn="pop-close">질병정보제공 동의 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 안내문구 -->
+			<!-- ######################### -->
+			<div class="tit-section">
+				<p>고객님께 질병정보 제공 동의 <br>알림톡을 보내주세요.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 동의 -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>질병정보 제공 동의 확인사항</legend>
+
+				<!-- # 동의고객 # -->
+				<dl class="form">
+					<dt>동의고객</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="dd1" checked>
+								<span>피보험자</span>
+							</label>
+							<label>
+								<input type="radio" name="dd1">
+								<span>미성년 자녀</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- ### [CASE1] 피보험자 ### -->
+				<div>
+					<dl class="form">
+						<dt>피보험자명</dt>
+						<dd><data class="text disabled" value="하다미">하다미</data></dd>
+					</dl>
+					<dl class="form">
+						<dt>연락쳐</dt>
+						<dd><data class="text disabled" value="01022222222">01012346666</data></dd>
+					</dl>
+				</div>
+
+				<!-- ### [CASE2] 미성년자녀 ### -->
+				<div>
+					<dl class="form">
+						<dt>고객명</dt>
+						<dd><data class="text disabled" value="하다미">하다미</data></dd>
+					</dl>
+					<dl class="form">
+						<dt>친권자/법정대리인(명)</dt>
+						<dd>
+							<div class="input-wrap1">
+								<data class="text" value="김손보" data-label="고객찾기">김손보</data>
+								<button type="button" class="btn-sub1">고객찾기</button>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>친권자 연락쳐</dt>
+						<dd><data class="text disabled" value="01012346666">01012346666</data></dd>
+					</dl>
+				</div>
+
+				<!-- # 내용 # -->
+				<dl class="form">
+					<dt>내용</dt>
+					<dd>
+						<div class="textarea disabled">
+							<!-- 2022-12-30 텍스트 변경 -->
+							<data>[롯데손보]질병상세정보 제공 동의
+
+								&lt;동의에 관한 사항&gt;
+								□ 본동의는 보험계약 체결에 필수적이지 않으며, 고객님의 질병정보제공 위한 선택사항입니다.
+
+								&lt;제공에 관한 사항&gt;
+								당사가 고객님의 보험계약 인수여부를 판단하기 위해 과거에 보험금을 지급받으신 이력을 모집인을 통해 안내 될 수 있도록 도움을 드리고 있습니다.
+
+								□ 제공받는 자: 모집인
+								□ 목적: 보험계약 인수여부 판단
+								□ 내용: 성명, 생년월일, 성별, 진단명, 입원일수, 통원일수, 수술이력, 사고발생일, 사고접수일, 사고건수
+								□ 보유이용기간: 1개월
+
+								※ 본인인증을 통해 동의하실 수 있습니다.
+							</data>
+							<!-- //2022-12-30 텍스트 변경 -->
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 안내문구 # -->
+				<p class="txt-bul1">
+					미성년자녀의 경우에는 법정대리인(친권자, 후견인)의 휴대폰으로 인증할 수 있습니다. 단, 만 14세 미만 아동의 경우에는 법정대리인(친권자, 후견인) 의 휴대폰인증은 필수입니다.
+				</p>
+				<!-- // -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [안내문구] -->
+			<!-- ######################### -->
+			<div class="mes-info2 box">
+				<p>알림톡을 받은 고객님께서 URL에 접속하여 직접 동의내용을 확인한 후, 휴대폰 본인확인을 통해 동의합니다. <br> 발송되는 URL에서는 해당 고객만 동의할 수 있으므로 다른 사람의 동의는 불가능합니다. (URL 복사, 전달 시 사용 불가)</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">발송</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

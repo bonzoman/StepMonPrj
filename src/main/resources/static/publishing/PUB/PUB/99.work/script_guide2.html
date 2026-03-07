@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>TAB/TOGGLE | SCRIPT | PUBLISHING GUIDE</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<link rel="stylesheet" href="../../resource/css/publish.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<script src="../../resource/js/publish.plugin.js"></script>
+<script src="../../resource/js/publish.common.js"></script>
+</head>
+<body>
+	<div class="guide-wrap">
+		<header>
+			<h1><i>롯데손해보험</i> SCRIPT <strong>TAB/TOGGLE</strong> GUIDE</h1>
+		</header>
+		<article class="guide-container">
+			<h1 class="hide">토글/탭 작업 가이드</h1>
+
+			<!-- ############################## -->
+			<!-- [기본정보] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">기본정보</h2>
+				<ul class="txt-bul1">
+					<li>UI 디스플레이 관련 플러그인</li>
+					<li>사용 : 탭, 토글, 아코디언 등 UI 디스플레이 open/close 컨트롤 사용</li>
+				</ul>
+
+				<h3 class="guide-tit2">옵션정보</h3>
+				<div class="guide-tbl">
+					<table>
+						<caption>옵션정보</caption>
+						<colgroup><col style="width:10%"/><col style="width:20%"/><col style="width:15%"/><col style="width:auto"/></colgroup>
+						<thead>
+							<tr>
+								<th scope="col">옵션</th>
+								<th scope="col" colspan="2">내용</th>
+								<th scope="col">기타</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">toggle_type</th>
+								<td>'toggle' / 'tab' / 'tooltip'</td>
+								<td>default : 'toggle'</td>
+								<td>토글타입</td>
+							</tr>
+							<tr>
+								<th scope="row">selector</th>
+								<td></td>
+								<td></td>
+								<td>토글 컨텐츠 영역 셀렉터</td>
+							</tr>
+							<tr>
+								<th scope="row">selector_group</th>
+								<td>true / false</td>
+								<td>default : true</td>
+								<td>토글그룹속성 : 오픈시 동일형제요소 토글속성 초기화 여부</td>
+							</tr>
+							<tr>
+								<th scope="row">selector_btn</th>
+								<td>'[data-toggle="btn"]'</td>
+								<td></td>
+								<td>토글이벤트 발생객체 셀렉터</td>
+							</tr>
+							<tr>
+								<th scope="row">selector_con</th>
+								<td>'[data-toggle="content"]'</td>
+								<td></td>
+								<td>컨텐츠객체 셀렉터</td>
+							</tr>
+							<tr>
+								<th scope="row">selector_close</th>
+								<td>'[data-toggle="btn-close"]'</td>
+								<td></td>
+								<td>토글 닫기기능 셀렉터 : selector_btn 옵션이외에 닫기 기능담당</td>
+							</tr>
+							<tr>
+								<th scope="row">event_flag</th>
+								<td>true / false</td>
+								<td>default : false</td>
+								<td>클릭이벤트실행시 e.preventDefault(); 적용여부</td>
+							</tr>
+							<tr>
+								<th scope="row">doc_event</th>
+								<td>true / false</td>
+								<td>default : false</td>
+								<td>외부영역 클릭시 닫기 설정</td>
+							</tr>
+							<tr>
+								<th scope="row">class_active</th>
+								<td>'active'</td>
+								<td></td>
+								<td>오픈시 추가 클래스</td>
+							</tr>
+							<tr>
+								<th scope="row">auto_scroll</th>
+								<td>true / false</td>
+								<td>default : false</td>
+								<td>오픈시 해당영역 자동스크롤 이동기능</td>
+							</tr>
+							<tr>
+								<th scope="row">callback_before</th>
+								<td>null</td>
+								<td>function()</td>
+								<td>콜백함수 : 팝업 오픈 전 실행</td>
+							</tr>
+							<tr>
+								<th scope="row">callback_load</th>
+								<td>null</td>
+								<td>function()</td>
+								<td>콜백함수 : 팝업 오픈 후 실행</td>
+							</tr>
+							<tr>
+								<th scope="row">callback_after</th>
+								<td>null</td>
+								<td>function()</td>
+								<td>콜백함수 : 팝업 닫기 시 실행</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- ############################## -->
+			<!-- [활용] 탭 -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">활용 : 탭</h2>
+
+				<h3 class="guide-tit2">샘플</h3>
+				<h3 class="guide-tit3">기본</h3>
+				<div class="guide-con">
+					<div class="tab-sub1">
+						<ul>
+							<li class="active"><a href="#uiTabSection1" >탭1</a></li>
+							<li><a href="#uiTabSection2">탭2</a></li>
+							<li><a href="#uiTabSection3">탭3</a></li>
+						</ul>
+					</div>
+					<div id="uiTabSection1" class="ui-tabcon active">
+						<p class="area-temp">탭1 컨텐츠</p>
+					</div>
+					<div id="uiTabSection2" class="ui-tabcon">
+						<p class="area-temp" style="background:rgba(255,145,2,0.3);">탭2 컨텐츠</p>
+					</div>
+					<div id="uiTabSection3" class="ui-tabcon">
+						<p class="area-temp" style="background:rgba(78, 2, 255, 0.3);">탭2 컨텐츠</p>
+					</div>
+				</div>
+
+				<h3 class="guide-tit3">활성화 탭 이동</h3>
+				<div class="guide-con">
+					<div class="tab-sub1">
+						<ul>
+							<li class="active"><a href="#uiTabSection4" >탭메뉴가길어짐1</a></li>
+							<li><a href="#uiTabSection5">탭메뉴2</a></li>
+							<li><a href="#uiTabSection6">탭메뉴가길어짐3</a></li>
+							<li><a href="#uiTabSection4">탭탭탭4</a></li>
+							<li><a href="#uiTabSection5">탭메뉴5</a></li>
+							<li><a href="#uiTabSection6">탭메뉴가길어짐6</a></li>
+							<li><a href="#uiTabSection4">탭메뉴7</a></li>
+						</ul>
+					</div>
+					<div id="uiTabSection4" class="ui-tabcon active">
+						<p class="area-temp">탭1 컨텐츠</p>
+					</div>
+					<div id="uiTabSection5" class="ui-tabcon">
+						<p class="area-temp" style="background:rgba(255,145,2,0.3);">탭2 컨텐츠</p>
+					</div>
+					<div id="uiTabSection6" class="ui-tabcon">
+						<p class="area-temp" style="background:rgba(78, 2, 255, 0.3);">탭3 컨텐츠</p>
+					</div>
+				</div>
+
+
+				<!-- 스크립트 호출 및 마크업구조 -->
+				<h3 class="guide-tit2">스크립트 호출 및 마크업구조</h3>
+				<h4 class="guide-tit3">기본마크업</h4>
+<pre><code class="html">&lt;div class="tab-sub1"&gt;
+  &lt;ul&gt;
+    &lt;li class="active"&gt;&lt;a href="#uiTabSection1"&gt;탭1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#uiTabSection2"&gt;탭2&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#uiTabSection3"&gt;탭3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id="uiTabSection1" class="ui-tabcon active" &gt;
+&lt;/div&gt;
+&lt;div id="uiTabSection2" class="ui-tabcon"&gt;
+&lt;/div&gt;
+&lt;div id="uiTabSection3" class="ui-tabcon"&gt;
+&lt;/div&gt;</code></pre>
+
+				<h4 class="guide-tit3">스크립트호출</h4>
+<pre><code class="script">&lt;script&gt;
+$plugin.togglecon('.tab-sub1', {
+  toggle_type : 'tab',
+  selector : '.tab-sub1 &gt; ul &gt; li',
+  selector_btn : '&gt; a',
+  selector_con : '#href',
+  auto_scrolltab : true //가로스크롤이 필요할 경우
+});
+&lt;/script&gt;</code></pre>
+				<h4 class="guide-tit3">스크립트에서 변환된 마크업</h4>
+<pre><code class="html">&lt;div class="tab-sub1"&gt;
+  &lt;ul role="tablist"&gt;
+    &lt;li class="active"&gt;&lt;a href="#uiTabSection1" role="tab" aria-selected="true" title="선택됨"&gt;탭1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#uiTabSection2" role="tab" aria-selected="false"&gt;탭2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#uiTabSection3" role="tab" aria-selected="false"&gt;탭3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id="uiTabSection1" role="tabpanel" aria-expanded="true" class="ui-tabcon active"&gt;
+&lt;/div&gt;
+&lt;div id="uiTabSection2" role="tabpanel" aria-expanded="false" class="ui-tabcon" &gt;
+&lt;/div&gt;
+&lt;div id="uiTabSection3" role="tabpanel" aria-expanded="false" class="ui-tabcon" &gt;
+&lt;/div&gt;</code></pre>
+				<h4 class="guide-tit3">탭 UI WAI-ARIA 역할 및 속성</h4>
+				<div class="guide-tbl">
+					<table>
+						<caption>탭 UI WAI-ARIA 역할 및 속성</caption>
+						<colgroup><col style="width:10%"/><col style="width:auto"/><col style="width:auto"/></colgroup>
+						<thead>
+							<tr>
+								<th scope="col">구분</th>
+								<th scope="col">속성</th>
+								<th scope="col">설명</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row" rowspan="3">역할</th>
+								<td>[role="tablist"]</td>
+								<td>탭 메뉴를 그룹핑 하는 요소 / 탭 집합</td>
+							</tr>
+							<tr>
+								<td>[role="tab"]</td>
+								<td>각각의 탭메뉴 요소</td>
+							</tr>
+							<tr>
+								<td>[role="tabpanel"]</td>
+								<td>각 탭이 컨트롤 하는 탭 섹션</td>
+							</tr>
+							<tr>
+								<th scope="row" rowspan="2">속성</th>
+								<td>[aria-selected="true/false"]</td>
+								<td>[role="tab"] 의 선택상태</td>
+							</tr>
+							<tr>
+								<td>[aria-expanded="true/false"]</td>
+								<td>[role="tabpanel"] 의 펼침상태</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- ############################## -->
+			<!-- [활용] 토글 -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">활용 : 토글</h2>
+				<h3 class="guide-tit2">샘플</h3>
+				<!--
+				<h4 class="guide-tit3">단일버튼 : div &gt; button[data-toggle="btn"]</h4>
+				<div class="area-toggle1">
+					<button type="button" data-toggle="btn" aria-expanded="false">토글버튼</button>
+					<div data-toggle="content">
+						<p class="area-temp">토글 컨텐츠</p>
+					</div>
+				</div>
+				-->
+				<h4 class="guide-tit3">그룹토글(기본) [selector_group : true]</h4>
+				<ul class="area-toggle2">
+					<li>
+						<button type="button" data-toggle="btn" aria-expanded="false">토글버튼</button>
+						<div data-toggle="content">
+							<p class="area-temp">토글 컨텐츠1</p>
+						</div>
+					</li>
+					<li>
+						<button type="button" data-toggle="btn" aria-expanded="false">토글버튼</button>
+						<div data-toggle="content">
+							<p class="area-temp">토글 컨텐츠2</p>
+						</div>
+					</li>
+				</ul>
+
+				<h4 class="guide-tit3">개별토글 [selector_group : false]</h4>
+				<div class="area-toggle2">
+					<dl>
+						<dt><button type="button" data-toggle="btn" aria-expanded="false">토글버튼</button></dt>
+						<dd data-toggle="content">
+							<p class="area-temp">토글 컨텐츠1</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt><button type="button" data-toggle="btn" aria-expanded="false">토글버튼</button></dt>
+						<dd data-toggle="content">
+							<p class="area-temp">토글 컨텐츠2</p>
+						</dd>
+					</dl>
+				</div>
+				<!--
+				<h4 class="guide-tit3">내부닫기버튼 : selector_close</h4>
+				<div class="area-toggle1" id="uiSampleToggle1">
+					<button type="button" data-toggle="btn" aria-expanded="false">토글버튼</button>
+					<div data-toggle="content">
+						<p class="area-temp">
+							<button type="button" class="btn-sub1" data-toggle="close">내부닫기버튼</button>
+						</p>
+					</div>
+				</div>
+
+				<h4 class="guide-tit3">외부호출 : outputOpen / outputClose</h4>
+				<button type="button" class="btn-sub1" data-toggle="open">외부열기버튼</button>
+				<button type="button" class="btn-sub1" data-toggle="close">외부닫기버튼</button>
+				<div class="area-toggle1" id="uiSampleToggle2">
+					<button type="button" data-toggle="btn" aria-expanded="false">토글버튼</button>
+					<div data-toggle="content">
+						<p class="area-temp">
+							토글 컨텐츠1
+						</p>
+					</div>
+				</div>
+				-->
+
+				<!-- 스크립트 호출 및 마크업구조 -->
+				<h3 class="guide-tit2">스크립트 호출 및 마크업구조</h3>
+				<h4 class="guide-tit3">기본마크업</h4>
+<pre><code class="html">&lt;!-- 유형1 --&gt;
+&lt;div class="area-toggle1"&gt;
+  &lt;button type="button" data-toggle="btn" aria-expanded="false"&gt;토글버튼&lt;/button&gt;
+  &lt;div data-toggle="content"&gt;
+  	&lt;p class="area-temp"&gt;토글 컨텐츠&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 유형2 : ul  --&gt;
+&lt;ul class="area-toggle2"&gt;
+  &lt;li&gt;
+    &lt;button type="button" data-toggle="btn" aria-expanded="false"&gt;토글버튼&lt;/button&gt;
+    &lt;div data-toggle="content"&gt;
+      &lt;p class="area-temp"&gt;토글 컨텐츠1&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;button type="button" data-toggle="btn" aria-expanded="false"&gt;토글버튼&lt;/button&gt;
+    &lt;div data-toggle="content"&gt;
+      &lt;p class="area-temp"&gt;토글 컨텐츠2&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- 유형3 : dl  --&gt;
+&lt;div class="area-toggle2"&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;&lt;button type="button" data-toggle="btn" aria-expanded="false"&gt;토글버튼&lt;/button&gt;&lt;/dt&gt;
+    &lt;dd data-toggle="content"&gt;
+      &lt;p class="area-temp"&gt;토글 컨텐츠1&lt;/p&gt;
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;&lt;button type="button" data-toggle="btn" aria-expanded="false"&gt;토글버튼&lt;/button&gt;&lt;/dt&gt;
+    &lt;dd data-toggle="content"&gt;
+      &lt;p class="area-temp"&gt;토글 컨텐츠2&lt;/p&gt;
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;
+</code></pre>
+
+				<h4 class="guide-tit3">스크립트호출</h4>
+<pre><code class="script">&lt;script&gt;
+//기본(그룹)
+$plugin.togglecon('.area-toggle2 &gt; li');
+
+//개별
+$plugin.togglecon('.area-toggle1', {
+  selector_group : false
+});
+
+//내부닫기버튼
+$plugin.togglecon('.area-toggle1', {
+  selector_close : '[data-toggle="close"]',
+});
+
+//외부호출 : 열기
+$plugin.togglecon('.area-toggle1').outputOpen();
+
+//외부호출 : 닫기
+$plugin.togglecon('.area-toggle1').outputClose();
+&lt;/script&gt;</code></pre>
+			</section>
+
+			<!-- ############################## -->
+			<!-- [활용] 폼컨트롤 -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">활용 : 폼컨트롤</h2>
+				<h3 class="guide-tit2">셀렉트박스</h3>
+				<div class="guide-area popup">
+					<select class="selectbox" title="항목명" data-autoset="form">
+						<option data-tabcon="uiFormTabCon1">항목1</option>
+						<option data-tabcon="uiFormTabCon2">항목2</option>
+						<option data-tabcon="uiFormTabCon3">항목3</option>
+					</select>
+					<div data-id="uiFormTabCon1" class="ui-tabcon active">
+						<p class="area-temp">항목1에 대한 내용</p>
+					</div>
+					<div data-id="uiFormTabCon2" class="ui-tabcon">
+						<p class="area-temp">항목2에 대한 내용</p>
+					</div>
+					<div data-id="uiFormTabCon3" class="ui-tabcon">
+						<p class="area-temp">항목3에 대한 내용</p>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">체크박스</h3>
+				<div class="guide-area popup">
+					<div class="label-check1" data-autoset="form">
+						<label>
+							<input type="checkbox" title="대체텍스트" data-tabcon="uiFormTabCon4" checked>
+							<span aria-hidden="true">항목명1</span>
+						</label>
+						<label>
+							<input type="checkbox" title="대체텍스트" data-tabcon="uiFormTabCon5">
+							<span aria-hidden="true">항목명2</span>
+						</label>
+						<label>
+							<input type="checkbox" title="대체텍스트" data-tabcon="uiFormTabCon6">
+							<span aria-hidden="true">항목명3</span>
+						</label>
+					</div>
+					<div data-id="uiFormTabCon4" class="ui-tabcon active">
+						<p class="area-temp">항목1에 대한 내용</p>
+					</div>
+					<div data-id="uiFormTabCon5" class="ui-tabcon">
+						<p class="area-temp">항목2에 대한 내용</p>
+					</div>
+					<div data-id="uiFormTabCon6" class="ui-tabcon">
+						<p class="area-temp">항목3에 대한 내용</p>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">라디오버튼</h3>
+				<div class="guide-area popup">
+					<div class="label-check1" data-autoset="form">
+						<label>
+							<input type="radio" name="uiFormTabCon" title="대체텍스트" data-tabcon="uiFormTabCon7" checked>
+							<span aria-hidden="true">항목명1</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormTabCon" title="대체텍스트" data-tabcon="uiFormTabCon8">
+							<span aria-hidden="true">항목명2</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormTabCon" title="대체텍스트" data-tabcon="uiFormTabCon9">
+							<span aria-hidden="true">항목명3</span>
+						</label>
+					</div>
+					<div data-id="uiFormTabCon7" class="ui-tabcon active">
+						<p class="area-temp">항목1에 대한 내용</p>
+					</div>
+					<div data-id="uiFormTabCon8" class="ui-tabcon">
+						<p class="area-temp">항목2에 대한 내용</p>
+					</div>
+					<div data-id="uiFormTabCon9" class="ui-tabcon">
+						<p class="area-temp">항목3에 대한 내용</p>
+					</div>
+				</div>
+			</section>
+			<!-- ############################## -->
+		</article>
+	</div>
+
+	<script>
+	//<!--
+		$plugin.togglecon('.tab-sub1', {
+			toggle_type : 'tab',
+			selector : '.tab-sub1 > ul > li',
+			selector_btn : '> a',
+			selector_con : '#href',
+			auto_scrolltab : true
+		});
+
+		$plugin.togglecon('.area-toggle1:not(#uiSampleToggle1):not(#uiSampleToggle2)', {
+			selector_group : false
+		});
+
+		$plugin.togglecon('.area-toggle2 > li');
+
+		$plugin.togglecon('.area-toggle2 > dl', {
+			selector_group : false
+		});
+
+		$plugin.togglecon('#uiSampleToggle1', {
+			selector_close : '[data-toggle="close"]',
+			selector_group : false
+		});
+
+		$('[data-toggle="open"]').on('click',function(){
+			$plugin.togglecon('#uiSampleToggle2', {
+				selector_group : false
+			}).outputOpen();
+		});
+
+		$('[data-toggle="close"]').on('click',function(){
+			$plugin.togglecon('#uiSampleToggle2', {
+				selector_group : false
+			}).outputClose();
+		});
+	//-->
+	</script>
+</body>
+</html>

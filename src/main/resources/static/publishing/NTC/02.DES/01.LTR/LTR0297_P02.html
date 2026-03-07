@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 타사승환수정 | 고객정보 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>타사승환수정</h1>
+			<button type="button" data-btn="pop-close">타사승환수정 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [입력영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>타사승환수정</legend>
+
+				<!-- # 보험회사명 # -->
+				<dl class="form">
+					<dt>보험회사명</dt>
+					<dd><input type="text" class="text" title="보험회사명" placeholder="당사/타사 회사명을 입력해주세요." value="롯데손해보험"></dd>
+				</dl>
+
+				<!-- # 상품명 # -->
+				<dl class="form">
+					<dt>상품명</dt>
+					<dd><input type="text" class="text" title="상품명" placeholder="예) 더끌림건강보험" value="let:smile 종합건강보험"></dd>
+				</dl>
+
+				<!-- # 보험료 # -->
+				<dl class="form">
+					<dt>보험료</dt>
+					<dd>
+						<div class="text num1">
+							<input type="tel" title="보험료" placeholder="구체적으로 입력해주세요." value="123,450">
+							<span class="util">원</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 보험가입금액 # -->
+				<dl class="form">
+					<dt>보험가입금액</dt>
+					<dd>
+						<div class="text num1">
+							<input type="tel" title="보험료" placeholder="최대 가입금액을 입력해주세요." value="123,450">
+							<span class="util">원</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 계약상태 # -->
+				<dl class="form">
+					<dt>계약상태</dt>
+					<dd><input type="text" class="text" title="계약상태" placeholder="기준일의 계약상태를 입력해주세요." value="설계중"></dd>
+				</dl>
+
+				<!-- # 계약상태발생일 # -->
+				<dl class="form">
+					<dt>계약상태발생일</dt>
+					<dd><input type="text" class="text" title="계약상태발생일" placeholder="기준일의 계약상태 발생일을 입력해주세요." value="2022.03.02"></dd>
+				</dl>
+
+				<!-- # 보험기간 # -->
+				<dl class="form">
+					<dt>보험기간</dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+								<input type="text" title="시작날짜 선택" data-dateform="start2" placeholder="YYYY.MM.DD" value="2022.07.08" readonly>
+							</span>
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+								<input type="text" title="종료날짜 선택" data-dateform="end2" placeholder="YYYY.MM.DD" value="2022.07.09" readonly>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 납입주기 # -->
+				<dl class="form">
+					<dt>납입주기</dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="selectOpeion1_1">월납</span>
+							</button>
+							<div class="list">
+								<div data-label="납입주기">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1_1"><span>월납</span></label>
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1_2"><span>3월납</span></label>
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1_3"><span>6월납</span></label>
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1_4"><span>년납</span></label>
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1_5"><span>일시납</span></label>
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1_6"><span>기타</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- [CASE] 기타 선택시 입력창 노출 -->
+						<input type="text" class="text" title="선택전" placeholder="납입주기를 입력해주세요.">
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 납입기간 # -->
+				<dl class="form">
+					<dt>납입기간</dt>
+					<dd><input type="text" class="text" title="납입기간" placeholder="연단위로 기입해주세요. 예) 20년납, 30년납" value="30년납"></dd>
+				</dl>
+
+				<!-- # 주요담보내용 # -->
+				<dl class="form">
+					<dt>주요담보내용</dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="selectOpeion2_5">기타</span>
+							</button>
+							<div class="list">
+								<div data-label="주요담보내용">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion2_1"><span>일반상해</span></label>
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion2_2"><span>암,질병</span></label>
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion2_3"><span>화재손해</span></label>
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion2_4"><span>실손의료비</span></label>
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion2_5"><span>기타</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- [CASE] 기타 선택시 입력창 노출 -->
+						<input type="text" class="text" title="기타 주요담보내용 입력" placeholder="예) 상해사망, 암질병 등" value="상해사망">
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 환급금액 # -->
+				<dl class="form">
+					<dt>환급금액</dt>
+					<dd>
+						<div class="text num1">
+							<input type="tel" title="환급금액" placeholder="환급금액을 입력해주세요." value="0">
+							<span class="util">원</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 예정이자율 중 공시이율 # -->
+				<dl class="form">
+					<dt>예정이자율 중 공시이율</dt>
+					<dd>
+						<div class="text num1">
+							<input type="tel" title="예정이자율 중 공시이율" placeholder="공시이율을 입력해주세요." value="20">
+							<span class="util">%</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 보험목적 # -->
+				<dl class="form">
+					<dt>보험목적</dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="selectOpeion3_4">직접입력</span>
+							</button>
+							<div class="list">
+								<div data-label="보험목적">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion3_1"><span>보장</span></label>
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion3_2"><span>저축</span></label>
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion3_3"><span>연금</span></label>
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion3_4"><span>직접입력</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- [CASE] 직접입력 선택시 입력창 노출 -->
+						<input type="text" class="text" title="보험목적 입력" placeholder="보험목적을 입력해주세요." value="장기종합">
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 보험회사 면책사유 및 면책사항 # -->
+				<dl class="form">
+					<dt>보험회사 면책사유 및 면책사항</dt>
+					<dd><input type="text" class="text" title="보험회사 면책사유 및 면책사항" placeholder="면책사유 및 면책사항을 입력해주세요." value="비교안내문 참조"></dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

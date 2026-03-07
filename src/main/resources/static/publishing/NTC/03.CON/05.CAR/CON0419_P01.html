@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 회수요청 | 케어신청관리 | 케어프로그램</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-07]	① 마크업 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>회수요청</h1>
+			<button type="button" data-btn="pop-close">회수요청 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [선택 계약 내용] -->
+			<!-- ######################### -->
+			<!-- 2022-11-07 마크업 변경 -->
+			<div class="info-data1 bg">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<span>LA123456789</span>
+							<strong>let:care암보험</strong>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<span>LA123456789</span>
+							<strong>Let:way개인용자동차보험</strong>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+			<div class="info-con1 t4">
+				<dl>
+					<dt>계약자</dt>
+					<dd>공지철</dd>
+				</dl>
+			</div>
+			<!-- //2022-11-07 마크업 변경 -->
+
+			<!-- ######################### -->
+			<!-- [회수사유] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1 line">
+				<legend>회수사유 입력</legend>
+				<dl class="form">
+					<dt>회수사유</dt>
+					<dd>
+						<div class="label-btn1 col2">
+							<!-- // -->
+							<label>
+								<input type="radio" name="radio1" checked>
+								<span>신계약진행</span>
+							</label>
+							<!-- // -->
+							<label>
+								<input type="radio" name="radio1">
+								<span>배서진행</span>
+							</label>
+							<!-- // -->
+							<label>
+								<input type="radio" name="radio1">
+								<span>고객요청</span>
+							</label>
+							<!-- // -->
+							<label>
+								<input type="radio" name="radio1">
+								<span>기타</span>
+							</label>
+							<!-- // -->
+						</div>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [안내영역] -->
+			<!-- ######################### -->
+			<ul class="txt-bul1 line2">
+				<li>‘회수요청’를 진행하시면 케어전담설계사 및 관리자의 승인 후 요청하신 계약을 케어프로그램에서 회수할 수 있습니다.</li>
+				<li>‘회수요청’를 신청하시면 [n]일간 동일한 계약에 대하여 케어요청을 할 수 없습니다.</li>
+				<li>‘회수요청’ 신청 후 승인이 완료되기 전까지 케어전담설계사는 해당 계약에 대하여 케어 진행을 하지 않습니다.</li>
+				<li>상황에 따라 ‘회수요청’에 다소 시간이 소요될 수 있습니다.</li>
+			</ul>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 자동갱신안내장 발송 | 자동갱신 안내 출력 | 갱신대상계약조회 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>자동갱신안내장 발송</h1>
+			<button type="button" data-btn="pop-close">자동갱신안내장 발송 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단문구] -->
+			<!-- ######################### -->
+			<div class="tit-section"><p>자동갱신안내 알림톡을<br>고객님께 발송하시겠습니까?</p></div>
+
+			<!-- ######################### -->
+			<!-- [정보영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>정보입력</legend>
+
+				<!-- # 고객이름 # -->
+				<dl class="form">
+					<dt>고객이름</dt>
+					<dd><data class="text disabled" value="하다미">하다미</data></dd>
+				</dl>
+
+				<!-- # 연락처 # -->
+				<dl class="form">
+					<dt>연락처</dt>
+					<dd><input type="tel" class="text" title="연락처" value="010-1234-5678"></dd>
+				</dl>
+
+				<!-- # 내용 # -->
+				<dl class="form">
+					<dt>내용</dt>
+					<dd>
+						<div class="textarea">
+							<data value="1" data-disabled="true">[롯데손해보험] 자동갱신안내를 위한 알림톡 전송 안내
+
+								■ 설계번호 : LA22022108551-1
+								■ 상품명 : let:jump 종합건강보험 (더끌림프리미엄) (무해지형)(2108)
+								■ 피보험자 : 하다미
+								■ 입력일자 : 2022.03.03
+							</data>
+						</div>
+					</dd>
+				</dl>
+				<!-- # // # -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">발송</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

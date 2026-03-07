@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>상세내역 | 갱신대상계약조회 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-05]	① [갱신안내 미리보기] 버튼 클래스명(c1) 추가
+	*					② [갱신안내 알림톡발송] 버튼 삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>갱신대상계약조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] 상품정보  -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+			<div class="info">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>LA123456789</dd>
+				</dl>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [조회영역] 갱신년월  -->
+		<!-- ######################### -->
+		<fieldset class="form-search1">
+			<legend>갱신년월 조회</legend>
+			<!-- // -->
+			<dl class="form">
+				<dt>갱신년월</dt>
+				<dd>
+					<div class="input-wrap1">
+						<!-- // -->
+						<div class="select-wrap w100" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">갱신년월 구분</span>
+								<span data-select="text" data-value="3">2022.03</span>
+							</button>
+							<div class="list">
+								<div data-label="갱신년월 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value="1"><span>2016.03</span></label>
+										<label><input type="radio" name="selectOpeion2" value="2"><span>2019.03</span></label>
+										<label><input type="radio" name="selectOpeion2" value="3"><span>2022.03</span></label>
+										<label><input type="radio" name="selectOpeion2" value="4"><span>2025.03</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+						<button type="button" class="btn-sub1">조회</button>
+						<!-- // -->
+					</div>
+				</dd>
+			</dl>
+			<!-- // -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [탭버튼] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">보험료변동사항</a></li>
+				<li><a href="javascript:void(0);">담보현황</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [정보영역] 보험료변동사항 -->
+		<!-- ######################### -->
+		<!-- [계약자 기본사항] -->
+		<section class="wrap-section1">
+			<h3 class="tit-sub1">계약자 기본사항</h3>
+			<div class="info-con1">
+				<dl>
+					<dt>갱신일 기준 계약상태</dt>
+					<dd>정상(미납)</dd>
+				</dl>
+				<dl>
+					<dt>계약자</dt>
+					<dd class="data-info2">
+						<strong>계약자명</strong>
+						<span>
+							<span>0000.00.00</span>
+							<span>성별</span>
+						</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>피보험자</dt>
+					<dd class="data-info2">
+						<strong>피보험자명</strong>
+						<span>
+							<span>0000.00.00</span>
+							<span>성별</span>
+						</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>갱신유형</dt>
+					<dd>적립준비금 대체형</dd>
+				</dl>
+				<dl>
+					<dt>납입시간/주기</dt>
+					<dd>20년/월납</dd>
+				</dl>
+				<dl>
+					<dt>갱신일</dt>
+					<dd>2022.03.21</dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- [보험료 변동사항] -->
+		<section class="wrap-section3">
+			<h3 class="tit-sub1">보험료 변동사항</h3>
+			<!-- // -->
+			<div class="tbl-data1">
+				<table>
+					<caption>변경내역 정보</caption>
+					<colgroup>
+						<col style="width:34%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">구분</th>
+							<th scope="col">갱신 전</th>
+							<th scope="col">갱신 후</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>보장보험료</td>
+							<td class="data-num1"><strong>0,000,000</strong><span>원</span></td>
+							<td class="data-num1"><strong>0,000,000</strong><span>원</span></td>
+						</tr>
+						<tr>
+							<td>적립보험료</td>
+							<td class="data-num1"><strong>0,000,000</strong><span>원</span></td>
+							<td class="data-num1"><strong>0,000,000</strong><span>원</span></td>
+						</tr>
+						<tr>
+							<td>대체보험료</td>
+							<td class="data-num1"><strong>0,000,000</strong><span>원</span></td>
+							<td class="data-num1"><strong>0,000,000</strong><span>원</span></td>
+						</tr>
+						<tr>
+							<td>실제납입보험료</td>
+							<td class="data-num1"><strong>0,000,000</strong><span>원</span></td>
+							<td class="data-num1"><strong>0,000,000</strong><span>원</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<!-- // -->
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<a href="javascript:void(0);" class="btn-action c1">갱신안내 미리보기</a> <!-- [M 2022-09-05] 클래스명(c1) 추가 -->
+			<!-- [M 2022-09-05] 삭제
+				<a href="javascript:void(0);" class="btn-action c1">갱신안내 알림톡발송</a>
+			-->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

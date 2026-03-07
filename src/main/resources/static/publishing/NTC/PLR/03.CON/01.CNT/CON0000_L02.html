@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 납입보험료 내역 | 공통 팝업 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="area-btn4"><a href="#uiPOPCON0000L03" class="btn-sub3 c2">내역</a></div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 납입보험료 내역 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCON0000L03" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>납입보험료 내역</h1>
+			<button type="button" data-btn="pop-close">납입보험료 내역 닫기</button>
+		</header>
+		<div class="content">
+			<div class="info-con2">
+				<dl>
+					<dt>합계보험료</dt>
+					<dd class="data-num1">
+						<strong>000,000,000</strong><span>원</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>보장보험료</dt>
+					<dd class="data-num1">
+						<strong>000,000,000</strong><span>원</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>적립보험료</dt>
+					<dd class="data-num1">
+						<strong>000,000,000</strong><span>원</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>대체보험료</dt>
+					<dd class="data-num1">
+						<strong>000,000,000</strong><span>원</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>할인보험료</dt>
+					<dd class="data-num1">
+						<strong>000,000,000</strong><span>원</span>
+						<button type="button" class="icon-com1 ic3 right simple">상세보기</button>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1" >확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCON0000L03');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPCON0000L03').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

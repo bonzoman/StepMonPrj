@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>청약서류등록현황 | 청약서류등록현황</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>청약서류등록현황</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [검색영역] 조회검색 -->
+		<!-- ######################### -->
+		<div id="uiFormSearch" class="form-search2" data-scroll-bg="1" data-togglecon="true">
+			<!-- ### [상단문구] ### -->
+			<div class="tit-section2">
+				<p>설계를 조회해보세요.</p>
+				<button type="button" data-toggle="btn" aria-expanded="false">조회정보보기</button>
+			</div>
+
+			<!-- ### [조회영역] ### -->
+			<fieldset class="form-wrap1">
+				<legend>조회정보 입력</legend>
+
+				<!-- # 조직구분 # -->
+				<dl class="form">
+					<dt>조직구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="label-btn1" data-autoset="form">
+							<label>
+								<input type="radio" name="uiFormRadio1" data-tabcon="uiFormCont1">
+								<span>조직</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1" data-tabcon="uiFormCont2" checked>
+								<span>취급자</span>
+							</label>
+						</div>
+						<!-- [CASE] 조직 -->
+						<div class="ui-tabcon" data-id="uiFormCont1">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="조직을 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">조직찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 조직 -->
+							<div class="info-data3 info">
+								<div class="info2 ic1">
+									<strong>장기지원팀</strong>
+									<span>A1234566</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+						</div>
+
+						<!-- [CASE] 취급자 -->
+						<div class="ui-tabcon active" data-id="uiFormCont2">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="취급자를 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">취급자찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 취급자 -->
+							<div class="info-data3 info">
+								<div class="data-info1">
+									<span class="img"><img src="../../../resource/img/temp/@img_user3.png" alt=""></span>
+									<span><strong>공지철</strong><span>658602</span></span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+							<!-- // -->
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 기준일자 # -->
+				<dl class="form">
+					<dt>기준일자 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+								<input type="text" title="시작날짜 선택" data-dateform="start2" value="2022.07.04" placeholder="YYYY.MM.DD" readonly>
+							</span>
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+								<input type="text" title="종료날짜 선택" data-dateform="end2" value="2022.07.05" placeholder="YYYY.MM.DD" readonly>
+							</span>
+						</div>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio2">
+								<span>당일</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio2">
+								<span>1주일</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio2">
+								<span>1개월</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio2">
+								<span>당월</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 조회구분 # -->
+				<dl class="form">
+					<dt>조회구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="label-btn1" data-autoset="form">
+							<label>
+								<input type="radio" name="uiFormRadio3" data-tabcon="uiFormCont3" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3" data-tabcon="uiFormCont4">
+								<span>차량번호</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3" data-tabcon="uiFormCont5">
+								<span>설계번호</span>
+							</label>
+						</div>
+						<!-- [CASE1] 전체 -->
+						<div class="ui-tabcon active" data-id="uiFormCont3">
+							<input type="text" class="text" title="조회구분 전체" placeholder="입력해주세요." disabled>
+						</div>
+
+						<!-- [CASE2] 차량번호 -->
+						<div class="ui-tabcon" data-id="uiFormCont4">
+							<input type="text" class="text" title="차량번호" placeholder="차량번호를 입력해주세요.">
+						</div>
+
+						<!-- [CASE3] 설계번호 -->
+						<div class="ui-tabcon" data-id="uiFormCont5">
+							<input type="text" class="text" title="설계번호" placeholder="설계번호를 입력해주세요.">
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 등록여부 # -->
+				<dl class="form">
+					<dt>등록여부</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio4" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio4">
+								<span>처리</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio4">
+								<span>미처리</span>
+							</label>
+						</div>
+					</dd>
+					<dd class="side">
+						<div class="label-check1">
+							<label>
+								<input type="checkbox" title="16일경과">
+								<span aria-hidden>16일경과</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 검색버튼 # -->
+				<div class="area-btn1 col">
+					<button type="button" class="btn-com1 ic8 c3">초기화</button>
+					<button type="button" class="btn-com1 c1" data-btn="search">조회</button>
+				</div>
+				<!-- # // # -->
+			</fieldset>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색전] 안내문구 -->
+		<!-- ######################### -->
+		<div class="mes-result1 ic1">
+			<p>
+				<strong>조회조건을 선택하시어<br>설계를 조회해주세요</strong>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 결과없음 -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>선택하신 조건의 계약이 없습니다.</strong>
+				<span>조회조건을 바꾸어 조회해보세요.</span>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [요약정보] 조회구분 -->
+		<!-- ######################### -->
+		<!-- [CASE1] 전체 -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조회구분</dt>
+				<dd class="ic1"><strong>조회전체</strong></dd>
+			</dl>
+			<dl class="data2">
+				<dt>등록여부</dt>
+				<dd>전체</dd>
+			</dl>
+			<dl class="data1">
+				<dt>기준일자</dt>
+				<dd>2020.01.30~2022.03.09</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- [CASE2] 차량번호 -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조회구분</dt>
+				<dd class="ic2"><strong>55도 4303</strong></dd>
+			</dl>
+			<dl class="data2">
+				<dt>등록여부</dt>
+				<dd>전체</dd>
+			</dl>
+			<dl class="data1">
+				<dt>기준일자</dt>
+				<dd>2022.03.14~2022.03.14</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- [CASE3] 설계번호 -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조회구분</dt>
+				<dd class="ic1"><strong>CA220308111700</strong></dd>
+			</dl>
+			<dl class="data2">
+				<dt>등록여부</dt>
+				<dd>전체</dd>
+			</dl>
+			<dl class="data1">
+				<dt>기준일자</dt>
+				<dd>2022.03.14~2022.03.14</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 목록 -->
+		<!-- ######################### -->
+		<!-- # [총 건수] # -->
+		<div class="area-info1">
+			<p>총 <strong>00건</strong></p>
+		</div>
+
+		<!-- # [요약보기] # -->
+		<label class="btn-util1 ic4" data-fixed="bottom" data-btn="display">
+			<input type="checkbox">
+			<span>요약보기</span>
+		</label>
+
+		<!-- # [목록] #
+			1) 요약보기 : data-display="list"
+			* 요약보기 checked일 경우 목록에 클래스명(view) 추가됨.
+			* 클래스명(view)을 추가하여 비노출 컨텐츠 제어함.
+			* 단) 예외처리가 필요한 경우에는 노출되어야 하는 컨텐츠에 data-display="block" 추가
+		-->
+		<div class="info-data2" data-display="list">
+			<ul>
+				<!-- // -->
+				<li>
+					<!-- # 16일경과여부 / 설계번호 # -->
+					<div class="info">
+						<i class="icon-txt2 ic1">1일경과</i>
+						<i class="icon-txt2 ic5">16일경과</i>
+						<span>CA220308111700</span>
+					</div>
+
+					<!-- # 차량번호 # -->
+					<strong class="tit">12가 1234</strong>
+
+					<!-- # 정보 # -->
+					<div class="data1">
+						<dl>
+							<dt>피보험자</dt>
+							<dd>피보험자명</dd>
+						</dl>
+						<dl>
+							<dt>수납일자</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>987,654</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>등록유형</dt>
+							<dd>미등록</dd>
+						</dl>
+					</div>
+
+					<!-- # 추가정보 # -->
+					<div class="data2">
+						<dl>
+							<dt>청약서</dt>
+							<dd>등록</dd>
+						</dl>
+						<dl>
+							<dt>상품설명서</dt>
+							<dd>미등록</dd>
+						</dl>
+						<dl>
+							<dt>체결이행<br>동의서</dt>
+							<dd>등록</dd>
+						</dl>
+						<dl>
+							<dt>마케팅활용<br>동의서</dt>
+							<dd>등록</dd>
+						</dl>
+						<dl>
+							<dt>실손중복<br>동의서</dt>
+							<dd>비대상</dd>
+						</dl>
+					</div>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="info">
+						<i class="icon-txt2 ic1">1일경과</i>
+						<span>CA220308111700</span>
+					</div>
+					<strong class="tit">12가 1234</strong>
+					<div class="data1">
+						<dl>
+							<dt>피보험자</dt>
+							<dd>하다미</dd>
+						</dl>
+						<dl>
+							<dt>수납일자</dt>
+							<dd>2022.03.25</dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>987,654</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>등록유형</dt>
+							<dd>이미지등록</dd>
+						</dl>
+					</div>
+					<div class="data2">
+						<dl>
+							<dt>청약서</dt>
+							<dd>등록</dd>
+						</dl>
+						<dl>
+							<dt>상품설명서</dt>
+							<dd>미등록</dd>
+						</dl>
+						<dl>
+							<dt>체결이행<br>동의서</dt>
+							<dd>등록</dd>
+						</dl>
+						<dl>
+							<dt>마케팅활용<br>동의서</dt>
+							<dd>등록</dd>
+						</dl>
+						<dl>
+							<dt>실손중복<br>동의서</dt>
+							<dd>비대상</dd>
+						</dl>
+					</div>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="info">
+						<i class="icon-txt2 ic5">19일경과</i>
+						<span>CA220308111700</span>
+					</div>
+					<strong class="tit">12가 1234</strong>
+					<div class="data1">
+						<dl>
+							<dt>피보험자</dt>
+							<dd>하다미</dd>
+						</dl>
+						<dl>
+							<dt>수납일자</dt>
+							<dd>2022.03.25</dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>987,654</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>등록유형</dt>
+							<dd>전자서명</dd>
+						</dl>
+					</div>
+					<div class="data2">
+						<dl>
+							<dt>청약서</dt>
+							<dd>등록</dd>
+						</dl>
+						<dl>
+							<dt>상품설명서</dt>
+							<dd>미등록</dd>
+						</dl>
+						<dl>
+							<dt>체결이행<br>동의서</dt>
+							<dd>등록</dd>
+						</dl>
+						<dl>
+							<dt>마케팅활용<br>동의서</dt>
+							<dd>등록</dd>
+						</dl>
+						<dl>
+							<dt>실손중복<br>동의서</dt>
+							<dd>비대상</dd>
+						</dl>
+					</div>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="info">
+						<i class="icon-txt2 ic5">20일경과</i>
+						<span>CA220308111700</span>
+					</div>
+					<strong class="tit">12가 1234</strong>
+					<div class="data1">
+						<dl>
+							<dt>피보험자</dt>
+							<dd>하다미</dd>
+						</dl>
+						<dl>
+							<dt>수납일자</dt>
+							<dd>2022.03.25</dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>987,654</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>등록유형</dt>
+							<dd>스마트폰청약</dd>
+						</dl>
+					</div>
+					<div class="data2">
+						<dl>
+							<dt>청약서</dt>
+							<dd>등록</dd>
+						</dl>
+						<dl>
+							<dt>상품설명서</dt>
+							<dd>미등록</dd>
+						</dl>
+						<dl>
+							<dt>체결이행<br>동의서</dt>
+							<dd>등록</dd>
+						</dl>
+						<dl>
+							<dt>마케팅활용<br>동의서</dt>
+							<dd>등록</dd>
+						</dl>
+						<dl>
+							<dt>실손중복<br>동의서</dt>
+							<dd>비대상</dd>
+						</dl>
+					</div>
+				</li>
+				<!-- // -->
+			</ul>
+
+			<!-- 더보기 버튼 -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+			<!-- // -->
+		</div>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer"></footer>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	/* ************************************
+	* 토글컨텐츠 호출
+	************************************ */
+	var _toggleSearch = $plugin.togglecon('#uiFormSearch', {
+		class_active : 'load',
+		selector_group : false,
+		callback_load :function(e){
+			//조회조건 오픈 이벤트
+		},
+		callback_after : function(e){
+			//조회조건 닫기 이벤트
+		}
+	});
+
+	//토글컨텐츠 강제 오픈
+	_toggleSearch.outputOpen();
+//-->
+</script>
+</body>
+</html>

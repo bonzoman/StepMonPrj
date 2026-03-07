@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>후보자 추가 | [P] 대상선택 | 컨텐츠 발송 | 컨텐츠랩</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>후보자 추가</h1>
+			<button type="button" data-btn="pop-close">후보자 추가 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [후보자검색] -->
+			<!-- ######################### -->
+			<fieldset class="form-search1" data-sticky="top">
+				<legend>후보자검색</legend>
+
+				<!-- # 후보자명 입력 # -->
+				<div class="text">
+					<input type="search" title="후보자명" placeholder="후보자을 입력해주세요.">
+					<button type="button" class="icon-com1 ic2">검색</button>
+				</div>
+
+				<!-- # [D] 선택된 후보자 노출 # : 하단 스크립트 샘플 참고
+				<div class="list-t3">
+					<ul>
+						<li>
+							<div class="info1">
+								<strong data-masking="true">하*미</strong>
+							</div>
+							<button type="button" class="icon-com1 ic6">선택취소</button>
+						</li>
+						<li>
+							<div class="info1">
+								<strong data-masking="true">하*미</strong>
+							</div>
+							<button type="button" class="icon-com1 ic6">선택취소</button>
+						</li>
+						<li>
+							<div class="info1">
+								<strong data-masking="true">하*미</strong>
+							</div>
+							<button type="button" class="icon-com1 ic6">선택취소</button>
+						</li>
+					</ul>
+				</div>
+				 # // # -->
+			</fieldset>
+
+
+			<!-- ######################### -->
+			<!-- [검색결과] -->
+			<!-- ######################### -->
+			<!-- [CASE1] 최근 컨텐츠 발송 대상이 있었던 경우 노출 -->
+			<div class="area-info1">
+				<p>최근 컨텐츠 발송 대상</p>
+			</div>
+			<!-- [CASE2] 검색 후 노출 -->
+			<div class="area-info1">
+				<p>후보자 검색 결과 총 <strong>000,000,000명</strong></p>
+			</div>
+
+			<!-- [후보자목록] -->
+			<div class="info-data3">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="info1 label-check1">
+							<label>
+								<input type="checkbox" name="uiFormCheck" value="하*미">
+								<strong data-masking="true">하*미</strong>
+                                <span><span>000.00.00</span><span>성별</span></span>
+                                <span>교차</span>
+							</label>
+						</div>
+						<div class="data-word3">
+							<span class="word1">
+								<strong data-masking="true">홍*동</strong>
+                                <span>소속지점</span>
+                            </span>
+                            <span>진행단계(D-00)</span>
+						</div>
+					</li>
+					<!-- [CASE1] 검색결과없음 -->
+					<li class="nodata">
+						<strong>검색 결과 없습니다.</strong>
+						<span>입력하신 철자를 다시 한번 확인해주세요.</span>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">완료</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<script>
+//<!--
+	/* **********************************************************
+	* 샘플 : 후보자 추가 (UI 동작에 참고만 해주세요)
+	* value="", name="uiFormCheck" 는 임시이며, 변경가능
+	********************************************************** */
+	var _el_class, _el_value, _el_src;
+	var _el_wrap_html = '';
+
+	//후보자추가영역셋팅 : WRAP
+	_el_wrap_html += '<div class="list-t3">',
+	_el_wrap_html += '	<ul></ul>',
+	_el_wrap_html += '</div>';
+
+	//후보자추가 : input[type="checkbox"] 클릭 이벤트
+	$('[name="uiFormCheck"]').on('click',function(){
+		var _el_wrap;
+		var _el_checked = $('[name="uiFormCheck"]:checked').length; //선택된 후보자 수 체크
+
+		_el_class = $(this).parents('.label-check1').attr('class').replace('label-check1',''); //클래스명
+		_el_value = $(this).val(); //후보자명
+		_el_src = $(this).next('.img').find('img').attr('src'); //후보자이미지경로
+
+		//후보자추가영역셋팅 : LI
+		var _el_wrap_li = '';
+		_el_wrap_li += '<li>',
+		_el_wrap_li += '	<div class="'+ _el_class +'" data-value="'+ _el_value +'">',
+		_el_wrap_li += '		<strong data-masking="true">'+ _el_value +'</strong>',
+		_el_wrap_li += '	</div>',
+		_el_wrap_li += '	<button type="button" class="icon-com1 ic6">'+ _el_value +'선택취소</button>',
+		_el_wrap_li += '</li>';
+
+		//후보자추가영역(WRAP) 마크업 추가 및 삭제 : 1개 이상일 경우 추가
+		if(_el_checked > 0) {
+			if($('.form-search1 .list-t3').length == 0) {
+				$('.form-search1').append(_el_wrap_html);
+			}
+			_el_wrap = $('.form-search1 .list-t3 > ul');
+			$('.area-action .btn-action.c1').removeAttr('disabled') //완료버튼 비활성화 삭제
+		}else{
+			$('.form-search1 .list-t3').remove();
+			$('.area-action .btn-action.c1').attr('disabled','') //완료버튼 비활성화 추가
+		}
+
+		//후보자추가영역(li) 마크업 추가 및 삭제 : checked 일 경우 추가
+		if($(this).prop('checked')){
+			_el_wrap.prepend(_el_wrap_li);
+		}else{
+			$('[data-value="'+ _el_value +'"]').parent('li').remove();
+		}
+		ui.setMasking();
+	});
+
+	//후보자선택취소 : 선택취소버튼 클릭 이벤트
+	$(document).on('click','.list-t3 .icon-com1',function(){
+		var _el_value = $(this).prev('div').attr('data-value');
+		var _el_li = $(this).parent('li');
+		var _el_ul = _el_li.parent('ul');
+
+		//후보자명 선택 해제
+		$('[value="'+ _el_value +'"]').prop('checked',false);
+
+		//li 삭제
+		_el_li.remove();
+
+		//남아 있는 li가 없을 경우 마크업 삭제
+		if(_el_ul.find('li').length == 0){
+			$('.list-t3').remove();
+			$('.area-action .btn-action.c1').attr('disabled','') //완료버튼 비활성화 삭제
+		}
+	});
+//-->
+</script>
+</body>
+</html>

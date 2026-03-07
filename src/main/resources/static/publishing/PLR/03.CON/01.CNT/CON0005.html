@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[T] 계약기본 | 계약상세 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>계약상세조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] 상품정보  -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+			<div class="info">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>LA123456789</dd>
+				</dl>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭버튼] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">계약기본</a></li>
+				<li><a href="javascript:void(0);">피보험자</a></li>
+				<li><a href="javascript:void(0);">목적물</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [정보영역] -->
+		<!-- ######################### -->
+		<div data-scroll-bg="1">
+			<!-- [기본정보] -->
+			<section class="wrap-section2">
+				<h3 class="tit-sub1">기본정보</h3>
+				<div class="info-con1">
+					<dl>
+						<dt>구분</dt>
+						<dd>2종 100세 만기</dd>
+					</dl>
+					<dl>
+						<dt>계약상태</dt>
+						<dd>정상/연체</dd>
+					</dl>
+					<dl>
+						<dt>계약기간</dt>
+						<dd>
+							<div>2012.01.05~2032.01.05</div>
+							<div>(57년간/100세 만기)</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>납입기간</dt>
+						<dd>20년납(2032.01.05까지)</dd>
+					</dl>
+					<dl>
+						<dt>일부담보상태</dt>
+						<dd><span class="txt-c1">일부해지</span></dd>
+					</dl>
+					<dl>
+						<dt>최종납입</dt>
+						<dd>124회(2032.01)</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- [계약자정보] -->
+			<section class="wrap-section2">
+				<div class="tit-sub1">
+					<h3>계약자 정보</h3>
+					<div class="side"><a href="javascript:void(0);" class="btn-sub2 c2">정보변경</a></div>
+				</div>
+				<div class="info-con1">
+					<dl>
+						<dt>계약자</dt>
+						<dd>
+							<div class="data-info2">
+								<strong>계약자명</strong>
+								<span>
+									<span>생년월일</span>
+									<span>성별</span>
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>연락처</dt>
+						<dd>010-1234-5678</dd>
+					</dl>
+					<dl>
+						<dt>우편물수령지</dt>
+						<dd>
+							<div>자택</div>
+							<div class="area-btn4"><a href="javascript:void(0);" class="btn-sub3 c2">우편물수령지</a></div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>우편물주소</dt>
+						<dd>
+							<div>(04406)</div>
+							<div>서울특별시 중구 소월로 3 롯데손해보험빌딩</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>보유계약</dt>
+						<dd>
+							<div>6건</div>
+							<div class="area-btn4"><a href="javascript:void(0);" class="btn-sub3 c2">계약조회</a></div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>만기수익자</dt>
+						<dd>
+							<div class="data-info2">
+								<strong>공지철</strong>
+								<span>
+									<span>1990.01.01</span>
+									<span>남</span>
+								</span>
+								<span class="txt">본인</span>
+							</div>
+							<div class="area-btn4"><a href="javascript:void(0);" class="btn-sub3 c2">수익자조회</a></div>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [계약기본정보] -->
+		<!-- ######################### -->
+		<div class="area-toggle1" data-autoset="toggle">
+			<!-- [보험료 및 상품정보] -->
+			<section class="active">
+				<header class="tit">
+					<h3>보험료 및 상품정보</h3>
+					<span class="data1">100,000원/월납</span>
+					<button type="button" data-toggle="btn" aria-expanded="true">보험료 및 상품정보 상세보기</button>
+				</header>
+				<div data-toggle="content" class="info-con4">
+					<dl>
+						<dt>납입보험료</dt>
+						<dd>
+							<div>100,000원 / 월납</div>
+							<div class="area-btn4"><a href="javascript:void(0);" class="btn-sub3 c2">내역</a></div> <!-- [D] /03.CON/01.CNT/CON0000_L02.html -->
+						</dd>
+					</dl>
+					<dl>
+						<dt>갱신유형</dt>
+						<dd>대체납입 / 보험료추가납입</dd>
+					</dl>
+					<dl>
+						<dt>예정이율</dt>
+						<dd>2.25%</dd>
+					</dl>
+					<dl>
+						<dt>평균공시이율</dt>
+						<dd>2.25%</dd>
+					</dl>
+					<dl>
+						<dt>적용이율</dt>
+						<dd>1.4%</dd>
+					</dl>
+					<dl>
+						<dt>중도인출</dt>
+						<dd>
+							<div>1년 경과 후 1년마다 1회</div>
+							<div class="area-btn4"><a href="javascript:void(0);" class="btn-sub3 c2">중도인출가능조회</a></div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>납입면제정보</dt>
+						<dd>
+							<button type="button" class="btn-sub3 c2" disabled>면제조건</button>
+							<button type="button" class="btn-sub3 c2">면제조건</button>
+						</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- [수금정보] -->
+			<section>
+				<header class="tit">
+					<h3>수금정보</h3>
+					<span class="data1">자동이체</span>
+					<button type="button" data-toggle="btn" aria-expanded="false">수금정보 상세보기</button>
+				</header>
+				<div data-toggle="content" class="info-con4">
+					<dl>
+						<dt>수금정보</dt>
+						<dd>
+							<div>자동이체</div>
+							<div class="area-btn4"><a href="javascript:void(0);" class="btn-sub3 c2">이체내역</a></div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>이체일</dt>
+						<dd>20일</dd>
+					</dl>
+					<dl>
+						<dt>은행(카드사)</dt>
+						<dd>롯데은행</dd>
+					</dl>
+					<dl>
+						<dt>계좌(카드)번호</dt>
+						<dd>123456789</dd>
+					</dl>
+					<dl>
+						<dt>예금주</dt>
+						<dd>
+							<div class="data-info2">
+								<strong>공지철</strong>
+								<span>
+									<span>1990.01.01</span>
+									<span>남</span>
+								</span>
+								<span class="txt">본인</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- [이력사항] -->
+			<section>
+				<header class="tit">
+					<h3>이력사항</h3>
+					<span class="data1">사고유무 있음 </span>
+					<button type="button" data-toggle="btn" aria-expanded="false">이력사항 상세보기</button>
+				</header>
+				<div data-toggle="content" class="info-con4">
+					<dl>
+						<dt>사고유무</dt>
+						<dd>
+							<div>있음</div>
+							<div class="area-btn4"><a href="javascript:void(0);" class="btn-sub3 c2">통합사고조회</a></div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>계약변경여부</dt>
+						<dd>있음</dd>
+					</dl>
+					<dl>
+						<dt>부활여부</dt>
+						<dd>
+							<div>부활</div>
+							<div class="area-btn4">
+								<button type="button" class="btn-sub3 c2">이력조회</button>
+								<button type="button" class="btn-sub3 c2" disabled>이력조회</button>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>약관대출</dt>
+						<dd>
+							<div>있음</div>
+							<div class="area-btn4">
+								<!-- 2022-12-09 버튼으로 변경 -->
+								<button type="button" class="btn-sub3 c2">가능금액</button>
+								<button type="button" class="btn-sub3 c2">가상계좌발급</button>
+								<button type="button" class="btn-sub3 c2" disabled>가상계좌발급</button> <!-- 2022-12-09 추가 -->
+								<!-- //2022-12-09 버튼으로 변경 -->
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>압류사항</dt>
+						<dd>있음</dd>
+					</dl>
+					<dl>
+						<dt>지급제한<br>/ 질권여부</dt>
+						<dd>
+							<div>지급제한 / 질권설정</div>
+							<div class="area-btn4"><a href="javascript:void(0);" class="btn-sub3 c2">질권채권조회</a></div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>미지급금</dt>
+						<dd>있음</dd>
+					</dl>
+					<dl>
+						<dt>반송이력</dt>
+						<dd>
+							<div>있음</div>
+							<div class="area-btn4">
+								<button type="button" class="btn-sub3 c2">반송우편물</button>
+								<button type="button" class="btn-sub3 c2" disabled>반송우편물</button>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- [취급자정보] -->
+			<section>
+				<header class="tit">
+					<h3>취급자정보</h3>
+					<span class="data1">서울사업단/김형구</span>
+					<button type="button" data-toggle="btn" aria-expanded="false">취급자정보 상세보기</button>
+				</header>
+				<div data-toggle="content" class="info-con4">
+					<dl>
+						<dt>취급</dt>
+						<dd>서울사업단 / 김형구</dd>
+					</dl>
+					<dl>
+						<dt>모집</dt>
+						<dd>하나CLC지점 / 신윤경</dd>
+					</dl>
+					<dl>
+						<dt>연락처</dt>
+						<dd>
+							<div>취급점포 : 02-6300-7000</div>
+							<div class="area-btn4"><a href="javascript:void(0);" class="btn-sub3 c2">다른 연락처보기</a></div> <!-- [D] /03.CON/01.CNT/CON0000_L01.html -->
+						</dd>
+					</dl>
+					<dl>
+						<dt>계약이관여부</dt>
+						<dd>
+							<div>이관</div>
+							<div class="area-btn4">
+								<button type="button" class="btn-sub3 c2">계약이관조회</button>
+								<button type="button" class="btn-sub3 c2" disabled>계약이관조회</button>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- [계약추가정보] -->
+			<section>
+				<header class="tit">
+					<h3>계약추가정보</h3>
+					<span class="data1">연금개시연령 65세</span>
+					<button type="button" data-toggle="btn" aria-expanded="false">계약추가정보 상세보기</button>
+				</header>
+				<div data-toggle="content" class="info-con4">
+					<!-- [D] 상품별로 노출되는 항목이 다름 : 반복구간
+							* 최대 8행 테이블로 퍼블리싱 필요
+							* 개발 시 상품별 계약추가정보 노출
+					-->
+					<dl>
+						<dt>항목명</dt>
+						<dd>내용</dd>
+					</dl>
+					<!-- // -->
+					<dl>
+						<dt>연금개시연령</dt>
+						<dd>65세</dd>
+					</dl>
+					<dl>
+						<dt>연금수령기간</dt>
+						<dd>20년</dd>
+					</dl>
+					<dl>
+						<dt>연금수령방법</dt>
+						<dd>매월</dd>
+					</dl>
+					<dl>
+						<dt>연금지급형</dt>
+						<dd>정액형</dd>
+					</dl>
+					<dl>
+						<dt>연금지급 시기일자</dt>
+						<dd>2032.03.21</dd>
+					</dl>
+					<dl>
+						<dt>항목명</dt>
+						<dd>내용</dd>
+					</dl>
+					<dl>
+						<dt>항목명</dt>
+						<dd>내용</dd>
+					</dl>
+				</div>
+			</section>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1" data-sticky="bottom">
+			<a href="javascript:void(0);" class="btn-action ic4 simple">메뉴 더보기</a> <!-- [D] /03.CON/01.CNT/CON0000_L01.html 파일 -->
+			<a href="javascript:void(0);" class="btn-action c1">납부요청서발송</a>
+			<a href="javascript:void(0);" class="btn-action c1">제지급업무요청</a>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

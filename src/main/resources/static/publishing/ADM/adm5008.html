@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>신청현황 | 자동발송 현황관리 | 고객관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220513">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">자동발송 &gt; 발송현황</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<dl class="form">
+						<dt>소속 검색</dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option selected hidden>본부선택</option>
+									<option>전체</option>
+								</select>
+								<select class="selectbox" style="width:100px;" disabled>
+									<option selected hidden>사업단선택</option>
+									<option>전체</option>
+								</select>
+								<select class="selectbox" style="width:100px;" disabled>
+									<option selected hidden>팀선택</option>
+									<option>전체</option>
+								</select>
+								<select class="selectbox" style="width:100px;" disabled>
+									<option selected hidden>직원선택</option>
+									<option>전체</option>
+								</select>
+								<input type="text" name="" id="" class="text" style="width:190px;" placeholder="이름 또는 사번 직접 입력">
+							</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>키워드 검색</dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>전체</option>
+									<option>컨텐츠명</option>
+									<option>발송인(코드)</option>
+									<option>소속</option>
+								</select>
+								<input type="text" name="" id="" class="text" style="width:190px;">
+							</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>발송일</dt>
+						<dd>
+							<div class="form-row">
+								<span class="date-range">
+									<input type="text" data-role="start" placeholder="시작일 선택">
+									<span class="util">~</span>
+									<input type="text" data-role="end" placeholder="종료일 선택">
+								</span>
+								<label class="label-check2">
+									<input type="radio" name="formDt2">
+									<span>오늘</span>
+								</label>
+								<label class="label-check2">
+									<input type="radio" name="formDt2">
+									<span>7일</span>
+								</label>
+								<label class="label-check2">
+									<input type="radio" name="formDt2">
+									<span>1개월</span>
+								</label>
+								<label class="label-check2">
+									<input type="radio" name="formDt2" checked="checked">
+									<span>전체</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>이슈항목</dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:360px;">
+									<option>전체</option>
+									<option>생일</option>
+									<option>상령일</option>
+									<option>갱신</option>
+									<option>만기(장기)</option>
+									<option>만기(자동차)</option>
+									<option>만기(일반)</option>
+									<option>가입설계동의만료</option>
+									<option>상품소개동의만료</option>
+									<option>미수납</option>
+									<option>부활대상</option>
+									<option>태아등재</option>
+									<option>반송우편물</option>
+									<option>완판모니터링</option>
+								</select>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+			<div class="tit-sub2">
+				<h3 class="">전체 135</h3>
+				<div class="sub">
+					<select class="selectbox">
+						<option>20</option>
+						<option>30</option>
+						<option>50</option>
+					</select>
+				</div>
+			</div>
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<col style="width:80px;">
+						<col style="width:10%;">
+						<col>
+						<col style="width:15%;">
+						<col style="width:10%;">
+						<col style="width:10%;">
+						<col style="width:8%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"><span class="sort">번호</span></th>
+							<th scope="col"><span class="sort des">발송일</span></th>
+							<th scope="col">컨텐츠명</th>
+							<th scope="col">이슈항목</th>
+							<th scope="col">발송인</th>
+							<th scope="col">소속</th>
+							<th scope="col">발송대상(명)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>2022.02.22 22:22:22</td>
+							<td>
+								<span class="sub">MZ세대, 2022년은 가입한 보험을 돌아봐야 하는 시기 !!!</span>
+							</td>
+							<td>생일</td>
+							<td>김그림(1202111)</td>
+							<td>강남사업단</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>2022.02.22 22:22:22</td>
+							<td>
+								<span class="sub">MZ세대, 2022년은 가입한 보험을 돌아봐야 하는 시기 !!!</span>
+							</td>
+							<td>완판모니터링</td>
+							<td>김그림(1202111)</td>
+							<td>강남사업단</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>2022.02.22 22:22:22</td>
+							<td>
+								<span class="sub">MZ세대, 2022년은 가입한 보험을 돌아봐야 하는 시기 !!!</span>
+							</td>
+							<td>생일</td>
+							<td>김그림(1202111)</td>
+							<td>강남사업단</td>
+							<td>0</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="paging">
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

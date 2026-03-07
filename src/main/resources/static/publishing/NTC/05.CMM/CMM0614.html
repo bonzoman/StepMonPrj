@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>고객 | 컨텐츠 발송 | 컨텐츠 리스트 | 컨텐츠랩</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-14]	1. 문구수정 : 취급자 강북사업단 > (사번번호로 변경)
+	*	[M 2022-11-15]	① '발송'을 '공유'로 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>공유 컨텐츠 관리</h1><!-- [M 2022-11-15] 공유로 수정 -->
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [보내는 컨텐츠] -->
+		<!-- ######################### -->
+		<div class="wrap-section4">
+			<div class="tit-section2 t1"><p>공유이력을 메모하고,<br>컨텐츠 공유내역에서 편리하게<br>확인하세요​</p></div><!-- [M 2022-11-15] 추가 -->
+			<h2 class="tit-sub1">보내는 컨텐츠<!-- <span>(최대 2개)</span>--></h2> <!-- [M 2022-11-15] 내용 삭제 -->
+			<!-- [D] 선택된 컨텐츠 리스트 노출 -->
+			<div class="info-data1">
+				<ul>
+					<!-- // -->
+					<li>
+						<strong class="tit">제목</strong>
+						<div class="data-word2">
+							<span>#키워드</span>
+							<span>#해시태그</span>
+						</div>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000,000</dd>
+							</dl>
+							<dl class="icon-com1 ic25"><!-- [M 2022-11-15] 공유로 수정 -->
+								<dt>공유</dt><!-- [M 2022-11-15] 공유로 수정 -->
+								<dd>000,000</dd>
+							</dl>
+						</div>
+						<a href="javascript:void(0);" class="link">상세보기</a>
+						<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">뇌혈관질환 진단비 분석</strong>
+						<div class="data-word2">
+							<span>#보험서비스 발송</span>
+							<span>#상품</span>
+						</div>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000,000</dd>
+							</dl>
+							<dl class="icon-com1 ic25"><!-- [M 2022-11-15] 공유로 수정 -->
+								<dt>공유</dt><!-- [M 2022-11-15] 공유로 수정 -->
+								<dd>000,000</dd>
+							</dl>
+						</div>
+						<a href="javascript:void(0);" class="link">상세보기</a>
+						<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+			<!-- [추가버튼] -->
+			<!-- <div class="area-btn1">
+				<button type="button" class="btn-com1 ic3">컨텐츠 추가하기</button>
+			</div> --><!-- [M 2022-11-15] 삭제 -->
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [보내는 컨텐츠] -->
+		<!-- ######################### -->
+		<div class="wrap-section4">
+			<div class="tit-sub1">
+				<h3>공유대상자 정보<span>(최대 10명)</span></h3><!-- [M 2022-11-15] 공유로 수정 -->
+				<!-- // -->
+				<!-- <div class="side label-check1">
+					<label>
+						<input type="checkbox">
+						<span>나에게 보내기</span>
+					</label>
+				</div> --><!-- [M 2022-11-15] 삭제 -->
+				<!-- // -->
+			</div>
+			<!-- [D] 선택된 컨텐츠 리스트 노출 -->
+			<div class="info-data3">
+				<ul>
+					<!-- [CASE1] 고객 -->
+					<li>
+						<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong>고객명</strong>
+							<span>
+								<span>0000.00.00</span>
+								<span>성별</span>
+							</span>
+						</div>
+						<div class="data1">
+							<span>휴대폰번호</span>
+							<strong><span data-masking="true">000 - **** - 0000</span></strong>
+						</div>
+						<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info2" data-value="102701">
+							<strong>공지철</strong>
+							<span>
+								<span>0000.00.00</span>
+								<span>남</span>
+							</span>
+						</div>
+						<div class="data1">
+							<span>휴대폰번호</span>
+							<strong><span data-masking="true">000 - **** - 0000</span></strong>
+						</div>
+						<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					</li>
+					<!-- [CASE2] 직원 -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+							<span><strong>이름</strong><span>소속</span></span>
+						</div>
+						<div class="data1">
+							<span>휴대폰번호</span>
+							<strong><span data-masking="true">000 - **** - 0000</span></strong>
+						</div>
+						<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+							<span><strong>공지철</strong><span>111111</span></span> <!-- 2022-10-14 사번으로 변경 -->
+						</div>
+						<div class="data1">
+							<span>휴대폰번호</span>
+							<strong><span data-masking="true">000 - **** - 0000</span></strong>
+						</div>
+						<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+			<!-- // -->
+			<div class="area-btn1">
+				<button type="button" class="btn-com1 ic3">고객 추가</button>
+				<button type="button" class="btn-com1 ic3">직원 추가</button>
+				<button type="button" class="btn-com1 ic3">후보자 추가</button>
+				<!-- 비활성화
+				<button type="button" class="btn-com1 ic3" disabled>고객 추가</button>
+				<button type="button" class="btn-com1 ic3" disabled>직원 추가</button>
+				<button type="button" class="btn-com1 ic3" disabled>후보자 추가</button>
+				-->
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [보내실 내용] -->
+		<!-- ######################### -->
+		<!-- <fieldset class="form-wrap1">
+			<legend class="tit">보내실 내용</legend>
+
+			<div class="form">
+				<div class="textarea">
+					<textarea cols="50" rows="3" title="등록내용" placeholder="내용을 입력해주세요."></textarea>
+					<span class="util2"><strong>0</strong>/4,000자</span>
+				</div>
+
+				<!-- [D] 받는 사람이 고객일 경우 노출 --
+				<dl class="form">
+					<dt>보장분석 URL노출</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio11">
+								<span>미노출</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio11" checked>
+								<span>노출</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- // --
+			</div>
+		</fieldset> --><!-- [M 2022-11-15] 삭제 -->
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="content-bottom">
+			<button type="button" class="btn-action c1">저장</button><!-- [M 2022-11-15] 공유로 수정 -->
+			<!-- <button type="button" class="btn-action c1" disabled>저장</button> : 비활성화 -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+	$('.btn-action').on('click',function(){
+		$('textarea, input[type="text"]').trigger('blur');
+		setTimeout(function(){
+			ui.alert('ddddddd');
+		},40);
+	});
+</script>
+</body>
+</html>

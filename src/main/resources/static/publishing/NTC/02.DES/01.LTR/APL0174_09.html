@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>STEP9 | 04.기타동의 | 스마트폰청약 | 표준설계 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>스마트폰청약</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [진행상태] STEP 04 -->
+		<!-- ######################### -->
+		<div class="info-step1" data-autoset="toggle" data-sticky="top">
+			<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+			<ol data-toggle="content">
+				<li><button type="button">01. 보험계약자 확인</button></li>
+				<li><button type="button">02. 청약서류 확인</button></li>
+				<li><button type="button">03. 내용확인 및 동의</button></li>
+				<li aria-current="step"><button type="button">04. 기타동의</button></li>
+				<li><button type="button" disabled>05. 결제수단</button></li>
+				<li><button type="button" disabled>06. 전자서명</button></li>
+			</ol>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [상단영역] 안내문구 -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<div class="info-step3">
+				<p><strong>9</strong>개의 내용 중 <strong>9</strong>번째 내용</p>
+			</div>
+			<p>기타 정보 동의사항에 대해 <br>선택해주세요.</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [동의영역] -->
+		<!-- ######################### -->
+		<fieldset class="form-agree2">
+			<legend>전체항목 필수동의</legend>
+			<!-- // -->
+			<div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<span><strong>계약의 체결이행 등을 위한 개인(신용)정보 처리 표준 동의</strong></span>
+					<a href="javascript:void(0);" class="btn">계약체결 이행동의서</a>
+				</label>
+				<p class="txt1">* 본 동의를 거부하시는 경우에는 보험계약 체결 이행 등이 불가능 합니다.</p>
+			</div>
+			<!-- // -->
+			<div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<span>개인(신용)정보의 수집, 이용에 관한 사항</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>개인(신용)정보의 조회에 관한 사항</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>개인(신용)정보의 제공에 관한 사항</span>
+				</label>
+			</div>
+			<!-- // -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [동의영역] 통신수단 -->
+		<!-- ######################### -->
+		<fieldset class="form-agree2">
+			<legend>통신수단 이용 해지 동의</legend>
+			<!-- // -->
+			<dl>
+				<dt>통신수단을 이용한 해지에 동의하십니까?</dt>
+				<dd>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dq1" checked>
+							<span>동의</span>
+						</label>
+						<label>
+							<input type="radio" name="dq1">
+							<span>동의안함</span>
+						</label>
+					</div>
+					<div class="txt1">* 통신수단을 이용한 해지에 동의하여도 당사 기준에 따라 유선해지가 제한될 수 있습니다.</div>
+				</dd>
+			</dl>
+			<!--// -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [동의영역] 개인정보처리표준동의-->
+		<!-- ######################### -->
+		<fieldset class="form-agree2">
+			<legend>개인정보처리표준동의</legend>
+			<!--// -->
+			<div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<span><strong>상품소개 등을 위한 개인(신용)정보 처리표준동의</strong></span>
+					<a href="javascript:void(0);" class="btn">상품소개 등을 위한 개인(신용)정보 처리표준동의 확인서 상세보기</a>
+				</label>
+				<p class="txt1 txt-c1">* 본 동의는 보험계약 체결에 필수적이지 않으며 동의를 거부하실 수 있습니다.</p>
+			</div>
+			<!--// -->
+			<dl>
+				<dt>개인(신용)정보의 수집 &middot; 이용에 관한 사항</dt>
+				<dd>
+					<div class="txt-bul2">개인(신용) 정보의 보유 &middot; 이용기간 : 5년 </div>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="da1" checked>
+							<span>동의</span>
+						</label>
+						<label>
+							<input type="radio" name="da1">
+							<span>동의안함</span>
+						</label>
+					</div>
+				</dd>
+				<dd>
+					<div class="txt-bul2">광고성 정보의 수신동의</div>
+					<div class="label-btn1 col2">
+						<label>
+							<input type="radio" name="da2" checked>
+							<span>동의</span>
+						</label>
+						<label>
+							<input type="radio" name="da2">
+							<span>동의안함</span>
+						</label>
+					</div>
+				</dd>
+				<dd>
+					<div class="label-check1 col box">
+						<label>
+							<input type="checkbox">
+							<span>전체</span>
+						</label>
+						<label>
+							<input type="checkbox" checked>
+							<span>문자</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>이메일</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>DM</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>전화(ARS)</span>
+						</label>
+					</div>
+				</dd>
+			</dl>
+			<!--// -->
+			<dl>
+				<dt>개인(신용)정보의 조회에 관한 사항</dt>
+				<dd>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dq3" checked>
+							<span>동의</span>
+						</label>
+						<label>
+							<input type="radio" name="dq3">
+							<span>동의안함</span>
+						</label>
+					</div>
+				</dd>
+			</dl>
+			<!--// -->
+			<dl>
+				<dt>개인(신용)정보의 조회에 관한 사항</dt>
+				<dd>
+					<div class="txt-bul2 txt1">제공받는 자의 개인(신용)정보의 보유 &middot; 이용기간 : 5년</div>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dq4" checked>
+							<span>동의</span>
+						</label>
+						<label>
+							<input type="radio" name="dq4">
+							<span>동의안함</span>
+						</label>
+					</div>
+				</dd>
+			</dl>
+			<!--// -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [동의영역] 전자서명에 의한 보험계약체결 동의-->
+		<!-- ######################### -->
+		<fieldset class="form-agree2">
+			<legend>전자서명에 의한 보험계약 체결 동의</legend>
+			<div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<span><strong>전자서명에 의한 보험계약 체결을 동의하고 확인하였습니다.</strong></span>
+					<a href="javascript:void(0);" class="btn">전자서명동의서 보기</a>
+				</label>
+			</div>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [동의영역] 모바일전자서명 -->
+		<!-- ######################### -->
+		<fieldset class="form-agree2">
+			<legend>모바일 전자서명 진행 동의</legend>
+			<!--// -->
+			<div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<span><strong>보험모집인으로부터 계약의 주요사항 및 약관의 중요사항에 대해 설명을 듣고 모바일 전자서명을 진행합니다.</strong></span>
+				</label>
+			</div>
+			<!--// -->
+			<dl class="txt-bul1">
+				<dt>계약 및 약관의 주요사항 안내</dt>
+				<dd>계약전 &middot; 후 알릴의무 관련 사항</dd>
+				<dd>상해 및 질병의 보장 관련 사항</dd>
+				<dd>재물 및 배상해임의 보장 관련 사항</dd>
+				<dd>갱신형 보장 관련 사항</dd>
+				<dd>청약 철회 관련 사항</dd>
+				<dd>계약 취소, 무효 관련 사항</dd>
+				<dd>계약 소멸 관련 사항</dd>
+				<dd>해지환급금 관련 사항</dd>
+				<dd>보험금 지급 관련 사항</dd>
+				<dd>보험료 납입면제 및 계약해지 관련 사항</dd>
+				<dd>해지 계약의 부활 관련 사항</dd>
+			</dl>
+			<!--// -->
+			<div class="con-terms">
+				<p>고객님의 담당 보험모집인은 위 내용을 충실히 설명했으며, 이에 대한 모든 책임을 질것을 2022.02.18에 확인 후 서명했습니다.</p>
+			</div>
+			<!--// -->
+			<dl class="txt-bul3">
+				<dt>보험모집인이 해당 상품에 대한 내용을 설명 했습니까?</dt>
+				<dd>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dq5" checked>
+							<span>동의</span>
+						</label>
+						<label>
+							<input type="radio" name="dq5">
+							<span>동의안함</span>
+						</label>
+					</div>
+				</dd>
+			</dl>
+			<!--// -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action ">이전</button>
+			<button type="button" class="btn-action c1" disabled>다음</button>
+			<!-- <button type="button" class="btn-action c1">다음</button> -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

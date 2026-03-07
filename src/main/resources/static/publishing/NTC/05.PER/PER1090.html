@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[T] 요약 | 유지율 조회 | 실적관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-05]	1. 요약 → 현황통계 텍스트 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>유지율 조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1">
+			<ul>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">현황통계</a></li><!-- [M 2022-10-05] 텍스트 수정 -->
+				<li><a href="javascript:void(0);">보험료</a></li>
+				<li><a href="javascript:void(0);">건수</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [필터 영역] -->
+		<!-- ######################### -->
+		<div class="area-info1 line2">
+			<p>2022.03</p>
+			<div class="side">
+				<button type="button" class="icon-com1 ic18 right">필터</button>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [13회차 유지율 최하위 지점 ] -->
+		<!-- ######################### -->
+		<div class="wrap-section">
+			<h2 class="tit-sub1">13회차 유지율 최하위 지점  <a href="#uiTOOLTIPINFO1" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></h2>
+			<div class="info-data8">
+				<!-- // -->
+				<dl class="data1 ic6">
+					<dt class="tit">강남 2지점</dt>
+					<dd class="data-num1"><strong>131.0</strong><span>%</span></dd>
+					<dd class="link"><button type="button">상세보기</button></dd>
+				</dl>
+				<!-- // -->
+				<dl class="data1 ic6">
+					<dt class="tit">강남 7지점</dt>
+					<dd class="data-num1"><strong>131.0</strong><span>%</span></dd>
+					<dd class="link"><button type="button">상세보기</button></dd>
+				</dl>
+				<!-- // -->
+				<dl class="data1 ic6">
+					<dt class="tit">강남 8지점</dt>
+					<dd class="data-num1"><strong>120.4</strong><span>%</span></dd>
+					<dd class="link"><button type="button">상세보기</button></dd>
+				</dl>
+				<!-- // -->
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [13회차 유지율 최하위 설계사  리스트] -->
+		<!-- ######################### -->
+		<div class="wrap-section1">
+			<h3 class="tit-sub1">13회차 유지율 최하위 설계사 </h3>
+			<div class="info-data3">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+							<span><strong>공지철</strong><span>658602</span></span>
+						</div>
+						<div class="side">
+							<div class="data-num1 txt-c1"><strong>000.00</strong><span>%</span></div>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+							<span><strong>강다일</strong><span>658602</span></span>
+						</div>
+						<div class="side">
+							<div class="data-num1 txt-c1"><strong>000.00</strong><span>%</span></div>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user2.png" alt=""></span>
+							<span><strong>김나영</strong><span>658602</span></span>
+						</div>
+						<div class="side">
+							<div class="data-num1 txt-c1"><strong>000.00</strong><span>%</span></div>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user2.png" alt=""></span>
+							<span><strong>김혜린</strong><span>658602</span></span>
+						</div>
+						<div class="side">
+							<div class="data-num1 txt-c1"><strong>000.00</strong><span>%</span></div>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+							<span><strong>김혜희</strong><span>658602</span></span>
+						</div>
+						<div class="side">
+							<div class="data-num1 txt-c1"><strong>000.00</strong><span>%</span></div>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+							<span><strong>나성준</strong><span>658602</span></span>
+						</div>
+						<div class="side">
+							<div class="data-num1 txt-c1"><strong>000.00</strong><span>%</span></div>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+							<span><strong>류이현</strong><span>658602</span></span>
+						</div>
+						<div class="side">
+							<div class="data-num1 txt-c1"><strong>000.00</strong><span>%</span></div>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user2.png" alt=""></span>
+							<span><strong>안혜정</strong><span>658602</span></span>
+						</div>
+						<div class="side">
+							<div class="data-num1 txt-c1"><strong>000.00</strong><span>%</span></div>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user2.png" alt=""></span>
+							<span><strong>정지수</strong><span>658602</span></span>
+						</div>
+						<div class="side">
+							<div class="data-num1 txt-c1"><strong>000.00</strong><span>%</span></div>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+							<span><strong>하다미</strong><span>658602</span></span>
+						</div>
+						<div class="side">
+							<div class="data-num1 txt-c1"><strong>000.00</strong><span>%</span></div>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+		</div>
+		<!-- ######################### -->
+	</div>
+</main>
+
+<!-- ######################### -->
+<!-- [툴팁영역] 유지율 최하위 지점 -->
+<!-- ######################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl class="txt-bul2">
+		<dt>유지율 산출 기준</dt>
+		<dd>보장성</dd>
+		<dd>보험료 기준</dd>
+		<dd>일시납 제외</dd>
+		<dd><button type="button" data-btn="pop-close">유지율 최하위 지점 안내 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+</body>
+</html>

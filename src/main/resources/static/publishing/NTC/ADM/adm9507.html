@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>공지하기 | 리포트</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>공지하기</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+        <p>해당 통합조회 결과를 지점장에게 공지하시겠습니까?</p>
+        <h2 class="tit-sub2">공지기간 선택</h2>
+        <div>
+            <label class="label-check">
+                <input type="radio" name="ct1" checked="checked">
+                <span>1일</span>
+            </label>
+            <label class="label-check">
+                <input type="radio" name="ct1">
+                <span>3일</span>
+            </label>
+            <label class="label-check">
+                <input type="radio" name="ct1">
+                <span>5일</span>
+            </label>
+        </div>
+		<div class="area-action">
+			<button type="button" class="btn-action c3">취소</button>
+			<button type="button" class="btn-action c1">설정</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

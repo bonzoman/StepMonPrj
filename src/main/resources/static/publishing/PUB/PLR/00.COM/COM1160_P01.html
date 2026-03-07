@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 설정</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>설정</h1>
+			<button type="button" data-btn="pop-close">설정 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<div class="list-t1">
+				<ul>
+					<!-- # 앱 홈화명 설정 # -->
+					<li>
+						<a href="javascript:void(0);" class="link1">
+							<div class="txt1">앱 홈화면 설정</div>
+							<div class="txt2">고객조회</div>
+						</a>
+					</li>
+					<!-- # 간편로그인 설정 # -->
+					<li>
+						<a href="javascript:void(0);" class="link1">
+							<div class="txt1">간편로그인 설정</div>
+							<div class="txt2">지문</div>
+						</a>
+					</li>
+					<!-- # 앱 PUSH 알림 # -->
+					<li class="label-toggle1">
+						<label>
+							<input type="checkbox" name="form-check2">
+							<span>앱 PUSH 알림</span>
+						</label>
+					</li>
+					<!-- # 쉐이킹활성 # -->
+					<!-- 2022-12-09 변경 -->
+					<li data-role="switchToggle">
+						<div class="label-toggle1">
+							<label>
+								<input type="checkbox" name="form-check2">
+								<span>쉐이킹활성</span>
+							</label>
+						</div>
+						<div class="data-con shake">
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">쉐이킹 민감도</span>
+									<span data-select="text" data-value="1">약</span>
+								</button>
+								<div class="list">
+									<div data-label="쉐이킹 민감도">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion3_1" value="1"><span>약</span></label>
+											<label><input type="radio" name="selectOpeion3_1" value="2"><span>중</span></label>
+											<label><input type="radio" name="selectOpeion3_1" value="3"><span>강</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">이동화면 설정</span>
+									<span data-select="text" data-value="1">HELP 접수</span>
+								</button>
+								<div class="list">
+									<div data-label="이동화면 설정">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion3_2" value="1"><span>HELP 접수</span></label>
+											<label><input type="radio" name="selectOpeion3_2" value="2"><span>설계하기(장기)</span></label>
+											<label><input type="radio" name="selectOpeion3_2" value="3"><span>포인트조회</span></label>
+											<label><input type="radio" name="selectOpeion3_2" value="4"><span>내강의실</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- //2022-12-09 변경 -->
+					<!-- # 버전정보 [CASE1] 최신버전 경우 문구 노출 # -->
+					<li>
+						<div class="txt1">버전정보</div>
+						<div class="txt2">
+							<span>4.1.0 </span>
+							<em>최신버전입니다</em>
+						</div>
+					</li>
+					<!-- # 버전정보 [CASE2] 최신버전 아닐 경우 버튼 노출 # -->
+					<li>
+						<a href="javascript:void(0);" class="link1">
+							<div class="txt1">버전정보</div>
+							<div class="txt2">업데이트</div>
+						</a>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

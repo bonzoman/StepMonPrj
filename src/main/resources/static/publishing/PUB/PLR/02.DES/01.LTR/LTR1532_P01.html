@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 노하우보기 | 쉬운설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>노하우 보기</h1>
+			<button type="button" data-btn="pop-close">노하우 보기 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<div class="wrap-section">
+				<!-- // -->
+				<section>
+					<div class="tit-section2 t2">
+						<h2 class="hide">렛;선정 NO1</h2>
+						<p>지난 1년간 <strong>판매를 가장 많이 한</strong><br>설계사님의 플랜이예요.</p>
+					</div>
+					<div class="board-list3 t2">
+						<dl>
+							<dt class="tit">
+								<label>
+									<input type="radio" name="uiFormRadio">
+									<span>let:simple 간편 암보험(2204)</span>
+								</label>
+							</dt>
+							<dd class="data-num1">월 <strong>75,000</strong><span>원</span></dd>
+							<!-- [지급률]
+								ic1 : 0~450%
+								ic2 : 450%초과~800%미만
+								ic3 : 800%초과
+							-->
+							<dd class="data3 icon-t1 ic1">지급률 450%</dd>
+							<dd class="data-info1">
+								<span class="txt1"><em>No.1</em></span>
+								<span><em class="icon-grade1">우수설계사</em></span> <!-- [D] 우수설계자일 경우 노출 -->
+								<span>연령대 대상 판매1등</span>
+								<span>김용석</span> <!-- 2022-12-16 이름 추가 -->
+							</dd>
+							<dd class="area-btn1"><button type="button" class="btn-com1">노하우 확인</button></dd>
+						</dl>
+					</div>
+					<!-- 2022-12-20 예외case 추가 -->
+					<div class="board-list3 t2" aria-disabled="true">
+						<dl>
+							<dt class="tit">
+								<label>
+									<input type="radio" name="uiFormRadio" disabled>
+									<span>let:simple 간편 암보험(2204)</span>
+								</label>
+							</dt>
+							<dd class="data-num1">월 <strong>75,000</strong><span>원</span></dd>
+							<!-- [지급률]
+								ic1 : 0~450%
+								ic2 : 450%초과~800%미만
+								ic3 : 800%초과
+							-->
+							<dd class="data3 icon-t1 ic1">지급률 450%</dd>
+							<dd class="data-info1">
+								<span class="txt1"><em>No.1</em></span>
+								<span><em class="icon-grade1">우수설계사</em></span> <!-- [D] 우수설계자일 경우 노출 -->
+								<span>연령대 대상 판매1등</span>
+								<span>김용석</span> <!-- 2022-12-16 이름 추가 -->
+							</dd>
+						</dl>
+					</div>
+					<!-- //2022-12-20 예외case 추가 -->
+				</section>
+
+				<!-- // -->
+				<section>
+					<div class="tit-section2 t2">
+						<h2 class="hide">커뮤니티 추천 NO1</h2>
+						<p>커뮤니티에서 <strong>추천을 가장 많이 받은</strong><br>플랜이예요.</p>
+					</div>
+					<div class="board-list3 t2">
+						<dl>
+							<dt class="tit">
+								<label>
+									<input type="radio" name="uiFormRadio">
+									<span>let:simple 간편 암보험(2204)</span>
+								</label>
+							</dt>
+							<dd class="data-num1">월 <strong>75,000</strong><span>원</span></dd>
+							<dd class="data3 icon-t1 ic1">지급률 450%</dd>
+							<dd class="data-info1"><span class="icon-recom">커뮤니티 추천1등</span></dd>
+							<dd class="area-btn1"><button type="button" class="btn-com1">노하우 확인</button></dd>
+						</dl>
+					</div>
+				</section>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">설계복사</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

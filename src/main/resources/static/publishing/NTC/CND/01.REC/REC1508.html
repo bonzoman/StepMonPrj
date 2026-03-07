@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>스터디톡 등록 | 커뮤니티 | 도입</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-10]	1. 태그 기능 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>스터디톡 등록</h1>
+		<!-- <h1>스터디톡 수정</h1> -->
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<div class="tit-section"> <!-- 수정으로 진입시 숨김처리 -->
+			<p>공부한 흔적을 피드에 등록해 주세요.</p>
+		</div>
+		<fieldset class="form-wrap1">
+			<legend>피드 등록 정보 입력</legend>
+			<dl class="form">
+				<dt>이미지 등록<em class="icon-required2">필수</em>
+					<a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip" aria-haspopup="dialog">안내사항</a>
+				</dt>
+				<dd>
+					<div class="img">
+					</div>
+					<div class="area-btn1">
+						<button type="button" class="btn-com1 ic-gal">사진첩</button>
+						<button type="button" class="btn-com1 ic-cam">카메라 롤</button>
+					</div>
+				</dd>
+			</dl>
+			<dl class="form">
+				<dt>이미지 변경<em class="icon-required2">필수</em>
+					<a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip" aria-haspopup="dialog">안내사항</a>
+				</dt>
+				<dd>
+					<div class="img">
+						<img src="../../resource/img/temp/@img_banner10.png" alt="">
+					</div>
+					<div class="area-btn1">
+						<button type="button" class="btn-com1 ic-gal">사진첩</button>
+						<button type="button" class="btn-com1 ic-cam">카메라 롤</button>
+					</div>
+				</dd>
+			</dl>
+			<dl class="form">
+				<dt>내용<em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="textarea">
+						<textarea cols="50" rows="3" title="답글" placeholder="내용을 입력해주세요."></textarea>
+						<span class="util2"><strong>0</strong>/250자</span>
+					</div>
+					<!-- [M 2022-11-10] 태그 기능 추가 -->
+					<div class="data-word2">
+						<ul>
+							<li>
+								<span>#시장</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>#교회성당</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>#예식장</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>#다가구</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>#직물재단</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>#사찰</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>#예식장</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>#금속계기</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>#오피스텔</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+						</ul>
+					</div>
+					<!-- //[M 2022-11-10] 태그 기능 추가 -->
+				</dd>
+			</dl>
+			<!-- [M 2022-11-10] 태그 기능 추가 -->
+			<dl class="form">
+				<dt>인기 태그 목록</dt>
+				<dd>
+					<div class="label-check1 col2">
+						<label>
+							<input type="checkbox" checked="">
+							<span>#첫만남</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>#소개</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>#보장분석</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>#청약</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>#증권전달</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>#계약리뷰</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>#고객관리</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>#교육</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>#후보자방문</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>#계약이관</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>#보상청구</span>
+						</label>
+					</div>
+					<div class="board-input">
+						<div class="text">
+							<input type="text" placeholder="태그 직접입력 (최대 4글자)">
+							<button type="button" class="btn-sub3 c1" disabled="">등록</button>
+							<!-- <button type="button" class="btn-sub3 c1">등록</button> -->
+						</div>
+					</div>
+				</dd>
+			</dl>
+			<!-- //[M 2022-11-10] 태그 기능 추가 -->
+		</fieldset>
+		<!-- // -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">등록</button>
+		</div>
+		<!-- <div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c3">삭제</button>
+			<button type="button" class="btn-action c1">수정</button>
+		</div> -->
+		<!-- // -->
+	</div>
+</main>
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 이미지 첨부 안내 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">이미지 첨부 안내사항</dt>
+		<dd>
+			<ul class="txt-bul3">
+				<li>첨부파일의 사이즈는 <strong>000px X 000px</strong> 사이즈를 준수해주세요.</li>
+				<li>첨부파일은 <strong>png, jpg, jpeg, bmp, gif</strong> 파일만 등록이 가능합니다.</li>
+				<li>첨부파일 용량은 <strong>5M</strong>를 넘을 수 없습니다.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">이미지 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+<script>
+	// sample
+	$('.board-input input').keyup(function(){
+		if($.trim($(this).val())!=''){
+			$(this).siblings('button.btn-sub3').removeAttr('disabled');
+		}else{
+			$(this).siblings('button.btn-sub3').attr('disabled','disabled');
+		}
+	});
+	// 토스트팝업 샘플 2022-12-02
+	ui.toast('등록 되었습니다.');
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 자주찾는업종 | 신규설계 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>자주찾는업종</h1>
+			<button type="button" data-btn="pop-close">자주찾는업종 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [업종목록] -->
+			<!-- ######################### -->
+			<div class="label-check1 box2">
+				<label>
+					<input type="checkbox" name="uiGNI0382" data-name="아파트" value="01">
+					<span>아파트</span>
+				</label>
+				<label>
+					<input type="checkbox" name="uiGNI0382" data-name="다세대&middot;연립주택" value="02">
+					<span>다세대&middot;연립주택</span>
+				</label>
+				<label>
+					<input type="checkbox" name="uiGNI0382" data-name="시장" value="03">
+					<span>시장</span>
+				</label>
+				<label>
+					<input type="checkbox" name="uiGNI0382" data-name="교회,성당" value="04">
+					<span>교회, 성당</span>
+				</label>
+				<label>
+					<input type="checkbox" name="uiGNI0382" data-name="일반음식점" value="05">
+					<span>일반음식점</span>
+				</label>
+				<label>
+					<input type="checkbox" name="uiGNI0382" data-name="휴게음식점" value="06">
+					<span>휴게음식점</span>
+				</label>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [선택결과] 선택된 업종 -->
+			<!-- ######################### -->
+			<div class="area-info3" data-sticky="bottom">
+				<button type="button" data-toggle="btn" aria-expanded="false">선택된 업종 열기</button>
+				<dl data-toggle="content">
+					<dt>
+						선택된 업종
+						<button type="button" data-toggle="close">선택된 업종 닫기</button>
+					</dt>
+					<dd class="data-word2 t1"><!--<button type="button" class="icon-com1 ic6 right" data-value="00">#선택된 업종</button>--></dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">초기화</button>
+				<button type="button" class="btn-action c1">선택완료</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+
+<script>
+//<!--
+	/* **********************************************************
+	* 샘플 : 선택된 업종
+	* value="", name="uiGNI0382", data-name=""는 임시이며, 변경가능
+	********************************************************** */
+	//변수선언
+	var _el_wrap = $('.area-info3 .data-word2'); //업종 선택한 이름 적용할 영역
+
+	//토글선언
+	var _el_toggle = $plugin.togglecon('.area-info3',{
+		selector_group:false,
+		selector_close:'[data-toggle="close"]'
+	});
+
+	//업종선택
+	$('[name="uiGNI0382"]').on('click',function(){
+		var _el_txt = $(this).attr('data-name');
+		var _el_value = $(this).val();
+		var _el_checked = $('[name="uiGNI0382"]:checked').length;
+
+		if($(this).prop('checked')){ //체크되었을때
+			_el_wrap.append('<button type="button" class="icon-com1 ic6 right" data-value="'+ _el_value +'">'+ _el_txt +'</button>');
+			_el_toggle.outputOpen(); //선택된 업종 열기
+		}else{ //체크안되었을때
+			$('[data-value="'+ _el_value +'"]').remove();
+			if(_el_checked == 0) _el_toggle.outputClose(); //선택된 업종 닫기
+		};
+	});
+
+	//선택된 업종에서 업종 삭제
+	$(document).on('click','.area-info3 .data-word2 > button',function(){
+		var _el_value = $(this).attr('data-value');
+		$('[value="'+ _el_value +'"]').prop('checked', false);
+		$(this).remove();
+
+		var _el_checked = $('[name="uiGNI0382"]:checked').length;
+		if(_el_checked == 0) _el_toggle.outputClose(); //선택된 업종 닫기
+	});
+//-->
+</script>
+</body>
+</html>

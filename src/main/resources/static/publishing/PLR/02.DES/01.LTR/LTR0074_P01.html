@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 우편물 수령처 | 일반사항 | 표준설계 | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>우편물 수령처</h1>
+			<button type="button" data-btn="pop-close">우편물 수령처 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 계약정보 -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit">Let:smile 종합건강보험(더끌림 플러스) (22 01)_납입면제적용형</h2>
+				<div class="info">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA123456789</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [주소선택] -->
+			<!-- ######################### -->
+			<div class="area-toggle1" data-autoset="toggle">
+				<!-- # 계약자 주소 # -->
+				<section class="active">
+					<header class="tit">
+						<h3>계약자 주소 선택</h3>
+						<button type="button" data-toggle="btn" aria-expanded="true">계약자 주소 상세보기</button>
+					</header>
+					<!-- [M 2022-08-05] 내용 전체 수정 -->
+					<div data-toggle="content">
+						<!-- 계약자정보 -->
+						<div class="data-info2 t1" data-value="ic1"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong>하다미</strong><span><span>생년월일</span><span>성별</span></span>
+						</div>
+
+						<!-- [CASE] 개인 -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio11" checked>
+								<span>집</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio11">
+								<span>직장</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio11">
+								<span>거주지</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio11">
+								<span>기타</span>
+							</label>
+						</div>
+
+						<!-- [CASE] 사업장 -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio22" checked>
+								<span>본사</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio22">
+								<span>소재지</span>
+							</label>
+						</div>
+
+						<!-- 주소 -->
+						<data class="text disabled" value="1">서울특별시 종로구 까치산로 13길 52-4번지</data>
+						<data class="text disabled" value="1">별빛 23단지 2301-503</data> <!-- [D] 상세주소 없을 경우 비노출 -->
+					</div>
+					<!-- // -->
+				</section>
+
+				<!-- # 피보험자 주소 # -->
+				<section class="active">
+					<header class="tit">
+						<h3>피보험자 주소 선택</h3>
+						<button type="button" data-toggle="btn" aria-expanded="true">피보험자 주소 상세보기</button>
+					</header>
+					<!-- [M 2022-08-05] 내용 전체 수정 -->
+					<div data-toggle="content">
+						<!-- 피보험자정보 -->
+						<div class="data-info2 t1" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong>하다미</strong><span><span>생년월일</span><span>성별</span></span>
+						</div>
+
+						<!-- [CASE] 개인 -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio33" checked>
+								<span>집</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio33">
+								<span>직장</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio33">
+								<span>거주지</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio33">
+								<span>기타</span>
+							</label>
+						</div>
+
+						<!-- [CASE] 사업장 -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio44" checked>
+								<span>본사</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio44">
+								<span>소재지</span>
+							</label>
+						</div>
+
+						<!-- 주소 -->
+						<data class="text disabled" value="1">서울특별시 종로구 까치산로 13길 52-4번지</data>
+					</div>
+					<!-- // -->
+				</section>
+
+				<!-- # 수익자 주소 # -->
+				<section class="active">
+					<header class="tit">
+						<h3>수익자 주소 선택</h3>
+						<button type="button" data-toggle="btn" aria-expanded="true">수익자 주소 상세보기</button>
+					</header>
+					<!-- [M 2022-08-05] 내용 전체 수정 -->
+					<div data-toggle="content" class="form-wrap1">
+						<!-- // -->
+						<dl class="form">
+							<dt>공지철의 사망외 보험금 수익자</dt>
+							<dd>
+								<!-- 수익자정보 -->
+								<div class="data-info2 t1" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+									<strong>하다미</strong><span><span>생년월일</span><span>성별</span></span>
+								</div>
+
+								<!-- [CASE] 개인 -->
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormRadio1" checked>
+										<span>집</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio1">
+										<span>직장</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio1">
+										<span>거주지</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio1">
+										<span>기타</span>
+									</label>
+								</div>
+
+								<!-- [CASE] 사업장 -->
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormRadio12" checked>
+										<span>본사</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio12">
+										<span>소재지</span>
+									</label>
+								</div>
+
+								<!-- 주소 -->
+								<data class="text disabled" value="1">서울특별시 종로구 까치산로 13길 52-4번지</data>
+								<data class="text disabled" value="1">별빛 23단지 2301-503</data>
+							</dd>
+						</dl>
+
+						<!-- // -->
+						<dl class="form">
+							<dt>공지철의 사망외 보험금 수익자</dt>
+							<dd>
+								<!-- 건물 -->
+								<div class="data-info2 t1" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+									<strong>하다미</strong><span><span>생년월일</span><span>성별</span></span>
+								</div>
+
+								<!-- [CASE] 개인 -->
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormRadio13" checked>
+										<span>집</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio13">
+										<span>직장</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio13">
+										<span>거주지</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio13">
+										<span>기타</span>
+									</label>
+								</div>
+
+								<!-- [CASE] 사업장 -->
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormRadio14" checked>
+										<span>본사</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio14">
+										<span>소재지</span>
+									</label>
+								</div>
+
+								<!-- 주소 -->
+								<data class="text disabled" value="1">서울특별시 종로구 까치산로 13길 52-4번지</data>
+								<data class="text disabled" value="1">별빛 23단지 2301-503</data>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+					<!-- // -->
+				</section>
+				<!-- # // # -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<script>
+//<!--
+	//생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

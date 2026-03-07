@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 보험료산출 | 선택담보구성 | 쉬운설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>보험료산출</h1>
+			<button type="button" data-btn="pop-close">보험료산출 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container" data-page="6">
+			<div class="wrap-info1 t1">
+				<!-- ### [합계보험료] ### -->
+				<dl class="data2">
+					<dt>합계보험료<a href="#uiTOOLTIPINFO1" class="icon-com2 ic2" data-btn="tooltip" aria-haspopup="dialog">안내사항</a></dt>
+					<!-- 기본 -->
+					<dd>
+						<div class="data-num1"><strong>100,000</strong><span>원</span></div>
+						<button type="button" class="icon-com1 ic26 simple" onclick="uiModify1(this)">수정</button>
+					</dd>
+					<!-- 수정 -->
+					<dd class="none">
+						<div class="text">
+							<input type="tel" value="253,900">
+							<span class="util1">원</span>
+						</div>
+						<button type="button" class="btn-t1 c1" onclick="uiModify2(this)">보험료 수정</button>
+					</dd>
+					<!-- // -->
+				</dl>
+
+				<p class="txt-c1"><strong>합계보험료에서 1%(-770원) 할인되어<br>첫달 보험료가 청구돼요.</strong></p> <!-- 2022-12-14 변경 -->
+
+				<!-- ### [보험료산출, 상세보기] ### -->
+				<div class="data3">
+					<button type="button" class="btn-t1 c1">보험료 산출</button>
+					<button type="button" class="btn-t1 c2">컨설팅 비교</button> <!-- 2022-12-06 텍스트 변경 -->
+				</div>
+				
+				<!-- 안내 -->
+				<!-- 초기화면 -->
+				<div class="info ic1">
+					<p>아래 <strong>알릴사항</strong> 버튼을 눌러보세요.</p>
+				</div>
+				<!-- 초기화면 -->
+
+				<!-- 알릴사항 입력 완료 후 -->
+				<div class="info ic2">
+					<p>아래 <strong>지침체크</strong> 버튼을 눌러보세요.</p>
+				</div>
+				<!-- //알릴사항 입력 완료 후 -->
+
+				<!-- 지침체크 입력 완료 후 -->
+				<div class="info ic3">
+					<p><strong>가입제안서 / 상품설명서</strong>를 발송해주세요.</p>
+				</div>
+				<!-- //지침체크 입력 완료 후 -->
+
+				<!-- ### [버튼영역]  -->
+				<div class="btn-set2">
+					<button type="button" class="ic1"><span>가입보장<br>모아보기</span></button> <!-- 2022-12-07 변경 -->
+					<button type="button" class="ic2"><span>가입제안서<br>발송</span></button> <!-- 2022-12-14 변경 -->
+					<!-- 미입력시 t1 클래스 추가 -->
+					<button type="button" class="ic3 valid t1"><span>알릴사항</span></button> <!-- 입력전 invalid 클래스 -->
+					<button type="button" class="ic4 invalid"><span>지침체크</span></button> <!-- 입력후 valid 클래스 -->
+					<!-- //미입력시 t1 클래스 추가 -->
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">다음</button>
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+
+<!-- ######################### -->
+<!-- [툴팁영역] 합계보험료 -->
+<!-- ######################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4 center" data-popmodal="true" role="alertdialog"> <!-- 2022-12-29 클래스 추가 -->
+	<dl class="txt-bul1 t1">
+		<dt class="hide">합계보험료</dt>
+		<dd>보장보험료 <strong>12,600원</strong></dd>
+		<dd>최소보험료 <strong>9,600원</strong></dd>
+		<dd>최대보험료 <strong>19,179,600원</strong></dd>
+		<dd>할인보험료 <strong class="txt-c1">첫달 1%(-295원)</strong></dd> <!-- 2022-12-29 항목 추가 -->
+		<dd><button type="button" data-btn="pop-close">도움말 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+
+<!-- ################################################### -->
+<script>
+//<!--
+	//[샘플] : 수정 버튼 클릭시 노출되는 화면 샘플
+	function uiModify1(el){
+		var _parents = $(el).parents('dl');
+		_parents.find('dd:nth-child(2)').addClass('none')
+		_parents.find('dd:nth-child(3)').removeClass('none');
+
+		if(_parents.hasClass('data2')) {
+			$('.area-tooltip, .data3, .data4').addClass('none');
+		}
+	}
+
+	//[샘플] : 수정 버튼 클릭시 노출되는 화면 샘플
+	function uiModify2(el){
+		var _parents = $(el).parents('dl');
+		_parents.find('dd:nth-child(3)').addClass('none')
+		_parents.find('dd:nth-child(2)').removeClass('none');
+
+		if(_parents.hasClass('data2')) {
+			$('.area-tooltip, .data3, .data4').removeClass('none');
+		}
+	}
+
+	//[샘플] : 처음 로드시 보험료 산출 버튼 클릭 시 노출 되는 화면 샘플
+	function uiOnClick(el){
+		$('.data1').find('.data-num1 > strong').text('92.2');
+		$('.data2').find('.data-num1 > strong').text('253,900')
+		$('.data2').find('.icon-com1.ic26').removeClass('none');
+	}
+
+	//상세보기 토글 이벤트
+	$plugin.togglecon('.data3',{
+		selector_group : false,
+		callback_load:function(e){
+			$(e.this_btn).text('상세닫기');
+		},
+		callback_after:function(e){
+			$(e.this_btn).text('상세보기');
+		}
+	});
+
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

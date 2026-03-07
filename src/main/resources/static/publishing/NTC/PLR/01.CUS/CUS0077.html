@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>동의URL | 가입설계동의 | 고객동의</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>가입설계동의</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<!-- # [CASE1] 고객정보 입력 # -->
+			<p>가입설계동의 URL발송을 위해<br>고객님의 정보를 입력해주세요.</p>
+			<!-- # [CASE2] 휴대폰번호 입력 # -->
+			<p>가입설계동의 URL발송을 위해<br>휴대폰번호를 입력해주세요.</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [정보입력] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend>고객 정보 입력</legend>
+
+			<!-- # [CASE1] 기본 입력 시 # -->
+			<!-- # 고객이름 # -->
+			<dl class="form">
+				<dt>고객이름</dt>
+				<dd><input type="text" class="text" title="고객이름" placeholder="이름을 입력해주세요."></dd>
+				<dd class="side"><a href="javascript:void(0);" class="btn-sub3 c2">고객찾기</a></dd>
+			</dl>
+
+			<!-- # 생년월일/성별 # -->
+			<dl class="form">
+				<dt>생년월일/성별</dt>
+				<dd>
+					<div class="text">
+						<input type="tel" title="주민등록번호앞6자리" maxlength="6" placeholder="생년월일">
+						<span class="util">-</span>
+						<input type="tel" title="주민등록번호뒷첫자리" maxlength="1" placeholder="성별">
+						<span class="util" data-masking="true">******</span>
+					</div>
+				</dd>
+			</dl>
+			<!-- # // # -->
+
+			<!-- # 고객이름 : [CASE2] 고객찾기 팝업에서 고객정보를 가져온 상태 # -->
+			<dl class="form">
+				<dt>고객이름</dt>
+				<dd>
+					<!-- // -->
+					<div class="info-data3 info">
+						<div class="data-info2" data-value="102702"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong>하다미</strong>
+							<span>
+								<span>0000.00.00</span>
+								<span>성별</span>
+							</span>
+						</div>
+						<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					</div>
+					<!-- // -->
+				</dd>
+				<dd class="side"><a href="javascript:void(0);" class="btn-sub3 c2">고객찾기</a></dd>
+			</dl>
+
+			<!-- # 고객이름 : [CASE3] 고객정보를 물고 들어온 화면 # -->
+			<dl class="form">
+				<dt>고객이름</dt>
+				<dd>
+					<!-- // -->
+					<div class="info-data3 info">
+						<div class="data-info2" data-value="102701">
+							<strong>공지철</strong>
+							<span>
+								<span>1990.01.01</span>
+								<span>남</span>
+							</span>
+						</div>
+					</div>
+					<!-- // -->
+				</dd>
+			</dl>
+
+			<!-- # 휴대폰번호 # -->
+			<dl class="form">
+				<dt>휴대폰번호</dt>
+				<dd><input type="tel" class="text" title="휴대폰번호" placeholder="예) 01012340000"></dd>
+				<dd class="mes">고객님 본인 명의의 휴대폰번호만 입력해주세요.</dd>
+			</dl>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1" disabled>다음</button>
+			<!-- <button type="button" class="btn-action c1">다음</button> : 활성화 -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

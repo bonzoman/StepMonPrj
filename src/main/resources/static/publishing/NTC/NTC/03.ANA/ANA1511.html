@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[T] 정액담보 | 보장상세내역 | 셀프 보장분석</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>보장상세내역</h1>
+			<button type="button" data-btn="pop-close">보장상세내역 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [보장정보] -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit">무배당교보 100세 시대연금보험</h2>
+				<div class="info">
+					<span>교보생명</span>
+					<dl>
+						<dt>증권번호</dt>
+						<dd>0012777832</dd>
+					</dl>
+				</div>
+				<div class="data2">
+					<dl>
+						<dt>보험기간</dt>
+						<dd>2012.09.04~9999.12.31</dd>
+					</dl>
+				</div>
+				<div class="area-info2">
+					<dl>
+						<dt>매월납/10년</dt>
+						<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [보험료 납입 현황] -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<h3 class="tit-sub1">보험료 납입 현황</h3>
+				<div class="wrap-progress">
+					<!-- ### 보험료납입율 ###
+						제어 부분
+						* style="--el-progress:00;"
+						* <em>00</em>
+					-->
+					<div class="area-progress2" style="--el-progress:77;">
+						<span><em>77</em>%</span>
+					</div>
+					<!-- // -->
+					<div class="label">
+						<strong>153회</strong>
+						<span>47회</span>
+					</div>
+					<!-- // -->
+					<div class="txt">
+						<dl>
+							<dt>납입완료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt><a href="#uiTOOLTIPINFO3" class="icon-com2 ic2 right"  data-btn="tooltip" aria-haspopup="dialog">납입예정</a></dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+					<!-- // -->
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭영역] 정액담보/실손담보 -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<div class="nav-tab1" data-autoset="tab">
+					<ul>
+						<li class="active"><a href="#UITABCON1">정액담보</a></li>
+						<li><a href="#UITABCON2">실손담보</a></li>
+					</ul>
+				</div>
+
+				<!-- ### [탭컨텐츠] 정액담보 ### -->
+				<div id="UITABCON1" class="ui-tabcon active">
+					<div class="tbl-data1">
+						<table>
+							<caption>정액담보</caption>
+							<colgroup>
+								<col style="width:50%">
+								<col style="width:50%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">담보명</th>
+									<th scope="col">가입금액</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>질병사망</td>
+									<td><div class="data-num1"><strong>0,000</strong><span>만원</span></div></td>
+								</tr>
+								<tr>
+									<td>상해사망</td>
+									<td><div class="data-num1"><strong>0,000</strong><span>만원</span></div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- ### [탭컨텐츠] 실손담보 ### -->
+				<div id="UITABCON2" class="ui-tabcon">
+					<div class="tbl-data1">
+						<table>
+							<caption>실손담보</caption>
+							<colgroup>
+								<col style="width:33%">
+								<col style="width:35%">
+								<col style="width:32%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">담보명</th>
+									<th scope="col">가입금액</th>
+									<th scope="col">보장기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>질병사망</td>
+									<td><div class="data-num1"><strong>0,000</strong><span>만원</span></div></td>
+									<td>2013.01.18<br>~2022.01.08</td>
+								</tr>
+								<tr>
+									<td>상해사망</td>
+									<td><div class="data-num1"><strong>0,000</strong><span>만원</span></div></td>
+									<td>2013.01.18<br>~2022.01.08</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [유의사항] -->
+			<!-- ######################### -->
+			<dl class="mes-t1 line">
+				<dt>유의사항</dt>
+				<dd>위 내용 중 보험료에 대한 분석은 첫회보험료를 납입만기까지 계속 납입하는 것을 기준으로 산출하였습니다. 중도에 계약이 변경되거나, 특약의 납입기간이 다를 경우 차이가 발생할 수 있습니다. 정확한 내용은 해당 보험회사에 문의해주시기 바랍니다.</dd>
+			</dl>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+
+<!-- ######################### -->
+<!-- [툴팁영역] 납입예정 -->
+<!-- ######################### -->
+<div id="uiTOOLTIPINFO3" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">납입예정</dt>
+		<dd>갱신 등이 반영되지 않은 단순 예상 보험료</dd>
+		<dd><button type="button" data-btn="pop-close">납입예정 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+</body>
+</html>

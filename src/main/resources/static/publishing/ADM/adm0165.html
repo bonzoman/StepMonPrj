@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>스터디톡 태그관리 | 교육관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">스터디톡 태그관리</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<dl class="form">
+						<dt>태그명 검색</dt>
+						<dd>
+							<div class="form-row">
+								<input type="text" name="" id="" class="text" style="width:400px" placeholder="검색어를 입력해 주세요.">
+							</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>사용 여부</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="radio" name="form1" checked="">
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="form1">
+									<span>Y</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="form1">
+									<span>N</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+			<div class="tit-sub2">
+				<h3>전체 4</h3>
+				<div class="sub">
+					<button type="button" class="btn-action c3">태그 추가</button>
+				</div>
+			</div>
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<col style="width:60px;">
+						<col style="width:160px;">
+						<col style="width:320px;">
+						<col style="width:150px;">
+						<col style="width:100px;">
+						<col style="width:150px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">태그명</th>
+							<th scope="col">태그 설명</th>
+							<th scope="col">관리</th>
+							<th scope="col">최종 수정일시</th>
+							<th scope="col">최종 수정자</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="6">
+								<div class="nodata">
+									등록된 태그가 없습니다.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>#<input type="text" name="" id="" class="text" style="width:80%;" placeholder="태그명(10자 이내)"></td>
+							<td><input type="text" name="" id="" class="text" style="width:100%;" placeholder="태그 설명을 입력해 주세요(20자 이내)"></td>
+							<td>
+								<button type="button" class="btn-sub1 c1">등록</button>
+							</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>#어린이 보험</td>
+							<td>설명설명설명설명설명설명설명설명설명설명</td>
+							<td>
+								<button type="button" class="btn-sub1 c3">삭제</button>
+								<div class="label-check4">
+									<label>
+										<input type="radio" name="formUse1" >
+										<span>사용</span>
+									</label>
+									<label>
+										<input type="radio" name="formUse1" checked>
+										<span>미사용</span>
+									</label>
+								</div>
+								<!-- radio로 개발 여려울 경우 버튼 사용 가능
+								<button type="button" class="btn-sub1 c1">사용</button>
+								<button type="button" class="btn-sub1">미사용</button>
+								-->
+							</td>
+							<td>2022.02.22 <br> 22:22</td>
+							<td>김롯데(111111111)</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>#어린이 보험</td>
+							<td>설명설명설명설명설명설명설명설명설명설명</td>
+							<td>
+								<button type="button" class="btn-sub1 c3">삭제</button>
+								<div class="label-check4">
+									<label>
+										<input type="radio" name="formUse2" checked>
+										<span>사용</span>
+									</label>
+									<label>
+										<input type="radio" name="formUse2">
+										<span>미사용</span>
+									</label>
+								</div>
+								<!-- radio로 개발 여려울 경우 버튼 사용 가능
+								<button type="button" class="btn-sub1 c1">사용</button>
+								<button type="button" class="btn-sub1">미사용</button>
+								-->
+							</td>
+							<td>2022.02.22 <br> 22:22</td>
+							<td>김롯데(111111111)</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+            <div class="paging">
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

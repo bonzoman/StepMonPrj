@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>이탈예상설계사 관리 | 활동 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-05]	1. 조회조건 수정
+						2. 휴면설계사​ 항목 추가
+    *	[M 2022-11-01]	1. 표 상단 틀고정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">이탈예상설계사 관리</h2><!--[M : 2022-08-05 메뉴명 변경]-->
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+            <!-- [M 2022-10-05] 조회조건 수정 -->
+			<fieldset class="form-search1">
+				<div class="form-field">
+                    <button class="more-search" type="button"></button>
+					<dl class="form w1">
+						<dt>기준년월<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<input type="text" class="date-m" value="2022.02" placeholder="월 선택">
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w2">
+						<dt>조직구분<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>취급자</option>
+								</select>
+                                <input type="text" name="" id="" class="text" style="width:80px;">
+                                <input type="text" name="" id="" class="text" style="width:120px;" disabled>
+                                <button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+                    <div class="search-cont">
+						<dl class="form w3">
+							<dt>휴면구분<em class="imp"><span>필수</span></em></dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr1" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr1">
+										<span>Y</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr1">
+										<span>N</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="area-action">
+                    <button type="button" class="btn-action c3">초기화</button>
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+            <!-- // -->
+
+            <div class="data-table1">
+                <table>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">기준월</th>
+                            <td>2022.04</td>
+                            <th scope="row">대상건</th>
+                            <td>132</td>
+                            <th scope="row">월납입보험료 증감</th>
+                            <td>-478,333원</td>
+                            <th scope="row">유지율증감</th>
+                            <td>-18.1%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수금률증감</th>
+                            <td>-18.1%</td>
+                            <th scope="row">로그인달성 증감</th>
+                            <td>3.8%</td>
+                            <th scope="row">퀘스트달성 증감</th>
+                            <td>5.5%</td>
+                            <th scope="row">교육수강 증감</th>
+                            <td>-10.8%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+			<div class="tit-sub2">
+				<h3 class="">조회 결과 <span>전체 4건</span></h3>
+			</div>
+            <div class="data-table1">
+                <!-- [M 2022-11-01] 표 상단 틀고정 -->
+                <div class="list-thead" data-pos="thead">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" rowspan="2">번호</th>
+                                <th scope="col" rowspan="2">기준월</th>
+                                <th scope="col" rowspan="2">사업단</th>
+                                <th scope="col" rowspan="2"><span class="sort">지점</span></th>
+                                <th scope="col" rowspan="2">차월</th>
+                                <th scope="col" rowspan="2">설계사명</th>
+                                <th scope="col" rowspan="2">설계사사번</th>
+                                <th scope="col" rowspan="2">담당지점장</th>
+                                <th scope="col" rowspan="2">지점장사번</th>
+                                <th scope="col" rowspan="2">휴면설계사​</th>
+                                <th scope="col" colspan="2">월납보험료</th>
+                                <th scope="col" colspan="2">유지율</th>
+                                <th scope="col" colspan="2">수금률</th>
+                                <th scope="col" colspan="2">로그인</th>
+                                <th scope="col" colspan="2">퀘스트</th>
+                                <th scope="col" colspan="2">교육</th>
+                                <th scope="col" colspan="6">요인 변동폭</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">전전월</th>
+                                <th scope="col">전월</th>
+                                <th scope="col">전전월</th>
+                                <th scope="col">전월</th>
+                                <th scope="col">전전월</th>
+                                <th scope="col">전월</th>
+                                <th scope="col">전전월</th>
+                                <th scope="col">전월</th>
+                                <th scope="col">전전월</th>
+                                <th scope="col">전월</th>
+                                <th scope="col">전전월</th>
+                                <th scope="col">전월</th>
+                                <th scope="col">월납입보험료</th>
+                                <th scope="col">유지율</th>
+                                <th scope="col">수금률</th>
+                                <th scope="col">로그인수</th>
+                                <th scope="col">퀘스트</th>
+                                <th scope="col">교육</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- //[M 2022-11-01] 표 상단 틀고정 -->
+                <div class="list-table" data-pos="top"><!-- [M 2022-11-01] 표 상단 틀고정 -->
+                    <!--[M : 2022-09-22 수정] 개월 -> 차월 변경, 탐지기간 삭제-->
+                    <table>
+                        <colgroup>
+                            <col style="width:60px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:80px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;"><!-- [M 2022-10-05] 휴면설계사​ 항목 추가 -->
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                        </colgroup>
+                        <!-- <thead>
+                            <tr>
+                                <th scope="col" rowspan="2">번호</th>
+                                <th scope="col" rowspan="2">기준월</th>
+                                <th scope="col" rowspan="2">사업단</th>
+                                <th scope="col" rowspan="2"><span class="sort">지점</span></th>
+                                <th scope="col" rowspan="2">차월</th>
+                                <th scope="col" rowspan="2">설계사명</th>
+                                <th scope="col" rowspan="2">설계사사번</th>
+                                <th scope="col" rowspan="2">담당지점장</th>
+                                <th scope="col" rowspan="2">지점장사번</th>
+                                <th scope="col" rowspan="2">휴면설계사​</th>
+                                <th scope="col" colspan="2">월납보험료</th>
+                                <th scope="col" colspan="2">유지율</th>
+                                <th scope="col" colspan="2">수금률</th>
+                                <th scope="col" colspan="2">로그인</th>
+                                <th scope="col" colspan="2">퀘스트</th>
+                                <th scope="col" colspan="2">교육</th>
+                                <th scope="col" colspan="6">요인 변동폭</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">전전월</th>
+                                <th scope="col">전월</th>
+                                <th scope="col">전전월</th>
+                                <th scope="col">전월</th>
+                                <th scope="col">전전월</th>
+                                <th scope="col">전월</th>
+                                <th scope="col">전전월</th>
+                                <th scope="col">전월</th>
+                                <th scope="col">전전월</th>
+                                <th scope="col">전월</th>
+                                <th scope="col">전전월</th>
+                                <th scope="col">전월</th>
+                                <th scope="col">월납입보험료</th>
+                                <th scope="col">유지율</th>
+                                <th scope="col">수금률</th>
+                                <th scope="col">로그인수</th>
+                                <th scope="col">퀘스트</th>
+                                <th scope="col">교육</th>
+                            </tr>
+                        </thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2022.04</td>
+                                <td>강남사업단</td>
+                                <td>강남1지점</td>
+                                <td>35차월</td>
+                                <td>김롯데</td>
+                                <td>3333222</td>
+                                <td>김길동</td>
+                                <td>1256033</td>
+                                <td>Y</td><!-- [M 2022-10-05] 휴면설계사​ 항목 추가 -->
+                                <td>1,000,000</td>
+                                <td>1,000,000</td>
+                                <td>55.5%</td>
+                                <td>55.5%</td>
+                                <td>46.0%</td>
+                                <td>48.4%</td>
+                                <td>35.7%</td>
+                                <td>48.4%</td>
+                                <td>35.7%</td>
+                                <td>50.0%</td>
+                                <td>40%</td>
+                                <td>-500,000</td>
+                                <td>-74%p</td>
+                                <td>10.5%p</td>
+                                <td>-74%p</td>
+                                <td>-10.5%p</td>
+                                <td>7.4%p</td>
+                                <td>-10.5%p</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- [M 2022-11-01] 표 상단 틀고정 -->
+                <div data-pos="bottom" data-match="false">
+                    <div class="paging">
+                        <div class="btns1">
+                            <button type="button" class="btn-action c3">도움말 관리</button>
+                        </div>
+                        <a class="ic_first disabled"></a>
+                        <a class="ic_prev disabled"></a>
+                        <span class="num current">1</span>
+                        <a href="#" class="num">2</a>
+                        <a href="#" class="num">3</a>
+                        <a href="#" class="num">4</a>
+                        <a href="#" class="num">5</a>
+                        <a href="#" class="num">6</a>
+                        <a href="#" class="num">7</a>
+                        <a href="#" class="num">8</a>
+                        <a href="#" class="num">9</a>
+                        <a href="#" class="num">10</a>
+                        <a href="#" class="ic_next"></a>
+                        <a href="#" class="ic_last"></a>
+                    </div>
+                </div>
+                <!-- //[M 2022-11-01] 표 상단 틀고정 -->
+            </div>
+		</div>
+	</div>
+</div>
+<!-- [M 2022-11-01] 표 상단 틀고정 -->
+<script>
+    _fixTable.init();
+</script>
+<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+</body>
+</html>

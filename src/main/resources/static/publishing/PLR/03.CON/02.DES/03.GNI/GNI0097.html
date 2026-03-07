@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>가입설계조회 | 가입설계조회 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-14]	1. 문구수정 : 취급자 강북사업단 > (사번번호로 변경)
+	*	[M 2022-11-22]	1. 보종선택 위치 변경
+	*					2. 심사보완 -> 심사완료 텍스트 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>가입설계 조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1">
+			<ul>
+				<li><a href="javascript:void(0);">장기</a></li>
+				<li><a href="javascript:void(0);">자동차</a></li>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">일반</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색영역] 조회검색 -->
+		<!-- ######################### -->
+		<div id="uiFormSearch" class="form-search2" data-togglecon="true" data-scroll-bg="1">
+			<!-- ### [상단영역] ### -->
+			<div class="tit-section2">
+				<p>설계를 조회해보세요.</p>
+				<button type="button" data-toggle="btn" aria-expanded="false">설계조회보기</button>
+			</div>
+
+			<!-- ### [조회영역] ### -->
+			<fieldset class="form-wrap1">
+				<legend>필수항목 입력해 주세요</legend>
+
+				<!-- # 조직구분 # -->
+				<dl class="form">
+					<dt>조직구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="label-btn1" data-autoset="form">
+							<label>
+								<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont1" checked>
+								<span>조직</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont2" >
+								<span>취급자</span>
+							</label>
+						</div>
+						<!-- [CASE] 조직 -->
+						<div class="ui-tabcon active" data-id="uiFormCont1">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="조직을 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">조직찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 조직 -->
+							<div class="info-data3 info">
+								<div class="info2 ic1">
+									<strong>장기지원팀</strong>
+									<span>A1234566</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+						</div>
+
+						<!-- [CASE] 취급자 -->
+						<div class="ui-tabcon" data-id="uiFormCont2">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="취급자를 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">취급자찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 취급자 -->
+							<div class="info-data3 info">
+								<div class="data-info1">
+									<span class="img"><img src="../../../resource/img/temp/@img_user3.png" alt=""><!-- <img src="../../../resource/img/com/noimg2.png" alt=""> : 노이미지 --></span>
+									<span><strong>공지철</strong><span>111111</span></span> <!-- 2022-10-14 사번으로 변경 -->
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+							<!-- // -->
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 설계일자 # -->
+				<dl class="form">
+					<dt>설계일자 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+								<input type="text" title="시작날짜 선택" data-dateform="start2" value="2022.04.08" placeholder="YYYY.MM.DD" readonly>
+							</span>
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+								<input type="text"  title="종료날짜 선택" data-dateform="end2" value="2022.04.15" placeholder="YYYY.MM.DD" readonly>
+							</span>
+						</div>
+						<!-- // -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="form-radio1" title="기간조회(당일)">
+								<span aria-hidden="true">당일</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio1" title="기간조회(1주일)" checked>
+								<span aria-hidden="true">1주일</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio1" title="기간조회(1개월)">
+								<span aria-hidden="true">1개월</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio1" title="기간조회(당월)">
+								<span aria-hidden="true">당월</span>
+							</label>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- 2022-11-22 보종선택 위치변경 -->
+				<!-- # 보종선택 # -->
+				<dl class="form">
+					<dt>보종선택</dt>
+					<dd>
+						<!-- // -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio11" checked>
+								<span>화재특종</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio11">
+								<span>해상</span>
+							</label>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+				<!-- //2022-11-22 보종선택 위치변경 -->
+
+				<!-- # 설계구분 # -->
+				<dl class="form">
+					<dt>설계구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">설계구분</span>
+								<span data-select="text" data-value="selectOpeion5_1">전체</span>
+							</button>
+							<div class="list">
+								<div data-label="설계구분 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion5" value="selectOpeion5_1"><span>전체</span></label>
+										<label><input type="radio" name="selectOpeion5" value="selectOpeion5_2"><span>가입설계</span></label>
+										<label><input type="radio" name="selectOpeion5" value="selectOpeion5_3"><span>배서설계</span></label>
+										<label><input type="radio" name="selectOpeion5" value="selectOpeion5_4"><span>갱신설계</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 조회구분 # -->
+				<dl class="form">
+					<dt>조회구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select" data-callback="uiSampleFunction"> <!-- [D] uiSampleFunction : 샘플함수명 : 하단 스크립트 참고 -->
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">조회구분</span>
+								<span data-select="text" data-value="null">전체</span>
+							</button>
+							<div class="list">
+								<div data-label="조회구분 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion3" value=""><span>전체</span></label>
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion3_1"><span>계약자</span></label>
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion3_2"><span>피보험자</span></label>
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion3_3"><span>설계번호</span></label>
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion3_4"><span>증권번호</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+
+						<!-- [CASE1] 피보험자/계약자 -->
+						<div class="ui-tabcon" data-select-con="1">
+							<div class="input-btn1">
+								<data class="text" data-label="고객을 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">고객명 검색</button>
+							</div>
+							<!-- [D] 고객검색 후 -->
+							<div class="info-data3 info">
+								<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+									<strong>고객명</strong>
+									<span>
+										<span>0000.00.00</span>
+										<span>성별</span>
+									</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+							<!-- // -->
+						</div>
+						<!-- [CASE2] 설계번호 -->
+						<div class="ui-tabcon" data-select-con="2">
+							<input type="text" class="text" title="설계번호" placeholder="설계번호를 입력해주세요">
+						</div>
+						<!-- [CASE3] 증권번호 -->
+						<div class="ui-tabcon" data-select-con="3">
+							<input type="text" class="text" title="증권번호" placeholder="증권번호를 입력해주세요">
+						</div>
+						<!--// -->
+					</dd>
+				</dl>
+
+				<!-- # 설계상태 # -->
+				<dl class="form">
+					<dt>설계상태 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">설계상태</span>
+								<span data-select="text" data-value="selectOpeion4_1">전체</span>
+							</button>
+							<div class="list">
+								<div data-label="설계상태 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion4" value="selectOpeion4_1"><span>전체</span></label>
+										<label><input type="radio" name="selectOpeion4" value="selectOpeion4_2"><span>설계중</span></label>
+										<label><input type="radio" name="selectOpeion4" value="selectOpeion4_3"><span>설계완료</span></label>
+										<label><input type="radio" name="selectOpeion4" value="selectOpeion4_4"><span>심사중</span></label>
+										<label><input type="radio" name="selectOpeion4" value="selectOpeion4_5"><span>심사완료</span></label>
+										<label><input type="radio" name="selectOpeion4" value="selectOpeion4_6"><span>청약중</span></label>
+										<label><input type="radio" name="selectOpeion4" value="selectOpeion4_7"><span>청약완료</span></label>
+										<label><input type="radio" name="selectOpeion4" value="selectOpeion4_8"><span>수납완료</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 검색버튼 # -->
+				<div class="area-btn1 col">
+					<button type="button" class="btn-com1 c3 ic8">초기화</button>
+					<button type="button" class="btn-com1 c1" id="btn_search">조회</button>
+				</div>
+				<!-- # // # -->
+			</fieldset>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색 전] 안내문구 -->
+		<!-- ######################### -->
+		<div class="mes-result1 ic1">
+			<p>
+				<strong>조회조건을 선택하시어<br>계약을 조회해주세요</strong>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 결과없음 -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>선택하신 조건의 계약이 없습니다.</strong>
+				<span>조회 조건을 바꾸어 조회해보세요.</span>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 정보영역 -->
+		<!-- ######################### -->
+		<!-- [CASE1] 피보험자/계약자 -->
+		<div class="info-summary1">
+			<dl class="data1">
+				<dt>설계일자</dt>
+				<dd>2020.01.30~2022.03.09</dd>
+			</dl>
+			<dl class="info">
+				<dt>조회구분</dt>
+				<dd class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+					<strong>하다미</strong>
+					<span>
+						<span>1990.01.01</span>
+						<span>여</span>
+					</span>
+				</dd>
+			</dl>
+			<dl class="data2">
+				<dt>설계상태</dt>
+				<dd>설계중</dd>
+				<dt>설계구분</dt>
+				<dd>가입설계</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- [CASE2] 증권번호/설계번호 -->
+		<div class="info-summary1">
+			<dl class="data1">
+				<dt>설계일자</dt>
+				<dd>2020.01.30~2022.03.09</dd>
+			</dl>
+			<dl class="info">
+				<dt>조회구분</dt>
+				<dd class="ic1"><strong>LA111111111</strong></dd>
+			</dl>
+			<dl class="data2">
+				<dt>설계상태</dt>
+				<dd>설계중</dd>
+				<dt>설계구분</dt>
+				<dd>가입설계</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 목록 -->
+		<!-- ######################### -->
+		<!-- # [총 건수] # -->
+		<div class="area-info1">
+			<p>총 <strong>00건</strong></p>
+		</div>
+
+		<!-- # [요약보기] : 하단 스크립트 참고 : data-display="none/block" 컨트롤 # -->
+		<label class="btn-util1 ic4" data-fixed="bottom" data-btn="display">
+			<input type="checkbox">
+			<span>요약보기</span>
+		</label>
+
+		<!-- # [목록] #
+			1) 요약보기 : data-display="list"
+			* 요약보기 checked일 경우 목록에 클래스명(view) 추가됨.
+			* 클래스명(view)을 추가하여 비노출 컨텐츠 제어함.
+			* 단) 예외처리가 필요한 경우에는 노출되어야 하는 컨텐츠에 data-display="block" 추가
+		-->
+		<div class="info-data2" data-display="list">
+			<ul>
+				<!-- // -->
+				<li>
+					<!-- # 설계구분 / 증권번호 # -->
+					<div class="info">
+						<!-- // -->
+						<i class="icon-txt2 t1 ic9">단순</i>
+						<i class="icon-txt2 t1 ic1">상세</i>
+						<!-- // -->
+						<i class="icon-txt2 ic6">가입설계</i>
+						<i class="icon-txt2 t1 ic3">배서설계</i>
+						<i class="icon-txt2 t1 ic2">갱신설계</i>
+						<span>CA220425123040</span>
+					</div>
+
+					<!-- # 상품명 # -->
+					<strong class="tit">상품명</strong>
+
+					<!-- # 정보1 # -->
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">계약자명</strong>
+								<span>생년월일</span>
+								<span>성별</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>피보험자</dt>
+							<dd class="info2">
+								<strong data-masking="true">피보험자명</strong>
+								<span>생년월일</span>
+								<span>성별</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>100,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>설계상태</dt>
+							<dd>심사완료(보완요청)</dd>
+						</dl>
+					</div>
+
+					<!-- # 정보2 # -->
+					<div class="data2">
+						<dl>
+							<dt>설계일자</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<dl>
+							<dt>최초설계자</dt>
+							<dd>하다미</dd>
+						</dl>
+						<dl>
+							<dt>증권번호</dt>
+							<dd>CA20229698709000</dd>
+						</dl>
+						<dl>
+							<dt>전자서명</dt>
+							<dd>서명완료</dd>
+						</dl>
+						<dl>
+							<dt>보험시기</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<dl>
+							<dt>보험종기</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<!-- [CASE1] 심사결과값이 있을 경우 -->
+					<div class="area-btn1" data-display><a href="javascript:void(0);" class="btn-com1">심사완료</a></div> <!-- 2022-11-22 텍스트 변경 버튼 활성화 data-display -->
+
+					<!-- [CASE3] 설계상태값이 청약중일 경우 -->
+					<div class="area-btn1" data-display><a href="javascript:void(0);" class="btn-com1">전자서명</a></div> <!-- 간략히보기시 버튼 유지 data-display -->
+
+					<!-- # 상세보기 # -->
+					<a href="javascript:void(0);" class="link">상세보기</a>
+					<!-- # // # -->
+				</li>
+				<!-- // -->
+				<li>
+					<div class="info">
+						<!-- // -->
+						<i class="icon-txt2 t1 ic1">상세</i>
+						<!-- // -->
+						<i class="icon-txt2 t1 ic2">갱신설계</i>
+						<span>CA220425123040</span>
+					</div>
+					<strong class="tit">다중이용업소 화재배상책임보험</strong>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>1990.01.10</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>피보험자</dt>
+							<dd class="info2">
+								<strong data-masking="true">공*철</strong>
+								<span>1989.12.05</span>
+								<span>남</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>53,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>설계상태</dt>
+							<dd>청약중</dd>
+						</dl>
+					</div>
+					<div class="data2">
+						<dl>
+							<dt>설계일자</dt>
+							<dd>2020.03.09</dd>
+						</dl>
+						<dl>
+							<dt>최초설계자</dt>
+							<dd>하다미</dd>
+						</dl>
+						<dl>
+							<dt>증권번호</dt>
+							<dd>CA20229698709000</dd>
+						</dl>
+						<dl>
+							<dt>전자서명</dt>
+							<dd>발송대기</dd>
+						</dl>
+						<dl>
+							<dt>보험시기</dt>
+							<dd>2022.03.14</dd>
+						</dl>
+						<dl>
+							<dt>보험종기</dt>
+							<dd>2024.12.20</dd>
+						</dl>
+					</div>
+					<div class="area-btn1">
+						<a href="javascript:void(0);" class="btn-com1">전자서명</a>
+					</div>
+					<a href="javascript:void(0);" class="link">상세보기</a>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="info">
+						<!-- // -->
+						<i class="icon-txt2 t1 ic9">단순</i>
+						<!-- // -->
+						<i class="icon-txt2 t1 ic6">가입설계</i>
+						<span>CA220425123040</span>
+					</div>
+					<strong class="tit">다중이용업소 화재배상책임보험</strong>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong>-</strong>
+							</dd>
+						</dl>
+						<dl>
+							<dt>피보험자</dt>
+							<dd class="info2">
+								<strong>-</strong>
+							</dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>37,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>설계상태</dt>
+							<dd>청약중</dd>
+						</dl>
+					</div>
+					<div class="data2">
+						<dl>
+							<dt>설계일자</dt>
+							<dd>2020.03.09</dd>
+						</dl>
+						<dl>
+							<dt>최초설계자</dt>
+							<dd>하다미</dd>
+						</dl>
+						<dl>
+							<dt>증권번호</dt>
+							<dd>CA20229698709000</dd>
+						</dl>
+						<dl>
+							<dt>전자서명</dt>
+							<dd>서명완료</dd>
+						</dl>
+						<dl>
+							<dt>보험시기</dt>
+							<dd>2022.03.14</dd>
+						</dl>
+						<dl>
+							<dt>보험종기</dt>
+							<dd>2024.12.20</dd>
+						</dl>
+					</div>
+					<a href="javascript:void(0);" class="link">상세보기</a>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="info">
+						<!-- // -->
+						<i class="icon-txt2 t1 ic1">상세</i>
+						<!-- // -->
+						<i class="icon-txt2 t1 ic3">배서설계</i>
+						<span>CA220425123040</span>
+					</div>
+					<strong class="tit">다중이용업소 화재배상책임보험</strong>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>1990.01.10</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>피보험자</dt>
+							<dd class="info2">
+								<strong data-masking="true">공*철</strong>
+								<span>1989.12.05</span>
+								<span>남</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>53,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>설계상태</dt>
+							<dd>수납완료</dd>
+						</dl>
+					</div>
+					<div class="data2">
+						<dl>
+							<dt>설계일자</dt>
+							<dd>2020.03.09</dd>
+						</dl>
+						<dl>
+							<dt>최초설계자</dt>
+							<dd>하다미</dd>
+						</dl>
+						<dl>
+							<dt>증권번호</dt>
+							<dd>CA20229698709000</dd>
+						</dl>
+						<dl>
+							<dt>전자서명</dt>
+							<dd>발송완료</dd>
+						</dl>
+						<dl>
+							<dt>보험시기</dt>
+							<dd>2022.03.14</dd>
+						</dl>
+						<dl>
+							<dt>보험종기</dt>
+							<dd>2024.12.20</dd>
+						</dl>
+					</div>
+					<a href="javascript:void(0);" class="link">상세보기</a>
+				</li>
+				<!-- // -->
+			</ul>
+
+			<!-- 더보기 버튼 -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+		</div>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer"></footer>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	/* ************************************
+	* 샘플 : 검색 토글컨텐츠 호출 및 닫기
+	* 1) 토글컨텐츠 호출
+	* 2) 조회버튼 클릭 이벤트
+	* 3) 조회조건 재검색 클릭 샘플
+	************************************ */
+	var _el_cont = $('.info-data2, .tab-sub1, .area-info1, .area-info2, [data-btn="display"]'); //검색 제외 컨텐츠
+	var _el_result = $('.mes-result1:not(.ic1)'); //검색결과 : 결과없음 문구
+	var _el_result2 = $('.mes-result1.ic1'); //검색전 : 안내문구
+	var _el_headline = $('.info-summary1') //검색결과 : 상단영역
+
+	//초기화 : 내용 모두 비노출
+	_el_cont.addClass('none');
+	_el_result.addClass('none');
+
+	// _el_result2.removeClass('none');
+
+	/* 1) 토글컨텐츠 호출 */
+	var _toggleSearch = $plugin.togglecon('#uiFormSearch', {
+		class_active : 'load',
+		selector_group : false,
+		callback_load :function(e){
+			if(_el_cont.hasClass('none')) {
+				_el_result.addClass('none');
+				_el_result2.removeClass('none');
+			}
+			_el_headline.addClass('none');
+			$(e.this_con).removeClass('active');
+		},
+		callback_after : function(e){
+			if(_el_cont.hasClass('none')) {
+				_el_result.removeClass('none');
+				_el_result2.addClass('none');
+				$(e.this_con).removeClass('active');
+			}else{
+				_el_headline.removeClass('none');
+				$(e.this_con).addClass('active');
+			}
+		}
+	});
+
+	//토글컨텐츠 강제 오픈
+	_toggleSearch.outputOpen();
+
+	/* 2) 조회버튼 클릭시 이벤트
+	*  토글컨텐츠 닫기 샘플
+	*  스크롤 상단으로 이동 샘플
+	*/
+	$('#btn_search').on('click', function(){
+		var _invalid = $(_toggleSearch).find('input:invalid');
+
+		//토글컨텐츠 닫기
+		_toggleSearch.outputClose();
+
+		if(_invalid.length > 0){
+			$(_toggleSearch).removeClass('active');
+			_el_result.removeClass('none'); //검색결과없음 노출
+			_el_result2.removeClass('none');
+			_el_cont.addClass('none');
+			_el_headline.addClass('none');
+		}else{
+			$(_toggleSearch).addClass('active');
+			_el_result.addClass('none');
+			_el_result2.addClass('none');
+			_el_cont.removeClass('none');
+			_el_headline.removeClass('none');
+		}
+		$(window).scrollTop(0);
+	});
+
+	/* 3) 조회조건 재검색 클릭 샘플 */
+	$('[href="#uiFormSearch"]').on('click',function(e){
+		e.preventDefault();
+		_toggleSearch.outputOpen();
+	});
+
+	/* ************************************
+	* 샘플 : 조회구분 셀렉트
+	************************************ */
+	function uiSampleFunction(e){
+		var _select_val = e.val();
+		var _select_con;
+
+		if(_select_val == 'selectOpeion3_1' || _select_val == 'selectOpeion3_2') _select_con = 1;
+		else if (_select_val == 'selectOpeion3_3') _select_con = 2;
+		else if (_select_val == 'selectOpeion3_4') _select_con = 3;
+
+		$('[data-select-con].ui-tabcon').removeClass('active');
+		$('[data-select-con="'+ _select_con +'"].ui-tabcon').addClass('active');
+	}
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 전자서명 알림톡 발송 | 청약(개인/업무/영업) | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+<div class="container">
+	<div class="area-action" data-sticky="bottom">
+		<button type="button" class="btn-action c1" aria-controls="uiPOPCCR0204L04">확인</button>
+	</div>
+</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 보험료수납 안내 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCCR0204L04" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>보험료수납 안내</dt>
+		<dd>
+			<div>
+				보험료수납 대상입니다.<br>보험료수납을 바로 진행하시겠습니까?
+			</div>
+		</dd>
+		<!-- // -->
+		<dd class="area-action">
+			<button type="button" class="btn-action" data-btn="pop-close">취소</button>
+			<button type="button" class="btn-action c1">보험료수납</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCCR0204L04');
+
+	$('[aria-controls="uiPOPCCR0204L04"]').trigger('click');
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 수익자사항조회 | [T] 계약기본 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>수익자사항조회</h1>
+			<button type="button" data-btn="pop-close">수익자사항조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [계약정보] -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+				<div class="info">
+					<dl>
+						<dt>증권번호</dt>
+						<dd>LA123456789</dd>
+					</dl>
+				</div>
+				<div class="data1">
+					<dl>
+						<dt>보험기간</dt>
+						<dd>2022.02.22~2022.12.22</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [수익자목록] -->
+			<!-- ######################### -->
+			<div class="info-data2 line">
+				<ul>
+					<!-- // -->
+					<li>
+						<!-- # 수익자정보 # -->
+						<div class="tit">
+							<em>수익자구분</em>
+							<strong>수익자정보(생년월일)</strong>
+							<span>관계</span>
+						</div>
+						<!-- # 계약자/피보험자/적용시작일자 # -->
+						<div class="info-con1">
+							<!-- 2022-12-20 만기환급금수익자/연금수익자/사망시연금수익자 일경우 계약자 항목만 노출 -->
+							<dl>
+								<dt>계약자</dt>
+								<dd>계약자명(생년월일)</dd>
+							</dl>
+							<!-- //2022-12-20 만기환급금수익자/연금수익자/사망시연금수익자 일경우 계약자 항목만 노출 -->
+						</div>
+						<!-- # // # -->
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<em>만기환급금수익자</em>
+							<strong>하다미(1981.01.01)</strong>
+							<span>본인</span>
+						</div>
+						<div class="info-con1">
+							<!-- 2022-12-20 사망,자녀생활비,상해시수익자,지정청구인 일 경우 피보험자 항목만 노출 -->
+							<dl>
+								<dt>피보험자</dt>
+								<dd>하다미(1981.01.01)</dd>
+							</dl>
+							<!-- //2022-12-20 사망,자녀생활비,상해시수익자,지정청구인 일 경우 피보험자 항목만 노출 -->
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<em>사망보험금수익자</em>
+							<strong>범하사탕원</strong>
+							<span>법정상속인</span>
+						</div>
+						<div class="info-con1">
+							<dl>
+								<dt>계약자</dt>
+								<dd>하다미(1981.01.01)</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<em>사망보험금수익자</em>
+							<strong>하보미(1990.01.01)</strong>
+							<span>자녀</span>
+						</div>
+						<div class="info-con1">
+							<dl>
+								<dt>피보험자</dt>
+								<dd>하다미(1981.01.01)</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<a href="javascript:void(0);" class="btn-action c1">수익자 변경</a>
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

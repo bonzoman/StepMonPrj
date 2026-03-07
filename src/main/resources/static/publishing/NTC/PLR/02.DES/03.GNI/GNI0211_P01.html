@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 목적물 사항 | 화재보험 | 신규설계 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>목적물 사항</h1>
+			<button type="button" data-btn="pop-close">목적물 사항 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [본문영역] -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<!-- # 주요질병키워드 # -->
+				<div class="area-btn4" data-scroll="btn">
+					<button type="button" data-value="0" class="btn-t1 c2 active" title="선택됨">전체</button>
+					<button type="button" data-value="1" class="btn-t1 c2">건물</button>
+					<button type="button" data-value="2" class="btn-t1 c2">시설</button>
+					<button type="button" data-value="3" class="btn-t1 c2">집기비품</button>
+					<button type="button" data-value="4" class="btn-t1 c2">화재대물배상</button>
+					<button type="button" data-value="5" class="btn-t1 c2" >재고자산</button>
+					<button type="button" data-value="6" class="btn-t1 c2">구축물</button>
+					<button type="button" data-value="7" class="btn-t1 c2">가재도구</button>
+				</div>
+
+				<!-- # [CASE1] 건물 # -->
+				<dl class="txt-bul1 t1" data-con="1"> <!-- [M 2022-09-14] 클래스 t1 추가 -->
+					<dt>건물</dt>
+					<dd>지붕과 기둥 또는 지붕과 벽이 있는 것으로 주거, 작업 등을 위하여 인공적으로 축조된 건조물</dd>
+					<dd>건물의 부속물(칸막이,대문 등), 부착물(간판,네온사인 등), 부속설비(전기,가스,난방,냉방설비 등) 포함</dd>
+				</dl>
+
+				<!-- # [CASE2] 시설 # -->
+				<dl class="txt-bul1 t1" data-con="2"> <!-- [M 2022-09-14] -->
+					<dt>시설</dt>
+					<dd>벽, 천정, 바닥 등에 설치하는 내외부 마감재나 부대시설로서 재설치가 가능한것</dd>
+					<dd>인테리어, 칸막이 등 보통 임차인이 설치한 재물</dd>
+				</dl>
+
+				<!-- # [CASE3] 집기비품 # -->
+				<dl class="txt-bul1 t1" data-con="3"> <!-- [M 2022-09-14] -->
+					<dt>집기비품</dt>
+					<dd>직업상의 필요로 사용되며 사무실, 영업장에서 소지가 가능한 것으로 부착, 고정되지 않고 이동 가능한 제품</dd>
+				</dl>
+
+				<!-- # [CASE4] 화재대물배상 # -->
+				<dl class="txt-bul1 t1" data-con="4"> <!-- [M 2022-09-14] -->
+					<dt>화재대물배상</dt>
+					<dd>해당 소재지의 목적물에서 발생한 화재사고로 인하여 타인의 재물을 망그러뜨려 발생한 법률적인 배상책임 손해를 배상함</dd>
+				</dl>
+
+				<!-- # [CASE5] 재고자산 # -->
+				<dl class="txt-bul1 t1"  data-con="5"> <!-- [M 2022-09-14] -->
+					<dt>재고자산</dt>
+					<dd>재고자산으로 원,부재료, 재공품, 보관물품, 저장품 및 이와 비슷한것</dd>
+				</dl>
+
+				<!-- # [CASE6] 구축물 # -->
+				<dl class="txt-bul1 t1"  data-con="6"> <!-- [M 2022-09-14] -->
+					<dt>구축물</dt>
+					<dd>
+						건축법으로 규정하고 있는 건축물중 건물로 규정된 이외의 제반 건조물을 말하며,
+						철도 &middot; 궤도사업용, 발전 &middot; 송배전용 &middot; 방송 &middot; 무선통신용, 경기장 &middot; 유원지용 건조물 및 정원, 포장도로, 선전탑 등
+						기타 토지에 정착한 모든 토목설비나 공작물을 포함한다.
+					</dd>
+				</dl>
+
+				<!-- # [CASE7] 가재도구 # -->
+				<dl class="txt-bul1 t1" data-con="7"> <!-- [M 2022-09-14] -->
+					<dt>가재도구</dt>
+					<dd>개인이 일상의 가정생활 용구로 소유하고 있는 가구, 집기, 의류 등 가정생활에 필요한 일체의 물품</dd>
+					<dd>단, 귀금속, 골동품 등의 명기가재는 제외</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+<script>
+//<!--
+	// 샘플 : 버튼 스크롤 이벤트
+	$(document).on('click','.area-btn4 > button',function(){
+		var _btn_wrap = $(this).parents('.area-btn4');
+		var _val = $(this).data('value');
+
+		//탭기능 : 공통스크립트 정의
+		//$(this).addClass('active').siblings().removeClass('active')
+		//ui.setTabMove(_btn_wrap[0], 'active', 'button');
+
+		//컨텐츠 노출
+		if(_val == 0) $('[data-con]').removeClass('none');
+		else $('[data-con="'+_val+'"]').removeClass('none').siblings('[data-con]').addClass('none');
+	});
+//-->
+</script>
+</body>
+</html>

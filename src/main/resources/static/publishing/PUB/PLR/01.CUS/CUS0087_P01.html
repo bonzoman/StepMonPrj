@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 수집 이용에 관한 사항 | 약관동의 | 전자동의 | 가입설계동의 | 고객동의</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-29]	① 변경관리반영
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>수집&middot;이용에 관한 사항</h1>
+			<button type="button" data-btn="pop-close">수집&middot;이용에 관한 사항 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [약관영역] -->
+			<!-- ######################### -->
+			<div class="area-terms">
+				<dl>
+					<dt>1. 목적</dt>
+					<dd>
+						보험계약 상담, 재무설계서비스, 보험계약 인수여부 판단(건강진단 및 계약 적부조사 포함),
+						보험 가입한도 조회, 실제 발생하는 손해를 보상하는 실손형 보험의 중복확인, 보험료할인
+					</dd>
+				</dl>
+				<dl>
+					<dt class="inline">2. 보유 및 이용기간: </dt>
+					<dd class="inline">동의일로부터 1년까지</dd>
+				</dl>
+				<dl class="mark1">
+					<dt>3. 수집 &middot; 이용 항목</dt>
+					<dd>고유식별정보: 주민등록번호, 외국인등록번호, 여권번호, 운전면허번호</dd>
+					<dd>민감정보: 피보험자의 질병&middot;상해에 관한 정보<br>(진료기록, 상병명, 음주/흡연여부 등)</dd> <!-- [M 2022-09-29] 약관 변경(변경관리반영) -->
+					<dd><em>개인(신용)정보</em>
+						<ul class="bul1">
+							<li>일반개인정보: 성명, 주소, 생년월일, 이메일, 유&middot;무선 전화번호, 국적, 직업, 운전여부, 국내거소신고번호, 체류코드/기간</li>
+							<li>신용거래정보: 보험계약정보(상품종류, 기간, 보험가입금액 등), 보험금정보(보험금 지급사유, 지급금액 등), 계약 전 알릴 의무사항</li>
+							<li>신용능력정보: 소득 및 재산 정보, 차량소유여부</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+<script>
+	//문서 미확인 상태에서 확인 클릭시 3초간 토스트 팝업 출력
+	//ui.toast('문서를 마지막 페이지까지 확인해주세요.');
+</script>
+</body>
+</html>

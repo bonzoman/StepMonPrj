@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>가입설계조회 | 가입설계조회 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-05]	① 피보험자 영역 : 고객검색전 : 최근가설동의고객 내용 추가
+	*	[M 2022-10-21]	① 고객정보입력 상세 변경
+	*	[M 2022-10-2]	① tit-section 클래스 변경
+	*	[M 2022-11-22]	① 타이틀 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a> <!-- [M 2022-09-14] 태그 추가 -->
+		<h1>일반보험 설계요청</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [설계유형선택] GNI0356 -->
+		<!-- ######################### -->
+		<article id="GNI0356" class="">
+			<h1 class="hide">설계유형선택</h1>
+
+			<!-- ### [상단영역] 안내문구 ### -->
+			<div class="tit-section">
+				<p>설계 유형을<br>선택해주세요.</p> <!-- 2022-11-22 타이틀 변경 --> 
+			</div>
+
+			<!-- ### [유형선택] ### -->
+			<div class="btn-util4">
+				<label class="ic9">
+					<input type="radio" name="btnRadio1" checked>
+					<span>신규설계</span>
+				</label>
+				<label class="ic10">
+					<input type="radio" name="btnRadio1">
+					<span>당사갱신</span>
+				</label>
+				<label class="ic11">
+					<input type="radio" name="btnRadio1">
+					<span>타사갱신</span>
+				</label>
+			</div>
+
+			<!-- ### [하단버튼] ### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" onclick="sectionOn('GNI0357')">다음</button>
+			</div>
+			<!-- ### // ### -->
+		</article>
+
+		<!-- ######################### -->
+		<!-- [상품선택] GNI0357 -->
+		<!-- ######################### -->
+		<article id="GNI0357" class="none">
+			<h1 class="hide">상품선택</h1>
+
+			<!-- ### [상단영역] 안내문구 ### -->
+			<div class="tit-section">
+				<p>설계 요청할 상품을<br>선택해주세요.</p>
+			</div>
+
+			<!-- ### [상품분류] ### -->
+			<div class="label-btn2" data-autoset="form">
+				<label>
+					<input type="radio" name="FASubTab" value="GNI0212" data-tabcon="uiFormTabCon1" checked>
+					<span>배상</span>
+				</label>
+				<label>
+					<input type="radio" name="FASubTab" value="GNI0211" data-tabcon="uiFormTabCon2">
+					<span>화재</span>
+				</label>
+				<label>
+					<input type="radio" name="FASubTab" value="GNI0214" data-tabcon="uiFormTabCon3">
+					<span>여행</span>
+				</label>
+				<label>
+					<input type="radio" name="FASubTab" value="GNI0213">
+					<span>근재</span>
+				</label>
+				<label>
+					<input type="radio" name="FASubTab" value="GNI0355">
+					<span>기타</span>
+				</label>
+			</div>
+
+			<!-- ### [보험종목] 배상 ### -->
+			<fieldset class="form-wrap1 ui-tabcon active" data-id="uiFormTabCon1">
+				<legend>상품유형 선택</legend>
+				<dl class="form">
+					<dt>상품유형</dt>
+					<dd>
+						<div class="label-btn1 block">
+							<label>
+								<input type="radio" name="btnRadio3">
+								<span>영업배상책임보험</span>
+							</label>
+							<label>
+								<input type="radio" name="btnRadio3">
+								<span>재난배상책임보험</span>
+							</label>
+							<label>
+								<input type="radio" name="btnRadio3">
+								<span>가스사고배상책임보험</span>
+							</label>
+							<label>
+								<input type="radio" name="btnRadio3">
+								<span>승강기사고배상책임보험</span>
+							</label>
+							<label>
+								<input type="radio" name="btnRadio3">
+								<span>다중이용업소 화재배상책임보험</span>
+							</label>
+							<label>
+								<input type="radio" name="btnRadio3">
+								<span>영업배상책임생산물배상책임보험</span>
+							</label>
+							<label>
+								<input type="radio" name="btnRadio3">
+								<span>어린이놀이시설배상책임보험</span>
+							</label>
+							<label>
+								<input type="radio" name="btnRadio3">
+								<span>학원배상책임보험</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ### [보험종목] 화재 ### -->
+			<fieldset class="form-wrap1 ui-tabcon"  data-id="uiFormTabCon2">
+				<legend>상품유형 선택</legend>
+				<dl class="form">
+					<dt>상품유형</dt>
+					<dd>
+						<div class="label-btn1 block">
+							<label>
+								<input type="radio" name="btnRadio3">
+								<span>일반화재보험</span>
+							</label>
+							<label>
+								<input type="radio" name="btnRadio3">
+								<span>주택화재보험</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ### [보험종목] 여행 ### -->
+			<fieldset class="form-wrap1 ui-tabcon"  data-id="uiFormTabCon3">
+				<legend>상품유형 선택</legend>
+				<dl class="form">
+					<dt>상품유형</dt>
+					<dd>
+						<div class="label-btn1 block">
+							<label>
+								<input type="radio" name="btnRadio3">
+								<span>국내여행자보험</span>
+							</label>
+							<label>
+								<input type="radio" name="btnRadio3">
+								<span>해외여행자보험</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ### [하단버튼] ### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" onclick="sectionOn('GNI0220')">다음</button>
+			</div>
+			<!-- ### // ### -->
+		</article>
+
+		<!-- ######################### -->
+		<!-- [계/피정보] GNI0220 -->
+		<!-- ######################### -->
+		<article id="GNI0220" class="none">
+			<h1 class="hide">계약기본정보</h1>
+
+			<!-- ### [입력정보요약] ### -->
+			<div class="wrap-step1" data-sticky="top">
+				<!-- [상품정보] -->
+				<div class="info-summary2">
+					<h2 class="tit">영업배상책임보험</h2>
+				</div>
+
+				<!-- [단계이동] -->
+				<div class="info-step1" data-autoset="toggle">
+					<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+					<div data-toggle="content">
+						<ol>
+							<li>
+								<span>01. 상품 선택</span>
+								<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							</li>
+							<li aria-current="step">
+								<span>02. 고객 정보</span>
+								<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							</li>
+							<li>
+								<span>03. 설계요청사항</span>
+								<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ### [고객정보] 상세설계 ### -->
+			<div class="ui-tabcon active" data-section="detailed"> <!-- [D] 클래스명(active)추가시 컨텐츠 노출 -->
+				<!-- [상단타이틀] -->
+				<h3 class="hide">고객정보</h3>
+				<div class="tit-section2 line"> <!-- 2022-10-24 클래스 변경 -->
+					<p>상세설계 요청을 위한<br>고객정보를 입력해주세요.</p>
+					<div class="area-btn4">
+						<button type="button" class="btn-sub3 c2" data-mode="simple">단순설계로 변경</button>
+					</div>
+				</div>
+
+				<!-- [계약자] -->
+				<div class="form-wrap1 line2">
+					<fieldset>
+						<legend class="tit">계약자</legend>
+
+						<!-- // -->
+						<dl class="form">
+							<dt>계약자명</dt>
+							<dd>
+								<div class="input-btn1">
+									<data class="text" value="" data-label="고객을 검색해주세요."></data>
+									<button type="button" class="icon-com1 ic2">검색</button>
+								</div>
+
+								<!-- 2022-10-21 삭제 -->
+								<!-- <div class="info-data3 t1">
+									<dl>
+										<dt class="data-info2 t1" data-value="102701">
+											<strong>하다미</strong>
+											<span>
+												<span>0000.00.00</span>
+												<span>성별</span>
+											</span>
+										</dt>
+										<dd class="data2">
+											<span>주소</span>
+											<strong>(05213) 서울특별시 중구 소월로 3 136길 31, 더클래식 1층</strong>
+										</dd>
+										<dd class="side"><button type="button" class="btn-sub3 c2">삭제</button></dd>
+									</dl>
+								</div>
+
+								<div class="info-data3 t1">
+									<dl>
+										<dt class="data-info2 t1" data-value="102701"> 
+											<strong>하다미</strong>
+											<span>204-02-86490</span>
+											<em>개인사업자</em>
+										</dt>
+										<dd class="data2">
+											<span>주소</span>
+											<strong>(05213) 서울특별시 중구 소월로 3 136길 31, 더클래식 1층</strong>
+										</dd>
+										<dd class="side"><button type="button" class="btn-sub3 c2">삭제</button></dd>
+									</dl>
+								</div> -->
+								<!-- //2022-10-21 삭제 -->
+
+								<!-- 2022-10-21 변경 -->
+								<div>
+									<div class="info-data3 t2" data-scroll-wrap="true">
+										<!-- // -->
+										<label class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+											<input type="radio" name="gg1">
+											<strong>고객이름</strong>
+											<span>나이</span>
+										</label>
+										<!-- // -->
+										<label class="data-info2" data-value="100501">
+											<input type="radio" name="gg1">
+											<strong>김롯데</strong>
+											<span>5세</span>
+										</label>
+										<!-- // -->
+										<label class="data-info2" data-value="101001">
+											<input type="radio" name="gg1">
+											<strong>김롯데보험</strong>
+											<span>10세</span>
+										</label>
+										<!-- // -->
+										<label class="data-info2" data-value="101801">
+											<input type="radio" name="gg1">
+											<strong>김롯데보험</strong>
+											<span>18세</span>
+										</label>
+										<!-- // -->
+										<label class="data-info2" data-value="102501">
+											<input type="radio" name="gg1">
+											<strong>김롯데보험</strong>
+											<span>25세</span>
+										</label>
+										<!-- // -->
+										<label class="data-info2" data-value="103501">
+											<input type="radio" name="gg1">
+											<strong>김롯데보험</strong>
+											<span>35세</span>
+										</label>
+										<!-- // -->
+										<label class="data-info2" data-value="106001">
+											<input type="radio" name="gg1">
+											<strong>김롯데보험</strong>
+											<span>60세</span>
+										</label>
+										<!-- // -->
+									</div>
+									<div class="area-info4">
+										<p class="ic1">선택 고객을 계약자로 입력하기</p>
+										<div class="side"><button type="button" class="btn-sub3 c1">확인</button></div>
+									</div>
+								</div>
+
+								<!-- [CASE] 고객검색후 : 고객정보노출 -->
+								<div class="info-data3 t1">
+									<dl>
+										<dt class="data-info2 t1" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+											<strong>하다미</strong>
+											<span>
+												<span>0000.00.00</span>
+												<span>성별</span>
+											</span>
+										</dt>
+										<dd class="data2">
+											<span>주소</span>
+											<strong>(05213) 서울특별시 중구 소월로 3 136길 31, 더클래식 1층</strong>
+										</dd>
+										<!-- [D] 계약자와의 관계 : 본인일 경우 비노출 -->
+										<dd class="side"><button type="button" class="btn-sub3 c2">삭제</button></dd>
+										<!-- // -->
+									</dl>
+								</div>
+								<!-- //[CASE] 고객검색후 : 고객정보노출 -->
+								<!-- //2022-10-21 변경 -->
+								<!-- // -->
+							</dd>
+							<dd class="side"><button type="button" class="btn-sub3 c2">고객등록</button></dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>우편물수령지 선택</dt>
+							<dd>
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormRadio01">
+										<span>집</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio01">
+										<span>직장</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio01">
+										<span>기타</span>
+									</label>
+								</div>
+								<data class="text disabled" value="" data-label="주소"></data>
+								<data class="text disabled" value="" data-label="상세주소"></data>
+							</dd>
+						</dl>
+						<!-- // -->
+					</fieldset>
+				</div>
+
+				<!-- ### 피보험자 ### -->
+				<div class="form-wrap1 line2">
+					<fieldset>
+						<legend class="tit">피보험자</legend>
+
+						<div class="side">
+							<div class="label-check1 t1"> <!-- [M 2022-09-14] 클래스 t1 추가 -->
+								<label>
+									<input type="checkbox">
+									<span>계약자와 동일</span>
+								</label>
+							</div>
+						</div>
+
+						<!-- // -->
+						<dl class="form">
+							<dt>계약자와의 관계</dt>
+							<dd>
+								<!-- // -->
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">선택하세요.</span>
+										<span data-select="text" data-value="null">해당없음</span>
+									</button>
+									<div class="list">
+										<div data-label="계약자와의 관계">
+											<div class="option">
+												<label><input type="radio" name="STRELPCTPCDNRD" value=""><span>해당없음</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="01"><span>본인</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="02"><span>배우자</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="03"><span>부모</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="04"><span>자녀</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="05"><span>형제자매</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="06"><span>조부모</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="07"><span>손자녀</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="08"><span>배우자부모</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="09"><span>친척</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="10"><span>고용주(사업주)</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="11"><span>고용인(종업원)</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="12"><span>단체구성원</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="13"><span>임직원</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="14"><span>하청자</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="15"><span>여행업자 포괄</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="16"><span>은행(환전고객 피보험자)</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="17"><span>기타</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- // -->
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>주피보험자</dt> <!-- 2022-10-21 텍스트 변경 -->
+							<dd>
+								<div class="input-btn1">
+									<data class="text" value="" data-label="고객을 검색해주세요."></data>
+									<button type="button" class="icon-com1 ic2">검색</button>
+								</div>
+
+								<!-- [D] 계약자와의 관계 : 본인일 경우 비활성 -->
+								<div class="input-btn1">
+									<data class="text disabled" value="" data-label="고객을 검색해주세요."></data>
+									<button type="button" class="icon-com1 ic2">검색</button>
+								</div>
+								<!-- // -->
+
+								<!-- [M 2022-09-05] 고객검색전 : 최근가설동의고객 내용 추가 -->
+								<div>
+									<div class="info-data3 t2" data-scroll-wrap="true">
+										<!-- // -->
+										<label class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+											<input type="radio" name="gg1">
+											<strong>고객이름</strong>
+											<span>나이</span>
+										</label>
+										<!-- // -->
+										<label class="data-info2" data-value="100501">
+											<input type="radio" name="gg1">
+											<strong>김롯데</strong>
+											<span>5세</span>
+										</label>
+										<!-- // -->
+										<label class="data-info2" data-value="101001">
+											<input type="radio" name="gg1">
+											<strong>김롯데보험</strong>
+											<span>10세</span>
+										</label>
+										<!-- // -->
+										<label class="data-info2" data-value="101801">
+											<input type="radio" name="gg1">
+											<strong>김롯데보험</strong>
+											<span>18세</span>
+										</label>
+										<!-- // -->
+										<label class="data-info2" data-value="102501">
+											<input type="radio" name="gg1">
+											<strong>김롯데보험</strong>
+											<span>25세</span>
+										</label>
+										<!-- // -->
+										<label class="data-info2" data-value="103501">
+											<input type="radio" name="gg1">
+											<strong>김롯데보험</strong>
+											<span>35세</span>
+										</label>
+										<!-- // -->
+										<label class="data-info2" data-value="106001">
+											<input type="radio" name="gg1">
+											<strong>김롯데보험</strong>
+											<span>60세</span>
+										</label>
+										<!-- // -->
+									</div>
+									<div class="area-info4">
+										<p class="ic1">선택 고객을 주피보험자로 입력하기</p>
+										<div class="side"><button type="button" class="btn-sub3 c1">확인</button></div>
+									</div>
+								</div>
+								<!-- // [M 2022-09-05] -->
+
+								<!-- [CASE] 고객검색후 : 고객정보노출 -->
+								<div class="info-data3 t1">
+									<dl>
+										<dt class="data-info2 t1" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+											<strong>하다미</strong>
+											<span>
+												<span>0000.00.00</span>
+												<span>성별</span>
+											</span>
+										</dt>
+										<dd class="data2">
+											<span>주소</span>
+											<strong>(05213) 서울특별시 중구 소월로 3 136길 31, 더클래식 1층</strong>
+										</dd>
+										<!-- [D] 계약자와의 관계 : 본인일 경우 비노출 -->
+										<dd class="side"><button type="button" class="btn-sub3 c2">삭제</button></dd>
+										<!-- // -->
+									</dl>
+								</div>
+								<!-- // -->
+							</dd>
+							<dd class="side"><button type="button" class="btn-sub3 c2">고객등록</button></dd>
+						</dl>
+						<!-- // -->
+					</fieldset>
+				</div>
+			</div>
+
+			<!-- ### [고객정보] 단순설계 ### -->
+			<div class="ui-tabcon" data-section="simple">
+				<!-- [상단타이틀] -->
+				<h3 class="hide">고객정보</h3>
+				<div class="tit-section">
+					<p>단순설계 요청을 위한<br>고객정보를 입력해주세요.</p>
+					<div class="area-btn4">
+						<button type="button" class="btn-sub3 c2" data-mode="detailed">상세설계로 변경</button>
+					</div>
+				</div>
+
+				<!-- [계약자] -->
+				<div class="form-wrap1 line2">
+					<fieldset>
+						<legend class="tit">계약자</legend>
+
+						<!-- // -->
+						<dl class="form">
+							<dt>계약자명</dt>
+							<dd>
+								<div class="input-btn1">
+									<data class="text disabled" value="" data-label="고객을 검색해주세요."></data>
+									<button type="button" class="icon-com1 ic2">검색</button>
+								</div>
+							</dd>
+							<dd class="side"><button type="button" class="btn-sub3 c2" disabled>고객등록</button></dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>우편물수령지 선택</dt>
+							<dd>
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormRadio01" disabled>
+										<span>집</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio01" disabled>
+										<span>직장</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio01" disabled>
+										<span>기타</span>
+									</label>
+								</div>
+								<data class="text disabled" value="" data-label="주소"></data>
+								<data class="text disabled" value="" data-label="상세주소"></data>
+							</dd>
+						</dl>
+						<!-- // -->
+					</fieldset>
+				</div>
+
+				<!-- ### 피보험자 ### -->
+				<div class="form-wrap1 line2">
+					<fieldset>
+						<legend class="tit">피보험자</legend>
+
+						<div class="side">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox" disabled>
+									<span>계약자와 동일</span>
+								</label>
+							</div>
+						</div>
+
+						<!-- // -->
+						<dl class="form">
+							<dt>계약자와의 관계</dt>
+							<dd>
+								<!-- // -->
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" disabled>
+										<span data-select="title">선택하세요.</span>
+										<span data-select="text" data-value="null">해당없음</span>
+									</button>
+									<div class="list">
+										<div data-label="계약자와의 관계">
+											<div class="option">
+												<label><input type="radio" name="STRELPCTPCDNRD" value=""><span>해당없음</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="01"><span>본인</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="02"><span>배우자</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="03"><span>부모</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="04"><span>자녀</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="05"><span>형제자매</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="06"><span>조부모</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="07"><span>손자녀</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="08"><span>배우자부모</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="09"><span>친척</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="10"><span>고용주(사업주)</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="11"><span>고용인(종업원)</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="12"><span>단체구성원</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="13"><span>임직원</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="14"><span>하청자</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="15"><span>여행업자 포괄</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="16"><span>은행(환전고객 피보험자)</span></label>
+												<label><input type="radio" name="STRELPCTPCDNRD" value="17"><span>기타</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- // -->
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>피보험자명</dt>
+							<dd>
+								<div class="input-btn1">
+									<data class="text disabled" value="" data-label="고객을 검색해주세요."></data>
+									<button type="button" class="icon-com1 ic2">검색</button>
+								</div>
+							</dd>
+							<dd class="side"><button type="button" class="btn-sub3 c2" disabled>고객등록</button></dd>
+						</dl>
+						<!-- // -->
+					</fieldset>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" onclick="sectionOn('PAGE1')">다음</button>
+			</div>
+			<!-- ######################### -->
+		</article>
+
+		<!-- ######################### -->
+		<!-- [정보입력] -->
+		<!-- ######################### -->
+		<div data-include="GNI0212.html"></div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 설계 유형 선택 ### -->
+<!-- ################################################### -->
+<div id="uiPOPGNI0356L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>설계 유형 선택</h1>
+			<button type="button" data-btn="pop-close">설계 유형 선택 닫기</button>
+		</header>
+		<div class="content">
+			<div class="label-check2">
+				<label>
+					<input type="radio" name="btnRadio1" checked>
+					<span>신규설계</span>
+				</label>
+				<label>
+					<input type="radio" name="btnRadio1">
+					<span>당사갱신</span>
+				</label>
+				<label>
+					<input type="radio" name="btnRadio1">
+					<span>타사갱신</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action">이전</button> <!-- [D] 타 메뉴 진입시 노출 -->
+			<button type="button" class="btn-action c1" data-btn="pop-close">확인</button>
+		</footer>
+	</article>
+</div>
+
+<!-- ################################################### -->
+<!-- # [툴팁 영역] # -->
+<!-- ################################################### -->
+<!-- # 가입형태 안내 # -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>연간포괄계약</dt>
+		<dd>계약기간동안 모든 공사건에 대해 담보</dd>
+		<dt>개별공사계약</dt>
+		<dd>해당 공사건 기준 담보</dd>
+		<dd><button type="button" data-btn="pop-close">가입형태 안내사항 닫기</button></dd>
+	</dl>
+</div>
+
+<!-- # 파일첨부 안내 # -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">파일 첨부 안내사항</dt>
+		<dd>
+			<ul class="txt-bul3">
+				<li>첨부파일의 사이즈는 <strong>000px X 000px</strong> 사이즈를 준수해주세요.</li>
+				<li>첨부파일은 <strong>png, jpg, jpeg, bmp, gif</strong> 파일만 등록이 가능합니다.</li>
+				<li>첨부파일 용량은 <strong>5M</strong>를 넘을 수 없습니다.</li>
+				<li>첨부파일을 등록하면, 퀴즈 내용 하단에 자동으로 노출됩니다.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">파일 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	/* ********************************
+	* 설계 유형 선택 호출
+	******************************** 
+	$plugin.popmodal('#uiPOPGNI0356L01',{
+		callback_after : function(e){
+			//확인버튼 클릭시
+			if($(e.pop_close).hasClass('btn-action c1')){
+				sectionOn('GNI0357');
+			}
+		}
+	}).outputOpen();
+	*/
+
+	/* ********************************
+	* 샘플 : 페이지 변경 호출
+	******************************** */
+	function sectionOn(el){
+		var _this = $(this).parents('article').attr('id');
+		$('article[id]:not(.none)').addClass('none');
+		if(el == 'GNI0220' || el == 'GNI0357'){
+			$('.container').attr('data-page',1);
+		}
+		$('#'+el).removeClass('none');
+		ui.setPage();
+		ui.initReload();
+	};
+
+	/* ********************************
+	* 샘플 : 상품선택시 include URL 변경
+	******************************** */
+	$(document).on('change','[name="FASubTab"]',function(){
+		var _url = $(this).val();
+		$('#PAGE1').remove();
+		$('.container').append('<div data-include="'+_url+'.html"></div>');
+		ui.setInclude();
+	})
+
+	/* ************************************
+	* 샘플 : 단순설계/상세설계 버튼 이벤트
+	* data-mode : detailed/simple : 버튼
+	* data-section : detailed/simple : 컨텐츠
+	************************************ */
+	$(document).off('click.mode').on('click.mode','[data-mode]',function(){
+		var _el_mode = $(this).data('mode');
+		//컨텐츠 클래스 초기화
+		$('[data-section]').removeClass('active');
+		//해당 컨텐츠 노출
+		$('[data-section="'+_el_mode+'"]').addClass('active');
+	});
+//-->
+</script>
+</body>
+</html>

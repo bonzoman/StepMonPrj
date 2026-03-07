@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 주소검색</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>주소검색</h1>
+			<button type="button" data-btn="pop-close">주소검색 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [검색영역] 주소검색 -->
+			<!-- ######################### -->
+			<fieldset class="form-search1" data-sticky="top">
+				<legend>주소검색</legend>
+				<div class="text">
+					<input type="search" title="검색할 도로명/지번주소, 예시) 반포대로 58, 독립기념관, 삼성동 25" placeholder="예) 반포대로 58, 삼성동"> <!-- [M 2022-07-04] placeholder 변경 -->
+					<button type="button" class="icon-com1 ic2 simple">검색</button>
+				</div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [CASE1] 검색전 : 안내영역 -->
+			<!-- ######################### -->
+			<div class="mes-info1">
+				<p>이렇게 검색해 보세요.</p>
+				<dl>
+					<dt>도로명 + 건물번호</dt>
+					<dd>예) 소월로 3</dd>
+					<dt>지역명 + 번지</dt>
+					<dd>예) 남창동 51-1</dd>
+					<dt>건물명, 아파트명</dt>
+					<dd>예) 롯데손해보험빌딩</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [CASE2] 검색결과 : 결과있음 -->
+			<!-- ######################### -->
+			<div class="area-info1"><p>검색결과 <strong>3건</strong></p></div>
+			<!-- ### [주소목록] ### -->
+			<div class="con-t1">
+				<!-- // -->
+				<label>
+					<input type="radio" name="form-radio-con" checked>
+					<span>
+						<i>00000</i>
+						<strong>주소(시/군/구)</strong>
+						<span>주소(시/군/구)</span>
+					</span>
+				</label>
+				<!-- // -->
+				<label>
+					<input type="radio" name="form-radio-con">
+					<span>
+						<i>00000</i>
+						<strong>서울특별시 강남구 강남대로136길 5-4(논현동)</strong>
+						<span>서울특별시 강남구 논현동 20-9</span>
+					</span>
+				</label>
+				<!-- // -->
+				<label>
+					<input type="radio" name="form-radio-con">
+					<span>
+						<i>00000</i>
+						<strong>서울특별시 강남구 강남대로136길 24(논현동, 힐튼하우스)</strong>
+						<span>서울특별시 강남구 논현동 47 힐튼하우스</span>
+					</span>
+				</label>
+				<!-- // -->
+				<label>
+					<input type="radio" name="form-radio-con">
+					<span>
+						<i>00000</i>
+						<strong>서울특별시 강남구 강남대로136길 34(논현동, 월드노블레스빌)</strong>
+						<span>서울특별시 강남구 논현동 45 월드노블레스빌</span>
+					</span>
+				</label>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [CASE3] 검색결과 : 결과없음 -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p>
+					<strong>일치하는 내용이 없어요.</strong>
+					<span>도로명, 지번, 건물명, 아파트명으로<br />다시 검색해보세요.</span>
+				</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+				<!-- <button type="button" class="btn-action c1" disabled>확인</button> : 비활성화 -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

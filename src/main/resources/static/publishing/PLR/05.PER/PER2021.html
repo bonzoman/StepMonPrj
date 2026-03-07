@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>생산성추이 | 목록 | 조직증감추이 | 조직관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>조직증감추이</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="4">
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li><a href="#">조직증감추이</a></li>
+				<li class="active"><a href="#" aria-current="page">생산성추이</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [필터영역] -->
+		<!-- ######################### -->
+		<div class="area-info1 line2">
+			<p>총 발송 <strong>10건</strong></p>
+			<div class="side"><button type="button" class="icon-com1 ic18">필터</button></div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [합계영역] -->
+		<!-- ######################### -->
+		<h2 class="tit-sub1">최근 3개월 강남사업단 생산성추이 <a href="#uiTOOLTIPINFO1" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">생산성 안내</a></h2>
+		<!-- # 그래프 # -->
+		<div class="area-chart"></div>
+		<!-- # 데이터 없음 # -->
+		<div class="mes-result1">
+			<p>
+				<strong>기간 내 자료가 없어요.</strong>
+				<!-- # 당년도 자료 없는 경우 # -->
+				<strong>과거 이맘때의 기간 내 자료가 없어요.</strong>
+				<!-- // -->
+			</p>
+		</div>
+		<!-- # 테이블 # -->
+		<div class="tbl-data1 t2">
+			<table>
+				<caption>합계 테이블</caption>
+				<colgroup>
+					<col style="width:50%">
+					<col style="width:50%">
+				</colgroup>
+				<thead class="hide">
+					<tr>
+						<th scope="col">구분</th>
+						<th scope="col">재적</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="active">
+						<th>4월</th>
+						<td class="data-num1 right"><strong>0,000</strong><span>건</span></td>
+					</tr>
+					<tr>
+						<th>3월</th>
+						<td class="data-num1 right"><strong>0,000</strong><span>건</span></td>
+					</tr>
+					<tr>
+						<th>2월</th>
+						<td class="data-num1 right"><strong>0,000</strong><span>건</span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- # 상세이동 버튼 # -->
+		<div class="area-btn2"><a href="javascript:void(0);" class="btn-t1 icon-com1 right ic3">전속지원팀 상세보기</a></div>
+
+		<!-- ######################### -->
+		<!-- [목록] -->
+		<!-- ######################### -->
+		<div class="wrap-section3 line">
+			<!-- ### 항목하나 ### -->
+			<section>
+				<h3 class="tit-sub2">강남사업단<a href="javascript:void(0);" class="link">상세보기</a></h3>
+				<!-- 탭버튼 -->
+				<div class="tab-sub1 t1" data-autoset="tab">
+					<ul>
+						<li class="active"><a href="#uiTabCon11">4월</a></li>
+						<li><a href="#uiTabCon12">3월</a></li>
+						<li><a href="#uiTabCon13">2월</a></li>
+					</ul>
+				</div>
+				<!-- 탭컨텐츠1 -->
+				<div id="uiTabCon11" class="ui-tabcon active">
+					<div class="info-con2 t2">
+						<dl>
+							<dt>실적</dt>
+							<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>실적건수</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>재적인원수</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>실가동</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>생산성</dt>
+							<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</div>
+				<!-- 탭컨텐츠2 -->
+				<div id="uiTabCon12" class="ui-tabcon">
+					<div class="info-con2 t2">
+						<dl>
+							<dt>실적</dt>
+							<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>실적건수</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>재적인원수</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>실가동</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>생산성</dt>
+							<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</div>
+				<!-- 탭컨텐츠3 -->
+				<div id="uiTabCon13" class="ui-tabcon">
+					<div class="info-con2 t2">
+						<dl>
+							<dt>실적</dt>
+							<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>실적건수</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>재적인원수</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>실가동</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>생산성</dt>
+							<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ### 항목하나 ### -->
+			<section>
+				<h3 class="tit-sub2">부산사업단<a href="javascript:void(0);" class="link">상세보기</a></h3>
+				<div class="tab-sub1 t1" data-autoset="tab">
+					<ul>
+						<li class="active"><a href="#uiTabCon21">4월</a></li>
+						<li><a href="#uiTabCon22">3월</a></li>
+						<li><a href="#uiTabCon23">2월</a></li>
+					</ul>
+				</div>
+				<div id="uiTabCon21" class="ui-tabcon active">
+					<div class="info-con2 t2">
+						<dl>
+							<dt>실적</dt>
+							<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>실적건수</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>재적인원수</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>실가동</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>생산성</dt>
+							<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</div>
+				<div id="uiTabCon22" class="ui-tabcon">
+					<div class="info-con2 t2">
+						<dl>
+							<dt>실적</dt>
+							<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>실적건수</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>재적인원수</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>실가동</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>생산성</dt>
+							<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</div>
+				<div id="uiTabCon23" class="ui-tabcon">
+					<div class="info-con2 t2">
+						<dl>
+							<dt>실적</dt>
+							<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>실적건수</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>재적인원수</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>실가동</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>생산성</dt>
+							<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</div>
+			</section>
+
+			<!-- ### 더보기(현재페이지/총페이지) ### -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+			<!-- ### // ### -->
+		</div>
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ######################### -->
+<!-- [툴팁영역] 생산성 -->
+<!-- ######################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl class="txt-bul1">
+		<dt>생산성</dt>
+		<dd>실적을 실가동인원으로 나눈 값</dd>
+		<dd><button type="button" data-btn="pop-close">생산성 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+</body>
+</html>

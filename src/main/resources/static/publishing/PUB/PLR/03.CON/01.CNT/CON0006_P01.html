@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 보유계약조회 | [T] 계약기본 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-20]	① 탭버튼 삭제 / 탭컨텐츠 영역 삭제 / 피보험자 영역 삭제
+	*					② 목록 영역의 항목 클래스명 수정 및 “보험료,납입사항” 위치 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>보유계약조회</h1>
+			<button type="button" data-btn="pop-close">보유계약조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [탭영역] -->
+			<!-- ######################### -->
+			<!-- [M 2022-09-20] 삭제 -->
+			<!--
+			<div class="nav-tab1" data-sticky="top" data-autoset="tab">
+				<ul>
+					<li class="active"><a href="#uiTabCont1">계약자<span>(12)</span></a></li>
+					<li><a href="#uiTabCont2">피보험자<span>(11)</span></a></li>
+				</ul>
+			</div>
+			-->
+
+			<!-- [M 2022-09-20] 탭버튼 삭제로 탭컨텐츠 영역 태그 <section class="ui-tabcon active" id="uiTabCont1"> 삭제 -->
+			<!-- ######################### -->
+			<!-- [목록영역] -->
+			<!-- ######################### -->
+			<!-- ### 총건수 ### -->
+			<div class="area-info1">
+				<p>총 <strong>12건</strong></p>
+			</div>
+
+			<!-- ### 목록 ### -->
+			<div class="info-data2">
+				<ul>
+					<!-- // -->
+					<li>
+						<!-- # 상품명 # -->
+						<strong class="tit">상품명</strong>
+						<!-- # 계약상태 / 증권번호 # -->
+						<div class="info">
+							<i class="icon-state2 ic3">정상</i>
+							<i class="icon-state2 ic2">해지</i>
+							<i class="icon-state2 ic2">해약</i>
+							<i class="icon-state2 ic2">철회</i>
+							<i class="icon-state2 ic2">취소</i>
+							<i class="icon-state2 ic1">만기</i>
+							<i class="icon-state2 ic7">불능</i>
+							<i class="icon-state2 ic7">소멸</i>
+							<span class="hide">증권번호</span>
+							<span>LA123456789</span>
+						</div>
+						<!-- # 정보1 # -->
+						<div class="data1"> <!-- [M 2022-09-20] 클래스명 변경 -->
+							<dl>
+								<dt>계약자</dt>
+								<dd class="info2">
+									<strong data-masking="true">계약자명</strong>
+									<span>생년월일</span>
+									<span>성별</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong data-masking="true">피보험자명</strong>
+									<span>생년월일</span>
+									<span>성별</span>
+									외 00명
+								</dd>
+							</dl>
+							<!-- [M 2022-09-20] 하단에 있던 보험료/납입사항 위치 변경 -->
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span>(월납)</dd>
+							</dl>
+							<dl>
+								<dt>납입사항</dt>
+								<dd>124회(2021.06)</dd>
+							</dl>
+							<!-- // [M 2022-09-20] -->
+							<dl>
+								<dt>보험기간</dt>  <!-- [M 2022-09-20] 클래스명 삭제 및 텍스트 변경 -->
+								<dd>0000.00.00~0000.00.00</dd>
+							</dl>
+						</div>
+
+						<!-- # 정보2 [M 2022-09-20] 내용 위치 이동으로 인해 삭제
+						<div class="info-con2 t1">
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span>(월납)</dd>
+							</dl>
+							<dl>
+								<dt>납입사항</dt>
+								<dd>124회(2021.06)</dd>
+							</dl>
+						</div> -->
+
+
+						<!-- # 상세링크 # -->
+						<a href="javascript:void(0);" class="link">상세보기</a>
+						<!-- # // # -->
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">롯데힐링케어 건강보험</strong>
+						<div class="info">
+							<i class="icon-state2 ic3">정상</i>
+							<span class="hide">증권번호</span>
+							<span>LA123456789</span>
+						</div>
+						<div class="data1">
+							<dl>
+								<dt>계약자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.02.30</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.02.30</span>
+									<span>여</span>
+									외 2명
+								</dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>100,000</strong><span>원</span>(월납)</dd>
+							</dl>
+							<dl>
+								<dt>납입사항</dt>
+								<dd>124회(2021.06)</dd>
+							</dl>
+							<dl>
+								<dt>보험기간</dt>
+								<dd>0000.00.00~0000.00.00</dd>
+							</dl>
+						</div>
+						<a href="javascript:void(0);" class="link">상세보기</a>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">롯데힐링케어 건강보험</strong>
+						<div class="info">
+							<i class="icon-state2 ic2">해지</i>
+							<span class="hide">증권번호</span>
+							<span>LA123456789</span>
+						</div>
+						<div class="data1">
+							<dl>
+								<dt>계약자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.02.30</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.02.30</span>
+									<span>여</span>
+									외 2명
+								</dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>100,000</strong><span>원</span>(월납)</dd>
+							</dl>
+							<dl>
+								<dt>납입사항</dt>
+								<dd>124회(2021.06)</dd>
+							</dl>
+							<dl>
+								<dt>보험기간</dt>
+								<dd>0000.00.00~0000.00.00</dd>
+							</dl>
+						</div>
+						<a href="javascript:void(0);" class="link">상세보기</a>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- # 더보기(현재페이지/총페이지) # -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- # // # -->
+			</div>
+
+			<!-- [M 2022-09-20] 삭제 -->
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 피보험자 -->
+			<!-- ######################### -->
+			<!--
+			<section class="ui-tabcon" id="uiTabCont2">
+				<h2 class="hide">피보험자</h2>
+
+				<div class="area-info1">
+					<p>총 <strong>11건</strong></p>
+				</div>
+
+				<div class="info-data2">
+					<ul>
+						<li>
+							<strong class="tit">상품명</strong>
+							<div class="info">
+								<i class="icon-state2 ic2">취소</i>
+								<span class="hide">증권번호</span>
+								<span>LA123456789</span>
+							</div>
+							<div class="txt">
+								<dl>
+									<dt>계약자</dt>
+									<dd class="info2">
+										<strong data-masking="true">계약자명</strong>
+										<span>생년월일</span>
+										<span>성별</span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>피보험자</dt>
+									<dd class="info2">
+										<strong data-masking="true">피보험자명</strong>
+										<span>생년월일</span>
+										<span>성별</span>
+										외 00명
+									</dd>
+								</dl>
+								<dl>
+									<dt class="hide">계약일자</dt>
+									<dd>0000.00.00~0000.00.00(취소일 2020.01.30)</dd>
+								</dl>
+							</div>
+							<div class="info-con2 t1">
+								<dl>
+									<dt>보험료</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>원</span>(월납)</dd>
+								</dl>
+								<dl>
+									<dt>납입사항</dt>
+									<dd>124회(2021.06)</dd>
+								</dl>
+							</div>
+							<a href="javascript:void(0);" class="link">상세보기</a>
+						</li>
+						<li>
+							<strong class="tit">롯데힐링케어 건강보험</strong>
+							<div class="info">
+								<i class="icon-state2 ic3">정상</i>
+								<span class="hide">증권번호</span>
+								<span>LA123456789</span>
+							</div>
+							<div class="txt">
+								<dl>
+									<dt>계약자</dt>
+									<dd class="info2">
+										<strong data-masking="true">하*미</strong>
+										<span>1990.02.30</span>
+										<span>여</span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>피보험자</dt>
+									<dd class="info2">
+										<strong data-masking="true">하*미</strong>
+										<span>1990.02.30</span>
+										<span>여</span>
+										외 2명
+									</dd>
+								</dl>
+								<dl>
+									<dt class="hide">계약일자</dt>
+									<dd>2020.01.30~2022.02.22</dd>
+								</dl>
+							</div>
+							<div class="info-con2">
+								<dl>
+									<dt>보험료</dt>
+									<dd class="data-num1"><strong>100,000</strong><span>원</span>(월납)</dd>
+								</dl>
+								<dl>
+									<dt>납입사항</dt>
+									<dd>124회(2021.06)</dd>
+								</dl>
+							</div>
+							<a href="javascript:void(0);" class="link">상세보기</a>
+						</li>
+						<li>
+							<strong class="tit">롯데힐링케어 건강보험</strong>
+							<div class="info">
+								<i class="icon-state2 ic2">해지</i>
+								<span class="hide">증권번호</span>
+								<span>LA123456789</span>
+							</div>
+							<div class="txt">
+								<dl>
+									<dt>계약자</dt>
+									<dd class="info2">
+										<strong data-masking="true">하*미</strong>
+										<span>1990.02.30</span>
+										<span>여</span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>피보험자</dt>
+									<dd class="info2">
+										<strong data-masking="true">하*미</strong>
+										<span>1990.02.30</span>
+										<span>여</span>
+										외 2명
+									</dd>
+								</dl>
+								<dl>
+									<dt class="hide">계약일자</dt>
+									<dd>2020.01.30~2022.02.22(해지일 2020.01.30)</dd>
+								</dl>
+							</div>
+							<div class="info-con2">
+								<dl>
+									<dt>보험료</dt>
+									<dd class="data-num1"><strong>100,000</strong><span>원</span>(월납)</dd>
+								</dl>
+								<dl>
+									<dt>납입사항</dt>
+									<dd>124회(2021.06)</dd>
+								</dl>
+							</div>
+							<a href="javascript:void(0);" class="link">상세보기</a>
+						</li>
+					</ul>
+
+					<div class="area-btn2">
+						<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+					</div>
+				</div>
+			</section>
+			-->
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

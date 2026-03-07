@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>영업목표 조회 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-01]	1. 표 상단 틀고정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">영업목표조회</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<dl class="form w1">
+						<dt>기준년월<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<span class="date-range2">
+									<input type="text" data-role="start" placeholder="시작월 선택">
+									<span class="util">~</span>
+									<input type="text" data-role="end" placeholder="종료월 선택">
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w2">
+						<dt>조직구분<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>취급자</option>
+								</select>
+                                <input type="text" name="" id="" class="text" style="width:80px;">
+                                <input type="text" name="" id="" class="text" style="width:120px;" disabled>
+                                <button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c3">초기화</button>
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+            <div class="tab-wrap">
+                <ul class="tab1"><!-- 월별 tab이 노출되지 않는 경우 ul.tab1 통채로 히든처리-->
+					<li><a href="#tab1-1">하위조직</a></li>
+					<li><a href="#tab1-2" class="current">월별</a></li>
+				</ul>
+                <div id="tab1-1" class="tab-cont">
+                    <div class="data-table1">
+                        <div class="info1">단위 : 천원</div>
+                        <!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-thead" data-pos="thead">
+							<table>
+								<thead>
+                                    <tr>
+                                        <th scope="col" rowspan="3">조직</th>
+                                        <th scope="col" rowspan="3">채널</th>
+                                        <th scope="col" rowspan="3">합계</th>
+                                        <th scope="col" colspan="6">장기신규</th>
+                                        <th scope="col" rowspan="3">장기계속</th>
+                                        <th scope="col" rowspan="3">일반</th>
+                                        <th scope="col" rowspan="3">자동차</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" rowspan="2">소계</th>
+                                        <th scope="col" colspan="2">납방별</th>
+                                        <th scope="col" colspan="3">보종별</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">월납</th>
+                                        <th scope="col">비월납</th>
+                                        <th scope="col">보장월납</th>
+                                        <th scope="col">재물월납</th>
+                                        <th scope="col">저축월납</th>
+                                    </tr>
+                                </thead>
+							</table>
+						</div>
+						<!-- // [M 2022-11-01] 표 상단 틀고정 -->
+                        <div class="list-table" data-pos="top">
+                            <!--최초 접근시 DATA 없음-->
+                            <div class="nodata" style="display:none;">
+                                아직 실적이 없어요. <br>
+                                조건을 변경해보세요
+                            </div>
+                            <!--조회시 DATA 없음-->
+                            <div class="nodata" style="display:none;">
+                                해당하는 자료가 없어요. <br>
+                                조건을 변경해보세요
+                            </div>
+                            <table>
+                                <colgroup>
+                                    <col style="width:200px;">
+                                    <col style="width:150px;">
+                                    <col style="width:150px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                </colgroup>
+                                <!-- <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="3">조직</th>
+                                        <th scope="col" rowspan="3">채널</th>
+                                        <th scope="col" rowspan="3">합계</th>
+                                        <th scope="col" colspan="6">장기신규</th>
+                                        <th scope="col" rowspan="3">장기계속</th>
+                                        <th scope="col" rowspan="3">일반</th>
+                                        <th scope="col" rowspan="3">자동차</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" rowspan="2">소계</th>
+                                        <th scope="col" colspan="2">납방별</th>
+                                        <th scope="col" colspan="3">보종별</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">월납</th>
+                                        <th scope="col">비월납</th>
+                                        <th scope="col">보장월납</th>
+                                        <th scope="col">재물월납</th>
+                                        <th scope="col">저축월납</th>
+                                    </tr>
+                                </thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+                                <tbody>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">강남사업단</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="total-div" data-pos="bottom">
+                            <table>
+                                <tbody>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">합계</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab1-2" class="tab-cont" style="display:block;">
+                    <div class="data-table1">
+                        <div class="info1">단위 : 천원</div>
+                        <!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-thead" data-pos="thead">
+							<table>
+								<thead>
+                                    <tr>
+                                        <th scope="col" rowspan="3">조직</th>
+                                        <th scope="col" rowspan="3">채널</th>
+                                        <th scope="col" rowspan="3">합계</th>
+                                        <th scope="col" colspan="6">장기신규</th>
+                                        <th scope="col" rowspan="3">장기계속</th>
+                                        <th scope="col" rowspan="3">일반</th>
+                                        <th scope="col" rowspan="3">자동차</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" rowspan="2">소계</th>
+                                        <th scope="col" colspan="2">납방별</th>
+                                        <th scope="col" colspan="3">보종별</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">월납</th>
+                                        <th scope="col">비월납</th>
+                                        <th scope="col">보장월납</th>
+                                        <th scope="col">재물월납</th>
+                                        <th scope="col">저축월납</th>
+                                    </tr>
+                                </thead>
+							</table>
+						</div>
+						<!-- // [M 2022-11-01] 표 상단 틀고정 -->
+                        <div class="list-table" data-pos="top">
+                            <!--최초 접근시 DATA 없음-->
+                            <div class="nodata" style="display:none;">
+                                아직 실적이 없어요. <br>
+                                조건을 변경해보세요
+                            </div>
+                            <!--조회시 DATA 없음-->
+                            <div class="nodata" style="display:none;">
+                                해당하는 자료가 없어요. <br>
+                                조건을 변경해보세요
+                            </div>
+                            <table>
+                                <colgroup>
+                                    <col style="width:200px;">
+                                    <col style="width:150px;">
+                                    <col style="width:150px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                    <col style="width:100px;">
+                                </colgroup>
+                                <!-- <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="3">조직</th>
+                                        <th scope="col" rowspan="3">채널</th>
+                                        <th scope="col" rowspan="3">합계</th>
+                                        <th scope="col" colspan="6">장기신규</th>
+                                        <th scope="col" rowspan="3">장기계속</th>
+                                        <th scope="col" rowspan="3">일반</th>
+                                        <th scope="col" rowspan="3">자동차</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" rowspan="2">소계</th>
+                                        <th scope="col" colspan="2">납방별</th>
+                                        <th scope="col" colspan="3">보종별</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">월납</th>
+                                        <th scope="col">비월납</th>
+                                        <th scope="col">보장월납</th>
+                                        <th scope="col">재물월납</th>
+                                        <th scope="col">저축월납</th>
+                                    </tr>
+                                </thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+                                <tbody>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">2022.04</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="point-row">
+                                        <th scope="row" rowspan="5">2022.05</th>
+                                        <th scope="row">합계</th>
+                                        <td>325,522,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                        <td>293,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">전통</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GA</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">신채널</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">방카</th>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="total-div" data-pos="bottom">
+                            <table>
+                                <tbody>
+                                <tr class="point-row">
+                                    <th scope="row" rowspan="5">전체</th>
+                                    <th scope="row">합계</th>
+                                    <td>325,522,000</td>
+                                    <td>293,000</td>
+                                    <td>293,000</td>
+                                    <td>293,000</td>
+                                    <td>293,000</td>
+                                    <td>293,000</td>
+                                    <td>293,000</td>
+                                    <td>293,000</td>
+                                    <td>293,000</td>
+                                    <td>293,000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">전통</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">GA</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">신채널</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">방카</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <script>
+        _fixTable.init();
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 미성년자 진행 불가 안내 | 동의URL | 가입설계동의 | 고객동의</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1" aria-controls="uiPOPCUS0080L01">다음</button> <!-- [레이어팝업 호출 버튼] -->
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 미성년자 진행 불가 안내 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCUS0080L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>미성년자 진행 불가 안내</h1>
+			<button type="button" data-btn="pop-close">미성년자 진행 불가 안내 닫기</button>
+		</header>
+		<div class="content">
+            <p>미성년자는 고객동의 URL 발송을 이용할 수 없습니다. 다른 인증수단을 선택해주세요.</p>
+			<div class="label-check2">
+				<label>
+					<input type="radio" name="form-radio" checked>
+					<span>고객동의 인증번호 보내기</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>대면동의 진행하기</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1" >확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCUS0080L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPCUS0080L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

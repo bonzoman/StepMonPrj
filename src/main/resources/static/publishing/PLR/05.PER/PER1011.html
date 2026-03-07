@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[T] 장기 | 실시간총실적조회 | 실적관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-19]	1. 타이틀 수정
+						2. 전속지원팀 장기계속의 상세 내용 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>실시간실적조회</h1><!-- [M 2022-10-19] 타이틀 수정 -->
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1">
+			<ul>
+				<li><a href="javascript:void(0);">총괄조회</a></li>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">장기</a></li>
+				<li><a href="javascript:void(0);">일반</a></li>
+				<li><a href="javascript:void(0);">자동차</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [필터 영역] -->
+		<!-- ######################### -->
+		<div class="area-info1 line3">
+			<p>0000.00.00~0000.00.00</p>
+			<div class="side">
+				<button type="button" class="icon-com1 ic18 right">필터</button>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [목록] -->
+		<!-- ######################### -->
+		<div>
+			<h2 class="hide">장기</h2>
+
+			<!-- ### 항목하나 : 기본 ### -->
+			<div>
+				<!-- # 장기신규 # -->
+				<section>
+					<h3 class="tit-sub1">전속지원팀 장기신규</h3>
+					<!-- // -->
+					<div class="area-info2">
+						<strong class="tit">보장</strong>
+						<dl>
+							<dt>목표</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+						</dl>
+						<dl>
+							<dt>실적(달성률)</dt>
+							<dd>
+								<div class="data-num1"><strong>000,000,000</strong><span>천원</span></div>
+								<div class="data-num1 txt-c4">-<strong>00.00</strong><span>%</span></div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>전월대비</dt>
+							<dd class="data-num1">-<strong>00.00</strong><span>%</span></dd>
+						</dl>
+						<!-- 2023-01-03 추가 -->
+						<dl>
+							<dt>동영업일대비</dt>
+							<dd class="data-num1">-<strong>24,775,332</strong><span>천원</span></dd>
+						</dl>
+						<!-- //2023-01-03 추가 -->
+					</div>
+					<!-- // -->
+					<div class="area-toggle3" data-autoset="toggle">
+						<dl>
+							<dt class="tit">
+								<strong>상세</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</dt>
+							<dd data-toggle="content" class="info-con2">
+								<ul>
+									<li>
+										<div>전월실적</div>
+										<div class="data-num1"><strong>000,000,000</strong><span>천원</span></div>
+									</li>
+									<li>
+										<div>전년실적<br>(신장률)</div>
+										<div class="data-num1">
+											<strong>000,000,000</strong><span>천원</span>
+											<em class="txt-c1">-00.00%</em>
+										</div>
+									</li>
+									<!-- 2023-01-03 추가 -->
+									<li>
+										<div>전월동영업일</div>
+										<div class="data-num1"><strong>000,000,000</strong><span>천원</span></div>
+									</li>
+									<!-- //2023-01-03 추가 -->
+								</ul>
+								<!-- 2023-01-03 변경 -->
+								<div class="wrap-section line2">
+									<section>
+										<h4 class="tit-sub2">재물</h4>
+										<!-- // -->
+										<div class="info-con2 t2">
+											<dl>
+												<dt>목표</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+											</dl>
+											<dl>
+												<dt>실적(달성률)</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span><em class="txt-c1">-00.00%</em></dd>
+											</dl>
+											<dl>
+												<dt>전월대비</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+											</dl>
+											<dl>
+												<dt>전월실적</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+											</dl>
+											<dl>
+												<dt>전년실적<br>(신장률)</dt>
+												<dd class="data-num1">
+													<strong>000,000,000</strong><span>천원</span>
+													<em class="txt-c1">-00.00%</em>
+												</dd>
+											</dl>
+											<dl>
+												<dt>전월동영업일</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+											</dl>
+											<dl>
+												<dt>동영업일대비</dt>
+												<dd class="data-num1">-<strong>24,775,332</strong><span>천원</span></dd>
+											</dl>
+										</div>
+										<!-- // -->
+									</section>
+			
+									<section>
+										<h4 class="tit-sub2">월납</h4>
+										<div class="info-con2 t2">
+											<dl>
+												<dt>목표</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+											</dl>
+											<dl>
+												<dt>실적(달성률)</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span><em class="txt-c1">00.00%</em></dd>
+											</dl>
+											<dl>
+												<dt>전월대비</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+											</dl>
+											<dl>
+												<dt>전월실적</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+											</dl>
+											<dl>
+												<dt>전년실적<br>(신장률)</dt>
+												<dd class="data-num1">
+													<strong>000,000,000</strong><span>천원</span>
+													<em class="txt-c1">-00.00%</em>
+												</dd>
+											</dl>
+											<dl>
+												<dt>전월동영업일</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+											</dl>
+											<dl>
+												<dt>동영업일대비</dt>
+												<dd class="data-num1">-<strong>24,775,332</strong><span>천원</span></dd>
+											</dl>
+										</div>
+									</section>
+			
+									<section>
+										<h4 class="tit-sub2">비월납</h4>
+										<div class="info-con2 t2">
+											<dl>
+												<dt>목표</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+											</dl>
+											<dl>
+												<dt>실적(달성률)</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span><em class="txt-c1">00.00%</em></dd>
+											</dl>
+											<dl>
+												<dt>전월대비</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+											</dl>
+											<dl>
+												<dt>전월실적</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+											</dl>
+											<dl>
+												<dt>전년실적<br>(신장률)</dt>
+												<dd class="data-num1">
+													<strong>000,000,000</strong><span>천원</span>
+													<em class="txt-c1">-00.00%</em>
+												</dd>
+											</dl>
+											<dl>
+												<dt>전월동영업일</dt>
+												<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+											</dl>
+											<dl>
+												<dt>동영업일대비</dt>
+												<dd class="data-num1">-<strong>24,775,332</strong><span>천원</span></dd>
+											</dl>
+										</div>
+									</section>
+								</div>
+								<!-- //2023-01-03 변경 -->
+							</dd>
+						</dl>
+					</div>
+					<!-- // -->
+					
+				</section>
+
+				<!-- # 장기계속 # -->
+				<section>
+					<h3 class="tit-sub1">전속지원팀 장기계속</h3>
+					<!-- // -->
+					<div class="area-info2">
+						<strong class="tit">소계</strong>
+						<dl>
+							<dt>목표</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+						</dl>
+						<dl>
+							<dt>실적(달성률)</dt>
+							<dd>
+								<div class="data-num1"><strong>000,000,000</strong><span>천원</span></div>
+								<div class="data-num1 txt-c4">-<strong>00.00</strong><span>%</span></div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>전월대비</dt>
+							<dd class="data-num1">-<strong>00.00</strong><span>%</span></dd>
+						</dl>
+					</div>
+					<!-- // -->
+					<div class="area-toggle3" data-autoset="toggle">
+						<dl>
+							<dt class="tit">
+								<strong>상세</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</dt>
+							<!-- [M 2022-10-19] 전속지원팀 장기계속의 상세 내용 수정 -->
+							<dd data-toggle="content" class="info-con2">
+								<ul>
+									<li>
+										<div>전월실적</div>
+										<div class="data-num1"><strong>000,000,000</strong><span>천원</span></div>
+									</li>
+									<li>
+										<div>전년실적<br>(신장률)</div>
+										<div class="data-num1">
+											<strong>000,000,000</strong><span>천원</span>
+											<em class="txt-c1">-00.00%</em>
+										</div>
+									</li>
+								</ul>
+							</dd>
+							<!-- // [M 2022-10-19] 전속지원팀 장기계속의 상세 내용 수정 -->
+						</dl>
+					</div>
+					<!-- // -->
+				</section>
+				<!-- # // # -->
+			</div>
+
+			<!-- ### 항목하나 : 설계사 ### -->
+			<div>
+				<!-- # 장기신규 # -->
+				<section>
+					<h3 class="tit-sub1">하다미 장기신규<span>(345763)</span></h3>
+					<!-- // -->
+					<div class="area-info2">
+						<strong class="tit">보장</strong>
+						<dl>
+							<dt>목표</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+						</dl>
+						<dl>
+							<dt>실적(달성률)</dt>
+							<dd>
+								<div class="data-num1"><strong>000,000,000</strong><span>천원</span></div>
+								<div class="data-num1 txt-c4">-<strong>00.00</strong><span>%</span></div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>전월대비</dt>
+							<dd class="data-num1">-<strong>00.00</strong><span>%</span></dd>
+						</dl>
+					</div>
+					<!-- // -->
+					<div class="area-toggle3" data-autoset="toggle">
+						<dl>
+							<dt class="tit">
+								<strong>상세</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</dt>
+							<dd data-toggle="content" class="info-con2">
+								<ul>
+									<li>
+										<div>전월실적</div>
+										<div class="data-num1"><strong>000,000,000</strong><span>천원</span></div>
+									</li>
+									<li>
+										<div>전년실적<br>(신장률)</div>
+										<div class="data-num1">
+											<strong>000,000,000</strong><span>천원</span>
+											<em class="txt-c1">-00.00%</em>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<!-- // -->
+					<div class="wrap-section line2">
+						<section>
+							<h4 class="tit-sub2">재물</h4>
+							<!-- // -->
+							<div class="info-con2 t2">
+								<dl>
+									<dt>목표</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+								</dl>
+								<dl>
+									<dt>실적(달성률)</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span><em class="txt-c1">-00.00%</em></dd>
+								</dl>
+								<dl>
+									<dt>전월대비</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+								</dl>
+							</div>
+							<!-- // -->
+							<div class="area-toggle3" data-autoset="toggle">
+								<dl>
+									<dt class="tit">
+										<strong>상세</strong>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</dt>
+									<dd data-toggle="content" class="info-con2 t2">
+										<ul>
+											<li>
+												<div>전월실적</div>
+												<div class="data-num1"><strong>000,000,000</strong><span>천원</span></div>
+											</li>
+											<li>
+												<div>전년실적<br>(신장률)</div>
+												<div class="data-num1">
+													<strong>000,000,000</strong><span>천원</span>
+													<em class="txt-c1">-00.00%</em>
+												</div>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<!-- // -->
+						</section>
+
+						<section>
+							<h4 class="tit-sub2">월납</h4>
+							<div class="info-con2 t2">
+								<dl>
+									<dt>목표</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+								</dl>
+								<dl>
+									<dt>실적(달성률)</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span><em class="txt-c1">00.00%</em></dd>
+								</dl>
+								<dl>
+									<dt>전월대비</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+								</dl>
+							</div>
+							<!-- // -->
+							<div class="area-toggle3" data-autoset="toggle">
+								<dl>
+									<dt class="tit">
+										<strong>상세</strong>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</dt>
+									<dd data-toggle="content" class="info-con2 t2">
+										<ul>
+											<li>
+												<div>전월실적</div>
+												<div class="data-num1"><strong>000,000,000</strong><span>천원</span></div>
+											</li>
+											<li>
+												<div>전년실적<br>(신장률)</div>
+												<div class="data-num1">
+													<strong>000,000,000</strong><span>천원</span>
+													<em class="txt-c1">-00.00%</em>
+												</div>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<!-- // -->
+						</section>
+
+						<section>
+							<h4 class="tit-sub2">비월납</h4>
+							<div class="info-con2 t2">
+								<dl>
+									<dt>목표</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+								</dl>
+								<dl>
+									<dt>실적(달성률)</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span><em class="txt-c1">00.00%</em></dd>
+								</dl>
+								<dl>
+									<dt>전월대비</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+								</dl>
+							</div>
+							<!-- // -->
+							<div class="area-toggle3" data-autoset="toggle">
+								<dl>
+									<dt class="tit">
+										<strong>상세</strong>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</dt>
+									<dd data-toggle="content" class="info-con2 t2">
+										<ul>
+											<li>
+												<div>전월실적</div>
+												<div class="data-num1"><strong>000,000,000</strong><span>천원</span></div>
+											</li>
+											<li>
+												<div>전년실적<br>(신장률)</div>
+												<div class="data-num1">
+													<strong>000,000,000</strong><span>천원</span>
+													<em class="txt-c1">-00.00%</em>
+												</div>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<!-- // -->
+						</section>
+					</div>
+				</section>
+
+				<!-- # 장기계속 # -->
+				<section>
+					<h3 class="tit-sub1">하다미 장기계속<span>(345763)</span></h3>
+					<!-- // -->
+					<div class="area-info2">
+						<strong class="tit">소계</strong>
+						<dl>
+							<dt>목표</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+						</dl>
+						<dl>
+							<dt>실적(달성률)</dt>
+							<dd>
+								<div class="data-num1"><strong>000,000,000</strong><span>천원</span></div>
+								<div class="data-num1 txt-c4">-<strong>00.00</strong><span>%</span></div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>전월대비</dt>
+							<dd class="data-num1">-<strong>00.00</strong><span>%</span></dd>
+						</dl>
+					</div>
+					<!-- // -->
+					<div class="area-toggle3" data-autoset="toggle">
+						<dl>
+							<dt class="tit">
+								<strong>상세</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</dt>
+							<!-- [M 2022-10-19] 전속지원팀 장기계속의 상세 내용 수정 -->
+							<dd data-toggle="content" class="info-con2">
+								<ul>
+									<li>
+										<div>전월실적</div>
+										<div class="data-num1"><strong>000,000,000</strong><span>천원</span></div>
+									</li>
+									<li>
+										<div>전년실적<br>(신장률)</div>
+										<div class="data-num1">
+											<strong>000,000,000</strong><span>천원</span>
+											<em class="txt-c1">-00.00%</em>
+										</div>
+									</li>
+								</ul>
+							</dd>
+							<!-- // [M 2022-10-19] 전속지원팀 장기계속의 상세 내용 수정 -->
+						</dl>
+					</div>
+					<!-- // -->
+				</section>
+				<!-- # // # -->
+			</div>
+
+			<!-- ### 더보기(현재페이지/총페이지) ### -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<a href="javascript:void(0);" class="btn-action c1">수수료환산실적</a>
+		</div>
+		<!-- ######################### -->
+	</div>
+</main>
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

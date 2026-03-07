@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L]탈퇴확인 | 나의정보 | 도입</title>
+<link rel="stylesheet" href="../../resource/css/common.css">
+<link rel="stylesheet" href="../../resource/css/content.css">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1" aria-controls="uiPOPCOM2130_L01">탈퇴</button> <!-- [샘플 : 레이어팝업 호출 버튼] -->
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 메인 관심사 변경 권유 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCOM2130_L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>탈퇴확인</h1>
+			<button type="button" data-btn="pop-close">탈퇴확인 닫기</button>
+		</header>
+		<div class="content">
+			<div class="mes-t3">
+				<p>탈퇴하시면 적립한 포인트가 사라져요. <br>
+                    let: 도입 APP을 탈퇴하시겠습니까?</p>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action">탈퇴</button>
+			<button type="button" class="btn-action c1" data-btn="pop-close">취소</button>
+		</footer>
+	</article>
+</div>
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCOM2130_L01',{
+		callback_after : function(){
+			console.log('닫기이벤트')
+		}
+	});
+
+	//레이어팝업 강제오픈
+	$('#uiPOPCOM2130_L01').trigger('outputOpen');
+//-->
+</script>
+<!-- ################################################### -->
+</body>
+</html>

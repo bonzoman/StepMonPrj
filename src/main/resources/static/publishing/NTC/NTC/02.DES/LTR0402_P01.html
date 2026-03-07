@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 질병검색 | 질병상세고지 | 가입설계청약</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>질병 검색</h1>
+			<button type="button" data-btn="pop-close">질병 검색 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [검색영역] 질병검색 -->
+			<!-- ######################### -->
+			<fieldset class="form-search1" data-sticky="top" data-scroll-stuck="1">
+				<legend>질병검색</legend>
+
+				<!-- # 검색어입력 # -->
+				<div class="text">
+					<input type="search" title="질병검색어" value="당뇨" placeholder="검색어를 입력해주세요.">
+					<button type="button" class="icon-com1 ic2">검색</button>
+				</div>
+
+				<!-- # 주요질병키워드 # -->
+				<div class="area-btn4" data-scroll="btn">
+					<button type="button" class="btn-t1 c2">암</button>
+					<button type="button" class="btn-t1 c2">백혈병</button>
+					<button type="button" class="btn-t1 c2">고혈압</button>
+					<button type="button" class="btn-t1 c2">협심증</button>
+					<button type="button" class="btn-t1 c2">심근경색</button>
+					<button type="button" class="btn-t1 c2 active" title="선택됨">당뇨병</button> <!-- 선택됨 -->
+					<button type="button" class="btn-t1 c2">심정판막증</button>
+					<button type="button" class="btn-t1 c2">간경화증</button>
+					<button type="button" class="btn-t1 c2">뇌졸중증</button>
+					<button type="button" class="btn-t1 c2">직장&middot;항문 질환</button>
+				</div>
+				<!-- # // # -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [검색결과] 결과없음 -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p>
+					<strong>입력한 질병이 없습니다.</strong>
+					<span>검색어를 바꾸어 검색해주세요.</span>
+				</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [검색결과] 목록 -->
+			<!-- ######################### -->
+			<!-- # 건수 # -->
+			<div class="area-info1"><p>검색결과 <strong>00건</strong></p></div>
+
+			<!-- # 목록 : 디폴트 10개 목록 # -->
+			<div class="info-data1">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" name="uiKCD8" value="00" data-name="질병명">
+								<span>[질병코드] 질병명</span>
+							</label>
+						</div>
+						<div class="txt">계통/분류</div>
+						<div class="data1">유사질병명</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" name="uiKCD8" value="E11" data-name="당뇨">
+								<span>[E11] 당뇨</span>
+							</label>
+						</div>
+						<div class="txt">내분비 &middot; 물질대사계</div>
+						<div class="data1">2형 당뇨병, 영양실조 관련 당뇨병, 합병증 동반 당뇨병, 기타 당뇨병, 상세불명 당뇨병</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" name="uiKCD8" value="Z80" data-name="가족력">
+								<span>[Z80] 가족력</span>
+							</label>
+						</div>
+						<div class="txt">기타</div>
+						<div class="data1">암 가족력, 정신장애 가족력, 뇌졸증 가족력, 심장병 가족력, 당뇨병 가족력, 기타 질병 가족력</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" name="uiKCD8" value="G59" data-name="달리 분류된 질환에서의 단일신경병증">
+								<span>[G59] 달리 분류된 질환에서의 단일신경병증</span>
+							</label>
+						</div>
+						<div class="txt">기타</div>
+						<div class="data1">당뇨병성 단일신경병증</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- 더보기(현재페이지/총페이지) -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(1/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [검색결과] 선택된 질병 -->
+			<!-- ######################### -->
+			<div class="area-info3" data-sticky="bottom">
+				<button type="button" data-toggle="btn" aria-expanded="false">선택된 질병 열기</button>
+				<dl data-toggle="content">
+					<dt>
+						선택된 질병
+						<button type="button" data-toggle="close">선택된 질병 닫기</button>
+					</dt>
+					<dd class="data-word2 t1"><!--<button type="button" class="icon-com1 ic6 right" data-value="00">#선택된 질병</button>--></dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c3">초기화</button>
+				<button type="button" class="btn-action c1">선택완료</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+
+<script>
+//<!--
+	/* **********************************************************
+	* 샘플 : 선택된 질병
+	* value="", name="uiKCD8", data-name=""는 임시이며, 변경가능
+	********************************************************** */
+	//변수선언
+	var _el_wrap = $('.area-info3 .data-word2'); //질병 선택한 이름 적용할 영역
+
+	//토글선언
+	var _el_toggle = $plugin.togglecon('.area-info3',{
+		selector_group:false,
+		selector_close:'[data-toggle="close"]'
+	});
+
+	//질병선택
+	$('[name="uiKCD8"]').on('click',function(){
+		var _el_txt = $(this).attr('data-name');
+		var _el_value = $(this).val();
+		var _el_checked = $('[name="uiKCD8"]:checked').length;
+
+		if($(this).prop('checked')){ //체크되었을때
+			_el_wrap.append('<button type="button" class="icon-com1 ic6 right" data-value="'+ _el_value +'">'+ _el_txt +'</button>');
+			_el_toggle.outputOpen(); //선택된 질병 열기
+		}else{ //체크안되었을때
+			$('[data-value="'+ _el_value +'"]').remove();
+			if(_el_checked == 0) _el_toggle.outputClose(); //선택된 질병 닫기
+		};
+	});
+
+	//선택된 질병에서 질병 삭제
+	$(document).on('click','.area-info3 .data-word2 > button',function(){
+		var _el_value = $(this).attr('data-value');
+		$('[value="'+ _el_value +'"]').prop('checked', false);
+		$(this).remove();
+
+		var _el_checked = $('[name="uiKCD8"]:checked').length;
+		if(_el_checked == 0) _el_toggle.outputClose(); //선택된 질병 닫기
+	});
+//-->
+</script>
+</body>
+</html>

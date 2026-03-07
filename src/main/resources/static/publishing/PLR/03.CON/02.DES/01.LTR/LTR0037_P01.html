@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 실손의료보험추가 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>실손의료보험추가</h1>
+			<button type="button" data-btn="pop-close">실손의료보험추가 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [보험정보]-->
+			<!-- ######################### -->
+			<div class="info-summary2 t3">
+				<h2 class="tit">let:care 실손의료보험IV(2107)</h2>
+
+				<!-- [설계번호] -->
+				<dl class="txt">
+					<dt>설계번호</dt>
+					<dd>-</dd>
+				</dl>
+
+				<!-- [보험시기/피보험자] -->
+				<div class="data2">
+					<dl>
+						<dt>보험시기 </dt>
+						<dd>2022.05.25~2023.05.24</dd>
+					</dl>
+					<dl>
+						<dt>피보험자</dt>
+						<dd>하다미/35세/여/1급(사무직)</dd>
+					</dl>
+				</div>
+
+				<!-- [기본정보] -->
+				<div class="info-con1">
+					<dl>
+						<dt>납입만기</dt>
+						<dd>전기납/05년만기</dd>
+					</dl>
+					<dl>
+						<dt>보험기간</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>진단심사제외<br>여부</dt>
+						<dd>
+							<div class="label-check1">
+								<label>
+									<input type="checkbox" checked>
+									<span>3억원 이상</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>의료비부담</dt>
+						<dd>
+							<div class="label-check1">
+								<label>
+									<input type="checkbox" checked>
+									<span>4세대 실손</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>의료수급권</dt>
+						<dd>
+							<div class="label-check1 simple">
+								<label>
+									<input type="checkbox" checked>
+									<span>의료수급권 체크</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>최초취득일</dt>
+						<dd>
+							<!-- [CASE] 의료수급권 체크시 활성화 -->
+							<div class="input-date1">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+									<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" readonly>
+								</span>
+							</div>
+
+							<!-- [CASE] 의료수급권 미체크시 비활성화 -->
+							<div class="input-date1">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>날짜 선택</button>
+									<input type="text" class="text" title="날짜 선택" placeholder="" readonly>
+								</span>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 제거버튼 # -->
+					<div class="area-btn3">
+						<button type="button" class="btn-sub3 c2">실손의료비 상품제거</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [담보내역] -->
+			<!-- ######################### -->
+			<fieldset class="label-con1">
+				<legend> 담보 선택 </legend>
+
+				<!-- // -->
+				<div class="item check"> <!-- [D] 선택된 경우 -->
+					<div class="data1">
+						<div class="label-check1 simple">
+							<label>
+								<input type="checkbox" checked>
+								<span>선택</span>
+							</label>
+						</div>
+						<strong>질병급여형(갱)</strong>
+					</div>
+					<div class="data2">
+						<dl class="info1">
+							<dt>보험기간</dt>
+							<dd>100세만기</dd>
+							<dt>납입기간</dt>
+							<dd>20년납</dd>
+						</dl>
+						<dl class="info2">
+							<dt>보험료</dt>
+							<dd>6,800원</dd>
+							<dt>가입금액</dt>
+							<dd>3억 5,000만원</dd>
+						</dl>
+					</div>
+					<a href="javascript:void(0);">담보상세 보기</a>
+				</div>
+				<!-- // -->
+				<div class="item">
+					<div class="data1">
+						<div class="label-check1 simple">
+							<label>
+								<input type="checkbox">
+								<span>선택</span>
+							</label>
+						</div>
+						<strong>화재손해보장제외 화재배상보장제외특별약관</strong>
+					</div>
+					<div class="data2">
+						<dl class="info1">
+							<dt>보험기간</dt>
+							<dd>100세만기</dd>
+							<dt>납입기간</dt>
+							<dd>20년납</dd>
+						</dl>
+						<dl class="info2">
+							<dt>보험료</dt>
+							<dd>6,800원</dd>
+							<dt>가입금액</dt>
+							<dd>2,000원</dd>
+						</dl>
+					</div>
+					<a href="javascript:void(0);">담보상세 보기</a>
+				</div>
+				<!-- // -->
+				<div class="item">
+					<div class="data1">
+						<div class="label-check1 simple">
+							<label>
+								<input type="checkbox">
+								<span>선택</span>
+							</label>
+						</div>
+						<strong>상해급여형(갱)</strong>
+					</div>
+					<div class="data2">
+						<dl class="info1">
+							<dt>보험기간</dt>
+							<dd>100세만기</dd>
+							<dt>납입기간</dt>
+							<dd>20년납</dd>
+						</dl>
+						<dl class="info2">
+							<dt>보험료</dt>
+							<dd>15,000원</dd>
+							<dt>가입금액</dt>
+							<dd>65,000원</dd>
+						</dl>
+					</div>
+					<a href="javascript:void(0);">담보상세 보기</a>
+				</div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">다음</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//샘플 : 담보선택
+	$(document).on('change','.item input',function(){
+		if($(this).prop('checked') === true){
+			$(this).parents('.item').addClass('check');
+		}else{
+			$(this).parents('.item').removeClass('check');
+		}
+	});
+//-->
+</script>
+</body>
+</html>

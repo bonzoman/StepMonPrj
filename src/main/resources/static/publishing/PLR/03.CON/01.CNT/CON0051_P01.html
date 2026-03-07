@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[T] 목적물 | [P] 담보상세 | 부활청약 | 장기 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>담보상세</h1>
+			<button type="button" data-btn="pop-close">담보상세 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">			
+			<!-- ######################### -->
+			<!-- [탭버튼] -->
+			<!-- ######################### -->
+			<div class="nav-tab1" data-sticky="top">
+				<ul>
+					<li><a href="javascript:void(0);">피보험자</a></li>
+					<li class="active"><a href="javascript:void(0);" aria-current="page">목적물</a></li>
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] -->
+			<!-- ######################### -->
+			<div>
+				<h2 class="hide">목적물</h2>
+
+				<div class="label-check1">
+					<label>
+						<input type="checkbox">
+						<span>모두 펼침</span>
+					</label>
+				</div>
+				
+				<div class="area-toggle1">
+					<!-- // -->
+					<section>
+						<header class="tit">
+							<h3 class="ellipsis">충북 청주시 청원구 오창읍 두 오창읍 두 오창읍 두</h3>
+							<dl class="data2">
+								<dt>연번</dt>
+								<dd>1</dd>
+								<dt>소유자</dt>
+								<dd>하다미</dd>
+							</dl>
+							<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+						</header>
+						<div data-toggle="content">
+							<!-- ### 정보 ### -->
+							<div class="info-con2">
+								<dl>
+									<dt>영위직종</dt>
+									<dd>(2)일반업무시설</dd>
+								</dl>
+								<dl>
+									<dt>요율</dt>
+									<dd>창고시설 (1)보통품</dd>
+								</dl>
+							</div>
+
+							<!-- ### 목적물사항 ### -->
+							<h4 class="tit-sub2">목적물사항</h4>
+							<div class="list-con1">
+								<ul>
+									<!-- // -->
+									<li>
+										<a href="javascript:void(0);">
+											<strong>건물(2급)</strong>
+											<div>
+												<span>보험 5년 만기</span>
+												<span>납입기간 5년납</span>
+											</div>
+											<div>
+												<span>가입금액 100,000,000원</span>
+												<span>보험료 17,000원</span>
+											</div>
+										</a>
+									</li>
+									<!-- // -->
+									<li>
+										<a href="javascript:void(0);">
+											<strong>시설(2급)</strong>
+											<div>
+												<span>보험 5년 만기</span>
+												<span>납입기간 5년납</span>
+											</div>
+											<div>
+												<span>가입금액 200,000,000원</span>
+												<span>보험료 3,400원</span>
+											</div>
+										</a>
+									</li>
+									<!-- // -->
+								</ul>
+							</div>
+							
+							<!-- ### 담보사항 ### -->
+							<h4 class="tit-sub2">담보사항</h4>
+							<div class="list-con1">
+								<ul>
+									<!-- // -->
+									<li>
+										<a href="javascript:void(0);">
+											<strong>화재(폭발포함)배상책임</strong>
+											<span>담보가입금액 10,000만원</span>
+										</a>
+									</li>
+									<!-- // -->
+									<li>
+										<a href="javascript:void(0);">
+											<strong>임대인배상책임(50만원공제)<br>(주택내화재폭발제외)</strong>
+											<span>담보가입금액 10,000만원</span>
+										</a>
+									</li>
+									<!-- // -->
+									<li>
+										<a href="javascript:void(0);">
+											<strong>음식물배상책임</strong>
+											<span>담보가입금액 10,000만원</span>
+										</a>
+									</li>
+									<!-- // -->
+									<li>
+										<a href="javascript:void(0);">
+											<strong>가스사고배상책임</strong>
+											<span>담보가입금액 10,000만원</span>
+										</a>
+									</li>
+									<!-- // -->
+								</ul>
+							</div>
+							<!-- ### // ### -->
+						</div>
+					</section>
+					<!-- // -->
+					<section>
+						<header class="tit">
+							<h3 class="ellipsis">전남 나주시 월정1길 20</h3>
+							<dl class="data2">
+								<dt>연번</dt>
+								<dd>9</dd>
+								<dt>소유자</dt>
+								<dd>하다미</dd>
+							</dl>
+							<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+						</header>
+						<div data-toggle="content">
+							<div class="info-con2">
+								<dl>
+									<dt>영위직종</dt>
+									<dd>(2)일반업무시설</dd>
+								</dl>
+								<dl>
+									<dt>요율</dt>
+									<dd>창고시설 (1)보통품</dd>
+								</dl>
+							</div>
+							<h4 class="tit-sub2">목적물사항</h4>
+							<div class="list-con1">
+								<ul>
+									<li>
+										<a href="javascript:void(0);">
+											<strong>건물(2급)</strong>
+											<div>
+												<span>보험 5년 만기</span>
+												<span>납입기간 5년납</span>
+											</div>
+											<div>
+												<span>가입금액 100,000,000원</span>
+												<span>보험료 17,000원</span>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">
+											<strong>시설(2급)</strong>
+											<div>
+												<span>보험 5년 만기</span>
+												<span>납입기간 5년납</span>
+											</div>
+											<div>
+												<span>가입금액 200,000,000원</span>
+												<span>보험료 3,400원</span>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<h4 class="tit-sub2">담보사항</h4>
+							<div class="list-con1">
+								<ul>
+									<li>
+										<a href="javascript:void(0);">
+											<strong>화재(폭발포함)배상책임</strong>
+											<span>담보가입금액 10,000만원</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">
+											<strong>임대인배상책임(50만원공제)<br>(주택내화재폭발제외)</strong>
+											<span>담보가입금액 10,000만원</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">
+											<strong>음식물배상책임</strong>
+											<span>담보가입금액 10,000만원</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">
+											<strong>가스사고배상책임</strong>
+											<span>담보가입금액 10,000만원</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<!-- // -->
+				</div>
+			</div>
+			<!-- ######################### -->			
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+
+	/* ************************************
+	* 샘플 : 전체펼침/닫기 스크립트
+	************************************ */
+	//토글선언
+	var _toggle = $plugin.togglecon('.area-toggle1 > section',{
+		selector_group : false,
+		callback_load : function(e){
+			var _total = $(e.this_wrapper).parents('.area-toggle1').find('section').length;
+			var _active = $(e.this_wrapper).parents('.area-toggle1').find('> .active').length;
+			if(_total == _active) $(".label-check1 input").prop('checked',true);
+		},
+		callback_after :function(){
+			$(".label-check1 input").prop('checked',false);
+		}
+	});
+	
+	//샘플 : 모두펼침
+	$(".label-check1 input").on("change", function(){
+		const _checked = $(this).is(":checked");
+		const _toggles = $(".area-toggle1").find("section");
+		_checked ? _toggles.addClass("active") : _toggles.removeClass("active");
+	});
+//-->
+</script>
+</body>
+</html>

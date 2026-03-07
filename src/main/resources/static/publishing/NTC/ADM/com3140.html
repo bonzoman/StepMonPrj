@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>관리자 추가 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>관리자 추가</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="tit-sub2">
+            <h3 class="">관리자 정보</h3>
+            <div class="sub">
+                <button type="button" class="btn-sub1 c3">삭제</button>
+            </div>
+		</div>
+		<div class="tbl-write1">
+			<table>
+				<colgroup>
+					<col style="width:150px;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">권한<em class="imp"><span>필수</span></em></th>
+						<td>
+                            <label class="label-check">
+                                <input type="checkbox" name="gh1" checked="checked">
+                                <span>서브관리자</span>
+                            </label>
+                            <label class="label-check">
+                                <input type="checkbox" name="gh1">
+                                <span>교육</span>
+                            </label>
+                            <label class="label-check">
+                                <input type="checkbox" name="gh1">
+                                <span>소득혜택</span>
+                            </label>
+                            <label class="label-check">
+                                <input type="checkbox" name="gh1">
+                                <span>렛톡</span>
+                            </label>
+                            <label class="label-check">
+                                <input type="checkbox" name="gh1">
+                                <span>렛워크</span>
+                            </label>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">이름<em class="imp"><span>필수</span></em></th>
+						<td>
+							<input type="text" name="" id="" class="text" style="width:30%;" readonly>
+							<button type="button" class="btn-sub1 c2">직원찾기</button>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">소속<em class="imp"><span>필수</span></em></th>
+						<td>
+							<input type="text" name="" id="" class="text" style="width:30%;"  readonly>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">사번<em class="imp"><span>필수</span></em></th>
+						<td>
+							<input type="text" name="" id="" class="text" style="width:30%;" readonly>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c1">저장</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

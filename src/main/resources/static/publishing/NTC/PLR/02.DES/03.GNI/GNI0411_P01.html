@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>가입제안서_[P] 서류전송 | 가입설계조회 | 일반보험</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-22]	① 알림톡 삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>서류발송</h1>
+			<button type="button" data-btn="pop-close">서류발송 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 보험정보 -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+				<div class="info">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+				</div>
+				<div class="data2">
+					<dl>
+						<dt>계약자</dt>
+						<dd class="data-info2"><strong>공지철</strong><span><span>1978.12.28</span><span>남</span></span></dd>
+					</dl>
+					<dl>
+						<dt>피보험자</dt>
+						<dd class="data-info2"><strong>하다미</strong><span><span>1978.12.28</span><span>여</span></span></dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [진행상태] STEP 01 -->
+			<!-- ######################### -->
+			<div class="info-step1" data-autoset="toggle" data-sticky="top">
+				<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+				<ol data-toggle="content">
+					<li aria-current="step"><span>01. 서류 및 발송방법 선택</span></li>
+					<li><span>02. 정보입력 및 확인</span></li>
+				</ol>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [본문영역] 서류 및 발송방법 선택  -->
+			<!-- ######################### -->
+			<div class="tit-section2 t1">
+				<p>서류 및 발송방법을<br>선택해주세요.</p>
+			</div>
+
+			<!-- # [서류 선택] # -->
+			<div class="form-agree1">
+				<!-- // -->
+				<div class="label-check1">
+					<button type="button">전체선택</button>
+				</div>
+				<!-- // -->
+				<fieldset>
+					<legend>가입제안서</legend>
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>가입제안서</span>
+							<em class="icon-txt2 ic1 side">인쇄</em>
+						</label>
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset>
+					<legend>계약자용</legend>
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>계약자용</span>
+						</label>
+					</div>
+					<div class="label-check2">
+						<label>
+							<input type="checkbox">
+							<span>청약서(계약자용)</span>
+							<em class="icon-txt2 ic1 side">인쇄</em>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>청약서(회사보관용)</span>
+							<em class="icon-txt2 ic1 side">인쇄</em>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>청약서(취급자용)</span>
+							<em class="icon-txt2 ic4 t1 side">미인쇄</em>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>상품설명서(화특전체) - 계약자용</span>
+							<em class="icon-txt2 ic4 t1 side">미인쇄</em>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>상품설명서(화특전체) - 회사보관용</span>
+							<em class="icon-txt2 ic1 side">인쇄</em>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>상품설명서(화특전체) - 취급자용</span>
+							<em class="icon-txt2 ic1 side">인쇄</em>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>계약체결이행동의서</span>
+							<em class="icon-txt2 ic1 side">인쇄</em>
+						</label>
+					</div>
+					<!-- # 필수 스캔서류 # -->
+					<div class="mes-info2 box">
+						<p>필수 스캔서류: 청약서, 상품설명서</p>
+					</div>
+				</fieldset>
+				<!-- // -->
+			</div>
+
+			<!-- # [발송방법 선택] # -->
+			<fieldset class="form-wrap1">
+				<legend>필수 선택</legend>
+				<dl class="form">
+					<dt>발송방법(복수선택가능) <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="label-check1">
+							<!-- 2022-11-22 삭제 -->
+							<!-- <label>
+								<input type="checkbox" checked>
+								<span>알림톡</span>
+							</label> -->
+							<!-- //2022-11-22 삭제 -->
+							<label>
+								<input type="checkbox" checked>
+								<span>이메일</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>팩스</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">다음</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

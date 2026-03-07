@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>노하우수정 | No.1 설계사 | 노하우 | 커뮤니티</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-19]	① 고객정보/ 판매노하우 텍스트 옆에 (Tip1) / (Tip2) 추가
+	*	[M 2022-10-04]	① 계약정보 수정, 플랜소개 추가
+						② class명 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>No.1 노하우 수정</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단문구] -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>작성한 노하우내용을<br>수정해주세요.</p>
+			<!-- [M 2022-07-26] 버튼삭제
+			<div class="area-btn4">
+				<a href="javascript:void(0);" class="btn-sub3 c2">노하우 작성 가이드</a>
+			</div>
+			-->
+		</div>
+
+		<!-- [M 2022-10-04]	계약정보 수정, 플랜소개 추가 -->
+		<!-- ######################### -->
+		<!-- [계약정보] -->
+		<!-- ######################### -->
+		<div class="info-data2">
+			<dl>
+				<dt class="tit">더끌림 건강보험</dt>
+				<dd class="data1">
+					<dl>
+						<dt>연령</dt>
+						<dd class="data-num1"><strong>66~70</strong><span>세 대상</span></dd>
+					</dl>
+					<dl>
+						<dt>남자 보험료</dt>
+						<dd class="data-num1">월 <strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+					<dl>
+						<dt>여자 보험료</dt>
+						<dd class="data-num1">월 <strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+				</dd>
+				<!-- // -->
+				<dd class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1 c1">특약확인</a>
+				</dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [플랜소개] -->
+		<!-- ######################### -->
+		<h2 class="tit-sub1">플랜소개</h2>
+		<div class="tbl-data1 t1">
+			<table>
+				<caption class="tit-sub2">내생애 성공플랜</caption>
+				<colgroup>
+					<col style="width:33%">
+					<col style="width:33%">
+					<col style="width:33%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">납입면제</th>
+						<th scope="col">보험기간</th>
+						<th scope="col">납입주기</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>있음</strong></td>
+						<td><strong>100세만기</strong></td>
+						<td><strong>20년납</strong></td>
+					</tr>
+				</tbody>
+			</table>
+		</div> 
+		<!-- // -->
+
+		<!-- ######################### -->
+		<!-- [내용입력] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1 line2"><!-- [M 2022-10-04] class 변경 line -> line2	-->
+			<legend>노하우 수정(필수항목 입력 필수)</legend>
+
+			<!-- # 제목 # -->
+			<dl class="form">
+				<dt>제목 <i class="icon-required2">필수</i></dt>
+				<dd><input type="text" class="text" title="제목" maxlength="30" placeholder="제목을 입력해주세요." value="사회초년생을 위한 저렴한 보험소개"></dd>
+			</dl>
+
+			<!-- # 본인소개 내용 # -->
+			<dl class="form">
+				<dt>본인소개 <i class="icon-required2">필수</i></dt>
+				<dd>
+					<data class="text disabled" value="상품명 연령대 대상 판매1등">"상품명" 연령대 대상 판매1등</data>
+					<div class="textarea">
+						<textarea cols="50" rows="3" title="본인소개" placeholder="설계사님에 대한 소개글을 간략히 적어주세요.">60대 이상 고객님들의 마음을 잘 아는 20대 설계사 이지영입니다. 걱정되는 담보만 집중하기 않고 다양한 위험상황에 대비해야 합니다.</textarea>
+						<span class="util2"><strong>0</strong>/250자</span>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 판매 TIP 내용 # -->
+			<dl class="form">
+				<dt>고객정보 <span>(Tip1)</span> <i class="icon-required2">필수</i></dt> <!-- [M 2022-08-19] ① 문구추가 -->
+				<dd>
+					<div class="textarea">
+						<textarea cols="50" rows="3" title="고객정보" placeholder="선택하신 상품의 대상이 되는 고객의 특징과 니즈, 그리고 해당연령에게 추천한 이유를 작성해주세요."></textarea>
+						<span class="util2"><strong>0</strong>/4000자</span>
+					</div>
+				</dd>
+			</dl>
+			<!-- // -->
+			<dl class="form">
+				<dt>판매 노하우 <span>(Tip2)</span>  <i class="icon-required2">필수</i></dt> <!-- [M 2022-08-19] ① 문구추가 -->
+				<dd>
+					<div class="textarea">
+						<textarea cols="50" rows="3" title="판매 TIP2" placeholder="담보구성과 납기, 만기를 위 상품과 같이 설정한 이유를 작성해주세요."></textarea>
+						<span class="util2"><strong>0</strong>/4000자</span>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 해시태그 # -->
+			<dl class="form">
+				<dt>해시태그(최대 4개)</dt> <!-- [M 2022-07-19] 문구변경 -->
+				<dd>
+					<div class="data-word2 box disabled">
+						<data value="해시태그">#해시태그</data>
+						<data value="해시태그">#해시태그</data>
+						<data value="해시태그">#해시태그</data>
+						<data value="해시태그">#해시태그</data>
+					</div>
+				</dd>
+				<dd class="side">
+					<a href="javascript:void(0);" class="btn-sub3 c2">추가</a>
+				</dd>
+			</dl>
+
+			<!-- # 이미지 첨부 # -->
+			<dl class="form">
+				<dt>이미지 첨부 <a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt>
+				<dd class="data-file1">
+					<ul>
+						<li>
+							<span class="img"><img src="../../resource/img/temp/@img_banner1.png" alt=""></span>
+							<span>파일명</span>
+							<span class="sub">00KB</span>
+							<button type="button" class="icon-com1 ic6">삭제</button>
+						</li>
+						<li>
+							<span class="img"><img src="../../resource/img/temp/@img_banner2.png" alt=""></span>
+							<span>유용한 정보활용방법 캡쳐</span>
+							<span class="sub">56KB</span>
+							<button type="button" class="icon-com1 ic6">삭제</button>
+						</li>
+					</ul>
+				</dd>
+				<!-- // -->
+				<dd class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1 ic3">이미지 첨부</a>
+				</dd>
+			</dl>
+
+			<!-- # 관련 컨텐츠 첨부 # -->
+			<dl class="form">
+				<dt>관련 컨텐츠 첨부</dt>
+				<dd class="data-file1">
+					<ul>
+						<li>
+							<span class="img"><img src="../../resource/img/temp/@img_banner1.png" alt=""></span>
+							<span>[교육] 뇌혈관질환 진단비 분석</span>
+							<button type="button" class="icon-com1 ic6">삭제</button>
+						</li>
+						<li>
+							<span class="img"><img src="../../resource/img/temp/@img_banner2.png" alt=""></span>
+							<span>[활동] 지금 보험시장은 진단비 눈치싸움이 눈치싸움이</span>
+							<button type="button" class="icon-com1 ic6">삭제</button>
+						</li>
+					</ul>
+				</dd>
+				<!-- // -->
+				<dd class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1 ic3">관련 컨텐츠 첨부</a>
+				</dd>
+			</dl>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">수정</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 이미지 첨부 안내 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">이미지 첨부 안내사항</dt>
+		<dd>
+			<ul class="txt-bul3">
+				<li>첨부파일의 사이즈는 <strong>000px X 000px</strong>를 준수해주세요.</li>
+				<li>첨부파일은 <strong>png, jpg, jpeg, bmp, gif</strong> 파일만 등록할 수 있어요.</li>
+				<li>첨부파일 용량은 <strong>5M</strong>를 넘을 수 없어요.</li>
+				<li>첨부파일을 등록하면, 퀴즈 내용 하단에 자동으로 노출돼요.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">이미지 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+<!-- ##################################### -->
+</body>
+</html>

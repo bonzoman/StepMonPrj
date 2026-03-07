@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 전유부상세 | 신규설계 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>전유부상세</h1>
+			<button type="button" data-btn="pop-close">전유부상세 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit"><span class="hide">관리건축물대장번호</span>11680-17369</h2>
+				<div class="info">
+					<i class="icon-txt2 t1 ic1">집합</i>
+					<i class="icon-txt2 ic1">표제부</i>
+				</div>
+				<div class="info-con1">
+					<dl>
+						<dt>대지위치</dt>
+						<dd>서울특별시 중구 남창동 51-1번지</dd>
+					</dl>
+					<dl>
+						<dt>도로명 주소</dt>
+						<dd>서울특별시 중구 소월로 3 (남창동) 시그니엘타워 101층</dd>
+					</dl>
+					<dl>
+						<dt>연면적</dt>
+						<dd>1,781.11m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>건물명</dt>
+						<dd>퍼시픽타워</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [전유부 결과 목록] -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<!-- # [전유부분] # -->
+				<h3 class="tit-sub1">전유부분</h3>
+				<div class="area-toggle1" data-autoset="toggle">
+					<ul>                                           
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/10층/철골 및 철근콘크리트조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/10층/철골 및 철근콘크리트조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>업무시설</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>                  
+						<!-- // -->
+					</ul>
+				</div>
+
+				<!-- # [공유부분] # -->
+				<h3 class="tit-sub1">공유부분</h3>
+				<div class="area-toggle1" data-autoset="toggle">
+					<ul>                                           
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/전층/철골 및 철근콘크리트조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/전층/철골 및 철근콘크리트조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>E/V홀,화장실,계단,복도</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>관리,기계,전기실</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>주차장</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>                  
+						<!-- // -->
+					</ul>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c3">이전</button>
+				<button type="button" class="btn-action c1">적용</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

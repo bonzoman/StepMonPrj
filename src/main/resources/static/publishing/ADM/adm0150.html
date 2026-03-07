@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>유지율 조회 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-05]	1. 요약 → 현황통계 텍스트 수정
+	*	[M 2022-11-01]	1. 표 상단 틀고정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">유지율 조회</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1 ">
+				<div class="form-field">
+                    <button class="more-search" type="button"></button>
+					<dl class="form w1">
+						<dt>기준년월<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<input type="text" class="date-m" value="2022.02" placeholder="월 선택">
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w2">
+						<dt>조직구분<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>취급자</option>
+								</select>
+                                <input type="text" name="" id="" class="text" style="width:80px;">
+                                <input type="text" name="" id="" class="text" style="width:120px;" disabled>
+                                <button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+					<div class="search-cont">
+						<dl class="form w3">
+							<dt>회차선택</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr2" checked="checked">
+										<span>13회차</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr2">
+										<span>25회차</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr2">
+										<span>직접입력</span>
+									</label>
+									<input type="text" name="" id="" style="width:72px;" class="text">
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c3">초기화</button>
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+            <div class="tab-wrap">
+                <ul class="tab1">
+					<li><a href="#tab1-1" class="current">현황통계​</a></li><!-- 숨길떄 hide--><!-- [M 2022-10-05] 텍스트 수정 -->
+					<li><a href="#tab1-2">보험료</a></li>
+					<li><a href="#tab1-2">건수</a></li>
+				</ul>
+				<div class="tab-cont" id="tab1-1">
+					<ul class="tab-sub">
+						<li><a href="#" class="current">최하위(지점)</a></li>
+						<li><a href="#">최하위(설계사)</a></li>
+					</ul>
+
+					<h3 class="tit-sub2">유지율 최하위 지점 3개</h3>
+					<div class="data-table1">
+						<div class="info1">
+							단위 : 천원,건,%
+							<div class="tooltip right2">
+								<button type="button"></button>
+								<div class="tooltip-layer">
+									<ul class="list-dot1">
+										<li>유지율 산출 기준 <br>
+											-보장성 <br>
+											-보험료 기준<br>
+											-일시납 제외
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-thead" data-pos="thead">
+							<table>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2">구분</th>
+										<th scope="col" colspan="3">13회차</th>
+									</tr>
+									<tr>
+										<th scope="col" colspan="3">보험료</th>
+									</tr>
+									<tr>
+										<th scope="col">조직명</th>
+										<th scope="col">대상보험료</th>
+										<th scope="col">유지보험료</th>
+										<th scope="col">유지율(%)</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-table" data-pos="top">
+							<table>
+								<colgroup>
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<!-- <thead>
+									<tr>
+										<th scope="col" rowspan="2">구분</th>
+										<th scope="col" colspan="3">13회차</th>
+									</tr>
+									<tr>
+										<th scope="col" colspan="3">보험료</th>
+									</tr>
+									<tr>
+										<th scope="col">조직명</th>
+										<th scope="col">대상보험료</th>
+										<th scope="col">유지보험료</th>
+										<th scope="col">유지율(%)</th>
+									</tr>
+								</thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+								<tbody>
+									<tr>
+										<th scope="row">강남 0지점</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">50</td>
+									</tr>
+									<tr>
+										<th scope="row">강남 0지점</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">50</td>
+									</tr>
+									<tr>
+										<th scope="row">강남 0지점</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">90</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="total-div" data-pos="bottom" data-match="false">
+							<div class="total-btns">
+								<div class="btns1">
+									<button type="button" class="btn-sub1 c3">유지율 건별 조회</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-cont" id="tab1-2">
+				</div>
+			</div>
+        </div>
+	</div>
+    <script>
+		/*
+			@title : 틀 고정 table
+			@description :
+		     grid 를 사용한 data table 이 아닌 관계로 별도로 script 작성
+		     작성된 table 을 복사하여 회면 위에 띄워서 배치 시킨 후 필요한 부분만 보여지게 사이즈를 조정함
+
+
+			.sort 클릭시 복사된 table에 내용이 바로 반영 되지 않으므로 하기 샘플 참조
+
+
+			[.sort 클릭시 발생시킬 이벤트 sample;]
+			틀고정 영역 내용 변경을 위한 scirpt
+
+			table 의 내용 추가,변경,정렬 시 _fixTable.update(); 호출
+
+		*/
+
+		_fixTable.init({
+		});
+    </script>
+</div>
+</body>
+</html>

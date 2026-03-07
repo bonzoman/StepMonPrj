@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]기타특별율 | 설계(개인/업무/영업) | 가입설계 | 자동차보험 | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>기타특별율</h1>
+			<button type="button" data-btn="pop-close">기타특별율 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [기타특별율 대상목록] -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<!-- ### 선택영역 ### -->
+				<fieldset class="label-check1 box2" data-autoset="form">
+					<legend>기타특별율 정보 입력</legend>
+
+					<!-- 항목하나 -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>대상항목 텍스트 노출</span>
+						</label>
+					</div>
+
+					<!-- 항목하나 : 입력 영역 노출 -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>선택 시 입력영역 노출</span>
+						</label>
+						<div class="ui-tabcon">입력 영역 노출</div>
+					</div>
+
+					<!-- 항목하나 : 필수선택 대상 체크 디폴트 : 체크해제 불가 -->
+					<div class="area">
+						<label>
+							<input type="checkbox" checked disabled>
+							<span>포스팅요율</span>
+						</label>
+					</div>
+
+					<!-- 항목하나 : 보험료계산 후 -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>에어백 장착 차량 <span>(72.05%)</span></span>
+						</label>
+					</div>
+
+					<!-- 항목하나 -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>스포츠형 차량 (최초 출고 후 연식이 10년 이내일 경우)</span>
+						</label>
+					</div>
+
+					<!-- 항목하나 -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>특수장비 장착, 특수한 사용방법, 청소, 살수차 등으로 규정요율을 적용하는 것이 부적절한 차량</span>
+						</label>
+						<div class="ui-tabcon">
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">그룹선택</span>
+									<span data-select="text" data-value="2">@그룹2@</span>
+								</button>
+								<div class="list">
+									<div data-label="그룹선택">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion" value="1"><span>@그룹1@</span></label>
+											<label><input type="radio" name="selectOpeion" value="2"><span>@그룹2@</span></label>
+											<label><input type="radio" name="selectOpeion" value="3"><span>@그룹3@</span></label>
+											<label><input type="radio" name="selectOpeion" value="4"><span>@그룹4@</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</div>
+					</div>
+
+					<!-- 항목하나 -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>전기자동차</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### 안내문구 ###  -->
+				<div class="mes-info2 box"><p>설계하신 피보험자동차의 구조와 운행형태에 따라 특별요율이 올바르게 부과되었는지 확인해주세요.</p></div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [다수차량 특별요율]  -->
+			<!-- ######################### -->
+			<div class="wrap-section3">
+				<h2 class="tit-sub1">다수차량 특별요율</h2>
+
+				<!-- ### 선택영역 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">다수차량 특별요율 적용대상입니까? <em class="icon-required2">필수</em></legend>
+
+					<!-- // -->
+					<!--
+						폼 컨트롤 : data-autoset="form"
+						data-tabcon="ID" : 노출할 컨텐츠 ID값
+						data-id="ID" : 노출할 컨텐츠 영역
+						클래스명 : ui-tabcon : 페이지 비노출
+						클래스명 : ui-tabcon active : 페이지 노출
+					-->
+					<div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="dd9" data-tabcon="uiFormTabCon3">
+							<span>대상</span>
+						</label>
+						<label>
+							<input type="radio" name="dd9">
+							<span>비대상</span>
+						</label>
+					</div>
+					<ul class="txt-bul1">
+						<li>다수차량 특별요율 적용대상
+							<ul>
+								<li>① 업무용 일반물건(공동물건 대상아님)
+									<div>- 공동물건 계약은 다수차량에 포함되지 않음</div>
+								</li>
+								<li>② 동일 피보험자</li>
+								<li>③ 동일 보험종기</li>
+								<li>④ 동일 영수일시</li>
+							</ul>
+						</li>
+						<li>다수차량 특별요율 적용 시 초회보험료 지로발행 불가</li>
+						<li>보험기간 중 증차 시 적용방법(차량대수 선택 시 참고)
+							<div>- 기존 보유 업무용 일반물건 계약건수 + 추가할 차량대수</div>
+						</li>
+					</ul>
+
+					<!-- // -->
+					<dl class="form ui-tabcon" data-id="uiFormTabCon3">
+						<dt>차량대수</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">차량대수 선택</span>
+									<span data-select="text" data-value="1">10~49대</span>
+								</button>
+								<div class="list">
+									<div data-label="차량대수 선택">
+										<div class="option">
+											<label><input type="radio" name="crds1" value="1"><span>10~49대</span></label>
+											<label><input type="radio" name="crds1" value="2"><span>50대이상</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- // -->
+					<dl class="form ui-tabcon" data-id="uiFormTabCon3">
+						<dt>특별요율</dt>
+						<dd>
+							<div class="text">
+								<data value="" data-disabled="true"></data>
+								<span class="util">%</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### 안내문구 ###  -->
+				<div class="mes-info2 box"><p>보험종기가 일치하는 업무용 차량을 10대 이상 소유하고 계신 고객님께는 최소 11%~18.4%까지 할인 받을 수 있는 다수차량 특별요율을 적용하세요.</p></div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">적용</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+	//토스트팝업 : ui.toast('문구노출');
+//-->
+</script>
+<!-- ################################################### -->
+</body>
+</html>

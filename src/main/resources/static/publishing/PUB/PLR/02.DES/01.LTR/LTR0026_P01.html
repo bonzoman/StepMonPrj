@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title> [P] 다중이용업소의무가입대상조회 | 재물보험 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-29]	① 타이틀 <br>추가
+	*	[M 2022-10-14]	1. 문구수정 : 취급자 강북사업단 > (사번번호로 변경)
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>다중이용업소의무가입대상<br>(일련번호) 조회</h1> <!-- [M 2022-08-29] 타이틀 <br>추가  -->
+			<button type="button" data-btn="pop-close">다중이용업소의무가입대상 (일렬번호) 조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [조회영역] -->
+			<!-- ######################### -->
+			<div class="wrap-area1">
+				<fieldset class="form-search2">
+					<legend>조회조건 선택</legend>
+					<!-- # 조직구분 # -->
+					<!-- 2022-11-25 삭제 -->
+					<!-- <dl class="form">
+						<dt>조직구분 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1" data-autoset="form">
+								<label>
+									<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont1" checked>
+									<span>조직</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont2" >
+									<span>취급자</span>
+								</label>
+							</div>
+							<div class="ui-tabcon active" data-id="uiFormCont1">
+								<div class="input-btn1">
+									<data class="text" data-label="조직을 검색해주세요." value=""></data>
+									<button type="button" class="icon-com1 ic2">조직찾기</button>
+								</div>
+								<div class="info-data3 info">
+									<div class="info2 ic1">
+										<strong>장기지원팀</strong>
+										<span>A1234566</span>
+									</div>
+									<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+								</div>
+							</div>
+
+							<div class="ui-tabcon" data-id="uiFormCont2">
+								<div class="input-btn1">
+									<data class="text" data-label="취급자를 검색해주세요." value=""></data>
+									<button type="button" class="icon-com1 ic2">취급자찾기</button>
+								</div>
+								<div class="info-data3 info">
+									<div class="data-info1">
+										<span class="img"><img src="../../../resource/img/temp/@img_user3.png" alt=""></span>
+										<span><strong>공지철</strong><span>111111</span></span>
+									</div>
+									<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+								</div>
+							</div>
+						</dd>
+					</dl> -->
+					<!-- //2022-11-25 삭제 -->
+
+					<!-- # 조회구분 # -->
+					<dl class="form">
+						<dt>조회구분</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select" data-callback="uiSampleFunction"> <!-- [D] uiSampleFunction : 샘플함수명 : 하단 스크립트 참고 -->
+								<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="true">
+									<span data-select="title">조회구분</span>
+									<span data-select="text" data-value="1">일련번호</span>
+								</button>
+								<div class="list">
+									<div data-label="조회구분">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion" value="1"><span>일련번호</span></label>
+											<label><input type="radio" name="selectOpeion" value="2"><span>주민번호+업주명</span></label>
+											<label><input type="radio" name="selectOpeion" value="3"><span>사업자번호</span></label>
+											<label><input type="radio" name="selectOpeion" value="4"><span>주소+상호명</span></label>
+											<label><input type="radio" name="selectOpeion" value="5"><span>법인번호</span></label> <!-- 2022-11-25 옵션 추가 -->
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- [CASE1] 일련번호 -->
+							<div class="ui-tabcon active" data-select-con="1">
+								<div class="text">
+									<span class="util1">MJ - </span>
+									<input type="tel" placeholder="일련번호 입력">
+								</div>
+							</div>
+
+							<!-- [CASE2] 주민번호+업주명 -->
+							<div class="ui-tabcon" data-select-con="2">
+								<div class="text">
+									<input type="tel" placeholder="주민번호 앞자리" maxlength="6">
+									<span class="util1">-</span>
+									<input type="password" placeholder="주민번호 뒷자리" maxlength="7">
+								</div>
+								<input type="text" class="text" placeholder="업주명을 입력해주세요" >
+							</div>
+
+							<!-- [CASE3] 사업자번호 -->
+							<div class="ui-tabcon" data-select-con="3">
+								<div class="text">
+									<input type="tel" maxlength="3">
+									<span class="util1">-</span>
+									<input type="tel" maxlength="2">
+									<span class="util1">-</span>
+									<input type="tel" maxlength="5">
+								</div>
+							</div>
+
+							<!-- [CASE4] 주소+상호명 -->
+							<div class="ui-tabcon" data-select-con="4">
+								<!-- [CASE] 기본 -->
+								<!-- 2022-11-25 변경 -->
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">시/도 선택</span>
+										<span data-select="text" data-value="1">시/도 선택</span>
+									</button>
+									<div class="list">
+										<div data-label="시/도 선택">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion2" value="1"><span>시/도 선택</span></label>
+												<label><input type="radio" name="selectOpeion2" value="2"><span>서울특별시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="3"><span>부산광역시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="4"><span>대구광역시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="5"><span>인천광역시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="6"><span>광주광역시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="7"><span>대전광역시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="8"><span>울산광역시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="9"><span>세종특별자치시</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">선택</span>
+										<span data-select="text" data-value="1">선택</span>
+									</button>
+									<div class="list">
+										<div data-label="시/도 선택">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion3" value="1"><span>선택</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false" disabled>
+										<span data-select="title">선택</span>
+										<span data-select="text" data-value="1">선택</span>
+									</button>
+									<div class="list">
+										<div data-label="시/도 선택">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion3" value="1"><span>선택</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<input type="text" class="text" placeholder="상세주소를 입력해주세요.">
+								<!-- //2022-11-25 변경 -->
+							</div>
+
+							<!-- [CASE5] 법인번호 -->
+							<div class="ui-tabcon" data-select-con="5">
+								<div class="text">
+									<input type="tel" title="법인번호 앞자리">
+									<span class="util1">-</span>
+									<input type="tel" title="법인번호 뒷자리">
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 상호명 # -->
+					<dl class="form">
+						<dt>상호명</dt>
+						<dd><input type="text" class="text" placeholder="상호명" title="상호명" disabled></dd>
+					</dl>
+
+					<!-- # 협회자료조회 여부 재조회 # -->
+					<dl class="form">
+						<dt>협회자료조회 여부 재조회</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="radio2" checked>
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="radio2">
+									<span>아니요</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- # 검색버튼 # -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action">초기화</button>
+					<button type="button" class="btn-action c1" onclick="uiFunction(this)">조회</button>
+				</div>
+				<!-- # // # -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [목록] -->
+			<!-- ######################### -->
+			<div class="wrap-area1 none">
+				<!-- # 선택목록 # -->
+				<div class="info-data2">
+					<ul>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="radio3">
+									<strong>참김밥(일반음식점)</strong>
+								</label>
+							</div>
+							<div class="info-con1 t2">
+								<dl>
+									<dt>일련번호</dt>
+									<dd>11-2022-123456</dd>
+								</dl>
+								<dl>
+									<dt>면적</dt>
+									<dd>915m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>신주소</dt>
+									<dd>(12345) 서울특별시 성동구 독서로 434번지 102호</dd>
+								</dl>
+								<dl>
+									<dt>구주소</dt>
+									<dd>(23-456) 서울특별시 성동구 응봉동100번지 지하층 2호 대림1차아파트 1층 102호</dd>
+								</dl>
+								<dl>
+									<dt>운영여부</dt>
+									<dd>N</dd>
+								</dl>
+								<dl>
+									<dt>폐업일</dt>
+									<dd>2021.12.02</dd>
+								</dl>
+								<dl>
+									<dt>특수건물 여부</dt>
+									<dd>-</dd>
+								</dl>
+								<dl>
+									<dt>안전관리 우수업소</dt>
+									<dd>-</dd>
+								</dl>
+								<dl>
+									<dt>확정여부</dt>
+									<dd>-</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="radio3">
+									<strong>참김밥(일반음식점)</strong>
+								</label>
+							</div>
+							<div class="info-con1 t2">
+								<dl>
+									<dt>일련번호</dt>
+									<dd>11-2022-123456</dd>
+								</dl>
+								<dl>
+									<dt>면적</dt>
+									<dd>915m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>신주소</dt>
+									<dd>(12345) 서울특별시 성동구 독서로 434번지 102호</dd>
+								</dl>
+								<dl>
+									<dt>구주소</dt>
+									<dd>(23-456) 서울특별시 성동구 응봉동100번지 지하층 2호 대림1차아파트 1층 102호</dd>
+								</dl>
+								<dl>
+									<dt>운영여부</dt>
+									<dd>N</dd>
+								</dl>
+								<dl>
+									<dt>폐업일</dt>
+									<dd>2021.12.02</dd>
+								</dl>
+								<dl>
+									<dt>특수건물 여부</dt>
+									<dd>-</dd>
+								</dl>
+								<dl>
+									<dt>안전관리 우수업소</dt>
+									<dd>-</dd>
+								</dl>
+								<dl>
+									<dt>확정여부</dt>
+									<dd>-</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+
+				<!-- # 안내사항 # -->
+				<div class="mes-info2 box">
+					<p>전산망의 정보가 정확하지 않아 조회결과값이 없을 경우, 조회구분을 소재지+상호, 일련번호&middot;주민번호+업주명 등으로 다시 조회하시기 바랍니다.(소방방재청 요청사항)</p>
+				</div>
+
+				<!-- # 하단버튼 # -->
+				<div class="area-action" data-sticky="content-bottom">
+					<button type="button" class="btn-action" onclick="uiFunction(this)">이전</button>
+					<button type="button" class="btn-action c1">적용</button>
+				</div>
+				<!-- # // # -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	/* ************************************
+	*  샘플 : [조회][이전] 클릭이벤트
+	************************************ */
+	function uiFunction(el){
+		var _parents = $(el).parents('.wrap-area1');
+		$('.wrap-area1').removeClass('none');
+		_parents.addClass('none');
+	}
+
+	/* ************************************
+	* 샘플 : 조회구분 셀렉트
+	************************************ */
+	function uiSampleFunction(e){
+		var _select_val = e.val();
+		var _select_con;
+
+		$('[title="상호명"]').attr('disabled','disabled');
+
+		if(_select_val == '1') _select_con = 1;
+		else if (_select_val == '2') _select_con = 2;
+		else if (_select_val == '3') _select_con = 3;
+		else if (_select_val == '4') _select_con = 4;
+		else if (_select_val == '5'){
+			_select_con = 5;
+			$('[title="상호명"]').removeAttr('disabled');
+		}
+
+		$('[data-select-con].ui-tabcon').removeClass('active');
+		$('[data-select-con="'+ _select_con +'"].ui-tabcon').addClass('active');
+	}
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 계약변경 전자서명 | 가입설계조회 | 표준설계 | 가입설계청약 | 장기보험</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>계약변경 전자서명</h1>
+			<button type="button" data-btn="pop-close">계약변경 전자서명 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [변경대상 계약정보] -->
+			<!-- ######################### -->
+			<section class="wrap-section1">
+				<div class="tit-sub1">
+					<h2>전자청약 알림톡 발송</h2>
+					<div class="side"><button type="button" class="btn-sub2 ic8">새로고침</button></div>
+				</div>
+				<div class="info-con1">
+					<dl>
+						<dt>설계구분</dt>
+						<dd>계약변경설계</dd>
+					</dl>
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA220124102437-1</dd>
+					</dl>
+					<dl>
+						<dt>계약자</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>전자서명</dt>
+						<dd>발송중(1/2)</dd>
+					</dl>
+				</div>
+				<p class="mes-info2 box">전자서명 및 수납은 당일 오후5시까지 완료되어야 합니다.</p>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [발송상태 목록] -->
+			<!-- ######################### -->
+			<section class="wrap-section3">
+				<h3 class="tit-sub1">발송상태</h3>
+				<div class="info-data1 line">
+					<ul>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<i class="icon-txt2 ic2">발송완료</i>
+								<i class="icon-txt2 ic9">발송대기</i>
+								<i class="icon-txt2 ic5">서명완료</i>
+								<strong>계약자명</strong>
+							</div>
+							<div class="info-con1">
+								<ul>
+									<li>
+										<div>수신번호</div>
+										<div>010-1234-5678</div>
+									</li>
+									<li>
+										<div>발송완료</div>
+										<div>0000.00.00 00:00</div>
+									</li>
+									<li>
+										<div>서명완료</div>
+										<div>0000.00.00 00:00</div>
+									</li>
+								</ul>
+							</div>
+							<div class="area-btn1"><button type="button" class="btn-com1 ic1">알림톡 발송</button></div>
+							<!-- [D] 서명완료된 대상자 경우 -->
+							<div class="area-btn1"><button type="button" class="btn-com1 ic1 disabled">알림톡 발송</button></div>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [발송서류] -->
+			<!-- ######################### -->
+			<section class="wrap-section3">
+				<h3 class="tit-sub1">발송서류</h3>
+
+				<h4 class="tit-sub2">계약자 <span>(2개)</span></h4>
+				<div class="list-data7 t1">
+					<ul>
+						<li>보험계약변경청약서</li>
+						<li>계약변경시 안내사항</li>
+					</ul>
+				</div>
+
+				<h4 class="tit-sub2">친권자 <span>(2개)</span></h4>
+				<div class="list-data7 t1">
+					<ul>
+						<li>보험계약변경청약서</li>
+						<li>계약변경시 안내사항</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [부가서류] -->
+			<!-- ######################### -->
+			<section class="wrap-section3">
+				<h3 class="tit-sub1">부가서류</h3>
+				<div class="textarea disabled">
+					<data value="1">가족관계증명서
+						계약자 초본
+					</data>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [안내사항] -->
+			<!-- ######################### -->
+			<ul class="txt-bul1 line2">
+				<li>
+					<em>전자서명 대상 및 우선순위</em>
+					<ul class="txt-bul2">
+						<li>계약자와 피보험자 동일 계약: 계약자 서명</li>
+						<li>계약자와 피보험자 다른 계약: 계약자 서명 &rarr; 피보험자 서명</li>
+						<li>미성년자 계약: 친권자 서명(등록된 친권자)</li>
+					</ul>
+				</li>
+				<li>계약자, 피보험자가 다른 건은 계약자, 피보험자 각각 모바일 동의  및 서명 후 업무처리가 가능합니다.</li>
+				<li>발송대상은 전자서명 우선순위로 정렬됩니다.</li>
+				<li>앞 순위 대상의 서명완료가 확인된 후 다음 순위 대상에게 알림톡이 발송됩니다.</li>
+				<li>알림톡이 발송되지 않았거나 유효하지  않은 경우, 고객이 알림톡을 삭제한 경우에는 [알림톡발송] 버튼을 눌러 수동으로 발송하실 수 있습니다.</li>
+				<li>발송된 알림톡의 링크(URL)은 발송일 24시 기준으로 사용이 중지됩니다.</li>
+			</ul>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

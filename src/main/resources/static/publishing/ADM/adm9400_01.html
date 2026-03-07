@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>리포트 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+
+
+<!-- 하이차트 라이브러리 -->
+<link rel="stylesheet" href="../resource/css/content_chart.css">
+<script src="../resource/js/chart/highcharts.js"></script>
+<script src="../resource/js/chart/data.js"></script>
+
+<!-- 차트 솔리드 게이지용 js 모듈 -->
+<script src="../resource/js/chart/highcharts-more.js"></script>
+<script src="../resource/js/chart/solid-gauge.js"></script>
+
+<!-- 차트 Heat Map 모듈 -->
+<script src="../resource/js/chart/heatmap.js"></script>
+
+<!-- 차트 Large tree map -->
+<script src="../resource/js/chart/treemap.js"></script>
+
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-06]	1. 설계사 구분 검색 수정 
+	*	[M 2022-11-01]	1. 설계사 구분 삭제 
+	*	[M 2022-11-07]	1. No Data 안내문구가 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">리포트</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="sub">
+				<button type="button" class="btn-report1 ic-s">리포트 통합조회</button>
+				<button type="button" class="btn-report1">리포트 항목 순서 변경</button>
+			</div>
+			<ul class="tab2">
+				<li><a href="#" class="">혜택</a></li>
+				<li><a href="#" class="">업적</a></li>
+				<li><a href="#" class="">조직</a></li>
+				<li><a href="#" class="current">코칭</a></li>
+				<li><a href="#" class="">활동</a></li>
+			</ul>
+			<div class="report-wrap">
+				<!--
+					[M : 2022-09-05 수정]
+					검색조건 영역 수정
+				-->
+				<fieldset class="form-search1">
+					<div class="form-field">
+						<dl class="form w3">
+							<dt>조직/소속 구분</dt>
+							<dd>
+								<select name="" id="" class="selectbox" style="min-width:120px;">
+									<option value="">강남사업단</option>
+								</select>
+								<select name="" id="" class="selectbox" style="min-width:160px;">
+									<option value="">지점명</option>
+									<option value="">리더스박진형RM2지점</option>
+								</select>
+							</dd>
+						</dl>
+						<!-- [M 2022-11-01] 설계사 구분 삭제  -->
+						<!-- <dl class="form w1">
+							<dt>설계사 구분</dt>
+							<!-- [M 2022-10-06] 설계사 구분 검색 수정 --
+							<dd>
+								<!-- [CASE 검색 후] --
+								<span class="search-name">김롯데 <button type="button" class="btn-del1">삭제</button></span>
+								<!-- // --
+								<button type="button" class="btn-search">검색</button>
+							</dd>
+							<!-- // --
+						</dl> -->
+						<!-- //[M 2022-11-01] 설계사 구분 삭제  -->
+						<dl class="form w1">
+							<dt>기준월</dt>
+							<dd>
+								<div class="form-row">
+									<input type="text" class="date-m" value="" placeholder="월 선택" data-start-year="2022">
+								</div>
+							</dd>
+						</dl>
+					</div>
+
+					<div class="area-action">
+						<button type="button" class="btn-action c1">조회</button>
+					</div>
+				</fieldset>
+				<!--
+					class="row" 하나당 그룹핑
+				-->
+
+				<!--[월별의뢰현황]-->
+				<div class="row">
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">월별의뢰 현황</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info1">
+									<dl class="info01">
+										<dt>당월</dt>
+										<dd>
+											<strong>0</strong>
+											<span class="unit">건</span>
+										</dd>
+									</dl>
+								</div>
+								<div class="col-info2">(단위 건)</div>
+								<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="data" style="height:252px">
+									<div id="coachingChart1" data-chart="Basic-Column7"></div>
+
+									<script>
+
+										//월별의뢰 현황 차트 샘플
+										Highcharts.chart("coachingChart1",{
+											chart:{
+												type:"column",
+												marginLeft:0,
+												marginRight:0,
+												marginTop : 40,
+												height:220
+											},
+											title:null,
+											legend:{
+												enabled:true,
+											},
+											xAxis:{
+												categories:["전전월", "전월", "당월"]
+											},
+											yAxis : {
+												visible : false
+											},
+											plotOptions:{
+												column:{
+													dataLabels:{
+														enabled:true,
+
+													},
+												},
+												series : {
+													groupPadding : 0.3
+												}
+											},
+											series:[
+												{
+													name:"신규코칭",
+													data:[100,50,70]
+												},{
+													name:"미처리코칭",
+													data:[125,60,50]
+												},{
+													name:"완료코칭",
+													data:[100,50,70]
+												}
+											]
+										})
+
+									</script>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+							<!-- [CASE] 자료가 있을 경우 -->
+							<!-- <div class="more">
+								<a href="#"><span>월별의뢰 현황 확인하기</span></a>
+							</div> -->
+							<!-- //[CASE] 자료가 있을 경우 -->
+						</div>
+					</div>
+				</div>
+				<!--[의뢰현황]-->
+				<div class="row">
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">의뢰현황</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info1">
+									<div class="info01 t2">
+										<dl>
+											<dt>신규코칭</dt>
+											<dd>
+												<strong>0</strong><!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+												<!-- <strong><a href="javascript:void(0);">16</a></strong> --><!-- [CASE] 자료가 있을 경우 -->
+												<span class="unit">건</span>
+											</dd>
+										</dl>
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <dl>
+											<dt>미처리코칭</dt>
+											<dd>
+												<strong><a href="javascript:void(0);">16</a></strong>
+												<span class="unit">건</span>
+											</dd>
+										</dl>
+										<dl>
+											<dt>완료코칭</dt>
+											<dd>
+												<strong><a href="javascript:void(0);">16</a></strong>
+												<span class="unit">건</span>
+											</dd>
+										</dl> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+									<div class="info01-txt">(기준일자 2022.02.22)</div>
+								</div>
+								<div class="col-info2">(단위 건)</div>
+								<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="data" style="height:252px">
+									<div id="coachingChart2" data-chart="Basic-Column6"></div>
+									<script>
+										//의뢰현황 차트 샘플
+										Highcharts.chart("coachingChart2",{
+											chart:{
+												type:"column",
+												height:240,
+												marginTop : 30
+											},
+											title:null,
+											legend:{
+												enabled:true
+											},
+											xAxis:{
+												categories:["서울사업단", "한빛사업단", "베스트사업단","드림사업단","스마트사업단","바른사업단","미래사업단","스타사업단","전남사업단","한결사업단","호남사업단","중부사업단"]
+											},
+											yAxis:{
+												labels:{
+													enabled:false
+												}
+											},
+											plotOptions:{
+												column:{
+													dataLabels:{
+														enabled:true
+													},
+												}
+											},
+											series:[
+												{
+													name:"완료코칭",
+													data:[3,0,1,1,0,2,6,3,2,1,1,5]
+												}
+											]
+										})
+									</script>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+							<!-- [CASE] 자료가 있을 경우 -->
+							<!-- <div class="more">
+								<a href="#"><span>의뢰현황 확인하기</span></a>
+							</div> -->
+							<!-- //[CASE] 자료가 있을 경우 -->
+						</div>
+					</div>
+				</div>
+
+				<a href="#" class="report-top"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L]실명인증 확인요청 | 정보입력 | 고객등록 | 고객</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="form-wrap1">
+			<dl class="form">
+				<dt>주민등록번호 <i class="icon-required2">필수</i></dt>
+				<dd>
+					<div class="input-wrap1">
+						<div class="text">
+							<data value="770610">770610</data>
+							<span class="util">-</span>
+							<input type="password" title="주민등록번호뒷7자리" maxlength="7">
+						</div>
+						<button type="button" aria-controls="uiPOPDPCUS0063L01" class="btn-sub1">실명 인증</button> <!-- [레이어팝업 호출 샘플] -->
+					</div>
+					<div class="validation"></div>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 실명인증 확인요청 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCUS0063L01" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>실명인증 확인요청</dt>
+		<dd>
+			<strong>고객님의 신분증(또는 증빙서류)을 촬영하여 담당자에게 실명인증을 요청해주세요.</strong>
+			<span>미성년자의 경우, 다음 서류 중 하나를 제출해주세요.<br>(주민등록등·초본, 가족관계증명서, 기본증명서)</span>
+		</dd>
+		<dd class="area-action">
+			<button type="button" class="btn-action c1" data-btn="pop-close">다음</button>
+		</dd>
+	</dl>
+</div>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 신분증 촬영 진행 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCUS0064L01" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>신분증 촬영 진행</dt>
+		<dd>사진이 흔들리지 않도록 유의해주세요.</dd>
+		<dd>촬영된 신분증은 설계사님의 기기에 저장되지 않고, 암호화 처리되어 바로 전송됩니다.</dd>
+		<!-- // -->
+		<dd class="area-action">
+			<button type="button" class="btn-action" data-btn="pop-close">취소</button>
+			<button type="button" class="btn-action c1">촬영</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- ################################################### -->
+
+<script>
+	//<!--
+		//레이어팝업 선언 : 신분증 촬영 진행
+		$plugin.popmodal('#uiPOPDPCUS0064L01');
+
+		//레이어팝업 선언 : 실명인증 확인요청
+		$plugin.popmodal('#uiPOPDPCUS0063L01',{
+			callback_after : function(){
+				$('#uiPOPDPCUS0064L01').trigger('outputOpen');
+			}
+		});
+
+		//레이어팝업 강제오픈
+		$('[aria-controls="uiPOPDPCUS0063L01"]').trigger('click');
+	//-->
+</script>
+</body>
+</html>

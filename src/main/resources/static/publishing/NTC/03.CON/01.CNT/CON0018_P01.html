@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 대출원리금 가상계좌 수납 | [T] 계약기본 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>대출원리금 가상계좌 수납</h1>
+			<button type="button" data-btn="pop-close">대출원리금 가상계좌 수납 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단정보] -->
+			<!-- [M 2022-10-09] 마크업 변경 -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<!-- # 고객정보 # -->
+				<h2 class="data-info2 t1" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+					<strong>하다미</strong>
+					<span>
+						<span>1990.01.01</span>
+						<span>남</span>
+					</span>
+				</h2>
+
+				<!-- # 대출정보 # -->
+				<h3 class="tit">2164-0000-0000000</h3>
+				<div class="info-con2">
+					<dl>
+						<dt>수납일자</dt>
+						<dd>2020.01.30</dd>
+					</dl>
+					<dl>
+						<dt>최종이수일</dt>
+						<dd>2020.01.30</dd>
+					</dl>
+					<dl>
+						<dt>예수금</dt>
+						<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+					<dl>
+						<dt>대출잔액</dt>
+						<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+				</div>
+
+				<!-- # 납입구분 # -->
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="uiFormRadio11" checked>
+						<span>이자납입</span>
+					</label>
+					<label>
+						<input type="radio" name="uiFormRadio11">
+						<span>원리금 납입</span>
+					</label>
+				</div>
+				<!-- # // # -->
+			</div>
+			<!-- // [M 2022-10-09] -->
+
+			<!-- ######################### -->
+			<!-- [납입내용] 이자계산내역목록 -->
+			<!-- ######################### -->
+			<div>
+				<h3 class="tit-sub1">이자계산내역</h3>
+
+				<!-- # 목록 # -->
+				<div class="info-con2">
+					<!-- // -->
+					<ul>
+						<li>
+							<div>이자구분</div>
+							<div>정상이자</div>
+						</li>
+						<li>
+							<div>이자계산기간</div>
+							<div>2020.01.30~2022.02.22</div>
+						</li>
+						<li>
+							<div>기준금액</div>
+							<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+						</li>
+						<li>
+							<div>금리</div>
+							<div>4.0000000</div>
+						</li>
+						<li>
+							<div>일수</div>
+							<div>00일</div>
+						</li>
+						<li>
+							<div>이자</div>
+							<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+						</li>
+					</ul>
+					<!-- // -->
+					<ul>
+						<li>
+							<div>이자구분</div>
+							<div>정상이자</div>
+						</li>
+						<li>
+							<div>이자계산기간</div>
+							<div>2020.01.30~2022.02.22</div>
+						</li>
+						<li>
+							<div>기준금액</div>
+							<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+						</li>
+						<li>
+							<div>금리</div>
+							<div>4.0000000</div>
+						</li>
+						<li>
+							<div>일수</div>
+							<div>18일</div>
+						</li>
+						<li>
+							<div>이자</div>
+							<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+						</li>
+					</ul>
+					<!-- // -->
+				</div>
+
+				<!-- # 납부금 합계 # -->
+				<div class="area-info2 t1">
+					<dl>
+						<dt>납부금 합계</dt>
+						<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+				</div>
+				<div class="mes-info2"><p>납부금합계는 예수금 차감 후 표기됩니다.</p></div>
+				<!-- # // # -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [납입내용] 원리금납입정보 -->
+			<!-- ######################### -->
+			<div>
+				<h3 class="hide">원리금 납입</h3>
+
+				<!-- # 상환원금 # -->
+				<fieldset class="form-wrap1">
+					<legend class="tit">상환원금</legend>
+					<div class="form">
+						<!-- 구분 -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio7" checked>
+								<span>일부 상환</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio7">
+								<span>전액 상환</span>
+							</label>
+						</div>
+
+						<!-- [CASE1_일부상환] -->
+						<!-- 금액 -->
+						<div class="text">
+							<input type="tel" title="상환금액(숫자만입력)" placeholder="숫자만입력">
+							<span class="util1">원</span>
+						</div>
+						<!-- 금액 : 오류 -->
+						<div class="text">
+							<input type="tel" title="상환금액(숫자만입력)" placeholder="숫자만입력" value="135,500,000" aria-invalid="true">
+							<span class="util1">원</span>
+						</div>
+						<div class="validation">대출잔액보다 작게 입력해주세요.</div>
+
+						<!-- [CASE2_전액상환] -->
+						<div class="text">
+							<input type="tel" title="상환금액(숫자만입력)" placeholder="숫자만입력" value="135,500,000" readonly>
+							<span class="util1">원</span>
+						</div>
+						<!-- // -->
+					</div>
+				</fieldset>
+
+				<!-- # 이자계산내역 # -->
+				<div class="area-toggle1" data-autoset="toggle">
+					<section class="active">
+						<header class="tit">
+							<h4>이자계산내역</h4>
+							<button type="button" data-toggle="btn" aria-expanded="true">이자계산내역 상세보기</button>
+						</header>
+						<div data-toggle="content" class="info-con2">
+							<!-- // -->
+							<ul>
+								<li>
+									<div>이자구분</div>
+									<div>정상이자</div>
+								</li>
+								<li>
+									<div>이자계산기간</div>
+									<div>2020.01.30~2022.02.22</div>
+								</li>
+								<li>
+									<div>기준금액</div>
+									<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+								</li>
+								<li>
+									<div>금리</div>
+									<div>4.000000</div>
+								</li>
+								<li>
+									<div>일수</div>
+									<div>18일</div>
+								</li>
+								<li>
+									<div>이자</div>
+									<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+								</li>
+							</ul>
+							<!-- // -->
+							<ul>
+								<li>
+									<div>이자구분</div>
+									<div>정상이자</div>
+								</li>
+								<li>
+									<div>이자계산기간</div>
+									<div>2020.01.30~2022.02.22</div>
+								</li>
+								<li>
+									<div>기준금액</div>
+									<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+								</li>
+								<li>
+									<div>금리</div>
+									<div>4.000000</div>
+								</li>
+								<li>
+									<div>일수</div>
+									<div>18일</div>
+								</li>
+								<li>
+									<div>이자</div>
+									<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+								</li>
+							</ul>
+							<!-- // -->
+						</div>
+					</section>
+				</div>
+
+				<!-- # 총 납부금 계산 버튼 # -->
+				<div class="area-btn1">
+					<button type="button" class="btn-com1 c1">총 납부금 계산</button>
+				</div>
+
+				<!-- # 납부할 대출원리금 # -->
+				<div>
+					<h4 class="tit-sub1">납부할 대출원리금</h4>
+					<!-- [입력한 정보] -->
+					<div class="info-con2">
+						<dl>
+							<dt>상환 원금</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>납부 이자</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+					<!-- [총 합계] -->
+					<div class="area-info2 t1">
+						<dl>
+							<dt>납부금 합계</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+					<!-- [안내문구] -->
+					<div class="mes-info2"><p>납부금합계는 예수금 차감 후 표기됩니다.</p></div>
+				</div>
+				<!-- # // # -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">가상계좌발급</button>
+				<!-- <button type="button" class="btn-action c1" disabled>가상계좌발급</button> : 비활성화 -->
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

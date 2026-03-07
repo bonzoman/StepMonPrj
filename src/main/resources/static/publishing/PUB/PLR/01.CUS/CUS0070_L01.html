@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 취소확인 | [P] 중복연락처 접수 신청 | 고객정보입력 | 개인고객등록 | 고객등록</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 중복연락처 접수 신청 취소확인 ### -->
+<!-- ################################################### -->
+<div id="uiPOPUPCUS0070L01" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>중복연락처 접수 신청 취소확인</dt>
+		<dd>
+			<strong class="tit">중복연락처 접수 신청을 취소하시겠어요?</strong>
+			<span class="txt">등록을 취소하시면 입력하고 계시던 정보가 모두 사라져요.</span>
+		</dd>
+		<!-- // -->
+		<dd class="area-action">
+			<button type="button" class="btn-action" data-btn="pop-close">취소</button>
+			<button type="button" class="btn-action c1">확인</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPUPCUS0070L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPUPCUS0070L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

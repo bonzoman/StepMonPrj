@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 컨텐츠자동발송내역상세 | 컨텐츠자동발송신청 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>자동발송내역 상세</h1>
+			<button type="button" data-btn="pop-close">자동발송내역 상세 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [발송정보]-->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="hide">발송정보</h2>
+				<div class="info-con1">
+					<dl>
+						<dt>자동발송일</dt>
+						<dd>2022.09.25 14:20</dd>
+					</dl>
+					<dl>
+						<dt>컨텐츠</dt>
+						<dd>상령일 메시지</dd>
+					</dl>
+					<dl>
+						<dt>수신대상</dt>
+						<dd>상령일 고객(50)</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [수신대상목록]-->
+			<!-- ######################### -->
+			<!-- # 필터영역 : 총 00건 # -->
+			<div class="area-info1">
+				<p>총 <strong>10명</strong></p>
+				<div class="side">
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">정렬</span>
+							<span data-select="text" data-value="2">발송순</span>
+						</button>
+						<div class="list">
+							<div data-label="정렬">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion" value="1"><span>가나다순</span></label>
+									<label><input type="radio" name="selectOpeion" value="2"><span>발송순</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- # 수신대상목록 # -->
+			<div class="info-data3 t3">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong>고객명</strong>
+							<span>
+								<span>0000.00.00</span>
+								<span>성별</span>
+							</span>
+						</div>
+						<div class="txt">00.00.00</div>
+						<!-- 고객상세화면 링크 -->
+						<a href="javascript:void(0);" class="link">상세보기</a>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info2" data-value="102701">
+							<strong>김철희</strong>
+							<span>
+								<span>1997.01.01</span>
+								<span>남</span>
+							</span>
+						</div>
+						<div class="txt">20.03.27</div>
+						<a href="javascript:void(0);" class="link">상세보기</a>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info2" data-value="102702">
+							<strong>라세희</strong>
+							<span>
+								<span>1997.01.01</span>
+								<span>여</span>
+							</span>
+						</div>
+						<div class="txt">20.03.27</div>
+						<a href="javascript:void(0);" class="link">상세보기</a>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info2" data-value="102701">
+							<strong>박치영</strong>
+							<span>
+								<span>1997.01.01</span>
+								<span>남</span>
+							</span>
+						</div>
+						<div class="txt">20.03.27</div>
+						<a href="javascript:void(0);" class="link">상세보기</a>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info2" data-value="102701">
+							<strong>박근휘</strong>
+							<span>
+								<span>1997.01.01</span>
+								<span>남</span>
+							</span>
+						</div>
+						<div class="txt">20.03.27</div>
+						<a href="javascript:void(0);" class="link">상세보기</a>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- # 더보기(현재페이지/총페이지) # -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

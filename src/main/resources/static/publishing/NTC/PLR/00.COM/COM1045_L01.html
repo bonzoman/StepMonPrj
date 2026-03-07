@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 오류안내 | 로그인</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1" aria-controls="uiPOPDPCOM0004L01">로그인</button> <!-- [샘플 : 레이어팝업 호출 버튼] -->
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 오류안내 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCOM0004L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>오류 안내</h1>
+			<button type="button" data-btn="pop-close">오류 안내 닫기</button>
+		</header>
+		<div class="content">
+			<dl class="mes-t3">
+				<dt class="txt-c1">오류횟수 (1/5)</dt>
+				<dd>입력하신 사번 또는 비밀번호가 올바르지 않습니다.<br>사번 또는 비밀번호를 확인해 주세요.</dd>
+			</dl>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1" data-btn="pop-close">확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPDPCOM0004L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPDPCOM0004L01').trigger('outputOpen');
+//-->
+</script>
+<!-- ################################################### -->
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>상세내역 | 갱신대상계약조회 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-05]	① [갱신안내 미리보기] 버튼 클래스명(c1) 추가
+	*					② [갱신안내 알림톡발송] 버튼 삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>갱신대상계약조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] 상품정보  -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+			<div class="info">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>LA123456789</dd>
+				</dl>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [조회영역] 갱신년월  -->
+		<!-- ######################### -->
+		<fieldset class="form-search1">
+			<legend>갱신년월 조회</legend>
+			<!-- // -->
+			<dl class="form">
+				<dt>갱신년월</dt>
+				<dd>
+					<div class="input-wrap1">
+						<!-- // -->
+						<div class="select-wrap w100" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">갱신년월 구분</span>
+								<span data-select="text" data-value="3">2022.03</span>
+							</button>
+							<div class="list">
+								<div data-label="갱신년월 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value="1"><span>2016.03</span></label>
+										<label><input type="radio" name="selectOpeion2" value="2"><span>2019.03</span></label>
+										<label><input type="radio" name="selectOpeion2" value="3"><span>2022.03</span></label>
+										<label><input type="radio" name="selectOpeion2" value="4"><span>2025.03</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+						<button type="button" class="btn-sub1">조회</button>
+						<!-- // -->
+					</div>
+				</dd>
+			</dl>
+			<!-- // -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [탭영역] 유형 -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li><a href="javascript:void(0);">보험료변동사항</a></li>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">담보현황</a></li>
+			</ul>
+		</div>
+		<!-- ### [구분] ### -->
+		<div class="tab-sub1" data-sticky="top">
+			<ul>
+				<li class="active"><a href="#uiTabSub1">피보험자</a></li>
+				<li><a href="#uiTabSub2">소유자</a></li>
+			</ul>
+		</div>
+		<!-- ### // ### -->
+
+		<!-- ######################### -->
+		<!-- [탭컨텐츠] 피보험자 -->
+		<!-- ######################### -->
+		<div id="uiTabSub1" class="ui-tabcon active">
+			<!-- ### 피보험자 없음 ### -->
+			<div class="form-search1">
+				<div class="input-btn1">
+					<data class="text" data-label="피보험자 또는 소유자를 검색해주세요." value=""></data>
+					<button type="button" class="icon-com1 ic2">검색</button>
+				</div>
+			</div>
+			<div class="mes-result1">
+				<p>
+					<strong>피보험자 대상 갱신건이 없습니다.</strong>
+					<span>소유자로 조회해보세요.</span>
+				</p>
+			</div>
+
+			<!-- ### 피보험자 있음 ### -->
+			<div class="info-data3 t1 bg">
+				<dl>
+					<dt class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+						<strong>하다미</strong>
+						<span>
+							<span>1990.01.01</span>
+							<span>남</span>
+						</span>
+					</dt>
+					<dd class="data1">피보험자</dd>
+					<dd class="data2">
+						<span>갱신일자</span>
+						<strong>2022.01.23</strong>
+					</dd>
+					<dd class="side"><button type="button" class="btn-sub3 c2">변경</button></dd>
+				</dl>
+			</div>
+
+			<!-- ### 담보별 현황 ### -->
+			<div class="area-toggle1" data-autoset="toggle">
+				<ul>
+					<!-- // -->
+					<li>
+						<!-- # 요약정보 # -->
+						<div class="tit">
+							<strong>담보명</strong>
+							<dl class="data1">
+								<dt>가입금액</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+							<dl class="data2">
+								<dt>보험기간</dt>
+								<dd>01년만기</dd>
+							</dl>
+							<div class="data2 data-word3">
+								<dl>
+									<dt>갱신전보험료</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>갱신후보험료</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+								</dl>
+							</div>
+							<button type="button" data-toggle="btn" aria-expanded="false">할인상세정보</button>
+						</div>
+						<!-- # 할인상세정보 # -->
+						<div data-toggle="content" class="info-con1">
+							<strong class="tit">할인보험료</strong>
+							<dl>
+								<dt>무사고할인액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>실손의료비 안정화활인액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+						</div>
+						<!-- # // # -->
+					</li>
+					<!-- // -->
+					<li>
+						<!-- # 할인명/할인금액 # -->
+						<div class="tit">
+							<strong>갱신형두번째암진단비(100세만기)</strong>
+							<dl class="data1">
+								<dt>가입금액</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+							<dl class="data2">
+								<dt>보험기간</dt>
+								<dd>01년만기</dd>
+							</dl>
+							<div class="data2 data-word3">
+								<dl>
+									<dt>갱신전보험료</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>갱신후보험료</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+								</dl>
+							</div>
+							<button type="button" data-toggle="btn" aria-expanded="false">할인상세정보</button>
+						</div>
+						<div data-toggle="content" class="info-con1">
+							<strong class="tit">할인보험료</strong>
+							<dl>
+								<dt>무사고할인액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>실손의료비 안정화활인액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<!-- # 할인명/할인금액 # -->
+						<div class="tit">
+							<strong>갱신형두번째암진단비(100세만기)</strong>
+							<dl class="data1">
+								<dt>가입금액</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+							<dl class="data2">
+								<dt>보험기간</dt>
+								<dd>01년만기</dd>
+							</dl>
+							<div class="data2 data-word3">
+								<dl>
+									<dt>갱신전보험료</dt>
+									<dd class="data-num1"><strong>863</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>갱신후보험료</dt>
+									<dd class="data-num1"><strong>1,863</strong><span>원</span></dd>
+								</dl>
+							</div>
+							<button type="button" data-toggle="btn" aria-expanded="false">할인상세정보</button>
+						</div>
+						<div data-toggle="content" class="info-con1">
+							<strong class="tit">할인보험료</strong>
+							<dl>
+								<dt>무사고할인액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>실손의료비 안정화활인액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- # 더보기(현재페이지/총페이지) # -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- # // # -->
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭컨텐츠] 소유자 -->
+		<!-- ######################### -->
+		<div id="uiTabSub2" class="ui-tabcon">
+			<!-- ### 소유자 없음 ### -->
+			<div class="mes-result1">
+				<p>
+					<strong>피보험자 대상 갱신건이 없습니다.</strong>
+					<span>소유자로 조회해보세요.</span>
+				</p>
+			</div>
+
+			<!-- ### 소유자 있음 ### -->
+			<div class="info-data3 t1 bg">
+				<dl>
+					<dt class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+						<span>
+							<span>1990.01.01</span>
+							<span>남</span>
+						</span>
+					</dt>
+					<dd class="data1">소유자</dd>
+					<dd class="data2">
+						<span>갱신일자</span>
+						<strong>2022.01.23</strong>
+					</dd>
+					<dd class="side"><button type="button" class="btn-sub3 c2">변경</button></dd>
+				</dl>
+				<dl>
+					<dt class="info1">소재지</dt>
+					<dd class="data2">
+						<strong>(12345)서울 강남구 강남대로 136길 5-4</strong>
+					</dd>
+					<dd class="side"><button type="button" class="btn-sub3 c2">변경</button></dd>
+				</dl>
+			</div>
+
+			<!-- ### 담보별 현황 ### -->
+			<div class="area-toggle1" data-autoset="toggle">
+				<ul>
+					<!-- // -->
+					<li>
+						<!-- # 요약정보 # -->
+						<div class="tit">
+							<strong>담보명</strong>
+							<dl class="data1">
+								<dt>가입금액</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+							<dl class="data2">
+								<dt>보험기간</dt>
+								<dd>01년만기</dd>
+							</dl>
+							<div class="data2 data-word3">
+								<dl>
+									<dt>갱신전보험료</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>갱신후보험료</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+								</dl>
+							</div>
+							<button type="button" data-toggle="btn" aria-expanded="false">할인상세정보</button>
+						</div>
+						<!-- # 할인상세정보 # -->
+						<div data-toggle="content" class="info-con1">
+							<strong class="tit">할인보험료</strong>
+							<dl>
+								<dt>무사고할인액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>실손의료비 안정화활인액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+						</div>
+						<!-- # // # -->
+					</li>
+					<!-- // -->
+					<li>
+						<!-- # 할인명/할인금액 # -->
+						<div class="tit">
+							<strong>갱신형두번째암진단비(100세만기)</strong>
+							<dl class="data1">
+								<dt>가입금액</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+							<dl class="data2">
+								<dt>보험기간</dt>
+								<dd>01년만기</dd>
+							</dl>
+							<div class="data2 data-word3">
+								<dl>
+									<dt>갱신전보험료</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>갱신후보험료</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+								</dl>
+							</div>
+							<button type="button" data-toggle="btn" aria-expanded="false">할인상세정보</button>
+						</div>
+						<div data-toggle="content" class="info-con1">
+							<strong class="tit">할인보험료</strong>
+							<dl>
+								<dt>무사고할인액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>실손의료비 안정화활인액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<!-- # 할인명/할인금액 # -->
+						<div class="tit">
+							<strong>갱신형두번째암진단비(100세만기)</strong>
+							<dl class="data1">
+								<dt>가입금액</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+							<dl class="data2">
+								<dt>보험기간</dt>
+								<dd>01년만기</dd>
+							</dl>
+							<div class="data2 data-word3">
+								<dl>
+									<dt>갱신전보험료</dt>
+									<dd class="data-num1"><strong>863</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>갱신후보험료</dt>
+									<dd class="data-num1"><strong>1,863</strong><span>원</span></dd>
+								</dl>
+							</div>
+							<button type="button" data-toggle="btn" aria-expanded="false">할인상세정보</button>
+						</div>
+						<div data-toggle="content" class="info-con1">
+							<strong class="tit">할인보험료</strong>
+							<dl>
+								<dt>무사고할인액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>실손의료비 안정화활인액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- # 더보기(현재페이지/총페이지) # -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- # // # -->
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<a href="javascript:void(0);" class="btn-action c1">갱신안내 미리보기</a> <!-- [M 2022-09-05] 클래스명(c1) 추가 -->
+			<!-- [M 2022-09-05] 삭제
+				<a href="javascript:void(0);" class="btn-action c1">갱신안내 알림톡발송</a>
+			-->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+
+	$plugin.togglecon('.tab-sub1',{
+		toggle_type : 'tab',
+		selector : '.tab-sub1 > ul > li',
+		selector_btn : '> a',
+		selector_con : '#href',
+		callbackLoad : function(e){
+			//오픈이벤트
+		}
+	});
+//-->
+</script>
+</body>
+</html>

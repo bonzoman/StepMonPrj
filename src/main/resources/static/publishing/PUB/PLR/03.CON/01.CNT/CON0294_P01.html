@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 필터 | 서류발급내역 | 계약상세 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>필터</h1>
+			<button type="button" data-btn="pop-close">필터 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- // -->
+			<fieldset class="form-wrap1">
+				<legend>조회기간 선택</legend>
+
+                <dl class="form">
+                    <dt>조회기간</dt>
+                    <dd>
+                        <div class="select-wrap" data-autoset="select">
+                            <button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+                                <span data-select="title">조회기간</span>
+                                <span data-select="text" data-value="selectOpeion1_1">접수일자</span>
+                            </button>
+                            <div class="list">
+                                <div data-label="조회기간 선택">
+                                    <div class="option">
+                                        <label><input type="radio" name="selectOpeion1" value="selectOpeion1_1" checked><span>접수일자</span></label>
+                                        <label><input type="radio" name="selectOpeion1" value="selectOpeion1_2"><span>발급일자</span></label>
+                                        <label><input type="radio" name="selectOpeion1" value="selectOpeion1_3"><span>발송일자</span></label>
+                                    </div>
+                                    <button type="button" data-toggle="closebtn">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // -->
+                        <div class="input-date1 text">
+                            <span>
+                                <button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+                                <input type="text" title="시작날짜 선택" data-dateform="start" value="2022.03.09" placeholder="YYYY.MM.DD" readonly>
+                            </span>
+                            <span>
+                                <button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+                                <input type="text" title="종료날짜 선택" data-dateform="end" value="2022.03.09" placeholder="YYYY.MM.DD" readonly>
+                            </span>
+                        </div>
+                        <!-- // -->
+                        <div class="label-btn1">
+                            <label>
+                                <input type="radio" name="uiFormRadio12">
+                                <span>15일</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="uiFormRadio12" checked>
+                                <span>1개월</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="uiFormRadio12">
+                                <span>2개월</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="uiFormRadio12">
+                                <span>전체</span>
+                            </label>
+                        </div>
+                        <!-- // -->
+                    </dd>
+                </dl>
+
+			</fieldset>
+
+			<!-- // -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">초기화</button>
+				<button type="button" class="btn-action c1">적용</button>
+			</div>
+			<!-- // -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

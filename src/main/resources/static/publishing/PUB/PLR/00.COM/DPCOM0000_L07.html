@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>(샘플) 토스트팝업</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+	<main id="wrapper">
+		<div class="container">
+			<div class="mes-info2 box">
+				<ul>
+					<li>토스트팝업이 여러개일 경우 : 위로 계속 생성됨</li>
+					<li>CTA버튼으로 토스트팝업 호출할 경우 : 중복 클릭 방지 함.</li>
+					<li>토스트팝업 노출시간: 3초</li>
+				</ul>
+			</div>
+			<div class="area-btn1">
+				<button type="button" class="btn-com1 c1" onclick="ui.toast('토스트팝업1')">토스트팝업1</button>
+				<button type="button" class="btn-com1 c1" onclick="ui.toast('토스트팝업2')">토스트팝업2</button>
+			</div>
+			<div class="area-info1">
+				<label class="icon-com1 ic22">
+					<input type="checkbox" name="uiFormCheck">
+					<span>찜하기</span>
+				</label>
+			</div>
+			<div class="area-temp">
+				내용시작
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				내용끝
+			</div>
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" onclick="ui.toast('액션버튼1')">버튼</button>
+			</div>
+		</div>
+	</main>
+<script>
+//<!--
+	ui.toast('메세지노출영역',function(){
+		ui.alert('콜백으로 알럿창 띄움'); // 닫기 후 이벤트 영역
+	});
+
+	$(document).on('change', '[name="uiFormCheck"]', function(){
+		if($(this).prop('checked')){
+			ui.toast('찜하기 되었습니다.');
+		}else{
+			ui.toast('찜하기 해제 되었습니다.');
+		}
+	})
+
+	$(document).ready(function(){
+		$('.btn-action').click(function(){
+			console.log('test');
+		});
+	});
+//-->
+</script>
+</body>
+</html>

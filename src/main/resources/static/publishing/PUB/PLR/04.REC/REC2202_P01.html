@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 후보자 정보 수정 | 상세 | 후보자관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>후보자 정보 수정</h1>
+			<button type="button" data-btn="pop-close">후보자 정보 수정 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [기본정보] -->
+			<!-- ######################### -->
+			<section class="wrap-section">
+				<h2 class="tit-sub1">기본정보</h2>
+				<div class="info-con1">
+					<dl>
+						<dt>후보자이름</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>생년월일/성별</dt>
+						<dd class="data-info2"><span>1977.06.10</span><span>남</span></dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [정보수정영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1 line2">
+				<legend>후보자 정보 수정</legend>
+
+				<!-- # 휴대폰 번호 # -->
+				<dl class="form">
+					<dt>휴대폰 번호 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<input type="tel" title="휴대폰번호" class="text" placeholder="휴대폰 번호를 입력해주세요." value="0102020202" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<div class="validation">휴대폰 번호를 다시 확인해주세요.</div>
+					</dd>
+				</dl>
+
+				<!-- # 주소 # -->
+				<dl class="form">
+					<dt>주소 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="input-btn1">
+							<data class="text" data-label="주소를 검색해주세요" value="04528 서울특별시 중구 남창동 1">04528 서울특별시 중구 남창동 1</data>
+							<button type="button" class="icon-com1 ic2">주소찾기</button>
+						</div>
+						<input type="text" class="text" title="상세 주소" placeholder="상세주소를 입력해주세요." value="201호">
+					</dd>
+				</dl>
+
+				<!-- # 도입자 # -->
+				<dl class="form">
+					<dt>도입자 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="input-btn1">
+							<data class="text" data-label="직원찾기" value="홍길동">홍길동</data>
+							<button type="button" class="icon-com1 ic2">직원찾기</button>
+						</div>
+						<data class="text disabled" data-label="소속" value="강남사업단 1지점">강남사업단 1지점</data>
+					</dd>
+				</dl>
+
+				<!-- # 경력구분 # -->
+				<dl class="form">
+					<dt>경력구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택해주세요.</span>
+								<span data-select="text" data-value="1">신인</span>
+							</button>
+							<div class="list">
+								<div data-label="경력구분 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion" value="1"><span>신인</span></label>
+										<label><input type="radio" name="selectOpeion" value="2"><span>경력(3년이내 1년이상)</span></label>
+										<label><input type="radio" name="selectOpeion" value="3"><span>교차모집</span></label>
+										<label><input type="radio" name="selectOpeion" value="4"><span>기타</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 채용면담내용 # -->
+				<dl class="form">
+					<dt>채용면담내용</dt>
+					<dd>
+						<div class="textarea">
+							<textarea cols="50" rows="3" title="채용면담내용" placeholder="내용을 입력해주세요.">의지가 강하나 전업으로 진행하기엔 시간적, 금전적 여유가 없음. 관심을 두고 지켜볼 필요 있음</textarea>
+							<span class="util2"><strong>0</strong>/200자</span>
+						</div>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

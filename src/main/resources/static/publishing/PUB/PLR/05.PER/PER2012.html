@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>검색 | 실가동 및 유실적 조회 | 조직관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-05]	1. 조회조건 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>필터</h1>
+			<button type="button" data-btn="pop-close">필터 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<fieldset class="form-wrap1">
+				<legend>필터입력</legend>
+
+				<!-- # 설계사 권한 영역 # -->
+				<dl class="form">
+					<dt>조직구분 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="formRadio01" checked>
+								<span>조직</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio01">
+								<span>취급자</span>
+							</label>
+						</div>
+
+						<!-- [CASE] 조직 -->
+						<div>
+							<div class="input-btn1">
+								<data class="text" value="" data-label="조직을 검색해주세요."></data>
+								<button type="button" class="icon-com1 ic2">조직 검색</button>
+							</div>
+
+							<!-- [D] 검색 후 -->
+							<div class="info-data3 info">
+								<div class="info2 ic1">
+									<strong>강남사업단</strong>
+									<span>A1234566</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+						</div>
+
+						<!-- [CASE] 취급자 -->
+						<div>
+							<div class="input-btn1">
+								<data class="text" value="" data-label="취급자를 검색해주세요."></data>
+								<button type="button" class="icon-com1 ic2">취급자 검색</button>
+							</div>
+
+							<!-- [D] 검색 후 -->
+							<div class="info-data3 info">
+								<div class="data-info1"> <!-- [M 2022-07-19] 클래스변경 및 이미지 추가, 구조변경 -->
+									<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+									<span><strong>김롯데</strong><span>1234567</span></span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+				<!-- // -->
+
+				<dl class="form">
+					<dt>조회기간 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">조회 월 선택</button>
+								<input type="text" title="조회 월 선택" data-dateform="month" value="2022.03" placeholder="YYYY.MM.DD" readonly>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>조회구분 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="label-btn1 col2">
+							<label>
+								<input type="radio" name="formRadio02" checked>
+								<span>원수</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio02">
+								<span>수수료환산</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>비가동 전환 LP</dt>
+					<dd>
+						<!-- 2022-12-02 마크업 변경 -->
+						<div class="label-btn1 col3" data-autoset="form">
+							<label>
+								<input type="radio" name="formRadio03" >
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio03" >
+								<span>예</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio03" data-tabcon="uiFormTabCon1" checked>
+								<span>아니요</span>
+							</label>
+						</div>
+						<!-- //2022-12-02 마크업 변경 -->
+					</dd>
+				</dl>
+
+				<!-- [D] 비가동 전환 LP : 예 선택 시 노출 -->
+				<div>
+					<dl class="form" data-id="uiFormTabCon1">
+						<dt>실가동/유실적/Core</dt>
+						<dd>
+							<div class="label-btn1 col2" data-autoset="form">
+								<label>
+									<input type="radio" name="formRadio04" checked>
+									<span>전체</span>
+								</label>
+								<label>
+									<input type="radio" name="formRadio04" data-tabcon="uiFormTabCon2">
+									<span>실가동</span>
+								</label>
+								<label>
+									<input type="radio" name="formRadio04" data-tabcon="uiFormTabCon2">
+									<span>유실적</span>
+								</label>
+								<label>
+									<input type="radio" name="formRadio04">
+									<span>Core</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- [D] 실가동/유실적/Core : 실가동, 유실적 선택 시 노출 -->
+					<dl class="form ui-tabcon" data-id="uiFormTabCon2">
+						<dt>충족여부</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="formRadio05" checked>
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="formRadio05">
+									<span>아니요</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- [M 2022-10-05] 조회조건 추가​ -->
+				<dl class="form">
+					<dt>연속가동구분</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="formRadio07" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio07">
+								<span>2개월 연속</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio07">
+								<span>3개월 연속</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+
+				<dl class="form">
+					<dt>전속구분</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="formRadio06" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio06">
+								<span>전속</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio06">
+								<span>교차</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<a href="javascript:void(0);" class="btn-action">초기화</a>
+				<a href="javascript:void(0);" class="btn-action c1">적용</a>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

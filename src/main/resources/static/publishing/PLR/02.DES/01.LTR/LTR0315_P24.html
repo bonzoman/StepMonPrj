@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 학원맞교습소배상책임 | 담보추가속성 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-16]	1. 1사고당 - > 대인1사고당 보상한도 레이블 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>담보추가속성</h1>
+			<button type="button" data-btn="pop-close">담보추가속성 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 보험정보 -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">let:care 재물종합보험(2201)</h2>
+				<div class="info">
+					<dl>
+						<dt>설계/증권번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [담보추가속성] 학원및교습소배상책임 -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend class="tit">학원및교습소배상책임</legend>
+
+				<!-- // -->
+				<dl class="form">
+					<dt>업종구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="selectOpeion1-1">기술학원</span>
+							</button>
+							<div class="list">
+								<div data-label="업종구분">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1-1"><span>기술학원</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl class="form">
+					<dt>규모(인원) <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="text num1">
+							<input type="tel" title="규모(인원)" placeholder="규모(인원)을 입력해주세요">
+							<span class="util1">명</span>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl class="form">
+					<dt>기숙사 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">기숙사</span>
+								<span data-select="text" data-value="selectOpeion2-1">있음</span>
+							</button>
+							<div class="list">
+								<div data-label="기숙사">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion2-1"><span>있음</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl class="form">
+					<dt>기숙사인원 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="text num1">
+							<input type="tel" title="기숙사인원" placeholder="기숙사인원을 입력해주세요">
+							<span class="util1">명</span>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl class="form">
+					<dt>대인1인당 보상한도 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="selectOpeion3-1">1억원</span>
+							</button>
+							<div class="list">
+								<div data-label="대인1인당 보상한도">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion3-1"><span>1억원</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+				<!-- 2022-11-16 셀렉트 박스 위치 변경 -->
+				<dl class="form">
+					<dt>대인1사고당 보상한도 <em class="icon-required2">필수</em></dt> <!-- 2022-11-16 텍스트 변경 -->
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="selectOpeion5-1">7억 4천만원</span>
+							</button>
+							<div class="list">
+								<div data-label="대인1사고당 보상한도"> <!-- 2022-11-15 data-label 변경 -->
+									<div class="option">
+										<label><input type="radio" name="selectOpeion5" value="selectOpeion5-1"><span>7억 4천만원</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl class="form">
+					<dt>대물1사고당 보상한도 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="selectOpeion4-1">2백만원</span>
+							</button>
+							<div class="list">
+								<div data-label="대물1사고당 보상한도">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion4" value="selectOpeion4-1"><span>2백만원</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<!-- //2022-11-16 셀렉트 박스 위치 변경 -->
+				<!-- // -->
+				<dl class="form">
+					<dt>본인부담금 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="selectOpeion6-1">10만원</span>
+							</button>
+							<div class="list">
+								<div data-label="본인부담금">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion6" value="selectOpeion6-1"><span>10만원</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 유의사항 # -->
+				<div class="mes-info2 box">
+					<p>
+						체육학원(예: 태권도장, 검도장, 요가학원 등)은 학원교습소배상책임 가입이 불가능합니다.
+						학원의 설립 운영 및 과외교습소에 관한 법률 제2조 제1호」
+					</p>
+				</div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<!-- [CASE1] 최초 진입 -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action c1">다음</button>
+			</div>
+
+			<!-- [CASE2] 중간 진입 -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action">이전</button>
+				<button type="button" class="btn-action c1">다음</button>
+			</div>
+
+			<!-- [CASE3] 마지막 단계 -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

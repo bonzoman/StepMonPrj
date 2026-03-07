@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[T] 피보험자 | [P] 담보상세 | 부활청약 | 장기 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>담보상세</h1>
+			<button type="button" data-btn="pop-close">담보상세 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [탭버튼] -->
+			<!-- ######################### -->
+			<div class="nav-tab1" data-autoset="tab" data-sticky="top">
+				<ul class="tablist">
+					<li class="active"><a href="#uiTabSection1" aria-current="page" role="tab" aria-selected="true" aria-expanded="false">피보험자</a></li>
+					<li><a href="#uiTabSection2" aria-current="page" role="tab" aria-selected="true" aria-expanded="true">목적물</a></li>
+				</ul>
+			</div>
+
+			<div id="uiTabSection1" class="ui-tabcon active" role="tabpanel" aria-expanded="true">
+				<!-- ######################### -->
+				<!-- [탭컨텐츠] 피보험자 -->
+				<!-- ######################### -->
+				<div class="con1">
+					<h2 class="hide">피보험자</h2>
+
+					<!-- [모두펼침] -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>모두 펼침</span>
+						</label>
+					</div>
+
+					<!-- [목록] -->
+					<div class="area-toggle1">
+						<section>
+							<header class="tit">
+								<h3>모성사망(부양자)</h3>
+								<dl class="data2">
+									<dt>담보가입금액</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</header>
+							<div data-toggle="content">
+								<div class="info-con1 w1">
+									<dl>
+										<dt>상태</dt>
+										<dd>
+											<span class="txt-c2">정상</span>
+											<span>상태값</span>
+										</dd>
+									</dl>
+									<dl>
+										<dt>보험시기</dt>
+										<dd>2013.02.20</dd>
+									</dl>
+									<dl>
+										<dt>보험종기</dt>
+										<dd>2044.02.20</dd>
+									</dl>
+									<dl>
+										<dt>보험기간</dt>
+										<dd>100세만기</dd>
+									</dl>
+									<dl>
+										<dt>납입기간</dt>
+										<dd>20년납</dd>
+									</dl>
+									<dl>
+										<dt>갱신유형</dt>
+										<dd>보험료 추가납입</dd>
+									</dl>
+									<dl>
+										<dt>갱신종료일</dt>
+										<dd>2032.03.23</dd>
+									</dl>
+									<dl>
+										<dt>보험료</dt>
+										<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+									</dl>
+								</div>
+								<div class="mes-info2 box"><p>상해사고로 후유장해가 발생한 경우 80%이상 후유장해시: 보험가입금액 지급</p></div>
+								<div class="area-btn1">
+									<a href="javascript:void(0);" class="btn-com1">담보속성보기</a>
+								</div>
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h3>암진단비</h3>
+								<dl class="data2">
+									<dt>담보가입금액</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</header>
+							<div data-toggle="content">
+								<div class="info-con1 w1">
+									<dl>
+										<dt>상태</dt>
+										<dd>
+											<span class="txt-c2">정상</span>
+										</dd>
+									</dl>
+									<dl>
+										<dt>보험시기</dt>
+										<dd>2013.02.20</dd>
+									</dl>
+									<dl>
+										<dt>보험종기</dt>
+										<dd>2044.02.20</dd>
+									</dl>
+									<dl>
+										<dt>보험기간</dt>
+										<dd>100세만기</dd>
+									</dl>
+									<dl>
+										<dt>납입기간</dt>
+										<dd>20년납</dd>
+									</dl>
+									<dl>
+										<dt>갱신유형</dt>
+										<dd>보험료 추가납입</dd>
+									</dl>
+									<dl>
+										<dt>갱신종료일</dt>
+										<dd>2032.03.23</dd>
+									</dl>
+									<dl>
+										<dt>보험료</dt>
+										<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+									</dl>
+								</div>
+								<div class="mes-info2 box"><p>상해사고로 후유장해가 발생한 경우 80%이상 후유장해시: 보험가입금액 지급</p></div>
+								<div class="area-btn1">
+									<a href="javascript:void(0);" class="btn-com1">담보속성보기</a>
+								</div>
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h3>상해후유장해</h3>
+								<dl class="data2">
+									<dt>담보가입금액</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="true">상해후유장해 상세보기</button>
+							</header>
+							<div data-toggle="content">
+								<div class="info-con1 w1">
+									<dl>
+										<dt>상태</dt>
+										<dd>
+											<span class="txt-c2">정상</span>
+										</dd>
+									</dl>
+									<dl>
+										<dt>보험시기</dt>
+										<dd>2013.02.20</dd>
+									</dl>
+									<dl>
+										<dt>보험종기</dt>
+										<dd>2044.02.20</dd>
+									</dl>
+									<dl>
+										<dt>보험기간</dt>
+										<dd>100세만기</dd>
+									</dl>
+									<dl>
+										<dt>납입기간</dt>
+										<dd>20년납</dd>
+									</dl>
+									<dl>
+										<dt>갱신유형</dt>
+										<dd>보험료 추가납입</dd>
+									</dl>
+									<dl>
+										<dt>갱신종료일</dt>
+										<dd>2032.03.23</dd>
+									</dl>
+									<dl>
+										<dt>보험료</dt>
+										<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+									</dl>
+								</div>
+								<div class="mes-info2 box"><p>상해사고로 후유장해가 발생한 경우 80%이상 후유장해시: 보험가입금액 지급</p></div>
+								<div class="area-btn1">
+									<a href="javascript:void(0);" class="btn-com1">담보속성보기</a>
+								</div>
+							</div>
+						</section>
+						<!-- // -->
+					</div>
+				</div>
+				<!-- ######################### -->
+			</div>
+
+			<div id="uiTabSection2" class="ui-tabcon" role="tabpanel" aria-expanded="false">
+				<div class="con2">
+					<h2 class="hide">피보험자</h2>
+
+					<!-- [모두펼침] -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>모두 펼침</span>
+						</label>
+					</div>
+
+					<!-- [목록] -->
+					<div class="area-toggle1">
+						<section>
+							<header class="tit">
+								<h3>모성사망(부양자)</h3>
+								<dl class="data2">
+									<dt>담보가입금액</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</header>
+							<div data-toggle="content">
+								<div class="info-con1 w1">
+									<dl>
+										<dt>상태</dt>
+										<dd>
+											<span class="txt-c2">정상</span>
+											<span>상태값</span>
+										</dd>
+									</dl>
+									<dl>
+										<dt>보험시기</dt>
+										<dd>2013.02.20</dd>
+									</dl>
+									<dl>
+										<dt>보험종기</dt>
+										<dd>2044.02.20</dd>
+									</dl>
+									<dl>
+										<dt>보험기간</dt>
+										<dd>100세만기</dd>
+									</dl>
+									<dl>
+										<dt>납입기간</dt>
+										<dd>20년납</dd>
+									</dl>
+									<dl>
+										<dt>갱신유형</dt>
+										<dd>보험료 추가납입</dd>
+									</dl>
+									<dl>
+										<dt>갱신종료일</dt>
+										<dd>2032.03.23</dd>
+									</dl>
+									<dl>
+										<dt>보험료</dt>
+										<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+									</dl>
+								</div>
+								<div class="mes-info2 box"><p>상해사고로 후유장해가 발생한 경우 80%이상 후유장해시: 보험가입금액 지급</p></div>
+								<div class="area-btn1">
+									<a href="javascript:void(0);" class="btn-com1">담보속성보기</a>
+								</div>
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h3>암진단비</h3>
+								<dl class="data2">
+									<dt>담보가입금액</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</header>
+							<div data-toggle="content">
+								<div class="info-con1 w1">
+									<dl>
+										<dt>상태</dt>
+										<dd>
+											<span class="txt-c2">정상</span>
+										</dd>
+									</dl>
+									<dl>
+										<dt>보험시기</dt>
+										<dd>2013.02.20</dd>
+									</dl>
+									<dl>
+										<dt>보험종기</dt>
+										<dd>2044.02.20</dd>
+									</dl>
+									<dl>
+										<dt>보험기간</dt>
+										<dd>100세만기</dd>
+									</dl>
+									<dl>
+										<dt>납입기간</dt>
+										<dd>20년납</dd>
+									</dl>
+									<dl>
+										<dt>갱신유형</dt>
+										<dd>보험료 추가납입</dd>
+									</dl>
+									<dl>
+										<dt>갱신종료일</dt>
+										<dd>2032.03.23</dd>
+									</dl>
+									<dl>
+										<dt>보험료</dt>
+										<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+									</dl>
+								</div>
+								<div class="mes-info2 box"><p>상해사고로 후유장해가 발생한 경우 80%이상 후유장해시: 보험가입금액 지급</p></div>
+								<div class="area-btn1">
+									<a href="javascript:void(0);" class="btn-com1">담보속성보기</a>
+								</div>
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h3>상해후유장해</h3>
+								<dl class="data2">
+									<dt>담보가입금액</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="true">상해후유장해 상세보기</button>
+							</header>
+							<div data-toggle="content">
+								<div class="info-con1 w1">
+									<dl>
+										<dt>상태</dt>
+										<dd>
+											<span class="txt-c2">정상</span>
+										</dd>
+									</dl>
+									<dl>
+										<dt>보험시기</dt>
+										<dd>2013.02.20</dd>
+									</dl>
+									<dl>
+										<dt>보험종기</dt>
+										<dd>2044.02.20</dd>
+									</dl>
+									<dl>
+										<dt>보험기간</dt>
+										<dd>100세만기</dd>
+									</dl>
+									<dl>
+										<dt>납입기간</dt>
+										<dd>20년납</dd>
+									</dl>
+									<dl>
+										<dt>갱신유형</dt>
+										<dd>보험료 추가납입</dd>
+									</dl>
+									<dl>
+										<dt>갱신종료일</dt>
+										<dd>2032.03.23</dd>
+									</dl>
+									<dl>
+										<dt>보험료</dt>
+										<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+									</dl>
+								</div>
+								<div class="mes-info2 box"><p>상해사고로 후유장해가 발생한 경우 80%이상 후유장해시: 보험가입금액 지급</p></div>
+								<div class="area-btn1">
+									<a href="javascript:void(0);" class="btn-com1">담보속성보기</a>
+								</div>
+							</div>
+						</section>
+						<!-- // -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+
+	/* ************************************
+	* 샘플 : 전체펼침/닫기 스크립트
+	************************************ */
+	//토글선언
+	var _toggle = $plugin.togglecon('.area-toggle1 > section',{
+		selector_group : false,
+		callback_load : function(e){
+			var _total = $(e.this_wrapper).parents('.area-toggle1').find('section').length;
+			var _active = $(e.this_wrapper).parents('.area-toggle1').find('> .active').length;
+			if(_total == _active) $(".label-check1 input").prop('checked',true);
+		},
+		callback_after :function(){
+			$(".label-check1 input").prop('checked',false);
+		}
+	});
+	
+	//샘플 : 모두펼침
+	$(".con1 .label-check1 input").on("change", function(){
+		const _checked = $(this).is(":checked");
+		const _toggles = $(".con1 .area-toggle1").find("section");
+		_checked ? _toggles.addClass("active") : _toggles.removeClass("active");
+	});
+
+	$(".con2 .label-check1 input").on("change", function(){
+		const _checked = $(this).is(":checked");
+		const _toggles = $(".con2 .area-toggle1").find("section");
+		_checked ? _toggles.addClass("active") : _toggles.removeClass("active");
+	});
+//-->
+</script>
+</body>
+</html>

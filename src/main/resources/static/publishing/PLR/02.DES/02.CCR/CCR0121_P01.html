@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]차량등록정보조회 | 차량정보 | 설계(개인/업무/영업) | 가입설계 | 자동차보험 | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>차량등록정보</h1>
+			<button type="button" data-btn="pop-close">차량등록정보 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [피보험자 정보] -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="hide">피보험자 정보</h2>
+				<div class="info-data3 t3">
+					<dl>
+						<dt class="data-info2" data-value="102701">
+							<strong>하다미</strong>
+							<span>
+								<span>생년월일</span>
+								<span>성별</span>
+							</span>
+						</dt>
+						<dd class="data-word3">
+							<span>최초신규등록일 2019.03.20</span>
+							<span>비단체차량</span>
+						</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [차량정보] -->
+			<!-- ######################### -->
+			<div class="info-con1">
+				<dl>
+					<dt>등록증상 연식</dt>
+					<dd>2019</dd>
+				</dl>
+				<dl>
+					<dt>차량번호</dt>
+					<dd>00가1234</dd>
+				</dl>
+				<dl>
+					<dt>차명</dt>
+					<dd>그랜저(GRANDEUR)</dd>
+				</dl>
+				<dl>
+					<dt>차량제조번호(차대번호)</dt>
+					<dd>KMHF111EBKA123456</dd>
+				</dl>
+				<dl>
+					<dt>등록증상 차종</dt>
+					<dd>승용차일반형대형</dd>
+				</dl>
+				<dl>
+					<dt>차량번호 존재여부</dt>
+					<dd>
+						<div>최종등록기준일 현재</div>
+						<div>등록자료에 존재</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>등록상태 발생일자</dt>
+					<dd>2019.03.20</dd>
+				</dl>
+				<dl>
+					<dt>차량번호 등록상태</dt>
+					<dd>신규등록(새차 또는 수입차로 신규 등록)</dd>
+				</dl>
+				<dl>
+					<dt>등록소유자명</dt>
+					<dd><span data-masking="true">하*미</span></dd>
+				</dl>
+				<dl>
+					<dt>변경(현재) 차량번호</dt>
+					<dd>-</dd>
+				</dl>
+				<dl>
+					<dt>소유자일치여부</dt>
+					<dd>
+						<div>피보험자번호와 소유자번호</div>
+						<div><strong class="txt-c1">불일치</strong></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>공동명의 차량여부</dt>
+					<dd>단일 명의 소유</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 태그검색 | 어드밴스드 | 내강의실</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>태그 검색</h1>
+			<button type="button" data-btn="pop-close">태그 검색 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [검색영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-search1" data-sticky="top">
+				<legend>태그명 검색</legend>
+				<div class="text">
+					<span class="util none">#</span>
+					<input type="search" title="태그" data-search="input" placeholder="태그명을 입력해주세요.">
+					<button type="button" class="icon-com1 ic2">검색하기</button>
+				</div>
+				<div class="list-data7 t3 none" data-search="cont">
+					<ul>
+						<li><button type="button">키워드<mark>검색어</mark></button></li>
+						<li><button type="button"><mark>검색어</mark>키워드</button></li>
+						<li><button type="button">암<mark>검색어</mark></button></li>
+						<li><button type="button">대장암<mark>검색어</mark></button></li>
+					</ul>
+				</div>
+				<button type="button" data-search="close">닫기</button>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [CASE1] 태그 검색전 -->
+			<!-- ######################### -->
+			<div class="wrap-section">
+				<!-- # 인기태그목록 # -->
+				<dl class="tit-sub3">
+					<dt>인기 태그 목록</dt>
+					<!-- // -->
+					<dd class="data-word2 type1">
+						<ul>
+							<li><button type="button">#자동차 보험</button></li>
+							<li><button type="button">#암</button></li>
+							<li><button type="button">#Let: 노하우 추천</button></li>
+							<li><button type="button">#사고</button></li>
+							<li><button type="button">#제3보험</button></li>
+						</ul>
+					</dd>
+					<!-- // -->
+				</dl>
+
+				<!-- # 전체태그목록 # -->
+				<dl class="tit-sub3">
+					<dt>전체 태그 목록</dt>
+					<!-- // -->
+					<dd class="data-word2">
+						<button type="button">#자동차 보험</button>
+						<button type="button">#암</button>
+						<button type="button">#Let: 선배 추천</button>
+						<button type="button">#사고</button>
+						<button type="button">#어린이 보험</button>
+						<button type="button">#제3보험</button>
+						<button type="button">#상해</button>
+						<button type="button">#전문직</button>
+						<button type="button">#질병</button>
+						<button type="button">#Let: 노하우 추천</button>
+						<button type="button">#사고</button>
+						<button type="button">#어린이 보험</button>
+						<button type="button">#상해</button>
+						<button type="button">#제3보험</button>
+						<button type="button">#자동차 보험</button>
+						<button type="button">#전문직</button>
+						<button type="button">#Let: 노하우 추천</button>
+						<button type="button">#제3보험</button>
+						<button type="button">#어린이 보험</button>
+						<button type="button">#상해</button>
+					</dd>
+					<!-- // -->
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [CASE2] 태그 검색후 : 검색결과 노출 -->
+			<!-- ######################### -->
+			<div>
+				<div class="area-info1">
+					<p>검색결과 <strong>3건</strong></p>
+				</div>
+				<div class="list-data7 t3">
+					<ul>
+						<li><button type="button"><mark>암</mark></button></li>
+						<li><button type="button"><mark>암</mark>보험</button></li>
+						<li><button type="button">혈액<mark>암</mark></button></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [CASE3] 태그 검색후 : 검색결과 없음 -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p><strong>일치하는 내용이 없습니다.</strong></p>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//샘플 : 검색키워드 클릭 시
+	$('[data-search="cont"] button').on('click',function(){
+		$('[data-search="input"]').val($(this).text());
+		$('[data-search="close"]').trigger('click');
+	})
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>POPUP | GUIDE | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<div class="treemenu">
+			<ul>
+				<li>
+					<button type="button" class="group">그룹</button>
+					<ul>
+						<li><button type="button" class="group">그룹</button>
+							<ul>
+								<li><button type="button" class="group">그룹</button>
+									<ul>
+										<li><button type="button" class="target current">페이지1</button></li>
+										<li><button type="button" class="target">페이지2</button></li>
+										<li><button type="button" class="target">페이지3</button></li>
+										<li><button type="button" class="target">페이지4</button></li>
+										<li><button type="button" class="target">페이지5</button></li>
+										<li><button type="button" class="target">페이지6</button></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><button type="button" class="target">선택됨</button></li>
+						<li><button type="button" class="target write">작성중</button></li>
+					</ul>
+				</li>
+				<li>
+					<span class="group">그룹</span>
+					<ul>
+						<li><button type="button" class="target">페이지1</button></li>
+						<li><button type="button" class="target">페이지2</button></li>
+						<li><button type="button" class="target write">페이지3</button></li>
+					</ul>
+				</li>
+				<li>
+					<label class="label-check t1">
+						<input type="checkbox">
+						<span></span>
+					</label>
+					<span class="group">그룹</span>
+					<ul>
+						<li>
+							<label class="label-check t1">
+								<input type="checkbox">
+								<span></span>
+							</label>
+							<button type="button" class="target">페이지1</button>
+						</li>
+						<li>
+							<label class="label-check t1">
+								<input type="checkbox">
+								<span></span>
+							</label>
+							<button type="button" class="target">페이지2</button>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		ui.treeMenu();
+	</script>
+</body>
+</html>

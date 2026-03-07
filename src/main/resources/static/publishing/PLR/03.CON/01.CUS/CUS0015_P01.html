@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 사업자구분안내 | 고객정보등록 | 사업자고객등록 | 고객등록</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>사업자구분 안내</h1>
+			<button type="button" data-btn="pop-close">사업자구분 안내 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [탭버튼] -->
+			<!-- ######################### -->
+			<div class="nav-tab1" data-sticky="top" data-autoset="tab">
+				<ul>
+					<li class="active"><a href="#uiTabSection1">사업자등록번호</a></li>
+					<li><a href="#uiTabSection2">고유번호</a></li>
+					<li><a href="#uiTabSection3">보유자코드</a></li>
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 사업자등록번호 -->
+			<!-- ######################### -->
+			<div id="uiTabSection1" class="ui-tabcon active">
+				<h2 class="tit-sub1">사업자등록번호란?</h2>
+				<p class="mes-t3">
+					세무에서 신규로 개업하는 사업자에게 부여하는 사업체의 고유번호입니다.
+					세무를 편리하게 진행하기 위해 사업자등록증에 표기하는 번호로, 세금계산서나 영수증에 필수적으로 기재됩니다.
+					모두 10개의 숫자가 000-00-00000 형태로 표기되는데, 각 자릿수는 특정 체계를 가지고 있습니다.
+				</p>
+
+				<!-- # 사업자등록번호 코드 # -->
+				<div class="con-t5">
+					<dl>
+						<dt>123</dt>
+						<dd><strong>지역코드</strong><span>3자리</span></dd>
+					</dl>
+					<dl>
+						<dt>45</dt>
+						<dd><strong>성격코드</strong><span>2자리</span></dd>
+					</dl>
+					<dl>
+						<dt>6789</dt>
+						<dd><strong>일련번호</strong><span>4자리</span></dd>
+					</dl>
+					<dl>
+						<dt>0</dt>
+						<dd><strong>검증번호</strong><span>1자리</span></dd>
+					</dl>
+				</div>
+
+				<!-- # 지역코드 # -->
+				<section class="wrap-section1">
+					<h3 class="tit-sub2">1) 지역코드(일련번호코드, 3자리)</h3>
+					<p class="mes-t3">
+						<strong>101~999<br></strong>
+						(200, 300, 400, 500, 600, 700, 800, 900은 제외)
+					</p>
+					<ul class="txt-bul1">
+						<li>사업자등록번호 앞 3자리를 의미 없는 일련번호 개념으로 순차적으로 사용하고, 매번 새로운 사업자등록번호를 부여</li>
+						<li>15.02.23 이전 사업자등록번호 앞 3자리 일련번호는 관할 국세청&middot;세무서 코드를 의미</li>
+					</ul>
+				</section>
+
+				<!-- # 성격코드 # -->
+				<section class="wrap-section1">
+					<h3 class="tit-sub2">2) 성격코드(개인 법인 구분코드, 2자리)</h3>
+					<div class="tbl-data1 t1">
+						<table>
+							<caption>성격코드, 개인구분코드, 법인성격코드</caption>
+							<colgroup>
+								<col style="width:25%">
+								<col style="width:35%">
+								<col style="width:40%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">성격코드</th>
+									<th scope="col">개인구분코드</th>
+									<th scope="col">법인성격코드</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>01~79</td>
+									<td>개인과세사업자</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>80</td>
+									<td>다단계 판매업자</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>81</td>
+									<td>-</td>
+									<td>영리법인의 본점</td>
+								</tr>
+								<tr>
+									<td>82</td>
+									<td>-</td>
+									<td>비영리법인의 본점, 지점</td>
+								</tr>
+								<tr>
+									<td>83</td>
+									<td>-</td>
+									<td>국가, 지방자치단체,	지방자치단체조합</td>
+								</tr>
+								<tr>
+									<td>84</td>
+									<td>-</td>
+									<td>외국법인의 본점, 지점 및 연락사무소</td>
+								</tr>
+								<tr>
+									<td>85</td>
+									<td>-</td>
+									<td>영리법인의 지점</td>
+								</tr>
+								<tr>
+									<td>86~88</td>
+									<td>-</td>
+									<td>영리법인의 본점</td>
+								</tr>
+								<tr>
+									<td>89</td>
+									<td>종교단체</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>90~99</td>
+									<td>개인면세사업자</td>
+									<td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<!-- # 일련번호코드 # -->
+				<section class="wrap-section1">
+					<h3 class="tit-sub2">3) 일련번호코드(4자리)</h3>
+					<ul class="txt-bul1">
+						<li>과세사업자(일반과세자, 간이면세자), 면세사업자, 법인사업자별로 등록 또는 지정일자 순으로 사용 가능한 번호를 0001~9999로 부여</li>
+						<li>비영리법인의 본&middot;지점은 등록 또는 지정일 순으로 0001~5999로 부여</li>
+						<li>국세기본법 제13조 제2항의 규정에 의하여 법인으로 보는 단체는 6000~9999로 부여</li>
+					</ul>
+				</section>
+
+				<!-- # 검증번호 # -->
+				<section class="wrap-section1">
+					<h3 class="tit-sub2">4) 검증번호(1자리)</h3>
+					<p class="txt-bul1">전산시스템에 의하여 사업자등록번호의 오류여부를 검증하기 위하여 1자리의 검증번호를 부여</p>
+				</section>
+				<!-- # // # -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 고유번호 -->
+			<!-- ######################### -->
+			<div id="uiTabSection2" class="ui-tabcon">
+				<h2 class="tit-sub1">고유번호란?</h2>
+				<p class="mes-t3">
+					고유번호란 사업자가 아닌 자에게 관할 세무서장이 과세자료의 효율적 관리를 위해 사업자등록에
+					준하여 발급하는 번호를 말합니다. 영리를 목적으로 하는 경우에는 &#8216;사업자등록증&#8217;을,
+					비영리를 목적으로 하는 경우에는 &#8216;고유번호증&#8217;을 발급하고 있습니다
+				</p>
+				<p class="txt-c3 sub-con6">※ 고유번호증: 세무서장이 고유번호를 부여하면서 발급하는 증서</p>
+
+				<div class="wrap-section3">
+					<!-- # 사업자등록증 # -->
+					<section class="wrap-section">
+						<h3 class="tit-sub1">사업자등록증</h3>
+						<div class="info-con1">
+							<dl>
+								<dt>계산서 발행 가능여부</dt>
+								<dd>가능</dd>
+							</dl>
+							<dl>
+								<dt>소득세<br>제출서류</dt>
+								<dd>법인세, 소득세, 부가가치세, 소득세에 대한 원천징수, 연말정산 신고</dd>
+							</dl>
+						</div>
+					</section>
+
+					<!-- # 고유번호증 # -->
+					<section class="wrap-section">
+						<h3 class="tit-sub1">고유번호증</h3>
+						<div class="info-con1">
+							<dl>
+								<dt>계산서 발행 가능여부</dt>
+								<dd>불가능</dd>
+							</dl>
+							<dl>
+								<dt>소득세<br>제출서류</dt>
+								<dd>원천징수, 연말정산, 매입세금계산서(매입계산서) 합계표</dd>
+							</dl>
+						</div>
+					</section>
+
+					<!-- # 사업자등록증, 고유번호증 안내문구 # -->
+					<div class="mes-t1 line2">
+						<p>
+							사업자등록증은 영리 목적으로 사업을 수행하는 경우에 필요한 사업자의 정보를 담은 증서입니다.
+							따라서 영리를 목적으로 하는 사업을 개시하고자 하는 경우에는 「부가가치세법」 제8조에 따라 사업장마다
+							사업개시일로부터 20일 이내에 사업장관할 세무서장에게 사업자등록을 해야 합니다.<br><br>
+						</p>
+						<p>
+							이러한 사업자등록증과 고유번호증의 가장 큰 차이는 세금계산서(면세사업자의 경우 계산서) 발행 가능
+							여부입니다. 즉, 사업자등록을 한 경우에는 업종에 따라 일반과세사업자 또는 면세사업자로 구분되어
+							일반과세사업자는 세금계산서를, 면세사업자는 부가가치세가 없는 계산서를 발행하게 됩니다. 그러나
+							사업자등록증이 아닌 고유번호증만 가진 법인(단체)의 경우에는 「세법」 상 절대로
+							세금계산서 및 계산서를 발행해서는 안 됩니다.<br><br>
+						</p>
+						<p>
+							또한 고유번호증을 소지한 법인 또는 단체는 급여 등 관련 소득세에 대한 원천징수와 연말정산,
+							매입세금계산서(매입계산서) 합계표 제출만 하면 되지만, 사업등록증이 있는 법인 또는
+							단체의 세금납부 의무는 법인세 또는 소득세, 부가가치세, 소득세에 대한 원천징수,
+							연말정산 신고 모두 해당될 수 있습니다.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 보유자코드 -->
+			<!-- ######################### -->
+			<div id="uiTabSection3" class="ui-tabcon">
+				<h2 class="tit-sub1">보유자코드란?</h2>
+				<p class="mes-t3">보유자코드란 자동차보험 가입자가 보험가입 및 보상업무의 편익도모와 단체 할인할증 대상여부 및 단체 할인할증 실적평가를 위해 영업용 및 업무용 자동차의 가입자 중 나중에 단체 할인할증 적용 가능성이 있는 가입자(부여대상)에 대하여 보험 가입자별로 부여하는 8자리 코드를 말합니다.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+		</div>
+		<!-- ######################### -->
+	</article>
+	<!-- -------------------------------------- -->
+</div>
+<!-- ################################################### -->
+</body>
+</html>

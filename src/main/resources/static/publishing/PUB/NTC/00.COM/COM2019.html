@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>엔트리페이지 | 고객모바일</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<!-- <header class="header">
+		<h1 class="hide">로그인</h1>
+	</header> -->
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="5">
+		<!-- ######################### -->
+		<!-- [정보입력] -->
+		<!-- ######################### -->
+		<div class="entry-tit">
+            <em>롯데손해보험</em>
+            <p><strong>보장분석결과서</strong>를<br>확인해보세요.</p>
+        </div>
+
+        <div class="entry-form">
+            <input type="tel" class="text" title="생년월일 여섯자리 입력" maxlength="6" placeholder="생년월일 여섯자리">
+            <button type="button">이동</button>
+        </div>
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+    if($('[type="text"], [type="tel"], [type="email"], [type="search"], textarea').length > 0) {
+        $(document).on('focus','[type="text"], [type="tel"], [type="email"], [type="search"], [type="password"], textarea',function(){
+            $('body').addClass('blur');
+        }).on('blur','[type="text"], [type="tel"], [type="email"], [type="search"], [type="password"], textarea',function(){
+            $('body').removeClass('blur');
+        });
+    }
+</script>
+</body>
+</html>

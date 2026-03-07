@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 비밀번호 변경</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>비밀번호 변경</h1>
+			<button type="button" data-btn="pop-close">비밀번호 변경 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 안내문구 -->
+			<!-- ######################### -->
+			<div class="tit-section"><p>변경하실 비밀번호를 입력해주세요.</p></div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 비밀번호 -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>비밀번호 입력</legend>
+
+				<!-- # 신규 비밀번호 # -->
+				<dl class="form">
+					<dt>신규 비밀번호</dt>
+					<dd>
+						<input type="password" class="text" title="신규 비밀번호" placeholder="비밀번호를 입력하세요">
+						<div class="validation"></div>
+					</dd>
+				</dl>
+
+				<!-- # 비밀번호 확인 # -->
+				<dl class="form">
+					<dt>비밀번호 확인</dt>
+					<dd>
+						<input type="password" class="text" title="비밀번호 확인" placeholder="비밀번호를 입력하세요">
+						<div class="validation"></div>
+					</dd>
+				</dl>
+
+				<!-- # 비밀번호 확인 : 오류 # -->
+				<dl class="form">
+					<dt>비밀번호 확인</dt>
+					<dd>
+						<input type="password" class="text" title="비밀번호 확인" value="qwesdf12435" placeholder="비밀번호를 입력하세요" aria-invalid="true">
+						<div class="validation">입력하신 비밀번호를 정확하게 다시 입력해주세요.</div>
+					</dd>
+				</dl>
+				<!-- # // # -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+				<!-- 비활성화 시 -->
+				<!-- <button type="button" class="btn-action c1" disabled>확인</button> -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//Toast POPUP 호출샘플
+	$('.btn-action').on('click',function(){
+		ui.toast('비밀번호가 변경되었습니다.', function(){
+			ui.alert('닫힐때 실행'); //닫힐때 실행 이벤트 영역
+		}); // [M 2022-04-18] 토스트팝업 추가
+	});
+//-->
+</script>
+</body>
+</html>

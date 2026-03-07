@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>목록 | 크루게시판</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-29]	① 등록된 글이 없을 경우 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>렛:톡</h1>
+		<button type="button" class="btn-t1 icon-com1 ic2">렛:크루 검색</button>
+		<a href="#asideTotalMenu" class="icon-menu" aria-haspopup="dialog">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li><a href="javascript:void(0);">모두의 톡</a></li>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">렛:크루</a></li>
+			</ul>
+		</div>
+
+		<div class="tab-sub1" data-scroll="true" data-sticky="top">
+			<ul>
+				<li><a href="javascript:void(0);">사업단</a></li>
+				<li class="active"><a href="javascript:void(0);" aria-label="소속 크루">주부</a></li> <!-- [M 2022-07-14] 본인 소속 크루인 경우 : aria-label="소속 크루" 추가 -->
+				<li><a href="javascript:void(0);" aria-label="소속 크루">라이더스</a></li>
+				<li><a href="javascript:void(0);">학생</a></li>
+				<li><a href="javascript:void(0);">직장인</a></li>
+				<li><a href="javascript:void(0);">무직</a></li>
+				<li><a href="javascript:void(0);">크루명 영역</a></li>
+			</ul>
+			<div class="side">
+				<button type="button" class="icon-com1 ic17-1">크루변경</button>
+			</div>
+		</div>
+
+
+		<!-- ######################### -->
+		<!-- [목록] -->
+		<!-- ######################### -->
+		<!-- [M 2022-11-29] 등록된 글이 없을 경우 인기글 미노출 -->
+		<h2 class="tit-sub1 ic2"><i class="cate">주부</i> 크루 이번주 인기글</h2>
+		<!-- [D] 최대 4개 -->
+		<div class="board-list1" data-scroll="true">
+			<ul>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<div class="tit">
+							<strong>인기글 제목</strong>
+						</div>
+						<dl class="info">
+							<dt>작성자(소속)</dt>
+							<dd>작성자(소속)</dd>
+							<dt>작성일</dt>
+							<dd>2022.01.01 00:00</dd>
+						</dl>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic8">
+								<dt>좋아요</dt>
+								<dd>000</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<div class="tit">
+							<strong>2022년 02월 정보보호의 날 수행 업무 안내드립니다.</strong>
+						</div>
+						<dl class="info">
+							<dt>작성자(소속)</dt>
+							<dd>하다미(강남사업단)</dd>
+							<dt>작성일</dt>
+							<dd><time datetime="2022-01-01">2022.02.22 20:48</time></dd>
+						</dl>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic8">
+								<dt>좋아요</dt>
+								<dd>000</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<div class="tit">
+							<strong>2022년 02월 정보보호의 날 수행 업무 안내드립니다.</strong>
+						</div>
+						<dl class="info">
+							<dt>작성자(소속)</dt>
+							<dd>하다미(강남사업단)</dd>
+							<dt>작성일</dt>
+							<dd><time datetime="2022-01-01">2022.02.22 20:48</time></dd>
+						</dl>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic8">
+								<dt>좋아요</dt>
+								<dd>000</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<div class="tit">
+							<strong>2022년 02월 정보보호의 날 수행 업무 안내드립니다.</strong>
+						</div>
+						<dl class="info">
+							<dt>작성자(소속)</dt>
+							<dd>하다미(강남사업단)</dd>
+							<dt>작성일</dt>
+							<dd><time datetime="2022-01-01">2022.02.22 20:48</time></dd>
+						</dl>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic8">
+								<dt>좋아요</dt>
+								<dd>000</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<!-- // -->
+			</ul>
+			<!-- // -->
+		</div>
+		<!-- //[M 2022-11-29] 등록된 글이 없을 경우 인기글 미노출 -->
+
+		<!-- ######################### -->
+		<!-- [배너영역] 관리자 등록 배너 -->
+		<!-- ######################### -->
+		<div class="banner-t1">
+			<a href="javascript:void(0);"><img src="../../resource/img/temp/@img_banner7.png" alt="@대체텍스트 배너 타이틀"></a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [전체게시글]  -->
+		<!-- ######################### -->
+		<!-- [총 건수] -->
+		<div class="area-info1">
+			<p>총 <strong>12,340건</strong></p>
+			<div class="side">
+				<!-- [M 2022-05-12] 셀렉트박스 B/S로 변경 -->
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">정렬</span>
+						<span data-select="text" data-value="1">최신순</span>
+					</button>
+					<div class="list">
+						<div data-label="정렬">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion" value="1"><span>최신순</span></label>
+								<label><input type="radio" name="selectOpeion" value="2"><span>조회수</span></label>
+								<label><input type="radio" name="selectOpeion" value="3"><span>댓글수</span></label>
+								<label><input type="radio" name="selectOpeion" value="4"><span>좋아요 많은순</span></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- // -->
+			</div>
+		</div>
+
+		<!-- [목록 리스트] -->
+		<div class="board-list1">
+			<ul>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<div class="tit">
+							<strong>게시글 제목</strong>
+						</div>
+						<dl class="info">
+							<dt>작성자(소속)</dt>
+							<dd>작성자(소속)</dd>
+							<dt>작성일</dt>
+							<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+						</dl>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000,000</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic8 checked" title="내가 좋아요 누름"> <!-- [D] 자신이 좋아요 눌렀을 경우 : 클래스 추가 (.checked) -->
+								<dt>좋아요</dt>
+								<dd>000</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<div class="tit">
+							<strong>2022년 02월 정보보호의 날 수행업무 안내드립니다.</strong>
+						</div>
+						<dl class="info">
+							<dt>작성자(소속)</dt>
+							<dd>공지철(총무팀)</dd>
+							<dt>작성일</dt>
+							<dd><time datetime="2022-01-01">2022.02.28 20:48</time></dd>
+						</dl>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>1,240</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>145</dd>
+							</dl>
+							<dl class="icon-com1 ic8">
+								<dt>좋아요</dt>
+								<dd>780</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<div class="tit">
+							<strong>2022년 02월 정보보호의 날 수행 업무 안내드립니다.</strong>
+						</div>
+						<dl class="info">
+							<dt>작성자(소속)</dt>
+							<dd>하다미(강남사업단)</dd>
+							<dt>작성일</dt>
+							<dd><time datetime="2022-01-01">2022.02.28 20:48</time></dd>
+						</dl>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>1,240</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>145</dd>
+							</dl>
+							<dl class="icon-com1 ic8">
+								<dt>좋아요</dt>
+								<dd>780</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<div class="tit">
+							<strong>정보보호의 날 수행 업무 안내</strong>
+						</div>
+						<dl class="info">
+							<dt>작성자(소속)</dt>
+							<dd>이호주(강남사업단)</dd>
+							<dt>작성일</dt>
+							<dd><time datetime="2022-01-01">2022.02.28 20:48</time></dd>
+						</dl>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>1,240</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>145</dd>
+							</dl>
+							<dl class="icon-com1 ic8">
+								<dt>좋아요</dt>
+								<dd>780</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<div class="tit">
+							<strong>2022년 02월 정보보호의 날 수행 업무 안내드립니다.</strong>
+						</div>
+						<dl class="info">
+							<dt>작성자(소속)</dt>
+							<dd>유다희(강남사업단)</dd>
+							<dt>작성일</dt>
+							<dd><time datetime="2022-01-01">2022.02.28 20:48</time></dd>
+						</dl>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>1,240</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>145</dd>
+							</dl>
+							<dl class="icon-com1 ic8">
+								<dt>좋아요</dt>
+								<dd>780</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<!--  [M 2022-11-29] [CASE] 등록된 글이 없을 경우 -->
+				<li class="nodata">
+					<strong>아직 등록된 글이 없어요.</strong>
+					<span>가장 먼저 글을 등록해보세요!</span>
+				</li>
+				<!-- //[M 2022-11-29] [CASE] 등록된 글이 없을 경우 -->
+			</ul>
+
+			<!-- 더보기 버튼 -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 등록버튼 : [D] 본인 크루가 아닌 경우 미제공 -->
+		<!-- ######################### -->
+		<a href="javascript:void(0);" class="btn-util1 ic1" data-sticky="bottom">등록</a>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer"></footer>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+	$(document).ready(function(){
+		$('.tab-sub1 a').click(function(){
+				alert('test');
+		});
+	});
+</script>
+</body>
+</html>

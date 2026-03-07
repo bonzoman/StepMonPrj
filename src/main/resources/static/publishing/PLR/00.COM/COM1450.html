@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>일정검색 | 캘린더 | 일정관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>일정 검색</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [검색영역] -->
+		<!-- ######################### -->
+		<fieldset class="form-search1 line">
+			<legend>일정검색</legend>
+
+			<dl class="form">
+				<dt class="hide">일정 기간 선택</dt>
+				<dd class="input-date1 text">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+						<input type="text" title="시작날짜 선택" data-dateform="start2" placeholder="YYYY.MM.DD" readonly>
+					</span>
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+						<input type="text" title="종료날짜 선택" data-dateform="end2" placeholder="YYYY.MM.DD" readonly>
+					</span>
+				</dd>
+			</dl>
+
+            <!-- 2022-11-25 변경 -->
+			<div class="text">
+                <span class="area">
+                    <input type="text" title="제목 또는 내용을 입력해 주세요." value="" placeholder="제목 또는 내용을 입력해 주세요.">
+                    <button type="button" data-btn="delete">내용 삭제</button>
+                </span>
+                <button type="button" class="icon-com1 ic2 simple">검색</button>
+            </div>
+            <!-- //2022-11-25 변경 -->
+			<!-- # // # -->
+		</fieldset>
+
+        <!-- ######################### -->
+        <!-- [검색결과] 결과없음 -->
+        <!-- ######################### -->
+        <div class="mes-result1">
+            <p>
+                <strong>검색 결과가 없습니다.</strong>
+            </p>
+        </div>
+
+        <!-- ######################### -->
+        <!-- [검색결과] -->
+        <!-- ######################### -->
+        <!-- # 총 건수 : 총 00건 # -->
+        <div class="wrap-section1">
+            <div class="area-info1">
+                <p>총 <strong>40건</strong></p>
+            </div>
+    
+            <div class="list-data4">
+                <!-- // -->
+                <dl>
+                    <dt>2022.04.19</dt>
+                    <dd>
+                        <strong class="ico-t2">김강남 고객님 <em class="txt-c1">생일</em></strong> <!-- 2022-12-28 클래스 추가 -->
+                        <p class="data-txt"><span>10:00~11:00</span><span>김강남</span></p> <!-- 2022-12-28 추가 -->
+                        <!-- 2022-12-21 바로가기 버튼 추가 -->
+                        <a href="javascript:void(0);" class="btn-sub3 c2">바로가기</a>
+                        <!-- // 2022-12-21 바로가기 버튼 추가 -->
+                    </dd>
+                    <dd>
+                        <strong class="ico-t1">아코디 고객님 <em class="txt-c1">생일</em></strong> <!-- 2022-12-28 클래스 추가 -->
+                        <p class="data-txt"><span>10:00~11:00</span><span>김강남</span></p> <!-- 2022-12-28 추가 -->
+                        <div class="data-word2">
+                            <span>#60대이상</span>
+                            <span>#기혼</span>
+                            <span>#10만원이하</span>
+                            <span>#실손</span>
+                        </div>
+                        <!-- 2022-12-21 상세보기 버튼 추가 -->
+                        <a href="javascript:void(0);" class="btn-sub3 c2">상세보기</a>
+                        <!-- // 2022-12-21 상세보기 버튼 추가 -->
+                    </dd>
+                    <dd>
+                        <strong class="ico-t3">강현종 고객님 <em class="txt-c1">생일</em></strong> <!-- 2022-12-28 클래스 추가 -->
+                        <p class="data-txt"><span>10:00~11:00</span><span>김강남</span></p> <!-- 2022-12-28 추가 -->
+                        <div class="data-word2">
+                            <span>#60대이상</span>
+                            <span>#기혼</span>
+                            <span>#10만원이하</span>
+                            <span>#실손</span>
+                        </div>
+                        <!-- 2022-12-21 상세보기 버튼 추가 -->
+                        <a href="javascript:void(0);" class="btn-sub3 c2">상세보기</a>
+                        <!-- // 2022-12-21 상세보기 버튼 추가 -->
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>2022.04.19</dt>
+                    <dd>
+                        <strong class="ico-t2">한과장 고객님 <em class="txt-c1">생일</em></strong> <!-- 2022-12-28 클래스 추가 -->
+                        <div class="data-word2">
+                            <span>#60대이상</span>
+                            <span>#기혼</span>
+                            <span>#10만원이하</span>
+                            <span>#실손</span>
+                        </div>
+                        <!-- 2022-12-21 바로가기 버튼 추가 -->
+                        <a href="javascript:void(0);" class="btn-sub3 c2">바로가기</a>
+                        <!-- // 2022-12-21 바로가기 버튼 추가 -->
+                    </dd>
+                    <dd>
+                        <strong class="ico-t2">엄마 <em class="txt-c1">생일</em></strong> <!-- 2022-12-28 클래스 추가 -->
+                        <div class="data-word2">
+                            <span>#60대이상</span>
+                            <span>#기혼</span>
+                            <span>#10만원이하</span>
+                            <span>#실손</span>
+                        </div>
+                        <!-- 2022-12-21 바로가기 버튼 추가 -->
+                        <a href="javascript:void(0);" class="btn-sub3 c2">바로가기</a>
+                        <!-- // 2022-12-21 바로가기 버튼 추가 -->
+                    </dd>
+                    <dd>
+                        <strong class="ico-t2">MOM <em class="txt-c1">생일</em>파티</strong> <!-- 2022-12-28 클래스 추가 -->
+                        <div class="data-word2">
+                            <span>#60대이상</span>
+                            <span>#기혼</span>
+                            <span>#10만원이하</span>
+                            <span>#실손</span>
+                        </div>
+                        <!-- 2022-12-21 바로가기 버튼 추가 -->
+                        <a href="javascript:void(0);" class="btn-sub3 c2">바로가기</a>
+                        <!-- // 2022-12-21 바로가기 버튼 추가 -->
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

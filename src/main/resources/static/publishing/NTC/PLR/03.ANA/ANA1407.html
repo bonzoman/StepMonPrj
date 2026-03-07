@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[T] 컨설팅제안 | 보장분석 결과 | 고객목록 | 보장분석</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-16]	1. 종합점수 건수 마크업 변경
+	*					2. 컨설팅 전,후 에 건수 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>보장분석 결과</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [고객정보] -->
+		<!-- ######################### -->
+		<div class="info-data3" data-autoset="toggle">
+			<section>
+				<!-- // -->
+				<header class="area1">
+					<h2 class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+						<strong>하다미</strong>
+						<span>
+							<span>0000.00.00</span>
+							<span>남</span>
+						</span>
+					</h2>
+					<div class="data-word3">
+						<div>
+							<span class="hide">연령</span>
+							<span>32세</span>
+						</div>
+						<div>
+							<span>보험생일</span>
+							<span>03.01</span>
+						</div>
+					</div>
+					<div class="side">
+						<i class="icon-txt2 ic5">D-22</i>
+					</div>
+					<button type="button" data-toggle="btn" aria-expanded="false">고객정보 상세보기</button>
+				</header>
+				<!-- // -->
+				<div data-toggle="content" class="area2">
+					<div class="info-con2 t1">
+						<dl>
+							<dt>최근 보장분석일</dt>
+							<dd>2022.01.01</dd>
+						</dl>
+						<dl>
+							<dt>최근 모바일발송일</dt>
+							<dd>2022.01.01</dd>
+						</dl>
+					</div>
+					<div class="area-btn1 col">
+						<a href="tel:010-0000-0000" class="btn-com1 ic7 simple c1">전화발신</a>
+						<a href="javascript:void(0);" class="btn-com1">설계하기</a>
+						<button type="button" class="btn-com1">가입설계동의</button>
+					</div>
+				</div>
+				<!-- // -->
+			</section>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="tab-sub1" data-sticky="top">
+			<ul>
+				<li><a href="javascript:void(0);">요약</a></li>
+				<li><a href="javascript:void(0);">계약별 현황</a></li>
+				<li><a href="javascript:void(0);">보장/담보별 현황</a></li>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">컨설팅제안</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭영역] 컨설팅 제안 -->
+		<!-- ######################### -->
+		<div class="wrap-section1">
+			<h3 class="hide">컨설팅제안</h3>
+
+			<!-- [솔팅 체크박스] -->
+			<div class="area-info1">
+				<div class="label-check1">
+					<label>
+						<input type="checkbox" id="uiEx" checked> <!-- [D] ID는 임시이며, 해당 이벤트는 하단 스크립트 참고해 주세요 -->
+						<span>충분/부족/종합점수</span>
+					</label>
+				</div>
+				<div class="label-check1 side">
+					<label>
+						<input type="checkbox">
+						<span>가입담보만 보기</span>
+					</label>
+				</div>
+			</div>
+
+			<div id="uiCont"><!-- [D] ID는 임시이며, 해당 이벤트는 하단 스크립트 참고해 주세요 -->
+				<!-- [보험진단 종합점수] -->
+				<div class="wrap-progress t1">
+					<!-- 2022-11-16 마크업 변경 -->
+					<dl>
+						<dt>컨설팅 전</dt>
+						<dd class="area-progress3" style="--el-progress:70;"><span><em>70</em>점</span></dd>
+					</dl>
+					<dl>
+						<dt>컨설팅 후</dt>
+						<dd class="area-progress3" style="--el-progress:88.8;">
+							<span><em>88.8</em>점</span>
+						</dd>
+					</dl>
+					<dl class="icon-state5 ic2">
+						<dt>증가점수</dt>
+						<dd><em>18</em></dd>
+					</dl>
+					<!-- //2022-11-16 마크업 변경 -->
+				</div>
+
+				<!-- [예시정보] --> <!--[M 2022-07-22 삭제]-->
+				<!-- <div class="area-info1">
+					<div class="side">
+						<em class="icon-state5 ic2">충분</em>
+						<em class="icon-state5 ic1">부족</em>
+						<em class="icon-state5">미가입</em>
+					</div>
+				</div> -->
+			</div>
+
+			<!-- [총 계약정보] -->
+			<div class="info-data6 t1"  data-autoset="toggle">
+				<dl>
+					<dt class="tit">전체 계약정보</dt>
+					<dd class="data">
+						<dl>
+							<dt>납입금액</dt>
+							<dd>
+								<span>컨설팅 전 19건</span> <!-- 2022-11-06 건수 추가 -->
+								<span class="data-num1">월<strong>000,000,000</strong><span>만원</span></span>
+							</dd>
+							<dd>
+								<span>컨설팅 후 19건</span> <!-- 2022-11-06 건수 추가 -->
+								<span class="data-num1">월<strong>000,000,000</strong><span>만원</span></span>
+							</dd>
+						</dl>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</dd>
+					<dd data-toggle="content">
+						<!-- [D] 신규설계가 없을 경우 비노출 -->
+						<div class="data2">
+							<dl>
+								<dt>신규설계 문구가 길어질경우 개행됩니다.</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>만원</span></dd>
+								<dd><button type="button" class="icon-com1 ic6 simple">삭제</button></dd>
+							</dl>
+							<dl>
+								<dt>신규설계2</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>만원</span></dd>
+								<dd><button type="button" class="icon-com1 ic6 simple">삭제</button></dd>
+							</dl>
+						</div>
+						<!-- // -->
+						<button type="button" class="btn">설계 추가하기</button>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- [계약정보 목록] -->
+			<div class="info-data6"  data-autoset="toggle">
+				<ul>
+					<li>
+						<strong class="tit">
+							질병 3% 이상 휴유장해 질병 3% 이상 휴유장해 질병 3% 이상 휴유장해
+							<i class="icon-state5 ic2">금액 추가된 담보</i> <!-- [D] 금액이 추가된 담보일 경우 노출 -->
+						</strong>
+						<div class="data">
+							<dl>
+								<dt>보장금액</dt>
+								<dd>
+									<span>컨설팅제안 전 금액</span>
+									<span class="data-num1"><strong>000,000,000</strong><span>만원</span></span>
+								</dd>
+								<!--
+									충분/부족/미가입 경우
+									* 충분 : <i class="icon-state4 ic2">충분</i>
+									* 부족 : <i class="icon-state4 ic3">부족</i>
+									* 미가입 : <i class="icon-state4 ic1">미가입</i>
+								-->
+								<dd>
+									<i class="icon-state4 ic2">충분</i>
+									<span>컨설팅제안 후 금액</span>
+									<span class="data-num1"><strong>000,000,000</strong><span>만원</span></span>
+								</dd>
+							</dl>
+							<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+						</div>
+						<div data-toggle="content">
+							<!-- [D] 신규설계가 없을 경우 비노출 -->
+							<div class="data2">
+								<dl>
+									<dt>신규설계1</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>만원</span></dd>
+								</dl>
+								<dl>
+									<dt>신규설계2</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>만원</span></dd>
+								</dl>
+							</div>
+							<!-- // -->
+							<div class="txt">80세까지 10년간 매년 지급</div>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">질병 사망</strong>
+						<div class="data">
+							<dl>
+								<dt>보장금액</dt>
+								<dd>
+									<span>컨설팅제안 전 금액</span>
+									<span class="data-num1"><strong>000,000,000</strong><span>만원</span></span>
+								</dd>
+								<dd>
+									<i class="icon-state4 ic3">부족</i>
+									<span>컨설팅제안 후 금액</span>
+									<span class="data-num1"><strong>000,000,000</strong><span>만원</span></span>
+								</dd>
+							</dl>
+							<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+						</div>
+						<div data-toggle="content">
+							<div class="data2">
+								<dl>
+									<dt>신규설계1</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>만원</span></dd>
+								</dl>
+								<dl>
+									<dt>신규설계2</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>만원</span></dd>
+								</dl>
+							</div>
+							<div class="txt">80세까지 10년간 매년 지급</div>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">질병 50% 이상 후유장해&#8545; <i class="icon-state5 ic2">금액 추가된 담보</i></strong>
+						<div class="data">
+							<dl>
+								<dt>보장금액</dt>
+								<dd>
+									<span>컨설팅제안 전 금액</span>
+									<span class="data-num1"><strong>0,000</strong><span>억</span><strong>0,000</strong><span>만원</span></span>
+								</dd>
+								<dd>
+									<i class="icon-state4 ic2">충분</i>
+									<span>컨설팅제안 후 금액</span>
+									<span class="data-num1"><strong>0,000</strong><span>억</span><strong>0,000</strong><span>만원</span></span>
+								</dd>
+							</dl>
+							<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+						</div>
+						<div data-toggle="content">
+							<div class="data2">
+								<dl>
+									<dt>신규설계1</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>만원</span></dd>
+								</dl>
+								<dl>
+									<dt>신규설계2</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>만원</span></dd>
+								</dl>
+							</div>
+							<div class="txt">80세까지 10년간 매년 지급</div>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">갱신형실손의료비질병통원형</strong>
+						<div class="data">
+							<dl>
+								<dt>보장금액</dt>
+								<dd>
+									<span>컨설팅제안 전 금액</span>
+									<span class="data-num1"><strong>000,000,000</strong><span>만원</span></span>
+								</dd>
+								<dd>
+									<i class="icon-state4 ic2">충분</i>
+									<span>컨설팅제안 후 금액</span>
+									<span class="data-num1"><strong>000,000,000</strong><span>만원</span></span>
+								</dd>
+							</dl>
+							<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+						</div>
+						<div data-toggle="content">
+							<div class="data2">
+								<dl>
+									<dt>신규설계1</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>만원</span></dd>
+								</dl>
+								<dl>
+									<dt>신규설계2</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>만원</span></dd>
+								</dl>
+							</div>
+							<div class="txt">80세까지 10년간 매년 지급</div>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">갱신형실손의료비질병통원형</strong>
+						<div class="data">
+							<dl>
+								<dt>보장금액</dt>
+								<dd>
+									<span>컨설팅제안 전 금액</span>
+									<span class="data-num1"><strong>0</strong><span>만원</span></span>
+								</dd>
+								<dd>
+									<i class="icon-state4 ic1">미가입</i>
+									<span>컨설팅제안 후 금액</span>
+									<span class="data-num1"><strong>0</strong><span>만원</span></span>
+								</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<div class="box-t1 area-terms">
+				<p class="txt-bul3">위 컨설팅 결과는 실제 보험가입 시, 최종 계약승인 여부에 따라 달라질 수 있습니다.</p>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">제안서 발송</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+
+	//샘플 : 충분/부족/종합점수 체크 해제시 이벤트
+	$(document).on('change','#uiEx',function(){
+		if($(this).prop('checked')){
+			$('#uiCont').removeClass('none');
+			$('.icon-state4').removeClass('none');
+		}else{
+			$('#uiCont').addClass('none');
+			$('.icon-state4').addClass('none');
+		}
+	});
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>FORMAREA | CONTENTS | PUBLISHING GUIDE</title>
+	<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/publish.css?20220913">
+	<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/ui.plugin.js"></script>
+	<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+	<div class="guide-wrap">
+		<header>
+			<h1>
+				<i>롯데손해보험</i> CONTENTS <strong>FORMAREA</strong>
+				<a href="../99.work/coding_list1.html" class="guide-btn1">작업목록</a>
+			</h1>
+			<nav>
+				<ul>
+					<li><a href="content_basic.html">INFO</a></li>
+					<li><a href="content_txt.html">TITLE/TXT</a></li>
+					<li><a href="content_btn.html">BUTTON</a></li>
+					<li><a href="content_icon.html">ICON</a></li>
+					<li><a href="content_form.html">FORM ELEMENT</a></li>
+					<li class="active"><a href="content_formarea.html" aria-current="page">FORM 약관/검색</a></li>
+					<li><a href="content_formarea2.html">FORM 입력</a></li>
+					<li><a href="content_tab.html">TAB/TOGGLE</a></li>
+					<li><a href="content_tbl.html">TABLE</a></li>
+					<li><a href="content_box.html">BOX/BANNER</a></li>
+					<li><a href="content_info.html">INFO/DATA</a></li>
+					<li><a href="content_list.html">LIST</a></li>
+					<li><a href="content_bbs.html">BOARD</a></li>
+				</ul>
+			</nav>
+		</header>
+		<article class="guide-container">
+			<h1 class="hide">폼영역 작업 가이드</h1>
+
+			<!-- ############################## -->
+			<!-- [조회/검색] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">조회/검색</h2>
+				<h3 class="guide-tit2">유형1 : .form-search1</h3>
+				<div class="guide-area popup">
+					<fieldset class="form-search1">
+						<legend>@검색타이틀</legend>
+
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">항목명</span>
+								<span data-select="text" data-value=""></span>
+							</button>
+							<div class="list">
+								<div data-label="항목명">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion" value="1"><span>OPTION1</span></label>
+										<label><input type="radio" name="selectOpeion" value="2"><span>OPTION2</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">항목명</span>
+								<span data-select="text" data-value=""></span>
+							</button>
+							<div class="list">
+								<div data-label="항목명">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value="3"><span>OPTION1</span></label>
+										<label><input type="radio" name="selectOpeion2" value="4"><span>OPTION2</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">항목명</span>
+								<span data-select="text" data-value=""></span>
+							</button>
+							<div class="list">
+								<div data-label="항목명">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion3" value="5"><span>OPTION1</span></label>
+										<label><input type="radio" name="selectOpeion3" value="6"><span>OPTION2</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset class="form-search1">
+						<legend>@검색타이틀</legend>
+
+						<div class="text">
+							<input type="search" title="[@대체텍스트]" value="DEFAULT" placeholder="PLACEHOLDER">
+							<button type="button" class="icon-com1 ic2 simple">검색</button>
+						</div>
+
+						<div class="area-btn4">
+							<button type="button" class="btn-t1 c2" aria-selected="true">항목명1</button>
+							<button type="button" class="btn-t1 c2" aria-selected="false">항목명2</button>
+							<button type="button" class="btn-t1 c2" aria-selected="false">항목명3</button>
+						</div>
+					</fieldset>
+
+					<fieldset class="form-search1">
+						<legend>@검색타이틀</legend>
+
+						<div class="input-wrap1">
+							<!-- [구분] -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">구분</span>
+									<span data-select="text" data-value="1">제목</span>
+								</button>
+								<div class="list">
+									<div data-label="구분">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion0" value="1"><span>제목</span></label>
+											<label><input type="radio" name="selectOpeion0" value="2"><span>내용</span></label>
+											<label><input type="radio" name="selectOpeion0" value="3"><span>키워드</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- [검색어] -->
+							<div class="text">
+								<input type="search" title="[@대체텍스트]" value="DEFAULT" placeholder="PLACEHOLDER">
+								<button type="button" class="icon-com1 ic2 simple">검색</button>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</section>
+
+			<!-- ############################## -->
+			<!-- [약관] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">약관</h2>
+				<h3 class="guide-tit2">유형1 : .form-agree1</h3>
+				<div class="guide-area body">
+					<h4 class="guide-tit3">기본구조</h4>
+					<fieldset class="form-agree1">
+						<legend>약관제목</legend>
+
+						<!-- 전체동의 -->
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<span>전체동의</span>
+							</label>
+						</div>
+
+						<!-- 약관항목 -->
+						<div class="label-check2 line">
+							<label>
+								<input type="checkbox">
+								<span><em class="icon-">필수</em>약관항목명</span>
+							</label>
+							<div class="con-terms">
+								<p class="area-temp">약관내용노출영역</p>
+							</div>
+						</div>
+
+						<!-- 약관항목 -->
+						<div class="label-check2 line">
+							<label>
+								<input type="checkbox">
+								<span><em class="icon-optional">선택</em>약관항목명</span>
+							</label>
+							<div class="con-terms">
+								<p class="area-temp">약관내용노출영역</p>
+							</div>
+						</div>
+
+						<!-- 약관버튼항목 -->
+						<div class="label-check2">
+							<label>
+								<input type="checkbox" >
+								<span><em class="icon-">필수</em>약관항목명</span>
+								<a href="javascript:void(0);" class="btn">@약관항목 상세보기</a>
+							</label>
+							<label>
+								<input type="checkbox" >
+								<span><em class="icon-">필수</em>약관항목명</span>
+								<a href="javascript:void(0);" class="btn">@약관항목 상세보기</a>
+							</label>
+							<label>
+								<input type="checkbox" >
+								<span><em class="icon-">필수</em>약관항목명</span>
+								<a href="javascript:void(0);" class="btn">@약관항목 상세보기</a>
+							</label>
+						</div>
+
+						<!-- 정보성  -->
+						<p class="con-terms2">
+							<em class="icon-txt3 grade1">안심</em>
+							<em class="icon-txt3 grade2">다소안심</em>
+							<em class="icon-txt3 grade3">보통</em>
+							<em class="icon-txt3 grade4">신중</em>
+							<em class="icon-txt3 grade5">주의</em>
+							<span>
+								위 등급은 사생활 침해 위험, 명확성 등을 종합적으로 고려하여 동의내용의 평가등급을 제공하는 제도입니다.
+							</span>
+						</p>
+						<!-- // -->
+					</fieldset>
+				</div>
+				<div class="guide-area popup">
+					<h4 class="guide-tit3">활용 : 영역구분</h4>
+					<div class="form-agree1">
+						<!-- 전체동의 -->
+						<div class="label-check1">
+							<button type="button">전체동의</button>
+						</div>
+						<div class="label-check1">
+							<button type="button" class="checked" title="동의함">전체동의</button> <!-- [D] 팝업에서 동의 확인을 눌렀을 경우 : 클래스명(checked) 추가 -->
+						</div>
+
+						<!-- 약관1 -->
+						<fieldset>
+							<legend>약관타이틀</legend>
+							<!-- 1 Depth -->
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>약관타이틀</span>
+									<a href="javascript:void(0);" class="btn">@약관타이틀 내용보기</a>
+								</label>
+							</div>
+							<!-- 2 Depth -->
+							<div class="label-check2">
+								<label>
+									<input type="checkbox">
+									<span><em class="icon-">필수</em>약관항목명</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span><em class="icon-">필수</em>약관항목명</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span><em class="icon-">필수</em>약관항목명</span>
+								</label>
+							</div>
+						</fieldset>
+
+						<!-- 약관2 -->
+						<fieldset>
+							<legend>약관타이틀</legend>
+							<!-- 1 Depth -->
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>약관타이틀</span>
+									<a href="javascript:void(0);" class="btn">@약관타이틀 내용보기</a>
+								</label>
+
+							</div>
+							<!-- 2 Depth -->
+							<div class="label-check2">
+								<strong>타이틀2</strong>
+								<label>
+									<input type="checkbox">
+									<span><em class="icon-">필수</em>약관항목명</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span><em class="icon-">필수</em>약관항목명</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span><em class="icon-">필수</em>약관항목명</span>
+								</label>
+							</div>
+							<!-- 2 Depth -->
+							<div class="label-check2">
+								<strong>타이틀2</strong>
+								<label>
+									<input type="checkbox">
+									<span><em class="icon-">필수</em>약관항목명</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span><em class="icon-">필수</em>약관항목명</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span><em class="icon-">필수</em>약관항목명</span>
+								</label>
+							</div>
+							<!-- // -->
+						</fieldset>
+
+						<!-- 약관3 -->
+						<fieldset>
+							<legend>약관타이틀</legend>
+							<!-- 1 Depth -->
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>약관타이틀</span>
+								</label>
+								<div class="con-terms">
+									내용 노출
+								</div>
+							</div>
+						</fieldset>
+
+						<!-- 약관4 -->
+						<fieldset>
+							<legend>약관타이틀</legend>
+							<!-- 1 Depth -->
+							<div class="label-check2">
+								<label>
+									<input type="checkbox">
+									<span>약관타이틀</span>
+								</label>
+							</div>
+
+							<!-- 2 Depth -->
+							<div class="label-check1 t1">
+								<label>
+									<input type="checkbox">
+									<span>항목명</span>
+								</label>
+								<label>
+									<input type="checkbox" checked>
+									<span>항목명</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>항목명</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>항목명</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>항목명</span>
+								</label>
+							</div>
+						</fieldset>
+
+						<!-- 약관5 -->
+						<fieldset>
+							<legend>약관타이틀</legend>
+							<!-- 정보성  -->
+							<p class="con-terms2">
+								<em class="icon-txt3 grade1">안심</em>
+								<em class="icon-txt3 grade2">다소안심</em>
+								<em class="icon-txt3 grade3">보통</em>
+								<em class="icon-txt3 grade4">신중</em>
+								<em class="icon-txt3 grade5">주의</em>
+								<span>
+									위 등급은 사생활 침해 위험, 명확성 등을 종합적으로 고려하여 동의내용의 평가등급을 제공하는 제도입니다.
+								</span>
+							</p>
+
+							<!-- 약관버튼항목 -->
+							<div class="label-check2">
+								<label>
+									<input type="checkbox" >
+									<span><em class="icon-">필수</em>약관항목명 <em class="icon-txt3 grade2">다소안심</em></span>
+									<a href="javascript:void(0);" class="btn">@약관항목 상세보기</a>
+								</label>
+								<label>
+									<input type="checkbox" >
+									<span><em class="icon-">필수</em>약관항목명 <em class="icon-txt3 grade3">보통</em></span>
+									<a href="javascript:void(0);" class="btn">@약관항목 상세보기</a>
+								</label>
+								<label>
+									<input type="checkbox" >
+									<span><em class="icon-">필수</em>약관항목명 <em class="icon-txt3 grade4">신중</em></span>
+									<a href="javascript:void(0);" class="btn">@약관항목 상세보기</a>
+								</label>
+							</div>
+							<!-- // -->
+						</fieldset>
+
+						<!-- 정보성 -->
+						<div class="con-terms">
+							<dl>
+								<dt>타이틀</dt>
+								<dd>내용</dd>
+								<dd>내용</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형2 : .form-agree2</h3>
+				<div class="guide-area body">
+					<h4 class="guide-tit3">바닥페이지(#F7F7F7)</h4>
+					<div class="form-agree2">내용이 노출됩니다.</div>
+				</div>
+				<div class="guide-area popup">
+					<h4 class="guide-tit3">팝업페이지(#FFFFFF)</h4>
+					<div class="form-agree2">내용이 노출됩니다.</div>
+				</div>
+
+				<div class="guide-area body">
+					<!-- [항목하나] -->
+					<fieldset class="form-agree2">
+						<legend>약관제목</legend>
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<span><strong>약관항목명 체크박스유형</strong></span>
+							</label>
+						</div>
+					</fieldset>
+
+					<!-- [항목하나 : 버튼형] -->
+					<fieldset class="form-agree2">
+						<legend>약관제목</legend>
+						<div class="label-check1">
+							<button type="button">약관항목명 버튼유형</button>
+						</div>
+					</fieldset>
+
+					<!-- [항목하나 : 버튼형 체크됨] -->
+					<fieldset class="form-agree2">
+						<legend>약관제목</legend>
+						<div class="label-check1">
+							<button type="button" class="checked">약관항목명 버튼유형 체크됨</button>
+						</div>
+					</fieldset>
+
+					<!-- [항목하나 + 항목다수] -->
+					<fieldset class="form-agree2">
+						<legend>약관제목</legend>
+
+						<!-- // -->
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<span><strong>약관항목명</strong></span>
+							</label>
+						</div>
+
+						<!-- // -->
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<span>약관항목</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>항목명이 길어질 경우 개행처리 됩니다.</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>항목명이 길어질 경우 <em>강조문구</em>개행처리 됩니다.</span>
+							</label>
+							<div class="sub">
+								<dl class="txt-bul2 t1">
+									<dt>부가설명 타이틀</dt>
+									<dd>
+										<em>내용1</em>
+										<ul class="txt-bul1">
+											<li>내용2<br>내용2 부가설명</li>
+											<li>내용2<br>내용2 부가설명</li>
+											<li>내용2<br>내용2 부가설명</li>
+											<li>내용2<br>내용2 부가설명</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<label>
+								<input type="checkbox">
+								<span>약관항목</span>
+								<span class="sub">부가설명이 노출됩니다.</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>약관항목</span>
+								<span class="sub txt-bul3">마크가 필요시 : 부가설명이 노출됩니다.</span>
+							</label>
+						</div>
+
+						<!-- //	-->
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<span>약관항목</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>약관항목</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>약관항목</span>
+							</label>
+						</div>
+
+						<!-- //	-->
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<strong>약관항목</strong>
+								<span class="sub">부가설명이 노출됩니다. 내용이 길어질 경우 개행처리 됩니다.</span>
+								<span class="sub">부가설명이 노출됩니다. 내용이 길어질 경우 개행처리 됩니다.</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<strong>약관항목</strong>
+								<span class="sub2">부가설명이 노출됩니다. 내용이 길어질 경우 개행처리 됩니다.</span>
+								<span class="sub2">부가설명이 노출됩니다. 내용이 길어질 경우 개행처리 됩니다.</span>
+								<span class="sub2">부가설명이 노출됩니다. 내용이 길어질 경우 개행처리 됩니다.</span>
+								<span class="sub2">부가설명이 노출됩니다. 내용이 길어질 경우 개행처리 됩니다.</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<strong>약관항목</strong>
+							</label>
+						</div>
+						<!-- //	-->
+					</fieldset>
+
+					<!-- [항목하나 + 링크] -->
+					<fieldset class="form-agree2">
+						<legend>약관제목</legend>
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<strong>약관항목명이 길어질 경우 개행처리 됩니다. 약관항목명이 길어질 경우 개행처리 됩니다.</strong>
+								<a href="javascript:void(0);"  class="btn">@약관항목 상세보기</a>
+							</label>
+						</div>
+					</fieldset>
+
+					<!-- [항목하나 + 링크 : 버튼형] -->
+					<fieldset class="form-agree2">
+						<legend>약관제목</legend>
+						<div class="label-check1">
+							<button type="button"><span>약관항목명 버튼유형</span></button>
+						</div>
+					</fieldset>
+
+					<!-- [항목하나 + 링크 + 약관내용] -->
+					<fieldset class="form-agree2">
+						<legend>약관제목</legend>
+						<!-- //	-->
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<strong>약관항목</strong>
+								<a href="javascript:void(0);"  class="btn">@약관항목 상세보기</a>
+							</label>
+						</div>
+						<!-- // -->
+						<div class="con-terms">
+							<dl class="txt-bul3">
+								<dt>타이틀</dt>
+								<dd>내용1</dd>
+							</dl>
+							<dl class="txt-bul3">
+								<dt>타이틀</dt>
+								<dd>내용1
+									<div class="txt-bul2">내용2</div>
+								</dd>
+							</dl>
+						</div>
+						<!-- //	-->
+					</fieldset>
+					<!-- //  -->
+					<fieldset class="form-agree2">
+						<legend>약관제목</legend>
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<strong>약관항목</strong>
+								<a href="javascript:void(0);" class="btn">상세보기</a>
+							</label>
+							<p class="txt1">* 부가설명노출</p>
+						</div>
+
+						<dl class="txt-bul1">
+							<dt>계약 및 약관의 주요사항 안내</dt>
+							<dd>계약전 &middot; 후 알릴의무 관련 사항</dd>
+							<dd>상해 및 질병의 보장 관련 사항</dd>
+							<dd>재물 및 배상해임의 보장 관련 사항</dd>
+							<dd>갱신형 보장 관련 사항</dd>
+							<dd>청약 철회 관련 사항</dd>
+							<dd>계약 취소, 무효 관련 사항</dd>
+							<dd>계약 소멸 관련 사항</dd>
+							<dd>해지환급금 관련 사항</dd>
+							<dd>보험금 지급 관련 사항</dd>
+							<dd>보험료 납입면제 및 계약해지 관련 사항</dd>
+							<dd>해지 계약의 부활 관련 사항</dd>
+						</dl>
+						<!--// -->
+						<div class="con-terms">
+							<p>고객님의 담당 보험모집인은 위 내용을 충실히 설명했으며, 이에 대한 모든 책임을 질것을2022.02.18에 확인 후 서명했습니다.</p>
+						</div>
+						<!--// -->
+						<dl class="txt-bul3">
+							<dt>보험모집인이 해당 상품에 대한 내용을 설명 했습니까?</dt>
+							<dd class="label-btn1 col2">
+								<!-- // -->
+								<label>
+									<input type="radio" name="dq5" checked>
+									<span>동의</span>
+								</label>
+								<!-- // -->
+								<label>
+									<input type="radio" name="dq5">
+									<span>동의안함</span>
+								</label>
+								<!-- // -->
+							</dd>
+						</dl>
+						<!--// -->
+					</fieldset>
+
+
+					<!-- [라디오버튼유형] -->
+					<fieldset class="form-agree2">
+						<legend>약관제목</legend>
+						<!-- // -->
+						<dl>
+							<dt>타이틀</dt>
+							<dd>
+								<div class="txt-bul2">서브내용</div>
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="da1" checked>
+										<span>항목명1</span>
+									</label>
+									<label>
+										<input type="radio" name="da1">
+										<span>항목명2</span>
+									</label>
+								</div>
+							</dd>
+							<dd>
+								<div class="label-check1 col box">
+									<label>
+										<input type="checkbox">
+										<span>항목1</span>
+									</label>
+									<label>
+										<input type="checkbox" checked>
+										<span>항목2</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span>항목3</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span>항목4</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span>항목5</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl>
+							<dt>타이틀</dt>
+							<dd>
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="da2" checked>
+										<span>항목명1</span>
+									</label>
+									<label>
+										<input type="radio" name="da2">
+										<span>항목명2</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+					</fieldset>
+					<!-- // -->
+				</div>
+
+				<h3 class="guide-tit2">유형3 : .form-agree3</h3>
+				<div class="guide-area body">
+					<h4 class="guide-tit3">바닥페이지(#F7F7F7)</h4>
+					<div class="form-agree3">
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<span>항목명</span>
+							</label>
+						</div>
+						<fieldset>
+							<legend>타이틀</legend>
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>항목명</span>
+								</label>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+				<div class="guide-area popup">
+					<h4 class="guide-tit3">팝업페이지(#FFFFFF)</h4>
+					<div class="form-agree3">
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<span>항목명</span>
+							</label>
+						</div>
+						<fieldset>
+							<legend>타이틀</legend>
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>항목명</span>
+								</label>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+
+				<div class="guide-area body">
+					<fieldset class="form-agree3">
+						<legend>약관동의</legend>
+
+						<!-- 항목하나 -->
+						<h4 class="tit">타이틀</h4>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormAgree1">
+								<span>항목명</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormAgree1">
+								<span>항목명</span>
+							</label>
+						</div>
+
+						<!-- 항목하나 -->
+						<h4 class="tit">타이틀</h4>
+						<dl class="form">
+							<dt>타이틀</dt>
+							<dd class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormAgree2">
+									<span>항목명</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormAgree2">
+									<span>항목명</span>
+								</label>
+							</dd>
+						</dl>
+						<dl class="form">
+							<dt>타이틀</dt>
+							<dd class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormAgree3">
+									<span>항목명</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormAgree3">
+									<span>항목명</span>
+								</label>
+							</dd>
+						</dl>
+						<dl class="form">
+							<dt>타이틀 <em class="icon-required2">필수</em></dt>
+							<dd class="label-check1 col2">
+								<label>
+									<input type="checkbox">
+									<span>항목명</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>항목명</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>항목명</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>항목명</span>
+								</label>
+							</dd>
+						</dl>
+					</fieldset>
+				</div>
+				<div class="guide-area popup">
+					<div class="form-agree3" data-autoset="toggle">
+						<fieldset>
+							<legend>약관동의</legend>
+
+							<dl class="info">
+								<dt>계약자</dt>
+								<dd class="data-info2 label-check1" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+									<label>
+										<input type="checkbox">
+										<strong>하다미</strong>
+										<span><span>생년월일</span><span>성별</span></span>
+									</label>
+									<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+								</dd>
+							</dl>
+
+							<div data-toggle="content">
+								<!-- 항목하나 -->
+								<fieldset>
+									<legend class="tit">타이틀</legend>
+									<div class="label-btn1">
+										<label>
+											<input type="radio" name="uiFormAgreePopup1">
+											<span>항목명</span>
+										</label>
+										<label>
+											<input type="radio" name="uiFormAgreePopup1">
+											<span>항목명</span>
+										</label>
+									</div>
+								</fieldset>
+
+								<!-- 항목하나 -->
+								<fieldset>
+									<legend class="tit">타이틀</legend>
+									<dl class="form">
+										<dt>타이틀</dt>
+										<dd class="label-btn1">
+											<label>
+												<input type="radio" name="uiFormAgreePopup2">
+												<span>항목명</span>
+											</label>
+											<label>
+												<input type="radio" name="uiFormAgreePopup2">
+												<span>항목명</span>
+											</label>
+										</dd>
+									</dl>
+									<dl class="form">
+										<dt>타이틀</dt>
+										<dd class="label-btn1">
+											<label>
+												<input type="radio" name="uiFormAgreePopup3">
+												<span>항목명</span>
+											</label>
+											<label>
+												<input type="radio" name="uiFormAgreePopup3">
+												<span>항목명</span>
+											</label>
+										</dd>
+									</dl>
+									<dl class="form">
+										<dt class="label-check1">
+											<label>
+												<input type="checkbox">
+												<span>항목명</span>
+											</label>
+										</dt>
+										<dd class="label-check1 col2">
+											<label>
+												<input type="checkbox">
+												<span>항목명</span>
+											</label>
+											<label>
+												<input type="checkbox">
+												<span>항목명</span>
+											</label>
+											<label>
+												<input type="checkbox">
+												<span>항목명</span>
+											</label>
+											<label>
+												<input type="checkbox">
+												<span>항목명</span>
+											</label>
+										</dd>
+									</dl>
+								</fieldset>
+							</div>
+						</fieldset>
+
+						<fieldset>
+							<legend>약관동의</legend>
+
+							<dl class="info">
+								<dt>계약자</dt>
+								<dd class="data-info2 label-check1" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+									<label>
+										<input type="checkbox">
+										<strong>하다미</strong>
+										<span><span>생년월일</span><span>성별</span></span>
+									</label>
+									<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+								</dd>
+							</dl>
+
+							<div data-toggle="content">
+								<!-- 항목하나 -->
+								<h4 class="tit">타이틀</h4>
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup11">
+										<span>항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup11">
+										<span>항목명</span>
+									</label>
+								</div>
+
+								<!-- 항목하나 -->
+								<h4 class="tit">타이틀</h4>
+								<dl class="form">
+									<dt>타이틀</dt>
+									<dd class="label-btn1">
+										<label>
+											<input type="radio" name="uiFormAgreePopup21">
+											<span>항목명</span>
+										</label>
+										<label>
+											<input type="radio" name="uiFormAgreePopup21">
+											<span>항목명</span>
+										</label>
+									</dd>
+								</dl>
+								<dl class="form">
+									<dt>타이틀</dt>
+									<dd class="label-btn1">
+										<label>
+											<input type="radio" name="uiFormAgreePopup31">
+											<span>항목명</span>
+										</label>
+										<label>
+											<input type="radio" name="uiFormAgreePopup31">
+											<span>항목명</span>
+										</label>
+									</dd>
+								</dl>
+								<dl class="form">
+									<dt class="label-check1">
+										<label>
+											<input type="checkbox">
+											<span>항목명</span>
+										</label>
+									</dt>
+									<dd class="label-check1 col2">
+										<label>
+											<input type="checkbox">
+											<span>항목명</span>
+										</label>
+										<label>
+											<input type="checkbox">
+											<span>항목명</span>
+										</label>
+										<label>
+											<input type="checkbox">
+											<span>항목명</span>
+										</label>
+										<label>
+											<input type="checkbox">
+											<span>항목명</span>
+										</label>
+									</dd>
+								</dl>
+							</div>
+						</fieldset>
+
+						<fieldset>
+							<legend>약관동의</legend>
+
+							<div class="data-info2 label-check1">
+								<label>
+									<input type="checkbox">
+									<strong>하다미(계약자)</strong>
+								</label>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</div>
+
+							<div data-toggle="content">
+								<!-- 항목하나 -->
+								<h4 class="tit">타이틀</h4>
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup11">
+										<span>항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup11">
+										<span>항목명</span>
+									</label>
+								</div>
+
+								<!-- 항목하나 -->
+								<h4 class="tit">타이틀</h4>
+								<dl class="form">
+									<dt>타이틀</dt>
+									<dd class="label-btn1">
+										<label>
+											<input type="radio" name="uiFormAgreePopup21">
+											<span>항목명</span>
+										</label>
+										<label>
+											<input type="radio" name="uiFormAgreePopup21">
+											<span>항목명</span>
+										</label>
+									</dd>
+								</dl>
+								<dl class="form">
+									<dt>타이틀</dt>
+									<dd class="label-btn1">
+										<label>
+											<input type="radio" name="uiFormAgreePopup31">
+											<span>항목명</span>
+										</label>
+										<label>
+											<input type="radio" name="uiFormAgreePopup31">
+											<span>항목명</span>
+										</label>
+									</dd>
+								</dl>
+								<dl class="form">
+									<dt class="label-check1">
+										<label>
+											<input type="checkbox">
+											<span>항목명</span>
+										</label>
+									</dt>
+									<dd class="label-check1 col2">
+										<label>
+											<input type="checkbox">
+											<span>항목명</span>
+										</label>
+										<label>
+											<input type="checkbox">
+											<span>항목명</span>
+										</label>
+										<label>
+											<input type="checkbox">
+											<span>항목명</span>
+										</label>
+										<label>
+											<input type="checkbox">
+											<span>항목명</span>
+										</label>
+									</dd>
+								</dl>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+			</section>
+
+			<!-- ############################## -->
+			<!-- [약관상세] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">약관상세</h2>
+				<h3 class="guide-tit2">기본구조</h3>
+				<div class="guide-area popup">
+					<div class="area-terms">
+						<!-- # 기본 # -->
+						<p>내용이 노출됩니다.</p>
+						<p>내용이 노출됩니다.</p>
+						<dl>
+							<dt>타이틀</dt>
+							<dd>내용</dd>
+						</dl>
+						<dl>
+							<dt>타이틀</dt>
+							<dd>내용</dd>
+						</dl>
+						<dl>
+							<dt class="inline">타이틀</dt>
+							<dd class="inline">내용</dd>
+						</dl>
+						<ul>
+							<li>내용</li>
+							<li>내용</li>
+						</ul>
+
+						<!-- # 블릿1 # -->
+						<dl class="bul1">
+							<dt>타이틀</dt>
+							<dd>내용</dd>
+						</dl>
+						<ul class="bul1">
+							<li>내용</li>
+							<li>내용</li>
+						</ul>
+						<p class="bul1">내용</p>
+
+						<!-- # 블릿2 # -->
+						<dl class="bul2">
+							<dt>타이틀</dt>
+							<dd>내용</dd>
+						</dl>
+						<ul class="bul2">
+							<li>내용</li>
+							<li>내용</li>
+						</ul>
+						<p class="bul2">내용</p>
+
+						<!-- # 문자 : 마크업에 적용 # -->
+						<dl class="mark">
+							<dt>타이틀</dt>
+							<dd><i>가.</i>내용<br>내용</dd>
+							<dd><i>나.</i>내용</dd>
+							<dd><i>다.</i>내용</dd>
+						</dl>
+						<ul class="mark">
+							<li><i>①</i>내용<br>내용</li>
+							<li><i>②</i>내용</li>
+							<li><i>③</i>내용</li>
+						</ul>
+
+						<!-- # 문자1 : 가나다라 # -->
+						<dl class="mark1">
+							<dt>타이틀</dt>
+							<dd>내용</dd>
+							<dd>내용</dd>
+							<dd>내용</dd>
+						</dl>
+						<ul class="mark1">
+							<li>내용</li>
+							<li>내용</li>
+							<li>내용</li>
+						</ul>
+
+						<!-- # 문자2 : ①②③ # -->
+						<dl class="mark2">
+							<dt>타이틀</dt>
+							<dd>내용</dd>
+							<dd>내용</dd>
+							<dd>내용</dd>
+						</dl>
+						<ul class="mark2">
+							<li>내용</li>
+							<li>내용</li>
+							<li>내용</li>
+						</ul>
+						<!-- # // # -->
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">활용</h3>
+				<div class="guide-area popup">
+					<div class="area-terms">
+						<p>당사는 ⌜개인정보보호법⌟, ⌜신용정보의 이용 및 보호에 관한 법률⌟ 및 ⌜정보통신망법 제50조⌟에 따라 보험상품 소개 및 홍보 등을 위하여 귀하의 개인(신용)정보를 다음과 같이 <em class="txt-c1">수집 &middot; 이용</em>하고, 전자적 전송매체를 이용하여 영리목적의 광고 정보를 전송하고자 합니다.</p>
+						<p>본 동의는 당사와 모집위탁계약을 체결한 업무수탁자 (당사 전속 보험설계사 및 동 계약을 모집한 보험대리점)가 수집 &middot; 이용하는 것을 포함합니다. 아래 내용에 동의하시는 경우 당사 임직원 또는 업무수탁자가 상품 &middot; 서비스 소개 및 판매 안내연락(TM 등)을 드릴 수 있습니다.</p>
+						<dl class="line bul1">
+							<dt>가. 개인(신용)정보의 수집 &middot; 이용 목적</dt>
+							<dd>상품 서비스 소개 및 판매, 사은 판촉행사 안내, 시장조사</dd>
+							<dd>보험개발원 조회 및 이를 통한 보험계약 정보 확인 (보험가입회사, 자동차보험 만기일 등)</dd>
+							<dt>나. 수집 &middot; 이용할 개인(신용) 정보의 내용</dt>
+							<dd>개인식별정보(성명, 생년월일, 성별, 주소, 직업, 전화번호, 휴대폰 전화번호, 전자우편주소), 보험계약정보, 차량소유 여부</dd>
+							<dd>신용거래정보(상품종류, 기간, 보험가입금액 등의 보험계약정보)</dd>
+						</dl>
+					</div>
+					<hr class="guide-line2">
+					<div class="area-terms">
+						<dl>
+							<dt>1. 목적</dt>
+							<dd>보험계약 상담, 재무설계서비스, 보험계약 인수여부 판단(건강진단 및 계약 적부조사 포함), 보험 가입한도 조회, 실제 발생하는 손해를 보상하는 실손형 보험의 중복확인, 보험료할인</dd>
+						</dl>
+						<dl>
+							<dt class="inline">2. 보유 및 이용기간</dt>
+							<dd class="inline">동의일로부터 1년까지</dd>
+						</dl>
+						<dl class="mark1">
+							<dt>3. 수집 &middot; 이용 항목</dt>
+							<dd>고유식별정보: 주민등록번호, 외국인등록번호, 여권번호, 운전면허번호</dd>
+							<dd>민감정보 : 피보험자의 질병 &middot; 상해에 관한 정보 (진료기록, 상병명, 기왕증 등), 교통법규 위반정보, 판결문</dd>
+							<dd><em>개인(신용)정보</em>
+								<ul class="bul1">
+									<li>일반개인정보 : 성명, 주소, 생년월일, 이메일, 유·무선 전화번호, 국적, 직업, 운전여부, 국내거소신고번호,
+										체류코드/기간</li>
+									<li>신용거래정보 : 보험계약정보(상품종류, 기간,
+										보험가입금액 등), 보험금정보(보험금 지급사유, 지급금액 등), 계약 전 알릴 의무사항</li>
+									<li>신용능력정보 : 소득 및 재산 정보, 차량소유여부</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<hr class="guide-line2">
+					<div class="area-terms">
+						<dl>
+							<dt>[국내제공]</dt>
+							<dd>
+								<dl>
+									<dt>1. 제공받는 자</dt>
+									<dd>국내 재보험사, 종합신용정보집중기관(신용정보원),
+										소방방재청, 행정안전부, 한국승강기안전공단,
+										보험요율산출기관(보험개발원), 국토교통부<br>
+										※ 보험요율산출기관, 국토교통부는 자동차보험에 한함</dd>
+								</dl>
+								<dl class="mark">
+									<dt>2. 제공받는 자의 이용목적</dt>
+									<dd><i>가.</i>국내 재보험사: 보험계약 인수여부 판단</dd>
+									<dd><i>나.</i>종합신용정보집중기관(신용정보원) 및 보험요율산출기관(보험개발원) : 개인(신용)정보 조회</dd>
+									<dd><i>다.</i>소방방재청, 행정안전부, 한국승강기안전공단: 의무보험 가입여부 확인</dd>
+									<dd><i>※</i>보험요율산출기관 기재 부분은 자동차보험에 한함</dd>
+								</dl>
+							</dd>
+						</dl>
+						<dl class="line">
+							<dt>[국외제공]</dt>
+							<dd>
+								<dl class="mark1">
+									<dt>3. 수집 &middot; 이용 항목</dt>
+									<dd>고유식별정보: 주민등록번호, 외국인등록번호, 여권번호, 운전면허번호</dd>
+									<dd>민감정보 : 피보험자의 질병 &middot; 상해에 관한 정보 (진료기록, 상병명, 기왕증 등), 교통법규 위반정보, 판결문</dd>
+									<dd><em>개인(신용)정보</em>
+										<ul class="bul1">
+											<li>일반개인정보 : 성명, 주소, 생년월일, 이메일, 유·무선 전화번호, 국적, 직업, 운전여부, 국내거소신고번호,
+												체류코드/기간</li>
+											<li>신용거래정보 : 보험계약정보(상품종류, 기간,
+												보험가입금액 등), 보험금정보(보험금 지급사유, 지급금액 등), 계약 전 알릴 의무사항</li>
+										</ul>
+										<ul class="bul2">
+											<li>외국 재보험사의 국내 지점이 보험계약 인수여부 판단
+												지원 등 업무를 위탁하기 위한 경우 별도의 동의 없이
+												외국 소재 본점에 귀하의 정보를 이전할 수 있습니다.</li>
+											<li>업무위탁을 목적으로 개인(신용)정보 처리하는 경우
+												별도의 동의 없이 업무 수탁자에게 귀하의 정보를
+												제공할 수 있습니다.(홈페이지 [<a href="http://www.lotteins.co.kr" target="_blank">www.lotteins.co.kr</a>]
+												에서 확인 가능)</li>
+										</ul>
+									</dd>
+								</dl>
+							</dd>
+						</dl>
+					</div>
+					<hr class="guide-line2">
+					<div class="area-terms">
+						<dl>
+							<dt>1. 모집경력 수집 &middot; 이용에 관한 동의</dt>
+							<dd>
+								<p>「개인정보보호법」에 따라 당사가 아래와 같은 내용으로
+									본인의 모집정보를 수집.이용하는 것에 대하여 동의합니다. </p>
+								<dl class="bul1 t1">
+									<dt>가. 모집경력 수집 &middot; 이용 목적</dt>
+									<dd>위촉계약 체결(판매코드 부여)여부 판단, 모집경력의 체계적인 관리 및 제3자 제공</dd>
+									<dt>나. 수집 &middot; 이용하는 모집정보</dt>
+									<dd><em>모집경력 수집 &middot; 이용, 제공, 조회 동의일로부터 과거 3년 및 동의일 이후 발생할 ①부터 ⑪까지의 모집경력</em>
+										<ul class="mark2">
+											<li>개인식별정보(성명,주소,휴대폰번호,전자우편주소)</li>
+										</ul>
+									</dd>
+								</dl>
+							</dd>
+						</dl>
+						<dl>
+							<dt>2. 모집경력 조회에 관한 동의</dt>
+							<dd>내용 노출</dd>
+						</dl>
+						<div class="line info">
+							<ul>
+								<li>
+									<div>제공받는자</div>
+									<div>보험개발원<br>나이스평가정보㈜</div>
+								</li>
+								<li>
+									<div>이용목적</div>
+									<div>보험만기일자, 차량정보 및<br>동명이인 확인</div>
+								</li>
+								<li>
+									<div>제공할 내용</div>
+									<div>성명, 생년월일, 성별</div>
+								</li>
+								<li>
+									<div>제공받는 자의 개인(신용) 정보 보유&middot;이용 기간</div>
+									<div>개인(신용)정보를 제공받는 자의 이용목적을 달성할 때까지</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ############################## -->
+		</article>
+	</div>
+	<script src="../../resource/js/publish.plugin.js"></script>
+	<script src="../../resource/js/publish.common.js"></script>
+	<script>
+	//<!--
+
+	//-->
+	</script>
+</body>
+</html>

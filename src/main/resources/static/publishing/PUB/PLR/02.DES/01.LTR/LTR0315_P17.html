@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 의약품위험배상책임담보 | 담보추가속성 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>담보추가속성</h1>
+			<button type="button" data-btn="pop-close">담보추가속성 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 보험정보 -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">Let:care 재물종합보험(2201)</h2>
+				<div class="info">
+					<dl>
+						<dt>설계/증권번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [담보추가속성] 의약품등배상책임 -->
+			<!-- ######################### -->
+			<div class="form-wrap1 line2">
+				<fieldset>
+					<legend class="tit">의약품등배상책임</legend>
+
+					<!-- // -->
+					<dl class="form">
+						<dt>약사인원 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="text num1">
+								<input type="tel" title="약사인원" placeholder="약사인원을 입력해주세요" value="3">
+								<span class="util">명</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>보상한도 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="보상한도">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion1" value="selectOpeion1-1"><span>대인 1인당 5백만원, 1사고당</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>본인부담금 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="본인부담금">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion2" value="selectOpeion2-1"><span>1사고당 10만원</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+				</fieldset>
+
+				<!-- # 추가 약사 영역 # -->
+				<fieldset>
+					<legend class="tit">추가 약사1</legend>
+
+					<!-- // -->
+					<dl class="form">
+						<dt>이름</dt>
+						<dd><input type="text" class="text" placeholder="이름을 입력해주세요" value="하다미"></dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>주민등록번호</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="주민번호 앞자리" maxlength="6" placeholder="주민번호 앞자리" value="790312">
+								<span class="util">-</span>
+								<input type="tel" title="주민번호 뒷자리" maxlength="7" placeholder="주민번호 뒷자리" value="2548426">
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 삭제버튼 # -->
+					<div class="side">
+						<button type="button" class="btn-sub3 c2">삭제</button>
+					</div>
+				</fieldset>
+
+				<!-- # 추가 약사 영역 # -->
+				<fieldset>
+					<legend class="tit">추가 약사2</legend>
+
+					<!-- // -->
+					<dl class="form">
+						<dt>이름</dt>
+						<dd><input type="text" class="text" placeholder="이름을 입력해주세요"></dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>주민등록번호</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="주민번호 앞자리" maxlength="6" placeholder="주민번호 앞자리">
+								<span class="util">-</span>
+								<input type="tel" title="주민번호 뒷자리" maxlength="7" placeholder="주민번호 뒷자리">
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 삭제버튼 # -->
+					<div class="side">
+						<button type="button" class="btn-sub3 c2">삭제</button>
+					</div>
+				</fieldset>
+
+				<!-- # [추가하기 버튼] # -->
+				<div class="area-btn1 line">
+					<button type="button" class="btn-com1 ic3">약사명단 추가하기</button>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<!-- [CASE1] 최초 진입
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action c1">다음</button>
+			</div>
+			-->
+			<!-- [CASE2] 중간 진입
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action">이전</button>
+				<button type="button" class="btn-action c1">다음</button>
+			</div>
+			 -->
+			<!-- [CASE3] 마지막 단계 -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

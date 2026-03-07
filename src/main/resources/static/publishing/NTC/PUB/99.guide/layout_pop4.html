@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>화면하단 | LAYER POPUP | PUBLISHING GUIDE</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ##################################### -->
+<!-- # 레이어팝업 호출버튼 -->
+<!-- ##################################### -->
+<button type="button" class="btn-sub1" aria-controls="uiPOPID1">팝업오픈</button>
+
+<!-- ##################################### -->
+<!-- # 레이어팝업 : 유형1 : Basic Sheet -->
+<!-- ##################################### -->
+<div id="uiPOPID1" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>팝업타이틀</h1>
+			<button type="button" data-btn="pop-close">@타이틀 닫기</button>
+		</header>
+		<div class="content">
+			<p class="area-temp">컨텐츠 노출영역</p>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action">버튼</button>
+			<button type="button" class="btn-action c1">버튼</button>
+		</footer>
+	</article>
+</div>
+<!-- ##################################### -->
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPID1');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPID1').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

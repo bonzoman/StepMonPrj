@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 대내외 사고이력 조회 | 장기보험 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>대내외 사고이력 조회</h1>
+			<button type="button" data-btn="pop-close">대내외 사고이력 조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 보험정보 -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+				<!-- // -->
+				<div class="info">
+					<dl>
+						<dt>알림번호</dt>
+						<dd>LA123456789 </dd>
+					</dl>
+				</div>
+				<!-- // -->
+				<div class="data1">
+					<dl>
+						<dt>고객정보</dt>
+						<dd>하다미(1990.01.01)</dd>
+					</dl>
+					<dl>
+						<dt>기준일자</dt>
+						<dd>2022.02.25 기준</dd>
+					</dl>
+					<dl>
+						<dt>조회구분</dt>
+						<dd>종합</dd>
+					</dl>
+				</div>
+				<!-- // -->
+				<div class="data2">
+					<dl>
+						<dt>개인정보동의유무</dt>
+						<dd>N</dd>
+					</dl>
+					<dl>
+						<dt>보상사고이력</dt>
+						<dd>N</dd>
+					</dl>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [목록영역] 필수고지대상질병 -->
+			<!-- ######################### -->
+			<!-- ### 질병건수 ### -->
+			<div class="area-info1"><p>필수알림대상질병 <strong>00건</strong></p></div>
+
+			<!-- ### 목록 ### -->
+			<div class="info-data1">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox">
+								<span>[질병코드] 질병명</span>
+							</label>
+						</div>
+						<div class="info-con1 w1">
+							<dl>
+								<dt>최근사고발생일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<dl>
+								<dt>경과기간</dt>
+								<dd>00개월</dd>
+							</dl>
+							<dl>
+								<dt>필수대상여부</dt>
+								<dd>필수</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox">
+								<span>[G59] 질병명 2줄 케이스 달리 분류된 질환에서의 단일신경병증</span>
+							</label>
+						</div>
+						<div class="info-con1 w1">
+							<dl>
+								<dt>최근사고발생일</dt>
+								<dd>2022.03.09</dd>
+							</dl>
+							<dl>
+								<dt>경과기간</dt>
+								<dd>2개월</dd>
+							</dl>
+							<dl>
+								<dt>필수대상여부</dt>
+								<dd>필수</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [안내문구] -->
+			<!-- ######################### -->
+
+			<ul class="txt-bul1">
+				<li>개인정보동의여부가 'N'이면, 동의확인 절차를 진행해야 대내외 보상사고이력을 조회할 수 있어요.</li>
+				<li>'동의확인' 후 안내된 보상사고이력에서 알림대상을 선택하여 알림목록에 추가한 후, 질병상세알림을 진행해주세요.</li>
+				<li>안내된 보상사고이력 외에 롯데손해보험에서 보험계약을 심사하는 데 필요한 치료이력에 대해서는 질병상세알림 화면에서 '질병검색'을 통해 알림목록에 추가한 후 진행해주세요.</li>
+			</ul>
+			<!-- // -->
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">고지목록 추가</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

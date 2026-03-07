@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 화재배상책임 | 재물보험 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-16]	1. 안내문구 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>화재(폭발포함)배상책임Ⅱ</h1>
+			<button type="button" data-btn="pop-close">화재(폭발포함)배상책임Ⅱ 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [설계정보]-->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">let:care 재물종합보험(2201)</h2>
+				<div class="info">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [정보영역]-->
+			<!-- ######################### -->
+			<div class="info-con1">
+				<dl>
+					<dt>업주성명(법인명)</dt>
+					<dd>엘타워</dd>
+				</dl>
+				<dl>
+					<dt>기본 주소</dt>
+					<dd>
+						<div>(04406)</div>
+						<div>서울특별시 중구 소월로 3 롯데손해보험빌딩</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>상세주소</dt>
+					<dd>1층 102호</dd>
+				</dl>
+				<dl>
+					<dt>전체주소</dt>
+					<dd>서울특별시 중구 소월로 3 롯데손해보험빌딩 1층 102호</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보입력]-->
+			<!-- ######################### -->
+			<div class="form-wrap1 line">
+				<!-- # 주민/법인등록번호 # -->
+				<dl class="form">
+					<dt>주민/법인등록번호</dt>
+					<dd>
+						<div class="text">
+							<input type="tel" title="주민등록번호앞6자리" maxlength="6" value="790312" placeholder="생년월일">
+							<span class="util">-</span>
+							<input type="tel" title="주민번호 뒤 7자리" maxlength="7"  value="1234567" placeholder="주민번호 뒤 7자리">
+						</div>
+						<!-- [입력변경불가] -->
+						<div class="text">
+							<input type="tel" title="주민등록번호앞6자리" maxlength="6" value="790312" placeholder="생년월일" readonly>
+							<span class="util">-</span>
+							<input type="tel" title="주민번호 뒤 7자리" maxlength="7"  value="1234567" placeholder="주민번호 뒤 7자리" readonly>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 다중이용업소 일렬번호 # -->
+				<dl class="form">
+					<dt>다중이용업소 일련번호<a href="javascript:void(0);" class="icon-com2 ic1">안내</a></dt> <!-- 2022-12-02 링크 추가 -->
+					<dd class="side"><button type="button" class="btn-sub3 c2">의무가입대상 조회</button></dd>
+					<dd>
+						<!-- [CASE] 입력/수정가능 -->
+						<div class="text">
+							<span class="util1">MU -</span>
+							<input type="tel">
+						</div>
+						<!-- [CASE] 의무가입대상 조회로 정보를 가져온 경우 -->
+						<div class="text">
+							<span class="util1">MU -</span>
+							<input type="tel" value="11-2022-123456" readonly>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 상호 # -->
+				<dl class="form">
+					<dt>상호</dt>
+					<dd>
+						<!-- [CASE] 입력/수정가능 -->
+						<input type="text" class="text" title="상호" placeholder="상호명을 입력해주세요">
+
+						<!-- [CASE] 의무가입대상 조회로 정보를 가져온 경우 -->
+						<input type="text" class="text" title="상호" placeholder="상호명을 입력해주세요" value="김밥천국" readonly>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 다중이용업종구분코드 # -->
+				<dl class="form">
+					<dt>다중이용업종구분코드</dt>
+					<dd>
+						<!-- [CASE] 수정가능 -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="true">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="1">고시원</span>
+							</button>
+							<div class="list">
+								<div data-label="다중이용업종구분코드">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion" value="1"><span>고시원</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- [CASE] 의무가입대상 조회로 정보를 가져온 경우-->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="true" disabled>
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="1">휴게음식점</span>
+							</button>
+							<div class="list">
+								<div data-label="다중이용업종구분코드">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value="1"><span>휴게음식점</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 객실수 : 다중이용업종구분코드 고시원일 경우 노출 # -->
+				<dl class="form">
+					<dt>객실수 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- [CASE] 입력/수정가능 -->
+						<input type="tel" class="text" title="객실수" placeholder="객실수를 입력해주세요">
+
+						<!-- [CASE] 의무가입대상 조회로 정보를 가져온 경우 -->
+						<input type="tel" class="text" title="객실수" placeholder="객실수를 입력해주세요" value="4" readonly>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 영위업종 # -->
+				<dl class="form">
+					<dt>영위업종</dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="true">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="1">(3)예식장(결혼식장)</span>
+							</button>
+							<div class="list">
+								<div data-label="영위업종">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="1"><span>(3)예식장(결혼식장)</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 영업장면적 # -->
+				<dl class="form">
+					<dt>영업장면적 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="input-wrap1">
+							<div class="text">
+								<input type="tel" title="영업장면적" value="9,915">
+								<span class="util1">m&sup2;</span>
+							</div>
+							<span class="util1"> = </span>
+							<div class="text">
+								<input type="tel" title="영업장면적(평)" value="3000">
+								<span class="util1">평</span>
+							</div>
+						</div>
+					</dd>
+					<dd class="mes2">해당업종의 면적은 m&sup2;단위(1평=3.3m&sup2;)로 입력해주세요.</dd>
+				</dl>
+
+				<!-- # 대인 1인당 보상한도 # -->
+				<dl class="form">
+					<dt>대인 1인당 보상한도 <em class="icon-required2">필수</em></dt>
+					<dd><data class="text disabled" data-label="대인 1인당 보상한도" value="사망1.5억원/부상3천만원/후유장해1.5억원">사망1.5억원/부상3천만원/후유장해1.5억원</data></dd>
+				</dl>
+
+				<!-- # 대물 1인당 보상한도 # -->
+				<dl class="form">
+					<dt>대물 1인당 보상한도 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="true">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="1">10억원</span>
+							</button>
+							<div class="list">
+								<div data-label="대물 1인당 보상한도">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value="1"><span>10억원</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 종업원담보여부 # -->
+				<dl class="form">
+					<dt>종업원담보여부 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="true">
+								<span data-select="title">종업원부담보</span>
+								<span data-select="text" data-value="2">종업원부담보</span>
+							</button>
+							<div class="list">
+								<div data-label="종업원담보여부">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion3" value="1"><span>종업원담보</span></label>
+										<label><input type="radio" name="selectOpeion3" value="2"><span>종업원부담보</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- [CASE] 종업원부담보업종 : 종업원담보여부 - 종업원부담보 선택시 필수 -->
+				<dl class="form">
+					<dt>종업원부담보업종 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="true">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="1"></span>
+							</button>
+							<div class="list">
+								<div data-label="종업원부담보업종">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion4" value="1"><span>OPTION1</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 할인율 # -->
+				<dl class="form">
+					<dt>할인율</dt>
+					<dd><data class="text disabled" data-label="할인율" value="5%">5%</data></dd>
+				</dl>
+				<!-- # // # -->
+			</div>
+
+			<!-- ### [안내사항] ### -->
+			<ul class="txt-bul1 line2">
+				<li>
+					다중이용업소의 안전관리에 관한 특별법’에 따라 가입하는 경우 다중이용업소 일련번호를 반드시 입력해주세요.<br>
+					(다중이용업소의 화재배상책임보험 가입의무 규정)
+				</li>
+				<li>다중이용업소 일련번호가 등록된 경우 계약체결 시 가입정보가 국민안전처로 통보됩니다.</li>
+				<li>다중이용업소인 경우 다중일련번호 조회 팝업을 통해 입력해주세요.</li>
+				<!-- 2022-11-16 안내문구 추가 -->
+				<li>방재청 자료와 실제 업종(소) 및 면적(㎡)이 상이할 경우 반드시 심사자와 협의 바랍니다.</li>
+			</ul>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

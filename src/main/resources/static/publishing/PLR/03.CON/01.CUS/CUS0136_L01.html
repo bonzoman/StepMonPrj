@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 고객조회추가기능 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-27]	1. 미니보험소개 일괄보내기 항목 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<a href="#uiPOPCUS0136L01" class="btn-util1 ic1" data-fixed="bottom">추가활동선택</a><!-- [레이어팝업 호출 버튼] -->
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 등록항목선택 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCUS0136L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>추가활동선택</h1>
+			<button type="button" data-btn="pop-close">추가활동선택 닫기</button>
+		</header>
+		<div class="content">
+			<div class="label-check2">
+				<!-- 2022-10-27 미니보험소개 일괄 보내기 추가 -->
+				<label>
+					<input type="radio" name="form-radio">
+					<span>미니보험소개 일괄 보내기</span>
+				</label>
+				<!-- //2022-10-27 미니보험소개 일괄 보내기 추가 -->
+				<label>
+					<input type="radio" name="form-radio">
+					<span>가입설계동의받기</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio" checked>
+					<span>상품소개동의받기</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>그룹 등록하기</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>개인고객 등록하기</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>사업자고객 등록하기</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>단체고객 등록하기</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1">확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCUS0136L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPCUS0136L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

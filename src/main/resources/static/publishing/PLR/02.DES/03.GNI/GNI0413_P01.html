@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 건물대장조회 | 신규설계 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>건축물대장 도움말</h1>
+			<button type="button" data-btn="pop-close">건축물대장 도움말 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [안내영역] -->
+			<!-- ######################### -->
+			<dl class="tit-sub1">
+				<dt>대장구분/종류 안내</dt>
+				<dd>건축물대장은 일반건축물대장과 집합건물 대장으로 나뉩니다. 아래 안내를 참고하여 조회하려는 지번의 건축물 구분이 집합인지, 일반인지 확인하시기 바랍니다.</dd>
+			</dl>
+
+			<dl class="tit-sub1">
+				<dt>대장구분(일반/집합) 안내</dt>
+				<dd>
+					<ul class="txt-bul1">
+						<li>일반: 건물의 소유주가 개인이거나 하다미 외 0명 등으로 대표자가 있는 경우</li>
+						<li>집합: 건물의 소유주가 여러 명이며 각각의 이름이 명시되는 경우</li>
+						<li>일반적으로 <strong>아파트, 연립다세대주택 등은 집합건출물</strong>에 해당됨</li>
+					</ul>
+				</dd>
+			</dl>
+
+			<dl class="tit-sub1">
+				<dt>대장 종류 안내</dt>
+				<dd>
+					<em>1) 대장구분에서 일반을 선택</em>
+					<ul class="txt-bul1">
+						<li>총괄표제부: 신청하는 주소지의 지번에 있는 모든
+							건물들을 표시 (해당 지번 위에 건물이 2개 동
+							이상 있을 경우)</li>
+						<li>일반건축물: 본인 건물만 표시</li>
+					</ul>
+				</dd>
+				<dd>
+					<em>2) 대장구분에서 집합을 선택</em>
+					<ul class="txt-bul1">
+						<li>총괄표제부: 해당 지번에 있는 모든 건축물 표시</li>
+						<li>표제부: 해당 지번에 있는 동 표시</li>
+						<li>전유부: 해당 지번에 있는 동의 호수 표시</li>
+					</ul>
+				</dd>
+			</dl>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

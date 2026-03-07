@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>관리 | 이탈방지 대상 설계사 리스트 | 조직관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-07]	① 활동지표 > 3달 데이터 보유 케이스 추가
+	*					② 실적지표 > UI 변경
+	*					③ 문구삭제 : 감소, 증가
+	*					④ 활동지표 툴팁 내용 수정
+	*	[M 2022-09-22]	① 탐지기간삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>이탈예상설계사 관리</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [이탈예상대상자 안내] -->
+		<!-- ######################### -->
+		<div class="mes-headline3 ic1 c3"> <!-- 감소 c1, 증가 c2, 0명 c3 -->
+			<p>이번 달 이탈예상 대상자는 <strong>34명</strong> 입니다.</p>
+			<p>전월 0명</p> <!-- [D] 2달 미만 데이터 보유 시 증감 영역 미노출 -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [이탈예상설계 요약] -->
+		<!-- ######################### -->
+		<div class="wrap-section1">
+			<h2 class="hide">이탈예상대상자 요약</h2>
+
+			<!-- # 활동지표 # -->
+			<section>
+				<h3 class="tit-sub2">활동지표<a href="#uiTOOLTIPINFO1" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></h3>
+				<div class="info-data8">
+					<!-- [M 2022-09-06] 3달 데이터 보유 케이스 추가 -->
+					<dl>
+						<dt class="tit">3개월평균</dt>
+						<dd class="data-num1">
+							<strong>12</strong><span>명</span>
+							<em>당월 +00.00%</em>
+						</dd>
+					</dl>
+					<!-- [M 2022-09-06] 3달 데이터 보유 케이스 추가 -->
+
+					<!-- // -->
+					<dl class="data1 ic1">
+						<dt class="tit">로그인</dt>
+						<dd class="data-num1">
+							<strong>00.0</strong><span>회</span>
+							<em>전월 +0.0회</em>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="data1 ic2">
+						<dt class="tit">퀘스트</dt>
+						<dd class="data-num1">
+							<strong>00.0</strong><span>%</span>
+							<em>전월 +0.0%</em>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="data1 ic3">
+						<dt class="tit">교육</dt>
+						<dd class="data-num1">
+							<strong>00.0</strong><span>%</span>
+							<em>전월 -0.0%</em>
+						</dd>
+					</dl>
+					<!-- // -->
+
+					<!-- [CASE] 2달 미만 데이터 보유 시 증감영역 미노출 -->
+					<dl class="data1 ic1">
+						<dt class="tit">로그인</dt>
+						<dd class="data-num1">
+							<strong>0.6</strong><span>회</span>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="data1 ic2">
+						<dt class="tit">퀘스트</dt>
+						<dd class="data-num1">
+							<strong>12.7</strong><span>%</span>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="data1 ic3">
+						<dt class="tit">교육</dt>
+						<dd class="data-num1">
+							<strong>18.8</strong><span>%</span>
+						</dd>
+					</dl>
+					<!-- // -->
+				</div>
+			</section>
+
+			<!-- # 실적지표 # -->
+			<section>
+				<h3 class="tit-sub2">실적지표<a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></h3>
+				<div class="info-data8">
+					<!-- [M 2022-09-06] UI변경 -->
+					<!-- [CASE] 3달 데이터 보유 시 노출 -->
+					<dl>
+						<dt class="tit">3개월평균</dt>
+						<dd class="data-num1">
+							<strong>19</strong><span>명</span>
+							<em>당월 +00.00%</em>
+						</dd>
+					</dl>
+
+					<!-- // -->
+					<dl class="data1 ic7">
+						<dt class="tit">월납입보험료</dt>
+						<dd class="data-num1">
+							<strong>000</strong><span>천원</span> <!-- [M 2022-09-13] 문구수정 -->
+							<em>전월 +0.0천원</em> <!-- [M 2022-09-13] 문구수정 -->
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="data1 ic5">
+						<dt class="tit">유지율</dt>
+						<dd class="data-num1">
+							<strong>00.0</strong><span>%</span>
+							<em>전월 +0.0%</em>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="data1 ic8">
+						<dt class="tit">수금률</dt>
+						<dd class="data-num1">
+							<strong>00.0</strong><span>%</span>
+							<em>전월 -0.0%</em>
+						</dd>
+					</dl>
+					<!-- // -->
+					<!-- // [M 2022-09-06] -->
+				</div>
+			</section>
+			<!-- # // # -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [대상자 리스트 목록] -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<h2 class="tit-sub1">당월기준</h2>
+
+			<!-- [총 인원] -->
+			<div class="area-info1">
+				<p>총 <strong>35명</strong></p>
+			</div>
+
+			<!-- [목록] -->
+			<div class="info-data3 t1">
+				<ul>
+					<!-- // -->
+					<li>
+						<!-- # 설계사정보 # -->
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+							<span>
+								<strong>설계사명</strong>
+								<span>설계사 번호</span>
+							</span>
+						</div>
+						<div class="data-word3">
+							<span>지점명</span>
+							<span>차월</span>
+							<!-- [M 2022-09-22] 삭제
+							<span><span>탐지기간</span><strong>00개월</strong></span>
+							-->
+						</div>
+
+						<!-- # 탐지사유조건 # -->
+						<div class="data2 data-word3"> <!-- [M 2022-09-06] 문구수정 (감소, 증가 문구 삭제) -->
+							<strong>실적</strong>
+							<strong>활동</strong>
+							<strong>기타</strong>
+						</div>
+
+						<!-- # 링크 # -->
+						<button type="button" class="link">상세정보이동</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user2.png" alt=""></span>
+							<span>
+								<strong>하다미</strong>
+								<span>154674</span>
+							</span>
+						</div>
+						<div class="data-word3">
+							<span>강남 02지점</span>
+							<span>13차월</span>
+							<!-- [M 2022-09-22] 삭제
+							<span>
+								<span>탐지기간</span>
+								<strong>6개월</strong>
+							</span>
+							-->
+						</div>
+						<div class="data2 data-word3">
+							<strong>활동</strong>
+						</div>
+						<button type="button" class="link">상세정보이동</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+							<span>
+								<strong>공지철</strong>
+								<span>154674</span>
+							</span>
+						</div>
+						<div class="data-word3">
+							<span>강남 02지점</span>
+							<span>35차월</span>
+							<!-- [M 2022-09-22] 삭제
+							<span>
+								<span>탐지기간</span>
+								<strong>17개월</strong>
+							</span>
+							-->
+						</div>
+						<div class="data2 data-word3">
+							<strong>실적</strong>
+							<strong>기타</strong>
+						</div>
+						<button type="button" class="link">상세정보이동</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+							<span>
+								<strong>김지훈</strong>
+								<span>154674</span>
+							</span>
+						</div>
+						<div class="data-word3">
+							<span>강남 02지점</span>
+							<span>4차월</span>
+							<!-- [M 2022-09-22] 삭제
+							<span>
+								<span>탐지기간</span>
+								<strong>1개월</strong>
+							</span>
+							-->
+						</div>
+						<div class="data2 data-word3">
+							<strong>기타</strong>
+						</div>
+						<button type="button" class="link">상세정보이동</button>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- 더보기(현재페이지/총페이지) -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(1/10)</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 활동지표 기준 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl class="txt-bul1">
+		<dt>활동지표 기준</dt>
+		<dd>대상자: 전월 대비 증/가감된 인원 수</dd>
+		<dd>3개월 평균: 3개월 평균 인원 수와, 늘어난 비율</dd>
+		<!-- [M 2022-09-06] 문구수정 -->
+		<dd>로그인: 전전월, 전월의 평균 횟수</dd>
+		<dd>퀘스트: 전전월, 전월의 평균 횟수</dd>
+		<dd>교육: 전전월, 전월의 평균 횟수</dd>
+		<!-- // [M 2022-09-06] -->
+		<dd><button type="button" data-btn="pop-close">활동지표 기준 닫기</button></dd>
+	</dl>
+</div>
+
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 실적지표 기준 안내 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">실적지표 기준</dt>
+		<dd>월납입보험료: 전월 납입 평균과 3개월전 대비 증/가감액</dd>
+		<dd><button type="button" data-btn="pop-close">실적지표 기준 닫기</button></dd>
+	</dl>
+</div>
+<!-- ##################################### -->
+</body>
+</html>

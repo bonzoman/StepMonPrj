@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 서류 발행전 확인사항 | 가입설계조회 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>서류 발행전 확인사항</h1>
+			<button type="button" data-btn="pop-close">서류 발행전 확인사항 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [계약정보] -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit">무배당 let:smile 종합건강보험<br>(더끌림 스탠다드)(2201)</h2>
+				<div class="info">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA123456789</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보영역] -->
+			<!-- ######################### -->
+			<!-- # 안내문구 # -->
+			<div class="mes-info2 box">
+				<p>고객정보 입력 내용이 청약서에 출력되며 완전판매 모니터링의 기본정보로 활용됩니다. 반드시 확인 후 체크 하시기 바랍니다.</p>
+			</div>
+
+			<!-- # 계약자 # -->
+			<div class="wrap-section1">
+				<div class="tit-sub1">
+					<h3>계약자 정보</h3>
+					<p class="txt">부가설명</p>
+					<div class="side"><a href="javascript:void(0);" class="btn-sub2 c2">정보수정</a></div>
+				</div>
+				<div class="info-con1">
+					<dl>
+						<dt>계약자</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>자택 주소</dt>
+						<dd>
+							<div>(04406)</div>
+							<div>서울특별시 중구 소월로 3 롯데손해보험빌딩</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>직장 주소</dt>
+						<dd>
+							<div>(04528)</div>
+							<div>서울특별시 화양구 선비로 125-3</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>이메일 주소</dt>
+						<dd>hadami@lotte.com</dd>
+					</dl>
+					<dl>
+						<dt>연락처</dt>
+						<dd>(핸드폰) 010-1234-5678</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- # 주피보험자 # -->
+			<div class="wrap-section1">
+				<!-- // -->
+				<div class="tit-sub1">
+					<h3>주피보험자 정보</h3>
+					<div class="side"><a href="javascript:void(0);" class="btn-sub2 c2">정보수정</a></div>
+				</div>
+				<div class="info-con1">
+					<dl>
+						<dt>주피보험자</dt>
+						<dd>공지철</dd>
+					</dl>
+					<dl>
+						<dt>자택 주소</dt>
+						<dd>
+							<div>(04406)</div>
+							<div>서울특별시 강남구 봉은사로81길 7</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>직장 주소</dt>
+						<dd>
+							<div>(04528)</div>
+							<div>서울특별시 화양구 선비로 125-3</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>이메일 주소</dt>
+						<dd>hadami@lotte.com</dd>
+					</dl>
+					<dl>
+						<dt>연락처</dt>
+						<dd>(핸드폰) 010-1234-5678</dd>
+					</dl>
+					<dl>
+						<dt>세부직업정보</dt>
+						<dd>롯데손해보험/보험/설계</dd>
+					</dl>
+				</div>
+				<!-- // -->
+
+				<!-- # 안내문구 # -->
+				<div class="mes-info2 box">
+					<p>이메일 수신동의를 하시면 가입하신 계약에 대한 다양한 정보를 보안메일로 받아보실 수 있습니다.</p>
+					<p>계약자 및 피보험자의 완전판매모니터링이 완료되지 않으면 승낙거절 됩니다.</p>
+				</div>
+			</div>
+
+			<!-- # 수익자지정관련 유의사항 # -->
+			<fieldset class="form-agree1 line">
+				<legend>내용확인</legend>
+
+				<!-- // -->
+				<div>
+					<h4 class="tit-sub1">수익자지정관련 유의사항</h4>
+					<div class="con-terms3">
+						<p>
+							사망보험금 수익자를 특정하지 않는 경우 피보험자 사망시 법정상속인간 보험금의 지급에 관한 분쟁이 발생할 수 있습니다.
+							상품설명서의 "사망보험금 수익자 지정에 관한 사항"을 참고로 계약자에게 설명 후 진행해 주시기 바랍니다.
+						</p>
+						<p>(예시) 양육에 기여하지 않은 부모가 보험금에 대한 지분을 요구</p>
+					</div>
+				</div>
+				<!-- // -->
+				<div class="label-check1">
+					<label>
+						<input type="checkbox">
+						<strong class="tit">모집자 <span>공지철</span>은(는) 상기 내용에 대해 정확히 확인하였습니다.</strong>
+					</label>
+				</div>
+				<!-- // -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

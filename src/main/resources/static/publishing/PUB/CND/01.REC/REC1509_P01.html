@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]댓글보기 | 스터디톡 | 커뮤니티 | 도입</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-11]	1. 수정 버튼 삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper top-btn"> <!-- 2022-12-16 클래스 추가 -->
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>댓글보기</h1>
+			<button type="button" data-btn="pop-close">댓글보기 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<div class="board-view1 t2">
+				<dl class="info">
+					<dt>작성자</dt>
+					<dd><strong>하다미</strong></dd>
+					<dt>작성일</dt>
+					<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+				</dl>
+				<!-- // -->
+				<div class="cont">
+					<p>동해 물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 <br>
+						남산 위에 저 소나무 철갑을 두른 듯 바람 서리 불변함은 우리 기상일세 <br>
+						가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심일세 <br>
+						이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세
+					</p>
+					<div class="data-word2">
+						<span>#태그</span>
+						<span>#태그</span>
+						<span>#태그</span>
+						<span>#태그</span>
+					</div>
+					<button type="button" class="btn-sub3 c2">편집</button>
+				</div>
+				<!-- // -->
+				<div class="util">
+					<span class="icon-com1 ic11">댓글 <i>1</i></span>
+					<label class="icon-com1 ic8">
+						<input type="checkbox">
+						<span>좋아요 <i>11</i></span>
+					</label>
+				</div>
+			</div>
+			<div class="board-list2 t2">
+				<ul>
+					<li>
+						<dl class="info2">
+							<dt>댓글작성자</dt>
+							<dd><em>하다미</em></dd>
+							<dt>댓글내용</dt>
+							<dd>가나다라마바사아자차카타파하가나다라마바사아자차카타파하</dd>
+						</dl>
+						<div class="info3">
+							<dl>
+								<dt>작성일시</dt>
+								<dd>2022.05.19 20:48</dd>
+							</dl>
+							<div class="btns">
+								<button type="button" class="btn-sub3 c2">삭제</button>
+								<!-- <button type="button" class="btn-sub3 c2">수정</button> --><!-- [M 2022-11-11] 삭제 -->
+							</div>
+						</div>
+					</li>
+					<li>
+						<dl class="info2">
+							<dt>댓글작성자</dt>
+							<dd><em>하미미</em></dd>
+							<dt>댓글내용</dt>
+							<dd>가나다라마바사아자차카타파하가나다라마바사아자차카타파하</dd>
+						</dl>
+						<div class="info3">
+							<dl>
+								<dt>작성일시</dt>
+								<dd>2022.05.19 20:48</dd>
+							</dl>
+							<!-- <div class="btns">
+								<button type="button" class="btn-sub3 c2">삭제</button>
+								<button type="button" class="btn-sub3 c2">수정</button>
+							</div> -->
+						</div>
+					</li>
+					<li>
+						<dl class="info2">
+							<dt>댓글작성자</dt>
+							<dd><em>하미미</em></dd>
+							<dt>댓글내용</dt>
+							<dd>응원합니다!</dd>
+						</dl>
+						<div class="info3">
+							<dl>
+								<dt>작성일시</dt>
+								<dd>2022.05.19 20:48</dd>
+							</dl>
+							<!-- <div class="btns">
+								<button type="button" class="btn-sub3 c2">삭제</button>
+								<button type="button" class="btn-sub3 c2">수정</button>
+							</div> -->
+						</div>
+					</li>
+					<li>
+						<dl class="info2">
+							<dt>댓글작성자</dt>
+							<dd><em>하미미</em></dd>
+							<dt>댓글내용</dt>
+							<dd>날이 많이 더운데 건강 조심하세요~</dd>
+						</dl>
+						<div class="info3">
+							<dl>
+								<dt>작성일시</dt>
+								<dd>2022.05.19 20:48</dd>
+							</dl>
+							<!-- <div class="btns">
+								<button type="button" class="btn-sub3 c2">삭제</button>
+								<button type="button" class="btn-sub3 c2">수정</button>
+							</div> -->
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="board-input">
+				<div class="text">
+					<input type="text" placeholder="댓글을 입력해주세요.">
+					<button type="button" class="btn-sub3 c1" disabled>등록</button>
+					<!-- <button type="button" class="btn-sub3 c1">등록</button> -->
+				</div>
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<script>
+	// sample
+	$('.board-input input').keyup(function(){
+		if($.trim($(this).val())!=''){
+			$(this).siblings('button.btn-sub3').removeAttr('disabled');
+		}else{
+			$(this).siblings('button.btn-sub3').attr('disabled','disabled');
+		}
+	});
+</script>
+</body>
+</html>

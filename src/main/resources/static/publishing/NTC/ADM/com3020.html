@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>메뉴관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220418">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">메뉴관리</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+            <div class="tab-wrap">
+				<ul class="tab2">
+					<li><a href="#tab2-1" class="current">설계사 APP</a></li>
+					<li><a href="#tab2-2">도입 APP</a></li>
+					<li><a href="#tab2-3">모바일 WEB</a></li>
+					<li><a href="#tab2-4">ADMIN</a></li>
+				</ul>
+				<div id="tab2-1" class="tab-cont" style="display: block;">
+                    <div class="page-con1">
+                        <div class="treemenu">
+                            <h3 class="tit-sub2">메뉴트리</h3>
+                            <ul>
+                                <li class="open">
+                                    <button type="button" class="group">그룹</button>
+                                    <ul>
+                                        <li><button type="button" class="group">그룹</button>
+                                            <ul>
+                                                <li><button type="button" class="target">페이지1</button></li>
+                                                <li><button type="button" class="target">페이지2</button></li>
+                                                <li><button type="button" class="target">페이지3</button></li>
+                                                <li><button type="button" class="target">페이지4</button></li>
+                                                <li><button type="button" class="target">페이지5</button></li>
+                                                <li><button type="button" class="target">페이지6</button></li>
+                                            </ul>
+                                        </li>
+                                        <li><button type="button" class="target current">선택됨</button></li>
+                                        <li><button type="button" class="target write">새 항목</button></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button type="button" class="group current">그룹</button>
+                                    <ul>
+                                        <li><button type="button" class="target">페이지1</button></li>
+                                        <li><button type="button" class="target">페이지2</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="util">
+                                <div>
+                                    <button type="button" class="btn-sub1 c3 ic-up"></button>
+                                    <button type="button" class="btn-sub1 c3 ic-down"></button>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn-sub1 c3">추가</button>
+                                    <button type="button" class="btn-sub1 c3">하위 추가</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="tit-sub2">항목 상세</h3>
+                            <!-- <div class="tbl-write1">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:150px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">메뉴명<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">상위 메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">순서</th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:50px">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">사용여부<em class="imp"><span>필수</span></em></th>
+                                            <td>			
+                                                <label class="label-check">
+                                                    <input type="radio" name="form11" checked="checked">
+                                                    <span>Y</span>
+                                                </label>
+                                                <label class="label-check">
+                                                    <input type="radio" name="form11">
+                                                    <span>N</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> -->
+                            <div class="tbl-write1">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:150px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">메뉴명<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">상위 메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">연결화면ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:60%">
+                                                    <button type="button" class="btn-sub1 c3">화면ID 검색</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">순서</th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:50px">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">사용여부<em class="imp"><span>필수</span></em></th>
+                                            <td>			
+                                                <label class="label-check">
+                                                    <input type="radio" name="form121" checked="checked">
+                                                    <span>Y</span>
+                                                </label>
+                                                <label class="label-check">
+                                                    <input type="radio" name="form121">
+                                                    <span>N</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="area-btn2">
+                                <div class="btns">
+                                    <button type="button" class="btn-action c3">삭제</button>
+                                    <button type="button" class="btn-action c1">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div id="tab2-2" class="tab-cont" style="display: none;">
+                    <div class="page-con1">
+                        <div class="treemenu">
+                            <h3 class="tit-sub2">메뉴트리</h3>
+                            <ul>
+                                <li class="open">
+                                    <button type="button" class="group">그룹</button>
+                                    <ul>
+                                        <li><button type="button" class="group">그룹</button>
+                                            <ul>
+                                                <li><button type="button" class="target">페이지1</button></li>
+                                                <li><button type="button" class="target">페이지2</button></li>
+                                                <li><button type="button" class="target">페이지3</button></li>
+                                                <li><button type="button" class="target">페이지4</button></li>
+                                                <li><button type="button" class="target">페이지5</button></li>
+                                                <li><button type="button" class="target">페이지6</button></li>
+                                            </ul>
+                                        </li>
+                                        <li><button type="button" class="target">선택됨</button></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button type="button" class="group">그룹</button>
+                                    <ul>
+                                        <li><button type="button" class="target">페이지1</button></li>
+                                        <li><button type="button" class="target">페이지2</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="util">
+                                <div>
+                                    <button type="button" class="btn-sub1 c3 ic-up"></button>
+                                    <button type="button" class="btn-sub1 c3 ic-down"></button>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn-sub1 c3">추가</button>
+                                    <button type="button" class="btn-sub1 c3">하위 추가</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="tit-sub2">항목 상세</h3>
+                            <!-- <div class="tbl-write1">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:150px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">메뉴명<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">상위 메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">순서</th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:50px">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">사용여부<em class="imp"><span>필수</span></em></th>
+                                            <td>			
+                                                <label class="label-check">
+                                                    <input type="radio" name="form21" checked="checked">
+                                                    <span>Y</span>
+                                                </label>
+                                                <label class="label-check">
+                                                    <input type="radio" name="form21">
+                                                    <span>N</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> -->
+                            <div class="tbl-write1">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:150px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">메뉴명<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">상위 메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">연결화면ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:60%">
+                                                    <button type="button" class="btn-sub1 c3">화면ID 검색</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">순서</th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:50px">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">사용여부<em class="imp"><span>필수</span></em></th>
+                                            <td>			
+                                                <label class="label-check">
+                                                    <input type="radio" name="form221" checked="checked">
+                                                    <span>Y</span>
+                                                </label>
+                                                <label class="label-check">
+                                                    <input type="radio" name="form221">
+                                                    <span>N</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="area-btn2">
+                                <div class="btns">
+                                    <button type="button" class="btn-action c3">삭제</button>
+                                    <button type="button" class="btn-action c1">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div id="tab2-3" class="tab-cont" style="display: none;">
+                    <div class="page-con1">
+                        <div class="treemenu">
+                            <h3 class="tit-sub2">메뉴트리</h3>
+                            <ul>
+                                <li class="open">
+                                    <button type="button" class="group">그룹</button>
+                                    <ul>
+                                        <li><button type="button" class="group">그룹</button>
+                                            <ul>
+                                                <li><button type="button" class="target">페이지1</button></li>
+                                                <li><button type="button" class="target">페이지2</button></li>
+                                                <li><button type="button" class="target">페이지3</button></li>
+                                                <li><button type="button" class="target">페이지4</button></li>
+                                                <li><button type="button" class="target">페이지5</button></li>
+                                                <li><button type="button" class="target">페이지6</button></li>
+                                            </ul>
+                                        </li>
+                                        <li><button type="button" class="target">페이지</button></li>
+                                        <li><button type="button" class="target">페이지</button></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button type="button" class="group current">그룹</button>
+                                    <ul>
+                                        <li><button type="button" class="target">페이지1</button></li>
+                                        <li><button type="button" class="target">페이지2</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="util">
+                                <div>
+                                    <button type="button" class="btn-sub1 c3 ic-up"></button>
+                                    <button type="button" class="btn-sub1 c3 ic-down"></button>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn-sub1 c3">추가</button>
+                                    <button type="button" class="btn-sub1 c3">하위 추가</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="tit-sub2">항목 상세</h3>
+                            <!-- <div class="tbl-write1">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:150px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">메뉴명<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">상위 메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">순서</th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:50px">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">사용여부<em class="imp"><span>필수</span></em></th>
+                                            <td>			
+                                                <label class="label-check">
+                                                    <input type="radio" name="form31" checked="checked">
+                                                    <span>Y</span>
+                                                </label>
+                                                <label class="label-check">
+                                                    <input type="radio" name="form31">
+                                                    <span>N</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> -->
+                            <div class="tbl-write1">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:150px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">메뉴명<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">상위 메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">메뉴 경로<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">순서</th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:50px">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">사용여부<em class="imp"><span>필수</span></em></th>
+                                            <td>			
+                                                <label class="label-check">
+                                                    <input type="radio" name="form321" checked="checked">
+                                                    <span>Y</span>
+                                                </label>
+                                                <label class="label-check">
+                                                    <input type="radio" name="form321">
+                                                    <span>N</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="area-btn2">
+                                <div class="btns">
+                                    <button type="button" class="btn-action c3">삭제</button>
+                                    <button type="button" class="btn-action c1">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div id="tab2-4" class="tab-cont" style="display: none;">
+                    <div class="page-con1">
+                        <div class="treemenu">
+                            <h3 class="tit-sub2">메뉴트리</h3>
+                            <ul>
+                                <li class="open">
+                                    <button type="button" class="group">그룹</button>
+                                    <ul>
+                                        <li><button type="button" class="group">그룹</button>
+                                            <ul>
+                                                <li><button type="button" class="target">페이지1</button></li>
+                                                <li><button type="button" class="target">페이지2</button></li>
+                                                <li><button type="button" class="target">페이지3</button></li>
+                                                <li><button type="button" class="target">페이지4</button></li>
+                                                <li><button type="button" class="target">페이지5</button></li>
+                                                <li><button type="button" class="target">페이지6</button></li>
+                                            </ul>
+                                        </li>
+                                        <li><button type="button" class="target">페이지1</button></li>
+                                        <li><button type="button" class="target">페이지2</button></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button type="button" class="group current">그룹</button>
+                                    <ul>
+                                        <li><button type="button" class="target">페이지1</button></li>
+                                        <li><button type="button" class="target">페이지2</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="util">
+                                <div>
+                                    <button type="button" class="btn-sub1 c3 ic-up"></button>
+                                    <button type="button" class="btn-sub1 c3 ic-down"></button>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn-sub1 c3">추가</button>
+                                    <button type="button" class="btn-sub1 c3">하위 추가</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="tit-sub2">항목 상세</h3>
+                            <!-- <div class="tbl-write1">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:150px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">메뉴명<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">상위 메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">순서</th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:50px">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">사용여부<em class="imp"><span>필수</span></em></th>
+                                            <td>			
+                                                <label class="label-check">
+                                                    <input type="radio" name="form41" checked="checked">
+                                                    <span>Y</span>
+                                                </label>
+                                                <label class="label-check">
+                                                    <input type="radio" name="form41">
+                                                    <span>N</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> -->
+                            <div class="tbl-write1">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:150px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">메뉴명<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">상위 메뉴ID<em class="imp"><span>필수</span></em></th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">메뉴 경로<em class="imp"><span>필수</span></em></th><!--[M 2022-06-09 수정]-->
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:80%">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">순서</th>
+                                            <td>
+                                                <div class="form-row">
+                                                    <input type="text" class="text" name="" id="" value="" style="width:50px">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">사용여부<em class="imp"><span>필수</span></em></th>
+                                            <td>			
+                                                <label class="label-check">
+                                                    <input type="radio" name="form421" checked="checked">
+                                                    <span>Y</span>
+                                                </label>
+                                                <label class="label-check">
+                                                    <input type="radio" name="form421">
+                                                    <span>N</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="area-btn2">
+                                <div class="btns">
+                                    <button type="button" class="btn-action c3">삭제</button>
+                                    <button type="button" class="btn-action c1">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+    // treemenu에서 +/- 버튼 추가를 위해 호출함
+    ui.treeMenu();
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]피보험자/목적물 선택 | 인수심사요청및결과 | 인수심사요청및결과</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>피보험자/목적물 선택</h1>
+			<button type="button" data-btn="pop-close">피보험자/목적물 선택 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [피보험자/목적물]  -->
+			<!-- ######################### -->
+			<div class="info-data3 t1">
+				<ul>
+					<!-- [CASE1] 계약자 -->
+					<li>
+						<!-- # 위배내용 있는 경우 위배 표시 # -->
+						<i class="icon-invalid">위배내용있음</i>
+						<!-- # // # -->
+						<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong>계약자명</strong>
+							<span>
+								<span>0000.00.00</span>
+								<span>성별</span>
+							</span>
+						</div>
+						<div class="data-word3">
+							<span>연령</span>
+							<span>총괄</span>
+						</div>
+						<div class="data2">
+							<span>심사결과</span>
+							<strong>특별조건부수용승인</strong>
+						</div>
+						<button type="button" data-btn="selection" class="selected" value="1">선택</button>
+					</li>
+					<!-- [CASE2] 피보험자 -->
+					<li>
+						<div class="data-info2" data-value="102702"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong>하다미</strong>
+							<span>
+								<span>1964.05.16</span>
+								<span>여</span>
+							</span>
+						</div>
+						<div class="data-word3">
+							<span>32세</span>
+						</div>
+						<div class="data2">
+							<span>심사결과</span>
+							<strong>부담보수용승인</strong>
+						</div>
+						<button type="button" data-btn="selection" value="2">선택</button>
+					</li>
+					<!-- [CASE3] 목적물 -->
+					<li>
+						<div class="info2 ic1 t1">
+							<strong>서울시 중구 소월로 31-2번지 손해보험 빌딩</strong>
+						</div>
+						<div class="data2">
+							<span>심사결과</span>
+							<strong>인수</strong>
+						</div>
+						<button type="button" data-btn="selection" value="3">선택</button>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

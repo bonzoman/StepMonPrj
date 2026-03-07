@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 상품검색 | 가입설계조회 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>상품검색</h1>
+			<button type="button" data-btn="pop-close">상품검색 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [검색영역] 상품검색 -->
+			<!-- ######################### -->
+			<fieldset class="form-search1">
+				<legend>상품검색</legend>
+
+				<!-- # 상품분류 # -->
+				<dl class="form">
+					<dt>상품분류</dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">상품분류</span>
+								<span data-select="text" data-value="null">전체</span>
+							</button>
+							<div class="list">
+								<div data-label="상품분류">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value=""><span>전체</span></label>
+										<label><input type="radio" name="selectOpeion1" value="1"><span>질병/상해보험</span></label>
+										<label><input type="radio" name="selectOpeion1" value="2"><span>자녀보험</span></label>
+										<label><input type="radio" name="selectOpeion1" value="3"><span>연금보험</span></label>
+										<label><input type="radio" name="selectOpeion1" value="4"><span>저축보험</span></label>
+										<label><input type="radio" name="selectOpeion1" value="5"><span>운전자보험</span></label>
+										<label><input type="radio" name="selectOpeion1" value="6"><span>재물보험</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 판매여부 # -->
+				<dl class="form">
+					<dt>판매여부</dt>
+					<dd>
+						<!-- // -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio">
+								<span>판매중</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio" value="3">
+								<span>판매중지</span>
+							</label>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 하단버튼 # -->
+				<div class="area-btn1">
+					<button type="button" class="btn-com1 c1" onclick="uiSample()">조회</button>
+				</div>
+				<!-- # // # -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [검색 전] 안내문구 -->
+			<!-- ######################### -->
+			<div class="mes-result1 ic1">
+				<p>
+					<strong>조회조건을 선택하시어<br>상품을 조회해주세요</strong>
+				</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [검색결과] 결과없음 -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p>
+					<strong>선택하신 조건의 상품이 없습니다.</strong>
+					<span>조회 조건을 바꾸어 조회해보세요</span>
+				</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [검색결과] -->
+			<!-- ######################### -->
+			<!-- # 총 건수 : 총 00건 # -->
+			<div class="area-info1">
+				<p>총 <strong>40건</strong></p>
+			</div>
+
+			<!-- # 검색목록 # -->
+			<div class="info-data1">
+				<ul>
+					<!-- 검색결과 샘플 -->
+					<li>
+						<div class="tit">
+							<label>
+								<input type="radio" name="radio1">
+								<span>
+									<!-- # 판매여부 뱃지 # -->
+									<i class="icon-txt2 ic5">판매중</i>
+									<i class="icon-txt2 t1 ic4">판매중지</i>
+									<!-- # 상품분류 뱃지 # -->
+									<i class="icon-txt2 ic1">질병/상해보험</i>
+									<i class="icon-txt2 ic1">자녀보험</i>
+									<i class="icon-txt2 ic1">연금보험</i>
+									<i class="icon-txt2 ic1">저축보험</i>
+									<i class="icon-txt2 ic1">운전자보험</i>
+									<i class="icon-txt2 ic1">재물보험</i>
+									<strong>상품명</strong>
+								</span>
+							</label>
+						</div>
+						<div class="txt">보종코드: 코드번호</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<label>
+								<input type="radio" name="radio1">
+								<span>
+									<i class="icon-txt2 ic5">판매중</i>
+									<i class="icon-txt2 ic1">질병/상해보험</i>
+									<strong>무배당 let:play 자녀보험(도담도담)(일반형)(2109)</strong>
+								</span>
+							</label>
+						</div>
+						<div class="txt">보종코드: LA0323G</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<label>
+								<input type="radio" name="radio1">
+								<span>
+									<i class="icon-txt2 t1 ic4">판매중지</i>
+									<i class="icon-txt2 ic1">연금보험</i>
+									<strong>무배당 let:smile 종합건강보험(더끌림 스탠다드)(2201)_납입면제미적용형</strong>
+								</span>
+							</label>
+						</div>
+						<div class="txt">보종코드: LA0323G</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<label>
+								<input type="radio" name="radio1">
+								<span>
+									<i class="icon-txt2 ic5">판매중</i>
+									<i class="icon-txt2 ic1">자녀보험</i>
+									<strong>let:play 자녀보험(도담도담)</strong>
+								</span>
+							</label>
+						</div>
+						<div class="txt">보종코드: LA0323G</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<label>
+								<input type="radio" name="radio1">
+								<span>
+									<i class="icon-txt2 t1 ic4">판매중지</i>
+									<i class="icon-txt2 ic1">운전자보험</i>
+									<strong>무배당 let:play 자녀보험(도담도담)(일반형)(2109)</strong>
+								</span>
+							</label>
+						</div>
+						<div class="txt">보종코드: LA0323G</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- 더보기(현재페이지/총페이지) -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- # 하단버튼 # -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

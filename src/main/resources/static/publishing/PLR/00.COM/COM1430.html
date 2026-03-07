@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>일정추가 | 캘린더 | 일정관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-27]	① 고객명 부분 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>일정 추가</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단문구] -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>등록하실 일정을<br>추가해주세요.</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [정보입력] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend>날짜 제목 고객이름 필수입력</legend>
+
+			<!-- # 날짜 # -->
+			<dl class="form">
+				<dt>날짜</dt>
+				<dd>
+					<div class="input-date1">
+						<span>
+							<button type="button" data-btn="picker" class="icon-com1 ic4">최초 내원일 선택</button>
+							<input type="text" class="text" title="최초 내원일 선택" placeholder="YYYY.MM.DD" readonly>
+						</span>
+					</div>
+
+					<!-- 오류 -->
+					<div class="input-date1">
+						<span>
+							<button type="button" data-btn="picker" class="icon-com1 ic4">최초 내원일 선택</button>
+							<input type="text" class="text" title="최초 내원일 선택" placeholder="YYYY.MM.DD" readonly  aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						</span>
+					</div>
+					<div class="validation">날짜를 선택해주세요.</div>
+				</dd>
+			</dl>
+
+			<!-- # 시간 # -->
+			<dl class="form">
+				<dt>시작 시간</dt>
+				<dd class="side label-check1">
+					<label>
+						<input type="checkbox" checked>
+						<span>종일</span>
+					</label>
+				</dd>
+				<dd>
+					<div class="input-wrap1">
+						<!-- 시간 선택 -->
+						<div class="select-wrap w100" data-autoset="select">
+							<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false"> <!-- 비활성화 disabled -->
+								<span data-select="title">시간 선택</span>
+								<span data-select="text">00</span>
+							</button>
+							<div class="list">
+								<div data-label="시간 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion0" value="1"><span>00</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- 시간 선택 -->
+						<div class="select-wrap w100" data-autoset="select">
+							<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false"> <!-- 비활성화 disabled -->
+								<span data-select="title">분 선택</span>
+								<span data-select="text">00</span>
+							</button>
+							<div class="list">
+								<div data-label="분 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="0"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="1"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="2"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="3"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="4"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="5"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="6"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="7"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="8"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="9"><span>00</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</div>
+				</dd>
+			</dl>
+
+			<dl class="form">
+				<dt>종료 시간</dt>
+				<dd>
+					<div class="input-wrap1">
+						<!-- 시간 선택 -->
+						<div class="select-wrap w100" data-autoset="select">
+							<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false"> <!-- 비활성화 disabled -->
+								<span data-select="title">시간 선택</span>
+								<span data-select="text">00</span>
+							</button>
+							<div class="list">
+								<div data-label="시간 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion0" value="1"><span>00</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- 시간 선택 -->
+						<div class="select-wrap w100" data-autoset="select">
+							<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false" disabled> <!-- 비활성화 disabled -->
+								<span data-select="title">분 선택</span>
+								<span data-select="text">00</span>
+							</button>
+							<div class="list">
+								<div data-label="분 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="0"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="1"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="2"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="3"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="4"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="5"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="6"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="7"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="8"><span>00</span></label>
+										<label><input type="radio" name="selectOpeion1" value="9"><span>00</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 제목 # -->
+			<dl class="form">
+				<dt>제목</dt>
+				<dd>
+					<input type="text" class="text" title="제목" placeholder="제목을 입력해주세요.">
+
+					<!-- 오류 -->
+					<input type="text" class="text" title="제목" placeholder="제목을 입력해주세요." aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+					<div class="validation">일정 제목을 입력해주세요.</div>
+				</dd>
+			</dl>
+
+			<!-- 2022-10-27 변경 -->
+			<!-- # 고객명 # -->
+			<dl class="form">
+				<dt>고객명</dt>
+				<dd>
+					<div class="input-btn1">
+						<data class="text" data-label="고객을 검색해주세요." value=""></data>
+						<button type="button" class="icon-com1 ic2">고객검색</button>
+					</div>
+
+					<!-- 오류 -->
+					<input type="text" class="text" title="고객이름" placeholder="고객이름을 입력해주세요." aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+					<div class="validation">고객이름을 입력해주세요.</div>
+
+					<div class="data-info2 t1" data-value="102701">
+						<strong>고객명</strong>
+						<span>
+							<span>0000.00.00</span>
+							<span>성별</span>
+						</span>
+					</div>
+				</dd>
+				<dd class="side label-check1">
+					<label>
+						<input type="checkbox">
+						<span>직접입력</span>
+					</label>
+				</dd>
+			</dl>
+			<!-- //2022-10-27 변경 -->
+
+			<!-- # 고객태그 # -->
+			<dl class="form">
+				<dt>고객태그(최대 6개)</dt>
+				<dd class="side"><button type="button" class="btn-sub3 c2">추가</button></dd>
+				<dd>
+					<div class="data-word2 box disabled">
+						<data value="해시태그">#해시태그</data>
+						<data value="해시태그">#해시태그</data>
+						<data value="해시태그">#해시태그</data>
+						<data value="해시태그">#내용이 길어질 경우</data>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 메모 # -->
+			<dl class="form">
+				<dt>메모</dt>
+				<dd>
+					<div class="textarea">
+						<textarea cols="50" rows="3" title="등록내용" placeholder="개인정보 입력을 자세해 주세요.&#10;(개인정보 입력 시 삭제될 수 있습니다.)"></textarea>
+						<span class="util2"><strong>0</strong>/200자</span>
+					</div>
+				</dd>
+			</dl>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action">삭제</button>
+			<button type="button" class="btn-action c1" onclick="ui.alert('완료')">완료</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 시간설정 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCOM0000L03" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>시간설정</h1>
+			<button type="button" data-btn="pop-close">시간설정 닫기</button>
+		</header>
+		<div class="content">
+			<div class="input-col1">
+				<select class="selectbox" id="sel1">
+					<option value="00">00</option>
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+					<option value="04">04</option>
+					<option value="05">05</option>
+					<option value="06">06</option>
+					<option value="07">07</option>
+					<option value="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+				</select>
+				<span class="txt">:</span>
+				<select class="selectbox" id="sel2">
+					<option value="00">00</option>
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+					<option value="04">04</option>
+					<option value="05">05</option>
+					<option value="06">06</option>
+					<option value="07">07</option>
+					<option value="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+				</select>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1">확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+	//레이어팝업 선언
+	var _popmodal = $plugin.popmodal('#uiPOPDPCOM0000L03');
+
+
+	//레이어팝업 닫기 샘플
+	$('.btn-action.c1').on('click',function(){
+		_popmodal.outputClose();//팝업닫기함수
+	})
+
+	function uiFormVal(){
+		var _val1 =  $('#sel1 option:selected').val();
+		var _val2 =  $('#sel2 option:selected').val();
+
+		$('#uiFormVal1').text(_val1);
+		$('#uiFormVal2').text(_val2);
+	}
+
+	$(document).ready(function(){
+		uiFormVal();
+	});
+
+	//[샘플] 체크된 상태
+	$(document).on('change','.selectbox', function(i,obj){
+		uiFormVal();
+	});
+
+	
+</script>
+</body>
+</html>

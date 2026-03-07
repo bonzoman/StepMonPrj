@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]지급상세내역 | 소득현황 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>지급상세내역</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="tit-sub1">
+			<h2 class="">기준월 : 22.04~22.04</h2>
+		</div>
+		<div class="page-con1">
+			<div class="detail1">
+				<div class="tit-sub2">
+					<h3 class="">주요정보</h3>
+				</div>
+				<div class="tbl-view1">
+					<table>
+						<colgroup>
+							<col style="width:120px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr class="current">
+								<th scope="row">설계사 정보</th>
+								<td>
+									<div class="info1 current">
+										<strong>김크림(1234567)</strong>
+										<p>강남사업단/강남5지점/강남5-1팀/13차월</p>
+										<a href="#dt1"><span>상세보기</span></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">실지급</th>
+								<td>
+									<div class="info1">
+										<strong>16,000원</strong>
+										<a href="#dt2"><span>상세보기</span></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">계약소득</th>
+								<td>
+									<div class="info1">
+										<strong>16,000원</strong>
+										<a href="#dt3"><span>상세보기</span></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">초대소득</th>
+								<td>
+									<div class="info1">
+										<strong>16,000원</strong>
+										<a href="#dt4"><span>상세보기</span></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">관리소득</th>
+								<td>
+									<div class="info1">
+										<strong>16,000원</strong>
+										<a href="#dt5"><span>상세보기</span></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">기타</th>
+								<td>
+									<div class="info1">
+										<strong>16,000원</strong>
+										<a href="#dt6"><span>상세보기</span></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">포인트</th>
+								<td>
+									<div class="info1">
+										<strong>16,000원</strong>
+										<a href="#dt7"><span>상세보기</span></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">공제</th>
+								<td>
+									<div class="info1">
+										<strong>16,000원</strong>
+										<a href="#dt8"><span>상세보기</span></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">기지급</th>
+								<td>
+									<div class="info1">
+										<strong>16,000원</strong>
+										<a href="#dt9"><span>상세보기</span></a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="dt1" class="detail2 ">
+				<div class="tit-sub2">
+					<h4 class="">설계사 정보 상세</h4>
+				</div>
+
+				<div class="tbl-view1">
+					<table>
+						<colgroup>
+							<col style="width:120px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">설계사명</th>
+								<td><strong>김크림(12312312)</strong></td>
+							</tr>
+							<tr>
+								<th scope="row">설계사 정보</th>
+								<td>강남사업단/강남5지점/강남5-1팀/13차월</td>
+							</tr>
+							<tr>
+								<th scope="row">연락처</th>
+								<td>010-9999-9999</td>
+							</tr>
+							<tr>
+								<th scope="row">지점장</th>
+								<td>강남 5-1/홍길동(12345678)</td>
+							</tr>
+							<tr>
+								<th scope="row">자격/등급</th>
+								<td>P1/C2</td>
+							</tr>
+							<tr>
+								<th scope="row">영업상태</th>
+								<td>정상</td>
+							</tr>
+							<tr>
+								<th scope="row">은행</th>
+								<td>국민은행[004]</td>
+							</tr>
+							<tr>
+								<th scope="row">계좌번호</th>
+								<td>000000000000000</td>
+							</tr>
+							<tr>
+								<th scope="row">지급유형</th>
+								<td>분급신청중/만료예정/2022.02.02~2022.02.22
+									<p class="list-dot1">지급유형은 LP기준으로 노출되며, 기간변경 되더라도 과거 상태를 노출 하지 않읍</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="dt2" class="detail2 hide">
+				<div class="tit-sub2">
+					<h4 class="">실지급 상세정보</h4>
+				</div>
+				<div class="list-view1">
+					<ul>
+						<li>
+							<em>총소득</em><span>1,111,111원</span>
+						</li>
+						<li>
+							<em>실지급</em><span>1,111,111원</span>
+						</li>
+						<li>
+							<em>지급액</em><span>1,111,111원</span>
+						</li>
+						<li>
+							<em>공제액</em><span>1,111,111원</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="dt3" class="detail2  hide">
+				<div class="tit-sub2">
+					<h4 class="">계약소득 상세정보</h4>
+				</div>
+				<div class="list-view1">
+					<ul>
+						<li>
+							<em>기본수수료</em><span>1,111,111</span>
+							<ul>
+								<li>
+									<em>장기보험</em><span>808,080</span>
+									<ul>
+										<li>
+											<em>장기모집</em><span>0</span>
+										</li>
+										<li>
+											<em>장기유지</em><span>0</span>
+										</li>
+										<li>
+											<em>장기계약관리</em><span>0</span>
+										</li>
+										<li>
+											<em>장기수금</em><span>0</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<em>자동차보험</em><span>0</span>
+									<ul>
+										<li>
+											<em>자동차모집</em><span>0</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<em>일반보험</em><span>0</span>
+									<ul>
+										<li>
+											<em>일반모집</em><span>0</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<em>기타기본</em><span>0</span>
+									<ul>
+										<li>
+											<em>퇴직연금</em><span>0</span>
+										</li>
+										<li>
+											<em>기타비례</em><span>0</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<em>성과수수료</em><span>1,111,111</span>
+							<ul>
+								<li>
+									<em>장기보험</em><span>0</span>
+									<ul>
+										<li>
+											<em>통합성과(장기)</em><span>0</span>
+										</li>
+										<li>
+											<em>장기신규수수료</em><span>0</span>
+										</li>
+										<li>
+											<em>장기합산수수료</em><span>0</span>
+										</li>
+										<li>
+											<em>장기고성과수수료</em></em><span>0</span>
+										</li>
+										<li>
+											<em>장기13회차<br>성과수수료(교차)</em><span>0</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<em>자동차보험</em><span>0</span>
+									<ul>
+										<li>
+											<em>통합성과(자동차)</em><span>0</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<em>일반보험</em><span>0</span>
+									<ul>
+										<li>
+											<em>통합성과(일반)</em><span>0</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<em>기타기본</em><span>0</span>
+									<ul>
+										<li>
+											<em>정착지원수수료</em><span>0</span>
+										</li>
+										<li>
+											<em>장학수수료</em><span>0</span>
+										</li>
+										<li>
+											<em>기타성과</em><span>0</span>
+										</li>
+										<li>
+											<em>경조</em><span>0</span>
+										</li>
+										<li>
+											<em>명절성과</em><span>0</span>
+										</li>
+										<li>
+											<em>정착/합격축하</em><span>0</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="dt4" class="detail2 hide">
+				<div class="tit-sub2">
+					<h4 class="">초대소득 상세정보</h4>
+				</div>
+				<div class="list-view1">
+					<ul>
+						<li>
+							<em>증원수수료</em><span>1,111,111</span>
+							<ul>
+								<li><em>증원수수료</em><span>1,111,111</span>
+									<ul>
+										<li>
+											<em>증원수수료</em><span>1,111,111</span>
+										</li>
+										<li>
+											<em>증원지원금</em><span>1,111,111</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="dt5" class="detail2 hide">
+				<div class="tit-sub2">
+					<h4 class="">관리소득 상세정보</h4>
+				</div>
+				<div class="list-view1">
+					<ul>
+						<li>
+							<em>간부수수료</em><span>1,111,111</span>
+							<ul>
+								<li><em>간부수수료</em><span>1,111,111</span>
+									<ul>
+										<li>
+											<em>기본수수료</em><span>1,111,111</span>
+										</li>
+										<li>
+											<em>조직운영수수료</em><span>1,111,111</span>
+										</li>
+										<li>
+											<em>자돋차보험관리수수료</em><span>1,111,111</span>
+										</li>
+										<li>
+											<em>조직관리성과수수료</em><span>1,111,111</span>
+										</li>
+										<li>
+											<em>조직분할성과수수료</em><span>1,111,111</span>
+										</li>
+										<li>
+											<em>조직분할축하수수료</em><span>1,111,111</span>
+										</li>
+										<li>
+											<em>직책수수료</em><span>1,111,111</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="dt6" class="detail2 hide">
+				<div class="tit-sub2">
+					<h4 class="">기타 상세정보</h4>
+				</div>
+				<div class="list-view1">
+					<ul>
+						<li>
+							<em>기타</em><span>1,111,111</span>
+							<ul>
+								<li><em>기타</em><span>1,111,111</span>
+									<ul>
+										<li><em>시상</em><span>1,111,111</span></li>
+										<li><em>우수시상</em><span>1,111,111</span></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="dt7" class="detail2 hide">
+				<div class="tit-sub2">
+					<h4 class="">포인트 상세정보</h4>
+				</div>
+				<div class="list-view1">
+					<ul>
+						<li>
+							<em>포인트</em><span>1,111,111</span>
+							<ul>
+								<li><em>포인트</em><span>1,111,111</span>
+									<ul>
+										<!--[M : 2022-08-03 포인트 정책 변경]-->
+										<li><em>포인트(가동)</em><span>1,111,111</span></li>
+										<li><em>포인트(연속가동)</em><span>1,111,111</span></li>
+										<!-- // [M : 2022-08-03 포인트 정책 변경]-->
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="dt8" class="detail2 hide">
+				<div class="tit-sub2">
+					<h4 class="">포인트 상세정보</h4>
+				</div>
+				<div class="list-view1">
+					<ul>
+						<li>
+							<em>공제</em><span>1,111,111</span>
+							<ul>
+								<li><em>공제</em><span>1,111,111</span>
+									<ul>
+										<li><em>보증보험</em><span>1,111,111</span></li>
+										<li><em>소득세</em><span>1,111,111</span></li>
+										<li><em>지방소득세</em><span>1,111,111</span></li>
+										<li><em>산재보험</em><span>1,111,111</span></li>
+										<li><em>고용보험공제</em><span>1,111,111</span></li>
+										<li><em>연말정산환급</em><span>1,111,111</span></li>
+										<li><em>증원지원금</em><span>1,111,111</span></li>
+										<li><em>DM공제</em><span>1,111,111</span></li>
+										<li><em>지급보류</em><span>1,111,111</span></li>
+										<li><em>채권가압류</em><span>1,111,111</span></li>
+										<li><em>신인활동지원수수료(보류)</em><span>1,111,111</span></li>
+										<li><em>기타</em><span>1,111,111</span></li>
+										<li><em>기타공제(산재보험 제외)</em><span>1,111,111</span></li>
+										<li><em>개인시상</em><span>1,111,111</span></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="dt9" class="detail2 hide">
+				<div class="tit-sub2">
+					<h4 class="">기지급 상세정보</h4>
+				</div>
+				<div class="list-view1">
+					<ul>
+						<li>
+							<em>기지급</em><span>1,111,111</span>
+							<ul>
+								<li><em>기지급</em><span>1,111,111</span>
+									<ul>
+										<li><em>개인시상</em><span>1,111,111</span></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c3" onclick="window.close();">닫기</button>
+		</div>
+	</div>
+	<script>
+		$('.detail1 .info1 a').bind('click',function(e){
+			$('.detail1 tr').removeClass('current');
+			$(this).parents('tr').addClass('current');
+			$('.detail2'+$(this).attr('href')+'').removeClass('hide').siblings('.detail2').addClass('hide')
+			e.preventDefault();
+		});
+		$('.detail1 .info1 a:eq(3)').trigger('click');
+	</script>
+</div>
+</body>
+</html>

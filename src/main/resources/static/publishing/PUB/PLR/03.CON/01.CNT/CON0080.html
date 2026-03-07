@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>해지환급금 | 예상환급금조회 | 계약상세 | 장기 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>예상/만기환급금조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [계약정보] -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+			<div class="info">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>LA123456789</dd>
+				</dl>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색영역] 조회검색 -->
+		<!-- ######################### -->
+		<div id="uiFormSearch" class="form-search2" data-scroll-bg="1" data-togglecon="true">
+			<!-- ### [상단문구] ### -->
+			<div class="tit-section2">
+				<p>환급금을 조회해보세요.</p>
+				<button type="button" data-toggle="btn" aria-expanded="false">조회정보보기</button>
+			</div>
+
+			<!-- ### [조회영역] ### -->
+			<fieldset class="form-wrap1">
+				<legend>조회정보 입력</legend>
+
+				<!-- # 조회 구분 # -->
+				<dl class="form">
+					<dt>조회 구분</dt>
+					<dd>
+						<div class="label-btn1 col2">
+							<label>
+								<input type="radio" name="uiFormRadio1" checked>
+								<span>해지환급금</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>만기환급금</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>중도환급금</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>연금지급금</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 조회 기준 # -->
+				<dl class="form">
+					<dt>조회 기준</dt>
+					<dd>
+						<!-- [CASE] : 기본 -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio2" checked>
+								<span>현재</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio2">
+								<span>최저보증이율가정</span>
+							</label>
+						</div>
+
+						<!-- [CASE] : 부활가능계약 경우 -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio3" checked>
+								<span>당일부활가정</span>
+							</label>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 기준일자 # -->
+				<dl class="form">
+					<dt>기준일자</dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+								<input type="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.04.11" readonly>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 조회 간격 # -->
+				<dl class="form">
+					<dt>조회 간격</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio4" checked>
+								<span>매년</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio4">
+								<span>매3년</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio4">
+								<span>매월</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio4">
+								<span>매3월</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 검색버튼 # -->
+				<div class="area-btn1">
+					<button type="button" class="btn-com1 c1" data-btn="search">조회</button>
+				</div>
+				<!-- # // # -->
+			</fieldset>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [조회결과] 요약정보 -->
+		<!-- ######################### -->
+		<div class="info-summary1">
+			<dl class="info2 t1">
+				<dt>해지환급금</dt>
+				<dd><strong>최저보증이율, 2022.04.11 기준</strong></dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [조회결과] 목록 -->
+		<!-- ######################### -->
+		<!-- # 안내문구 # -->
+		<div class="mes-info2 box">
+			<p>세전환급률<br><span>(예상환급금 합계/납입보험료) x 100%</span></p>
+		</div>
+
+		<!-- # 목록 # -->
+		<div class="area-toggle1" data-autoset="toggle">
+			<ul>
+				<!-- // -->
+				<li>
+					<!-- [기본정보] -->
+					<div class="tit">
+						<strong>해약일 0000.00.00</strong>
+						<dl class="data2">
+							<dt>최종납입</dt>
+							<dd>2022.04(174회차)</dd>
+						</dl>
+						<dl class="data2">
+							<dt>납입보험료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl class="data2">
+							<dt>세전환급률</dt>
+							<dd class="data-num1"><strong>00.00</strong><span>%</span></dd>
+						</dl>
+						<dl class="data2">
+							<dt>세금차감지급금</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</div>
+					<!-- [상세정보] -->
+					<div data-toggle="content">
+						<!-- // -->
+						<div class="info-con2">
+							<dl>
+								<dt>적용이율</dt>
+								<dd class="data-num1"><strong>00.00</strong><span>%</span></dd>
+							</dl>
+							<dl>
+								<dt>예상환급금 적립</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>예상환급금 보장</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>예상환급금 합계</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>세금</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+						</div>
+						<!-- // -->
+						<div class="area-btn1">
+							<a href="javascript:void(0);" class="btn-com1">해약환급금 상세조회</a>
+						</div>
+						<!-- // -->
+					</div>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="tit">
+						<strong>해약일 2022.04.11</strong>
+						<dl class="data2">
+							<dt>최종납입</dt>
+							<dd>2023.04(186회차)</dd>
+						</dl>
+						<dl class="data2">
+							<dt>납입보험료</dt>
+							<dd class="data-num1"><strong>16,265,640</strong><span>원</span></dd>
+						</dl>
+						<dl class="data2">
+							<dt>세전환급률</dt>
+							<dd class="data-num1"><strong>43.04</strong><span>%</span></dd>
+						</dl>
+						<dl class="data2">
+							<dt>세금차감지급금</dt>
+							<dd class="data-num1"><strong>7,058,910</strong><span>원</span></dd>
+						</dl>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</div>
+					<div data-toggle="content">
+						<div class="info-con2">
+							<dl>
+								<dt>적용이율</dt>
+								<dd class="data-num1"><strong>2.00</strong><span>%</span></dd>
+							</dl>
+							<dl>
+								<dt>예상환급금 적립</dt>
+								<dd class="data-num1"><strong>4,735</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>예상환급금 보장</dt>
+								<dd class="data-num1"><strong>7,609,180</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>예상환급금 합계</dt>
+								<dd class="data-num1"><strong>7,613,920</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>세금</dt>
+								<dd class="data-num1"><strong>0</strong><span>원</span></dd>
+							</dl>
+						</div>
+						<div class="area-btn1">
+							<a href="javascript:void(0);" class="btn-com1">해약환급금 상세조회</a>
+						</div>
+					</div>
+				</li>
+				<!-- // -->
+			</ul>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- # [주의 및 알림사항] # -->
+		<!-- ######################### -->
+		<ul class="txt-bul1">
+			<!-- [CASE] : 조회기준 : 정상 - 최저보증이율가정 -->
+			<li>최저보증이율가정 예상환급금은 다음달 1일부터 해당 상품의 최저보증이율을 가정하여 산출된 금액입니다. (상품별 최저보증이율 정보는 약관 또는 상품별이율조회(PROWEB의 LTRN020)화면에서 상품코드로 조회하시기 바랍니다)</li>
+			<!-- [CASE] : 조회기준 : 해지 - 당일부활가정 -->
+			<li>부활 후 예상환급금은 금일 해지(실효)상태 계약의 부활을 가정하여 산출된 금액입니다.</li>
+			<!-- // -->
+			<li>보험료 납입은 당일에 보험료가 정상 납입될 경우의 예상환급금입니다.</li>
+			<li>기발생 중도환급, 중도인출금과 발생예정인 중도환급금을 반영한 금액입니다.</li>
+			<li>보험계약대출금액은 예상환급금과 관련이 없습니다.</li>
+			<li>적용이율, 소득세율 및 계약내용이 변경(보험료 변경, 담보해약 등)되면 예상환급금은 변동합니다.</li>
+			<li>자동갱신담보가 있는 경우 조회시점의 보험요율로 특별약관별 갱신가능연령에 자동갱신 한 것을 가정하여 산출한 것으로 향후 보험요율의 변동에 따라 달라질 수 있습니다.</li>
+			<li>미지급금이 존재할 경우 미지급금가산이자로 인해 세금이 증가할 수 있습니다.</li>
+		</ul>
+		<!-- ######################### -->
+	</div>
+</main>
+
+<script>
+//<!--
+	/* ************************************
+	* 샘플 : 검색 토글컨텐츠 호출 및 닫기
+	* 1) 토글컨텐츠 호출
+	* 2) 조회버튼 클릭 이벤트
+	* 3) 조회조건 재검색 클릭 샘플
+	************************************ */
+	var _el_headline = $('.info-summary1'); //검색결과
+
+	/* 1) 토글컨텐츠 호출 */
+	var _toggleSearch = $plugin.togglecon('#uiFormSearch', {
+		class_active : 'load',
+		selector_group : false,
+		callback_load :function(e){
+			_el_headline.addClass('none');
+			$(e.this_con).removeClass('active');
+		},
+		callback_after : function(e){
+			_el_headline.removeClass('none');
+			$(e.this_con).addClass('active');
+		}
+	});
+
+	//토글컨텐츠 강제 오픈
+	_toggleSearch.outputOpen();
+
+	/* 2) 조회버튼 클릭시 이벤트
+	*  토글컨텐츠 닫기 샘플
+	*  스크롤 상단으로 이동 샘플
+	*/
+	$('[data-btn="search"]').on('click', function(){
+		//토글컨텐츠 닫기
+		_toggleSearch.outputClose();
+		_el_headline.removeClass('none');
+		$(_toggleSearch).addClass('active');
+		$(window).scrollTop(0);
+	});
+
+	/* 3) 조회조건 재검색 클릭 샘플 */
+	$('[href="#uiFormSearch"]').on('click',function(e){
+		e.preventDefault();
+		_toggleSearch.outputOpen();
+	});
+
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

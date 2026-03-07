@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>발송내용확인 | 통합사고조회 | 보상 | 유지관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-25]	1. 텍스트 변경 모바일 접수 > 방문 접수
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>발송내용확인</h1>
+			<button type="button" data-btn="pop-close">발송내용확인 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [계약정보] -->
+			<!-- ######################### -->
+			<div class="tit-section">
+				<p>담보별 보험금청구 구비서류 안내 SMS를<br>고객님께 발송하시겠습니까?</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [체크영역] -->
+			<!-- ######################### -->
+			<div class="form-wrap1 line2">
+				<!-- # 보상접수 경로 # -->
+				<fieldset>
+					<legend class="tit">보상접수경로</legend>
+
+					<dl class="form">
+						<dt>접수방법 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio1" checked>
+									<span>모바일</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio1">
+									<span>콜센터</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio1">
+									<span>방문</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<!-- 2023-01-03 변경 -->
+						<dt>고객명 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<input type="text" class="text" placeholder="고객명을 입력해주세요.">
+							<input type="text" class="text" placeholder="고객명을 입력해주세요." aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+							<div class="validation">고객명을 입력해주세요.</div>
+						</dd>
+						<!-- //2023-01-03 변경 -->
+					</dl>
+
+					<dl class="form">
+						<dt>연락처 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<input type="tel" class="text" placeholder="연락처를 입력해주세요.">
+							<input type="tel" class="text" placeholder="연락처를 입력해주세요." aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+							<div class="validation">연락처를 입력해주세요.</div>
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>발송번호 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<data class="text disabled" value="1">010-2312-2131</data>
+							<div class="label-check1 t1">
+								<label>
+									<input type="checkbox" checked>
+									<span>대표번호 사용</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- # 발송내용 # -->
+				<fieldset>
+					<legend class="tit">발송내용</legend>
+
+					<!-- [CASE1] 콜센터 접수안내 SMS 내용 -->
+					<div class="textarea">
+						<data class="disabled" value="1">[롯데손해보험] 보험금청구 구비서류안내
+							아래 URL에 접속하여 콜센터 접수방법 확인 후 보험금 청구 진행하여 주시기 바랍니다.
+							콜센터 접수안내: https://m.lotteins.co.kr/
+						</data>
+						<textarea cols="50" rows="3" title="등록내용" placeholder="4,000자 이내로 입력해주세요.">보험금청구서(개인(신용)정보처리동의서,
+계좌번호 포함) 청구인 신분증 사본(앞면)
+추가: 1)통장사본(사전 미등록 계좌)
+2) 가족관계 확인서류(피보험자 기준)
+&#9654;법원 판결문(또는 약식명령문)
+&#9654;피해자 진단서
+&#9654;교통사고사실확인원
+&#9654;공소장(검찰공소제기 서류)
+(합의시) 경찰서에 제출된 형사합의서
+						</textarea>
+						<span class="util2"><strong>0</strong>/4,000자</span>
+						<data class="disabled" value="1">&#8251; 해당 서류를 구비하시어(청구 금액이 100만원 이상시 원본 서류 구비) 사고접수 하시기 바랍니다.
+							(단, 상기 안내 서류는 기본적인 표준서류로써, 사고내용에 따라서는 상기서류이외 추가서류 제출요청이 있을 수 있으니, 이점 양해하여 주시기 바랍니다.)
+						</data>
+					</div>
+
+					<!-- [CASE2] 모바일 접수안내 SMS 내용 -->
+					<div class="textarea">
+						<data class="disabled" value="1">[롯데손해보험] 보험금청구 구비서류안내
+							아래 URL에 접속하여 본인인증 후 보험금 청구 진행하여 주시기 바랍니다.
+							모바일 접수: https://m.lotteins.co.kr/
+						</data>
+						<textarea cols="50" rows="3" title="등록내용" placeholder="4,000자 이내로 입력해주세요.">보험금청구서(개인(신용)정보처리동의서,
+계좌번호 포함) 청구인 신분증 사본(앞면)
+추가: 1)통장사본(사전 미등록 계좌)
+2) 가족관계 확인서류(피보험자 기준)
+▶법원 판결문(또는 약식명령문)
+▶피해자 진단서
+▶교통사고사실확인원
+▶공소장(검찰공소제기 서류)
+(합의시) 경찰서에 제출된 형사합의서
+						</textarea>
+						<span class="util2"><strong>0</strong>/4,000자</span>
+						<data class="disabled" value="1">&#8251; 해당 서류를 구비하시어(청구 금액이 100만원 이상시 원본 서류 구비) 사고접수 하시기 바랍니다.
+							(단, 상기 안내 서류는 기본적인 표준서류로써, 사고내용에 따라서는 상기서류이외 추가서류 제출요청이 있을 수 있으니, 이점 양해하여 주시기 바랍니다.)
+						</data>
+					</div>
+
+					<!-- [CASE3] 방문 접수안내 SMS 내용 -->
+					<div class="textarea">
+						<!-- 2022-10-27 텍스트 변경 모바일 접수 > 방문 접수 -->
+						<data class="disabled" value="1">[롯데손해보험] 보험금청구 구비서류안내
+							아래 URL에 접속하여 방문 가능한 지점 확인 후 방문 청구 진행하여 주시기 바랍니다.
+							방문 접수: http://www.lotteins.co.kr
+						</data>
+						<!-- //2022-10-27 텍스트 변경 모바일 접수 > 방문 접수 -->
+						<textarea cols="50" rows="3" title="등록내용" placeholder="4,000자 이내로 입력해주세요.">보험금청구서(개인(신용)정보처리동의서,
+계좌번호 포함) 청구인 신분증 사본(앞면)
+추가: 1)통장사본(사전 미등록 계좌)
+2) 가족관계 확인서류(피보험자 기준)
+▶법원 판결문(또는 약식명령문)
+▶피해자 진단서
+▶교통사고사실확인원
+▶공소장(검찰공소제기 서류)
+(합의시) 경찰서에 제출된 형사합의서
+						</textarea>
+						<span class="util2"><strong>0</strong>/4,000자</span>
+						<data class="disabled" value="1">&#8251; 해당 서류를 구비하시어(청구 금액이 100만원 이상시 원본 서류 구비) 사고접수 하시기 바랍니다.
+							(단, 상기 안내 서류는 기본적인 표준서류로써, 사고내용에 따라서는 상기서류이외 추가서류 제출요청이 있을 수 있으니, 이점 양해하여 주시기 바랍니다.)
+						</data>
+					</div>
+					<!-- // -->
+				</fieldset>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">발송</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

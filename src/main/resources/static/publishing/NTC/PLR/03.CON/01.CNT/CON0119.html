@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>단기운전자확대특약가입 | 계약변경 | 자동차 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>단기운전자확대특약가입</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [기본정보] -->
+		<!-- ######################### -->
+		<section class="wrap-section1">
+			<h2 class="tit-sub1">기본정보</h2>
+			<div class="info-con1">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>CA12345678901</dd>
+				</dl>
+				<dl>
+					<dt>보험기간</dt>
+					<dd>2021.05.20~2022.05.20</dd>
+				</dl>
+				<dl>
+					<dt>차량번호</dt>
+					<dd><span data-masking="true">****2134</span></dd>
+				</dl>
+				<dl>
+					<dt>사용누적현황</dt>
+					<dd>0/15회, 0/60일</dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- ######################### -->
+		<!-- [기간설정] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1 line">
+			<legend class="tit">기간 설정</legend>
+
+			<dl class="form">
+				<dt>시작일</dt>
+				<dd>
+					<!-- // -->
+					<div class="input-date1">
+						<span>
+							<button type="button" onclick="uiDatepicker(this)" class="icon-com1 ic4">시작일 선택</button><!-- [D] onclick 임시 : 하단 스크립트 참고 -->
+							<input type="text" class="text" title="시작일 선택" data-dateform="start" value="2022.08.27" placeholder="YYYY.MM" readonly>
+						</span>
+					</div>
+					<!-- // -->
+				</dd>
+			</dl>
+
+			<dl class="form">
+				<dt>종료일 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<!-- // -->
+					<div class="input-date1">
+						<span>
+							<button type="button" onclick="uiDatepicker(this)" class="icon-com1 ic4">종료일  선택</button><!-- [D] onclick 임시 : 하단 스크립트 참고 -->
+							<input type="text" class="text" title="종료일 선택" data-dateform="end" value="2022.08.27" placeholder="YYYY.MM" readonly>
+						</span>
+					</div>
+					<div class="data1">
+						<span>가입기간</span>
+						<em class="txt-c2">7일</em>
+					</div>
+					<!-- // -->
+				</dd>
+			</dl>
+		</fieldset>
+
+		<!-- ### 안내문구 ### -->
+		<ul class="txt-bul1 line2">
+			<li>단기운전자 확대특약 가입 후 변경 및 취소 불가능해요.</li>
+			<li>
+				<div>1회당 최대 가입기간은 31일(보험기간 6개월 미만의 경우 30일)까지 가능해요.</div>
+				<div class="txt-bul4">연간 누적 횟수 15회 또는 60일(보험기간 6개월 미만인 경우 7회 또는 30일)한도로 사용 누적 횟수 또는 일수 중 하나라도 초과 시 가입이 불가능해요.</div>
+			</li>
+			<li>
+				<div>효력발생시점: 계약변경 기준일의 24:00부터</div>
+				<div>예시) 실제 운행(적용)일 2023.01.02 인 경우<br>계약변경 기준일은 2023.01.01로 입력</div>
+			</li>
+		</ul>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">보험료 계산</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+//<!--
+	//datepicker 오픈 샘플
+	function uiDatepicker(el){
+		var _input = $(el).next('input');
+
+		console.log(_input)
+		ui.formDatePicker(_input);
+
+		//시작일
+		if(_input.attr('data-dateform') == 'start'){
+			ui_picker.reloadOptions({
+				minDate:new Date(),
+				maxDate:moment(new Date()).add(7, 'days')
+			});
+			//_input.datepicker("option", {
+				//"minDate": today,
+				//"maxDate": +7
+			//});
+		}
+
+		//종료일
+		if(_input.attr('data-dateform') == 'end'){
+			ui_picker.reloadOptions({
+				minDate:new Date(),
+				maxDate:moment(new Date()).add(30, 'days')
+			});
+			//_input.datepicker("option",{
+				//"minDate": today,
+				//"maxDate": +30,
+			//});
+		}
+		//_input.datepicker('show');
+		ui_picker.show();
+	}
+//-->
+</script>
+</body>
+</html>

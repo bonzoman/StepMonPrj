@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 갱신추가납대상 설명 | 갱신추가납대상조회 | 갱신대상계약조회 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-16]	① 타이틀 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>화면도움말</h1> 
+			<button type="button" data-btn="pop-close">화면도움말 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단문구] -->
+			<!-- ######################### -->
+			<!-- 2022-11-16 변경 -->
+			<div class="tit-section2">
+				<p>갱신추가납대상이란?</p>
+				<p>갱신 시 보험료 변동에 따른 초과금액을 납입해야하는 대상을 조회할 수 있습니다.</p>
+			</div>
+			<!-- //2022-11-16 변경 -->
+
+			<!-- ######################### -->
+			<!-- [추가납입형] -->
+			<!-- ######################### -->
+			<div class="wrap-section">
+				<h2 class="tit-sub1">추가납입형</h2>
+				<figure class="area-img1">
+					<figcaption>갱신시 보험료 변동에 따른 초과금액을 납입</figcaption>
+					<img src="../../../resource/img/plr/cnt/img_info1.png">
+					<table class="hide">
+						<caption>추가납입형</caption>
+						<thead>
+							<tr>
+								<th scope="col">구분</th>
+								<th scope="col">가입시점</th>
+								<th scope="col">1차 갱신</th>
+								<th scope="col">2차 갱신</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">갱신보험료</th>
+								<td>갱신</td>
+								<td>갱신 + 추가납입 = 보험료증가</td>
+								<td>갱신 + 추가납입 = 보험료증가</td>
+							</tr>
+							<tr>
+								<th scope="row">적립보험료</th>
+								<td>적립</td>
+								<td>적립</td>
+								<td>적립</td>
+							</tr>
+							<tr>
+								<th scope="row">비갱신보험료</th>
+								<td>비갱신</td>
+								<td>비갱신</td>
+								<td>비갱신</td>
+							</tr>
+							<tr>
+								<th scope="row">책임준비금</th>
+								<td>책임준비금</td>
+								<td>책임준비금 + 책임준비금</td>
+								<td>책임준비금 + 책임준비금 + 책임준비금</td>
+							</tr>
+						</tbody>
+					</table>
+				</figure>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [적립보험료/준비금대체형] -->
+			<!-- ######################### -->
+			<div class="wrap-section3">
+				<h3 class="tit-sub1">적립보험료/준비금대체형</h3>
+				<ul class="txt-bul1">
+					<li>갱신시 보험료 변동에따른 초과금액을 적립보험료로 대체(적립대체)</li>
+					<li>적립보험료로 갱신특약보험료 변동분을 대체하지 못하면 준비금에서 대체 납입</li>
+					<li>적립부분 책임준비금에서도 대체납입이 불가능할 경우 추가납입 전환</li>
+				</ul>
+
+				<figure class="area-img1 line">
+					<figcaption class="tit">책임준비금 적립 및 사용 예</figcaption>
+					<img src="../../../resource/img/plr/cnt/img_info2.png">
+					<table class="hide">
+						<caption>책임준비금 적립 및 사용 예</caption>
+						<thead>
+							<tr>
+								<th scope="col">구분</th>
+								<th scope="col">가입시점</th>
+								<th scope="col">1차 갱신<span>적립보험료 대체</span></th>
+								<th scope="col">2차 갱신<span>준비금 대체</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">갱신보험료</th>
+								<td>갱신</td>
+								<td>갱신 + 적립 대체 = 보험료증가</td>
+								<td>갱신 + 준비금 대체 = 보험료증가</td>
+							</tr>
+							<tr>
+								<th scope="row">적립보험료</th>
+								<td>적립</td>
+								<td>적립</td>
+								<td>적립</td>
+							</tr>
+							<tr>
+								<th scope="row">비갱신보험료</th>
+								<td>비갱신</td>
+								<td>비갱신</td>
+								<td>비갱신</td>
+							</tr>
+							<tr>
+								<th scope="row">책임준비금</th>
+								<td>책임준비금</td>
+								<td>책임준비금</td>
+								<td>책임준비금</td>
+							</tr>
+						</tbody>
+					</table>
+				</figure>
+
+				<figure class="area-img1 line">
+					<figcaption class="tit">책임준비금 소진 후 추가납입 예</figcaption>
+					<img src="../../../resource/img/plr/cnt/img_info3.png">
+					<table class="hide">
+						<caption>책임준비금 소진 후 추가납입 예</caption>
+						<thead>
+							<tr>
+								<th scope="col">구분</th>
+								<th scope="col">2차 갱신<span>준비금 대체</span></th>
+								<th scope="col">준비금 소진<span>추가납환 전환</span></th>
+								<th scope="col">3차 갱신</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">갱신보험료</th>
+								<td>갱신 + 준비금 대체</td>
+								<td>갱신 + 추가납입 = 보험료증가</td>
+								<td>갱신 + 추가납입 = 보험료증가</td>
+							</tr>
+							<tr>
+								<th scope="row">적립보험료</th>
+								<td>적립</td>
+								<td>적립</td>
+								<td>적립</td>
+							</tr>
+							<tr>
+								<th scope="row">비갱신보험료</th>
+								<td>비갱신</td>
+								<td>비갱신</td>
+								<td>비갱신</td>
+							</tr>
+							<tr>
+								<th scope="row">책임준비금</th>
+								<td>책임준비금</td>
+								<td>책임준비금<span>대체 불가</span></td>
+								<td>책임준비금</td>
+							</tr>
+						</tbody>
+					</table>
+				</figure>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [갱신유형별 보험료 구성] -->
+			<!-- ######################### -->
+			<div class="wrap-section3">
+				<h3 class="tit-sub1">갱신유형별 보험료 구성</h3>
+
+				<dl class="txt-bul1">
+					<dt>적립보험료 대체</dt>
+					<dd>갱신시 증가하는 갱신형 담보의 보험료를 적립보험료에서 차감</dd>
+					<dd>갱신 이전에 갱신형 담보의 보험료는 보장보험료 및 영수보험료에 포함</dd>
+				</dl>
+
+				<dl class="txt-bul1">
+					<dt>적립준비금 대체(차액대체)</dt>
+					<dd>갱신시 증가하는 갱신형 담보보험료를 적립 보험료에서 차감</dd>
+					<dd>적립보험료에서 차감을 다하지 못하는 경우 그 차액분을 적립부분 정상 준비금에서 차감</dd>
+					<dd>갱신시 증가하는 갱신형담보의 보험료를 적립보험료에서 차감</dd>
+					<dd>갱신 이전에 갱신형담보의 보험료는 보장보험료 및 영수보험료에 포함</dd>
+				</dl>
+
+				<dl class="txt-bul1">
+					<dt>적립준비금 대체(전액대체)</dt>
+					<dd>갱신형 담보의 보험료를 적립 부분준비금에서 차감</dd>
+					<dd>갱신형 담보의 보험료는 보장보험료 및 영수보험료에 합산되지 않음</dd>
+				</dl>
+
+				<dl class="txt-bul1">
+					<dt>보험료 추가납입</dt>
+					<dd>갱신형 담보의 보험료를 계약자가 납입</dd>
+					<dd>갱신형 담보의 보험료는 보장보험료 및 영수보험료에 포함</dd>
+				</dl>
+
+				<dl class="txt-bul1">
+					<dt>혼합형(일부추가납입형)</dt>
+					<dd>최초계약시: 적립준비금대체(전액대체)와 운영방식이 동일</dd>
+					<dd>실손의료비 이외 갱신담보: 적립준비금 대체 </dd>
+				</dl>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

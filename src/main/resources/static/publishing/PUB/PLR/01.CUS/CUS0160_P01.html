@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 고객정보수정 | 고객정보상세(사업자) | 고객상세(채팅UI) | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>고객정보 수정</h1>
+			<button type="button" data-btn="pop-close">고객정보 수정 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [기본정보] -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<h2 class="tit-sub1">기본정보</h2>
+				<!-- [CASE1] 개인사업자 -->
+				<div class="info-con1">
+					<dl>
+						<dt>사업자명</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>사업자구분</dt>
+						<dd>개인사업자</dd>
+					</dl>
+					<dl>
+						<dt>사업자등록번호</dt>
+						<dd>101-01-00011</dd>
+					</dl>
+					<dl>
+						<dt>설립국가</dt>
+						<dd>한국</dd>
+					</dl>
+				</div>
+
+				<!-- [CASE2] 보유자 -->
+				<div class="info-con1">
+					<dl>
+						<dt>사업자명</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>사업자구분</dt>
+						<dd>보유자</dd>
+					</dl>
+					<dl>
+						<dt>사업자등록번호</dt>
+						<dd>101-01-00011</dd>
+					</dl>
+					<dl>
+						<dt>법인등록번호</dt>
+						<dd>110111-6117570</dd>
+					</dl>
+					<dl>
+						<dt>설립국가</dt>
+						<dd>한국</dd>
+					</dl>
+				</div>
+
+				<!-- [CASE3] 법인사업자 -->
+				<div class="info-con1">
+					<dl>
+						<dt>사업자명</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>사업자구분</dt>
+						<dd>법인사업자</dd>
+					</dl>
+					<dl>
+						<dt>사업자등록번호</dt>
+						<dd>101-01-00011</dd>
+					</dl>
+					<dl>
+						<dt>법인등록번호</dt>
+						<dd>110111-6117570</dd>
+					</dl>
+					<dl>
+						<dt>설립국가</dt>
+						<dd>한국</dd>
+					</dl>
+				</div>
+
+				<!-- [CASE4] 법인 -->
+				<div class="info-con1">
+					<dl>
+						<dt>사업자명</dt>
+						<dd>홍대노박다</dd>
+					</dl>
+					<dl>
+						<dt>사업자구분</dt>
+						<dd>법인</dd>
+					</dl>
+					<dl>
+						<dt>법인등록번호</dt>
+						<dd>110111-6117570</dd>
+					</dl>
+					<dl>
+						<dt>설립국가</dt>
+						<dd>한국</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보수정] -->
+			<!-- ######################### -->
+			<div class="form-wrap1 line">
+				<!-- # 연락처 # -->
+				<dl class="form">
+					<dt>연락처 <em class="icon-required2">필수</em></dt>
+					<dd class="info-con1 box2">
+						<ul>
+							<li>
+								<div>휴대전화</div>
+								<div>02-7777-8989</div>
+							</li>
+							<li>
+								<div>직장</div>
+								<div>02-766-8989</div>
+							</li>
+							<li>
+								<div>기타</div>
+								<div>010-1234-5678</div>
+							</li>
+						</ul>
+						<div class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic3">연락처 관리</a></div>
+					</dd>
+				</dl>
+
+				<!-- # 주소 # -->
+				<dl class="form">
+					<dt>주소 <em class="icon-required2">필수</em></dt>
+					<dd class="info-con1 box2">
+						<ul>
+							<li>
+								<div>자택</div>
+								<div>(01234) 서울특별시 중구 소월로 3 3층</div>
+							</li>
+							<li>
+								<div>직장</div>
+								<div>(01234) 서울특별시 강남구 강남대로 136길 31, 더클래식논현 1층</div>
+							</li>
+						</ul>
+						<div class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic3">주소 관리</a></div>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [선택정보] -->
+			<!-- ######################### -->
+			<div class="area-toggle1" data-autoset="toggle">
+				<fieldset class="active">
+					<legend class="tit">
+						<strong>선택정보</strong>
+						<button type="button" data-toggle="btn" aria-expanded="true">선택정보 상세보기</button>
+					</legend>
+					<div data-toggle="content" class="form-wrap1">
+						<!-- # 사업자명(영문) # -->
+						<dl class="form">
+							<dt>사업자명(영문)</dt>
+							<dd><input type="text" class="text" title="사업자명(영문)" placeholder="사업자명을 입력해주세요." value="MOHAMED"></dd>
+						</dl>
+
+						<!-- [CASE1] 사업자구분 : 법인일 경우 노출 -->
+						<!-- # 사업자등록번호 # -->
+						<dl class="form">
+							<dt>사업자등록번호</dt>
+							<dd>
+								<div class="text">
+									<input type="tel" title="사업자등록번호 앞자리" maxlength="3" value="101">
+									<span class="util">-</span>
+									<input type="tel" title="사업자등록번호 중간자리" maxlength="6" value="01">
+									<span class="util">-</span>
+									<input type="tel" title="사업자등록번호 뒷자리" maxlength="5" value="00011">
+								</div>
+							</dd>
+						</dl>
+						<!-- # // # -->
+
+						<!-- # 대표자명 # -->
+						<dl class="form">
+							<dt>대표자명</dt>
+							<dd>
+								<!-- [CASE1] 검색전 -->
+								<div class="text">
+									<input type="search" title="대표자명" placeholder="고객님을 선택해주세요.">
+									<button type="button" class="icon-com1 ic2">대표자명 검색하기</button>
+								</div>
+								<!-- [CASE2] 검색후 -->
+								<div class="info-data3 info">
+									<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+										<strong>하다미</strong>
+										<span>
+											<span>1997.01.01</span>
+											<span>남</span>
+										</span>
+									</div>
+									<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+								</div>
+								<!-- // -->
+							</dd>
+						</dl>
+
+						<!-- # 주대표자 외 대표자수 # -->
+						<dl class="form">
+							<dt>주대표자 외 대표자수</dt>
+							<dd><input type="tel" class="text" title="주대표자 외 대표자수" placeholder="예) 11"></dd>
+						</dl>
+
+						<!-- [CASE2] 사업자구분 : 법인사업자, 법인일 경우 노출 -->
+						<!-- # 실소유자명 # -->
+						<dl class="form">
+							<dt>실소유자명</dt>
+							<dd>
+								<!-- # [CASE2-1] 실소유자 등록 전 # -->
+								<div class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic3">간편 실소유자</a></div>
+
+								<!-- # [CASE2-2] 실소유자 등록 후 # -->
+								<data class="text disabled" value="하다미,장지운">하다미,장지운</data>
+								<div class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic3">간편 실소유자 수정하기</a></div>
+							</dd>
+						</dl>
+						<!-- # // # -->
+
+						<!-- # 설립일자 # -->
+						<dl class="form">
+							<dt>설립일자</dt>
+							<dd>
+								<div class="input-date1 text">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+										<input type="text" title="날짜 선택" placeholder="날짜를 선택해주세요." readonly>
+									</span>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 폐쇄일자 # -->
+						<dl class="form">
+							<dt>폐쇄일자</dt>
+							<dd>
+								<div class="input-date1 text">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+										<input type="text" title="날짜 선택" placeholder="날짜를 선택해주세요." readonly>
+									</span>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 종업원수 # -->
+						<dl class="form">
+							<dt>종업원수</dt>
+							<dd><input type="tel" class="text" title="종업원수" placeholder="예) 11"></dd>
+						</dl>
+
+						<!-- # 표준산업분류 # -->
+						<dl class="form">
+							<dt>표준산업분류</dt>
+							<dd>
+								<div class="input-btn1">
+									<data class="text disabled" value="" data-label="표준산업분류를 검색해주세요."></data>
+									<button type="button" class="icon-com1 ic2">표준산업분류 검색하기</button>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 업태(업종) # -->
+						<dl class="form">
+							<dt>업태(업종)</dt>
+							<dd><input type="text" class="text" title="업태(업종)" placeholder="예) 농업, 임업, 어업"></dd>
+						</dl>
+
+						<!-- # 종목(설립목적) # -->
+						<dl class="form">
+							<dt>종목(설립목적)</dt>
+							<dd><input type="text" class="text" title="종목(설립목적)" placeholder="예) 양돈업, 정기 항공 운송업"></dd>
+						</dl>
+
+						<!-- # 기업규모 # -->
+						<dl class="form line">
+							<dt>기업규모</dt>
+							<dd>
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">선택해주세요.</span>
+										<span data-select="text"></span>
+									</button>
+									<div class="list">
+										<div data-label="기업규모">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion" value="1"><span>개인사업</span></label>
+												<label><input type="radio" name="selectOpeion" value="2"><span>중소기업</span></label>
+												<label><input type="radio" name="selectOpeion" value="3"><span>대기업</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 기업형태 # -->
+						<dl class="form">
+							<dt>기업형태</dt>
+							<dd>
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">선택해주세요.</span>
+										<span data-select="text"></span>
+									</button>
+									<div class="list">
+										<div data-label="기업형태">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion2" value="1"><span>상장</span></label>
+												<label><input type="radio" name="selectOpeion2" value="2"><span>외감</span></label>
+												<label><input type="radio" name="selectOpeion2" value="3"><span>중소기업</span></label>
+												<label><input type="radio" name="selectOpeion2" value="4"><span>금융기관</span></label>
+												<label><input type="radio" name="selectOpeion2" value="5"><span>지자체</span></label>
+												<label><input type="radio" name="selectOpeion2" value="6"><span>기타</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 상장구분 # -->
+						<dl class="form">
+							<dt>상장구분</dt>
+							<dd>
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">선택해주세요.</span>
+										<span data-select="text"></span>
+									</button>
+									<div class="list">
+										<div data-label="상장구분">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion3" value="1"><span>거래소</span></label>
+												<label><input type="radio" name="selectOpeion3" value="2"><span>코스닥</span></label>
+												<label><input type="radio" name="selectOpeion3" value="3"><span>제3시장</span></label>
+												<label><input type="radio" name="selectOpeion3" value="4"><span>해당없음</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 매출액 # -->
+						<dl class="form">
+							<dt>매출액</dt>
+							<dd><input type="tel" class="text" title="매출액" placeholder="매출액을 입력해주세요."></dd>
+						</dl>
+
+						<!-- # 자본금 # -->
+						<dl class="form">
+							<dt>자본금</dt>
+							<dd><input type="tel" class="text" title="자본금" placeholder="자본금을 입력해주세요."></dd>
+						</dl>
+
+						<!-- # 결산월구분 # -->
+						<dl class="form">
+							<dt>결산월구분</dt>
+							<dd>
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">선택해주세요.</span>
+										<span data-select="text"></span>
+									</button>
+									<div class="list">
+										<div data-label="결산월구분">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion4" value="1"><span>3월 결산</span></label>
+												<label><input type="radio" name="selectOpeion4" value="2"><span>6월 결산</span></label>
+												<label><input type="radio" name="selectOpeion4" value="3"><span>9월 결산</span></label>
+												<label><input type="radio" name="selectOpeion4" value="4"><span>12월 결산</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 그룹/계열 # -->
+						<dl class="form">
+							<dt>그룹/계열</dt>
+							<dd>
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">선택해주세요.</span>
+										<span data-select="text"></span>
+									</button>
+									<div class="list">
+										<div data-label="그룹/계열">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion5" value="1"><span>삼성</span></label>
+												<label><input type="radio" name="selectOpeion5" value="2"><span>한국전력공사</span></label>
+												<label><input type="radio" name="selectOpeion5" value="3"><span>현대자동차</span></label>
+												<label><input type="radio" name="selectOpeion5" value="4"><span>에스케이</span></label>
+												<label><input type="radio" name="selectOpeion5" value="5"><span>엘지</span></label>
+												<label><input type="radio" name="selectOpeion5" value="6"><span>한국도로공사</span></label>
+												<label><input type="radio" name="selectOpeion5" value="7"><span>롯데</span></label>
+												<label><input type="radio" name="selectOpeion5" value="8"><span>대한주택공사</span></label>
+												<label><input type="radio" name="selectOpeion5" value="9"><span>포스코</span></label>
+												<label><input type="radio" name="selectOpeion5" value="10"><span>케이티</span></label>
+												<label><input type="radio" name="selectOpeion5" value="11"><span>지에스</span></label>
+												<label><input type="radio" name="selectOpeion5" value="12"><span>한진</span></label>
+												<label><input type="radio" name="selectOpeion5" value="13"><span>한국토지공사</span></label>
+												<label><input type="radio" name="selectOpeion5" value="14"><span>현대중공업</span></label>
+												<label><input type="radio" name="selectOpeion5" value="15"><span>한화</span></label>
+												<label><input type="radio" name="selectOpeion5" value="16"><span>한국철도공사</span></label>
+												<label><input type="radio" name="selectOpeion5" value="17"><span>두산</span></label>
+												<label><input type="radio" name="selectOpeion5" value="18"><span>금호아시아나</span></label>
+												<label><input type="radio" name="selectOpeion5" value="19"><span>한국가스공사</span></label>
+												<label><input type="radio" name="selectOpeion5" value="20"><span>하이닉스</span></label>
+												<label><input type="radio" name="selectOpeion5" value="21"><span>동부</span></label>
+												<label><input type="radio" name="selectOpeion5" value="22"><span>현대</span></label>
+												<label><input type="radio" name="selectOpeion5" value="23"><span>신세계</span></label>
+												<label><input type="radio" name="selectOpeion5" value="24"><span>씨제이</span></label>
+												<label><input type="radio" name="selectOpeion5" value="25"><span>엘이스</span></label>
+												<label><input type="radio" name="selectOpeion5" value="26"><span>대림</span></label>
+												<label><input type="radio" name="selectOpeion5" value="27"><span>지엠대우</span></label>
+												<label><input type="radio" name="selectOpeion5" value="28"><span>하이트맥주</span></label>
+												<label><input type="radio" name="selectOpeion5" value="29"><span>대우건설</span></label>
+												<label><input type="radio" name="selectOpeion5" value="30"><span>동국제강</span></label>
+												<label><input type="radio" name="selectOpeion5" value="31"><span>대우조선해양</span></label>
+												<label><input type="radio" name="selectOpeion5" value="32"><span>에스티엑스</span></label>
+												<label><input type="radio" name="selectOpeion5" value="33"><span>한국농촌공사</span></label>
+												<label><input type="radio" name="selectOpeion5" value="34"><span>동양</span></label>
+												<label><input type="radio" name="selectOpeion5" value="35"><span>케이티엔지</span></label>
+												<label><input type="radio" name="selectOpeion5" value="36"><span>효성</span></label>
+												<label><input type="radio" name="selectOpeion5" value="37"><span>현대오일뱅크</span></label>
+												<label><input type="radio" name="selectOpeion5" value="38"><span>현대백화점</span></label>
+												<label><input type="radio" name="selectOpeion5" value="39"><span>코오롱</span></label>
+												<label><input type="radio" name="selectOpeion5" value="40"><span>현대산업개발</span></label>
+												<label><input type="radio" name="selectOpeion5" value="41"><span>케이씨씨</span></label>
+												<label><input type="radio" name="selectOpeion5" value="42"><span>한진중공업</span></label>
+												<label><input type="radio" name="selectOpeion5" value="43"><span>세아</span></label>
+												<label><input type="radio" name="selectOpeion5" value="44"><span>영풍</span></label>
+												<label><input type="radio" name="selectOpeion5" value="45"><span>태광산업</span></label>
+												<label><input type="radio" name="selectOpeion5" value="46"><span>부영</span></label>
+												<label><input type="radio" name="selectOpeion5" value="47"><span>하나로텔레콤</span></label>
+												<label><input type="radio" name="selectOpeion5" value="48"><span>대한전선</span></label>
+												<label><input type="radio" name="selectOpeion5" value="49"><span>쌍용</span></label>
+												<label><input type="radio" name="selectOpeion5" value="50"><span>한솔</span></label>
+												<label><input type="radio" name="selectOpeion5" value="51"><span>농심</span></label>
+												<label><input type="radio" name="selectOpeion5" value="52"><span>대성</span></label>
+												<label><input type="radio" name="selectOpeion5" value="53"><span>이랜드</span></label>
+												<label><input type="radio" name="selectOpeion5" value="54"><span>동양화학</span></label>
+												<label><input type="radio" name="selectOpeion5" value="55"><span>삼양</span></label>
+												<label><input type="radio" name="selectOpeion5" value="56"><span>문화방송</span></label>
+												<label><input type="radio" name="selectOpeion5" value="57"><span>태영</span></label>
+												<label><input type="radio" name="selectOpeion5" value="58"><span>한국타이어</span></label>
+												<label><input type="radio" name="selectOpeion5" value="59"><span>중앙일보</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 이메일 # -->
+						<dl class="form line">
+							<dt>이메일</dt>
+							<dd>
+								<!-- // -->
+								<input type="text" class="text" title="아이디 입력" placeholder="아이디를 입력해주세요." value="Mohamed">
+								<!-- // -->
+								<div class="select-wrap" data-autoset="select" data-callback="uiFunction2"> <!-- [D] 하단 uiFunction2(); 참고 : 함수명 변경 필요 -->
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">선택해주세요.</span>
+										<span data-select="text" data-value="4">@ gmail.com</span>
+									</button>
+									<div class="list">
+										<div data-label="이메일 주소">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion5" value="1"><span>직접입력</span></label>
+												<label><input type="radio" name="selectOpeion5" value="2"><span>naver.com</span></label>
+												<label><input type="radio" name="selectOpeion5" value="3"><span>kakao.com</span></label>
+												<label><input type="radio" name="selectOpeion5" value="4"><span>gmail.com</span></label>
+												<label><input type="radio" name="selectOpeion5" value="5"><span>lotteins.co.kr</span></label>
+												<label><input type="radio" name="selectOpeion5" value="6"><span>hanmail.net</span></label>
+												<label><input type="radio" name="selectOpeion5" value="7"><span>daum.net</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- // -->
+								<div class="ui-tabcon" data-select-con="3">
+									<input type="text" class="text" placeholder="도메인 주소를 입력해주세요.">
+								</div>
+								<!-- // -->
+							</dd>
+						</dl>
+
+						<dl class="form">
+							<dt>홈페이지</dt>
+							<dd><input class="text" type="text" title="홈페이지 주소" placeholder="예) www.lotteins.co.kr" value="www.homepage.co.kr"></dd>
+						</dl>
+					</div>
+				</fieldset>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<!-- <button type="button" class="btn-action c1" disabled>저장</button> : 비활성화 -->
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	/* ******************************
+	* 샘플 : 이메일 선택 예시
+	* uiFunction2() 함수명 변경 필요
+	* data-select-con : 보여줄 컨텐츠
+	****************************** */
+	function uiFunction2(e){
+		if(e.val() == 1) $('[data-select-con="3"]').removeClass('ui-tabcon');
+		else $('[data-select-con="3"]').addClass('ui-tabcon');
+	}
+//-->
+</script>
+</body>
+</html>

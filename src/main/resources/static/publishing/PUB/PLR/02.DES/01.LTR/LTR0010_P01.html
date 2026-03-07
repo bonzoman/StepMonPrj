@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 누적확인 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>누적확인</h1>
+			<button type="button" data-btn="pop-close">누적확인 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [고객정보]-->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<h2 class="tit-sub1">피보험자 위험정보(고객정보)</h2>
+				<div class="info-con1">
+					<dl>
+						<dt>고객정보</dt>
+						<dd class="data-info2">
+							<strong>하다미</strong>
+							<span>
+								<span>1990.01.01</span>
+								<span>남</span>
+							</span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>직업<br>(급수/등급)</dt>
+						<dd>
+							<div>경영지원 사무직 관리자</div>
+							<div>(1급)</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>회사/직무</dt>
+						<dd>롯데손해보험/사무</dd>
+					</dl>
+				</div>
+				<div class="mes-info2 box">
+					<p>누적초과된 증권(설계)은 이 설계의 청약 완료 전까지 해당 보장(담보)의 삭제 또는 계약의 해약을 완료해야합니다.</p>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [해약예정 증권선택]-->
+			<!-- ######################### -->
+			<div class="area-toggle1" data-autoset="toggle">
+				<section class="active">
+					<header class="tit">
+						<h3>해약예정 증권 선택</h3>
+						<button type="button" data-toggle="btn" aria-expanded="true">해약예정 증권 상세보기</button>
+					</header>
+					<div data-toggle="content"  class="info-data1 bg">
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="tit label-check1">
+									<label>
+										<input type="checkbox" checked>
+										<span>207C20140026456</span>
+										<strong>무배당 롯데손해보험 힐링케어 건강보험 1210 2종</strong>
+									</label>
+								</div>
+								<div class="side">
+									<button type="button" class="btn-sub3 c2">담보상세</button>
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit label-check1">
+									<label>
+										<input type="checkbox">
+										<span>207C20140026456</span>
+										<strong>무배당 롯데손해보험 힐링케어 보험</strong>
+									</label>
+								</div>
+								<div class="side">
+									<button type="button" class="btn-sub3 c2">담보상세</button>
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit label-check1">
+									<label>
+										<input type="checkbox">
+										<span>207C20140026456</span>
+										<strong>무배당 롯데손해보험 힐링케어 건강보험 1210 2종</strong>
+									</label>
+								</div>
+								<div class="side">
+									<button type="button" class="btn-sub3 c2">담보상세</button>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</section>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [담보별 보기]-->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<h3 class="hide">담보별 선택</h3>
+				<!-- ### [담보유형] ### -->
+				<div class="area-btn4" data-sticky="top" data-scroll-tab="true">
+					<a href="#uiTabSection1" class="btn-t1 c2 active">담보유형</a>
+					<a href="#uiTabSection2" class="btn-t1 c2">상해사망</a>
+					<a href="#uiTabSection3" class="btn-t1 c2">암진단비</a>
+				</div>
+
+				<!-- ### [누적위험 목록] ### -->
+				<!-- [담보유형1] -->
+				<section id="uiTabSection1" data-scroll-con="1">
+					<!-- 2022-12-21 체크박스 추가 -->
+					<div class="label-check1 single">
+						<label>
+							<input type="checkbox">
+							<span>인수지침 위배 담보만 보기</span>
+						</label>
+					</div>
+					<!-- 2022-12-21 체크박스 추가 -->
+
+					<h4 class="tit-sub1">담보유형</h4>
+					<div class="info-data2">
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="tit label-check1">
+									<label>
+										<input type="checkbox" checked>
+										<span>담보명</span>
+									</label>
+								</div>
+								<div class="info-con2">
+									<dl>
+										<dt>증권번호</dt>
+										<dd><button type="button" class="icon-com1 ic3 right" title="담보확인팝업">207C20140026428</button></dd>
+									</dl>
+									<dl>
+										<dt>누적금액</dt>
+										<dd class="data-num1"><strong>000,000</strong><span>만원</span></dd>
+									</dl>
+									<dl class="form">
+										<dt>누적제외금액</dt>
+										<dd>
+											<div class="text num1">
+												<input type="tel" title="누적제외금액" value="10,000">
+												<span class="util1">만원</span>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt>누적적용금액</dt>
+										<dd class="data-num1"><strong>000,000</strong><span>만원</span></dd>
+									</dl>
+									<p class="txt t1">[플랜] 질병후유 태아 5천, ~30 세 7천 한도</p>
+								</div>
+								<!-- <div class="side"><button type="button" class="btn-sub3 c2">담보삭제</button></div> -->
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit label-check1">
+									<label>
+										<input type="checkbox" checked>
+										<span>담보명</span>
+									</label>
+								</div>
+								<div class="info-con2">
+									<dl>
+										<dt>증권번호</dt>
+										<dd><button type="button" class="icon-com1 ic3 right" title="담보확인팝업">207C20140026428</button></dd>
+									</dl>
+									<dl>
+										<dt>누적금액</dt>
+										<dd class="data-num1"><strong>000,000</strong><span>만원</span></dd>
+									</dl>
+									<dl class="form">
+										<dt>누적제외금액</dt>
+										<dd>
+											<div class="text num1">
+												<input type="tel" title="누적제외금액" value="10,000" disabled>
+												<span class="util1">만원</span>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt>누적적용금액</dt>
+										<dd class="data-num1"><strong>000,000</strong><span>만원</span></dd>
+									</dl>
+									<p class="txt t1">[플랜] 질병후유 태아 5천, ~30 세 7천 한도</p>
+								</div>
+								<!-- <div class="side"><button type="button" class="btn-sub3 c2">담보삭제</button></div> -->
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit label-check1">
+									<label>
+										<input type="checkbox">
+										<span>담보명</span>
+									</label>
+								</div>
+								<div class="info-con2">
+									<dl>
+										<dt>설계번호</dt>
+										<dd>123123123123</dd>
+									</dl>
+									<dl class="form">
+										<dt>설계가입금액</dt>
+										<dd>
+											<div class="text num1">
+												<input type="tel" title="설계가입금액" value="10,000">
+												<span class="util1">만원</span>
+											</div>
+										</dd>
+									</dl>
+									<p class="txt t1">[플랜] 질병후유 태아 5천, ~30 세 7천 한도</p>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">담보삭제</button></div>
+							</li>
+							<!-- // -->
+							<li class="disabled">
+								<div class="tit label-check1">
+									<label>
+										<input type="checkbox" disabled>
+										<span>담보명</span>
+									</label>
+								</div>
+								<div class="info-con2">
+									<dl>
+										<dt>설계번호</dt>
+										<dd>123123123123</dd>
+									</dl>
+									<dl class="form">
+										<dt>설계가입금액</dt>
+										<dd>
+											<div class="text num1">
+												<input type="tel" title="설계가입금액" value="10,000" disabled>
+												<span class="util1">만원</span>
+											</div>
+										</dd>
+									</dl>
+									<p class="txt t1">[플랜] 질병후유 태아 5천, ~30 세 7천 한도</p>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">담보삭제</button></div>
+							</li>
+							<!-- // -->
+							<li class="disabled">
+								<div class="tit label-check1">
+									<label>
+										<input type="checkbox" disabled>
+										<span>담보명</span>
+									</label>
+								</div>
+								<div class="info-con2">
+									<dl>
+										<dt>설계번호</dt>
+										<dd>123123123123</dd>
+									</dl>
+									<dl class="form">
+										<dt>설계가입금액</dt>
+										<dd>
+											<div class="text num1">
+												<input type="tel" title="설계가입금액" value="10,000" disabled>
+												<span class="util1">만원</span>
+											</div>
+										</dd>
+									</dl>
+									<p class="txt t1">[플랜] 질병후유 태아 5천, ~30 세 7천 한도</p>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제취소</button></div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit label-check1">
+									<label>
+										<input type="checkbox">
+										<span>담보명</span>
+									</label>
+								</div>
+								<div class="info-con2">
+									<dl>
+										<dt>설계번호</dt>
+										<dd>123123123123</dd>
+									</dl>
+									<dl class="form">
+										<dt>설계가입금액</dt>
+										<dd>
+											<div class="text num1">
+												<input type="tel" title="설계가입금액" value="10,000" disabled>
+												<span class="util1">만원</span>
+											</div>
+										</dd>
+									</dl>
+									<p class="txt t1">[플랜] 질병후유 태아 5천, ~30 세 7천 한도</p>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제취소</button></div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</section>
+
+				<!-- [담보유형2] -->
+				<section id="uiTabSection2" data-scroll-con="2">
+					<h3 class="tit-sub1">상해사망후유</h3>
+					<div class="info-data2">
+						<ul>
+							<li>
+								<div class="tit label-check1">
+									<label>
+										<input type="checkbox" checked>
+										<span>상해사망(20/25/30년)</span>
+									</label>
+								</div>
+								<div class="info-con2">
+									<dl>
+										<dt>설계번호</dt>
+										<dd class="data-num1"><strong>PA1234556787823</strong></dd>
+									</dl>
+									<dl class="form">
+										<dt>설계가입금액</dt>
+										<dd>
+											<div class="text num1">
+												<input type="tel" title="누적제외금액" value="10,000">
+												<span class="util1">만원</span>
+											</div>
+										</dd>
+									</dl>
+									<!-- <dl class="form">
+										<dt>누적제외금액</dt>
+										<dd>
+											<div class="text num1">
+												<input type="tel" title="누적제외금액" value="10,000" disabled>
+												<span class="util1">만원</span>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt>누적적용금액</dt>
+										<dd class="data-num1"><strong>2,000</strong><span>만원</span></dd>
+									</dl> -->
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit label-check1">
+									<label>
+										<input type="checkbox" disabled>
+										<span>상해사망(20/25/30년)</span>
+									</label>
+								</div>
+								<div class="info-con2">
+									<dl>
+										<dt>설계번호</dt>
+										<dd class="data-num1"><strong>PA1234556787823</strong></dd>
+									</dl>
+									<dl class="form">
+										<dt>설계가입금액</dt>
+										<dd>
+											<div class="text num1">
+												<input type="tel" title="누적제외금액" value="10,000" disabled>
+												<span class="util1">만원</span>
+											</div>
+										</dd>
+									</dl>
+									<!-- <dl class="form">
+										<dt>누적제외금액</dt>
+										<dd>
+											<div class="text num1">
+												<input type="tel" title="누적제외금액" value="10,000" disabled>
+												<span class="util1">만원</span>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt>누적적용금액</dt>
+										<dd class="data-num1"><strong>2,000</strong><span>만원</span></dd>
+									</dl> -->
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+					<!-- # 설계중인 담보확인 # -->
+					<!-- <div class="area-toggle3" data-autoset="toggle">
+						<dl>
+							<dt class="tit">
+								<strong>설계중인 담보확인</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">설계중인 담보 상세보기</button>
+							</dt>
+							<dd data-toggle="content" class="info-data2 line">
+								<ul>
+									<li>
+										<strong>교통상해후유장해(3~100%)</strong>
+										<div class="info-con1 t2">
+											<dl>
+												<dt>증권/설계번호</dt>
+												<dd>LA220406676213-1</dd>
+											</dl>
+											<dl>
+												<dt>누적금액</dt>
+												<dd class="data-num1"><strong>9,000</strong><span>만원</span></dd>
+											</dl>
+											<dl>
+												<dt>누적적용금액</dt>
+												<dd class="data-num1"><strong>9,900</strong><span>만원</span></dd>
+											</dl>
+											<dl>
+												<dt>상품명</dt>
+												<dd>Let:smile 종합건강보험</dd>
+											</dl>
+											<dl>
+												<dt>보험시기</dt>
+												<dd>2014.12.17~2089.12.17</dd>
+											</dl>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div> -->
+					<!-- # // # -->
+				</section>
+
+				<!-- [담보유형3] -->
+				<section id="uiTabSection3" data-scroll-con="3">
+					<h3 class="tit-sub1">암진단비</h3>
+					<div class="info-data2">
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="tit label-check1">
+									<label>
+										<input type="checkbox" checked>
+										<span>암진단비(100세만기)</span>
+									</label>
+								</div>
+								<div class="info-con2">
+									<dl>
+										<dt>증권번호</dt>
+										<dd><button type="button" class="icon-com1 ic3 right">207C20140026428</button></dd>
+									</dl>
+									<dl>
+										<dt>누적금액</dt>
+										<dd class="data-num1"><strong>1억 2,000</strong><span>만원</span></dd>
+									</dl>
+									<dl class="form">
+										<dt>누적제외금액</dt>
+										<dd>
+											<div class="text num1">
+												<input type="text" title="누적제외금액" value="1억원">
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt>누적적용금액</dt>
+										<dd class="data-num1"><strong>2,000</strong><span>만원</span></dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+					<!-- # 설계중인 담보확인 # -->
+					<!-- <div class="area-toggle3" data-autoset="toggle">
+						<dl>
+							<dt class="tit">
+								<strong>설계중인 담보확인</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">설계중인 담보 상세보기</button>
+							</dt>
+							<dd data-toggle="content" class="info-data2 line">
+								<ul>
+									<li>
+										<strong>교통상해후유장해(3~100%)</strong>
+										<div class="info-con1 t2">
+											<dl>
+												<dt>증권/설계번호</dt>
+												<dd>LA220406676213-1</dd>
+											</dl>
+											<dl>
+												<dt>누적금액</dt>
+												<dd class="data-num1"><strong>9,000</strong><span>만원</span></dd>
+											</dl>
+											<dl>
+												<dt>누적적용금액</dt>
+												<dd class="data-num1"><strong>9,900</strong><span>만원</span></dd>
+											</dl>
+											<dl>
+												<dt>상품명</dt>
+												<dd>Let:smile 종합건강보험</dd>
+											</dl>
+											<dl>
+												<dt>보험시기</dt>
+												<dd>2014.12.17~2089.12.17</dd>
+											</dl>
+										</div>
+									</li>
+									<li>
+										<strong>교통상해후유장해(3~100%)</strong>
+										<div class="info-con1 t2">
+											<dl>
+												<dt>증권/설계번호</dt>
+												<dd>LA220406676213-1</dd>
+											</dl>
+											<dl>
+												<dt>누적금액</dt>
+												<dd class="data-num1"><strong>9,000</strong><span>만원</span></dd>
+											</dl>
+											<dl>
+												<dt>누적적용금액</dt>
+												<dd class="data-num1"><strong>9,900</strong><span>만원</span></dd>
+											</dl>
+											<dl>
+												<dt>상품명</dt>
+												<dd>Let:smile 종합건강보험</dd>
+											</dl>
+											<dl>
+												<dt>보험시기</dt>
+												<dd>2014.12.17~2089.12.17</dd>
+											</dl>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div> -->
+					<!-- # // # -->
+				</section>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

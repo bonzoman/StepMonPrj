@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 만보기 이용동의 | 모아보기</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>만보기 이용동의</h1>
+			<button type="button" data-btn="pop-close">만보기 이용동의 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] -->
+			<!-- ######################### -->
+			<h2 class="tit-section2 t1">동의내용을 확인하시고<br>진행해 주세요.</h2>
+
+			<!-- ######################### -->
+			<!-- [약관영역] -->
+			<!-- ######################### -->
+			<div class="form-agree1">
+				<div class="label-check1">
+					<label>
+						<input type="checkbox">
+						<span><em class="icon-required">필수</em> 전체동의</span>
+					</label>
+				</div>
+				<!-- # 약관항목 # -->
+				<fieldset>
+					<div class="label-check2">
+						<label>
+							<input type="checkbox" title="서비스 이용 안내">
+							<span><em class="icon-required">필수</em> 서비스 이용 안내</span>
+							<a href="javascript:void(0);" class="btn">서비스 이용 안내 상세보기</a>
+						</label>
+						<label>
+							<input type="checkbox" title="개인정보 수집·이용 동의">
+							<span><em class="icon-required">필수</em> 개인정보 수집 · 이용 동의</span>
+							<a href="javascript:void(0);" class="btn">개인정보 수집·이용 동의 상세보기</a>
+						</label>
+					</div>
+				</fieldset>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">동의</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

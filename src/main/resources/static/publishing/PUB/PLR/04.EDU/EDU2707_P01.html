@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 매니저 코칭 의뢰| 리스트 | 매니저 코칭</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>매니저 코칭 의뢰</h1>
+			<button type="button" data-btn="pop-close">매니저 코칭 의뢰 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단정보] -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="hide">담당 매니저</h2>
+				<div class="info-data3 t3">
+					<dl>
+						<dt class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user2.png" alt=""></span>
+							<span><strong>하다미</strong><span>154674</span></span>
+						</dt>
+						<dd class="data-word3">
+							<span>담당AM</span>
+							<span>강남사업단</span>
+						</dd>
+						<dd class="area-btn1"><button type="button" class="btn-com1 ic7">010-2345-7890</button></dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [코칭상세] -->
+			<!-- ######################### -->
+			<div class="wrap-section">
+				<h3 class="hide">코칭상세</h3>
+				<div class="info-con1">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA1234523</dd>
+					</dl>
+					<dl>
+						<dt>계약자</dt>
+						<dd class="data-info2">
+							<strong data-masking="true">하*미</strong>
+							<span>
+								<span>1990.01.01</span>
+								<span>여</span>
+							</span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>피보험자</dt>
+						<dd class="data-info2">
+							<strong data-masking="true">하*미</strong>
+							<span>
+								<span>1990.01.01</span>
+								<span>여</span>
+							</span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>상품명</dt>
+						<dd>let smile 종합건강보험(더끌림플러스) (2201)</dd>
+					</dl>
+					<dl>
+						<dt>보험료</dt>
+						<dd class="data-num1"><strong></strong><span>-</span></dd>
+					</dl>
+					<dl>
+						<dt>코칭의뢰일</dt>
+						<dd>2022.05.19 09:10</dd>
+					</dl>
+					<!-- // -->
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [의뢰내용] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1 line">
+				<legend>의뢰내용 필수 입력</legend>
+
+				<dl class="form">
+					<dt>의뢰내용</dt>
+					<dd>
+						<!-- [CASE] 기본 -->
+						<div class="textarea">
+							<textarea cols="50" rows="3" title="의뢰내용 작성" placeholder="의뢰 내용을 상세히 기술해주시면, 담당 매니저가 더 정확한 코칭을 할 수 있어요."></textarea>
+							<span class="util2"><strong>0</strong>/200자</span>
+						</div>
+						<!-- [CASE] 미입력시 -->
+						<div class="textarea">
+							<textarea cols="50" rows="3" title="의뢰내용 작성" placeholder="의뢰 내용을 상세히 기술해주시면, 담당 매니저가 더 정확한 코칭을 할 수 있어요." aria-invalid="true"></textarea><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+							<span class="util2"><strong>0</strong>/200자</span>
+						</div>
+						<div class="validation">의뢰내용을 입력해주세요.</div>
+						<!-- // -->
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">완료</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>상세 | 가입설계조회 | 일반보험</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+    <!-- -------------------------------------- -->
+    <!-- # [HEADER] 페이지 타이틀 -->
+    <!-- -------------------------------------- -->
+    <header class="header">
+        <a href="#none" class="icon-prev">이전페이지</a>
+        <h1>설계수정요청</h1>
+        <a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+    </header>
+
+    <!-- -------------------------------------- -->
+    <!-- # [CONTAINER] 컨텐츠 -->
+    <!-- -------------------------------------- -->
+    <div class="container">
+        <!-- ######################### -->
+        <!-- [계약정보] -->
+        <!-- ######################### -->
+        <section class="info-summary2">
+            <h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+            <div class="info">
+                <dl>
+                    <dt class="hide">증권번호</dt>
+                    <dd>LA123456789</dd>
+                </dl>
+            </div>
+            <!-- # 계약자 정보 # -->
+            <div class="area1">
+                <dl class="info2">
+                    <dt>계약자</dt>
+                    <dd class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+                        <strong>하다미</strong>
+                        <span>
+                            <span>0000.00.00</span>
+                            <span>남</span>
+                        </span>
+                    </dd>
+                </dl>
+                <dl class="info2">
+                    <dt>피보험자</dt>
+                    <dd class="data-info2" data-value="102702">
+                        <strong>이자녀</strong>
+                        <span>
+                            <span>0000.00.00</span>
+                            <span>여</span>
+                        </span>
+                    </dd>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ######################### -->
+        <!-- [요청내역] -->
+        <!-- ######################### -->
+        <fieldset class="form-wrap1">
+            <legend>설계수정요청</legend>
+
+            <!-- # 요청업무 # -->
+            <dl class="form">
+                <dt>요청업무</dt>
+                <dd>
+                    <div class="select-wrap" data-autoset="select" data-callback="uiSampleFunction">
+                        <button type="button" class="selectbox disabled" data-toggle="selectbtn" aria-expanded="false" disabled> <!-- [D] 열람완료, 진행중, 처리완료 경우 : disabled 추가 -->
+                            <span data-select="title">요청업무 선택</span>
+                            <span data-select="text" data-value="1">설계수정</span>
+                        </button>
+                        <div class="list">
+                            <div data-label="요청업무 선택">
+                                <div class="option">
+                                    <label><input type="radio" name="selectOpeion1" value="1"><span>설계수정</span></label>
+                                </div>
+                                <button type="button" data-toggle="closebtn">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </dd>
+                <dd><button type="button" class="icon-com2 ic1 right">잠깐! 확인해 보셨나요?</button></dd> <!-- 2022-11-24 텍스트 변경 -->
+            </dl>
+
+            <!-- # 요청내용 # -->
+            <dl class="form">
+                <dt>요청내용</dt>
+                <dd>
+                    <div class="textarea"> <!-- 비활성화 클래스 disabled -->
+                        <textarea cols="50" rows="3" title="설계수정 요청내용"
+                        placeholder="업무요청 시 사전 업무처리 및 확인사항이 있습니다. 페이지 아래를 확인해주세요. &#10;&#10;요청내역에는 개인정보 입력을 삼가해주세요."></textarea> <!-- 비활성화 disabled -->
+                        <span class="util2"><strong>0</strong>/4,000자</span>
+                    </div>
+                </dd>
+            </dl>
+
+            <!-- # 파일첨부 # -->
+            <dl class="form">
+                <dt>파일첨부 <a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt>
+                <dd class="data-file1">
+                    <ul>
+                        <li>
+                            <span>담보확인 첨부화면내용 캡쳐.png</span>
+                            <span class="sub">46.3KB</span>
+                            <button type="button" class="icon-com1 ic6">삭제</button>
+                        </li>
+                        <li>
+                            <span>건물사진1.jpg</span>
+                            <span class="sub">56KB</span>
+                            <button type="button" class="icon-com1 ic6">삭제</button>
+                        </li>
+                    </ul>
+                </dd>
+                <dd class="area-btn1">
+                    <button class="btn-com1 ic3">파일첨부</button>
+                </dd>
+            </dl>
+        </fieldset>
+
+        <div class="wrap-section3">
+            <h3 class="tit-sub2">요청결과</h3>
+            <p class="mes-t3 pre">기간계에서 입력한 결과 내용이 보입니다.
+                마음껏 글을 입력해주세요
+                반갑습니다 
+                안녕하세요    반갑습니다
+            </p>
+        </div>
+
+        <!-- ######################### -->
+        <!-- [하단영역] 액션버튼 -->
+        <!-- ######################### -->
+        <div class="area-action" data-sticky="bottom">
+            <button type="button" class="btn-action c1">요청</button>
+        </div>
+        <!-- ######################### -->
+    </div>
+    <!-- -------------------------------------- -->
+</main>
+
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 파일 첨부 안내 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">파일 첨부 안내사항</dt>
+		<dd>
+			<ul class="txt-bul3">
+				<li>첨부파일의 사이즈는 <strong>000px X 000px</strong> 사이즈를 준수해주세요.</li>
+				<li>첨부파일은 <strong>png, jpg, jpeg, bmp, gif</strong> 파일만 등록이 가능합니다.</li>
+				<li>첨부파일 용량은 <strong>5M</strong>를 넘을 수 없습니다.</li>
+				<li>첨부파일을 등록하면, 퀴즈 내용 하단에 자동으로 노출됩니다.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">파일 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+<!-- ##################################### -->
+</body>
+</html>

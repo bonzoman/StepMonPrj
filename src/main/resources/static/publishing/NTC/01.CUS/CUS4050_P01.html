@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 제공에 관한 사항 | 약관상세 | 후보자등록 | 설계사모집 마케팅웹</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>제공에 관한 사항</h1>
+			<button type="button" data-btn="pop-close">제공에 관한 사항 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [약관영역] -->
+			<!-- ######################### -->
+			<div class="area-terms">
+				<dl>
+					<dt>[국내제공]</dt>
+					<dd>
+						<dl>
+							<dt>1. 제공받는 자</dt>
+							<dd>
+								국내 재보험사, 종합신용정보집중기관(신용정보원), 소방방재청, 행정안전부, 한국승강기안전공단, 보험요율산출기관(보험개발원), 국토교통부<br>
+								※ 보험요율산출기관, 국토교통부는 자동차보험에 한함
+							</dd>
+						</dl>
+						<dl class="mark">
+							<dt>2. 제공받는 자의 이용목적</dt>
+							<dd><i>가.</i>국내 재보험사: 보험계약 인수여부 판단</dd>
+							<dd><i>나.</i>종합신용정보집중기관(신용정보원) 및 보험요율산출기관(보험개발원): 개인(신용)정보 조회</dd> <!-- 2022-12-26 텍스트 변경 -->
+							<dd><i>다.</i>소방방재청, 행정안전부, 한국승강기안전공단: 의무보험 가입여부 확인</dd>
+							<dd><i>※</i>보험요율산출기관 기재 부분은 자동차보험에 한함</dd>
+						</dl>
+						<dl>
+							<dt class="inline">3. 보유 및 이용기간:</dt> <!-- 2022-12-26 텍스트 변경 -->
+							<dd class="inline">동의일로부터 1년까지</dd>
+						</dl>
+						<dl class="mark1">
+							<dt>4. 제공 항목</dt>
+							<dd>고유식별정보: 주민등록번호, 외국인등록번호, 여권번호, 운전면허번호</dd>
+							<dd>민감정보: 피보험자의 질병&middot;상해에 관한 정보<br>(진료기록, 상병명, 기왕증 등)</dd> <!-- 2022-12-26 텍스트 변경 -->
+							<dd>개인(신용)정보 <!-- 2022-12-26 변경 -->
+								<ul class="bul1">
+									<li>일반개인정보 : 성명, 성별, 연령, 국내거소신고번호</li>
+									<li>보험계약정보(상품종류, 기간, 보험가입금액 등), 보험금정보(보험금 지급사유, 지급금액 등), 계약 전 알릴 의무사항</li>
+								</ul>
+							</dd>
+						</dl>
+					</dd>
+				</dl>
+				<dl class="line">
+					<dt>[국외제공]</dt>
+					<dd>
+						<dl>
+							<dt>1. 제공받는 자</dt>
+							<dd>국내 재보험사</dd>
+						</dl>
+						<dl>
+							<dt>2. 제공받는 자의 이용목적</dt>
+							<dd>보험계약 인수여부 판단</dd>
+						</dl>
+						<dl>
+							<dt class="inline">3. 보유 및 이용기간:</dt> <!-- 2022-12-26 변경 -->
+							<dd class="inline">동의일로부터 1년까지</dd>
+						</dl>
+						<dl class="mark1">
+							<dt>4. 제공 항목</dt>
+							<dd>고유식별정보: 외국인등록번호, 여권번호</dd> <!-- 2022-12-26 변경 -->
+							<dd>민감정보: 피보험자의 질병&middot;상해에 관한 정보<br>(진료기록, 상병명, 기왕증 등)</dd> <!-- 2022-12-26 변경 -->
+							<dd>개인(신용)정보 <!-- 2022-12-26 변경 -->
+								<ul class="bul1">
+									<li>일반개인정보: 성명, 주소, 생년월일, 이메일, 성별, 국적, 직업, 국내거소신고번호</li>  <!-- 2022-12-26 변경 -->
+									<li>신용거래정보: 보험계약정보(상품종류, 기간, 보험가입금액 등), 보험금정보(보험금 지급사유, 지급금액 등), 계약 전 알릴 의무사항 </li> <!-- 2022-12-26 변경 -->
+								</ul>
+								<ul class="bul2">
+									<li>외국 재보험사의 국내 지점이 보험계약 인수여부 판단 지원 등 업무를 위탁하기 위한 경우 별도의 동의 없이 외국 소재 본점에 귀하의 정보를 이전할 수 있습니다.</li> <!-- 2022-12-26 변경 -->
+									<li>업무위탁을 목적으로 개인(신용)정보 처리하는 경우 별도의 동의 없이 업무 수탁자에게 귀하의 정보를 제공할 수 있습니다. (홈페이지 [<a href="http://www.lotteins.co.kr" target="_blank" title="롯데손해보험모바일웹이동">www.lotteins.co.kr</a>]에서 확인 가능)</li>
+								</ul>
+							</dd>
+						</dl>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

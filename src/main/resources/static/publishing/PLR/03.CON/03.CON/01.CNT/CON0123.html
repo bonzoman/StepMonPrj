@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>연령/운전변경 | 계약변경 | 자동차 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>연령/운전변경</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<div class="form-wrap1 line2">
+			<!-- ######################### -->
+			<!-- [기본정보] -->
+			<!-- ######################### -->
+			<fieldset>
+				<legend class="tit">기본정보</legend>
+				<div class="info-con1">
+					<dl>
+						<dt>증권번호</dt>
+						<dd>CA12345678901</dd>
+					</dl>
+					<dl>
+						<dt>보험기간</dt>
+						<dd>2021.05.20~2022.05.20</dd>
+					</dl>
+					<dl>
+						<dt>차량번호</dt>
+						<dd><span data-masking="true">****2134</span></dd>
+					</dl>
+					<dl>
+						<dt>운전/연령특약</dt>
+						<dd>부부한정/48세이상</dd>
+					</dl>
+				</div>
+
+				<!-- ### 변경기준일 ### -->
+				<dl class="form line">
+					<dt>변경기준일 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="input-date1">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>날짜 선택</button>
+								<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.03.09" readonly>
+							</span>
+						</div>
+					</dd>
+				</dl>
+				<!-- ### // ### -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [운전자 한정 &amp; 운전자범위 선택] -->
+			<!-- ######################### -->
+			<fieldset>
+				<legend class="tit">운전자 한정 &amp; 운전자범위를<br>선택해주세요.</legend>
+
+				<!-- [CASE1] 개인 자동차 보험 -->
+				<div class="label-btn2" data-scroll="form">
+					<label><input type="radio" name="uiFormRadio" checked><span>소유자 1인</span></label>
+					<label><input type="radio" name="uiFormRadio"><span>부부한정</span></label>
+					<label><input type="radio" name="uiFormRadio"><span>가족(직계가족)</span></label>
+					<label><input type="radio" name="uiFormRadio"><span>가족(형제자매포함)</span></label>
+					<label><input type="radio" name="uiFormRadio"><span>부부+자녀</span></label>
+					<label><input type="radio" name="uiFormRadio"><span>부부+부모</span></label>
+					<label><input type="radio" name="uiFormRadio"><span>지정1인추가</span></label>
+					<label><input type="radio" name="uiFormRadio"><span>임직원한정</span></label>
+					<label><input type="radio" name="uiFormRadio"><span>고용운전자</span></label>
+					<label><input type="radio" name="uiFormRadio"><span>누구나</span></label>
+				</div>
+				<div class="label-img2 img-set1">
+					<label class="img1" data-value="103202"><input type="checkbox" name="formLabelCheck" checked disabled><span>자동차 소유자</span></label>
+					<label class="img2" data-value="100001"><input type="checkbox" name="formLabelCheck"><span>배우자(법정)</span></label>
+					<label class="img3"><input type="checkbox" name="formLabelCheck"><span>나의 부모</span></label>
+					<label class="img4"><input type="checkbox" name="formLabelCheck"><span>배우자의 부모</span></label>
+					<label class="img5"><input type="checkbox" name="formLabelCheck"><span>자녀 및 자녀의 배우자</span></label>
+					<label class="img6"><input type="checkbox" name="formLabelCheck"><span>나의형제자매</span></label>
+					<label class="img10"><input type="checkbox" name="formLabelCheck"><span>타인(지정1인)</span></label>
+					<label class="img8"><input type="checkbox" name="formLabelCheck"><span>임직원 지정</span></label>
+					<label class="img9"><input type="checkbox" name="formLabelCheck"><span>고용운전자</span></label>
+				</div>
+
+				<!-- [CASE2] 업무용 자동차 보험 -->
+				<div class="label-btn2" data-scroll="form">
+					<label><input type="radio" name="uiFormRadio1" checked><span>소유자 1인</span></label>
+					<label><input type="radio" name="uiFormRadio1"><span>부부한정</span></label>
+					<label><input type="radio" name="uiFormRadio1"><span>가족(직계가족)</span></label>
+					<label><input type="radio" name="uiFormRadio1"><span>부부+자녀</span></label>
+					<label><input type="radio" name="uiFormRadio1"><span>부부+부모</span></label>
+					<label><input type="radio" name="uiFormRadio1"><span>누구나</span></label>
+				</div>
+				<div class="label-img2 img-set1">
+					<label class="img1"><input type="checkbox" name="formLabelCheck" checked disabled><span>자동차 소유자</span></label>
+					<label class="img2"><input type="checkbox" name="formLabelCheck"><span>배우자(법정)</span></label>
+					<label class="img3"><input type="checkbox" name="formLabelCheck"><span>나의 부모</span></label>
+					<label class="img4"><input type="checkbox" name="formLabelCheck"><span>배우자의 부모</span></label>
+					<label class="img5"><input type="checkbox" name="formLabelCheck"><span>자녀 및 자녀의 배우자</span></label>
+					<label class="img7"><input type="checkbox" name="formLabelCheck"><span>타인(지정1인)</span></label>
+					<!-- <label class="img10"><input type="checkbox" name="formLabelCheck"><span>타인(누구나)</span></label> -->
+				</div>
+
+				<!-- [CASE3] 업무용-법인 자동차 보험 : 승용차 -->
+				<div class="label-btn2" data-scroll="form">
+					<label><input type="radio" name="uiFormRadio2" checked><span>누구나</span></label>
+				</div>
+				<div class="label-img2 img-set1">
+					<label class="img1"><input type="checkbox" name="formLabelCheck" checked disabled><span>자동차 소유자</span></label>
+					<label class="img7"><input type="checkbox" name="formLabelCheck" checked disabled><span>타인(누구나)</span></label>
+				</div>
+
+				<!-- [CASE4] 업무용-법인 자동차 보험 : 승용차외 -->
+				<div class="label-btn2" data-scroll="form">
+					<label><input type="radio" name="uiFormRadio3" checked><span>임직원한정</span></label>
+					<label><input type="radio" name="uiFormRadio3"><span>누구나</span></label>
+				</div>
+				<div class="label-img2 img-set1">
+					<label class="img1"><input type="checkbox" name="formLabelCheck" checked disabled><span>자동차 소유자</span></label>
+					<label class="img7"><input type="checkbox" name="formLabelCheck"><span>타인(누구나)</span></label>
+					<label class="img8"><input type="checkbox" name="formLabelCheck" checked><span>임직원 지정</span></label>
+				</div>
+
+				<!-- [CASE3] 업무용 자동차 보험 -->
+				<div class="label-btn2">
+					<label><input type="radio" name="uiFormRadio4" checked><span>소유자 1인</span></label>
+					<label><input type="radio" name="uiFormRadio4" ><span>누구나</span></label>
+				</div>
+				<div class="label-img2 img-set1">
+					<label class="img1"><input type="checkbox" name="formLabelCheck" checked disabled><span>자동차 소유자</span></label>
+					<label class="img7"><input type="checkbox" name="formLabelCheck"><span>타인(누구나)</span></label>
+				</div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [배우자 정보] -->
+			<!-- ######################### -->
+			<fieldset>
+				<legend class="tit">배우자 정보</legend>
+
+				<dl class="form">
+					<dt>관계 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">관계 선택</span>
+								<span data-select="text" data-value="1">배우자</span>
+							</button>
+							<div class="list">
+								<div data-label="관계 선택">
+									<div class="option">
+										<label><input type="radio" name="dtRelcd1" value="1"><span>배우자</span></label>
+										<label><input type="radio" name="dtRelcd1" value="2"><span>option2</span></label>
+										<label><input type="radio" name="dtRelcd1" value="3"><span>option3</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>운전자이름 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<input type="text" class="text" placeholder="이름을 입력해주세요." value="하다미">
+						<div class="validation">운전자명을 입력해주세요.</div>
+
+						<!-- [오류시] -->
+						<input type="text" class="text" placeholder="이름을 입력해주세요." value="" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<div class="validation">운전자명을 입력해주세요.</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>신분증상 생년월일 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="input-wrap1">
+							<input type="text" class="text" title="신분증상 생년월일" placeholder="YYYY.MM.DD" value="2022.03.09">
+							<data class="text disabled w1" value="1">만 34세</data>
+						</div>
+						<div class="validation">신분증상 생년월일을 입력해주세요.</div>
+
+						<!-- [오류시] -->
+						<div class="input-wrap1">
+							<input type="text" class="text" title="신분증상 생년월일" placeholder="YYYY.MM.DD" value="2022.03.09" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+							<data class="text disabled w1" value="1">만 34세</data>
+						</div>
+						<div class="validation">신분증상 생년월일을 입력해주세요.</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>연령특약 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">연령특약 선택</span>
+								<span data-select="text" data-value="null">전연령</span>
+							</button>
+							<div class="list">
+								<div data-label="연령특약 선택">
+									<div class="option">
+										<label><input type="radio" name="dtRelcd2" value=""><span>전연령</span></label>
+										<label><input type="radio" name="dtRelcd2" value="02"><span>만21세이상</span></label>
+										<label><input type="radio" name="dtRelcd2" value="03"><span>만22세이상</span></label>
+										<label><input type="radio" name="dtRelcd2" value="04"><span>만24세이상</span></label>
+										<label><input type="radio" name="dtRelcd2" value="05"><span>만26세이상</span></label>
+										<label><input type="radio" name="dtRelcd2" value="06"><span>만28세이상</span></label>
+										<label><input type="radio" name="dtRelcd2" value="07"><span>만30세이상</span></label>
+										<label><input type="radio" name="dtRelcd2" value="08"><span>만35세이상</span></label>
+										<label><input type="radio" name="dtRelcd2" value="09"><span>만43세이상</span></label>
+										<label><input type="radio" name="dtRelcd2" value="10"><span>만48세이상</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</fieldset>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">보험료 계산</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

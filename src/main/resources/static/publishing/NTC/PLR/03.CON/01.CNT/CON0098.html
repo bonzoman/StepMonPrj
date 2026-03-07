@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[T] 특약정보 | 계약상세 | 자동차 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-21]	① 운전자 정보 변경
+	*					② 요율사항 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>계약상세조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [검색영역] 기준일자 -->
+		<!-- ######################### -->
+		<fieldset class="form-search1">
+			<legend>조회검색</legend>
+			<dl class="form">
+				<dt>기준일자</dt>
+				<dd>
+					<div class="input-date1">
+						<span>
+							<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>날짜 선택</button>
+							<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.05.20" readonly>
+						</span>
+					</div>
+				</dd>
+			</dl>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li><a href="javascript:void(0);">계약일반</a></li>
+				<li><a href="javascript:void(0);">보장내역</a></li>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">특약정보</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭 컨텐츠] 특약정보 -->
+		<!-- ######################### -->
+		<section class="wrap-section2" data-scroll-bg="1">
+			<h2 class="hide">특약정보</h2>
+
+			<!-- ### 특별약관 ### -->
+			<h3 class="tit-sub1">특별약관</h3>
+			<div class="info-con1">
+				<dl>
+					<dt>연령특약</dt>
+					<dd>만21세이상/연령자동 - 유</dd>
+				</dl>
+				<dl>
+					<dt>운전한정</dt>
+					<dd>누구나</dd>
+				</dl>
+			</div>
+
+			<!-- ### 운전자정보 ### -->
+			<div class="tit-sub2">
+				<h4>운전자정보</h4>
+				<div class="side"><a href="javascript:void(0);" class="btn-sub3 c2">운전자정보 상세</a></div>
+			</div>
+			<div class="info-con1">
+				<dl>
+					<dt>최저</dt>
+					<dd>본인/하다미</dd>
+				</dl>
+				<dl>
+					<dt>지정</dt>
+					<dd>대상없음</dd> <!-- 2022-11-21 텍스트 변경 -->
+				</dl>
+				<dl>
+					<dt>가입경력인정</dt>
+					<dd>
+						<div>형제/김이데</div>
+						<div>형제/김이데</div>
+					</dd>
+				</dl>
+			</div>
+			<!-- ### // ### -->
+		</section>
+
+		<div class="area-toggle1" data-autoset="toggle">
+			<!-- # [기타특약] # -->
+			<section>
+				<header class="tit">
+					<h3>기타특약</h3>
+					<button type="button" data-toggle="btn" aria-expanded="false">기타특약 상세보기</button>
+				</header>
+				<div data-toggle="content">
+					<!-- // -->
+					<div class="area">
+						<h4 class="tit-sub2">신법률비용지원서비스 특약(형사합의지원금)</h4>
+						<div class="info-con1">
+							<dl>
+								<dt>특약세부구분</dt>
+								<dd>기본형</dd>
+							</dl>
+							<!-- 2022-11-21 삭제 -->
+							<!-- <dl>
+								<dt>요율</dt>
+								<dd class="data-num1"><strong>00.00</strong><span>%</span></dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl> -->
+							<!-- //2022-11-21 삭제 -->
+						</div>
+					</div>
+					<!-- // -->
+					<div class="area">
+						<h4 class="tit-sub2">후할인주행거리 특약</h4>
+						<div class="info-con1">
+							<dl>
+								<dt>특약세부구분</dt>
+								<dd>기본형</dd>
+							</dl>
+							<!-- 2022-11-21 삭제 -->
+							<!-- <dl>
+								<dt>요율</dt>
+								<dd class="data-num1"><strong>00.00</strong><span>%</span></dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl> -->
+							<!-- //2022-11-21 삭제 -->
+						</div>
+					</div>
+					<!-- // -->
+					<div class="area">
+						<h4 class="tit-sub2">차량단독사고보장 특약</h4>
+						<div class="info-con1">
+							<dl>
+								<dt>특약세부구분</dt>
+								<dd>기본형</dd>
+							</dl>
+							<!-- 2022-11-21 삭제 -->
+							<!-- <dl>
+								<dt>요율</dt>
+								<dd class="data-num1"><strong>00.00</strong><span>%</span></dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl> -->
+							<!-- //2022-11-21 삭제 -->
+						</div>
+					</div>
+					<!-- // -->
+				</div>
+			</section>
+
+			<!-- # [특별요율] # -->
+			<section>
+				<header class="tit">
+					<h3>특별요율</h3>
+					<button type="button" data-toggle="btn" aria-expanded="false">특별요율 상세보기</button>
+				</header>
+				<div data-toggle="content">
+					<!-- // -->
+					<div class="area">
+						<h4 class="tit-sub2">@특별요율명@</h4>
+						<div class="info-con1">
+							<dl>
+								<dt>특별요율</dt>
+								<dd class="data-num1"><strong>00.00</strong><span>%</span></dd>
+							</dl>
+							<dl>
+								<dt>상태</dt>
+								<dd>가입</dd>
+							</dl>
+						</div>
+					</div>
+					<!-- // -->
+					<div class="area">
+						<h4 class="tit-sub2">에어백</h4>
+						<div class="info-con1">
+							<dl>
+								<dt>특별요율</dt>
+								<dd class="data-num1"><strong>72.40</strong><span>%</span></dd>
+							</dl>
+							<dl>
+								<dt>상태</dt>
+								<dd>가입</dd>
+							</dl>
+						</div>
+					</div>
+					<!-- // -->
+				</div>
+			</section>
+
+			<!-- # [요율사항] # -->
+			<section>
+				<header class="tit">
+					<h3>요율사항</h3>
+					<button type="button" data-toggle="btn" aria-expanded="false">요율사항 상세보기</button>
+				</header>
+				<div data-toggle="content" class="info-con1">
+					<dl>
+						<dt>물적할증기준</dt>
+						<dd>2백만원</dd>
+					</dl>
+					<dl>
+						<dt>가입경력</dt>
+						<dd>8년이상</dd>
+					</dl>
+					<dl>
+						<dt>차량경력</dt>
+						<dd>3년미만 / 2대이상</dd>
+					</dl>
+					<dl>
+						<dt>할인할증</dt>
+						<dd>14Z(60.5%)</dd>
+					</dl>
+					<dl>
+						<dt>3년/1년사고</dt>
+						<dd>3/1(114.0%)</dd>
+					</dl>
+					<dl>
+						<dt>법규위반</dt>
+						<dd>C012(-7.1%)</dd>
+					</dl>
+				</div>
+			</section>
+			<!-- # // # -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1" data-sticky="bottom">
+			<a href="javascript:void(0);" class="btn-action ic10 simple">고객안내</a>
+			<a href="javascript:void(0);" class="btn-action c1">갱신설계</a>
+			<a href="javascript:void(0);" class="btn-action c1">계약변경</a>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 관련 컨텐츠 첨부 | 컨텐츠 발송 | 컨텐츠 리스트 | 컨텐츠랩</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-01]	① 미리보기 버튼 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>관련 컨텐츠 첨부</h1>
+			<button type="button" data-btn="pop-close">관련 컨텐츠 첨부 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [검색영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-search1" data-sticky="top">
+				<legend>컨텐츠 검색</legend>
+				<!-- [검색어입력] -->
+				<div class="text">
+					<input type="search" title="검색" value="뇌혈관질환" placeholder="검색어를 입력하세요.">
+					<button type="button" class="icon-com1 ic2">검색</button>
+				</div>
+
+				<!-- # [D] 선택된 결과 노출 # : 하단 스크립트 샘플 참고
+				<p class="mes-t1"><strong>2</strong>건이 선택되었습니다.</p>
+				// -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [검색결과] 있음 -->
+			<!-- ######################### -->
+			<!-- [총 건수/정렬/필터] -->
+			<div class="area-info1">
+				<p>총 <strong>12,340건</strong></p>
+
+				<!-- [D] 검색전에만 노출 -->
+				<div class="side">
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">정렬</span>
+							<span data-select="text" data-value="selectOpeion1">최신순</span>
+						</button>
+						<div class="list">
+							<div data-label="정렬">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion0" value="selectOpeion1"><span>최신순</span></label>
+									<label><input type="radio" name="selectOpeion0" value="selectOpeion2"><span>조회순</span></label>
+									<label><input type="radio" name="selectOpeion0" value="selectOpeion3"><span>발송순</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="icon-com1 ic18 right">필터</button>
+				</div>
+
+			</div>
+
+			<!-- [목록] -->
+			<div class="info-data1">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" name="uiFormCheck">
+								<span><mark>검색어</mark> 제목</span>
+							</label>
+						</div>
+						<div class="side"><button type="button" class="btn-sub3 c2">미리보기</button></div><!-- [M 2022-09-01] 버튼추가 -->
+						<div class="data-word2">
+							<span>#해시태그</span>
+							<span>#키워드</span>
+						</div>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000,000</dd>
+							</dl>
+							<!-- [D] 활동컨텐츠의 경우만 노출 -->
+							<dl class="icon-com1 ic13">
+								<dt>발송</dt>
+								<dd>000,000</dd>
+							</dl>
+							<!-- // -->
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" name="uiFormCheck">
+								<span>좋은 보험은 보험 상품이 아니라 <mark>뇌혈관질환</mark> 보험설계사 입니다</span>
+							</label>
+						</div>
+						<div class="side"><button type="button" class="btn-sub3 c2">미리보기</button></div><!-- [M 2022-09-01] 버튼추가 -->
+						<div class="data-word2">
+							<span>#보험서비스 발송</span>
+							<span>#상품</span>
+						</div>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000,000</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" name="uiFormCheck">
+								<span><mark>뇌혈관질환</mark> 진단비 분석</span>
+							</label>
+						</div>
+						<div class="side"><button type="button" class="btn-sub3 c2">미리보기</button></div><!-- [M 2022-09-01] 버튼추가 -->
+						<div class="data-word2">
+							<span>#보험서비스 발송</span>
+							<span>#상품</span>
+						</div>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000,000</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" name="uiFormCheck">
+								<span>좋은 보험은 보험 상품이 아니라 <mark>뇌혈관질환</mark> 보험설계사 입니다</span>
+							</label>
+						</div>
+						<div class="side"><button type="button" class="btn-sub3 c2">미리보기</button></div><!-- [M 2022-09-01] 버튼추가 -->
+						<div class="data-word2">
+							<span>#보험서비스 발송</span>
+							<span>#상품</span>
+						</div>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000,000</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" name="uiFormCheck">
+								<span><mark>뇌혈관질환</mark> 진단비 분석</span>
+							</label>
+						</div>
+						<div class="side"><button type="button" class="btn-sub3 c2">미리보기</button></div><!-- [M 2022-09-01] 버튼추가 -->
+						<div class="data-word2">
+							<span>#보험서비스 발송</span>
+							<span>#상품</span>
+						</div>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000,000</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- 더보기(현재페이지/총페이지) -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(1/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [검색결과] 없음 -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p>
+					<strong>검색 결과 없습니다.</strong>
+					<span>입력하신 철자를 다시 한번<br>확인해주세요.</span>
+				</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action none" data-sticky="bottom">
+				<button type="button" class="btn-action c1">첨부</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	/* **********************************************************
+	* 샘플 : 컨텐츠 첨부 추가 (UI 동작에 참고만 해주세요)
+	* name="uiFormCheck" 는 임시이며, 변경가능
+	********************************************************** */
+	var _btn = $('.area-action');
+
+	//컨텐츠추가 : input[type="checkbox"] 클릭 이벤트
+	$(document).on('change','[name="uiFormCheck"]',function(){
+		var _el_checked = $('[name="uiFormCheck"]:checked').length;
+		if(_el_checked > 0) {
+			if($('.form-search1 .mes-t1').length == 0) {
+				$('.form-search1').append('<p class="mes-t1"><strong>'+_el_checked+'</strong>건이 선택되었습니다.</p>');
+			}else{
+				$('.form-search1 .mes-t1 > strong').text(_el_checked);
+			}
+			_btn.removeClass('none');
+		}else{
+			$('.form-search1 .mes-t1').remove();
+			_btn.addClass('none');
+		}
+	});
+//-->
+</script>
+</body>
+</html>

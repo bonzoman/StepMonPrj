@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>사업단 게시판 | 커뮤니티 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">사업단 게시판 등록</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="sub">
+				<button type="button" class="btn-action c3">목록</button>
+				<button type="button" class="btn-action del">삭제</button><!--[M : 2022-08-08 삭제 버튼 추가 - 선오픈 아니고 본 오픈시 반영]-->
+				<button type="button" class="btn-action c1">등록</button>
+			</div>
+			<div class="tbl-write1">
+				<table>
+					<colgroup>
+						<col style="width:150px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">분류<em class="imp"><span>필수</span></em></th>
+							<td>
+								<div class="form-row">
+									<!-- [M : 2022-08-23 항목 수정]-->
+									<label class="label-check">
+										<input type="radio" name="formA" checked="checked">
+										<span>공지</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="formA">
+										<span>일반</span>
+									</label>
+									<!-- // [M : 2022-08-23 항목 수정]-->
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">고정여부</th>
+							<td>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="checkbox" name="ck01" checked="checked">
+										<span>고정</span>
+									</label>
+									<input type="text" class="date" placeholder="날짜 선택">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">게시기한</th>
+							<td>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="rd01">
+										<span>선택</span>
+									</label>
+									<input type="text" class="date" placeholder="날짜 선택">
+									<label class="label-check">
+										<input type="radio" name="rd01" checked="checked">
+										<span>영구</span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">예약게시</th>
+							<td>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="checkbox" name="ck03" checked="checked">
+										<span>선택</span>
+									</label>
+									<input type="text" class="date" placeholder="날짜 선택">
+								</div>
+							</td>
+						</tr>
+						<!--[M : 2022-07-28 추가]-->
+						<tr>
+							<th scope="row">게시대상<em class="imp"><span>필수</span></em></th>
+							<td>
+								<div class="form-row">
+									<select name="" id="" class="selectbox">
+										<option value="">사업단</option>
+										<option value="">강남사업단</option>
+										<option value="">경기사업단</option>
+										<option value="">경남사업단</option>
+										<option value="">드림사업단</option>
+										<option value="">리더스사업단</option>
+										<option value="">미라클사업단</option>
+										<option value="">미래사업단</option>
+										<option value="">바른사업단</option>
+										<option value="">부산사업단</option>
+										<option value="">베스트사업단</option>
+										<option value="">서울사업단</option>
+										<option value="">센트럴사업단</option>
+										<option value="">스마트사업단</option>
+										<option value="">스타사업단</option>
+										<option value="">영남사업단</option>
+										<option value="">전남사업단</option>
+										<option value="">중부사업단</option>
+										<option value="">파트너센터</option>
+										<option value="">퍼스트사업단</option>
+										<option value="">한결사업단</option>
+										<option value="">호남사업단</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<!--// [M : 2022-07-28 추가]-->
+						<tr>
+							<th scope="row">제목<em class="imp"><span>필수</span></em></th>
+							<td>
+								<div class="form-row">
+									<input type="text" class="text" name="" id="" value="" placeholder="제목 입력" style="width:100%">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">내용<em class="imp"><span>필수</span></em></th>
+							<td class="editor">
+								<div style="height:200px;">
+									에디터영역
+								</div>
+							</td>
+						</tr>
+						<!-- 220413 기획서 v1.3 수정-->
+						<tr>
+							<th scope="row">이미지 첨부
+								<!-- 220512 틀팁 추가-->
+								<div class="tooltip ">
+									<button type="button"></button>
+									<div class="tooltip-layer">
+										<ul class="list-dot1">
+											<li>첨부파일의 사이즈는 <b>000px X 000px</b> 사이즈를 준수해주세요.</li>
+											<li>첨부파일은 <b>png, jpg, jpeg, bmp, gif</b> 파일만 등록이 가능합니다.  </li>
+											<li>첨부파일 용량은 <b>5M</b>를 넘을 수 없습니다. </li>
+										</ul>
+									</div>
+								</div>
+								<!--// 220512 틀팁 추가-->
+							</th>
+							<td>
+								<span class="wrap-file">
+									<input type="file" tabindex="-1">
+									<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic3">첨부하기</button>
+								</span>
+								<div class="file-div">
+									<span class="file-name">가나다라마바사.xls <button type="button" class="btn-del1">삭제</button></span>
+								</div>
+								<div class="file-div">
+									<span class="file-name">가나다라마바사.pptx <button type="button" class="btn-del1">삭제</button></span>
+								</div>
+							</td>
+						</tr>
+						<!--// 220413 기획서 v1.3 수정-->
+						<tr>
+							<th scope="row">파일 첨부</th>
+							<td>
+								<span class="wrap-file">
+									<input type="file" tabindex="-1">
+									<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic1">첨부하기</button>
+								</span>
+								<div class="file-div">
+									<span class="file-name">가나다라마바사.xls <button type="button" class="btn-del1">삭제</button></span>
+								</div>
+								<div class="file-div">
+									<span class="file-name">가나다라마바사.pptx <button type="button" class="btn-del1">삭제</button></span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">관련 컨텐츠 첨부</th>
+							<td>
+								<span class="wrap-file">
+									<button type="button" class="btn-sub1 ic2">첨부하기</button>
+								</span>
+								<div class="file-div">
+									<span class="file-name">가나다라마바사.xls <button type="button" class="btn-del1">삭제</button></span>
+								</div>
+								<div class="file-div">
+									<span class="file-name">가나다라마바사.pptx <button type="button" class="btn-del1">삭제</button></span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="wrap-btn">
+				<div class="btns">
+					<button type="button" class="btn-action c3">목록</button>
+				</div>
+				<div class="btns">
+					<button type="button" class="btn-action c1">등록</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

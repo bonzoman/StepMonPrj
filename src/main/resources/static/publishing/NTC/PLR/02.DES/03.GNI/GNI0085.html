@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>전자서명 | 전자서명 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-22]	① 팝업으로 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<!-- 2022-11-22 팝업으로 변경 -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>전자서명</h1>
+			<button type="button" data-btn="pop-close">전자서명 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<div class="wrap-area1">
+				<!-- # 안내문구 # -->
+				<div class="tit-section2 t1"><p>모바일 전자서명으로<br>계약을 완료할 수 있어요.</p></div>
+
+				<!-- # 주의사항 # -->
+				<div class="mes-info2 box">
+					<dl>
+						<dt>주의사항</dt>
+						<dd>한번 신청하신 경우 <strong>신청상태</strong>를 변경할 수 없습니다.</dd>
+						<dd>모바일서명 진행 시 <strong>발송일 이후 서명이 불가</strong>합니다.</dd>
+						<dd>알림톡 발송가능시간<br><strong>청약일 당일 09:00~23:00</strong></dd>
+					</dl>
+				</div>
+
+				<!-- # 하단버튼 # -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action c1" onclick="uiFunction(this,'next')">신청</button>
+				</div>
+				<!-- # // # -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [전자서명 발송 전 확인] -->
+			<!-- ######################### -->
+			<div class="wrap-area1 none">
+				<!-- # 상단문구 # -->
+				<div class="tit-section2 t1">
+					<p>모바일 전자서명 발송 전<br>영업담당자님 확인해 주세요.</p>
+				</div>
+
+				<!-- # 주요내용 설명 # -->
+				<fieldset class="form-wrap1">
+					<legend class="tit">주요내용 설명</legend>
+
+					<!-- # 주요내용 설명 이행여부 체크 # -->
+					<div class="label-check1 block">
+						<label>
+							<input type="checkbox">
+							<span>청약서, 상품설명서 주요내용 설명 이행여부</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>계약 전 알릴의무에 대한 주요내용 설명 이행여부</span>
+						</label>
+					</div>
+
+					<!-- # 주요내용 설명 확인 # -->
+					<div class="mes-info2 box">
+						<p>보험모집인 본인은 계약자에게 해당 보험상품의 주요내용에 대해 충분히 설명하였음을 확인합니다.</p>
+						<p>또한 전자서명을 완료한 후 청약서 부본 및 약관을 계약자에게 전달할 것을 확인합니다.</p>
+						<p>이에 대한 모든 책임을 질 것에 대하여 확인합니다.</p>
+					</div>
+
+					<!-- # 모집인코드 # -->
+					<dl class="form">
+						<dt>모집인코드</dt>
+						<dd><data class="text disabled" data-label="모집인코드" value="1112222">1112222</data></dd>
+					</dl>
+				</fieldset>
+
+				<!-- # 하단버튼 # -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action c1">확인</button>
+				</div>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- //2022-11-22 팝업으로 변경 -->
+<!-- ################################################### -->
+<script>
+//<!--
+	/* ************************************
+	*  샘플 : [다음][이전] 클릭이벤트
+	************************************ */
+	function uiFunction(el){
+		var _parents = $(el).parents('.wrap-area1');
+		$('.wrap-area1').removeClass('none');
+		_parents.addClass('none');
+	}
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 자동차보험 단기계약체결 확인서 | 자동차 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>자동차보험 단기계약체결 확인</h1>
+			<button type="button" data-btn="pop-close">자동차보험 단기계약체결 확인 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap4">
+				<p class="tit-sub3 t1">귀사와 「자동차보험계약」을 체결함에 있어 아래와 같이 단기로 가입하고자 합니다.<br>해당계약의 보험기간을 확인하였으며, 보험기간 이외의 기간중 사고발생시 보상처리에 불이익이 있어도 이의를 제기하지 않음을 확인합니다.</p>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [컨텐츠영역] -->
+			<!-- ######################### -->
+			<section class="wrap-section3">
+				<h2 class="tit-sub1">자동차보험 주요사항 작성</h2>
+
+                <div class="info-con1">
+                    <dl>
+                        <dt>차량번호<br>(차대번호)</dt>
+                        <dd>123가1234</dd>
+                    </dl>
+                    <dl>
+                        <dt>계약자<br>생년월일</dt>
+                        <dd>80.01.01</dd>
+                    </dl>
+                    <dl>
+                        <dt>보험기간</dt>
+                        <dd>2022.09.07</dd>
+                    </dl>
+                </div>
+
+				<div class="form-wrap1 line">
+					<dl class="form">
+						<dt>보험료 납입방법 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="label-btn1 col2" data-autoset="form">
+								<label>
+									<input type="radio" name="uiFormRadio0">
+									<span>현금</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio0">
+									<span>카드</span>
+								</label>
+                                <label>
+									<input type="radio" name="uiFormRadio0">
+									<span>포인트</span>
+								</label>
+                                <label>
+									<input type="radio" name="uiFormRadio0">
+									<span>기타</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+
+					<!-- # 납입자 이름 # -->
+					<dl class="form">
+						<dt>납입자 이름 <em class="icon-required2">필수</em></dt>
+						<dd>
+                            <input type="text" class="text" title="납입자 이름" placeholder="이름을 입력해주세요.">
+							<input type="text" class="text" title="납입자 이름" placeholder="이름을 입력해주세요." aria-invalid="true">
+                            <div class="validation">납입자 이름을 입력해주세요.</div>
+						</dd>
+					</dl>
+
+                    <dl class="form">
+                        <dt>납입자와 피보험자 관계 <em class="icon-required2">필수</em></dt>
+                        <dd>
+                            <div class="select-wrap" data-autoset="select" data-callback="uiSampleFunction"> <!-- [D] uiSampleFunction : 샘플함수명 : 하단 스크립트 참고 -->
+                                <button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+                                    <span data-select="title">납입자와 피보험자 관계</span>
+                                    <span data-select="text" data-value="selectOpeion3_1">본인</span>
+                                </button>
+                                <div class="list">
+                                    <div data-label="납입자와 피보험자 관계 선택">
+                                        <div class="option">
+                                            <label><input type="radio" name="selectOpeion1" value="selectOpeion1_1"><span>본인</span></label>
+                                        </div>
+                                        <button type="button" data-toggle="closebtn">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+
+                    <dl class="form">
+                        <dt>납입자와 계약자 관계 <em class="icon-required2">필수</em></dt>
+                        <dd>
+                            <div class="select-wrap" data-autoset="select" data-callback="uiSampleFunction"> <!-- [D] uiSampleFunction : 샘플함수명 : 하단 스크립트 참고 -->
+                                <button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+                                    <span data-select="title">납입자와 계약자 관계</span>
+                                    <span data-select="text" data-value="selectOpeion3_1">본인</span>
+                                </button>
+                                <div class="list">
+                                    <div data-label="납입자와 계약자 관계 선택">
+                                        <div class="option">
+                                            <label><input type="radio" name="selectOpeion2" value="selectOpeion2_1"><span>본인</span></label>
+                                        </div>
+                                        <button type="button" data-toggle="closebtn">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [내용확인] -->
+			<!-- ######################### -->
+			<section class="wrap-section3">
+				<div class="mes-info2 box"><p>납입자란?<br>보험계약을 체결하면서 보험료를 실제 납부하는 자를 의미합니다.</p></div>
+                <div class="mes-info2 box"><p>단기계약이란?<br>자동차보험의 보험기간이 1년(365일)미만인 계약을 의미합니다.</p></div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+</body>
+</html>

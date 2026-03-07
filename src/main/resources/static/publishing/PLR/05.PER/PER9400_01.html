@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>코칭 | 리포트</title>
+	<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+	<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/ui.plugin.js"></script>
+	<script src="../../resource/js/ui.common.js?20220913"></script>
+
+	<!-- 하이차트 라이브러리 -->
+	<script src="../../resource/js/chart/highcharts.js"></script>
+	<script src="../../resource/js/chart/data.js"></script>
+	<!--
+		**************************************************************************
+		*	수정일			수정내역
+		*	-------------- 	------------------------------------------------------
+		*	[M 2022-10-14]	1. 문구수정 : 취급자 강북사업단 > (사번번호로 변경)
+		*	[M 2022-11-07]	1. No Data 안내문구가 추가
+		**************************************************************************
+	-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [바닥페이지] #wrapper ### -->
+<!-- ################################################### -->
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>코칭</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="4">
+		<!-- ######################### -->
+		<!-- [메뉴영역] -->
+		<!-- ######################### -->
+		<nav class="area-nav" data-autoset="toggle">
+			<button type="button" data-toggle="btn" aria-expanded="false">메뉴더보기</button>
+			<div data-toggle="content">
+				<strong class="tit">코칭</strong>
+				<ul>
+					<li><button type="button">혜택</button></li> <!-- [D] 현재페이지 class="active" 추가 -->
+					<li><button type="button">업적</button></li>
+					<li><button type="button">조직</button></li>
+					<li class="active"><button type="button">코칭</button></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- ######################### -->
+		<!-- [검색영역] 조회검색 -->
+		<!-- [토글정의]
+			 * [조회정보보기] [조회조건 재검색] 버튼 클릭시 (load)클래스 자동 추가 삭제 됨
+			 * [조회] 버튼 클릭시
+			 	ㄴ 기본 : _toggleSearch.outputClose(); // 토글 닫기
+				ㄴ 결과 있을 경우에만 : (active)클래스 추가
+			* 조회조건 샘플 : /PLR/02.DES/01.LTR/LTR0097.html 참고
+				ㄴ 조회구분 > 설계번호 선택 후 > 입력폼에 입력 후 조회 클릭시 목록이 보임.
+		-->
+		<!-- ######################### -->
+		<div id="uiFormSearch" class="form-search2" data-scroll-bg="1" data-togglecon="true">
+			<!-- ### [상단문구] ### -->
+			<div class="tit-section2">
+				<p>조직을 조회해보세요.</p>
+				<button type="button" data-toggle="btn" aria-expanded="false">조회정보보기</button>
+			</div>
+
+			<!-- ### [조회영역] ### -->
+			<fieldset class="form-wrap1">
+				<legend>조회정보 입력</legend>
+
+				<!-- # 조직구분 # -->
+				<dl class="form">
+					<dt>조직구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="label-btn1" data-autoset="form">
+							<label>
+								<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont1" checked>
+								<span>조직</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont2" >
+								<span>취급자</span>
+							</label>
+						</div>
+
+						<!-- [CASE] 조직 -->
+						<div class="ui-tabcon active" data-id="uiFormCont1">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="조직을 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">조직찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 조직 -->
+							<div class="info-data3 info">
+								<div class="info2 ic1">
+									<strong>장기지원팀</strong>
+									<span>A1234566</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+						</div>
+
+						<!-- [CASE] 취급자 -->
+						<div class="ui-tabcon" data-id="uiFormCont2">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="취급자를 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">취급자찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 취급자 -->
+							<div class="info-data3 info">
+								<div class="data-info1">
+									<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+									<span><strong>공지철</strong><span>111111</span></span> <!-- 2022-10-14 사번으로 변경 -->
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+							<!-- // -->
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 검색버튼 # -->
+				<div class="area-btn1 col">
+					<button type="button" class="btn-com1 ic8 c3">초기화</button>
+					<button type="button" class="btn-com1 c1">조회</button>
+				</div>
+				<!-- # // # -->
+			</fieldset>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- # [CASE] 조직 # -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조직구분</dt>
+				<dd class="ic3"><strong>강남사업단</strong></dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- # [CASE] 설계사 # -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조직구분</dt>
+				<dd class="data-info1">
+					<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+					<span><strong>공지철</strong><span>658602</span></span>
+				</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+		<!-- // -->
+
+		<!-- ######################### -->
+		<!-- [월별의뢰현황] -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<h2 class="tit-sub1">월별의뢰 현황</h2>
+
+			<dl class="data-num1">
+				<dt class="hide">월별의뢰 현황</dt>
+				<dd><strong>-</strong><span>건</span></dd>
+				<dd class="data1">당월</dd>
+			</dl>
+
+			<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+			<div class="area-chart mes-result1">
+				<p>
+					<strong>기간 내 해당 항목에 대한 실적이 없어,<br>표기할 사항이 없습니다.</strong>
+					<span>조건을 변경해보세요.</span>
+				</p>
+			</div>
+			<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+			<!-- [CASE] 자료가 있을 경우 -->
+			<!-- <div class="area-chart">
+				<div class="unit-t1">(단위 건)</div>
+				<div id="coachingChart1" data-chart="Basic-Column7"></div>
+				<script>
+					//월별의뢰 현황 차트 샘플
+					Highcharts.chart("coachingChart1",{
+						chart:{
+							type:"column",
+							marginLeft:0,
+							marginRight:0,
+							marginTop : 40,
+							height:220
+						},
+						title:null,
+						legend:{
+							enabled:true,
+							verticalAlign:'top',
+							align:'left',
+						},
+						xAxis:{
+							categories:["전전월", "전월", "당월"]
+						},
+						yAxis : {
+							visible : false
+						},
+						plotOptions:{
+							column:{
+								dataLabels:{
+									enabled:true,
+
+								},
+							},
+							series : {
+								groupPadding : 0.3
+							}
+						},
+						series:[
+							{
+								name:"신규코칭",
+								data:[100,50,70]
+							},{
+								name:"미처리코칭",
+								data:[125,60,50]
+							},{
+								name:"완료코칭",
+								data:[100,50,70]
+							}
+						]
+					})
+
+				</script>
+			</div>
+
+			<div class="area-btn2">
+				<button class="btn-t1 icon-com1 right ic3">월별의뢰현황 확인하기</button>
+			</div> -->
+			<!-- //[CASE] 자료가 있을 경우 -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [의뢰현황] -->
+		<!-- ######################### -->
+		<div class="wrap-section3 line">
+			<div class="tit-sub1">
+				<h2>의뢰현황</h2>
+				<div class="side">2022.06.30 기준 </div>
+			</div>
+			<div class="area-info6 tline"><!-- [M 2022-11-30] class 추가 -->
+				<dl>
+					<dt>신규 코칭</dt>
+					<dd>
+						<strong>15</strong><span>건</span>
+						<button type="button" class="link">상세보기</button><!-- [M 2022-11-30] 버튼 추가-->
+					</dd>
+				</dl>
+				<dl>
+					<dt>미처리 코칭</dt>
+					<dd>
+						<strong>1</strong><span>건</span>
+						<button type="button" class="link">상세보기</button><!-- [M 2022-11-30] 버튼 추가-->
+					</dd>
+				</dl>
+				<dl>
+					<dt>완료 코칭</dt>
+					<dd>
+						<strong>21</strong><span>건</span>
+						<button type="button" class="link">상세보기</button><!-- [M 2022-11-30] 버튼 추가-->
+					</dd>
+				</dl>
+			</div>
+
+			<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+			<div class="area-chart mes-result1">
+				<p>
+					<strong>기간 내 해당 항목에 대한 실적이 없어,<br>표기할 사항이 없습니다.</strong>
+					<span>조건을 변경해보세요.</span>
+				</p>
+			</div>
+			<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+			<!-- [CASE] 자료가 있을 경우 -->
+			<!-- <div class="wrap-chart1">
+				<div class="area-chart">
+					<div class="unit-t1">(단위 건)</div>
+					<!-- [cASE : 사업단] --
+					<div id="Basic-Bar5" data-chart="Basic-Bar5"></div>
+					<script>
+						// 월별의뢰현황
+						Highcharts.chart('Basic-Bar5', {
+							chart: {
+								type: 'bar',
+								marginBottom:0,
+								height:660 // 항목수 * 55
+							},
+							title:null,
+							legend:{
+								enabled:true,
+								verticalAlign:'top',
+								align:'left',
+							},
+							xAxis: {
+								categories: ['강남사업단', '호남사업단', '한결사업단', '전남사업단','스타사업단','미래사업단','바른사업단','스마트사업단','드림사업단','베스트사업단','한빛사업단','서울사업단'],
+								minPadding: 10
+							},
+							yAxis: {
+								labels:{
+									enabled:false
+								}
+							},
+							plotOptions:{
+								bar:{
+									dataLabels:{
+										enabled:true
+									}
+								}
+							},
+							series: [{
+								name: '완료코칭',
+								data: [5, 1, 1, 2, 1, 6, 2, 1, 1, 2, 1, 8]
+							}]
+						});
+
+					</script>
+
+					<!-- [cASE : AM] --
+					<div id="Basic-Bar5-2" data-chart="Basic-Bar5"></div>
+					<script>
+						// 월별의뢰현황
+						Highcharts.chart('Basic-Bar5-2', {
+							chart: {
+								type: 'bar',
+								marginBottom:0,
+								height:660 // 항목수 * 55
+							},
+							title:null,
+							legend:{
+								enabled:true,
+								verticalAlign:'top',
+								align:'left',
+							},
+							xAxis: {
+								categories: ['순창출장소', '호남출장소', '익산출장소', '전주지점','전주지점','전주지점','전주지점','전주지점','전주지점','전주지점','전주지점','전주지점'],
+								minPadding: 10
+							},
+							yAxis: {
+								labels:{
+									enabled:false
+								}
+							},
+							plotOptions:{
+								bar:{
+									dataLabels:{
+										enabled:true
+									}
+								}
+							},
+							series: [{
+								name: '완료코칭',
+								data: [5, 1, 1, 2, 1, 6, 2, 1, 1, 2, 1, 8]
+							}]
+						});
+
+					</script>
+					<!-- // --
+				</div>
+
+				<div class="area-btn2">
+					<button class="btn-t1 icon-com1 right ic3">의뢰현황 확인하기</button>
+				</div>
+			</div> -->
+			<!-- //[CASE] 자료가 있을 경우 -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+//<!--
+	/* ************************************
+	* 토글 호출
+	************************************ */
+	var _toggleSearch = $plugin.togglecon('#uiFormSearch', {
+		selector_group : false,
+		callback_load :function(e){
+			//오픈이벤트
+		},
+		callback_after : function(e){
+			//닫기이벤트
+		}
+	});
+
+	//토글컨텐츠 강제 오픈
+	_toggleSearch.outputOpen();
+
+	/* ************************************
+	* 탭버튼 호출
+	************************************ */
+	$plugin.togglecon('.nav-tab1',{
+		toggle_type : 'tab',
+		selector : '.nav-tab1 > ul > li',
+		selector_btn : '> a',
+		selector_con : '#href',
+		callback_load : function(e){
+			//오픈이벤트
+			ui.initReload();
+		}
+	});
+
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>내용확인 및 동의 | 스마트폰청약 | 표준설계 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>스마트폰 청약</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [상단문구] -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>괄호 안의 문구를 선택하여<br>입력해주세요.</p> <!-- [M 2022-05-26] 0.8v UX Writing 적용 -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [입력영역] 내용확인 -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap3">
+			<legend>항암세기조절방사선치료비 보장에 관한 사항</legend>
+
+			<!-- # 보험계약자 확인 # -->
+			<dl class="form">
+				<dt>항암세기조절방사선치료비 보장에 관한 사항</dt>
+				<dd>
+                    <span>가) 항암세기조절방사선치료 보장은</span>
+					<!-- [CASE1] 기본 -->
+					<div class="text2" data-label="항암"> <!-- [D] data-label="덧쓰기 텍스트" -->
+						<input type="text" maxlength="2" required>
+					</div>
+					<!-- [CASE2] 오류 : 클래스명(invalid) 추가  -->
+					<div class="text2 invalid" data-label="항암">
+						<input type="text" maxlength="2" value="항암" required>
+					</div>
+					<!-- [CASE3] 정상 : 클래스명(valid) 추가 -->
+					<div class="text2 valid" data-label="항암">
+						<input type="text" maxlength="2" value="항암" required>
+					</div>
+                    <div class="text2" data-label="세기조절">
+						<input type="text" maxlength="4" required>
+					</div>
+                    <div class="text2" data-label="방사선치료">
+						<input type="text" maxlength="5" required>
+					</div>
+                    <span>를</span>
+					<div class="text2" data-label="받는경우">
+						<input type="text" maxlength="4" required>
+					</div><span>보험금을 지급함.</span>
+				</dd>
+				<dd>
+					<span>나) 항암세기조절방사선치료란 방사선 조사 방향을 수십배까지 세분화하고, 각 세분화된 영역마다 방사선의 양, 세기를 조절함으로써 종양 주위의 정상조적에 들어가는 방사선량을 최소화하고</span>
+					<div class="text2" data-label="암세포">
+						<input type="text" maxlength="3" required>
+					</div>
+                    <span>에만</span>
+                    <div class="text2" data-label="선택적">
+						<input type="text" maxlength="3" required>
+					</div>
+                    <span>으로</span>
+                    <div class="text2" data-label="방사선량">
+						<input type="text" maxlength="4" required>
+					</div>
+					<span>을</span>
+					<div class="text2" data-label="조절">
+						<input type="text" maxlength="2" required>
+					</div>
+					<span>하여</span>
+                    <div class="text2" data-label="조사">
+						<input type="text" maxlength="2" required>
+					</div>
+                    <span>할 수 있는</span>
+                    <div class="text2" data-label="방사선치료">
+						<input type="text" maxlength="5" required>
+					</div>
+                    <span>를 말하며,</span>
+                    <div class="text2" data-label="방사선">
+						<input type="text" maxlength="3" required>
+					</div>
+                    <div class="text2" data-label="세기조절">
+						<input type="text" maxlength="4" required>
+					</div>
+                    <span>이</span>
+                    <div class="text2" data-label="없거나">
+						<input type="text" maxlength="3" required>
+					</div>
+                    <div class="text2" data-label="입자방사선">
+						<input type="text" maxlength="5" required>
+					</div>
+                    <span>을</span>
+                    <div class="text2" data-label="이용">
+						<input type="text" maxlength="2" required>
+					</div>
+                    <span>하는</span>
+                    <div class="text2" data-label="치료">
+						<input type="text" maxlength="2" required>
+					</div>
+                    <span>는</span>
+                    <div class="text2" data-label="보장">
+						<input type="text" maxlength="2" required>
+					</div>
+                    <span>대상에서</span>
+                    <div class="text2" data-label="제외함">
+						<input type="text" maxlength="3" required>
+					</div>
+				</dd>
+			</dl>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">확인</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+//<!--
+	//[샘플] 덧쓰기
+	$('.text2').each(function(i, obj){
+		var _input = $(obj).find('> input');
+		var _text = $(obj).data('label');
+
+		_input.keyup(function(e) {
+			$(obj).removeClass('valid invalid');
+		}).blur(function(e){//덧쓰기 끝났을 때
+			if (_input.val() == _text) {
+				$(obj).addClass('valid');
+			}else if(_input.val() == _text || _input.val() != ''){
+				$(obj).addClass('invalid');
+			};
+		});
+	});
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>	공동청약 | 커뮤니티 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220215">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">공동청약 상세</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<!--[M : 2022-08-08 삭제 버튼 추가 - 선오픈 아니고 본 오픈시 반영]-->
+			<div class="sub">
+				<button type="button" class="btn-action c3">목록</button>
+				<button type="button" class="btn-action del">삭제</button>
+			</div>
+			<!--// [M : 2022-08-08 삭제 버튼 추가 - 선오픈 아니고 본 오픈시 반영]-->
+			<div class="tab-wrap">
+				<!--
+					[신청내역 : 반려,승인대기중 상태] , 
+					[체결내역 : 선정왼료 외],
+					SB상에 기재된 탭 비활성화 없이 
+					.tab2 > li[display:none] 처리
+
+					탭 3개중 1개만 노출되는 경우 .tab2를 display:none 처리
+				-->
+				<ul class="tab2" style="display:none">
+					<li><a href="#tab2-1" class="current">모집(도와줄게요)</a></li>
+					<li style="display: none;"><a href="#tab2-2">신청내역</a></li>
+					<li style="display: none;"><a href="#tab2-3">체결내역</a></li>
+				</ul>
+				<div id="tab2-1" class="tab-cont" style="display: block;">
+					<div class="tbl-view1">
+						<table>
+							<colgroup>
+								<col style="width:150px;">
+								<col>
+								<col style="width:150px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">구분</th>
+									<td>도와줄게요</td>
+									<th scope="row">게시글 상태</th>
+									<td>승인대기중</td>
+								</tr>
+								<tr>
+									<th scope="row">등록일시</th>
+									<td>2022.02.22 19:19:45</td>
+									<th scope="row">게시기한</th>
+									<td>일주일</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tbl-view1">
+						<table>
+							<colgroup>
+								<col style="width:150px;">
+								<col>
+								<col style="width:150px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">모집자명</th>
+									<td>홍길동 <span>| 우수설계사</span></td>
+									<th scope="row">소속</th>
+									<td>강남사업단 (GA지점)</td>
+								</tr>
+								<tr>
+									<th scope="row">기여율(모집자)</th>
+									<td>40%</td>
+									<th scope="row">기여율(신청자)</th>
+									<td>60%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h3 class="tit-sub2">게시글 상세</h3>
+					<div class="tbl-view1">
+						<table>
+							<colgroup>
+								<col style="width:150px;">
+								<col>
+								<col style="width:150px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">주력 상품군</th>
+									<td>질병/상해, 자녀</td>
+									<th scope="row">희망 지역</th>
+									<td>서울/경기/인천</td>
+								</tr>
+								<tr>
+									<th scope="row">제목</th>
+									<td colspan="3">제목제목제목이 텍스트</td>
+								</tr>
+								<tr>
+									<th scope="row">설계사 소개</th>
+									<td colspan="3">
+										<div class="view-area">
+											저는 보험 상담 전문으로 .............. 뭐라고 입력한 텍스트 노출 되는 영역 <br>
+											저는 보험 상담 전문으로 .............. 뭐라고 입력한 텍스트 노출 되는 영역 <br>
+											저는 보험 상담 전문으로 .............. 뭐라고 입력한 텍스트 노출 되는 영역 <br>
+											저는 보험 상담 전문으로 .............. 뭐라고 입력한 텍스트 노출 되는 영역 <br>
+											저는 보험 상담 전문으로 .............. 뭐라고 입력한 텍스트 노출 되는 영역 <br>
+											저는 보험 상담 전문으로 .............. 뭐라고 입력한 텍스트 노출 되는 영역 <br>
+											저는 보험 상담 전문으로 .............. 뭐라고 입력한 텍스트 노출 되는 영역 <br>
+											저는 보험 상담 전문으로 .............. 뭐라고 입력한 텍스트 노출 되는 영역 <br>
+											저는 보험 상담 전문으로 .............. 뭐라고 입력한 텍스트 노출 되는 영역 <br> <br> <br> <br>
+											영역에 내용이 많아서 길어질 경우 해당 영역에 scroll 처리가 되어있음 <br>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">이미지 첨부</th>
+									<td colspan="3">
+										<div class="file-div">
+											<a href="#" class="file-name">이미지 파일명.jpg (3.6mb)</a>
+										</div>
+										<div class="file-div">
+											<a href="#" class="file-name">이미지 파일명.jpg (3.6mb)</a>
+										</div>
+										<div class="file-div">
+											<a href="#" class="file-name">링크나이미지다운 case는 밑줄 (3.6mb)</a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">관련 컨텐츠 첨부</th>
+									<td colspan="3">
+										<!-- 2022-12-27 삭제 -->
+										<!-- <div class="file-div">
+											<span class="file-name">교육 &gt; 뇌혈관질환 진단비 분석</span>
+										</div>
+										<div class="file-div">
+											<span class="file-name">클릭X그냥 텍스트만 노출되는 컨텐츠는 밑줄X</span>
+										</div> -->
+										<!-- 2022-12-27 삭제 -->
+
+										<!-- 2022-12-27 마크업 변경 -->
+										<ul class="list-dot1">
+											<li>교육 &gt; 뇌혈관질환 진단비 분석</li>
+											<li>클릭X그냥 텍스트만 노출되는 컨텐츠는 밑줄X</li>
+										</ul>
+										<!-- //2022-12-27 마크업 변경 -->
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tbl-view1">
+						<table>
+							<colgroup>
+								<col style="width:150px;">
+								<col>
+								<col style="width:150px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">승인/반려일시</th>
+									<td>2022.02.22 22:22:22</td>
+									<th scope="row">승인자</th>
+									<td>홍길동(11123123)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tbl-view1">
+						<table>
+							<colgroup>
+								<col style="width:150px;">
+								<col>
+								<col style="width:150px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">반려사유</th>
+									<td colspan="3">내용을 보완해 주세요.</td>
+								</tr>
+								<tr>
+									<th scope="row">승인/반려일시</th>
+									<td>2022.02.22 22:22:22</td>
+									<th scope="row">승인자</th>
+									<td>홍길동(11123123)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div id="tab2-2" class="tab-cont"></div>
+				<div id="tab2-3" class="tab-cont"></div>
+			</div>
+			<div class="wrap-btn">
+				<div class="btns">
+					<button type="button" class="btn-action c3">목록</button>
+				</div>
+				<div class="btns">
+					<button type="button" class="btn-action c2">반려</button>
+					<button type="button" class="btn-action c1">승인</button>
+				</div>
+			</div>
+			<!-- <div class="wrap-btn">
+				<div class="btns">
+					<button type="button" class="btn-action c3">목록</button>
+				</div>
+				<div class="btns">
+					<button type="button" class="btn-action c3">비공개 취소</button>
+					<button type="button" class="btn-action c2">비공개 처리</button>
+				</div>
+			</div> -->
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>데일리퀴즈 | 활동 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220513">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-08]	1. 퀴즈 목록 항목 수정
+	*	[M 2022-11-15]	1. 도입앱탭 - 검색 구분 추가
+						2. 도입앱탭 - 순서필드 수정, 카테고리 정렬기능 삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">데일리퀴즈</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="tab-wrap">
+				<ul class="tab2">
+					<li><a href="#tab2-1" class="current">설계사 APP</a></li>
+					<li><a href="#tab2-2">도입 APP</a></li>
+				</ul>
+				<div class="tab-cont" id="tab2-1">
+					<fieldset class="form-search1">
+						<div class="form-field">
+							<dl class="form">
+								<dt>카테고리</dt>
+								<dd>
+									<div class="form-row">
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>전체</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>보험윤리</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>보험상품</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>기타</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>질병관련</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>모의고사</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>유머</span>
+										</label>
+									</div>
+								</dd>
+							</dl>
+							<dl class="form w3">
+								<dt>사용여부</dt>
+								<dd>
+									<div class="form-row">
+										<label class="label-check">
+											<input type="radio" name="ct3" checked="checked">
+											<span>전체</span>
+										</label>
+										<label class="label-check">
+											<input type="radio" name="ct3">
+											<span>사용</span>
+										</label>
+										<label class="label-check">
+											<input type="radio" name="ct3">
+											<span>사용안함</span>
+										</label>
+									</div>
+								</dd>
+							</dl>
+							<dl class="form w3">
+								<dt>퀴즈type</dt>
+								<dd>
+									<div class="form-row">
+										<label class="label-check">
+											<input type="checkbox" name="ct4" checked="checked">
+											<span>전체</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct4" checked="checked">
+											<span>O/X</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct4" checked="checked">
+											<span>4지선다</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct4" checked="checked">
+											<span>초성(주관식)</span>
+										</label>
+									</div>
+								</dd>
+							</dl>
+						</div>
+		
+						<div class="area-action">
+							<button type="button" class="btn-action c1">검색</button>
+						</div>
+					</fieldset>
+					<div class="tit-sub2">
+						<h3>전체 189건</h3>
+						<div class="sub"><button class="btn-sub1 c3">신규등록하기</button></div>
+					</div>
+					<div class="tbl-list1">
+						<table>
+							<colgroup>
+								<col style="width:100px;">
+								<col style="width:100px;">
+								<col style="width:80px;">
+								<col>
+								<col style="width:100px;">
+								<col style="width:80px;">
+								<col style="width:120px;"><!-- [M 2022-11-08] 항목 수정 -->
+								<col style="width:80px;"><!-- [M 2022-11-08] 항목 수정 -->
+								<col style="width:80px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"><span class="sort">Code</span></th>
+									<th scope="col"><span class="sort">카테고리</span></th><!--sort - 내림차순  des , 오름차순 asc-->
+									<th scope="col">사용여부</th>
+									<th scope="col">퀴즈내용</th>
+									<th scope="col">퀴즈Type</th>
+									<th scope="col">노출일자</th><!-- [M 2022-11-08] 항목 수정 -->
+									<th scope="col">등록자</th><!-- [M 2022-11-08] 항목 수정 -->
+									<th scope="col">등록일자</th><!-- [M 2022-11-08] 항목 수정 -->
+									<th scope="col">수정일자</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>AA0000009</td>
+									<td>카테고리명</td>
+									<td>사용</td>
+									<td><span class="sub">보장보험료 납입이 면제되는 경우에는보장보험료 납입이 면제되는 경우에는 </span></td>
+									<td>O/X</td>
+									<td>2022.02.22</td>
+									<td>master</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2222.02.22</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2022.02.22</td>
+								</tr>
+								<tr>
+									<td>AA0000009</td>
+									<td>카테고리명</td>
+									<td>사용</td>
+									<td><span class="sub">설계사앱 에서 등록하는 데일리퀴즈 </span></td>
+									<td>4지선다</td>
+									<td>2022.02.22</td>
+									<td>김등록(1313122)</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2222.02.22</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2022.02.22</td>
+								</tr>
+								<tr class="row-point3">
+									<td>AA0000009</td>
+									<td>카테고리명</td>
+									<td>사용안함</td>
+									<td><span class="sub">얼마나 길게 나올지는 모르겠지만 길면 말줄임이다 이거지! 길면 말줄임이다 이거야! </span></td>
+									<td>4지선다</td>
+									<td>2022.02.22</td>
+									<td>김등록(1313122)</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2222.02.22</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2022.02.22</td>
+								</tr>
+								<tr>
+									<td colspan="9">
+										<div class="nodata">
+											조회 결과가 없습니다.
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="paging">
+						<a class="ic_first disabled"></a>
+						<a class="ic_prev disabled"></a>
+						<span class="num current">1</span>
+						<a href="#" class="num">2</a>
+						<a href="#" class="num">3</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="num">9</a>
+						<a href="#" class="num">10</a>
+						<a href="#" class="ic_next"></a>
+						<a href="#" class="ic_last"></a>
+					</div>
+				</div>
+				<div class="tab-cont" id="tab2-2">
+					<fieldset class="form-search1">
+						<div class="form-field">
+							<dl class="form">
+								<dt>카테고리</dt>
+								<dd>
+									<div class="form-row">
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>전체</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>보험윤리</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>보험상품</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>기타</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>질병관련</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>모의고사</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct1" checked="checked">
+											<span>유머</span>
+										</label>
+									</div>
+								</dd>
+							</dl>
+							<!-- [M 2022-11-15] 구분 추가 -->
+							<dl class="form">
+								<dt>구분</dt>
+								<dd>
+									<div class="form-row">
+										<label class="label-check">
+											<input type="radio" name="ct5" checked="checked">
+											<span>전체</span>
+										</label>
+										<label class="label-check">
+											<input type="radio" name="ct5">
+											<span>일반</span>
+										</label>
+										<label class="label-check">
+											<input type="radio" name="ct5">
+											<span>이벤트</span>
+										</label>
+									</div>
+								</dd>
+							</dl>
+							<!-- //[M 2022-11-15] 구분 추가 -->
+							<dl class="form w3">
+								<dt>사용여부</dt>
+								<dd>
+									<div class="form-row">
+										<label class="label-check">
+											<input type="radio" name="ct4" checked="checked">
+											<span>전체</span>
+										</label>
+										<label class="label-check">
+											<input type="radio" name="ct4">
+											<span>사용</span>
+										</label>
+										<label class="label-check">
+											<input type="radio" name="ct4">
+											<span>사용안함</span>
+										</label>
+									</div>
+								</dd>
+							</dl>
+							<dl class="form w3">
+								<dt>퀴즈type</dt>
+								<dd>
+									<div class="form-row">
+										<label class="label-check">
+											<input type="checkbox" name="ct4" checked="checked">
+											<span>전체</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct4" checked="checked">
+											<span>O/X</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct4" checked="checked">
+											<span>다지선다</span>
+										</label>
+										<label class="label-check">
+											<input type="checkbox" name="ct4" checked="checked">
+											<span>초성(주관식)</span>
+										</label>
+									</div>
+								</dd>
+							</dl>
+						</div>
+		
+						<div class="area-action">
+							<button type="button" class="btn-action c1">검색</button>
+						</div>
+					</fieldset>
+					<div class="tit-sub2">
+						<h3>전체 189건</h3>
+						<div class="sub"><button class="btn-sub1 c3">신규등록하기</button></div>
+					</div>
+					<div class="tbl-list1">
+						<table>
+							<colgroup>
+								<col style="width:100px;">
+								<col style="width:80px;"><!-- [M 2022-11-08] 항목 추가 -->
+								<col style="width:80px;"><!-- [M 2022-11-08] 항목 추가 -->
+								<col style="width:100px;">
+								<col style="width:80px;">
+								<col>
+								<col style="width:100px;">
+								<col style="width:80px;">
+								<col style="width:120px;"><!-- [M 2022-11-08] 항목 수정 -->
+								<col style="width:80px;"><!-- [M 2022-11-08] 항목 수정 -->
+								<col style="width:80px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"><span class="sort">Code</span></th>
+									<th scope="col">구분</th><!-- [M 2022-11-08] 항목 추가 -->
+									<th scope="col"><span class="sort">순서</span></th><!--sort - 내림차순  des , 오름차순 asc--><!-- [M 2022-11-15] sort 추가 -->
+									<th scope="col">카테고리</th><!-- [M 2022-11-15] sort 삭제 -->
+									<th scope="col">사용여부</th>
+									<th scope="col">퀴즈내용</th>
+									<th scope="col">퀴즈Type</th>
+									<th scope="col">노출일자</th><!-- [M 2022-11-08] 항목 수정 -->
+									<th scope="col">등록자</th><!-- [M 2022-11-08] 항목 수정 -->
+									<th scope="col">등록일자</th><!-- [M 2022-11-08] 항목 수정 -->
+									<th scope="col">수정일자</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>AA0000009</td>
+									<!-- [M 2022-11-08] 항목 추가 -->
+									<td>일반</td>
+									<td>1</td><!-- [M 2022-11-15] 수정 -->
+									<!-- //[M 2022-11-08] 항목 추가 -->
+									<td>카테고리명</td>
+									<td>사용</td>
+									<td><span class="sub">보장보험료 납입이 면제되는 경우에는보장보험료 납입이 면제되는 경우에는 </span></td>
+									<td>O/X</td>
+									<td>2022.02.22</td>
+									<td>김등록(1313122)</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2222.02.22</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2022.02.22</td>
+								</tr>
+								<tr>
+									<td>AA0000009</td>
+									<!-- [M 2022-11-08] 항목 추가 -->
+									<td>일반</td>
+									<td>2</td><!-- [M 2022-11-15] 수정 -->
+									<!-- //[M 2022-11-08] 항목 추가 -->
+									<td>카테고리명</td>
+									<td>사용</td>
+									<td><span class="sub">도입!  </span></td>
+									<td>다지선다</td>
+									<td>2022.02.22</td>
+									<td>김등록(1313122)</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2222.02.22</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2022.02.22</td>
+								</tr>
+								<tr>
+									<td>AA0000009</td>
+									<!-- [M 2022-11-08] 항목 추가 -->
+									<td>일반</td>
+									<td>3</td><!-- [M 2022-11-15] 수정 -->
+									<!-- //[M 2022-11-08] 항목 추가 -->
+									<td>카테고리명</td>
+									<td>사용안함</td>
+									<td><span class="sub">얼마나 길게 나올지는 모르겠지만 길면 말줄임이다 이거지! 길면 말줄임이다 이거야! </span></td>
+									<td>다지선다</td>
+									<td>2022.02.22</td>
+									<td>김등록(1313122)</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2222.02.22</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2022.02.22</td>
+								</tr>
+								<tr>
+									<td>AA0000009</td>
+									<!-- [M 2022-11-08] 항목 추가 -->
+									<td>일반</td>
+									<td>4</td><!-- [M 2022-11-15] 수정 -->
+									<!-- //[M 2022-11-08] 항목 추가 -->
+									<td>카테고리명</td>
+									<td>사용안함</td>
+									<td><span class="sub">얼마나 길게 나올지는 모르겠지만 길면 말줄임이다 이거지! 길면 말줄임이다 이거야! </span></td>
+									<td>다지선다</td>
+									<td>2022.02.22</td>
+									<td>김등록(1313122)</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2222.02.22</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2022.02.22</td>
+								</tr>
+								<tr>
+									<td>AA0000009</td>
+									<!-- [M 2022-11-08] 항목 추가 -->
+									<td>이벤트(돌발)</td>
+									<td>
+										-
+									</td>
+									<!-- //[M 2022-11-08] 항목 추가 -->
+									<td>카테고리명</td>
+									<td>사용안함</td>
+									<td><span class="sub">얼마나 길게 나올지는 모르겠지만 길면 말줄임이다 이거지! 길면 말줄임이다 이거야! </span></td>
+									<td>다지선다</td>
+									<td>2022.02.22</td>
+									<td>김등록(1313122)</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2222.02.22</td><!-- [M 2022-11-08] 항목 수정 -->
+									<td>2022.02.22</td>
+								</tr>
+								<tr>
+									<td colspan="11"><!-- [M 2022-11-08] 항목 추가 -->
+										<div class="nodata">
+											조회 결과가 없습니다.
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="paging">
+						<a class="ic_first disabled"></a>
+						<a class="ic_prev disabled"></a>
+						<span class="num current">1</span>
+						<a href="#" class="num">2</a>
+						<a href="#" class="num">3</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="num">9</a>
+						<a href="#" class="num">10</a>
+						<a href="#" class="ic_next"></a>
+						<a href="#" class="ic_last"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

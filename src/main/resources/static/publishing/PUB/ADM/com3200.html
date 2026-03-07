@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]푸시상세 | 푸시관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>설문결과(진행중)</h1>
+		<!-- <h1>설문결과</h1>
+		<h1>설문결과(대기)</h1>
+		<h1>설문결과(중단)</h1> -->
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="tit-sub2">
+			<h3>설문 정보</h3>
+		</div>
+		<div class="tbl-write1">
+			<table>
+				<colgroup>
+					<col style="width:120px;">
+					<col>
+					<col style="width:120px;">
+					<col style="width:30%;">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">설문ID</th>
+						<td>D12300020</td>
+						<th scope="row">등록자</th>
+						<td>김크림(****01)</td>
+					</tr>
+					<tr>
+						<th scope="row">설문명</th>
+						<td>1차 직원 만족도 조사</td>
+						<th scope="row">등록일자</th>
+						<td>2022.02.22</td>
+					</tr>
+					<tr>
+						<th scope="row">노출기간</th>
+						<td>
+							<div class="form-row">
+                                2022.02.22 19:20 ~ 9999.12.31 24:00
+							</div>
+						</td>
+                        <!-- 2022-12-19 추가 -->
+                        <th scope="row">참여인원/총원수</th>
+						<td>0/124</td>
+                        <!-- //2022-12-19 추가 -->
+					</tr>
+					<tr>
+						<th scope="row">설문 대상</th>
+						<td>
+							<div class="form-row">
+								조직1팀, 조직2팀, 조직3팀, 조직11팀, 조직111팀, 조직121팀
+							</div>
+						</td>
+						<th scope="row">참여자(%)</th>
+                        <td>333명(27%)</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tit-sub2">
+			<h3>설문 결과</h3>
+			<div class="sub">
+				<button type="button" class="btn-sub1 c3">엑셀 다운로드</button>
+			</div>
+		</div>
+
+		<div class="survey-wrap">
+			<ul>
+                <li>
+                    <div class="survey-tit">
+                        <strong>문항1</strong>
+                        <span>문항내용</span>
+                    </div>
+                    <div class="tbl-view1">
+                        <table>
+                            <colgroup>
+                                <col style="width:120px;">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th scope="row">응답결과</th>
+                                <td>
+                                    <div class="item">
+                                        <div class="txt">
+                                            해당영역 사이즈는 고정입니다.
+                                        </div>
+                                        <div class="bar">
+                                            <span style="width:50%"><i>00명(50%)</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="txt">
+                                            응답결과에 입력된 텍스트가 너무 길면 텍스트가 이렇게 나옵니다.
+                                        </div>
+                                        <div class="bar">
+                                            <span style="width:10%"><i>00명(10%)</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="txt">
+                                            다중선택인 경우는 계산을 어떻게 하는건가...
+                                        </div>
+                                        <div class="bar">
+                                            <span style="width:5%"><i>00명(5%)</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="txt">
+                                            설문명
+                                        </div>
+                                        <div class="bar">
+                                            <span style="width:35%"><i>00명(35%)</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="txt">
+                                            설문명
+                                        </div>
+                                        <div class="bar">
+                                            <span style="width:0%"><i>0명(0%)</i></span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <div class="survey-tit">
+                        <strong>문항2</strong>
+                        <span>주관식 케이스 .... 하단에 노출 되는 내용이 아무것도 없음</span>
+                    </div>
+                    <!--주관식은 [번호,문항명] 제외한 아무 내용도 노출하지않음-->
+                </li>
+                <li>
+                    <div class="survey-tit">
+                        <strong>문항3</strong>
+                        <span>문항내용</span>
+                    </div>
+                    <div class="tbl-view1">
+                        <table>
+                            <colgroup>
+                                <col style="width:120px;">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th scope="row">응답결과</th>
+                                <td>
+                                    <div class="item">
+                                        <div class="txt">
+                                            설문명
+                                        </div>
+                                        <div class="bar">
+                                            <span style="width:50%"><i>00명(50%)</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="txt">
+                                            설문명
+                                        </div>
+                                        <div class="bar">
+                                            <span style="width:10%"><i>00명(10%)</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="txt">
+                                            설문명
+                                        </div>
+                                        <div class="bar">
+                                            <span style="width:5%"><i>00명(5%)</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="txt">
+                                            설문명
+                                        </div>
+                                        <div class="bar">
+                                            <span style="width:35%"><i>00명(35%)</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="txt">
+                                            설문명
+                                        </div>
+                                        <div class="bar">
+                                            <span style="width:0%"><i>0명(0%)</i></span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c1">확인</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

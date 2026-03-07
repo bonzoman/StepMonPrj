@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 가능한업무 | 담보설정 | 장기표준설계 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-22]	① 옵션 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<div class="container" data-page="1">
+		<div class="area-action t1" data-sticky="bottom">
+			<a href="#uiPOPLTR0034L01" class="btn-action ic4 simple">가능한업무</a> <!-- [레이어팝업 호출 샘플] -->
+			<button type="button" class="btn-action ic14 simple invalid">지침체크</button>
+			<button type="button" class="btn-action c1 ic3 simple">보장(담보)추가</button>
+			<button type="button" class="btn-action c1">다음</button>
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 가능한업무 ### -->
+<!-- ################################################### -->
+<div id="uiPOPLTR0034L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>가능한 업무</h1>
+			<button type="button" data-btn="pop-close">가능한 업무 닫기</button>
+		</header>
+		<div class="content">
+			<div class="label-check2">
+				<label>
+					<input type="radio" name="form-radio1" checked>
+					<span>신규설계</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>추가보장 담보적용</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>동시가입</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>누적확인</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>심사이력조회</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>실손/정액보장조회</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>예상할인율</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>예외질환조회</span>
+				</label>
+				<!-- [M 2022-11-22] 옵션 추가 -->
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>실손전환대상 계약조회</span>
+				</label>
+				<!-- //[M 2022-11-22] 옵션 추가 -->
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>실손추가</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>운전자설계</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1" >확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPLTR0034L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPLTR0034L01').trigger('outputOpen');
+//-->
+</script>
+<!-- ################################################### -->
+</body>
+</html>

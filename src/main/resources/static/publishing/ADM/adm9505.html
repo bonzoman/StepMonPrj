@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>리포트 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-20]	1. 툴팁 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!--
+
+		이 페이지는  header , breadcrumb 사용하지 않음
+
+	-->
+
+	<h2 class="page-title">리포트 통합조회 결과</h2>
+
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<div class="contents">
+			<div class="report-search">
+				<div class="search-top">
+					<h3>리포트 통합조회</h3>
+					<div class="sub">
+						<button class="btn-fav"></button>
+						<button class="search-toggle"></button>
+					</div>
+				</div>
+				<div class="search-cont">
+					<div class="search-row">
+						<div class="col">
+							<dl>
+								<dt>기준일자</dt>
+								<dd>
+									<input type="text" name="" id="" class="date" value="2022.02.22">
+								</dd>
+							</dl>
+						</div>
+						<div class="col">
+							<dl>
+								<dt>사업단/지점 조회</dt>
+								<dd>
+									<div class="input-search">
+										<input type="text" name="" id="" class="text" placeholder="사업단명, 지점명">
+										<button type="button" class="btn-search2"></button>
+									</div>
+								</dd>
+							</dl>
+						</div>
+						<div class="col">
+							<dl>
+								<dt>설계사 조회</dt>
+								<dd>
+									<div class="input-search">
+										<input type="text" name="" id="" class="text" placeholder="설계사 이름">
+										<button type="button" class="btn-search2"></button>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="search-row t1">
+						<div class="col">
+							<div class="search-tit">
+								<strong>업적</strong>
+								<span>PERFORMANCE</span>
+							</div>
+							<div class="search-check">
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<strong>전체선택</strong>
+									</label>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>보장성 실적</span>
+									</label>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>보장성 동영업일 대비 실적</span>
+									</label>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>보장성 전속그룹 대비 실적</span>
+									</label>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											보장성 전속그룹 인당생산성 대비 높고 낮음
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>실가동</span>
+									</label>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>가동전환: 전월 비가동에서 당월 가동 전환</li>
+												<li>비가동전환: 전월 가동에서 당월 비가동 전환</li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>수금률</span>
+									</label>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>퀘스트 달성률</span>
+									</label>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>전월대비 퀘스트 달성률</span>
+									</label>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>이탈예상 설계사</span>
+									</label>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											모바일 활동량, 실적 등을 기준으로  <br> 휴면설계사가 될 확률이 높은 설계사에요.
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>휴면설계사</span>
+									</label>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											직전 3개월 무실적인 설계사에요.
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="search-tit">
+								<strong>혜택</strong>
+								<span>BENEFIT</span>
+							</div>
+
+							<div class="search-check">
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<strong>전체선택</strong>
+									</label>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>소득구간</span>
+									</label>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>전월대비 소득</span>
+									</label>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">조회월 기준: 전월/전전월 비교<br>예) 9월 검색 후, 조회 시: 7,8월<br> 실적에 대한 소득 비교</div><!-- [M 2022-10-20] 툴팁 수정 -->
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>포인트 적립</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="search-tit">
+								<strong>조직</strong>
+								<span>PEOPLE</span>
+							</div>
+							<div class="search-check">
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<strong>전체선택</strong>
+									</label>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>교육대상자</span>
+									</label>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>교육수강여부</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="search-tit">
+								<strong>활동</strong>
+								<span>ACTIVITY</span>
+							</div>
+							<div class="search-check">
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<strong>전체선택</strong>
+									</label>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>월 평균 로그인 횟수</span>
+									</label>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>전월대비 로그인 횟수</span>
+									</label>
+								</div>
+								<div>
+									<label>
+										<input type="checkbox" name="" id="">
+										<span>일 평균 접속 시간</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="search-btn">
+						<button class="btn-action c3">초기화</button>
+						<button class="btn-action c1">다음</button>
+					</div>
+				</div>
+			</div>
+			<div class="sub">
+				<button type="button" class="btn-action c3">지점장 공지하기</button>
+				<button type="button" class="btn-action c3">엑셀 다운로드</button>
+			</div>
+			<div class="search-condition">
+				<span>2022.07.30 기준</span>
+				<span>강남사업단</span>
+				<span>강남1지점</span>
+			</div>
+			<div class="tit-sub2">
+				<h3>검색결과 25건</h3>
+				<div class="sub">
+					<select name="" id="" class="selectbox">
+						<option value="">차월순</option>
+						<option value="" selected>이름순</option>
+					</select>
+				</div>
+			</div>
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<col style="width:30px">
+						<col style="width:100px">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">
+								<label class="label-check t1">
+									<input type="checkbox" >
+									<span>전체선택</span>
+								</label>
+							</th>
+							<th scope="col">설계사이름</th>
+							<th scope="col">사번</th>
+							<th scope="col">생년월일</th>
+							<th scope="col">입사일자</th>
+							<th scope="col">차월</th>
+							<th scope="col">사업단</th>
+							<th scope="col">지점</th>
+							<th scope="col">팀</th>
+							<th scope="col">전속/교차여부</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<label class="label-check t1">
+									<input type="checkbox" >
+									<span>선택</span>
+								</label>
+							</td>
+							<td>
+								<a href="#" class="btn-link1">김하나</a>
+							</td>
+							<td>3535354</td>
+							<td>2022.02.22/여</td>
+							<td>2022.02.22</td>
+							<td>30차월</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1팀</td>
+							<td>교차</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="label-check t1">
+									<input type="checkbox" >
+									<span>선택</span>
+								</label>
+							</td>
+							<td>
+								<a href="#" class="btn-link1">김하나</a>
+							</td>
+							<td>3535354</td>
+							<td>2022.02.22/여</td>
+							<td>2022.02.22</td>
+							<td>30차월</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1팀</td>
+							<td>전속</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="label-check t1">
+									<input type="checkbox" >
+									<span>선택</span>
+								</label>
+							</td>
+							<td>
+								<a href="#" class="btn-link1">김하나</a>
+							</td>
+							<td>3535354</td>
+							<td>2022.02.22/여</td>
+							<td>2022.02.22</td>
+							<td>30차월</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1팀</td>
+							<td>교차</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="label-check t1">
+									<input type="checkbox" >
+									<span>선택</span>
+								</label>
+							</td>
+							<td>
+								<a href="#" class="btn-link1">김하나</a>
+							</td>
+							<td>3535354</td>
+							<td>2022.02.22/여</td>
+							<td>2022.02.22</td>
+							<td>30차월</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1팀</td>
+							<td>전속</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="label-check t1">
+									<input type="checkbox" >
+									<span>선택</span>
+								</label>
+							</td>
+							<td>
+								<a href="#" class="btn-link1">김하나</a>
+							</td>
+							<td>3535354</td>
+							<td>2022.02.22/여</td>
+							<td>2022.02.22</td>
+							<td>30차월</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1팀</td>
+							<td>교차</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="label-check t1">
+									<input type="checkbox" >
+									<span>선택</span>
+								</label>
+							</td>
+							<td>
+								<a href="#" class="btn-link1">김하나</a>
+							</td>
+							<td>3535354</td>
+							<td>2022.02.22/여</td>
+							<td>2022.02.22</td>
+							<td>30차월</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1팀</td>
+							<td>전속</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="label-check t1">
+									<input type="checkbox" >
+									<span>선택</span>
+								</label>
+							</td>
+							<td>
+								<a href="#" class="btn-link1">김하나</a>
+							</td>
+							<td>3535354</td>
+							<td>2022.02.22/여</td>
+							<td>2022.02.22</td>
+							<td>30차월</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1팀</td>
+							<td>교차</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="label-check t1">
+									<input type="checkbox" >
+									<span>선택</span>
+								</label>
+							</td>
+							<td>
+								<a href="#" class="btn-link1">김하나</a>
+							</td>
+							<td>3535354</td>
+							<td>2022.02.22/여</td>
+							<td>2022.02.22</td>
+							<td>30차월</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1팀</td>
+							<td>전속</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="label-check t1">
+									<input type="checkbox" >
+									<span>선택</span>
+								</label>
+							</td>
+							<td>
+								<a href="#" class="btn-link1">김하나</a>
+							</td>
+							<td>3535354</td>
+							<td>2022.02.22/여</td>
+							<td>2022.02.22</td>
+							<td>30차월</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1팀</td>
+							<td>교차</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="label-check t1">
+									<input type="checkbox" >
+									<span>선택</span>
+								</label>
+							</td>
+							<td>
+								<a href="#" class="btn-link1">김하나</a>
+							</td>
+							<td>3535354</td>
+							<td>2022.02.22/여</td>
+							<td>2022.02.22</td>
+							<td>30차월</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>강남1팀</td>
+							<td>전속</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="paging">
+				<div class="btns2">
+					<button type="button" class="btn-action c3" onclick="window.open('./print_pop.html', '출력하기', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=300, height=220, top=300, left=200');">출력하기</button>
+				</div>
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

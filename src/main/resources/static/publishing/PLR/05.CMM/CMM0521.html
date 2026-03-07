@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>도와주세요 | 등록/수정 | 공동청약</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-20]	① 지역명칭 변경
+	*					② 본인소개 rows="3" 삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>도와주세요 등록</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단 문구] -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>도움이 필요한 내용을<br>작성해주세요.</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [정보입력] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend>도와주세요 등록 입력</legend>
+
+			<!-- # 제목 입력 # -->
+			<dl class="form">
+				<dt>제목 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<input type="text" class="text" title="제목" placeholder="제목을 입력해주세요.">
+					<input type="text" class="text" title="제목" placeholder="제목을 입력해주세요." aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+					<div class="validation">제목을 입력해주세요.</div>
+				</dd>
+			</dl>
+
+			<!-- # 요청 내용 입력 # -->
+			<dl class="form">
+				<dt>요청 내용 입력 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<textarea cols="50" class="textarea" title="본인 소개" placeholder="내용을 입력해주세요.&#10;&#10;고객 개인정보와 관련된 내용&#10;(주민번호, 전화번호, 이메일 등)이 &#10;글에 포함될 경우 관리자에 의해 통보없이 &#10;삭제될 수 있습니다."></textarea>
+					<textarea cols="50" class="textarea" title="본인 소개" placeholder="내용을 입력해주세요.&#10;&#10;고객 개인정보와 관련된 내용&#10;(주민번호, 전화번호, 이메일 등)이 &#10;글에 포함될 경우 관리자에 의해 통보없이 &#10;삭제될 수 있습니다." aria-invalid="true"></textarea><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+					<div class="validation">내용을 입력해주세요.</div>
+				</dd>
+			</dl>
+
+			<!-- # 희망 지역 # -->
+			<dl class="form">
+				<dt>희망 지역(단일 최대 2개까지) <em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>지역 전체</span>
+						</label>
+					</div>
+
+					<!-- [M 2022-09-20] 지역명칭 변경 -->
+					<div class="label-check2 col2">
+						<label>
+							<input type="checkbox">
+							<span>서울권</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>경기 북부권</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>경기 남부권</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>인천</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>강원권</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>충남권</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>충북권</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>경남권</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>경권북</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>전남권</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>전북권</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>제주권</span>
+						</label>
+					</div>
+					<!-- // [M 2022-09-20] -->
+				</dd>
+			</dl>
+
+			<!-- # 기여율 # -->
+			<dl class="form">
+				<dt>기여율 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<!-- 2022-12-26 버튼 삭제 -->
+					<!-- <div class="label-btn1">
+						<label>
+							<input type="radio" name="uiFormRadio1" checked>
+							<span>작성</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio1">
+							<span>협의희망</span>
+						</label>
+					</div> -->
+					<!-- //2022-12-26 버튼 삭제 -->
+
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false"> <!-- [D] 기여율 협의희망 시 disable 추가 -->
+							<span data-select="title">도움받는 사람 (본인)</span> <!-- 2022-12-26 텍스트 변경 -->
+							<span data-select="text"></span>
+						</button>
+						<div class="list">
+							<div data-label="기여율">
+								<div class="option">
+									<label><input type="radio" name="select1" value="01"><span>10%</span></label>
+									<label><input type="radio" name="select1" value="02"><span>20%</span></label>
+									<label><input type="radio" name="select1" value="03"><span>30%</span></label>
+									<label><input type="radio" name="select1" value="04"><span>40%</span></label>
+									<label><input type="radio" name="select1" value="05"><span>50%</span></label>
+									<label><input type="radio" name="select1" value="06"><span>60%</span></label>
+									<label><input type="radio" name="select1" value="07"><span>70%</span></label>
+									<label><input type="radio" name="select1" value="08"><span>80%</span></label>
+									<label><input type="radio" name="select1" value="09"><span>90%</span></label>
+									<label><input type="radio" name="select1" value="10"><span>100%</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false"> <!-- [D] 기여율 협의희망 시 disable 추가 -->
+							<span data-select="title">도와주는 사람</span> <!-- 2022-12-26 텍스트 변경 -->
+							<span data-select="text"></span>
+						</button>
+						<div class="list">
+							<div data-label="기여율">
+								<div class="option">
+									<label><input type="radio" name="select2" value="01"><span>10%</span></label>
+									<label><input type="radio" name="select2" value="02"><span>20%</span></label>
+									<label><input type="radio" name="select2" value="03"><span>30%</span></label>
+									<label><input type="radio" name="select2" value="04"><span>40%</span></label>
+									<label><input type="radio" name="select2" value="05"><span>50%</span></label>
+									<label><input type="radio" name="select2" value="06"><span>60%</span></label>
+									<label><input type="radio" name="select2" value="07"><span>70%</span></label>
+									<label><input type="radio" name="select2" value="08"><span>80%</span></label>
+									<label><input type="radio" name="select2" value="09"><span>90%</span></label>
+									<label><input type="radio" name="select2" value="10"><span>100%</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 고객 성별 # -->
+			<dl class="form">
+				<dt>고객 성별 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="uiFormRadio2" checked>
+							<span>남자</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio2">
+							<span>여자</span>
+						</label>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 고객 연령대 # -->
+			<dl class="form">
+				<dt>고객 연령대 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="label-btn1 col3">
+						<label>
+							<input type="radio" name="uiFormRadio3" checked>
+							<span>10대</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio3">
+							<span>20대</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio3">
+							<span>30대</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio3">
+							<span>40대</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio3">
+							<span>50대</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio3">
+							<span>60대 이상</span>
+						</label>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 고객과의 관계 # -->
+			<dl class="form">
+				<dt>고객과의 관계 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<input type="text" class="text" title="고객과의 관계" placeholder="예) 가족, 친지, 지인, 친구 등">
+					<input type="text" class="text" title="고객과의 관계" placeholder="예) 가족, 친지, 지인, 친구 등" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+					<div class="validation">고객과의 관계를 입력해주세요.</div>
+				</dd>
+			</dl>
+
+			<!-- # 고객 접촉 유무 # -->
+			<dl class="form">
+				<dt>고객 접촉 유무 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="uiFormRadio4" checked>
+							<span>없음</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio4">
+							<span>1회</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio4">
+							<span>2회 이상</span>
+						</label>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 상품군 # -->
+			<dl class="form">
+				<dt>상품군 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>상품 전체</span>
+						</label>
+					</div>
+
+					<div class="label-check2 col2">
+						<label>
+							<input type="checkbox">
+							<span>질병/상해</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>자녀</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>운전자</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>재물</span>
+						</label>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 희망 계약 상품명 # -->
+			<dl class="form">
+				<dt>희망 계약 상품명</dt>
+				<dd><input type="text" class="text" placeholder="상품명을 입력해주세요."></dd>
+			</dl>
+
+			<!-- # 고객 접촉 유무 # -->
+			<dl class="form">
+				<dt>게시 기간 설정 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="label-btn1 col3">
+						<label>
+							<input type="radio" name="uiFormRadio5" checked>
+							<span>일주일</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio5">
+							<span>1개월</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio5">
+							<span>3개월</span>
+						</label>
+					</div>
+				</dd>
+				<dd class="mes3">승인 완료 후 설정한 기간 동안 게시글이 게시됩니다.</dd>
+			</dl>
+
+			<!-- # 이미지 첨부 # -->
+			<dl class="form">
+				<dt>이미지 첨부 <a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt>
+				<!-- [D] 등록후 노출 -->
+				<dd class="data-file1">
+					<ul>
+						<li>
+							<span class="img"><img src="../../resource/img/temp/@img_banner1.png" alt=""></span>
+							<span>파일명.jpg</span>
+							<span class="sub">00KB</span>
+							<button type="button" class="icon-com1 ic6">삭제</button>
+						</li>
+						<li>
+							<span class="img"><img src="../../resource/img/temp/@img_banner2.png" alt=""></span>
+							<span>유용한 정보활용방법 캡쳐.png</span>
+							<span class="sub">56KB</span>
+							<button type="button" class="icon-com1 ic6">삭제</button>
+						</li>
+					</ul>
+				</dd>
+				<!-- // -->
+				<dd class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1 ic3">이미지 첨부</a>
+				</dd>
+			</dl>
+
+			<!-- # 관련 컨텐츠 첨부 # -->
+			<dl class="form">
+				<dt>관련 컨텐츠 첨부</dt>
+				<!-- [D] 등록후 노출 -->
+				<dd class="data-file1">
+					<ul>
+						<li>
+							<span class="img"><img src="../../resource/img/temp/@img_banner1.png" alt=""></span>
+							<span>[교육] 뇌혈관질환 진단비 분석</span>
+							<button type="button" class="icon-com1 ic6">삭제</button>
+						</li>
+						<li>
+							<span class="img"><img src="../../resource/img/temp/@img_banner2.png" alt=""></span>
+							<span>[활동] 지금 보험시장은 진단비 눈치싸움이 눈치싸움이</span>
+							<button type="button" class="icon-com1 ic6">삭제</button>
+						</li>
+					</ul>
+				</dd>
+				<!-- // -->
+				<dd class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1 ic3">관련 컨텐츠 첨부</a>
+				</dd>
+			</dl>
+			<!-- # // # -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">등록</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 이미지 첨부 안내 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">이미지 첨부 안내사항</dt>
+		<dd>
+			<ul class="txt-bul3">
+				<li>첨부파일의 사이즈는 <strong>000px X 000px</strong> 사이즈를 준수해주세요.</li>
+				<li>첨부파일은 <strong>png, jpg, jpeg, bmp, gif</strong> 파일만 등록이 가능합니다.</li>
+				<li>첨부파일 용량은 <strong>5M</strong>를 넘을 수 없습니다.</li>
+				<li>첨부파일을 등록하면, 퀴즈 내용 하단에 자동으로 노출됩니다.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">이미지 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+<!-- ##################################### -->
+</body>
+</html>

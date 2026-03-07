@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 물건등록 | 재물보험 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-10]	① 건물구조 디폴트 버튼 추가 및 마크업 변경
+	*	[M 2022-11-11]	① 특수건물 아이콘 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>물건등록</h1>
+			<button type="button" data-btn="pop-close">물건등록 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<div class="form-wrap1 line2">
+				<!-- ### 소재지 ### -->
+				<fieldset>
+					<legend class="tit">소재지</legend>
+					<div class="side"> <!-- [M 2022-08-31] 체크박스 추가 -->
+						<div class="label-check1 t1">
+							<label>
+								<input type="checkbox">
+								<span>계약자 동일</span>
+							</label>
+						</div>
+					</div>
+					<dl class="form">
+						<dt>주소 정보 <em class="icon-required2">필수</em></dt> <!-- [M 2022-08-31] 문구변경 -->
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="radio1" checked>
+									<span>집</span>
+								</label>
+								<label>
+									<input type="radio" name="radio1">
+									<span>직장</span>
+								</label>
+								<label>
+									<input type="radio" name="radio1">
+									<span>직접검색</span>
+								</label>
+							</div>
+
+							<!-- [CASE] 집/직장 -->
+							<div>
+								<!-- [D] 기본 -->
+								<data class="text disabled" value="" data-label="주소"></data>
+								<input type="text" class="text" title="상세주소" placeholder="상세 주소를 입력해주세요" value="">
+								<!-- [D] 선택 및 검색 후 -->
+								<data class="text disabled" value="(01234) 서울특별시 중구 소월로 3" data-label="주소">(01234) 서울특별시 중구 소월로 3</data>
+								<input type="text" class="text" title="상세주소" placeholder="상세 주소를 입력해주세요" value="302호">
+							</div>
+
+							<!-- [CASE] 직접입력 -->
+							<div>
+								<!-- [D] 기본 -->
+								<div class="input-btn1">
+									<data class="text" value="" data-label="소재지를 검색해주세요."></data>
+									<button type="button" class="icon-com1 ic2">소재지 직접검색</button>
+								</div>
+								<!-- [D] 검색 후 -->
+								<div class="input-btn1">
+									<data class="text disabled" value="" data-label="소재지를 검색해주세요.">(55936) 전북 임실군 청웅면</data>
+									<button type="button" class="icon-com1 ic2">소재지 직접검색</button>
+								</div>
+								<!-- // -->
+								<div class="text">
+									<input type="text" title="상세주소" placeholder="상세 주소를 입력해주세요" value="청계">
+									<span class="util1">리</span>
+								</div>
+								<!-- // -->
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">선택</span>
+										<span data-select="text" data-value="null">선택</span>
+									</button>
+									<div class="list">
+										<div>
+											<div class="option">
+												<label><input type="radio" name="selectOption4" value=""><span>선택</span></label>
+												<label><input type="radio" name="selectOption4" value="1"><span>일반</span></label>
+												<label><input type="radio" name="selectOption4" value="2"><span>산</span></label>
+												<label><input type="radio" name="selectOption4" value="3"><span>블럭(공업단지)</span></label>
+												<label><input type="radio" name="selectOption4" value="4"><span>기타</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- // -->
+								<div class="input-wrap1">
+									<div class="text">
+										<input type="tel" title="동호수" value="256">
+										<span class="util1">블럭</span>
+									</div>
+									<span class="util1">-</span>
+									<div class="text">
+										<input type="tel" title="동호수" value="41">
+										<span class="util1">블럭</span>
+									</div>
+								</div>
+								<!-- // -->
+								<input type="text" class="text" title="상세주소" placeholder="상세 주소를 입력해주세요" value="302호">
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 소유자 ### -->
+				<fieldset>
+					<legend class="tit">소유자</legend>
+					<!--
+						[M 2022-08-31] 삭제
+						<p class="mes">설계동의 만료일자 2022.03.25</p>
+					-->
+
+					<dl class="form">
+						<dt>소유자 이름 <em class="icon-required2">필수</em></dt> <!-- [M 2022-08-31] 문구변경 -->
+						<dd>
+							<!-- [CASE1] 고객명을 직접 입력할 경우 -->
+							<input type="text" class="text" title="고객명" placeholder="고객명을 입력해주세요" value="">
+
+							<!-- [CASE2] 계약자 동일 체크할 경우 -->
+							<input type="text" class="text" title="고객명" placeholder="고객명을 입력해주세요" value="하다미" readonly>
+
+							<!--
+								[M 2022-08-31] 삭제
+								[CASE2] 고객찾기에서 고객 정보를 가져올 경우
+								<input type="text" class="text" title="고객명" placeholder="고객명을 입력해주세요" disabled>
+								<div class="info-data3 info">
+									<div class="data-info2" data-value="102701">
+										<strong>하다미</strong>
+										<span>
+											<span>1990.01.01</span>
+											<span>남</span>
+										</span>
+									</div>
+									<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+								</div>
+							-->
+						</dd>
+						<!--
+							[M 2022-08-31] 삭제
+							<dd class="side">
+								<button type="button" class="btn-sub3 c2">고객등록</button>
+								<button type="button" class="btn-sub3 c2">고객찾기</button>
+							</dd>
+						-->
+						<!-- // -->
+						<dd class="mes2">임차배상에 가입할 때 임차인이름을 기재하세요.</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 건물구조 ### -->
+				<fieldset>
+					<legend class="tit">건물구조</legend>
+
+					<div class="side">
+						<button type="button" class="btn-sub3 c2">건축물대장조회</button>
+						<button type="button" class="btn-sub3 c2">자주 찾는 건물구조</button>
+					</div>
+
+					<!-- 2022-11-10 건물구조 버튼 추가 -->
+					<div class="area-btn1">
+						<button class="btn-com1 ic3">건물구조 선택</button>
+					</div>
+					<!-- //2022-11-10 건물구조 버튼 추가 -->
+
+					<div class="form-box">
+						<!-- # 기둥형태 # -->
+						<dl class="form">
+							<dt>기둥형태 <em class="icon-required2">필수</em></dt>
+							<!-- <dd>
+								<div class="input-btn1">
+									<data class="selectbox" value="" data-label="선택"></data>
+									<button type="button">기둥형태선택</button>
+								</div>
+
+								<div class="input-btn1">
+									<data class="selectbox" value="1" data-label="선택">프리스트레스트콘크리트조</data>
+									<button type="button">기둥형태선택</button>
+								</div>
+							</dd> -->
+							<!-- 2022-11-10 마크업 변경 -->
+							<dd>
+								<div class="input-btn1">
+									<data class="text" data-label="기둥형태를 선택해주세요" value="철골철근콘크리트조">철골철근콘크리트조</data>
+									<button type="button" class="icon-com1 ic2">기둥형태 검색</button>
+								</div>
+							</dd>
+							<!-- //2022-11-10 마크업 변경 -->
+							<!-- [D] 건축물대장조회 결과가 오타로 등록되어 건물구조와 옵션이 맞지 않는 경우 노출 -->
+							<dd class="mes">건축물대장조회결과: 시맨트구조</dd>
+						</dl>
+
+						<!-- # 지붕형태 # -->
+						<dl class="form">
+							<dt>지붕형태 <em class="icon-required2">필수</em></dt>
+							<!-- <dd>
+								<div class="input-btn1">
+									<data class="selectbox" value="" data-label="선택"></data>
+									<button type="button">지붕형태선택</button>
+								</div>
+
+								<div class="input-btn1">
+									<data class="selectbox" value="1" data-label="선택">샌드위치판넬즙</data>
+									<button type="button">지붕형태선택</button>
+								</div>
+							</dd> -->
+							<!-- 2022-11-10 마크업 변경 -->
+							<dd>
+								<div class="input-btn1">
+									<data class="text" data-label="지붕형태 선택해주세요" value="샌드위치판넬즙">샌드위치판넬즙</data>
+									<button type="button" class="icon-com1 ic2">지붕형태 검색</button>
+								</div>
+							</dd>
+							<!-- //2022-11-10 마크업 변경 -->
+						</dl>
+
+						<!-- # 외벽형태 # -->
+						<dl class="form">
+							<dt>외벽형태 <em class="icon-required2">필수</em></dt>
+							<!-- <dd>
+								<div class="input-btn1">
+									<data class="selectbox" value="" data-label="선택"></data>
+									<button type="button">외벽형태검색</button>
+								</div>
+
+								<div class="input-btn1">
+									<data class="selectbox" value="1" data-label="선택">프리캐스트판넬</data>
+									<button type="button">외벽형태검색</button>
+								</div>
+							</dd> -->
+							<!-- 2022-11-10 마크업 변경 -->
+							<dd>
+								<div class="input-btn1">
+									<data class="text" data-label="외벽형태를 선택해주세요" value="치장벽돌">치장벽돌</data>
+									<button type="button" class="icon-com1 ic2">치장벽돌 검색</button>
+								</div>
+							</dd>
+							<!-- //2022-11-10 마크업 변경 -->
+						</dl>
+
+						<!-- # 건물급수/적용급수 # -->
+						<dl class="form">
+							<dt>건물급수/적용급수 <em class="icon-required2">필수</em></dt>
+							<dd>
+								<div class="input-wrap1">
+									<!-- [건물급수] -->
+									<data class="text disabled" value="1급" data-label="건물급수">1급</data>
+
+									<!-- [적용급수] -->
+									<div class="select-wrap w50" data-autoset="select">
+										<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+											<span data-select="title">적용급수</span>
+											<span data-select="text" data-value="1">1급</span>
+										</button>
+										<div class="list">
+											<div data-label="적용급수">
+												<div class="option">
+													<label><input type="radio" name="selectOption4" value="1" checked><span>1급</span></label>
+													<label><input type="radio" name="selectOption4" value="2"><span>2급</span></label>
+													<label><input type="radio" name="selectOption4" value="3"><span>3급</span></label>
+													<label><input type="radio" name="selectOption4" value="4"><span>4급</span></label>
+												</div>
+												<button type="button" data-toggle="closebtn">확인</button>
+											</div>
+										</div>
+									</div>
+									<!-- // -->
+								</div>
+							</dd>
+							<dd class="mes2">해당 건물에 천막, 비닐 등 가연성 구조물이 연결되어있으면, 반드시 심사부서와 건물급수를 협의해주시기 바랍니다.</dd>
+						</dl>
+					</div>
+				</fieldset>
+
+				<!-- ### 추가정보 ### -->
+				<fieldset>
+					<legend class="tit">추가정보</legend>
+
+					<!-- # 지상/지하 # -->
+					<dl class="form">
+						<dt>지상/지하 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="input-wrap1">
+								<div class="text num1">
+									<input type="tel" title="지상 층수" placeholder="지상 층수" value="">
+									<span class="util1">층</span>
+								</div>
+								<div class="text num1">
+									<input type="tel" title="지하 층수" placeholder="지하 층수" value="">
+									<span class="util1">층</span>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 가입대상 # -->
+					<dl class="form">
+						<dt>가입대상 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="radio2">
+									<span>전체</span>
+								</label>
+								<label>
+									<input type="radio" name="radio2">
+									<span>일부</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 가입면적 # -->
+					<dl class="form">
+						<dt>가입면적 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="input-wrap1">
+								<div class="text num1">
+									<input type="tel" title="가입면적" value="">
+									<span class="util1">m&sup2;</span>
+								</div>
+								<span class="util1">=</span>
+								<div class="text num1">
+									<input type="tel" title="가입면적(평)" value="">
+									<span class="util1">평</span>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 세부장소 # -->
+					<dl class="form">
+						<dt>세부장소(건물의 일부인 경우) <em class="icon-required2">필수</em></dt>
+						<dd><input type="text" class="text" title="세부장소" placeholder="예) 3층 303호"></dd>
+						<dd class="mes2">건물의 일부만 가입하는 경우(연립주택, 아파트 등) 세부장소에 층, 호수 등을 입력해주세요.</dd>
+					</dl>
+
+					<!-- # 특수건물 # -->
+					<dl class="form">
+						<dt><a href="javascript:void(0);" class="icon-com2 ic1 right">특수건물</a></dt> <!-- 2022-11-11 특수건물 툴팁 추가 -->
+						<dd>
+							<!-- [D] 검색전 -->
+							<div class="input-btn1">
+								<data class="text" data-label="대상을 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">특수건물할인율검색</button>
+							</div>
+							<!-- [D] 검색후 -->
+							<div class="input-btn1">
+								<data class="text" data-label="대상을 검색해주세요." value="대상/등지(3)">대상/등지(3)</data>
+								<button type="button" class="icon-com1 ic2">특수건물할인율검색</button>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- ### 영위업종 ### -->
+				<fieldset>
+					<legend class="tit">영위업종</legend>
+					<!-- # 가입업종선택 # -->
+					<dl class="form">
+						<dt>가입업종선택 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="input-btn1">
+								<data class="text" data-label="가입업종선택" value=""></data>
+								<button type="button" class="icon-com1 ic2">업종찾기</button>
+							</div>
+						</dd>
+						<dd class="mes2">실제 가입하는 업종을 선택해주세요.<br>층별 방화구역이 있는 1, 2급 건물인 경우 가입하는 층 내 모든 업종을 선택해주세요.</dd>
+					</dl>
+
+					<!-- # 주변업종선택 # -->
+					<dl class="form">
+						<dt>주변업종선택 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- [CASE1] -->
+							<div class="area-btn1">
+								<button class="btn-com1 ic14">자주찾는업종</button>
+								<button class="btn-com1 ic2">업종찾기</button>
+							</div>
+
+							<!-- [CASE2] '가입업종 이외에 건물 내 다른 업종 없음' 체크시 입주업종 비활성 -->
+							<div class="area-btn1">
+								<button class="btn-com1 ic14" disabled>자주찾는업종</button>
+								<button class="btn-com1 ic2" disabled>업종찾기</button>
+							</div>
+						</dd>
+						<dd class="mes2">건물 내 입주한 업종을 모두 선택해주세요.</dd>
+					</dl>
+
+					<!-- 2022-12-13 변경 -->
+					<!-- # [CASE] 자주찾는 업종 선택 결과값 노출 # -->
+					<div class="data-word2">
+						<ul>
+							<li>
+								<span>시장</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>교회, 성당</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>예식장</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>다가구,다중…</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>직물재단 및…</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>사찰</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>예식장</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>금속기계기…</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>오피스텔</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>다가구,다중…</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>목욕장</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+						</ul>
+					</div>
+
+					<!-- # 선택 # -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>가입업종 이외에 건물 내 다른 업종 없음</span>
+						</label>
+					</div>
+					<!-- //2022-12-13 변경 -->
+
+					<dl class="form">
+						<dt>요율적용업종</dt>
+						<dd><data class="text disabled" data-label="요율적용업종" value=""></data></dd>
+						<dd class="mes2">건물 내 입주한 업종이 선택되면, 그 중 요율이 가장 높은 업종이 "요율업종"으로 표시됩니다.</dd>
+					</dl>
+				</fieldset>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]주행거리예상환급 | 자동차 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-26]	① 타이틀 변경
+	*					② 총보험료 툴팁 버튼 및 내용 추가
+	*					③ 예상 주행거리 class num1 추가
+	*					④ 테이블 타이틀 변경
+	*					⑤ 하단 안내문구 전체 변경
+	*					⑥ [확인] 버튼 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>주행거리별 예상환급금(선할인)</h1> <!-- [M 2022-09-26] 타이틀 변경 -->
+			<button type="button" data-btn="pop-close">주행거리별 예상환급금(선할인) 닫기</button> <!-- [M 2022-09-26] 타이틀 변경 -->
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [주행거리특약 상세정보] -->
+			<!-- ######################### -->
+			<div class="wrap-section2">
+				<h2 class="hide">주행거리특약 상세정보</h2>
+				<div class="info-con2">
+					<dl>
+						<dt>총 보험료 <a href="#uiTOOLTIPINFO2" data-btn="tooltip" class="icon-com2 ic2">총 보험료 안내</a></dt> <!-- [M 2022-09-26] 툴팁추가 -->
+						<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+					</dl>
+					<!-- [D] 선할인의 경우 노출 -->
+					<dl>
+						<dt>선할인보험료</dt>
+						<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+					</dl>
+					<!-- // -->
+					<dl>
+						<dt>최초 주행거리</dt>
+						<dd class="data-num1"><strong>000,000</strong><span>Km</span></dd>
+					</dl>
+					<dl>
+						<dt>최초 사진 등록일</dt>
+						<dd>0000.00.00</dd>
+					</dl>
+				</div>
+				<!-- <div class="mes-info2 box"><p>긴급출동서비스 보험료는 제외된 금액입니다.</p></div> --> <!-- [M 2022-09-26] 삭제 -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [예상거리 조회] -->
+			<!-- ######################### -->
+			<fieldset class="form-search2">
+				<legend>예상거리 조회(모든항목 필수입력)</legend>
+
+				<!-- # 예상 주행거리 # -->
+				<dl class="form">
+					<dt>예상 주행거리 <em class="icon-required2">필수</em><a href="#uiTOOLTIPINFO1" data-btn="tooltip" class="icon-com2 ic2">거리단위 안내</a></dt>
+					<dd>
+						<!-- [CASE1] 입력전/정상 -->
+						<div class="text num1"> <!-- [M 2022-09-26] 클래스 num1 추가 -->
+							<input type="tel" title="예상 주행거리(Km)" placeholder="주행거리를 입력해주세요.">
+							<span class="util">Km</span>
+						</div>
+
+						<!-- [CASE2] 오류 -->
+						<div class="text num1">
+							<input type="tel" title="예상 주행거리(Km)" placeholder="주행거리를 입력해주세요." aria-invalid="true"> <!--  aria-invalid="true" 추가 -->
+							<span class="util">Km</span>
+						</div>
+						<div class="validation">예상 주행거리를 입력해주세요.</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 예상 사진등록일 # -->
+				<dl class="form">
+					<dt>예상 사진등록일 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- [CASE1] 입력전/정상 -->
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">예상 사진등록일 선택</button>
+								<input type="text" title="예상 사진등록일" placeholder="사진등록일을 선택해주세요." readonly>
+							</span>
+						</div>
+
+						<!-- [CASE2] 오류 -->
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">예상 사진등록일 선택</button>
+								<input type="text" title="예상 사진등록일" placeholder="사진등록일을 선택해주세요." readonly aria-invalid="true"> <!--  aria-invalid="true" 추가 -->
+							</span>
+						</div>
+						<div class="validation">예상 사진등록일을 선택해 주세요.</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 조회 버튼 # -->
+				<div class="area-btn1">
+					<button type="button" class="btn-com1 c1" id="btnSearch">조회</button> <!-- [D] id="btnSearch" 임시로 정의함 : 변경필요 -->
+				</div>
+				<!-- # // # -->
+			</fieldset>
+
+			<div class="tbl-data1">
+				<!-- 2022-12-30 추가 -->
+				<div class="mes-info2 box"><p>예상환급금은 정산 전 환급금액이 발생하는 계약변경이 발생하거나 사진등록일이 다른 경우 금액이 변경될 수 있습니다.</p></div>
+				<!-- //2022-12-30 추가 -->
+				<table>
+					<caption class="tit">연간 주행거리별 예상환급금</caption> <!-- [M 2022-09-26] 텍스트 변경 -->
+					<colgroup>
+						<col style="width:40%">
+						<col style="width:30%">
+						<col style="width:30%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">연간 주행거리</th>
+							<th scope="col">할인율</th>
+							<th scope="col">예상환급금</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><!-- [D] 해당 할인정보 class="active" 추가 -->
+							<td>2,000Km 이하</td>
+							<td>42%</td>
+							<td><div class="data-num1"><strong>343,140</strong><span>원</span></div></td>
+						</tr>
+						<tr>
+							<td>3,000Km 이하</td>
+							<td>37%</td>
+							<td><div class="data-num1"><strong>302,290</strong><span>원</span></div></td>
+						</tr>
+						<tr>
+							<td>5,000Km 이하</td>
+							<td>31%</td>
+							<td><div class="data-num1"><strong>253,270</strong><span>원</span></div></td>
+						</tr>
+						<tr>
+							<td>7,000Km 이하</td>
+							<td>26%</td>
+							<td><div class="data-num1"><strong>212,420</strong><span>원</span></div></td>
+						</tr>
+						<tr>
+							<td>10,000Km 이하</td>
+							<td>22%</td>
+							<td><div class="data-num1"><strong>179,740</strong><span>원</span></div></td>
+						</tr>
+						<tr>
+							<td>12,000Km 이하</td>
+							<td>13%</td>
+							<td><div class="data-num1"><strong>106,210</strong><span>원</span></div></td>
+						</tr>
+						<tr>
+							<td>15,000Km 이하</td>
+							<td>5%</td>
+							<td><div class="data-num1"><strong>40,850</strong><span>원</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [안내문구] -->
+			<!-- ######################### -->
+			<!-- [M 2022-09-26] 텍스트 변경 -->
+			<ul class="txt-bul1 line2">
+				<!-- 2022-12-30 변경 -->
+				<li>주행거리정산은 연간 주행거리로 환산하여 계산되므로 사진등록일에 따라 달라질 수 있어요.</li>
+				<li>
+					<div>[계산방식]</div>
+					<div>연간 주행거리=(최종 주행거리 - 최초 주행거리)&divide;사진등록일차이&times;365일(윤년366일)</div>
+				</li>
+				<!-- //2022-12-30 변경 -->
+			</ul>
+			<!-- //[M 2022-09-26] 텍스트 변경 -->
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<!-- [M 2022-09-26] [하단영역] 액션버튼 추가 -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- // [M 2022-09-26] [하단영역] 액션버튼 추가 -->
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+
+<!-- ################################################### -->
+<!-- [툴팁영역] 총보험료 안내, 예상 주행거리 안내 -->
+<!-- ################################################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">예상 주행거리 단위 안내</dt>
+		<dd>거리단위 : 1Mile - 1.09347Km</dd>
+		<dd><button type="button" data-btn="pop-close">예상 주행거리 단위 안내 닫기</button></dd>
+	</dl>
+</div>
+
+<!-- [M 2022-09-26] 툴팁 추가 -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">총 보험료 안내</dt>
+		<dd>긴급출동서비스 보험료는 제외된 금액입니다.</dd>
+		<dd><button type="button" data-btn="pop-close">총 보험료 안내 닫기</button></dd>
+	</dl>
+</div>
+<!-- //[M 2022-09-26] 툴팁 추가 -->
+<!-- ################################################### -->
+
+<script>
+//<!--
+	/* ************************************
+	* 샘플 : 조회 버튼 클릭 이벤트
+	************************************ */
+	$('#btnSearch').on('click',function(){
+		//초기화
+		$('.tbl-data1 tr').removeClass('active').removeAttr('tabindex');
+
+		//해당 할인정보 tr에 클래스 추가 및 포커스 이등 : 임의로 2번째 tr에 적용
+		$('.tbl-data1 tr:nth-child(2)').attr('tabindex','0').addClass('active').focus();
+		//$('.area-info2').removeClass('none').attr('tabindex','0').focus();
+	});
+//-->
+</script>
+</body>
+</html>

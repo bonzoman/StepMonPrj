@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L]정보더보기 | 인수심사요청및결과 | 인수심사요청및결과</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class=" t1">
+			<dl>
+				<dt class="data-info2" data-value="103202"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+					<strong>하다미</strong>
+					<span>
+						<span>1964.05.16</span>
+						<span>여</span>
+					</span>
+				</dt>
+				<dd class="data-word3">
+					<span>32세</span>
+					<span>총괄</span>
+				</dd>
+				<dd class="data2 c1">
+					<span>심사결과</span>
+					<strong>특별조건부수용승인</strong>
+				</dd>
+				<dd class="side"><button type="button" aria-controls="uiPOPLTR0105L02" class="btn-sub3 c2">상세</button></dd> <!-- [레이어팝업 호출 샘플] -->
+			</dl>
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 정보 더보기 ### -->
+<!-- ################################################### -->
+<div id="uiPOPLTR0105L02" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>정보 더보기</h1>
+			<button type="button" data-btn="pop-close">정보 더보기 닫기</button>
+		</header>
+		<div class="content">
+			<!-- [CASE1] 선택한 대상이 '사람'인 경우 -->
+			<div class="info-con2">
+				<dl>
+					<dt>단체실손추가</dt>
+					<dd>-</dd>
+				</dl>
+				<dl>
+					<dt>직업</dt>
+					<dd>회사 사무직 종사자</dd>
+				</dl>
+				<dl>
+					<dt>상해급수</dt>
+					<dd>1급/A등급</dd>
+				</dl>
+				<dl>
+					<dt>직장명</dt>
+					<dd>롯데손해보험</dd>
+				</dl>
+				<dl>
+					<dt>직무</dt>
+					<dd>사무직</dd>
+				</dl>
+				<dl>
+					<dt>운전형태</dt>
+					<dd>자가용</dd>
+				</dl>
+				<dl>
+					<dt>이륜부보장</dt>
+					<dd>-</dd>
+				</dl>
+			</div>
+
+			<!-- [CASE2] 선택한 대상이 '재물'인 경우 -->
+			<div class="info-con2">
+				<dl>
+					<dt>영위업종</dt>
+					<dd>[201000]단독주택</dd>
+				</dl>
+				<dl>
+					<dt>주변업종1</dt>
+					<dd>-</dd>
+				</dl>
+				<dl>
+					<dt>주변업종2</dt>
+					<dd>-</dd>
+				</dl>
+				<dl>
+					<dt>적용업종</dt>
+					<dd>[201000]단독주택</dd>
+				</dl>
+			</div>
+			<!-- // -->
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1">확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPLTR0105L02');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPLTR0105L02').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,2228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>고객정보 | 장기표준설계 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-24]	① 태아보험 > 추가 피보험자(산모) : 자궁경부암백신 할인대상 영역 추가
+	*	[M 2022-09-05]	① [고객정보 수정] 버튼의 위치 다시 원복
+	*					② [AM코칭] 버튼 추가
+	*	[M 2022-09-06]	① 임신주수 영역 원복
+	*	[M 2022-10-21]	① 버튼명 변경 고객정보 수정 > 고객재선택
+	*	[M 2022-10-24]	① 단순설계일경우 계약자영역에 입력영역 추가
+	*	[M 2022-11-10]	① 단순설계일경우 00세 입력 삭제
+	*					② 청약내용확인 변경
+	*	[M 2022-11-17]	① 변경관리로인한 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>장기표준설계</h1>
+		<button type="button" class="btn-t1">AM코칭</button> <!-- [M 2022-09-05] 버튼추가 -->
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [입력정보요약] DP-설계-0242 -->
+		<!-- ######################### -->
+		<div class="wrap-step1" data-sticky="top">
+			<!-- ### [상품정보] ### -->
+			<div class="info-summary2">
+				<h2 class="tit">let: 종합건강보험(더끌림 플러스)</h2>
+				<div class="info">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA220304111127-1 </dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ### [단계이동 및 입력정보요약] ###
+				현재단계표시 : <li aria-current="step">
+			-->
+			<div class="info-step1" data-autoset="toggle">
+				<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+				<div data-toggle="content">
+					<ol>
+						<!-- // -->
+						<li>
+							<span>01.주계약정보</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							<div class="data1">
+								<dl>
+									<dt>보험시기</dt>
+									<dd>0000.00.00</dd>
+								</dl>
+								<dl>
+									<dt>보험유형</dt>
+									<dd>1종/20년납/100세만기/납입면제/해지환급금미지급형</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li aria-current="step">
+							<span>02.고객정보</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							<div class="data1">
+								<dl>
+									<dt>피보험자1</dt>
+									<dd>
+										하다미/35세/여/1급(기업대표이사)
+									</dd>
+								</dl>
+								<dl>
+									<dt>피보험자2</dt>
+									<dd>하다미/35세/여/1급(기업대표이사)</dd>
+								</dl>
+								<dl>
+									<dt>계약자</dt>
+									<dd>하다미</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<span>03.가입설계</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							<div class="data1">
+								<dl>
+									<dt>월 보험료</dt>
+									<dd class="data-num1"><strong>253,000</strong><span>원</span></dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<span>04.알릴사항</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							<div class="">
+								<div class="data1">
+									<dl>
+										<dt>피보험자1</dt>
+										<dd>없음</dd>
+									</dl>
+									<dl>
+										<dt>피보험자2</dt>
+										<dd><a href="javascript:void(0);" class="link">있음</a></dd>
+									</dl>
+								</div>
+								<!-- [D] 입력되어 있지 않은경우 / 보험료산출이 안되어 있는 경우 노출 -->
+								<div class="mes-info4"><p>알릴사항은 보험료산출 후에 입력 할 수 있습니다.</p></div>
+								<!-- // -->
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<span>05.청약내용확인</span>
+							<div class="data1">
+								<!-- 2022-11-10 변경 -->
+								<dl>
+									<dt>서명방법</dt>
+									<dd>전자서명</dd>
+								</dl>
+								<dl>
+									<dt>진행방법</dt>
+									<dd>계/피 상이</dd>
+								</dl>
+								<dl>
+									<dt>청약서</dt>
+									<dd>계/피 동일</dd>
+								</dl>
+								<dl>
+									<dt>모집인</dt>
+									<dd></dd>
+								</dl>
+								<dl>
+									<dt>계약자</dt>
+									<dd>계/피 상이</dd>
+								</dl>
+								<dl>
+									<dt>피보험자</dt>
+									<dd></dd>
+								</dl>
+								<!-- //2022-11-10 변경 -->
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<span>06.일반사항</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							<div class="data1">
+								<dl>
+									<dt>증권발송유형</dt>
+									<dd>알림톡</dd>
+								</dl>
+								<dl>
+									<dt>첫회보험료</dt>
+									<dd>카드납부</dd>
+									<dd class="side">
+										<span class="CACD_000">삼성카드(1212121212121212) 테스트중입니다테스트중입니다테스트중입니다테스트중입니다테스트중입니다</span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>계속 보험료</dt>
+									<dd class="side">
+										<span class="BKCD_020">우리은행(12345678912345)</span>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+					</ol>
+
+					<!-- # 바로가기 # -->
+					<div class="btn-set1 img-set1">
+						<a href="#" class="ic1">실손정액조회</a>
+						<a href="#" class="ic2">승환여부</a>
+						<a href="#" class="ic3">가입제안서</a>
+						<a href="#" class="ic4">모바일 전자서명</a>
+					</div>
+
+					<!-- # 보험모집인 # -->
+					<div class="data1">
+						<dl>
+							<dt>보험설계사</dt>
+							<dd>김롯데(111455)</dd>
+						</dl>
+					</div>
+					<!-- # // # -->
+				</div>
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [고객정보] 상세설계 -->
+		<!-- ######################### -->
+		<div class="ui-tabcon active" data-section="detailed"> <!-- [D] 클래스명(active)추가시 컨텐츠 노출 -->
+			<!-- ### 상단타이틀 ### -->
+			<h3 class="hide">고객정보</h3>
+			<div class="tit-section line2">
+				<p>상세가입설계를 위한<br>고객정보를 입력해주세요.</p>
+				<div class="area-btn4">
+					<button type="button" class="btn-sub3 c2" data-mode="simple">단순설계로 변경</button>
+				</div>
+			</div>
+
+			<!-- ### 바로가기(피보험자/계약자) ### -->
+			<div class="area-btn4" data-sticky="top" data-scroll-tab="true">
+				<a href="#uiTabSection1" class="btn-t1 c2 active">피보험자</a> <!-- [선택됨] -->
+				<a href="#uiTabSection2" class="btn-t1 c2">계약자</a>
+				<a href="#uiTabSection3" class="btn-t1 c2">목적물</a>
+			</div>
+
+			<!-- ### 피보험자 ### -->
+			<div id="uiTabSection1" class="form-wrap1 line2" data-scroll-con="1">
+				<!-- 피보험자 : 기본 -->
+				<fieldset>
+					<legend class="tit">주피보험자</legend>
+					<div class="side">
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<span>계약자와 동일</span>
+							</label>
+						</div>
+					</div>
+
+					<!-- # 주피보험자 # -->
+					<dl class="form">
+						<dt>주피보험자</dt>
+						<dd>
+							<div class="input-btn1">
+								<data class="text" value="" data-label="고객을 검색해주세요."></data>
+								<button type="button" class="icon-com1 ic2">검색</button>
+							</div>
+
+							<!-- [CASE1] 고객검색전 : 최근가설동의고객 -->
+							<div>
+								<div class="info-data3 t2" data-scroll-wrap="true">
+									<!-- // -->
+									<label class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+										<input type="radio" name="gg1">
+										<strong>고객이름</strong>
+										<span>나이</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="100501">
+										<input type="radio" name="gg1">
+										<strong>김롯데</strong>
+										<span>5세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="101001">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>10세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="101801">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>18세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="102501">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>25세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="103501">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>35세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="106001">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>60세</span>
+									</label>
+									<!-- // -->
+								</div>
+								<div class="area-info4">
+									<p class="ic1">선택 고객을 주피보험자로 입력하기</p>
+									<div class="side"><button type="button" class="btn-sub3 c1">확인</button></div>
+								</div>
+							</div>
+
+							<!-- [CASE2] 고객검색후 : 고객정보노출 -->
+							<div class="info-data3 t1">
+								<dl>
+									<dt class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+										<strong>하다미</strong>
+										<span>
+											<span>0000.00.00</span>
+											<span>성별</span>
+										</span>
+									</dt>
+									<dd class="data3">
+										<span>보험생일</span>
+										<strong>0000.00.00</strong>
+										<span>00세</span>
+									</dd>
+									<dd class="data2">
+										<span>가입설계동의 만료일</span>
+										<strong>0000.00.00</strong>
+									</dd>
+									<dd class="data2">
+										<span>직업</span>
+										<strong>정보통신(IT)관련 개발자 및 프로그래머(모바일 애플리케이션 프로그래머 제외)</strong>
+										<strong>1급</strong>
+									</dd>
+									<dd class="side"><button type="button" class="btn-sub3 c2">수정</button></dd> <!-- 2022-11-17 텍스트 변경 -->
+									<!-- <dd class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic12">고객정보 수정</a></dd> [M 2022-09-05] 삭제 -->
+								</dl>
+							</div>
+
+							<!-- [CASE2] 고객검색후 : 사업자일경우 -->
+							<div class="info-data3 t1">
+								<dl>
+									<dt class="data-info2" data-value="ic1">
+										<strong>사업자명</strong>
+										<span>
+											<span>104-81-30770</span>
+										</span>
+									</dt>
+									<dd class="data2">
+										<span>가입설계동의 만료일</span>
+										<strong>0000.00.00</strong>
+									</dd>
+									<dd class="data2">
+										<span>직업</span>
+										<strong>정보통신(IT)관련 개발자 및 프로그래머(모바일 애플리케이션 프로그래머 제외)</strong>
+										<strong>1급</strong>
+									</dd>
+									<dd class="side"><button type="button" class="btn-sub3 c2">수정</button></dd> <!-- 2022-11-17 텍스트 변경 -->
+									<!-- <dd class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic12">고객정보 수정</a></dd> [M 2022-09-05] 삭제 -->
+								</dl>
+							</div>
+							<div class="info-data3 t1">
+								<dl>
+									<dt class="data-info2" data-value="ic1">
+										<strong>사업자명</strong>
+										<span>104-81-30770</span>
+									</dt>
+									<dd class="data2">
+										<span>가입설계동의 만료일</span>
+										<strong>0000.00.00</strong>
+									</dd>
+									<dd class="data2">
+										<span>직업</span>
+										<strong>정보통신(IT)관련 개발자 및 프로그래머(모바일 애플리케이션 프로그래머 제외)</strong>
+										<strong>1급</strong>
+									</dd>
+									<dd class="side"><button type="button" class="btn-sub3 c2">수정</button></dd> <!-- 2022-11-17 텍스트 변경 -->
+									<!-- <dd class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic12">고객정보 수정</a></dd> [M 2022-09-05] 삭제 -->
+								</dl>
+							</div>
+							<div class="info-data3 t1">
+								<dl>
+									<dt class="data-info2" data-value="ic1">
+										<strong>사업자명</strong>
+									</dt>
+									<dd class="data1">
+										<span>사업자번호</span>
+										<strong>104-81-30770</strong>
+									</dd>
+									<dd class="data2">
+										<span>가입설계동의 만료일</span>
+										<strong>0000.00.00</strong>
+									</dd>
+									<dd class="data2">
+										<span>직업</span>
+										<strong>정보통신(IT)관련 개발자 및 프로그래머(모바일 애플리케이션 프로그래머 제외)</strong>
+										<strong>1급</strong>
+									</dd>
+									<dd class="side"><button type="button" class="btn-sub3 c2">수정</button></dd> <!-- 2022-11-17 텍스트 변경 -->
+									<!-- <dd class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic12">고객정보 수정</a></dd> [M 2022-09-05] 삭제 -->
+								</dl>
+							</div>
+							<!-- // -->
+						</dd>
+						<dd class="side">
+							<button type="button" class="btn-sub3 c2">고객등록</button>
+							<button type="button" class="btn-sub3 c2">고객재선택</button> <!-- [M 2022-08-12] 삭제 [M 2022-09-05] 원복 [M 2022-10-21] 텍스트 변경 -->
+						</dd>
+					</dl>
+
+					<!-- # 관계 # -->
+					<dl class="form">
+						<dt>관계</dt>
+						<dd><data class="selectbox disabled" value="본인">본인</data></dd>
+					</dl>
+
+					<!-- # 운전형태 # -->
+					<dl class="form">
+						<dt>운전형태</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="ht1" checked>
+									<span>자가용</span>
+								</label>
+								<label>
+									<input type="radio" name="ht1">
+									<span>영업용</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 이륜차 # -->
+					<dl class="form">
+						<dt>이륜차</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="bike1" checked>
+									<span>운전 안함</span>
+								</label>
+								<label>
+									<input type="radio" name="bike1">
+									<span>운전 함</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 건강등급 할인대상 : [D] 더끌림 상품인 경우에만 노출 # -->
+					<dl class="form">
+						<dt>건강정보 할인대상</dt>
+						<dd>
+							<!-- // -->
+							<div class="label-btn1" data-autoset="form">
+								<label>
+									<input type="radio" name="dsds0" data-tabcon="uiTabCon1">
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="dsds0" checked>
+									<span>아니요</span>
+								</label>
+							</div>
+
+							<!-- [D] 예 선택시 노출영역 -->
+							<div class="info-data1 t2 ui-tabcon" data-id="uiTabCon1">
+								<dl>
+									<dt class="tit">알림톡</dt>
+									<dd class="txt">건강등급확인 알림톡을 보내세요.</dd>
+									<dd class="side">
+										<button type="button" class="btn-sub3 c2">알림톡</button>
+									</dd>
+								</dl>
+								<dl>
+									<dt class="tit">건강등급확인</dt>
+									<dd class="info-con1">
+										<dl>
+											<dt>등급</dt>
+											<dd>미수신</dd>
+										</dl>
+										<dl>
+											<dt>산출일</dt>
+											<dd>미수신</dd>
+										</dl>
+										<dl>
+											<dt>수신일</dt>
+											<dd>미수신</dd>
+										</dl>
+									</dd>
+									<dd class="side">
+										<button type="button" class="btn-sub3 c2">등급확인</button>
+									</dd>
+								</dl>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 형제할인 등록 [M 2022-08-12] 내용 추가 : 인보험/태아보험 # -->
+					<dl class="form">
+						<dt>형제할인 등록</dt>
+						<dd class="area-btn1"><button type="button" class="btn-com1 ic3">형제할인 등록하기</button></dd>
+					</dl>
+
+					<!-- # 주피보험자 정보 확인 # -->
+					<dl class="form">
+						<dt>주피보험자 정보 확인</dt>
+						<dd>
+							<div class="area-btn1">
+								<a href="javascript:void(0);" class="btn-com1 c1">실손&middot;정액담보 조회</a>
+								<a href="javascript:void(0);" class="btn-com1 c1">보장분석</a>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- 추가 피보험자 -->
+				<fieldset>
+					<legend class="tit">추가 피보험자</legend>
+					<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+
+					<!-- // -->
+					<dl class="form">
+						<dt>피보험자</dt>
+						<dd>
+							<div class="input-btn1">
+								<data class="text" value="" data-label="고객을 검색해주세요."></data>
+								<button type="button" class="icon-com1 ic2">검색</button>
+							</div>
+							<!--
+							<div>
+								<div class="info-data3 t2" data-scroll-wrap="true">
+									<label class="data-info2" data-value="102701">
+										<input type="radio" name="gg1">
+										<strong>고객이름</strong>
+										<span>나이</span>
+									</label>
+
+									<label class="data-info2" data-value="100501">
+										<input type="radio" name="gg1">
+										<strong>김롯데</strong>
+										<span>5세</span>
+									</label>
+
+									<label class="data-info2" data-value="101001">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>10세</span>
+									</label>
+
+									<label class="data-info2" data-value="101801">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>18세</span>
+									</label>
+
+									<label class="data-info2" data-value="102501">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>25세</span>
+									</label>
+
+									<label class="data-info2" data-value="103501">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>35세</span>
+									</label>
+
+									<label class="data-info2" data-value="106001">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>60세</span>
+									</label>
+
+								</div>
+								<div class="area-info4">
+									<p class="ic1">선택 고객을 주피보험자로 입력하기</p>
+									<div class="side"><button type="button" class="btn-sub3 c1">확인</button></div>
+								</div>
+							</div>
+							-->
+
+							<!-- [CASE2] 고객검색후 : 고객정보노출 -->
+							<div class="info-data3 t1">
+								<dl>
+									<dt class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+										<strong>하다미</strong>
+										<span>
+											<span>0000.00.00</span>
+											<span>성별</span>
+										</span>
+									</dt>
+									<dd class="data3">
+										<span>보험생일</span>
+										<strong>0000.00.00</strong>
+										<span>00세</span>
+									</dd>
+									<dd class="data2">
+										<span>가입설계동의 만료일</span>
+										<strong>0000.00.00</strong>
+									</dd>
+									<dd class="data2">
+										<span>직업</span>
+										<strong>기획 및 마케팅 사무원</strong>
+										<strong>1급</strong>
+									</dd>
+									<dd class="side"><button type="button" class="btn-sub3 c2">수정</button></dd> <!-- 2022-11-17 텍스트 변경 -->
+									<!-- <dd class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic12">고객정보 수정</a></dd>  [M 2022-08-12] 버튼 추가 [M 2022-08-09] 버튼 삭제  -->
+								</dl>
+							</div>
+							<!-- // -->
+						</dd>
+						<dd class="side">
+							<button type="button" class="btn-sub3 c2">고객등록</button>
+							<button type="button" class="btn-sub3 c2">고객재선택</button>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>관계</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" >
+									<span data-select="title">선택하세요.</span>
+									<span data-select="text" data-value="01">본인</span>
+								</button>
+								<div class="list">
+									<div data-label="관계 선택">
+										<div class="option">
+											<label><input type="radio" name="dtRelcd1" value="01"><span>본인</span></label>
+											<label><input type="radio" name="dtRelcd1" value="02"><span>배우자</span></label>
+											<label><input type="radio" name="dtRelcd1" value="03"><span>부모</span></label>
+											<label><input type="radio" name="dtRelcd1" value="04"><span>자녀</span></label>
+											<label><input type="radio" name="dtRelcd1" value="05"><span>형제자매</span></label>
+											<label><input type="radio" name="dtRelcd1" value="08"><span>배우자부모</span></label>
+											<label><input type="radio" name="dtRelcd1" value="09"><span>자녀배우자</span></label>
+											<label><input type="radio" name="dtRelcd1" value="10"><span>친척</span></label>
+											<label><input type="radio" name="dtRelcd1" value="11"><span>고용주(사업주)</span></label>
+											<label><input type="radio" name="dtRelcd1" value="12"><span>고용주(종업원)</span></label>
+											<label><input type="radio" name="dtRelcd1" value="85"><span>동거친족</span></label>
+											<label><input type="radio" name="dtRelcd1" value="86"><span>별거친족</span></label>
+											<label><input type="radio" name="dtRelcd1" value="99"><span>기타</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>운전형태</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="ht25" checked>
+									<span>자가용</span>
+								</label>
+								<label>
+									<input type="radio" name="ht25">
+									<span>영업용</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>이륜차</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="bike2" checked>
+									<span>운전 안함</span>
+								</label>
+								<label>
+									<input type="radio" name="bike2">
+									<span>운전 함</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- # 건강 : [D] 더끌림 상품인 경우에만 노출 # -->
+					<dl class="form">
+						<dt>건강</dt>
+						<dd>
+							<div class="label-btn1" data-autoset="form">
+								<label>
+									<input type="radio" name="dsds2" data-tabcon="uiTabCon2">
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="dsds2" checked>
+									<span>아니요</span>
+								</label>
+							</div>
+							<!-- [D] 예 선택시 노출영역 -->
+							<div class="info-data1 t2 ui-tabcon" data-id="uiTabCon2">
+								<dl>
+									<dt class="tit">알림톡</dt>
+									<dd class="txt">건강등급확인 알림톡을 보내세요.</dd>
+									<dd class="side">
+										<button type="button" class="btn-sub3 c2">알림톡</button>
+									</dd>
+								</dl>
+								<dl>
+									<dt class="tit">건강등급확인</dt>
+									<dd class="info-con1">
+										<dl>
+											<dt>등급</dt>
+											<dd>미수신</dd>
+										</dl>
+										<dl>
+											<dt>산출일</dt>
+											<dd>미수신</dd>
+										</dl>
+										<dl>
+											<dt>수신일</dt>
+											<dd>미수신</dd>
+										</dl>
+									</dd>
+									<dd class="side">
+										<button type="button" class="btn-sub3 c2">등급확인</button>
+									</dd>
+								</dl>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>추가 피보험자 정보 확인</dt>
+						<dd>
+							<div class="area-btn1">
+								<a href="javascript:void(0);" class="btn-com1 c1">실손&middot;정액담보 조회</a>
+								<a href="javascript:void(0);" class="btn-com1 c1">보장분석</a>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+				<!-- // -->
+
+				<!-- 피보험자 : 재물 -->
+				<fieldset>
+					<legend class="tit">피보험자 (선택)</legend>
+					<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+
+					<!-- [D] 추가 전 -->
+					<div class="area-btn1"><button type="button" class="btn-com1 ic3">피보험자 추가하기</button></div>
+
+					<!-- # 주피보험자 # -->
+					<dl class="form">
+						<dt>주피보험자</dt>
+						<dd>
+							<div class="input-btn1">
+								<data class="text" value="" data-label="고객을 검색해주세요."></data>
+								<button type="button" class="icon-com1 ic2">검색</button>
+							</div>
+
+							<!-- [CASE1] 고객검색전 : 최근가설동의고객 -->
+							<div>
+								<div class="info-data3 t2" data-scroll-wrap="true">
+									<!-- // -->
+									<label class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+										<input type="radio" name="gg1">
+										<strong>고객이름</strong>
+										<span>나이</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="100501">
+										<input type="radio" name="gg1">
+										<strong>김롯데</strong>
+										<span>5세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="101001">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>10세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="101801">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>18세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="102501">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>25세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="103501">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>35세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="106001">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>60세</span>
+									</label>
+									<!-- // -->
+								</div>
+								<div class="area-info4">
+									<p class="ic1">선택 고객을 주피보험자로 입력하기</p>
+									<div class="side"><button type="button" class="btn-sub3 c1">확인</button></div>
+								</div>
+							</div>
+
+							<!-- [CASE2] 고객검색후 : 고객정보노출 -->
+							<div class="info-data3 t1">
+								<dl>
+									<dt class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+										<strong>하다미</strong>
+										<span>
+											<span>0000.00.00</span>
+											<span>성별</span>
+										</span>
+									</dt>
+									<dd class="data3">
+										<span>보험생일</span>
+										<strong>0000.00.00</strong>
+										<span>00세</span>
+									</dd>
+									<dd class="data2">
+										<span>가입설계동의 만료일</span>
+										<strong>0000.00.00</strong>
+									</dd>
+									<dd class="data2">
+										<span>직업</span>
+										<strong>기획 및 마케팅 사무원</strong>
+										<strong>1급</strong>
+									</dd>
+									<dd class="side"><button type="button" class="btn-sub3 c2">수정</button></dd> <!-- 2022-11-17 삭제 -->
+									<!-- <dd class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic12">고객정보 수정</a></dd>  [M 2022-08-12] 버튼 추가 [M 2022-09-05] 버튼 삭제  -->
+								</dl>
+							</div>
+							<!-- // -->
+						</dd>
+						<dd class="side">
+							<button type="button" class="btn-sub3 c2">고객등록</button>
+							<button type="button" class="btn-sub3 c2">고객정보 수정</button> <!-- [M 2022-08-12] 삭제 [M 2022-09-05] 원복 -->
+						</dd>
+					</dl>
+
+					<!-- # 관계 # -->
+					<dl class="form">
+						<dt>관계</dt>
+						<dd><data class="selectbox disabled" value="본인">본인</data></dd>
+					</dl>
+
+					<!-- # 운전형태 # -->
+					<dl class="form">
+						<dt>운전형태</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="ht2" checked>
+									<span>자가용</span>
+								</label>
+								<label>
+									<input type="radio" name="ht2">
+									<span>영업용</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 이륜차 # -->
+					<dl class="form">
+						<dt>이륜차</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="bike2" checked>
+									<span>운전 안함</span>
+								</label>
+								<label>
+									<input type="radio" name="bike2">
+									<span>운전 함</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 건강등급 할인대상 : [D] 더끌림 상품인 경우에만 노출 #
+					<dl class="form">
+						<dt>건강정보 할인대상</dt>
+						<dd>
+
+							<div class="label-btn1" data-autoset="form">
+								<label>
+									<input type="radio" name="dsds12" data-tabcon="uiTabCon1">
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="dsds12" checked>
+									<span>아니요</span>
+								</label>
+							</div>
+
+
+							<div class="info-data1 t2 ui-tabcon" data-id="uiTabCon1">
+								<dl>
+									<dt class="tit">알림톡</dt>
+									<dd class="txt">건강등급확인 알림톡을 보내세요.</dd>
+									<dd class="side">
+										<button type="button" class="btn-sub3 c2">알림톡</button>
+									</dd>
+								</dl>
+								<dl>
+									<dt class="tit">건강등급확인</dt>
+									<dd class="info-con1">
+										<dl>
+											<dt>등급</dt>
+											<dd>미수신</dd>
+										</dl>
+										<dl>
+											<dt>산출일</dt>
+											<dd>미수신</dd>
+										</dl>
+										<dl>
+											<dt>수신일</dt>
+											<dd>미수신</dd>
+										</dl>
+									</dd>
+									<dd class="side">
+										<button type="button" class="btn-sub3 c2">등급확인</button>
+									</dd>
+								</dl>
+							</div>
+
+						</dd>
+					</dl>
+					-->
+
+					<!-- # 주피보험자 정보 확인 # -->
+					<dl class="form">
+						<dt>주피보험자 정보 확인</dt>
+						<dd>
+							<div class="area-btn1">
+								<a href="javascript:void(0);" class="btn-com1 c1">실손&middot;정액담보 조회</a>
+								<a href="javascript:void(0);" class="btn-com1 c1">보장분석</a>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- 피보험자 : 태아 -->
+				<fieldset>
+					<legend class="tit">주피보험자</legend>
+
+					<!-- [M 2022-08-12] 내용 삭제
+					<div class="side">
+						<a href="javascript:void(0);" class="btn-sub2 c2">형제할인 등록</a>
+					</div>
+					-->
+
+					<!-- # 태아 # -->
+					<dl class="form">
+						<dt>태아</dt>
+						<dd>
+							<input type="text" class="text" value="태아">
+							<div class="input-wrap1">
+								<input type="tel" class="text" value="0000.00.00" placeholder="YYYY.MM.DD" disabled> <!-- [M 2022-08-12] disabled 추가 -->
+								<div class="text w1">
+									<data value="0" data-disabled="true">0</data>  <!-- [M 2022-08-12]  data-disabled="true" 추가 -->
+									<span class="util1">세</span>
+								</div>
+							</div>
+						</dd>
+						<dd class="mes">보험생일: 2022.03.08</dd>
+					</dl>
+
+					<!-- # 관계 # -->
+					<dl class="form">
+						<dt>관계</dt>
+						<dd><data class="selectbox disabled" value="본인">본인</data></dd>
+					</dl>
+
+					<!-- # 임신주수 # -->
+					<dl class="form">
+						<dt>임신주수</dt>
+						<dd>
+							<!-- [M 2022-08-12] 내용 변경 / [M 2022-09-06] 다시원복  -->
+							<div class="input-wrap1">
+								<div class="text w1">
+									<input type="tel" title="임신주수" placeholder="0">
+									<span class="util1">주</span>
+								</div>
+								<div class="input-date1">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+										<input type="text" class="text" title="날짜 선택" placeholder="날짜를 선택해주세요." readonly>
+									</span>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 유공자할인대상 # -->
+					<dl class="form">
+						<dt>유공자할인대상<a href="#uiTOOLTIPINFO1" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt> <!-- 2022-12-02 툴팁 추가 -->
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="dsds11">
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="dsds11" checked>
+									<span>아니요</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- 피보험자 : 태아 : 추가 피보험자 (산모) -->
+				<fieldset>
+					<legend class="tit">추가 피보험자 (산모)</legend>
+
+					<!-- # 피보험자 # -->
+					<dl class="form">
+						<dt>피보험자</dt> <!-- [M 2022-08-12] 문구수정 -->
+						<dd>
+							<div class="input-btn1">
+								<data class="text" value="" data-label="고객을 검색해주세요."></data>
+								<button type="button" class="icon-com1 ic2">검색</button>
+							</div>
+
+							<!-- [CASE2] 고객검색후 : 고객정보노출 -->
+							<div class="info-data3 t1">
+								<dl>
+									<dt class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+										<strong>하다미</strong>
+										<span>
+											<span>0000.00.00</span>
+											<span>성별</span>
+										</span>
+									</dt>
+									<dd class="data3">
+										<span>보험생일</span>
+										<strong>0000.00.00</strong>
+										<span>00세</span>
+									</dd>
+									<dd class="data2">
+										<span>가입설계동의 만료일</span>
+										<strong>0000.00.00</strong>
+									</dd>
+									<dd class="data2">
+										<span>직업</span>
+										<strong>기획 및 마케팅 사무원</strong>
+										<strong>1급</strong>
+									</dd>
+									<dd class="side"><button type="button" class="btn-sub3 c2">수정</button></dd> <!-- 2022-11-17 텍스트 변경 -->
+									 <!-- <dd class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic12">고객정보 수정</a></dd> [M 2022-08-12] 버튼 추가 [M 2022-09-05] 버튼 삭제 -->
+								</dl>
+							</div>
+							<!-- // -->
+						</dd>
+						<dd class="side">
+							<button type="button" class="btn-sub3 c2">고객등록</button>
+						</dd>
+					</dl>
+
+					<!-- # 관계 # -->
+					<dl class="form">
+						<dt>관계</dt>
+						<dd><data class="selectbox disabled" value="본인">본인</data></dd>
+					</dl>
+
+					<!-- # 운전형태 # -->
+					<dl class="form">
+						<dt>운전형태</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="ht3" checked>
+									<span>자가용</span>
+								</label>
+								<label>
+									<input type="radio" name="ht3">
+									<span>영업용</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 이륜차 # -->
+					<dl class="form">
+						<dt>이륜차</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="bike3" checked>
+									<span>운전 안함</span>
+								</label>
+								<label>
+									<input type="radio" name="bike3">
+									<span>운전 함</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 형제할인 등록 [M 2022-08-12] 내용 추가 : 인보험/태아보험 # -->
+					<dl class="form">
+						<dt>형제할인 등록</dt>
+						<dd class="area-btn1"><button type="button" class="btn-com1 ic3">형제할인 등록하기</button></dd>
+					</dl>
+
+					<!-- # 유공자할인대상 [M 2022-08-12] 내용 추가 # -->
+					<dl class="form">
+						<dt>유공자할인대상<a href="#uiTOOLTIPINFO1" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt> <!-- 2022-12-02 툴팁 추가 -->
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="dsds110">
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="dsds110" checked>
+									<span>아니요</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 자궁경부함백신 할인대상 [M 2022-08-24] 내용 추가 # -->
+					<dl class="form">
+						<dt>자궁경부암백신 할인대상</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="dsds1100" value="1" checked>
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="dsds1100" value="2">
+									<span>아니요</span>
+								</label>
+							</div>
+							<div class="input-date1">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">자궁경부암백신일 3차 접종 선택</button> <!-- # 아니요 선택시 disabled # -->
+									<input type="text" class="text" title="자궁경부암백신일 3차 접종 선택" placeholder="YYYY.MM.DD" readonly>
+								</span>
+							</div>
+						</dd>
+						<dd class="mes2">3차접종 완료일자를 입력해주세요.</dd>
+						<dd class="mes2">1~3차까지 백신접종을 모두 완료 했을 경우에 해당</dd>
+					</dl>
+					<!-- # // [M 2022-08-24] 내용 추가 # -->
+
+					<!-- # 피보험자 정보 확인 # -->
+					<dl class="form">
+						<dt>피보험자 정보 확인</dt><!-- [M 2022-08-12] 문구수정 -->
+						<dd>
+							<div class="area-btn1">
+								<a href="javascript:void(0);" class="btn-com1 c1">실손&middot;정액담보 조회</a>
+								<a href="javascript:void(0);" class="btn-com1 c1">보장분석</a>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+				<!-- // -->
+
+				<!-- 추가버튼 : [D] 복수 피보험자 가능한 상품만 노출 -->
+				<div class="area-btn1 line"><button type="button" class="btn-com1 ic3">피보험자 추가하기</button></div>
+				<!-- // -->
+			</div>
+
+			<!-- ### 계약자 ### -->
+			<div id="uiTabSection2" class="form-wrap1 line2" data-scroll-con="2">
+				<fieldset>
+					<legend class="tit">계약자</legend>
+
+					<!-- # 주피보험자와의 관계 # -->
+					<dl class="form">
+						<dt>주피보험자와의 관계</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택하세요.</span>
+									<span data-select="text" data-value="01">본인</span>
+								</button>
+								<div class="list">
+									<div data-label="주피보험자와의 관계">
+										<div class="option">
+											<label><input type="radio" name="RELCD" value="01"><span>본인</span></label>
+											<label><input type="radio" name="RELCD" value="02"><span>배우자</span></label>
+											<label><input type="radio" name="RELCD" value="03"><span>부모</span></label>
+											<label><input type="radio" name="RELCD" value="04"><span>자녀</span></label>
+											<label><input type="radio" name="RELCD" value="05"><span>형제자매</span></label>
+											<label><input type="radio" name="RELCD" value="08"><span>배우자부모</span></label>
+											<label><input type="radio" name="RELCD" value="09"><span>자녀배우자</span></label>
+											<label><input type="radio" name="RELCD" value="10"><span>친척</span></label>
+											<label><input type="radio" name="RELCD" value="11"><span>고용주(사업주)</span></label>
+											<label><input type="radio" name="RELCD" value="12"><span>고용주(종업원)</span></label>
+											<label><input type="radio" name="RELCD" value="85"><span>동거친족</span></label>
+											<label><input type="radio" name="RELCD" value="86"><span>별거친족</span></label>
+											<label><input type="radio" name="RELCD" value="99"><span>기타</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 계약자 # -->
+					<dl class="form">
+						<dt>계약자</dt>
+						<dd>
+							<!-- [CASE1] 관계가 본인일 경우 -->
+							<div class="input-btn1">
+								<data class="text disabled" value="" data-label="고객을 검색해주세요."></data> <!-- [D] 클래스명(disabled) 추가 -->
+								<button type="button" class="icon-com1 ic2">검색</button>
+							</div>
+							<!--  [M 2022-08-12] 하단 고객정보 내용으로 통일
+							<div class="info-data3 info">
+								<div class="data-info2" data-value="102701">
+									<strong>고객이름</strong>
+									<span>
+										<span>0000.00.00</span>
+										<span>성별</span>
+									</span>
+								</div>
+							</div>
+							-->
+
+							<!-- [CASE2] 관계가 본인이 아닐경우 -->
+							<div class="input-btn1">
+								<data class="text" value="" data-label="고객을 검색해주세요."></data>
+								<button type="button" class="icon-com1 ic2">검색</button>
+							</div>
+							<!-- 고객검색전 : 최근가설동의고객 -->
+							<div>
+								<div class="info-data3 t2" data-scroll-wrap="true">
+									<!-- // -->
+									<label class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+										<input type="radio" name="gg1">
+										<strong>고객이름</strong>
+										<span>나이</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="100501">
+										<input type="radio" name="gg1">
+										<strong>김롯데</strong>
+										<span>5세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="101001">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>10세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="101801">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>18세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="102501">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>25세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="103501">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>35세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="106001">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>60세</span>
+									</label>
+									<!-- // -->
+								</div>
+								<div class="area-info4">
+									<p class="ic1">선택 고객을 주피보험자로 입력하기</p>
+									<div class="side"><button type="button" class="btn-sub3 c1">확인</button></div>
+								</div>
+							</div>
+							<!-- 고객검색후 :  [M 2022-08-12] 하단 고객정보 내용으로 통일
+							<div class="info-data3 info">
+								<div class="data-info2" data-value="102701">
+									<strong>고객이름</strong>
+									<span>
+										<span>0000.00.00</span>
+										<span>성별</span>
+									</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+								<div class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic12">고객정보 수정</a></div>
+							</div>
+							-->
+
+							<!-- 고객검색후 : 고객정보 : 인보험/재물/태아 -->
+							<div class="info-data3 t1">
+								<dl>
+									<dt class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+										<strong>하다미</strong>
+										<span>
+											<span>0000.00.00</span>
+											<span>성별</span>
+										</span>
+									</dt>
+									<dd class="data1">
+										<span>나이</span>
+										<strong>00세</strong>
+									</dd>
+									<dd class="data2">
+										<span>가입설계동의 만료일</span>
+										<strong>0000.00.00</strong>
+									</dd>
+									<!-- [M 2022-08-12] 내용 추가 -->
+									<dd class="data2">
+										<span>직업</span>
+										<strong>기획 및 마케팅 사무원</strong>
+										<strong>1급</strong>
+									</dd>
+									<!-- // -->
+									<!-- <dd class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic12">고객정보 수정</a></dd>  [M 2022-08-12] 버튼추가 [M 2022-08-12] 버튼삭제 -->
+								</dl>
+							</div>
+							<!-- // -->
+						</dd>
+						<dd class="side">
+							<button type="button" class="btn-sub3 c2">고객등록</button>
+							<!-- <button type="button" class="btn-sub3 c2">고객정보 수정</button> [M 2022-08-12] 내용 삭제 -->
+						</dd>
+					</dl>
+
+					<!-- # 계약자주소 : 재물 [M 2022-08-12] 내용 삭제 #
+					<dl class="form">
+						<dt>계약자 주소</dt>
+						<dd class="side">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>소유자 동일</span>
+								</label>
+							</div>
+						</dd>
+						<dd class="info-con1 box">
+							<ul>
+								<li>
+									<div>집 주소</div>
+									<div>서울특별시 중구 소월로 3</div>
+								</li>
+								<li>
+									<div>직장 주소</div>
+									<div>서울특별시 강남구 강남대로 136길 31, 더클래식 1층</div>
+								</li>
+							</ul>
+							<div class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic12">고객정보 수정</a></div>
+						</dd>
+					</dl>
+					 -->
+				</fieldset>
+			</div>
+
+			<!-- ### 목적물 ### -->
+			<div id="uiTabSection3" class="wrap-section3" data-scroll-con="3">
+				<div class="tit-sub1">
+					<h3>목적물</h3>
+					<div class="side"><a href="javascript:void(0);" class="btn-sub2 c2">수정</a></div> <!-- [D] 등록 후 노출 -->
+				</div>
+
+				<!-- [CASE1] 등록후 -->
+				<div class="info-con1">
+					<dl>
+						<dt>적용급수</dt>
+						<dd>1급</dd>
+					</dl>
+					<dl>
+						<dt>영위업종</dt>
+						<dd>(2)일반음식점</dd>
+					</dl>
+					<dl>
+						<dt>적용업종</dt>
+						<dd>(2)일반음식점</dd>
+					</dl>
+					<dl>
+						<dt>특수건물</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>소재지</dt>
+						<dd>서울특별시 중구 소월로 356-12 11층</dd>
+					</dl>
+					<dl>
+						<dt>소유자</dt>
+						<dd>
+							<div class="data-info2">
+								<strong>하다미</strong>
+								<span>
+									<span>0000.00.00</span>
+									<span>성별</span>
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>보험료</dt>
+						<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+					<dl>
+						<dt>실손보상구분</dt>
+						<dd>실손비례보상</dd>
+					</dl>
+				</div>
+
+				<!-- [CASE2] 등록전 -->
+				<div class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1 ic3">물건등록</a>
+				</div>
+				<!-- // -->
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [고객정보] 단순설계 -->
+		<!-- ######################### -->
+		<div class="ui-tabcon" data-section="simple">
+			<!-- ### 상단타이틀 ### -->
+			<h3 class="hide">고객정보</h3>
+			<div class="tit-section line2">
+				<p>단순가입설계를 위한<br>고객정보를 입력해주세요.</p>
+				<div class="area-btn4">
+					<button type="button" class="btn-sub3 c2" data-mode="detailed">상세설계로 변경</button>
+				</div>
+			</div>
+
+			<!-- ### 바로가기(피보험자/계약자) ### -->
+			<div class="area-btn4" data-sticky="top" data-scroll-tab="true">
+				<a href="#uiTabSection4" class="btn-t1 c2 active">피보험자</a> <!-- [선택됨] -->
+				<a href="#uiTabSection5" class="btn-t1 c2">계약자</a>
+				<a href="#uiTabSection6" class="btn-t1 c2">목적물</a>
+			</div>
+
+			<!-- ### 피보험자 ### -->
+			<div id="uiTabSection4" class="form-wrap1 line2" data-scroll-con="1">
+				<!-- 피보험자 -->
+				<fieldset>
+					<legend class="tit">주피보험자</legend>
+					<div class="side">
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<span>계약자와 동일</span>
+							</label>
+						</div>
+					</div>
+
+					<!-- # 주피보험자 # -->
+					<dl class="form">
+						<dt>주피보험자</dt>
+						<dd>
+							<input type="text" class="text" value="홍길동" title="피보험자명은 수정 가능합니다." placeholder="고객이름을 입력해주세요.">
+							<div class="input-wrap1">
+								<input type="tel" class="text" placeholder="YYYY.MM.DD">
+								<div class="text w1">
+									<data value=""></data>
+									<span class="util1">세</span>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 성별 # -->
+					<dl class="form">
+						<dt>성별</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="gsb1" checked>
+									<span>남자</span>
+								</label>
+								<label>
+									<input type="radio" name="gsb1">
+									<span>여자</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 관계 # -->
+					<dl class="form">
+						<dt>관계</dt>
+						<dd><data class="selectbox disabled" value="본인">본인</data></dd>
+					</dl>
+
+					<!-- # 직업 # -->
+					<dl class="form">
+						<dt>직업</dt>
+						<dd>
+							<!-- // -->
+							<div class="input-wrap1">
+								<div class="input-btn1">
+									<data class="text" value="" data-label="직업을 검색해주세요."></data>
+									<button type="button" class="icon-com1 ic2">직업검색</button>
+								</div>
+								<div class="select-wrap w1" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">급수 선택</span>
+										<span data-select="text">급수</span>
+									</button>
+									<div class="list">
+										<div data-label="급수 선택">
+											<div class="option">
+												<label><input type="radio" name="smpSpIRnkGrd" value="15111"><span>1급</span></label>
+												<label><input type="radio" name="smpSpIRnkGrd" value="23141"><span>2급</span></label>
+												<label><input type="radio" name="smpSpIRnkGrd" value="83121"><span>3급</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+							<div class="info-data1">
+								<dl>
+									<dt class="tit">영업 및 판매업체 관련 사무직</dt>
+									<dd class="txt"><span>1/A</span><span><!-- 급수 --></span></dd>
+									<!-- [M 2022-08-12] 삭제
+									<dd class="area-btn1"><a href="javascript:void(0);" class="btn-com1">급수변경</a></dd>
+									-->
+								</dl>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 운전형태 # -->
+					<dl class="form">
+						<dt>운전형태</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="wjh22" checked>
+									<span>자가용</span>
+								</label>
+								<label>
+									<input type="radio" name="wjh22">
+									<span>영업용</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- 추가 피보험자 -->
+				<fieldset>
+					<legend class="tit">추가 피보험자</legend>
+					<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+
+					<!-- # 피보험자 # -->
+					<dl class="form">
+						<dt>피보험자</dt>
+						<dd>
+							<input type="text" class="text" value="홍길동" title="피보험자명은 수정 가능합니다." placeholder="고객이름을 입력해주세요.">
+							<div class="input-wrap1">
+								<input type="tel" class="text" placeholder="YYYY.MM.DD">
+								<div class="text w1">
+									<data value=""></data>
+									<span class="util1">세</span>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 성별 # -->
+					<dl class="form">
+						<dt>성별</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="gsb2" checked>
+									<span>남자</span>
+								</label>
+								<label>
+									<input type="radio" name="gsb2">
+									<span>여자</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 관계 # -->
+					<dl class="form">
+						<dt>관계</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" >
+									<span data-select="title">선택하세요.</span>
+									<span data-select="text" data-value="01">본인</span>
+								</button>
+								<div class="list">
+									<div data-label="관계 선택">
+										<div class="option">
+											<label><input type="radio" name="smplRelcd" value="01"><span>본인</span></label>
+											<label><input type="radio" name="smplRelcd" value="02"><span>배우자</span></label>
+											<label><input type="radio" name="smplRelcd" value="03"><span>부모</span></label>
+											<label><input type="radio" name="smplRelcd" value="04"><span>자녀</span></label>
+											<label><input type="radio" name="smplRelcd" value="05"><span>형제자매</span></label>
+											<label><input type="radio" name="smplRelcd" value="08"><span>배우자부모</span></label>
+											<label><input type="radio" name="smplRelcd" value="09"><span>자녀배우자</span></label>
+											<label><input type="radio" name="smplRelcd" value="10"><span>친척</span></label>
+											<label><input type="radio" name="smplRelcd" value="11"><span>고용주(사업주)</span></label>
+											<label><input type="radio" name="smplRelcd" value="12"><span>고용주(종업원)</span></label>
+											<label><input type="radio" name="smplRelcd" value="85"><span>동거친족</span></label>
+											<label><input type="radio" name="smplRelcd" value="86"><span>별거친족</span></label>
+											<label><input type="radio" name="smplRelcd" value="99"><span>기타</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 관계 # -->
+					<dl class="form">
+						<dt>직업</dt>
+						<dd>
+							<!-- // -->
+							<div class="input-wrap1">
+								<div class="input-btn1">
+									<data class="text" value="" data-label="직업을 검색해주세요."></data>
+									<button type="button" class="icon-com1 ic2">직업검색</button>
+								</div>
+								<div class="select-wrap w1" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">급수 선택</span>
+										<span data-select="text">급수</span>
+									</button>
+									<div class="list">
+										<div data-label="급수 선택">
+											<div class="option">
+												<label><input type="radio" name="smpSpIRnkGrd1" value="15111"><span>1급</span></label>
+												<label><input type="radio" name="smpSpIRnkGrd1" value="23141"><span>2급</span></label>
+												<label><input type="radio" name="smpSpIRnkGrd1" value="83121"><span>3급</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+							<div class="info-data1">
+								<dl>
+									<dt class="tit">영업 및 판매업체 관련 사무직</dt>
+									<dd class="txt"><span>1/A</span><span><!-- 급수 --></span></dd>
+									<!--
+									<dd class="area-btn1"><a href="javascript:void(0);" class="btn-com1">급수변경</a></dd>
+									-->
+								</dl>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 운전형태 # -->
+					<dl class="form">
+						<dt>운전형태</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="wjh21" checked>
+									<span>자가용</span>
+								</label>
+								<label>
+									<input type="radio" name="wjh21">
+									<span>영업용</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- 피보험자 (선택) : 재물 -->
+				<fieldset>
+					<legend class="tit">피보험자 (선택)</legend>
+					<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+
+					<!-- [D] 추가 전 -->
+					<div class="area-btn1"><button type="button" class="btn-com1 ic3">피보험자 추가하기</button></div>
+
+					<!-- [M 2022-08-12] 내용수정 -->
+					<!-- # 주피보험자이름 # -->
+					<dl class="form">
+						<dt>주피보험자이름</dt>
+						<dd><input type="text" class="text" value="홍길동" title="피보험자이름" placeholder="고객이름을 입력해주세요."></dd>
+					</dl>
+
+					<!-- # 생년월일 # -->
+					<dl class="form">
+						<dt>생년월일</dt>
+						<dd>
+							<div class="input-wrap1">
+								<input type="tel" class="text" title="생년월일" placeholder="YYYYMMDD">
+								<div class="text w1">
+									<input type="tel" title="나이" placeholder="0">
+									<span class="util1">세</span>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- // [M 2022-08-12]  -->
+
+					<!-- # 성별 # -->
+					<dl class="form">
+						<dt>성별</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="gsb1" checked>
+									<span>남자</span>
+								</label>
+								<label>
+									<input type="radio" name="gsb1">
+									<span>여자</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 관계 # -->
+					<dl class="form">
+						<dt>관계</dt>
+						<dd><data class="selectbox disabled" value="본인">본인</data></dd>
+					</dl>
+
+					<!-- # 관계 # -->
+					<dl class="form">
+						<dt>직업</dt>
+						<dd>
+							<!-- // -->
+							<div class="input-wrap1">
+								<div class="input-btn1">
+									<data class="text" value="" data-label="직업을 검색해주세요."></data>
+									<button type="button" class="icon-com1 ic2">직업검색</button>
+								</div>
+								<div class="select-wrap w1" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">급수 선택</span>
+										<span data-select="text">급수</span>
+									</button>
+									<div class="list">
+										<div data-label="급수 선택">
+											<div class="option">
+												<label><input type="radio" name="smpSpIRnkGrd" value="15111"><span>1급</span></label>
+												<label><input type="radio" name="smpSpIRnkGrd" value="23141"><span>2급</span></label>
+												<label><input type="radio" name="smpSpIRnkGrd" value="83121"><span>3급</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+							<div class="info-data1">
+								<dl>
+									<dt class="tit">영업 및 판매업체 관련 사무직</dt>
+									<dd class="txt"><span>1/A</span><span><!-- 급수 --></span></dd>
+									<!-- [M 2022-08-12] 삭제
+									<dd class="area-btn1"><a href="javascript:void(0);" class="btn-com1">급수변경</a></dd>
+									-->
+								</dl>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 운전형태 # -->
+					<dl class="form">
+						<dt>운전형태</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="wjh27" checked>
+									<span>자가용</span>
+								</label>
+								<label>
+									<input type="radio" name="wjh27">
+									<span>영업용</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- 피보험자 : 태아 -->
+				<fieldset>
+					<legend class="tit">주피보험자</legend>
+					<!-- [M 2022-08-12] 삭제
+					<div class="side">
+						<a href="javascript:void(0);" class="btn-sub2 c2">형제할인 등록</a>
+					</div>
+					-->
+
+					<!-- # 태아 # -->
+					<dl class="form">
+						<dt>태아</dt>
+						<dd>
+							<input type="text" class="text" value="태아">
+							<div class="input-wrap1">
+								<input type="tel" class="text" value="0000.00.00" placeholder="YYYY.MM.DD">
+								<div class="text w1">
+									<data value="0">0</data>
+									<span class="util1">세</span>
+								</div>
+							</div>
+						</dd>
+						<dd class="mes">보험생일: 2022.03.08</dd>
+					</dl>
+
+					<!-- # 관계 # -->
+					<dl class="form">
+						<dt>관계</dt>
+						<dd><data class="selectbox disabled" value="본인">본인</data></dd>
+					</dl>
+
+					<!-- # 임신주수 # -->
+					<dl class="form">
+						<dt>임신주수</dt>
+						<dd>
+							<!-- [M 2022-08-12] 내용 변경 / [M 2022-09-06] 다시원복  -->
+							<div class="input-wrap1">
+								<div class="text w1">
+									<input type="tel" title="임신주수" placeholder="0">
+									<span class="util1">주</span>
+								</div>
+								<div class="input-date1">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+										<input type="text" class="text" title="날짜 선택" placeholder="날짜를 선택해주세요." readonly>
+									</span>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 유공자할인대상 # -->
+					<dl class="form">
+						<dt>유공자할인대상<a href="#uiTOOLTIPINFO1" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt> <!-- 2022-12-02 툴팁 추가 -->
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="dsds12">
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="dsds12" checked>
+									<span>아니요</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- 피보험자 : 태아 : 추가 피보험자 (산모) -->
+				<fieldset>
+					<legend class="tit">추가 피보험자 (산모)</legend>
+
+					<!-- # 피보험자 # -->
+					<dl class="form">
+						<dt>피보험자</dt>
+						<dd>
+							<input type="text" class="text" value="홍길동" title="피보험자명은 수정 가능합니다." placeholder="고객이름을 입력해주세요.">
+							<div class="input-wrap1">
+								<input type="tel" class="text" placeholder="YYYY.MM.DD">
+								<div class="text w1">
+									<data value=""></data>
+									<span class="util1">세</span>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 성별 # -->
+					<dl class="form">
+						<dt>성별</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="gsb1" checked disabled>
+									<span>남자</span>
+								</label>
+								<label>
+									<input type="radio" name="gsb1" disabled>
+									<span>여자</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 관계 # -->
+					<dl class="form">
+						<dt>관계</dt>
+						<dd><data class="selectbox disabled" value="본인">본인</data></dd>
+					</dl>
+
+					<!-- # 관계 # -->
+					<dl class="form">
+						<dt>직업</dt>
+						<dd>
+							<!-- // -->
+							<div class="input-wrap1">
+								<div class="input-btn1">
+									<data class="text" value="" data-label="직업을 검색해주세요."></data>
+									<button type="button" class="icon-com1 ic2">직업검색</button>
+								</div>
+								<div class="select-wrap w1" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">급수 선택</span>
+										<span data-select="text">급수</span>
+									</button>
+									<div class="list">
+										<div data-label="급수 선택">
+											<div class="option">
+												<label><input type="radio" name="smpSpIRnkGrd" value="15111"><span>1급</span></label>
+												<label><input type="radio" name="smpSpIRnkGrd" value="23141"><span>2급</span></label>
+												<label><input type="radio" name="smpSpIRnkGrd" value="83121"><span>3급</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+							<div class="info-data1">
+								<dl>
+									<dt class="tit">영업 및 판매업체 관련 사무직</dt>
+									<dd class="txt"><span>1/A</span><span><!-- 급수 --></span></dd>
+									<!-- [M 2022-08-12] 삭제
+									<dd class="area-btn1"><a href="javascript:void(0);" class="btn-com1">급수변경</a></dd>
+									-->
+								</dl>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 운전형태 # -->
+					<dl class="form">
+						<dt>운전형태</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="wjh25" checked>
+									<span>자가용</span>
+								</label>
+								<label>
+									<input type="radio" name="wjh25">
+									<span>영업용</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 유공자할인대상 # -->
+					<dl class="form">
+						<dt>유공자할인대상<a href="#uiTOOLTIPINFO1" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt> <!-- 2022-12-02 툴팁 추가 -->
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="dsds1">
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="dsds1" checked>
+									<span>아니요</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+				<!-- // -->
+
+				<!-- 추가버튼 : [D] 복수 피보험자 가능한 상품만 노출 -->
+				<div class="area-btn1 line"><button type="button" class="btn-com1 ic3">피보험자 추가하기</button></div>
+				<!-- // -->
+			</div>
+
+			<!-- ### 계약자 ### -->
+			<div id="uiTabSection5" class="form-wrap1 line2" data-scroll-con="2">
+				<fieldset>
+					<legend class="tit">계약자</legend>
+
+					<!-- # 주피보험자와의 관계 # -->
+					<dl class="form">
+						<dt>주피보험자와의 관계</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택하세요.</span>
+									<span data-select="text" data-value="01">본인</span>
+								</button>
+								<div class="list">
+									<div data-label="주피보험자와의 관계">
+										<div class="option">
+											<label><input type="radio" name="RELCD2" value="01"><span>본인</span></label>
+											<label><input type="radio" name="RELCD2" value="02"><span>배우자</span></label>
+											<label><input type="radio" name="RELCD2" value="03"><span>부모</span></label>
+											<label><input type="radio" name="RELCD2" value="04"><span>자녀</span></label>
+											<label><input type="radio" name="RELCD2" value="05"><span>형제자매</span></label>
+											<label><input type="radio" name="RELCD2" value="08"><span>배우자부모</span></label>
+											<label><input type="radio" name="RELCD2" value="09"><span>자녀배우자</span></label>
+											<label><input type="radio" name="RELCD2" value="10"><span>친척</span></label>
+											<label><input type="radio" name="RELCD2" value="11"><span>고용주(사업주)</span></label>
+											<label><input type="radio" name="RELCD2" value="12"><span>고용주(종업원)</span></label>
+											<label><input type="radio" name="RELCD2" value="85"><span>동거친족</span></label>
+											<label><input type="radio" name="RELCD2" value="86"><span>별거친족</span></label>
+											<label><input type="radio" name="RELCD2" value="99"><span>기타</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 계약자 # -->
+					<dl class="form">
+						<dt>계약자</dt>
+						<dd>
+							<!-- [CASE1] 본인일 경우 -->
+							<input type="text" class="text" value="김롯데" placeholder="고객이름을 입력해주세요." disabled>
+							<!-- 2022-10-24 마크업 변경 비활성화 CASE -->
+							<div class="input-wrap1 disabled"> <!-- 비활성화 disabled -->
+								<input type="tel" class="text" placeholder="YYYY.MM.DD" value="0000.00.00" disabled> <!-- 비활성화 disabled -->
+								<!-- 2022-11-10 삭제 -->
+								<!-- <div class="text w1 disabled">
+									<data value="0" data-disabled="true"></data>
+									<span class="util1">세</span>
+								</div> -->
+								<!-- //2022-11-10 삭제 -->
+							</div>
+							<!-- //2022-10-24 마크업 변경 비활성화 CASE -->
+							<!-- [CASE2] 본인이 아닐 경우 -->
+							<input type="text" class="text" placeholder="고객이름을 입력해주세요.">
+							<input type="tel" class="text" placeholder="생년월일을 입력해주세요.">
+							<!-- 2022-10-24 추가 -->
+							<div class="input-wrap1">
+								<input type="tel" class="text" placeholder="YYYY.MM.DD">
+								<!-- 2022-11-10 삭제 -->
+								<!-- <div class="text w1">
+									<data value=""></data>
+									<span class="util1">세</span>
+								</div> -->
+								<!-- //2022-11-10 삭제 -->
+							</div>
+							<!-- //2022-10-24 추가 -->
+							<!-- // -->
+						</dd>
+						<!--  <dd class="mes">설계동의 만료일자: 2022.03.09</dd> [M 2022-08-12] 내용 삭제 -->
+					</dl>
+
+					<!-- # 성별 [M 2022-08-12] 추가 # -->
+					<dl class="form">
+						<dt>성별</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="gsa1" checked>
+									<span>남자</span>
+								</label>
+								<label>
+									<input type="radio" name="gsa1">
+									<span>여자</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+			</div>
+
+			<!-- ### 목적물 ### -->
+			<div id="uiTabSection6" class="wrap-section3" data-scroll-con="3">
+				<div class="tit-sub1">
+					<h3>목적물</h3>
+					<div class="side"><a href="javascript:void(0);" class="btn-sub2 c2">수정</a></div> <!-- [D] 등록 후 노출 -->
+				</div>
+
+				<!-- [CASE1] 등록후 -->
+				<div class="info-con1">
+					<dl>
+						<dt>영위업종</dt>
+						<dd>(2)일반음식점</dd>
+					</dl>
+					<dl>
+						<dt>적용업종</dt>
+						<dd>(2)일반음식점</dd>
+					</dl>
+					<dl>
+						<dt>특수건물</dt>
+						<dd>
+							<div class="label-check1 simple">
+								<label>
+									<input type="checkbox">
+									<span>특수건물 선택</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>적용급수</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" >
+									<span data-select="title">선택하세요.</span>
+									<span data-select="text" data-value="01">1급</span>
+								</button>
+								<div class="list">
+									<div data-label="적용급수 선택">
+										<div class="option">
+											<label><input type="radio" name="smplRelcd2" value="01"><span>1급</span></label>
+											<label><input type="radio" name="smplRelcd2" value="02"><span>2급</span></label>
+											<label><input type="radio" name="smplRelcd2" value="03"><span>3급</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+							<div class="area-btn4">
+								<button type="button" class="btn-sub3 c2">이미지예시</button>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>실손보상구분</dt>
+						<dd>실손비례보상</dd>
+					</dl>
+				</div>
+
+				<!-- [CASE2] 등록전 -->
+				<div class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1 ic3">물건등록</a>
+				</div>
+				<!-- // -->
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<!-- <button type="button" class="btn-action c1" disabled>다음</button> : 비활성화 -->
+			<button type="button" class="btn-action c1">다음</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<!-- ################################################### -->
+<!-- # [툴팁 영역] # -->
+<!-- ################################################### -->
+<!-- # 유공자 할인 # -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>유공자 할인</dt>
+		<dd>
+			<ul class="txt-bul1">
+				<li>대상 : 국가유공자 등 예우 및 지원에 관한 법률 제 6조에 따라 국가보훈처에 등록된 국가유공자, 그 유족 및 가족 입니다.</li>
+				<li>증빙서류 : 국가유공자 유족증, 독립유공자 유족증, 피보험자가 국가 보훈처에 국가유공자 및 유가족으로 등록되엇음을 확인 할 수 있는 보훈대상 종류가 포함된 기타서류 입니다.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">유공자 할인사항 닫기</button></dd>
+	</dl>
+</div>
+<script>
+//<!--
+	/* ************************************
+	* 샘플 : 단순설계/상세설계 버튼 이벤트
+	* data-mode : detailed/simple : 버튼
+	* data-section : detailed/simple : 컨텐츠
+	************************************ */
+	$(document).off('click.mode').on('click.mode','[data-mode]',function(){
+		var _el_mode = $(this).data('mode');
+		//컨텐츠 클래스 초기화
+		$('[data-section]').removeClass('active');
+		//해당 컨텐츠 노출
+		$('[data-section="'+_el_mode+'"]').addClass('active');
+	});
+
+	/* ************************************
+	* 샘플 : 자궁경부암백신 할인선택 : 아니요 선택시
+	* [name="dsds1100"] 임시적용
+	************************************ */
+	$(document).on('change', '[name="dsds1100"]', function(){
+		var _date = $(this).parents('.label-btn1').next('.input-date1').find('button');
+		if($(this).val() == 2) _date.attr('disabled','disabled');
+		else _date.removeAttr('disabled');
+	});
+//-->
+</script>
+</body>
+</html>

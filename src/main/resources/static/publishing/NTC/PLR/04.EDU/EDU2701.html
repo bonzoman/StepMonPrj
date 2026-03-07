@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>매니저 코칭 리스트 | 리스트 | 매니저 코칭</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-14]	1. 문구수정 : 취급자 강북사업단 > (사번번호로 변경)
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>매니저코칭</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [검색영역] 조회검색 -->
+		<!-- [토글정의]
+			 * [조회정보보기] [조회조건 재검색] 버튼 클릭시 (load)클래스 자동 추가 삭제 됨
+			 * [조회] 버튼 클릭시
+			 	ㄴ 기본 : _toggleSearch.outputClose(); // 토글 닫기
+				ㄴ 결과 있을 경우에만 : (active)클래스 추가
+			* 조회조건 샘플 : /PLR/02.DES/01.LTR/LTR0097.html 참고
+				ㄴ 조회구분 > 설계번호 선택 후 > 입력폼에 입력 후 조회 클릭시 목록이 보임.
+		-->
+		<!-- ######################### -->
+		<div id="uiFormSearch" class="form-search2" data-togglecon="true" data-scroll-bg="1">
+			<!-- ### [상단영역] ### -->
+			<div class="tit-section2">
+				<p>매니저 코칭을 조회해보세요.</p>
+				<button type="button" data-toggle="btn" aria-expanded="false">매니저 코칭 조회보기</button>
+			</div>
+
+			<!-- ### [조회영역] ### -->
+			<fieldset class="form-wrap1">
+				<legend>필수항목 입력해 주세요</legend>
+
+				<!-- #  [CASE] 조직구분 : AM,사업단장,본사관리자의 경우  # -->
+				<dl class="form">
+					<dt>조직구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="label-btn1" data-autoset="form">
+							<label>
+								<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont1" checked>
+								<span>조직</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont2" >
+								<span>설계자</span>
+							</label>
+						</div>
+						<!-- [CASE] 조직 -->
+						<div class="ui-tabcon active" data-id="uiFormCont1">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="조직을 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">조직찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 조직 -->
+							<div class="info-data3 info">
+								<div class="info2 ic1">
+									<strong>장기지원팀</strong>
+									<span>A1234566</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+						</div>
+
+						<!-- [CASE] 설계사 -->
+						<div class="ui-tabcon" data-id="uiFormCont2">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="설계사를 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">설계사찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 설계사 -->
+							<div class="info-data3 info">
+								<div class="data-info1">
+									<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+									<span><strong>공지철</strong><span>111111</span></span> <!-- 2022-10-14 사번으로 변경 -->
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+							<!-- // -->
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 코칭 의뢰일 # -->
+				<dl class="form">
+					<dt>코칭 의뢰일</dt>
+					<dd>
+						<!-- // -->
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+								<input type="text" title="시작날짜 선택" data-dateform="start2" value="2022.05.27" placeholder="YYYY.MM.DD" readonly>
+							</span>
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+								<input type="text"  title="종료날짜 선택" data-dateform="end2" value="2022.06.03" placeholder="YYYY.MM.DD" readonly>
+							</span>
+						</div>
+						<!-- // -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="form-radio1" title="설계일자(1개월)">
+								<span aria-hidden="true">1개월</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio1" title="설계일자(3개월)">
+								<span aria-hidden="true">3개월</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio1" title="설계일자(6개월)">
+								<span aria-hidden="true">6개월</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio1" title="설계일자(1년)">
+								<span aria-hidden="true">1년</span>
+							</label>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 코칭 의뢰 상태 # -->
+				<dl class="form">
+					<dt>코칭 의뢰 상태</dt>
+					<dd>
+						<!-- // -->
+						<div class="label-btn1 col3">
+							<label>
+								<input type="radio" name="form-radio2" title="코칭 의뢰 상태(전체)" checked>
+								<span aria-hidden="true">전체</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio2" title="코칭 의뢰 상태(미처리)">
+								<span aria-hidden="true">미처리</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio2" title="코칭 의뢰 상태(신규접수)">
+								<span aria-hidden="true">신규접수</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio2" title="코칭 의뢰 상태(코칭완료)">
+								<span aria-hidden="true">코칭완료</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio2" title="코칭 의뢰 상태(후기)">
+								<span aria-hidden="true">후기</span>
+							</label>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 검색버튼 # -->
+				<div class="area-btn1 col">
+					<button type="button" class="btn-com1 c3 ic8">초기화</button>
+					<button type="button" class="btn-com1 c1" id="btn_search">조회</button>
+				</div>
+				<!-- # // # -->
+			</fieldset>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색 전] 안내문구 -->
+		<!-- ######################### -->
+		<div class="mes-result1 ic1">
+			<p>
+				<strong>조회조건을 선택하시어<br>설계사를 조회해주세요</strong>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 없음 -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>선택하신 조건의 계약이 없습니다.</strong>
+				<span>조회조건을 바꾸어 조회해보세요</span>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 정보영역 -->
+		<!-- ######################### -->
+		<!-- [CASE] 전체 -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>코칭 의뢰 상태</dt>
+				<dd class="ic1"><strong>전체</strong></dd>
+			</dl>
+			<dl class="data2">
+				<dt>코칭 의뢰일</dt>
+				<dd>2022.02 ~ 2022.04</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+		<!-- [CASE] 지점 -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조직구분</dt>
+				<dd class="ic6"><strong>강남12지점</strong></dd> <!-- [M 2022-10-23] 클래스명 변경 -->
+			</dl>
+			<dl class="data2">
+				<dt>코칭 의뢰 상태</dt>
+				<dd>전체</dd>
+			</dl>
+			<dl class="data1">
+				<dt>코칭 의뢰일</dt>
+				<dd>2022.03.30~2022.05.20</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+		<!-- [CASE] 소재지/물건명/물건번호 -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조직구분</dt>
+				<dd class="ic3"><strong>강남사업단</strong></dd>
+			</dl>
+			<dl class="data2">
+				<dt>코칭 의뢰 상태</dt>
+				<dd>전체</dd>
+			</dl>
+			<dl class="data1">
+				<dt>코칭 의뢰일</dt>
+				<dd>2022.03.30~2022.05.20</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+		<!-- [CASE] 설계사 -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조직구분</dt>
+				<dd class="data-info1">
+					<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+					<span><strong>설계사명</strong><span>소속팀</span></span>
+				</dd>
+			</dl>
+			<dl class="data2">
+				<dt>코칭 의뢰 상태</dt>
+				<dd>전체</dd>
+			</dl>
+			<dl class="data1">
+				<dt>코칭 의뢰일</dt>
+				<dd>2022.03.30~2022.05.20</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+		<!-- // -->
+
+		<!-- ######################### -->
+		<!-- [접수 건수] -->
+		<!-- ######################### -->
+		<div class="area-info6">
+			<dl>
+				<dt>신규접수</dt>
+				<dd>
+					<strong>1</strong><span>건</span>
+					<button type="button" class="link">상세보기</button>
+				</dd>
+			</dl>
+			<dl>
+				<dt>미처리</dt>
+				<dd>
+					<strong>1</strong><span>건</span>
+					<button type="button" class="link">상세보기</button>
+				</dd>
+			</dl>
+			<dl>
+				<dt>코칭완료</dt>
+				<dd>
+					<strong>1</strong><span>건</span>
+					<button type="button" class="link">상세보기</button>
+				</dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [코칭 내역 리스트] -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<!-- # [총 건수] # -->
+			<div class="area-info1"><p>총 <strong>00건</strong></p></div>
+
+			<!-- # [목록] # -->
+			<div class="info-data2">
+				<ul>
+					<!-- // -->
+					<li>
+						<!-- # 상품명 # -->
+						<strong class="tit">LA123456789</strong>
+						<!-- # 상태 / 증권번호 # -->
+						<div class="info">
+							<i class="icon-state2 ic3">신규접수</i>
+							<span>2020.01.30 13:50 의뢰</span>
+						</div>
+						<!-- # 정보1 # -->
+						<div class="data1">
+							<dl>
+								<dt>계약자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.01</span>
+									<span>남</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.01</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>상품명</dt>
+								<dd>let smile 종합건강보험(더끌림플러스) (2201)</dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span>(월납)</dd>
+							</dl>
+							<!-- [CASE] AM, 사업단장, 본사관리자 -->
+							<dl>
+								<dt>의뢰 LP</dt>
+								<dd class="info2">
+									<strong data-masking="true">김*미</strong>
+									<span>1123682</span>
+								</dd>
+							</dl>
+							<!-- [CASE] 설계사, 사업단장, 본사관리자 -->
+							<dl>
+								<dt>담당AM</dt>
+								<dd class="info2">
+									<strong data-masking="true">김*미</strong>
+									<span>1123682</span>
+								</dd>
+							</dl>
+							<!-- // -->
+						</div>
+						<!-- # 상세링크 # -->
+						<a href="javascript:void(0);" class="link">상세보기</a>
+						<!-- # // # -->
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">LA123456789</strong>
+						<div class="info">
+							<i class="icon-state2 t1 ic5">코칭완료</i>
+							<i class="icon-txt2 ic1">후기</i>
+							<span>2020.01.30 13:50 의뢰</span>
+						</div>
+						<div class="data1">
+							<dl>
+								<dt>계약자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.01</span>
+									<span>남</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.01</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>상품명</dt>
+								<dd>let smile 종합건강보험(더끌림플러스) (2201)</dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span>(월납)</dd>
+							</dl>
+							<dl>
+								<dt>의뢰 LP</dt>
+								<dd class="info2">
+									<strong data-masking="true">김*미</strong>
+									<span>1123682</span>
+								</dd>
+							</dl>
+						</div>
+						<a href="javascript:void(0);" class="link">상세보기</a>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">LA123456789</strong>
+						<div class="info">
+							<i class="icon-state2 t1 ic5">코칭완료</i>
+							<i class="icon-txt2 ic1">후기작성필요</i>
+							<span>2020.01.30 13:50 의뢰</span>
+						</div>
+						<div class="data1">
+							<dl>
+								<dt>계약자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.01</span>
+									<span>남</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.01</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>상품명</dt>
+								<dd>let smile 종합건강보험(더끌림플러스) (2201)</dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span>(월납)</dd>
+							</dl>
+							<dl>
+								<dt>의뢰 LP</dt>
+								<dd class="info2">
+									<strong data-masking="true">김*미</strong>
+									<span>1123682</span>
+								</dd>
+							</dl>
+						</div>
+						<a href="javascript:void(0);" class="link">상세보기</a>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">LA123456789</strong>
+						<div class="info">
+							<i class="icon-txt2 ic5">D+1</i>
+							<span>2020.01.30 13:50 의뢰</span>
+						</div>
+						<div class="data1">
+							<dl>
+								<dt>계약자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.01</span>
+									<span>남</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.01</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>상품명</dt>
+								<dd>let smile 종합건강보험(더끌림플러스) (2201)</dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span>(월납)</dd>
+							</dl>
+							<dl>
+								<dt>담당AM</dt>
+								<dd class="info2">
+									<strong data-masking="true">김*미</strong>
+									<span>1123682</span>
+								</dd>
+							</dl>
+						</div>
+						<a href="javascript:void(0);" class="link">상세보기</a>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- # 더보기(현재페이지/총페이지) # -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+			<!-- # // # -->
+		</div>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer"></footer>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	/* ************************************
+	* 토글 호출
+	************************************ */
+	var _toggleSearch = $plugin.togglecon('#uiFormSearch', {
+		class_active : 'load',
+		selector_group : false,
+		callback_load :function(e){
+			//오픈이벤트
+		},
+		callback_after : function(e){
+			//닫기이벤트
+		}
+	});
+
+	//토글컨텐츠 강제 오픈
+	_toggleSearch.outputOpen();
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>퀘스트 리스트 | 퀘스트</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>퀘스트</h1>
+		<a href="javascript:void(0);" class="btn-t1">포인트 조회</a>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<div class="wrap-section2" data-scroll-bg="1">
+
+			<!-- ######################### -->
+			<!-- [요약정보] -->
+			<!-- ######################### -->
+			<div class="quest-info">
+				<div class="week">
+					<h2 class="tit">8월 3주차 퀘스트 도전</h2>
+					<div class="side"><div class="icon-txt1 ic1">4일 남음</div></div>
+				</div>
+				<div class="area-progress4 t1" style="--el-progress:77;">
+					<dl>
+						<dt>총 포인트</dt>
+						<dd><strong>3000</strong><span>P</span></dd>
+					</dl>
+					<dl>
+						<dt>현재 포인트</dt>
+						<dd><strong>60,000</strong><span>P</span></dd>
+					</dl>
+				</div>
+				<dl class="info">
+					<dt>이번달 누적 포인트</dt>
+					<dd>450,000P</dd>
+					<button type="button" data-btn="selection" class="" value="5">선택</button>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [퀘스트 배너] -->
+			<!-- ######################### -->
+			<div class="quest-banner">
+				<ul class="slider-t1" data-slider="list1" data-slider-title="퀘스트 배너" data-pagination="bullet">
+					<li>
+						<strong class="ico_02">매일 하는 데일리 퀴즈!</strong>
+						<p>최대 5회 풀고 포인트 받아 보세요.</p>
+						<div class="state">
+							<i class="checked">퀘스트 완료</i>
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+						</div>
+						<a href="javascript:void(0);" class="btn">상세보기</a>
+					</li>
+					<li>
+						<strong class="ico_01">매일 하는 로그인!</strong>
+						<p>최대 5회 풀고 포인트 받아 보세요.</p>
+						<div class="state">
+							<i class="checked">퀘스트 완료</i><!-- 퀘스트 완료 표시 -->
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+						</div>
+						<a href="javascript:void(0);" class="btn">상세보기</a>
+					</li>
+					<li>
+						<strong class="ico_03">매일 하는 교육수강!</strong>
+						<p>최대 5회 풀고 포인트 받아 보세요.</p>
+						<div class="state">
+							<i class="checked">퀘스트 완료</i><!-- 퀘스트 완료 표시 -->
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+						</div>
+						<a href="javascript:void(0);" class="btn">상세보기</a>
+					</li>
+					<li>
+						<strong class="ico_10">매일 하는 가입설계!</strong>
+						<p>최대 5회 풀고 포인트 받아 보세요.</p>
+						<div class="state">
+							<i class="checked">퀘스트 완료</i><!-- 퀘스트 완료 표시 -->
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+						</div>
+						<a href="javascript:void(0);" class="btn">상세보기</a>
+					</li>
+					<li>
+						<strong class="ico_07">매일 하는 보장분석!</strong>
+						<p>최대 5회 풀고 포인트 받아 보세요.</p>
+						<div class="state">
+							<i class="checked">퀘스트 완료</i><!-- 퀘스트 완료 표시 -->
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+							<i>퀘스트</i>
+						</div>
+						<a href="javascript:void(0);" class="btn">상세보기</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [퀘스트 목록] -->
+		<!-- ######################### -->
+		<div class="tit-section">이달의 혜택 15가지 달성하면<br>포인트를 더 드려요!</div>
+		<ul class="quest-list">
+			<!-- [CASE] 진행중 -->
+			<li>
+				<a href="javascript:void(0);">
+					<div class="quest">
+						<span class="ico_quest_02">도입</span>
+						<strong>매일 300P 받기</strong>
+					</div>
+					<div class="ing"><span class="icon-txt1 ic1">진행중</span></div><!-- 진행 시 추가 -->
+				</a>
+			</li>
+			<!-- [CASE] 지급완료 -->
+			<li class="end"><!-- 지급완료 시 class 추가 -->
+				<a href="javascript:void(0);">
+					<div class="quest">
+						<span class="ico_quest_07">보장 분석</span>
+						<strong>보장분석 후 알림톡 발송시 500P</strong>
+					</div>
+					<div class="ing"><span class="icon-txt1 ic1">지급완료</span></div><!-- 지급완료 시  추가 -->
+				</a>
+			</li>
+			<!-- // -->
+			<li>
+				<a href="javascript:void(0);">
+					<div class="quest">
+						<span class="ico_quest_09">활동</span>
+						<strong>데일리 퀴즈 참여 500P</strong>
+					</div>
+				</a>
+			</li>
+			<!-- // -->
+			<li>
+				<a href="javascript:void(0);">
+					<div class="quest">
+						<span class="ico_quest_04">커뮤니티</span>
+						<strong>내 글 작성시 100P</strong>
+					</div>
+				</a>
+			</li>
+			<!-- // -->
+			<li>
+				<a href="javascript:void(0);">
+					<div class="quest">
+						<span class="ico_quest_10">가입 설계</span>
+						<strong>최초 1회 등록시 500P</strong>
+					</div>
+				</a>
+			</li>
+			<!-- // -->
+			<li>
+				<a href="javascript:void(0);">
+					<div class="quest">
+						<span class="ico_quest_06">고객관리</span>
+						<strong>최초 1회 등록시 500P</strong>
+					</div>
+				</a>
+			</li>
+			<!-- // -->
+			<li>
+				<a href="javascript:void(0);">
+					<div class="quest">
+						<span class="ico_quest_03">교육</span>
+						<strong>최초 1회 수강시 500P</strong>
+					</div>
+				</a>
+			</li>
+			<!-- // -->
+			<li>
+				<a href="javascript:void(0);">
+					<div class="quest">
+						<span class="ico_quest_05">설계청약</span>
+						<strong>최초 1회 등록시 500P</strong>
+					</div>
+				</a>
+			</li>
+			<!-- // -->
+			<li>
+				<a href="javascript:void(0);">
+					<div class="quest">
+						<span class="ico_quest_99">기타</span>
+						<strong>최초 1회 등록시 500P</strong>
+					</div>
+				</a>
+			</li>
+			<!-- // -->
+			<li>
+				<a href="javascript:void(0);">
+					<div class="quest">
+						<span class="ico_quest_01">로그인</span>
+						<strong>최초 1회 로그인시 500P</strong>
+					</div>
+				</a>
+			</li>
+			<!-- // -->
+		</ul>
+
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer"></footer>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

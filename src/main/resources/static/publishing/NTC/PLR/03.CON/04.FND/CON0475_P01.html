@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 수금관리 필터 | 수납관리 | 자금관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>필터</h1>
+			<button type="button" data-btn="pop-close">필터 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<fieldset class="form-wrap1">
+				<legend>상세조회 조건 선택</legend>
+
+				<dl class="form">
+					<dt>수납구분</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio1" checked>
+								<span>미수납</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>책임액</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- [CASE] 장기 상세조회 필터 경우  -->
+				<dl class="form">
+					<dt>수납대기상태</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio2" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio2">
+								<span>수납대기 O</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio2">
+								<span>수납대기 X</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+				<dl class="form">
+					<dt>연체구분</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio3" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3">
+								<span>정상</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3">
+								<span>연체</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+				<dl class="form">
+					<dt>분류</dt>
+					<dd>
+						<div class="label-btn1 col3">
+							<label>
+								<input type="radio" name="uiFormRadio4" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio4">
+								<span>보장성</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio4">
+								<span>재물</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio4">
+								<span>저축성</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+				<dl class="form">
+					<dt>회차</dt>
+					<dd>
+						<div class="label-btn1 col3" data-autoset="form">
+							<label>
+								<input type="radio" name="uiFormRadio5" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio5">
+								<span>2~7회</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio5">
+								<span>8회~13회</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio5">
+								<span>14회 이상</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio5" data-tabcon="uiFormTab02">
+								<span>직접입력</span>
+							</label>
+						</div>
+						<div class="ui-tabcon" data-id="uiFormTab02">
+							<div class="text">
+								<input type="tel" title="최소 회차" value="0">
+								<span>회</span>
+								<span class="util1">~</span>
+								<input type="tel" title="최대 회차" value="0">
+								<span>회</span>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<!-- //  -->
+
+				<dl class="form">
+					<dt>납입방법</dt>
+					<dd>
+						<div class="label-btn1 col3">
+							<label>
+								<input type="radio" name="uiFormRadio6" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio6">
+								<span>직원수금</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio6">
+								<span>지로</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio6">
+								<span>자동이체</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio6">
+								<span>이체 외</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio6">
+								<span>전자청구</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+				<dl class="form">
+					<dt>계약구분</dt>
+					<dd>
+						<div class="label-btn1 col3">
+							<label>
+								<input type="radio" name="uiFormRadio7" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio7">
+								<span>자기계약</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio7">
+								<span>자기계약 외</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio7">
+								<span>이관계약</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio7">
+								<span>이관계약 외</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>금액</dt>
+					<dd>
+						<div class="label-btn1 col3" data-autoset="form">
+							<label>
+								<input type="radio" name="uiFormRadio8" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio8" data-tabcon="uiFormTab">
+								<span>직접입력</span>
+							</label>
+						</div>
+						<div class="input-range1 ui-tabcon" data-id="uiFormTab">
+							<!-- [금액입력] -->
+							<div class="input-wrap"></div>
+							<div class="text">
+								<span>
+									<input type="tel" value="0" data-range="1">
+									<span class="util1">원</span>
+								</span>
+								<span class="util">~</span>
+								<span>
+									<input type="tel" value="300000" data-range="2">
+									<span class="util1">원</span>
+								</span>
+							</div>
+							<!-- [적용버튼] : 금액을 직접 입력 후 금액 적용을 클릭 후 하단 범위설정이 재 설정됨 : 하단 스크립트 참고 -->
+							<div class="area-btn1"><button type="button" class="btn-com1 c1" onclick="uiFunction(this)">금액 적용</button></div>
+							<div class="mes">※ 300,000원 초과 입력가능 합니다.</div>
+
+							<!-- [범위설정] -->
+							<div class="range">
+								<span data-label1="0원" data-label2="10만원"><input type="range" min="0" max="300000" step="10000" value="0" data-range="1"></span>
+								<span data-label1="20만원" data-label2="30만원+"><input type="range" min="0" max="300000" step="10000" value="300000" data-range="2"></span>
+							</div>
+							<!-- // -->
+						</div>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">초기화</button>
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<script>
+//<!--
+	//샘플 : 금액적용 클릭 후 범위설정 하기
+	function uiFunction(el){
+		var _wrap = $(el).parents('.input-range1');
+		var _val1 = _wrap.find('.text [data-range="1"]').val();
+		var _val2 = _wrap.find('.text [data-range="2"]').val();
+
+		_wrap.find('.range [data-range="1"]').val(_val1);
+		_wrap.find('.range [data-range="2"]').val(_val2);
+		ui.formInput();
+	}
+//-->
+</script>
+</body>
+</html>

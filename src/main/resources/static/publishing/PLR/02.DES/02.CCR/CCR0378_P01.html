@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 입금조회 | 청약(개인/업무/영업) | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>입금조회</h1>
+			<button type="button" data-btn="pop-close">입금조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 확인문구 -->
+			<!-- ######################### -->
+			<div class="tit-section"><p>최근 1달간 입금정보를 조회합니다.</p></div>
+
+			<!-- ######################### -->
+			<!-- [목록영역] 입금 정보 조회 -->
+			<!-- ######################### -->
+			<div class="info-data7 t1">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" checked>
+								<span>상여금 계좌</span>
+							</label>
+							<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+						</div>
+						<div class="data1"><span>2022.05.16</span><span>카드</span></div>
+						<div class="data2">롯데손해보험 적요 정보</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox">
+								<span>암보험 계좌</span>
+							</label>
+							<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+						</div>
+						<div class="data1"><span>2022.05.16</span><span>예금</span></div>
+						<div class="data2">하다미님 암보험 적요 정보 내용 입금 노출됩니다.</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox">
+								<span>계좌 별칭</span>
+							</label>
+							<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+						</div>
+						<div class="data1"><span>2022.05.16</span><span>미환급</span></div>
+						<div class="data2">2022년 1월 미환급금 입금</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" checked>
+								<span>평생 암보험 계좌별명</span>
+							</label>
+							<div class="data-num1"><strong>1,856,200,000</strong><span>원</span></div>
+						</div>
+						<div class="data1">2022.05.16 &middot; 카드</div>
+						<div class="data2">적요 정보를 한줄로 모두 노출합니다</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- 더보기(현재페이지/총페이지) -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">적용</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+</body>
+</html>

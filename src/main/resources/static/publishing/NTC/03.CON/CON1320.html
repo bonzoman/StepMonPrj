@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>모바일 전자배서_유의사항확인 | 모바일 계약변경 | 자동차</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-31]	1. 진행상태 변경
+	*					2. 타이틀 변경
+	*					3. 계약변경 유의사항 확인서 체크박스 영역 삭제 및 마크업 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>롯데손해보험<br>계약변경 전자서명</h1>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1 top1">
+		<!-- ######################### -->
+		<!-- [진행상태] STEP 01 -->
+		<!-- ######################### -->
+		<!-- [CASE1] 전자서명 1순위 : 환급계좌정보 -->
+		<div class="info-step1" data-autoset="toggle" data-sticky="top">
+			<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+			<ol data-toggle="content">
+				<!-- 2022-10-31 변경 -->
+				<li aria-current="step"><button type="button">01. 계약변경신청서 확인</button><a href="javascript:void(0);" class="btn-sub3 c2">수정</a></li>
+				<li><button type="button" disabled>02. 계약자 필수 확인사항</button><a href="javascript:void(0);" class="btn-sub3 c2">수정</a></li>
+				<li><button type="button" disabled>03. 전자서명</button></li>
+				<!-- //2022-10-31 변경 -->
+			</ol>
+		</div>
+
+		<!-- [CASE1] 전자서명 1순위 : 납부정보 및 납부방법 확인
+		<div class="info-step1" data-autoset="toggle" data-sticky="top">
+			<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+			<ol data-toggle="content">
+				<li aria-current="step"><button type="button">01. 유의사항 확인</button></li>
+				<li><button type="button" disabled>02. 계약변경신청서 확인</button></li>
+				<li><button type="button" disabled>03. 납부정보 및 납부방법 확인</button></li>
+				<li><button type="button" disabled>04. 전자서명</button></li>
+			</ol>
+		</div>
+		-->
+
+		<!-- [CASE] 전자서명 2순위
+		<div class="info-step1" data-autoset="toggle" data-sticky="top">
+			<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+			<ol data-toggle="content">
+				<li aria-current="step"><button type="button">01. 유의사항 확인</button></li>
+				<li><button type="button" disabled>02. 계약변경신청서 확인</button></li>
+				<li><button type="button" disabled>03. 전자서명</button></li>
+			</ol>
+		</div>
+		-->
+
+		<!-- ######################### -->
+		<!-- [상단영역] -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>계약변경내용에 대한<br>계약자 필수사항을 확인해주세요.</p> <!-- 2022-10-31 텍스트 변경 -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [유의사항 확인] -->
+		<!-- ######################### -->
+		<!-- # 계약변경 유의사항에 대한 확인서 # -->
+		<fieldset class="form-agree2 t1">
+			<legend>전체항목 필수확인</legend>
+			<!-- // -->
+			<!-- 2022-10-31 삭제 -->
+			<!-- <div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<strong>계약변경 유의사항에 대한 확인서</strong>
+					<a href="javascript:void(0);" class="btn">계약변경 유의사항에 대한 확인서 상세보기</a>
+				</label>
+			</div> -->
+			<!-- //2022-10-31 삭제 -->
+			<!-- //	-->
+			<!-- 2022-10-31 마크업 변경 -->
+			<div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<span><strong>2022.04.24일</strong> 기준 <strong>연령운전변경/누구나</strong>를 확인하였습니다.</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>해당 계약변경사항을 피보험자에게 안내하였고, 피보험자가 동의하였습니다.</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>보험료 납입방법 선택 및 동의<br><strong>(받을 보험료) 654,321원</strong></span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>자동차보험 계약 변경을 확인 및 동의하고 전자서명을 진행합니다.</span>
+				</label>
+			</div>
+			<!-- //2022-10-31 마크업 변경 -->
+			<!-- //	-->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">다음</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

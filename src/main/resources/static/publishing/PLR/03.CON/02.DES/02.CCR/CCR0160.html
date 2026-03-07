@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[T] 계약적용개괄 | 보험개발원 계약조회 | 가입설계조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-15]	① 타이틀명 변경 : 개발원계약조회 > 보험개발원 계약조회
+	*					② 조회구분 > 고객 선택 영역 버튼형으로 변경 : 마크업변경
+	* 					③ 요약정보 > 차량정보 영역 추가
+	* 					④ 문구수정 : 저과실 > 낮은과실 / 유,무 > 있음,없음 / 물적할증 > 물적사고<br>할증기준 / 사고담보 > 사고보장<br>(담보)
+	*	[M 2022-10-27]	① 주민등록번호 입력폼 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>보험개발원 계약조회</h1> <!-- [M 2022-09-15] 타이틀 변경 -->
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [검색영역] 조회검색 -->
+		<!-- ######################### -->
+		<div id="uiFormSearch" class="form-search2" data-scroll-bg="1" data-togglecon="true">
+			<!-- ### [상단문구] ### -->
+			<div class="tit-section2">
+				<p>당/타사 자동차보험<br>가입현황을 확인해보세요!</p>
+				<button type="button" data-toggle="btn" aria-expanded="false">조회정보보기</button>
+			</div>
+
+			<!-- ### [조회영역] ### -->
+			<fieldset class="form-wrap1">
+				<legend>조회정보 입력</legend>
+
+				<!-- # 조회구분 # -->
+				<dl class="form">
+					<dt>조회구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select" data-callback="uiSampleFunction"> <!-- [D] uiSampleFunction : 샘플함수명 : 하단 스크립트 참고 -->
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="1">고객찾기</span>
+							</button>
+							<div class="list">
+								<div data-label="조회구분">
+									<div class="option">
+										<label><input type="radio" name="selectOption1" value="1"><span>고객찾기</span></label>
+										<label><input type="radio" name="selectOption1" value="2"><span>주민등록번호</span></label>
+										<label><input type="radio" name="selectOption1" value="3"><span>사업자번호</span></label> <!-- [M 2022-09-15] 문구수정 : 사업자코드 > 사업자번호 -->
+										<label><input type="radio" name="selectOption1" value="4"><span>보유자코드</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+
+						<!-- [CASE1] 고객찾기 -->
+						<div class="ui-tabcon active" data-select-con="1">
+							<div class="input-btn1"><!-- [M 2022-09-15] 클래스명 변경 -->
+								<data class="text" title="고객이름입력" data-label="고객이름을 검색해주세요." aria-invalid="true"></data> <!-- [M 2022-09-15] data 태그로 변경 -->
+								<button type="button" class="icon-com1 ic2">검색하기</button>
+							</div>
+							<div class="validation">고객을 선택해주세요.</div>
+
+							<!-- [D] 고객검색 후 -->
+							<div class="info-data3 info">
+								<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+									<strong>하다미</strong>
+									<span>
+										<span>1990.01.01</span>
+										<span>남</span>
+									</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+							<!-- // -->
+						</div>
+
+						<!-- [CASE2] 주민등록번호 -->
+						<div class="ui-tabcon" data-select-con="2"> <!-- [M 2022-09-15] 클래스명(text) 삭제 -->
+							<div class="text"> <!-- [M 2022-09-15] div 추가 : validation을 위한 구분 필요 -->
+								<input type="tel" title="주민등록번호앞6자리" maxlength="6" placeholder="생년월일"  aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+								<span class="util">-</span>
+								<input type="tel" title="주민등록번호뒷첫자리" maxlength="7" placeholder="주민번호 뒤 7자리" aria-invalid="true"> <!-- [M 2022-10-27] maxlength / placeholder 수정  -->
+								<!-- <span class="util" data-masking="true">******</span> [M 2022-10-27] 삭제 -->
+							</div>
+							<div class="validation">주민등록번호를 입력해주세요.</div>
+						</div>
+
+						<!-- [CASE3] 사업자코드 -->
+						<div class="ui-tabcon" data-select-con="3">
+							<input type="text" class="text" title="사업자코드 입력" placeholder="사업자번호를 입력해주세요." aria-invalid="true">
+							<div class="validation">사업자번호를 입력해주세요.</div>
+						</div>
+						<!-- [CASE4] 보유자코드 -->
+						<div class="ui-tabcon" data-select-con="4">
+							<input type="text" class="text" title="보유자코드 입력" placeholder="보유자코드를 입력해주세요." aria-invalid="true">
+							<div class="validation">보유자코드를 입력해주세요.</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 차량번호 # -->
+				<dl class="form">
+					<dt>차량번호</dt>
+					<dd><input type="text" class="text" title="차량번호" placeholder="차량번호를 입력해주세요"></dd>
+				</dl>
+
+				<!-- # 이용목적 # -->
+				<dl class="form">
+					<dt>이용목적 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false"  aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+								<span data-select="title">이용목적</span>
+								<span data-select="text" data-value="1">선택</span>
+							</button>
+							<div class="list">
+								<div data-label="이용목적 선택" data-autoset="form">
+									<div class="option">
+										<label><input type="radio" name="selectOption2" value="1"><span>선택</span></label>
+										<label><input type="radio" name="selectOption2" value="2"><span>계약체결</span></label>
+										<label><input type="radio" name="selectOption2" value="3"><span>계약유지</span></label>
+										<label><input type="radio" name="selectOption2" value="4"><span>보험금지급</span></label>
+										<label><input type="radio" name="selectOption2" value="5"><span>감독검사목적</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<div class="validation">이용목적을 선택해주세요.</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 기준일자 # -->
+				<dl class="form">
+					<dt>기준일자 (이후)</dt>
+					<dd>
+						<div class="input-date1">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+								<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2019.03.26" readonly>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 검색버튼 # -->
+				<div class="area-btn1 col">
+					<button type="button" class="btn-com1 ic8 c3">초기화</button>
+					<button type="button" class="btn-com1 c1" data-btn="search">조회</button>
+				</div>
+				<!-- # // # -->
+			</fieldset>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색전] 안내문구 -->
+		<!-- ######################### -->
+		<div class="mes-result1 ic1">
+			<p>
+				<strong>조회조건을 선택하시어<br>설계를 조회해주세요</strong>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 결과없음 -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>선택하신 조건의 계약이 없습니다.</strong>
+				<span>조회조건을 바꾸어 조회해보세요.</span>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [요약정보] 고객정보 -->
+		<!-- ######################### -->
+		<!-- [CASE1] 고객찾기 -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조회구분</dt>
+				<dd class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+					<strong>하다미</strong>
+					<span>
+						<span>1990.01.01</span>
+						<span>여</span>
+					</span>
+				</dd>
+			</dl>
+			<dl class="data2">
+				<!-- [M 2022-09-15] 차량번호 입력시 -->
+				<dt>차량번호</dt>
+				<dd>123사 4567</dd>
+				<!-- // [M 2022-09-15] -->
+				<dt>이용목적</dt>
+				<dd>전체</dd>
+			</dl>
+			<dl class="data1">
+				<dt>기준일자</dt>
+				<dd>2022.03.01 이후</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- [CASE2] 주민등록번호 -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조회구분</dt>
+				<dd class="ic4"><strong data-masking="true">921107-2******</strong></dd>
+			</dl>
+			<dl class="data2">
+				<dt>차량번호</dt>
+				<dd>123사 4567</dd>
+				<dt>이용목적</dt>
+				<dd>전체</dd>
+			</dl>
+			<dl class="data1">
+				<dt>기준일자</dt>
+				<dd>2022.03.01 이후</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- [CASE3] 사업자번호 -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조회구분</dt>
+				<dd class="ic3"><strong>104-81-30770</strong></dd>
+			</dl>
+			<dl class="data2">
+				<dt>차량번호</dt>
+				<dd>123사 4567</dd>
+				<dt>이용목적</dt>
+				<dd>전체</dd>
+			</dl>
+			<dl class="data1">
+				<dt>기준일자</dt>
+				<dd>2022.03.01 이후</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- [CASE4] 보유자코드 -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조회구분</dt>
+				<dd class="ic2"><strong>123456789</strong></dd>
+			</dl>
+			<dl class="data2">
+				<dt>차량번호</dt>
+				<dd></dd> <!-- [M 2022-09-15] 차량번호 미 입력시 : 빈공간 -->
+				<dt>이용목적</dt>
+				<dd>전체</dd>
+			</dl>
+			<dl class="data1">
+				<dt>기준일자</dt>
+				<dd>2022.03.01 이후</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭버튼] -->
+		<!-- ######################### -->
+		<div class="tab-sub1" data-sticky="top">
+			<ul>
+				<li class="active"><a href="#uiTabCont1">계약적용개괄</a></li>
+				<li><a href="#uiTabCont2">사고조회</a></li>
+				<li><a href="#uiTabCont3">가입경력</a></li>
+				<li><a href="#uiTabCont4">사고운전자</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색목록] 계약적용개괄 -->
+		<!-- ######################### -->
+		<div id="uiTabCont1" class="ui-tabcon active">
+			<!-- # 총 건수 # -->
+			<div class="area-info1">
+				<p>총 <strong>00건</strong></p>
+			</div>
+
+			<!-- # 요약보기 # -->
+			<label class="btn-util1 ic4" data-fixed="bottom" data-btn="display">
+				<input type="checkbox">
+				<span>요약보기</span>
+			</label>
+
+			<!-- # [목록] #
+				요약보기 : data-display="list"
+				* 요약보기 checked일 경우 목록에 클래스명(view) 추가됨.
+				* 클래스명(view)을 추가하여 비노출 컨텐츠 제어함.
+				* 단) 예외처리가 필요한 경우에는 노출되어야 하는 컨텐츠에 data-display="block" 추가
+			-->
+			<div class="info-data2" data-display="list">
+				<ul>
+					<!-- // -->
+					<li>
+						<strong class="tit">55도 2568(승용소형)</strong>
+						<!-- # 정보1 # -->
+						<div class="data1">
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong>피보험자명</strong>
+									<span>생년월일</span>
+									<span>성별</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>보험기간</dt>
+								<dd>2020.12.31~2022.12.31</dd>
+							</dl>
+							<dl>
+								<dt>적용등급</dt>
+								<dd>18Z</dd>
+							</dl>
+							<dl>
+								<dt>갱신등급</dt>
+								<dd>25Z</dd>
+							</dl>
+							<dl>
+								<dt>상태</dt>
+								<dd>해지</dd>
+							</dl>
+						</div>
+						<!-- # 정보2 # -->
+						<div class="data2">
+							<dl>
+								<dt>가입경력<br>(피보험자)</dt>
+								<dd>9</dd>
+							</dl>
+							<dl>
+								<dt>가입경력<br>(차량)</dt>
+								<dd>4</dd>
+							</dl>
+							<dl>
+								<dt>사고점수<br>(낮은과실)</dt> <!-- [M 2022-09-15] 문구수정 -->
+								<dd>00점(00점)</dd>
+							</dl>
+							<dl>
+								<dt>사고건수<br>(1년/3년)</dt>
+								<dd>0/1</dd>
+							</dl>
+							<dl>
+								<dt>가입사</dt>
+								<dd>롯데손해보험</dd>
+							</dl>
+							<dl>
+								<dt>동일증권</dt>
+								<dd>있음</dd> <!-- [M 2022-09-15] 문구수정 -->
+							</dl>
+						</div>
+						<!-- # 갱신설계 버튼 # -->
+						<div class="area-btn1">
+							<button type="button" class="btn-com1">갱신설계</button>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">55도 2568(승용소형)</strong>
+						<div class="data1">
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong>하다미</strong>
+									<span>1990.01.01</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>보험기간</dt>
+								<dd>2020.12.31~2022.12.31</dd>
+							</dl>
+							<dl>
+								<dt>적용등급</dt>
+								<dd>18Z</dd>
+							</dl>
+							<dl>
+								<dt>갱신등급</dt>
+								<dd>25Z</dd>
+							</dl>
+							<dl>
+								<dt>상태</dt>
+								<dd>정상</dd>
+							</dl>
+						</div>
+						<div class="data2">
+							<dl>
+								<dt>가입경력<br>(피보험자)</dt>
+								<dd>9</dd>
+							</dl>
+							<dl>
+								<dt>가입경력<br>(차량)</dt>
+								<dd>4</dd>
+							</dl>
+							<dl>
+								<dt>사고점수<br>(낮은과실)</dt>
+								<dd>00점(00점)</dd>
+							</dl>
+							<dl>
+								<dt>사고건수<br>(1년/3년)</dt>
+								<dd>0/1</dd>
+							</dl>
+							<dl>
+								<dt>가입사</dt>
+								<dd>롯데손해보험</dd>
+							</dl>
+							<dl>
+								<dt>동일증권</dt>
+								<dd>있음</dd>
+							</dl>
+						</div>
+						<!-- # 갱신설계 버튼 # -->
+						<div class="area-btn1">
+							<button type="button" class="btn-com1" disabled>갱신설계</button>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- # 더보기(현재페이지/총페이지) # -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색목록] 사고조회 -->
+		<!-- ######################### -->
+		<div id="uiTabCont2" class="ui-tabcon">
+			<!-- # 총 건수 # -->
+			<div class="area-info1">
+				<p>총 <strong>00건</strong></p>
+			</div>
+
+			<!-- # 요약보기 # -->
+			<label class="btn-util1 ic4" data-fixed="bottom" data-btn="display">
+				<input type="checkbox">
+				<span>요약보기</span>
+			</label>
+
+			<!-- # [목록] #
+				요약보기 : data-display="list"
+				* 요약보기 checked일 경우 목록에 클래스명(view) 추가됨.
+				* 클래스명(view)을 추가하여 비노출 컨텐츠 제어함.
+				* 단) 예외처리가 필요한 경우에는 노출되어야 하는 컨텐츠에 data-display="block" 추가
+			-->
+			<div class="info-data2" data-display="list">
+				<ul>
+					<!-- // -->
+					<li>
+						<strong class="tit">55도 2568(승용소형)</strong>
+						<!-- # 정보영역1 # -->
+						<div class="data1">
+							<dl>
+								<dt>사고일시</dt>
+								<dd>2021.05.01 12:05</dd>
+							</dl>
+							<dl>
+								<dt>사고점수</dt>
+								<dd>20점(낮은과실)</dd> <!-- [M 2022-09-15] 문구수정 -->
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd>하다미</dd>
+							</dl>
+							<dl>
+								<dt>가입사</dt>
+								<dd>롯데손해보험</dd>
+							</dl>
+						</div>
+						<!-- # 정보영역2 # -->
+						<div class="data2">
+							<dl>
+								<dt>대인사고</dt>
+								<dd>13급~14급</dd>
+							</dl>
+							<dl>
+								<dt>물적사고</dt>
+								<dd>250만원 초과</dd>
+							</dl>
+							<dl>
+								<dt>물적사고<br>할증기준</dt> <!-- [M 2022-09-15] 문구수정 -->
+								<dd class="data-num1"><strong>200</strong><span>만원</span></dd>
+							</dl>
+							<dl>
+								<dt>무과실구분</dt>
+								<dd>할인유예(과실)</dd>
+							</dl>
+							<dl>
+								<dt>사고보장<br>(담보)</dt> <!-- [M 2022-09-15] 문구수정 -->
+								<dd>대인/대물/차량</dd>
+							</dl>
+							<dl>
+								<dt>보험종목</dt>
+								<dd>개인승용</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">55도 2568(승용소형)</strong>
+						<div class="data1">
+							<dl>
+								<dt>사고일시</dt>
+								<dd>2021.05.01 12:05</dd>
+							</dl>
+							<dl>
+								<dt>사고점수</dt>
+								<dd>20점(낮은과실)</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd>하다미</dd>
+							</dl>
+							<dl>
+								<dt>가입사</dt>
+								<dd>롯데손해보험</dd>
+							</dl>
+						</div>
+						<div class="data2">
+							<dl>
+								<dt>대인사고</dt>
+								<dd>13급~14급</dd>
+							</dl>
+							<dl>
+								<dt>물적사고</dt>
+								<dd>250만원 초과</dd>
+							</dl>
+							<dl>
+								<dt>물적사고<br>할증기준</dt>
+								<dd class="data-num1"><strong>200</strong><span>만원</span></dd>
+							</dl>
+							<dl>
+								<dt>무과실구분</dt>
+								<dd>할인유예(과실)</dd>
+							</dl>
+							<dl>
+								<dt>사고보장<br>(담보)</dt>
+								<dd>대인/대물/차량</dd>
+							</dl>
+							<dl>
+								<dt>보험종목</dt>
+								<dd>개인승용</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- # 더보기(현재페이지/총페이지) # -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색목록] 가입경력 -->
+		<!-- ######################### -->
+		<div id="uiTabCont3" class="ui-tabcon">
+			<!-- # 가입경력/가입기간 # -->
+			<ul class="mes-t1 box">
+				<li><span>보험가입경력</span><span>7년 00월 00일(8년 이상)</span></li>
+				<li><span>전체가입기간</span><span>2019.05.01~2022.05.01/100일</span></li>
+			</ul>
+
+			<!-- # 총 건수 # -->
+			<div class="area-info1">
+				<p>총 <strong>00건</strong></p>
+			</div>
+
+			<!-- # 요약보기 # -->
+			<label class="btn-util1 ic4" data-fixed="bottom" data-btn="display">
+				<input type="checkbox">
+				<span>요약보기</span>
+			</label>
+
+			<!-- # [목록] #
+				요약보기 : data-display="list"
+				* 요약보기 checked일 경우 목록에 클래스명(view) 추가됨.
+				* 클래스명(view)을 추가하여 비노출 컨텐츠 제어함.
+				* 단) 예외처리가 필요한 경우에는 노출되어야 하는 컨텐츠에 data-display="block" 추가
+			-->
+			<div class="info-data2" data-display="list">
+				<ul>
+					<!-- // -->
+					<li>
+						<strong class="tit">55도 2568(승용소형)</strong>
+						<!-- # 정보영역1 # -->
+						<div class="data1">
+							<dl>
+								<dt>가입사</dt>
+								<dd>롯데손해보험</dd>
+							</dl>
+							<dl>
+								<dt>보험기간</dt>
+								<dd>2020.05.16~2022.05.16</dd>
+							</dl>
+							<dl>
+								<dt>증권번호</dt>
+								<dd>11223369000000</dd>
+							</dl>
+							<dl>
+								<dt>보험종목</dt>
+								<dd>개인승용</dd>
+							</dl>
+						</div>
+						<!-- # 정보영역2 # -->
+						<div class="data2">
+							<dl>
+								<dt>가입경력</dt>
+								<dd>8년 이상</dd>
+							</dl>
+							<dl>
+								<dt>상태</dt>
+								<dd>1년의 정상계약</dd>
+							</dl>
+							<dl>
+								<dt>구분</dt>
+								<dd>책임보험</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">55도 2568(승용소형)</strong>
+						<div class="data1">
+							<dl>
+								<dt>가입사</dt>
+								<dd>롯데손해보험</dd>
+							</dl>
+							<dl>
+								<dt>보험기간</dt>
+								<dd>2020.05.16~2022.05.16</dd>
+							</dl>
+							<dl>
+								<dt>증권번호</dt>
+								<dd>11223369000000</dd>
+							</dl>
+							<dl>
+								<dt>보험종목</dt>
+								<dd>개인승용</dd>
+							</dl>
+						</div>
+						<div class="data2">
+							<dl>
+								<dt>가입경력</dt>
+								<dd>8년 이상</dd>
+							</dl>
+							<dl>
+								<dt>상태</dt>
+								<dd>1년의 정상계약</dd>
+							</dl>
+							<dl>
+								<dt>구분</dt>
+								<dd>책임보험</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- # 더보기(현재페이지/총페이지) # -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색목록] 사고운전자 -->
+		<!-- ######################### -->
+		<div id="uiTabCont4" class="ui-tabcon">
+			<!-- # 총 건수 # -->
+			<div class="area-info1">
+				<p>총 <strong>00건</strong></p>
+			</div>
+
+			<!-- # 요약보기 # -->
+			<label class="btn-util1 ic4" data-fixed="bottom" data-btn="display">
+				<input type="checkbox">
+				<span>요약보기</span>
+			</label>
+
+			<!-- # [목록] #
+				요약보기 : data-display="list"
+				* 요약보기 checked일 경우 목록에 클래스명(view) 추가됨.
+				* 클래스명(view)을 추가하여 비노출 컨텐츠 제어함.
+				* 단) 예외처리가 필요한 경우에는 노출되어야 하는 컨텐츠에 data-display="block" 추가
+			-->
+			<div class="info-data2" data-display="list">
+				<ul>
+					<!-- // -->
+					<li>
+						<strong class="tit">55도 2568(승용소형)</strong>
+						<!-- # 정보영역1 # -->
+						<div class="data1">
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong>피보험자명</strong>
+									<span>생년월일</span>
+									<span>성별</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>가입사</dt>
+								<dd>롯데손해보험</dd>
+							</dl>
+							<dl>
+								<dt>사고일시</dt>
+								<dd>2021.05.01 12:05</dd>
+							</dl>
+							<dl>
+								<dt>사고점수</dt>
+								<dd>20점(낮은과실)</dd> <!-- [M 2022-09-15] 문구수정 -->
+							</dl>
+						</div>
+						<!-- # 정보영역2 # -->
+						<div class="data2">
+							<dl>
+								<dt>대인사고</dt>
+								<dd>13급</dd>
+							</dl>
+							<dl>
+								<dt>물적사고</dt>
+								<dd>250만원 초과</dd>
+							</dl>
+							<dl>
+								<dt>사고보장<br>(담보)</dt>
+								<dd>대인/대물/차량</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">55도 2568(승용소형)</strong>
+						<div class="data1">
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong>피보험자명</strong>
+									<span>생년월일</span>
+									<span>성별</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>가입사</dt>
+								<dd>롯데손해보험</dd>
+							</dl>
+							<dl>
+								<dt>사고일시</dt>
+								<dd>2021.05.01 12:05</dd>
+							</dl>
+							<dl>
+								<dt>사고점수</dt>
+								<dd>20점(낮은과실)</dd>
+							</dl>
+						</div>
+						<div class="data2">
+							<dl>
+								<dt>대인사고</dt>
+								<dd>13급</dd>
+							</dl>
+							<dl>
+								<dt>물적사고</dt>
+								<dd>250만원 초과</dd>
+							</dl>
+							<dl>
+								<dt>사고보장<br>(담보)</dt>
+								<dd>대인/대물/차량</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- # 더보기(현재페이지/총페이지) # -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+		</div>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer"></footer>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	/* ************************************
+	* 토글컨텐츠 호출
+	************************************ */
+	var _toggleSearch = $plugin.togglecon('#uiFormSearch', {
+		class_active : 'load',
+		selector_group : false,
+		callback_load :function(e){
+			//조회조건 오픈 이벤트
+		},
+		callback_after : function(e){
+			//조회조건 닫기 이벤트
+		}
+	});
+
+	//토글컨텐츠 강제 오픈
+	_toggleSearch.outputOpen();
+
+	/* ************************************
+	* 탭버튼 호출
+	************************************ */
+	$plugin.togglecon('.tab-sub1',{
+		toggle_type : 'tab',
+		selector : '.tab-sub1 > ul > li',
+		selector_btn : '> a',
+		selector_con : '#href',
+		callback_load : function(e){
+			//오픈이벤트
+		}
+	});
+
+	/* ************************************
+	* 샘플 : 조회구분 셀렉트
+	************************************ */
+	function uiSampleFunction(e){
+		var _select_val = e.val();
+
+		$('[data-select-con].ui-tabcon').removeClass('active');
+		$('[data-select-con="'+ _select_val +'"].ui-tabcon').addClass('active');
+	}
+//-->
+</script>
+</body>
+</html>

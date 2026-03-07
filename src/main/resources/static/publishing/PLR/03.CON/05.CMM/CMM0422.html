@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>목록 | 나의 노하우 | 노하우 | 커뮤니티</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>나의 노하우공유</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [목록영역] 나의노하우 -->
+		<!-- ######################### -->
+		<!-- # 총건수 / 정렬 / 필터 # -->
+		<div class="area-info1">
+			<p>총 <strong>12,340건</strong></p>
+			<div class="side">
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">분류</span>
+						<span data-select="text" data-value="1">전체</span>
+					</button>
+					<div class="list">
+						<div data-label="분류">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion" value="1"><span>전체</span></label>
+								<label><input type="radio" name="selectOpeion" value="2"><span>승인 대기중</span></label>
+								<label><input type="radio" name="selectOpeion" value="3"><span>승인 완료</span></label>
+								<label><input type="radio" name="selectOpeion" value="4"><span>반려</span></label> <!-- [M 2022-08-08] 누락된 항목명 추가 -->
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- # 목록 # -->
+		<div class="board-list3">
+			<ul>
+				<!-- 전체구조 -->
+				<li>
+					<a href="javascript:void(0);">
+						<!-- [상태]
+						<i class="icon-state2 ic1">승인대기중</i>
+						<i class="icon-state2 ic4">승인완료</i>
+						<i class="icon-state2 ic2">게시종료</i>
+						-->
+						<i class="icon-state2 ic7">반려</i>
+
+						<!-- [NO.1] : NO.1일 경우 노출 -->
+						<div class="info">
+							<em>No.1</em>
+							<span>연령대 대상 판매1등</span>
+						</div>
+
+						<!-- [제목] -->
+						<div class="tit">
+							<strong>제목</strong>
+						</div>
+
+						<!-- [상품명] -->
+						<div class="txt">상품명</div>
+
+						<!-- [지급률]
+							ic1 : 0~400%
+							ic2 : 400%초과~800%미안
+							ic3 : 800%초과
+						-->
+						<div class="data3 icon-t1 ic1">지급률 000%</div>
+
+						<!-- [월납입보험료] : NO.1일 경우 미노출 -->
+						<div class="data-num1">월 <strong>000,000,000</strong><span>원</span></div>
+
+						<!-- [해시태그] -->
+						<div class="data-word2">
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+						</div>
+
+						<!-- [승인요청일] : [D] 승인대기중/반려 일 경우 노출 -->
+						<dl class="data3">
+							<dt>승인요청 일시</dt>
+							<dd>0000.00.00 00:00</dd>
+						</dl>
+
+						<!-- [D] 승인완료 일 경우 노출 -->
+						<!-- [작성일] -->
+						<dl class="data2">
+							<dt>작성일</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<!-- [조회/댓글/복사] -->
+						<div class="data1">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic15">
+								<dt>설계복사</dt>
+								<dd>0000</dd>
+							</dl>
+						</div>
+						<!-- [//] -->
+					</a>
+				</li>
+				<!-- [CASE1] 승인대기중 -->
+				<li>
+					<a href="javascript:void(0);">
+						<i class="icon-state2 ic1">승인대기중</i>
+						<strong class="tit">사회초년생을 위한 저렴한 보험료보장</strong>
+						<div class="txt">let: smile 종합건강보험(30년만기/전기납)</div>
+						<div class="data3 icon-t1 ic1">지급률 750%</div>
+						<div class="data-num1">월 <strong>34,700</strong><span>원</span></div>
+						<div class="data-word2">
+							<span>#60대이상</span>
+							<span>#기혼</span>
+							<span>#10만원이하</span>
+							<span>#실손</span>
+						</div>
+						<dl class="data3">
+							<dt>승인 요청일시</dt>
+							<dd>2022.04.28 14:00</dd>
+						</dl>
+					</a>
+				</li>
+				<!-- [CASE2] 반려 -->
+				<li>
+					<a href="javascript:void(0);">
+						<i class="icon-state2 ic7">반려</i>
+						<strong class="tit">사회초년생을 위한 저렴한 보험료보장</strong>
+						<div class="txt">let: smile 종합건강보험(30년만기/전기납)</div>
+						<div class="data3 icon-t1 ic1">지급률 750%</div>
+						<div class="data-num1">월 <strong>34,700</strong><span>원</span></div>
+						<div class="data-word2">
+							<span>#60대이상</span>
+							<span>#기혼</span>
+							<span>#10만원이하</span>
+							<span>#실손</span>
+						</div>
+						<dl class="data3">
+							<dt>승인 요청일시</dt>
+							<dd>2022.04.28 14:00</dd>
+						</dl>
+					</a>
+				</li>
+				<!-- [CASE3] 승인완료 -->
+				<li>
+					<a href="javascript:void(0);">
+						<i class="icon-state2 ic4">승인완료</i>
+						<strong class="tit">사회초년생을 위한 저렴한 보험료보장</strong>
+						<div class="txt">let: smile 종합건강보험(30년만기/전기납)</div>
+						<div class="data3 icon-t1 ic1">지급률 750%</div>
+						<div class="data-num1">월 <strong>34,700</strong><span>원</span></div>
+						<div class="data-word2">
+							<span>#60대이상</span>
+							<span>#기혼</span>
+							<span>#10만원이하</span>
+							<span>#실손</span>
+						</div>
+						<dl class="data2">
+							<dt>작성일</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<div class="data1">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic15">
+								<dt>설계복사</dt>
+								<dd>0000</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<!-- [CASE4] 이달의 No.1 -->
+				<li>
+					<a href="javascript:void(0);">
+						<i class="icon-state2 ic2">게시종료</i>
+						<div class="info">
+							<em>No.1</em>
+							<span>연령대 대상 판매1등</span>
+						</div>
+						<strong class="tit">사회초년생을 위한 저렴한 보험료보장</strong>
+						<div class="txt">let: smile 종합건강보험(30년만기/전기납)</div>
+						<div class="data3 icon-t1 ic1">지급률 750%</div>
+						<div class="data-num1">월 <strong>34,700</strong><span>원</span></div>
+						<div class="data-word2">
+							<span>#60대이상</span>
+							<span>#기혼</span>
+							<span>#10만원이하</span>
+							<span>#실손</span>
+						</div>
+						<dl class="data2">
+							<dt>작성일</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<div class="data1">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>124</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>124</dd>
+							</dl>
+							<dl class="icon-com1 ic15">
+								<dt>설계복사</dt>
+								<dd>48</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<!-- 더보기 버튼 : (현재페이지/총페이지) -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(1/10)</span></button>
+			</div>
+			<!-- // -->
+		</div>
+
+
+		<!-- ######################### -->
+		<!-- [나의 노하우가 없을 경우] -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>작성하신 노하우가 없어요.</strong>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<a href="javascript:void(0);" class="btn-action c1">노하우 작성</a>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

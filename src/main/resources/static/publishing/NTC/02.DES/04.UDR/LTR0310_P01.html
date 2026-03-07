@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 콜적부결과조회 | 인수심사요청및결과</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>콜적부결과조회</h1>
+			<button type="button" data-btn="pop-close">콜적부결과조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">Let:smile 종합건강보험(더끌림 플러스) (22 01)_납입면제적용형</h2>
+				<div class="info">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+				</div>
+				<div class="data2">
+					<dl>
+						<dt>보험시기:</dt>
+						<dd>2022.03.29</dd>
+					</dl>
+				</div>
+
+				<!-- # 이력선택 # -->
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">이력선택</span>
+						<span data-select="text" data-value="1">이력1</span>
+					</button>
+					<div class="list">
+						<div data-label="이력선택">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion1" value="1"><span>이력1</span></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- # // # -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [계약정보] -->
+			<!-- ######################### -->
+			<div class="area-toggle1" data-autoset="toggle">
+				<section class="active">
+					<header class="tit">
+						<h3>계약정보</h3>
+						<button type="button" data-toggle="btn" aria-expanded="true">계약정보 상세보기</button>
+					</header>
+					<div data-toggle="content" class="info-con1">
+						<!-- // -->
+						<dl>
+							<dt>계약자</dt>
+							<dd class="data-info2"><strong>하다미</strong><span><span>1990.01.01</span><span>남</span></span></dd>
+						</dl>
+						<dl>
+							<dt>피보험자</dt>
+							<dd class="data-info2"><strong>하다미</strong><span><span>1990.01.01</span><span>남</span></span></dd>
+						</dl>
+						<dl>
+							<dt>상해급수</dt>
+							<dd>2급/B등급 [44221]</dd>
+						</dl>
+						<dl>
+							<dt>직업</dt>
+							<dd>식당 종사원</dd>
+						</dl>
+						<dl>
+							<dt>연락처</dt>
+							<dd>010-1234-5678</dd>
+						</dl>
+						<dl>
+							<dt>수익자관계</dt>
+							<dd>본인</dd>
+						</dl>
+						<dl>
+							<dt>모집점포</dt>
+							<dd>강남GA3지점[E0900]</dd>
+						</dl>
+						<dl>
+							<dt>모집자명</dt>
+							<dd>공지철</dd>
+						</dl>
+						<dl>
+							<dt>모집자와의 관계</dt>
+							<dd>소개</dd>
+						</dl>
+						<dl>
+							<dt>차량용도</dt>
+							<dd>자가용</dd>
+						</dl>
+						<dl>
+							<dt>이륜차 운전여부</dt>
+							<dd>운전안함</dd>
+						</dl>
+						<dl>
+							<dt>연령</dt>
+							<dd>32세</dd>
+						</dl>
+						<!-- // -->
+					</div>
+				</section>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [적부조사] -->
+			<!-- ######################### -->
+			<section class="wrap-section1">
+				<h4 class="tit-sub1">적부조사</h4>
+				<!-- // -->
+				<div class="info-con1">
+					<dl>
+						<dt>의뢰송신일</dt>
+						<dd>2022.04.12</dd>
+					</dl>
+					<dl>
+						<dt>결과수신일</dt>
+						<dd>2022.04.12</dd>
+					</dl>
+					<dl>
+						<dt>조사상태</dt>
+						<dd>조사완료</dd>
+					</dl>
+					<dl>
+						<dt>조사일자</dt>
+						<dd>2022.04.12</dd>
+					</dl>
+					<dl>
+						<dt>조사기관</dt>
+						<dd>특종손해사정주식회사(콜적부)</dd>
+					</dl>
+					<dl>
+						<dt>조사자명</dt>
+						<dd>공지철</dd>
+					</dl>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [소견] -->
+			<!-- ######################### -->
+			<section class="wrap-section3 line">
+				<h4 class="tit-sub1">소견</h4>
+				<!-- # 운전 # -->
+				<section>
+					<h5 class="tit-sub2">운전</h5>
+					<div class="info-con1">
+						<dl>
+							<dt>현재운전여부</dt>
+							<dd>아니요</dd>
+						</dl>
+						<dl>
+							<dt>차종</dt>
+							<dd>승용차-자가용</dd>
+						</dl>
+						<dl>
+							<dt>용도</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>오토바이 운전여부</dt>
+							<dd>아니요</dd>
+						</dl>
+						<dl>
+							<dt>오토바이 운행용도</dt>
+							<dd>-</dd>
+						</dl>
+					</div>
+				</section>
+
+				<!-- # 직업 # -->
+				<section>
+					<h5 class="tit-sub2">직업</h5>
+					<div class="info-con1">
+						<dl>
+							<dt>직장명</dt>
+							<dd>롯데손해보험</dd>
+						</dl>
+						<dl>
+							<dt>취급업무</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>부업-직장명</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>부업-취급업무</dt>
+							<dd>-</dd>
+						</dl>
+					</div>
+				</section>
+
+				<!-- # 병력 # -->
+				<section>
+					<h5 class="tit-sub2">병력</h5>
+					<div class="info-con1">
+						<dl>
+							<dt>5년이내진료 여부</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>5년이내진료 병명 및 부위</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>치료방법 및 내용</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>치료기간</dt>
+							<dd>2022.04.12~2022.04.14</dd>
+						</dl>
+						<dl>
+							<dt>병원명</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>5년이내진료 완치여부</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>현재장애 여부</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>현재장애 원인</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>현재장애 부위</dt>
+							<dd>-</dd>
+						</dl>
+					</div>
+				</section>
+
+				<!-- # 기타항목 # -->
+				<section>
+					<h5 class="tit-sub2">기타항목</h5>
+					<div class="info-con1">
+						<dl>
+							<dt>이미지경로</dt>
+							<dd>-</dd>
+						</dl>
+						<dl>
+							<dt>이미지명</dt>
+							<dd>-</dd>
+						</dl>
+					</div>
+				</section>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [종합내용] -->
+			<!-- ######################### -->
+			<section class="wrap-section3">
+				<h4 class="tit-sub1">종합내용</h4>
+				<div class="mes-t3">
+					<div>직업: 급식업체-배식업무</div>
+					<div>부업: 무</div>
+					<div>운전: 승용차-자가용</div>
+					<div>&lt;오토바이 소유없음, 운전안함/전동킥보드, 전동휠등 소유없음, 운전안함&gt;</div>
+					<div>위험취미: 안함</div>
+					<div>3개월이내 병력: 없음</div>
+					<div>고객님께서 지금까지 고지해 주셨던 직업, 병력사항은 가입설계시 설계사님께도 고지 해 주셨습니까? 예</div>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

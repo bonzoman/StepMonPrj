@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>전체계약 | 케어신청관리 | 케어프로그램</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>케어신청관리</h1>
+		<button type="button" class="btn-t1 icon-com1 ic2">계약 검색</button>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [소팅 영역] -->
+		<!-- ######################### -->
+		<div class="area-btn4">
+			<button type="button" class="btn-t1 c2 active">신청가능</button> <!-- [선택됨] -->
+			<button type="button" class="btn-t1 c2">신청중</button>
+			<button type="button" class="btn-t1 c2">케어중</button>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭버튼] -->
+		<!-- ######################### -->
+		<div class="tab-util" data-autoset="tab" data-fixed="bottom">
+			<ul>
+				<li class="active"><a href="#uiTabSection1" class="btn-util1 ic9">인별 보기</a></li>
+				<li><a href="#uiTabSection2" class="btn-util1 ic10">계약별 보기</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [총 건수] -->
+		<!-- ######################### -->
+		<div class="area-info1">
+			<p>총 <strong>00건</strong></p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [CASE] 관리 필요 계약이 있는 경우 -->
+		<!-- ######################### -->
+		<div class="area-info2">
+			<dl>
+				<dt>관리 필요 계약</dt>
+				<dd>1건</dd>
+				<dd class="btn"><button type="button">상세보기</button></dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [CASE] 인별 리스트 -->
+		<!-- ######################### -->
+		<div id="uiTabSection1" class="area-toggle1 ui-tabcon active" data-autoset="toggle">
+			<ul>
+				<!-- [CASE] 신청가능 -->
+				<li>
+					<div class="tit">
+						<strong>고객이름</strong>
+						<dl class="data1">
+							<dt>보유 계약</dt>
+							<dd>00건</dd>
+						</dl>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</div>
+					<div data-toggle="content">
+						<!-- 버튼 -->
+						<div class="area-btn1">
+							<button type="button" class="btn-com1">고객정보</button>
+							<button type="button" class="btn-com1">케어신청</button>
+						</div>
+
+						<!-- 보유계약목록 -->
+						<div class="list-con1">
+							<ul>
+								<!-- // -->
+								<li>
+									<a href="javascript:void(0);">
+										<span>582163548</span>
+										<strong>let:종합건강보험</strong>
+									</a>
+								</li>
+								<!-- // -->
+								<li>
+									<a href="javascript:void(0);">
+										<span>582163548</span>
+										<strong>Let:smile 종합건강보험(더끌림 플러스)(22 01)_납입면제적용형</strong>
+									</a>
+								</li>
+								<!-- // -->
+							</ul>
+						</div>
+						<!-- // -->
+					</div>
+				</li>
+				<!-- [CASE] 신청중 -->
+				<li>
+					<div class="tit">
+						<strong>하다미</strong>
+						<dl class="data1">
+							<dt>보유 계약</dt>
+							<dd>2건</dd>
+						</dl>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</div>
+					<div data-toggle="content">
+						<div class="area-btn1">
+							<button type="button" class="btn-com1">고객정보</button>
+							<button type="button" class="btn-com1">신청취소</button>
+						</div>
+						<div class="list-con1">
+							<ul>
+								<li>
+									<a href="javascript:void(0);">
+										<span>582163548</span>
+										<strong>let:종합건강보험</strong>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">
+										<span>582163548</span>
+										<strong>Let:smile 종합건강보험(더끌림 플러스)(22 01)_납입면제적용형</strong>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<!-- [CASE] 케어중-->
+				<li>
+					<div class="tit">
+						<strong>하다미</strong>
+						<dl class="data1">
+							<dt>보유 계약</dt>
+							<dd>2건</dd>
+						</dl>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</div>
+					<div data-toggle="content">
+						<div class="area-btn1">
+							<button type="button" class="btn-com1">케어상세</button>
+							<button type="button" class="btn-com1">배분상태변경</button>
+							<button type="button" class="btn-com1">회수요청</button>
+						</div>
+						<div class="list-con1">
+							<ul>
+								<li>
+									<a href="javascript:void(0);">
+										<em class="icon-state2 ic4">배분받기</em><span>582163548</span>
+										<strong>let:종합건강보험</strong>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">
+										<em class="icon-state2 ic2">배분거절</em><span>582163548</span>
+										<strong>let:종합건강보험</strong>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<!-- // -->
+			</ul>
+
+			<!-- 더보기(현재페이지/총페이지) -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [CASE] 계약별 리스트 -->
+		<!-- ######################### -->
+		<div id="uiTabSection2" class="info-data2 ui-tabcon">
+			<ul>
+				<!-- [CASE] 신청가능 -->
+				<li>
+					<div class="info"><span>LA123456789</span></div>
+					<strong class="tit">Let:way개인용자동차보험</strong>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd>하다미</dd>
+						</dl>
+					</div>
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">고객정보</button>
+						<button type="button" class="btn-com1">케어신청</button>
+					</div>
+					<button type="button" class="link">상세보기</button>
+				</li>
+				<!-- [CASE] 신청중 -->
+				<li>
+					<div class="info">
+						<span>LA123456789</span>
+					</div>
+					<strong class="tit">무배당롯데치아보험</strong>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd>하다미</dd>
+						</dl>
+					</div>
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">고객정보</button>
+						<button type="button" class="btn-com1">신청취소</button>
+					</div>
+					<button type="button" class="link">상세보기</button>
+				</li>
+				<!-- [CASE] 케어중-->
+				<li>
+					<div class="info">
+						<span>LA123456789</span>
+					</div>
+					<strong class="tit">Let:way개인용자동차보험</strong>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd>하다미</dd>
+						</dl>
+						<dl>
+							<dt>케어설계사</dt>
+							<dd>공지철</dd>
+						</dl>
+						<dl>
+							<dt>접수번호</dt>
+							<dd>1234567890-001</dd>
+						</dl>
+						<dl>
+							<dt>재배분여부</dt>
+							<dd>배분받기</dd>
+						</dl>
+					</div>
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">케어상세</button>
+						<button type="button" class="btn-com1">재배분거절</button><!-- <button type="button" class="btn-com1">재배분받기</button> -->
+						<button type="button" class="btn-com1">회수요청</button>
+					</div>
+					<button type="button" class="link">상세보기</button>
+				</li>
+				<!-- [CASE] 케어중-->
+				<li>
+					<div class="info">
+						<span>LA123456789</span>
+					</div>
+					<strong class="tit">Let:way개인용자동차보험</strong>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd>하다미</dd>
+						</dl>
+						<dl>
+							<dt>케어설계사</dt>
+							<dd>공지철</dd>
+						</dl>
+						<dl>
+							<dt>접수번호</dt>
+							<dd>1234567890-001</dd>
+						</dl>
+						<dl>
+							<dt>재배분여부</dt>
+							<dd>배분받기</dd>
+						</dl>
+					</div>
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">케어상세</button>
+						<!-- <button type="button" class="btn-com1">재배분거절</button> --><button type="button" class="btn-com1">재배분받기</button>
+						<button type="button" class="btn-com1">회수요청</button>
+					</div>
+					<button type="button" class="link">상세보기</button>
+				</li>
+				<!-- // -->
+			</ul>
+
+			<!-- 더보기(현재페이지/총페이지) -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [결과없음] -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>케어신청한 계약이 없습니다.</strong>
+			</p>
+		</div>
+		<!-- ######################### -->
+	</div>
+
+	<footer class="footer">
+		<dl class="select-toggle1" data-autoset="select">
+			<dt>홈화면 선택</dt>
+			<dd>
+				<div class="basic">
+					<button type="button" class="icon-home" data-value="1">모아보기</button>
+					<button type="button" data-toggle="selectbtn" aria-expanded="false">홈 화면 선택목록</button>
+				</div>
+				<div class="list">
+					<button type="button" title="선택" data-option="1" aria-selected="true"><span>모아보기</span></button>
+					<button type="button" title="선택" data-option="2"><span>고객조회</span></button>
+					<button type="button" title="선택" data-option="3"><span>렛:톡</span></button>
+					<button type="button" title="선택" data-option="4"><span>보장분석</span></button>
+					<button type="button" title="선택" data-option="5"><span>내강의실</span></button>
+					<button type="button" class="icon-settiong"><span>홈 설정</span></button>
+				</div>
+			</dd>
+		</dl>
+		<a href="javascript:void(0);" class="ic1">모아보기</a>
+		<a href="javascript:void(0);" class="ic2">알림<em class="icon-noti1 ic1">미확인 알림 있음</em></a>
+		<a href="javascript:void(0);" class="info"><img src="../../resource/img/temp/@img_user1.png" alt="">나의정보</a>
+	</footer>
+	<!-- -------------------------------------- -->
+</main>
+
+
+</body>
+</html>

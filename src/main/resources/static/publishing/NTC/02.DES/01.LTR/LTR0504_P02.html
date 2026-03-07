@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 영위업종_[P]소분류 | 재물보험 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>소분류</h1>
+			<button type="button" data-btn="pop-close">소분류 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<div class="label-btn1 block">
+				<ul>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1" checked>
+							<span>(1) 학교(초,중,고,전문,대학교 등) </span>
+						</label>
+						<!-- [D] 업종설명이 있을 경우 노출 -->
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">도움말</button>
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl class="txt-bul1">
+								<dt>도움말</dt>
+								<dd>초등, 중등 및 고등교육 수준의 정규교육기관, 특수학교, 외국인학교 등 각종 학교에 대하여 적용</dd>
+								<dd>학교 구내의 제반 부대시설(연구소 포함)에 대하여도 적용</dd>
+								<dd><button type="button" data-btn="pop-close">도움말 닫기</button></dd>
+							</dl>
+						</div>
+						<!-- // -->
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>(2) 교육원(연수원 등)</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>(3) 직업훈련원, 직업전문학교</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>(4) 학원(정비학원제외)</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>(5) 화학연구소</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>(6) 기타연구소</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>(7) 도서관</span>
+						</label>
+					</li>
+				</ul>
+			</div>
+
+			<!-- // -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">이전</button>
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- // -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

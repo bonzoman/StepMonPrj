@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>BUTTON | CONTENTS | PUBLISHING GUIDE</title>
+	<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/publish.css?20220913">
+	<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/ui.plugin.js"></script>
+	<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<div class="guide-wrap">
+	<header>
+		<h1>
+			<i>롯데손해보험</i> CONTENTS <strong>BUTTON</strong>
+			<a href="../99.work/coding_list1.html" class="guide-btn1">작업목록</a>
+		</h1>
+		<nav>
+			<ul>
+				<li><a href="content_basic.html">INFO</a></li>
+				<li><a href="content_txt.html">TITLE/TXT</a></li>
+				<li class="active"><a href="content_btn.html" aria-current="page">BUTTON</a></li>
+				<li><a href="content_icon.html">ICON</a></li>
+				<li><a href="content_form.html">FORM ELEMENT</a></li>
+				<li><a href="content_formarea.html">FORM 약관/검색</a></li>
+				<li><a href="content_formarea2.html">FORM 입력</a></li>
+				<li><a href="content_tab.html">TAB/TOGGLE</a></li>
+				<li><a href="content_tbl.html">TABLE</a></li>
+				<li><a href="content_box.html">BOX/BANNER</a></li>
+				<li><a href="content_info.html">INFO/DATA</a></li>
+				<li><a href="content_list.html">LIST</a></li>
+				<li><a href="content_bbs.html">BOARD</a></li>
+			</ul>
+		</nav>
+	</header>
+	<article class="guide-container">
+		<h1 class="hide">버튼 작업 가이드</h1>
+
+		<!-- ############################## -->
+		<!-- [액션버튼] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">액션버튼</h2>
+			<h3 class="guide-tit2">페이지용 : .btn-action <span class="sub">[H56]</span></h3>
+			<div class="guide-tbl body">
+				<table>
+					<caption>버튼정의</caption>
+					<colgroup><col style="width:20%;"/><col></colgroup>
+					<thead>
+						<tr>
+							<th scope="col">구분</th>
+							<th scope="col">내용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>기본</th>
+							<td class="area-btn5"><a href="javascript:void(0);" class="btn-action">DEFAULT</a></td>
+						</tr>
+						<tr>
+							<th>색상변경 : .c1</th>
+							<td class="area-btn5"><a href="javascript:void(0);" class="btn-action c1">DEFAULT</a></td>
+						</tr>
+						<tr>
+							<th>색상변경 : .c2</th>
+							<td class="area-btn5"><a href="javascript:void(0);" class="btn-action c2">DEFAULT</a></td>
+						</tr>
+						<tr>
+							<th>비활성화</th>
+							<td class="area-btn5"><button type="button" class="btn-action" disabled>DISABLED</button></td>
+						</tr>
+						<tr>
+							<th>아이콘</th>
+							<td>
+								<div class="area-btn1">
+									<button type="button" class="btn-action ic1">버튼</button>
+									<button type="button" class="btn-action ic2">버튼</button>
+									<button type="button" class="btn-action ic3">버튼</button>
+								</div>
+								<div class="area-btn1">
+									<button type="button" class="btn-action ic6">버튼</button>
+									<button type="button" class="btn-action ic7">버튼</button>
+									<button type="button" class="btn-action ic8">버튼</button>
+								</div>
+								<div class="area-btn1">
+									<button type="button" class="btn-action ic10">버튼</button>
+									<button type="button" class="btn-action ic11">버튼</button>
+									<button type="button" class="btn-action ic12">버튼</button>
+								</div>
+								<div class="area-btn1">
+									<button type="button" class="btn-action ic13">버튼</button>
+									<button type="button" class="btn-action ic14">버튼</button>
+									<button type="button" class="btn-action ic15">버튼</button>
+								</div>
+								<div class="area-btn1">
+									<button type="button" class="btn-action ic16">버튼</button>
+									<button type="button" class="btn-action ic17">버튼</button>
+								</div>
+								<div class="area-btn4">
+									<button type="button" class="btn-action ic4">버튼</button>
+									<button type="button" class="btn-action ic5">버튼</button>
+									<button type="button" class="btn-action ic9">버튼</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [일반버튼] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">일반버튼</h2>
+			<h3 class="guide-tit2">유형1 : .btn-com1 <span class="sub">[H48]</span></h3>
+			<div class="guide-tbl body">
+				<table>
+					<caption>버튼정의</caption>
+					<colgroup><col style="width:20%;"/><col></colgroup>
+					<thead>
+						<tr>
+							<th scope="col">구분</th>
+							<th scope="col">내용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>기본</th>
+							<td class="area-btn5">
+								<a href="javascript:void(0);" class="btn-com1">DEFAULT</a>
+							</td>
+						</tr>
+						<tr>
+							<th>색상변경 : .c1</th>
+							<td class="area-btn5">
+								<a href="javascript:void(0);" class="btn-com1 c1">DEFAULT</a>
+							</td>
+						</tr>
+						<tr>
+							<th>색상변경 : .c2</th>
+							<td class="area-btn5">
+								<a href="javascript:void(0);" class="btn-com1 c2">DEFAULT</a>
+							</td>
+						</tr>
+						<tr>
+							<th>비활성화</th>
+							<td class="area-btn5">
+								<button type="button" class="btn-com1" disabled>DISABLED</button>
+							</td>
+						</tr>
+						<tr>
+							<th>최소사이즈</th>
+							<td>
+								<a href="javascript:void(0);" class="btn-com1">버튼</a>
+								<a href="javascript:void(0);" class="btn-com1 c1">버튼</a>
+								<a href="javascript:void(0);" class="btn-com1 c2">버튼</a>
+								<button type="button" class="btn-com1" disabled>버튼</button>
+							</td>
+						</tr>
+						<tr>
+							<th>사이즈 지정</th>
+							<td>
+								<a href="javascript:void(0);" class="btn-com1 w1">버튼[W 148]</a>
+								<a href="javascript:void(0);" class="btn-com1 w2">버튼[W 124]</a>
+							</td>
+						</tr>
+						<tr>
+							<th>아이콘</th>
+							<td>
+								<button type="button" class="btn-com1 ic1">버튼</button>
+								<button type="button" class="btn-com1 ic2">버튼</button>
+								<button type="button" class="btn-com1 ic3">버튼</button>
+								<button type="button" class="btn-com1 ic6">버튼</button>
+								<button type="button" class="btn-com1 ic7">버튼</button>
+								<button type="button" class="btn-com1 ic8">버튼</button>
+								<button type="button" class="btn-com1 ic10">버튼</button>
+								<button type="button" class="btn-com1 ic11">버튼</button>
+								<button type="button" class="btn-com1 ic12">버튼</button>
+								<button type="button" class="btn-com1 ic13">버튼</button>
+								<button type="button" class="btn-com1 ic14">버튼</button>
+								<button type="button" class="btn-com1 ic15">버튼</button>
+								<button type="button" class="btn-com1 ic16">버튼</button>
+								<button type="button" class="btn-com1 ic17">버튼</button>
+								<br>
+								<button type="button" class="btn-com1 ic4">버튼</button>
+								<button type="button" class="btn-com1 ic5">버튼</button>
+								<button type="button" class="btn-com1 ic9">버튼</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [서브버튼] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">서브버튼</h2>
+			<!-- ### INPUT + BTN ### -->
+			<h3 class="guide-tit2">INPUT + BTN : .btn-sub1 <span class="sub">[H48]</span></h3>
+			<div class="guide-tbl body">
+				<table>
+					<caption>버튼정의</caption>
+					<colgroup><col style="width:20%;"/><col></colgroup>
+					<thead>
+						<tr>
+							<th scope="col">구분</th>
+							<th scope="col">내용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>기본</th>
+							<td><a href="javascript:void(0);" class="btn-sub1">DEFAULT</a></td>
+						</tr>
+						<tr>
+							<th>비활성화</th>
+							<td><button type="button" class="btn-sub1" disabled>DISABLED</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- ### 유형2 ### -->
+			<h3 class="guide-tit2">유형2 : .btn-sub2 <span class="sub">[H36]</span></h3>
+			<div class="guide-tbl body">
+				<table>
+					<caption>버튼정의</caption>
+					<colgroup><col style="width:20%;"/><col></colgroup>
+					<thead>
+						<tr>
+							<th scope="col">구분</th>
+							<th scope="col">내용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>기본</th>
+							<td><a href="javascript:void(0);" class="btn-sub2">DEFAULT</a></td>
+						</tr>
+						<tr>
+							<th>색상변경 : .c1</th>
+							<td><a href="javascript:void(0);" class="btn-sub2 c1">DEFAULT</a></td>
+						</tr>
+						<tr>
+							<th>색상변경 : .c2</th>
+							<td><a href="javascript:void(0);" class="btn-sub2 c2">DEFAULT</a></td>
+						</tr>
+						<tr>
+							<th>비활성화</th>
+							<td><button type="button" class="btn-sub2" disabled>DISABLED</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- ### 유형3 ### -->
+			<h3 class="guide-tit2">유형3 : .btn-sub3 <span class="sub">[H28]</span></h3>
+			<div class="guide-tbl body">
+				<table>
+					<caption>버튼정의</caption>
+					<colgroup><col style="width:20%;"/><col></colgroup>
+					<thead>
+						<tr>
+							<th scope="col">구분</th>
+							<th scope="col">내용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>기본</th>
+							<td><a href="javascript:void(0);" class="btn-sub3">DEFAULT</a></td>
+						</tr>
+						<tr>
+							<th>색상변경 : .c1</th>
+							<td><a href="javascript:void(0);" class="btn-sub3 c1">DEFAULT</a></td>
+						</tr>
+						<tr>
+							<th>색상변경 : .c2</th>
+							<td><a href="javascript:void(0);" class="btn-sub3 c2">DEFAULT</a></td>
+						</tr>
+						<tr>
+							<th>비활성화</th>
+							<td><button type="button" class="btn-sub3" disabled>DISABLED</button></td>
+						</tr>
+						<tr>
+							<th>사이즈지정</th>
+							<td><a href="javascript:void(0);" class="btn-sub3 c2 w1">버튼명</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- ### 유형4 ### -->
+			<h3 class="guide-tit2">유형4 : .btn-sub4 <span class="sub">[H26]</span></h3>
+			<div class="guide-tbl body">
+				<table>
+					<caption>버튼정의</caption>
+					<colgroup><col style="width:20%;"/><col></colgroup>
+					<thead>
+						<tr>
+							<th scope="col">구분</th>
+							<th scope="col">내용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>기본</th>
+							<td><a href="javascript:void(0);" class="btn-sub4">DEFAULT</a></td>
+						</tr>
+						<tr>
+							<th>색상변경 : .c1</th>
+							<td><a href="javascript:void(0);" class="btn-sub4 c1">DEFAULT</a></td>
+						</tr>
+						<tr>
+							<th>색상변경 : .c2</th>
+							<td><a href="javascript:void(0);" class="btn-sub4 c2">DEFAULT</a></td>
+						</tr>
+						<tr>
+							<th>비활성화</th>
+							<td><button type="button" class="btn-sub4" disabled>DISABLED</button></td>
+						</tr>
+						<tr>
+							<th>아이콘</th>
+							<td>
+								<button type="button" class="btn-sub4 ic11">버튼</button>
+								<button type="button" class="btn-sub4 c1 ic11">버튼</button>
+								<button type="button" class="btn-sub4 c2 ic11">버튼</button>
+								<button type="button" class="btn-sub4 ic11" disabled>버튼</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [컨텐츠 버튼] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">컨텐츠 버튼</h2>
+			<h3 class="guide-tit2">라운드 유형 : .btn-t1 <span class="sub">[H36]</span></h3>
+			<div class="guide-area body">
+				<div class="area-btn4">
+					<a href="javascript:void(0);" class="btn-t1">DEFAULT</a>
+					<button type="button" class="btn-t1" disabled>DISABLED</button>
+				</div>
+				<div class="area-btn4">
+					<button type="button" class="btn-t1 icon-com1 ic2">검색</button>
+					<button type="button" class="btn-t1 icon-com1 ic2" disabled>검색</button>
+				</div>
+				<div class="area-btn4">
+					<button type="button" class="btn-t1 c2 active" title="선택됨">항목명</button>
+					<button type="button" class="btn-t1 c2">항목명</button>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">라인 유형 : .btn-t2 <span class="sub">[H96]</span></h3>
+			<div class="guide-area body">
+				<a href="javascript:void(0);" class="btn-t2">DEFAULT</a>
+				<button type="button" class="btn-t2">DEFAULT</button>
+			</div>
+
+			<h3 class="guide-tit2">박스 유형 : .btn-t3 <span class="sub">[H56]</span></h3>
+			<div class="guide-area body">
+				<a href="javascript:void(0);" class="btn-t3">DEFAULT</a>
+				<button type="button" class="btn-t3">DEFAULT</button>
+				<button type="button" class="btn-t3 ic1">내맘대로 목표 설정</button>
+			</div>
+
+			<h3 class="guide-tit2">링크유형 : .link-t1</h3>
+			<div class="guide-area body">
+				<button type="button" class="link-t1">버튼명</button><br>
+				<button type="button" class="link-t1" disabled>버튼명</button>
+			</div>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [유틸버튼] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">유틸버튼</h2>
+			<h3 class="guide-tit2">유형1 : .btn-util1</h3>
+			<div class="guide-area body" style="transform:translateZ(0);">
+				<a href="javascript:void(0);" class="btn-util1 ic1">글작성하기</a>
+				<a href="javascript:void(0);" class="btn-util1 ic1" data-fixed="bottom">글작성하기</a>
+				<a href="javascript:void(0);" class="btn-util1 ic2">상세보기</a>
+				<a href="javascript:void(0);" class="btn-util1 ic3">발송하기</a>
+				<a href="javascript:void(0);" class="btn-util1 ic4">요약보기</a>
+				<a href="javascript:void(0);" class="btn-util1 ic5">후보자등록</a>
+				<a href="javascript:void(0);" class="btn-util1 ic6">전화걸기</a>
+				<a href="javascript:void(0);" class="btn-util1 ic7">전화걸기</a>
+				<a href="javascript:void(0);" class="btn-util1 ic8">가능한업무</a>
+				<a href="javascript:void(0);" class="btn-util1 ic9">고객으로보기</a>
+				<a href="javascript:void(0);" class="btn-util1 ic10">계약으로보기</a>
+				<label class="btn-util1 ic4" data-btn="display">
+					<input type="checkbox">
+					<span>요약보기</span>
+				</label>
+			</div>
+			<div class="guide-area popup">
+				<a href="javascript:void(0);" class="btn-util1 t1 ic1">글작성하기</a>
+				<a href="javascript:void(0);" class="btn-util1 t1 ic2">상세보기</a>
+				<a href="javascript:void(0);" class="btn-util1 t1 ic3">발송하기</a>
+				<a href="javascript:void(0);" class="btn-util1 t1 ic4">요약보기</a>
+				<a href="javascript:void(0);" class="btn-util1 t1 ic5">후보자등록</a>
+				<a href="javascript:void(0);" class="btn-util1 t1 ic6">전화걸기</a>
+				<a href="javascript:void(0);" class="btn-util1 t1 ic7">전화걸기</a>
+				<a href="javascript:void(0);" class="btn-util1 t1 ic8">가능한업무</a>
+				<a href="javascript:void(0);" class="btn-util1 t1 ic9">고객으로보기</a>
+				<a href="javascript:void(0);" class="btn-util1 t1 ic10">계약으로보기</a>
+				<label class="btn-util1 t1 ic4" data-btn="display">
+					<input type="checkbox">
+					<span>요약보기</span>
+				</label>
+			</div>
+			<div class="guide-area body">
+				<a href="javascript:void(0);" class="btn-util1 t2 ic1">글작성하기</a>
+				<a href="javascript:void(0);" class="btn-util1 t2 ic2">상세보기</a>
+				<a href="javascript:void(0);" class="btn-util1 t2 ic3">발송하기</a>
+				<a href="javascript:void(0);" class="btn-util1 t2 ic4">요약보기</a>
+				<a href="javascript:void(0);" class="btn-util1 t2 ic5">후보자등록</a>
+				<a href="javascript:void(0);" class="btn-util1 t2 ic6">전화걸기</a>
+				<a href="javascript:void(0);" class="btn-util1 t2 ic7">전화걸기</a>
+				<a href="javascript:void(0);" class="btn-util1 t2 ic8">버튼명</a>
+				<a href="javascript:void(0);" class="btn-util1 t2 ic9">고객으로보기</a>
+				<a href="javascript:void(0);" class="btn-util1 t2 ic10">계약으로보기</a>
+				<label class="btn-util1 t2 ic4" data-btn="display">
+					<input type="checkbox">
+					<span>요약보기</span>
+				</label>
+			</div>
+
+			<h3 class="guide-tit2">유형2 : .btn-util2</h3>
+			<div class="guide-area body">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+			<div class="guide-area popup">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+
+			<h3 class="guide-tit2">유형3 : .btn-util3</h3>
+			<div class="guide-area body">
+				<div class="btn-util3">
+					<button type="button" class="active" title="선택됨">버튼명</button>
+					<button type="button">버튼명</button>
+				</div>
+				<div class="btn-util3 t1">
+					<a href="javascript:void(0);" class="ic1">버튼명</a>
+					<a href="javascript:void(0);" class="ic2">버튼명</a>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">유형4 : .btn-util4</h3>
+			<div class="guide-area body">
+				<div class="btn-util4">
+					<button type="button" class="ic1 active" title="선택됨">휴대폰 본인인증</button>
+					<button type="button" class="ic2">카카오페이 인증</button>
+					<button type="button" class="ic3">금융인증서</button>
+					<button type="button" class="ic4">간편비밀번호</button>
+					<button type="button" class="ic5">바이오</button>
+					<button type="button" class="ic6">조직정보인증</button>
+					<button type="button" class="ic7">PASS</button>
+					<button type="button" class="ic8">NAVER</button>
+					<button type="button" class="ic9">신규설계</button>
+					<button type="button" class="ic10">당사갱신</button>
+					<button type="button" class="ic11">타사갱신</button>
+				</div>
+			</div>
+			<div class="guide-area popup">
+				<div class="btn-util4">
+					<label class="ic1">
+						<input type="radio" name="btnRadio1" checked>
+						<span>휴대폰 본인인증</span>
+					</label>
+					<label class="ic2">
+						<input type="radio" name="btnRadio1">
+						<span>카카오페이 인증</span>
+					</label>
+					<label class="ic3">
+						<input type="radio" name="btnRadio1">
+						<span>금융인증서</span>
+					</label>
+					<label class="ic4">
+						<input type="radio" name="btnRadio1">
+						<span>간편비밀번호</span>
+					</label>
+					<label class="ic5">
+						<input type="radio" name="btnRadio1">
+						<span>바이오</span>
+					</label>
+					<label class="ic6">
+						<input type="radio" name="btnRadio1">
+						<span>조직정보인증</span>
+					</label>
+					<label class="ic7">
+						<input type="radio" name="btnRadio1">
+						<span>PASS</span>
+					</label>
+					<label class="ic8">
+						<input type="radio" name="btnRadio1">
+						<span>NAVER</span>
+					</label>
+					<label class="ic9">
+						<input type="radio" name="btnRadio1">
+						<span>신규설계</span>
+					</label>
+					<label class="ic10">
+						<input type="radio" name="btnRadio1">
+						<span>당사갱신</span>
+					</label>
+					<label class="ic11">
+						<input type="radio" name="btnRadio1">
+						<span>타사갱신</span>
+					</label>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">유형5 : .btn-util5</h3>
+			<div class="guide-area body">
+				<h4 class="guide-tit3">바로가기 유형 : a태그</h4>
+				<div class="btn-util5" data-sticky="top" data-autoset="toggle">
+					<button type="button" data-toggle="btn" aria-expanded="false">메뉴목록 전체보기</button>
+					<div data-toggle="content">
+						<a href="#uiMenu1" class="active">메뉴명1</a> <!-- [D] 선택됨 클래스 추가 : active -->
+						<a href="#uiMenu2">메뉴명2</a>
+						<a href="#uiMenu3">메뉴명3</a>
+						<a href="#uiMenu4">메뉴명4</a>
+						<a href="#uiMenu5">메뉴명5</a>
+					</div>
+				</div>
+			</div>
+			<div class="guide-area popup">
+				<h4 class="guide-tit3">소팅 유형 : button태그</h4>
+				<div class="btn-util5" data-autoset="toggle">
+					<button type="button" data-toggle="btn" aria-expanded="false">버튼 전체보기</button>
+					<div data-toggle="content">
+						<button type="button" class="active">메뉴명1<span class="icon-noti1 ic2">N</span></button> <!-- [D] 선택됨 클래스 추가 : active -->
+						<button type="button">메뉴명2<span class="icon-noti1 ic2">N</span></button>
+						<button type="button">메뉴명3<span class="icon-noti1 ic2">N</span></button>
+						<button type="button">메뉴명4</button>
+						<button type="button">메뉴명5</button>
+						<button type="button">메뉴명6</button>
+						<button type="button">만기(일반)</button>
+					</div>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">유형6 : .btn-util6</h3>
+			<div class="guide-area body">
+				<div class="btn-util6">
+					<button type="button">버튼명</button>
+					<button type="button">버튼명</button>
+					<button type="button">버튼명</button>
+				</div>
+				<hr class="guide-line2">
+				<div class="btn-util6">
+					<button type="button" class="ic1">계약조회</button>
+					<button type="button" class="ic2">수금관리</button>
+					<button type="button" class="ic3">갱신관리</button>
+				</div>
+			</div>
+			<div class="guide-area popup">
+				<div class="btn-util6">
+					<button type="button" class="ic1">계약조회</button>
+					<button type="button" class="ic2">수금관리</button>
+					<button type="button" class="ic3">갱신관리</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [유틸버튼] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">TOP버튼 : .btn-top</h2>
+			<div class="guide-area body" style="height:20.0rem;transform:translateZ(0)">
+				<button type="button" class="btn-top show">상단으로이동</button>
+			</div>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [버튼영역 : 페이지 액션] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">버튼영역 : 페이지 액션</h2>
+			<h3 class="guide-tit2">기본 : .area-action</h3>
+			<div class="guide-area body">
+				<div class="area-action">
+					<a href="javascript:void(0);" class="btn-action">버튼</a>
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+				</div>
+				<div class="area-action">
+					<a href="javascript:void(0);" class="btn-action">버튼</a>
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">비율조정 : .area-action.col</h3>
+			<div class="guide-area body">
+				<div class="area-action col">
+					<a href="javascript:void(0);" class="btn-action">버튼</a>
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+				</div>
+				<div class="area-action col">
+					<a href="javascript:void(0);" class="btn-action icon-com1 ic3">이전 글</a>
+					<a href="javascript:void(0);" class="btn-action icon-com1 c1 ic3 right">다음 글</a>
+				</div>
+				<div class="area-action col">
+					<a href="javascript:void(0);" class="btn-action">버튼</a>
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+				</div>
+				<div class="area-action col">
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+					<a href="javascript:void(0);" class="btn-action icon-com1 ic3 simple">이전 글</a>
+					<a href="javascript:void(0);" class="btn-action icon-com1 ic3 right simple">다음 글</a>
+				</div>
+				<div class="area-action col">
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+					<a href="javascript:void(0);" class="btn-action icon-com1 ic3 simple">이전 글</a>
+					<a href="javascript:void(0);" class="btn-action icon-com1 ic3 right simple">다음 글</a>
+				</div>
+				<div class="area-action col">
+					<a href="javascript:void(0);" class="btn-action ic4 simple">버튼</a>
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">스타일변경 : .area-action.t1</h3>
+			<div class="guide-area body">
+				<div class="area-action t1">
+					<a href="javascript:void(0);" class="btn-action">버튼</a>
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">하단고정 : .area-action[data-sticky="bottom"]</h3>
+			<div class="guide-area body" style="height:150px;transform:translateZ(0);">
+				<div class="area-action" data-sticky="bottom">
+					<a href="javascript:void(0);" class="btn-action">버튼</a>
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+				</div>
+			</div>
+			<div class="guide-area body" style="height:150px;transform:translateZ(0);">
+				<div class="area-action t1" data-sticky="bottom">
+					<a href="javascript:void(0);" class="btn-action">버튼</a>
+					<a href="javascript:void(0);" class="btn-action c1">버튼</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [버튼영역 : 기타] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">버튼영역 : 기타</h2>
+			<h3 class="guide-tit2">버튼영역1 : .area-btn1 <span class="sub">[가로100% / n등분]</span> </h3>
+			<div class="guide-area body">
+				<div class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+				</div>
+				<div class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1 c1 ic5">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+				</div>
+				<div class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+				</div>
+				<div class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+				</div>
+				<!-- 2등분 개행 -->
+				<div class="area-btn1 col2">
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+				</div>
+				<!-- 3등분 개행 -->
+				<div class="area-btn1 col3">
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+				</div>
+				<!-- // -->
+			</div>
+			<div class="guide-area popup">
+				<h4 class="guide-tit3">라인추가 : .line</h4>
+				<div class="area-btn1 line">
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">버튼영역2 : .area-btn2 <span class="sub">[중앙정렬]</span> </h3>
+			<div class="guide-area body">
+				<div class="area-btn2">
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+				</div>
+				<div class="area-btn2">
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">버튼영역3 : .area-btn3 <span class="sub">[우측정렬]</span> </h3>
+			<div class="guide-area body">
+				<div class="area-btn3">
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+				</div>
+				<hr class="guide-line2">
+				<div class="area-btn3">
+					<div class="label-check1 t1 side">
+						<label>
+							<input type="checkbox">
+							<span>항목명</span>
+						</label>
+					</div>
+					<button type="button" class="btn-sub3 c1">버튼</button>
+				</div>
+			</div>
+			<div class="guide-area popup">
+				<h4 class="guide-tit3">라인추가 : .line</h4>
+				<div class="area-btn3 line">
+					<a href="javascript:void(0);" class="btn-sub2 c2">버튼</a>
+					<a href="javascript:void(0);" class="btn-sub2 c2">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1 w100">버튼</a>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">버튼영역4 : .area-btn4 <span class="sub">[좌측정렬]</span> </h3>
+			<div class="guide-area body">
+				<div class="area-btn4">
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+				</div>
+			</div>
+			<div class="guide-area popup">
+				<h4 class="guide-tit3">라인추가 : .line</h4>
+				<div class="area-btn4 line">
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">버튼영역5 : .area-btn5 <span class="sub">[블록정렬]</span> </h3>
+			<div class="guide-area body">
+				<div class="area-btn5">
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+					<a href="javascript:void(0);" class="btn-com1">버튼</a>
+				</div>
+			</div>
+
+		</section>
+		<!-- ############################## -->
+	</article>
+</div>
+<script src="../../resource/js/publish.plugin.js"></script>
+<script src="../../resource/js/publish.common.js"></script>
+<script>
+//<!--
+
+//-->
+</script>
+</body>
+</html>

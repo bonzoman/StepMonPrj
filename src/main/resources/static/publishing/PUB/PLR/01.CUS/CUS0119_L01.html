@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 인증번호 입력 방법 안내 | 문자인증 | 가입설계동의 | 고객동의</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 인증번호 입력 방법 안내 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCUS0119L01" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>인증번호 입력 방법 안내</dt>
+		<dd class="sub"><strong>보고 계신 화면에서 벗어나도 ‘문자인증대기현황’ 화면에서 유효시간 내에 다시 입력할 수 있어요!</strong></dd>
+		<dd>위치: 홈 &gt; 고객동의 &gt; 문자인증대기현황</dd>
+		<dd>인증번호를 15분 이내(발송 기준)에 입력하면 가입설계동의를 완료하실 수 있어요.</dd>
+		<dd>인증유효시간 15분이 지나면 인증처리가 안 돼요.</dd>
+		<dd class="area-action">
+			<button type="button" class="btn-action c1" data-btn="pop-close">확인</button>
+		</dd>
+	</dl>
+</div>
+
+<!-- ################################################### -->
+<script>
+	//<!--
+		//레이어팝업 선언
+		$plugin.popmodal('#uiPOPDPCUS0119L01');
+
+		//레이어팝업 강제오픈
+		$('#uiPOPDPCUS0119L01').trigger('outputOpen');
+	//-->
+</script>
+</body>
+</html>

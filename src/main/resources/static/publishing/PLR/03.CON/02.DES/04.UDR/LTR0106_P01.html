@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 실사보고서 | 인수심사요청및결과</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-08]	1. 계약자 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>실사보고서</h1>
+			<button type="button" data-btn="pop-close">실사보고서 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역]  -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">Let:smile 종합건강보험(더끌림 플러스) (22 01)_납입면제적용형</h2>
+				<div class="info">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+				</div>
+				<!-- 2022-11-17 계약자 추가 -->
+				<div class="info t1">
+					<dl>
+						<dt>계약자</dt>
+						<dd>하다미</dd>
+					</dl>
+				</div>
+				<!-- //2022-11-17 계약자 추가 -->
+
+				<!-- # 주소 # -->
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false"> <!-- [D] 목적물이 1개일 경우 : disabled 속성 추가 -->
+						<span data-select="title">주소</span>
+						<span data-select="text" data-value="1">서울 중구 소월로 3 롯데손해보험 빌딩</span>
+					</button>
+					<div class="list">
+						<div data-label="주소">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion" value="1"><span>서울 중구 소월로 3 롯데손해보험 빌딩</span></label>
+								<label><input type="radio" name="selectOpeion" value="2"><span>서울 중구 소월로 3 롯데손해보험 빌딩</span></label>
+								<label><input type="radio" name="selectOpeion" value="3"><span>서울 중구 소월로 3 롯데손해보험 빌딩</span></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- [D] 작성이력이 있는 경우 버튼 노출 -->
+				<div class="area-btn4">
+					<button type="button" class="btn-sub3 c2">작성이력 가져오기</button>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [STEP영역] 답변상태 -->
+			<!-- ######################### -->
+			<div class="info-step1 t1" data-sticky="top" data-autoset="toggle" data-scroll-tab="true">
+				<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+				<ol data-toggle="content">
+					<li aria-current="step">
+						<a href="#uiSTEPSECTION01">기본사항(공통)</a>
+						<!--
+							[D] 상태에 따른 li에 클래스 추가 : 하단 스크립트 참고
+							li class="current" : 현재 입력한 답변 상태 표시
+							li class="invalid" : 오류 상태 표시
+						-->
+						<ol>
+							<li><span>01. 영위업종</span><a href="#uiSTEPCONT01" class="btn-sub3 c2">이동</a></li>
+							<li><span>02. 건물내 타업종</span><a href="#uiSTEPCONT02" class="btn-sub3 c2">이동</a></li>
+							<li><span>03. 과거 5년이내 사고경험</span><a href="#uiSTEPCONT03" class="btn-sub3 c2">이동</a></li>
+							<li><span>04. 과거 보험가입 경력</span><a href="#uiSTEPCONT04" class="btn-sub3 c2">이동</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#uiSTEPSECTION02">건물현황 및 방화설비(공통)</a>
+						<ol>
+							<li><span>05. 지하 소재 여부</span><a href="#uiSTEPCONT05" class="btn-sub3 c2">이동</a></li>
+							<li><span>06. 경비원/종업원 상주 여부</span><a href="#uiSTEPCONT06" class="btn-sub3 c2">이동</a></li>
+							<li><span>07. 소화설비 보유 여부</span><a href="#uiSTEPCONT07" class="btn-sub3 c2">이동</a></li>
+							<li><span>08. 소방서와의 거리</span><a href="#uiSTEPCONT08" class="btn-sub3 c2">이동</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#uiSTEPSECTION03">일반물건 기재사항</a>
+						<ol>
+							<li><span>09. 연간 매출액</span><a href="#uiSTEPCONT09" class="btn-sub3 c2">이동</a></li>
+							<li><span>10. 영업장 면적</span><a href="#uiSTEPCONT10" class="btn-sub3 c2">이동</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#uiSTEPSECTION04">공장물건 기재사항</a>
+						<ol>
+							<li><span>11. 주요 생산품</span><a href="#uiSTEPCONT11" class="btn-sub3 c2">이동</a></li>
+							<li><span>12. 주요 원자재</span><a href="#uiSTEPCONT12" class="btn-sub3 c2">이동</a></li>
+							<li><span>13. 주요 작업공정</span><a href="#uiSTEPCONT13" class="btn-sub3 c2">이동</a></li>
+							<li><span>14. 세부공정 확인</span><a href="#uiSTEPCONT14" class="btn-sub3 c2">이동</a></li>
+							<li><span>15. 연간 매출액</span><a href="#uiSTEPCONT15" class="btn-sub3 c2">이동</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#uiSTEPSECTION05">기타사항</a>
+						<ol>
+							<li><span>16. 질권설정 여부 확인</span><a href="#uiSTEPCONT16" class="btn-sub3 c2">이동</a></li>
+							<li><span>17. 건물 상태 여부 확인</span><a href="#uiSTEPCONT17" class="btn-sub3 c2">이동</a></li>
+							<li><span>18. 보관품 종류 기재</span><a href="#uiSTEPCONT18" class="btn-sub3 c2">이동</a></li>
+						</ol>
+					</li>
+				</ol>
+			</div>
+
+			<!-- # [안내사항] # -->
+			<div class="mes-info2 box">
+				<p>아래 내용은 실사를 통해 계약자로 부터 확인된 사항이며, 사실과 다른 경우 계약자 및 확인자에게 불이익이 발생할 수 있습니다.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 1. 기본사항(공통) -->
+			<!-- ######################### -->
+			<section class="wrap-section" id="uiSTEPSECTION01" data-scroll-con>
+				<h3 class="tit-sub1">기본사항(공통)</h3>
+
+				<!-- ### [질문1] 영위업종 확인 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT01">
+					<legend class="tit">1. 영위업종은 무엇입니까?</legend>
+					<!-- // -->
+					<input type="text" class="text" title="영위업종" placeholder="영위업종을 입력해주세요." required>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문2] 건물내 타업종 확인 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT02">
+					<legend class="tit">2. 건물내 타업종을 기재해주세요.</legend>
+					<!-- // -->
+					<input type="text" class="text" title="건물 내 타업종" placeholder="건물 내 타업종을 입력해주세요." required>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문3] 과거 5년이내 사고경험 유무 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT03">
+					<legend class="tit">3. 과거 5년이내 사고경험이 있습니까?</legend>
+					<!-- // -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="radio1">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="radio1">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문4] 과거 보험가입 경력 유무 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT04">
+					<legend class="tit">4. 과거 보험가입 경력이 있습니까?</legend>
+					<!-- // -->
+					<div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="radio2" data-tabcon="uiFormCont1">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="radio2" data-tabcon="uiFormCont2">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문4-1] [CASE] 과거 보험가입 경력이 있는 경우 ### -->
+				<fieldset class="form-wrap4 ui-tabcon" data-id="uiFormCont1">
+					<legend class="tit">4-1. 과거 가입했던 보험사는?</legend>
+					<!-- // -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="radio2-2">
+							<span>당사</span>
+						</label>
+						<label>
+							<input type="radio" name="radio2-2">
+							<span>타사</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 2. 건물현황 및 방화설비(공통) -->
+			<!-- ######################### -->
+			<section class="wrap-section" id="uiSTEPSECTION02" data-scroll-con>
+				<h3 class="tit-sub1">건물현황 및 방화설비(공통)</h3>
+
+				<!-- ### [질문5] 가입업종이 지하에 소재하는지 여부 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT05">
+					<legend class="tit">5. 가입업종이 지하에 소재하고 있습니까?</legend>
+					<!-- // -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="radio3">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="radio3">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문6] 야간/휴일에 경비원 또는 종업원 상주 여부 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT06">
+					<legend class="tit">6. 야간/휴일에 경비원 또는 종업원이 상주합니까?</legend>
+					<!-- // -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="radio4">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="radio4">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문7] 설치된 소화설비 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT07">
+					<legend class="tit">7. 설치된 소화설비에 모두 체크해주세요. (복수선택가능)</legend>
+					<!-- // -->
+					<div class="label-check1 col2">
+						<label>
+							<input type="checkbox">
+							<span>소화기</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>옥내소화전</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>스프링쿨러</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>자동감지기</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>소화설비 없음</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문8] 인근 소방서와의 거리 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT08">
+					<legend class="tit">8. 인근 소방서와의 거리</legend>
+					<!-- // -->
+					<div class="label-btn1 col2">
+						<label>
+							<input type="radio" name="radio5">
+							<span>5분이내</span>
+						</label>
+						<label>
+							<input type="radio" name="radio5">
+							<span>10분이내</span>
+						</label>
+						<label>
+							<input type="radio" name="radio5">
+							<span>20분이내</span>
+						</label>
+						<label>
+							<input type="radio" name="radio5">
+							<span>30분이내</span>
+						</label>
+						<label>
+							<input type="radio" name="radio5">
+							<span>기타</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 3. 일반물건 기재사항 -->
+			<!-- ######################### -->
+			<section class="wrap-section" id="uiSTEPSECTION03" data-scroll-con>
+				<div class="tit-sub1">
+					<h3>일반물건 기재사항</h3>
+					<p class="txt-bul4">영위업종이 일반물건인 경우 작성</p>
+				</div>
+
+				<!-- ### [질문] 담보목적물이 일반물건인지 여부 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">담보목적물이 일반물건입니까?</legend>
+					<!-- // -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="radio6">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="radio6">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문9] 연간 매출액 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT09">
+					<legend class="tit">9. 연간 매출액을 체크해주세요.</legend>
+					<!-- // -->
+					<div class="label-btn1 col2">
+						<label>
+							<input type="radio" name="radio7">
+							<span>2억이하</span>
+						</label>
+						<label>
+							<input type="radio" name="radio7">
+							<span>5억이하</span>
+						</label>
+						<label>
+							<input type="radio" name="radio7">
+							<span>10억이하</span>
+						</label>
+						<label>
+							<input type="radio" name="radio7">
+							<span>10억이상</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문10] 실제 영업장 면적 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT10">
+					<legend class="tit">10. 실제 영업장 면적을 체크해주세요.</legend>
+					<!-- // -->
+					<div class="label-btn1 col2">
+						<label>
+							<input type="radio" name="radio8">
+							<span>1,000m&sup2;미만</span>
+						</label>
+						<label>
+							<input type="radio" name="radio8">
+							<span>3,000m&sup2;이만</span>
+						</label>
+						<label class="w100">
+							<input type="radio" name="radio8">
+							<span>1,000m&sup2;이상~3,000m&sup2;미만</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 4. 공장물건 기재사항 -->
+			<!-- ######################### -->
+			<section class="wrap-section" id="uiSTEPSECTION04" data-scroll-con>
+				<div class="tit-sub1">
+					<h3>공장물건 기재사항</h3>
+					<p class="txt-bul4">영위업종이 공장물건인 경우 작성</p>
+				</div>
+
+				<!-- ### [질문] 담보목적물이 공장물건인지 여부 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">담보목적물이 공장물건입니까?</legend>
+					<!-- // -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="radio9">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="radio9">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문11] 주요 생상품 입력 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT11">
+					<legend class="tit">11. 주요 생산품은 무엇입니까?</legend>
+					<!-- // -->
+					<input type="text" class="text" title="주요생산품" placeholder="주요 생산품을 입력해주세요.">
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문12] 주요 원자재 입력 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT12">
+					<legend class="tit">12. 주요 원자재를 입력해주세요.</legend>
+					<!-- // -->
+					<input type="text" class="text" title="주요원자재" placeholder="주요 원자재를 입력해주세요.">
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문13] 주요 작업공정 입력 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT13">
+					<legend class="tit">13. 주요 작업공정을 입력해주세요.</legend>
+					<!-- // -->
+					<input type="text" class="text" title="주요작업공정" placeholder="주요 작업공정을 입력해주세요.">
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문14] 세부공정 확인 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT14">
+					<legend class="tit">14. 세부공정을 확인해주세요.</legend>
+					<!-- // -->
+					<div class="label-btn1 col2">
+						<label>
+							<input type="radio" name="radio10">
+							<span>원자재</span>
+						</label>
+						<label>
+							<input type="radio" name="radio10">
+							<span>공정(제조과정)</span>
+						</label>
+						<label>
+							<input type="radio" name="radio10">
+							<span>최종완성품</span>
+						</label>
+						<label>
+							<input type="radio" name="radio10">
+							<span>도장</span>
+						</label>
+						<label>
+							<input type="radio" name="radio10">
+							<span>도금</span>
+						</label>
+						<label>
+							<input type="radio" name="radio10">
+							<span>발포</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문15] 연간 매출액 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT15">
+					<legend class="tit">15. 연간 매출액을 체크해주세요.</legend>
+					<!-- // -->
+					<div class="label-btn1 col2">
+						<label>
+							<input type="radio" name="radio11">
+							<span>10억이하</span>
+						</label>
+						<label>
+							<input type="radio" name="radio11">
+							<span>30억이하</span>
+						</label>
+						<label>
+							<input type="radio" name="radio11">
+							<span>50억이하</span>
+						</label>
+						<label>
+							<input type="radio" name="radio11">
+							<span>50억이상</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 5. 기타사항 -->
+			<!-- ######################### -->
+			<section class="wrap-section" id="uiSTEPSECTION05" data-scroll-con>
+				<h3 class="tit-sub1">기타사항</h3>
+
+				<!-- ### [질문16] 질권설정 여부 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT16">
+					<legend class="tit2"><i>16.</i>질권설정 여부를 체크해주세요.<br>(질권설정 예정 포함)</legend>
+					<!-- // -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="radio12">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="radio12">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문17] 무허가 건물 또는 건설중 물건 여부 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT17">
+					<legend class="tit2"><i>17.</i>무허가 건물 또는 건설(수선/수리)중 물건입니까?</legend>
+					<!-- // -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="radio13">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="radio13">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문18] 보관품 종류 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT18">
+					<legend class="tit">18. 보관품(동산) 종류를 기재해 주세요.</legend>
+					<!-- // -->
+					<input type="text" class="text" title="보관품종류" placeholder="보관품 종류를 입력해주세요." required>
+					<!-- // -->
+				</fieldset>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [실사보고서] 실사일자/실사자/실사자의견 -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1 line">
+				<legend>실사보고서</legend>
+				<!-- # 실사일자 # -->
+				<dl class="form">
+					<dt>실사일자 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+								<input type="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.07.07" readonly>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 실사자 # -->
+				<dl class="form">
+					<dt>실사자 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- [CASE1] 검색전 -->
+						<div class="input-btn1">
+							<data class="text" data-label="직원코드를 검색해주세요." value=""></data>
+							<button type="button" class="icon-com1 ic2">검색하기</button>
+						</div>
+						<!-- [CASE2] 검색후 -->
+						<div class="info-data3 info">
+							<div class="data-info1">
+								<span class="img"><img src="../../../resource/img/temp/@img_user3.png" alt=""></span>
+								<span><strong>공지철</strong><span>0000000</span></span>
+							</div>
+							<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 실사자 의견 # -->
+				<dl class="form">
+					<dt>실사자 의견 <em class="icon-required2">필수</em></dt>
+					<dd><textarea rows="5" class="textarea" title="실사자의견" placeholder="의견을 입력해주세요."></textarea></dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	/* ******************************************************************
+	* [샘플] STEP 영역 제어 : UI 동작을 위한 샘플 스크립트이며, 동작만 참고 바랍니다.
+	* 1) 질문에 대한 답변 작성 중인 경우 클래스명 변경 : li.current
+	* 2) [저장] 버튼 이벤트 : validation 체크 후 오류 상태 표시 : li.invalid
+	* 	ㄴ 함수 제시 : _setInvalid(el) : 오류가 있는 input 적용
+	* 	ㄴ 함수 호출 예시 : _setInvalid($('#ID')) 또는 _setInvalid($('name="NAME"'));
+	******************************************************************* */
+
+	/* [샘플1] 현재 작성중인 답변 상태 표시 : li.current */
+	$('.form-wrap4').each(function(){
+		var _box = $(this).attr('id')
+		$(this).find('input:visible').on('change',function(){
+			if($(this).is('[type="text"],[type="tel"]') && $.trim($(this).val())===''){
+				$('a[href="#'+_box+'"]').parent().removeClass('current');
+			}else{
+				$('a[href="#'+_box+'"]').parent().addClass('current');
+			};
+		});
+	});
+
+	/* [샘플2] 오류 상태 함수 호출 예시 */
+	$('.area-action .btn-action').on('click',function(){
+		$('.info-step1.t1 li li').removeClass('invalid');
+		$('.form-wrap4').each(function(){
+			if($(this).find('input:invalid').length > 0){
+				_setInvalid($(this).find('input:invalid')) //함수 호출 예시
+			};
+		});
+	});
+
+	/* 오류 상태 표시 : li.invalid */
+	function _setInvalid(el){
+		var _selector = el.parents('.form-wrap4').attr('id')
+		$('[href="#'+_selector+'"]').parent().addClass('invalid');
+	};
+//-->
+</script>
+</body>
+</html>

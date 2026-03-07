@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]담보내역-종합패턴 | 계약상세 | 일반 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>담보명</h1>
+			<button type="button" data-btn="pop-close">닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container" data-page="3">
+			<!-- ######################### -->
+			<!-- [기본정보]  -->
+			<!-- ######################### -->
+			<div class="info-con1">
+				<dl>
+					<dt>목적물유형</dt>
+					<dd>시설</dd>
+				</dl>
+				<dl>
+					<dt>목적물명</dt>
+					<dd>시설</dd>
+				</dl>
+				<dl>
+					<dt>목적물내역</dt>
+					<dd>가재도구일체 4층중 2층202호(복층3층포함)</dd>
+				</dl>
+				<dl>
+					<dt>업종</dt>
+					<dd>기타</dd>
+				</dl>
+				<dl>
+					<dt>산출기초</dt>
+					<dd>대수: 15대 / 정원수: 1명</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [담보내역]  -->
+			<!-- ######################### -->
+			<div class="wrap-section line">
+				<h2 class="tit-sub1">담보내역</h2>
+
+				<!-- 담보하나 -->
+				<section>
+					<h3 class="tit-sub2">화재위험 특별약관</h3>
+					<div class="info-con2">
+						<dl>
+							<dt>보험가입금액</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</section>
+
+				<!-- 담보하나 -->
+				<section>
+					<h3 class="tit-sub2">특수건물 풍수재위험 특별약관</h3>
+					<div class="info-con2">
+						<dl>
+							<dt>보험가입금액</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</section>
+
+				<!-- 담보하나 -->
+				<section>
+					<h3 class="tit-sub2">특수건물 항공기 및 낙하물위험 특별약관</h3>
+					<div class="info-con2">
+						<dl>
+							<dt>보험가입금액</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</section>
+
+				<!-- 담보하나 -->
+				<section>
+					<h3 class="tit-sub2">수상레저배상책임담보</h3>
+					<div class="info-con2">
+						<strong class="tit">대인</strong>
+						<dl>
+							<dt>1인당</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>1사고당</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>자기부담금</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</section>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [기타조건]  -->
+			<!-- ######################### -->
+			<div class="wrap-section line">
+				<h3 class="tit-sub1">기타조건</h3>
+				<ul class="mes-t3">
+					<li>기타조건 내용 노출</li>
+					<li>건물 소유자: 하다미(1990.01.01·남)(임대차)</li>
+					<li>[무한궤도식 굴삭기] 배상기준 : 손해사고기준</li>
+					<li>명세 : 무한궤도식 굴삭기 충남02보8888</li>
+				</ul>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

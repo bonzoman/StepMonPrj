@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 수납확인 | 청약(개인/업무/영업) | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-31]	1. 텍스트 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>보험료 수납 상세정보</h1> <!-- 2022-10-31 텍스트 변경 -->
+			<button type="button" data-btn="pop-close">수납확인 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 확인문구 -->
+			<!-- ######################### -->
+			<div class="tit-section">
+				<p>보험료 수납이 완료되었습니다.<br>상세정보를 확인하세요.</p> <!-- 2022-10-31 텍스트 변경 -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [수납확인] -->
+			<!-- ######################### -->
+			<div class="wrap-section">
+				<!-- [CASE] 즉시출금 -->
+				<!--
+					은행클래스명 정의
+					BKCD_003 : 기업은행
+					BKCD_004 : 국민은행
+					BKCD_005 : 외환은행
+					BKCD_007 : 수협중앙회
+					BKCD_011 : 농협중앙회
+					BKCD_020 : 우리은행
+					BKCD_023 : SC제일은행
+					BKCD_088 : 신한(통합)은행
+					BKCD_027 : 씨티은행
+					BKCD_031 : 대구은행
+					BKCD_032 : 부산은행
+					BKCD_034 : 광주은행
+					BKCD_035 : 제주은행
+					BKCD_037 : 전북은행
+					BKCD_039 : 경남은행
+					BKCD_045 : 새마을금고중앙회
+					BKCD_048 : 신협중앙회
+					BKCD_071 : 우체국
+					BKCD_081 : 하나은행
+					BKCD_089 : 케이뱅크
+					BKCD_090 : 한국카카오은행
+					BKCD_092 : 토스뱅크
+					BKCD_240 : 삼성증권
+				-->
+				<section>
+					<h2 class="tit-sub1">즉시출금</h2>
+					<div class="info-data7">
+						<dl>
+							<dt class="BKCD_003">IBK 기업은행</dt>
+							<dd class="txt">11111112340001</dd>
+							<dd class="data-num1"><strong>601,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</section>
+
+				<!-- [CASE] 카드 -->
+				<!--
+					카드클래스명 정의
+					CACD_AI3 : 롯데
+					CACD_AF3 : 삼성
+					CACD_AA3 : 비씨
+					CACD_AG3 : 신한
+					CACD_AB3 : 국민
+					CACD_AD3 : 현대
+					CACD_AC3 : 하나
+					CACD_AL3 : 농협
+					CACD_AH3 : 씨티
+					CACD_AE3 : 신한(구_엘지)
+				-->
+				<section>
+					<h2 class="tit-sub1">카드</h2>
+					<div class="info-data7">
+						<dl>
+							<dt class="CACD_AL3">농협카드</dt>
+							<dd class="txt">1111-2222-3333-4444</dd>
+							<dd class="data-num1"><strong>2,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt class="CACD_">카카오뱅크카드</dt>
+							<dd class="txt">1111-2222-3333-4444</dd>
+							<dd class="data-num1"><strong>1,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+					<!-- [CASE] 금액일치 + OneStep수납 -->
+					<div class="mes-info2 box">
+						<p>원스텝(One Step)결제가 진행됩니다.<br>출금계좌의 잔액이 부족하면 설정하신 카드로 결제됩니다.</p>
+					</div>
+					<!-- // -->
+				</section>
+
+				<!-- [CASE] 금액일치 + 복합결제 -->
+				<section>
+					<h2 class="tit-sub1">입금확인</h2>
+					<div class="info-data7">
+						<dl>
+							<dt>예금</dt>
+							<dd class="txt">계좌별칭 노출</dd>
+							<dd class="data-num1"><strong>601,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>가수보험료</dt>
+							<dd class="txt">계좌별칭 노출</dd>
+							<dd class="data-num1"><strong>601,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</section>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [입금보험료] -->
+			<!-- ######################### -->
+			<div class="area-info2 t1">
+				<dl>
+					<dt>입금보험료</dt>
+					<dd class="data-num1 txt-c2"><strong>601,000</strong><span>원</span></dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

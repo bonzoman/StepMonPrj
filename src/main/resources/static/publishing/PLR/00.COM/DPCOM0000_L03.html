@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>(샘플) 시간선택</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 시간설정 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCOM0000L03" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>시간설정</h1>
+			<button type="button" data-btn="pop-close">시간설정 닫기</button>
+		</header>
+		<div class="content">
+			<div class="input-col1">
+				<select class="selectbox">
+					<option>00</option>
+					<option>01</option>
+					<option>02</option>
+					<option>03</option>
+					<option>04</option>
+					<option>05</option>
+					<option>06</option>
+					<option>07</option>
+					<option>08</option>
+					<option>09</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+					<option>13</option>
+					<option>14</option>
+					<option>15</option>
+					<option>16</option>
+					<option>17</option>
+					<option>18</option>
+					<option>19</option>
+					<option>20</option>
+					<option>21</option>
+					<option>22</option>
+					<option>23</option>
+					<option>24</option>
+				</select>
+				<span class="txt">:</span>
+				<select class="selectbox">
+					<option>00</option>
+					<option>01</option>
+					<option>02</option>
+					<option>03</option>
+					<option>04</option>
+					<option>05</option>
+					<option>06</option>
+					<option>07</option>
+					<option>08</option>
+					<option>09</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+					<option>13</option>
+					<option>14</option>
+					<option>15</option>
+					<option>16</option>
+					<option>17</option>
+					<option>18</option>
+					<option>19</option>
+					<option>20</option>
+					<option>21</option>
+					<option>22</option>
+					<option>23</option>
+					<option>24</option>
+				</select>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1">확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPDPCOM0000L03');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPDPCOM0000L03').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

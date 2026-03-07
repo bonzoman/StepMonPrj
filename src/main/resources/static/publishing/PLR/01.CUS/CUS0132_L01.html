@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 고객 휴대폰번호 수정 | 가입설계동의 | 고객동의</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 고객 휴대폰번호 수정 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCUS0132L01" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>고객 휴대폰번호 수정</dt>
+		<dd class="sub">
+            <strong>이전과 다른 전화번호로 본인인증을 진행하셨어요. 고객님의 정보를 수정할까요?</strong>
+			<dl class="info">
+				<dt>기존번호</dt>
+				<dd>010-5154-5228</dd>
+				<dt><strong>변경할 번호</strong></dt>
+				<dd><strong>010-5154-5228</strong></dd>
+			</dl>
+        </dd>
+		<dd class="area-action">
+			<button type="button" class="btn-action c3">취소</button>
+			<button type="button" class="btn-action c1">변경하기</button>
+		</dd>
+	</dl>
+</div>
+
+<!-- ################################################### -->
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCUS0132L01',{
+		load_display:true
+	});
+//-->
+</script>
+</body>
+</html>

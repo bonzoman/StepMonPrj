@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>일반보험 상품선택 | 신규설계 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-22]	1. 스텝 유형 추가
+	*					2. 추천 버튼 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>일반보험 설계요청</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<div class="wrap-step1" data-sticky="top">
+			<!-- ### [단계이동 및 입력정보요약] ###
+				현재단계표시 : <li aria-current="step"> -->
+			<div class="info-step1" data-autoset="toggle" style="z-index:11;">
+				<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+				<ol data-toggle="content">
+					<!-- 2022-11-22 항목 변경 -->
+					<li aria-current="step">
+						<span>01. 유형선택</span>
+						<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+					</li>
+					<li>
+						<span>02. 상품정보</span>
+						<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+					</li>
+					<li>
+						<span>03. 고객정보</span>
+						<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+					</li>
+					<li>
+						<span>04. 설계요청사항</span>
+						<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+					</li>
+					<!-- //2022-11-22 항목 변경 -->
+				</ol>
+			</div>
+		</div>
+
+		<div data-include="GNI0356.html"></div>
+
+		<!-- ######################### -->
+		<!-- [상단영역] 안내문구 -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>설계 요청할 상품을<br>선택해주세요.</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [정보영역] -->
+		<!-- ######################### -->
+		<!-- # 상품선택 # -->
+		<div class="label-btn2">
+			<!-- 2022-11-22 추천 버튼 추가 -->
+			<label>
+				<input type="radio" name="btnRadio1" checked>
+				<span>추천</span>
+			</label>
+			<!-- //2022-11-22 추천 버튼 추가 -->
+			<label>
+				<input type="radio" name="btnRadio1">
+				<span>배상</span>
+			</label>
+			<label>
+				<input type="radio" name="btnRadio1">
+				<span>화재</span>
+			</label>
+			<label>
+				<input type="radio" name="btnRadio1">
+				<span>여행</span>
+			</label>
+			<label>
+				<input type="radio" name="btnRadio1">
+				<span>근재</span>
+			</label>
+			<label>
+				<input type="radio" name="btnRadio1">
+				<span>기타</span>
+			</label>
+		</div>
+
+		<!-- # 상품유형선택 # -->
+		<fieldset class="form-wrap1">
+			<legend>상품유형 선택</legend>
+
+			<dl class="form">
+				<dt>상품유형</dt>
+				<!-- [CASE1] 배상 -->
+				<dd class="label-btn1 block">
+					<label>
+						<input type="radio" name="btnRadio2" checked>
+						<span>영업배상책임보험</span>
+					</label>
+					<label>
+						<input type="radio" name="btnRadio2">
+						<span>재난배상책임보험</span>
+					</label>
+					<label>
+						<input type="radio" name="btnRadio2">
+						<span>가스사고배상책임보험</span>
+					</label>
+					<label>
+						<input type="radio" name="btnRadio2">
+						<span>승강기사고배상책임보험</span>
+					</label>
+					<label>
+						<input type="radio" name="btnRadio2">
+						<span>다중이용업소 화재배상책임보험</span>
+					</label>
+					<label>
+						<input type="radio" name="btnRadio2">
+						<span>영업배상책임생산물배상책임보험</span>
+					</label>
+					<label>
+						<input type="radio" name="btnRadio2">
+						<span>어린이놀이시설배상책임보험</span>
+					</label>
+					<label>
+						<input type="radio" name="btnRadio2">
+						<span>학원배상책임보험</span>
+					</label>
+				</dd>
+
+				<!-- [CASE2] 화재 -->
+				<dd class="label-btn1 block">
+					<label>
+						<input type="radio" name="btnRadio3" checked>
+						<span>일반화재보험</span>
+					</label>
+					<label>
+						<input type="radio" name="btnRadio3">
+						<span>주택화재보험</span>
+					</label>
+				</dd>
+
+				<!-- [CASE3] 여행 -->
+				<dd class="label-btn1 block">
+					<label>
+						<input type="radio" name="btnRadio4" checked>
+						<span>국내여행자보험</span>
+					</label>
+					<label>
+						<input type="radio" name="btnRadio4">
+						<span>해외여행자보험</span>
+					</label>
+				</dd>
+			</dl>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1" aria-controls="uiPOPGNI0357">다음</button>
+			<!-- <button type="button" class="btn-action c1" disabled>다음</button> : 비활성화 시 -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 가입설계방식 선택 ### -->
+<!-- ################################################### -->
+<div id="uiPOPGNI0357" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>가입설계방식을 선택해주세요.</h1>
+			<button type="button" data-btn="pop-close">가입설계방식을 선택 닫기</button>
+		</header>
+		<div class="content">
+			<div class="mes-info2">
+				<p>단순설계는 계/피 입력없이 보험료 산출이 가능합니다.</p>
+			</div>
+			<div class="label-img1">
+				<label class="ic7">
+					<input type="radio" name="form-radio-img2">
+					<span>단순설계</span>
+				</label>
+				<label class="ic1">
+					<input type="radio" name="form-radio-img2">
+					<span>상세설계</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1">확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPGNI0357');
+
+	//레이어팝업 강제오픈
+	// $('#uiPOPGNI0357').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>도입 메인 관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220418">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">도입 메인 관리</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<ul class="tab2">
+				<li><a href="#" class="current">메인A 친숙단계</a></li>
+				<li><a href="#">메인B 설계사모드</a></li>
+			</ul>
+			<div class="main-select">
+				<div class="select-list">
+					<!--
+						.item 등록된 내용 / 선택시 current 추가
+						.item.add 영역 추가 버튼으로 생성된 내용
+					-->
+					<a href="#" class="item">
+						<span class="img">
+							<img src="../resource/img/temp/@img_bg.png" alt="">
+						</span>
+						<div class="name-txt1">1. 인사말/포인트</div>
+					</a>
+
+					<a href="#" class="item current">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">2. Name</div>
+					</a>
+
+					<a href="#" class="item add">
+						<span class="img"></span>
+						<div class="name-txt1">10. Name</div>
+					</a>
+
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">2. Name</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">4. Name</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">5. Name</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">6. Name</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">7. Name</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">8. Name</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">9. Name</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">10. Name</div>
+					</a>
+				</div>
+				<div class="select-info1">
+					<p class="list-dot1">선택영역의 정보를 편집하세요.</p>
+					<!-- <p class="list-dot1">선택된 추가영역의 정보를 편집하세요.</p> -->
+					<button type="button" class="btn-sub1 c3">선택영역삭제</button>
+					<button type="button" class="btn-sub1 c3">영역추가</button>
+				</div>
+			</div>
+			<div class="tbl-write1">
+				<table>
+					<colgroup>
+						<col style="width:120px;">
+						<col>
+						<col style="width:120px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">메인 선택 <br> 영역 정보</th>
+							<td colspan="3">
+								<span class="form-txt1">No.</span>
+								<input type="text" name="" id="" class="text" style="width:40px;">
+								<span class="form-txt1">Name</span>
+								<input type="text" name="" id="" class="text" style="width:120px;">
+								<span class="form-txt1">꿀팁/퀴즈</span>
+								<select name="" id="" class="selectbox" style="width:120px">
+									<option value="">대상아님</option>
+									<option value="">보험꿀팁</option>
+									<option value="">생활꿀팁</option>
+									<option value="">시험꿀팁</option>
+									<option value="">데일리퀴즈</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">이동화면</th>
+							<td colspan="3">
+								<label class="label-check form-txt1">
+									<input type="radio" name="fr1" checked="">
+									<span>App경로</span>
+								</label>
+								<input type="text" name="" id="" class="text" style="width:160px;">
+								<button type="button" class="btn-sub1 c3">선택</button>
+								<label class="label-check form-txt1">
+									<input type="radio" name="fr1" checked="">
+									<span>외부 URL</span>
+								</label>
+								<input type="text" name="" id="" class="text" style="width:160px;">
+								<label class="label-check form-txt1">
+									<input type="radio" name="fr1">
+									<span>연결 게시글</span>
+								</label>
+								<input type="text" name="" id="" class="text" style="width:160px;">
+								<button type="button" class="btn-sub1 c3">선택</button>
+								<span class="list-dot1">가입 후 IT 관리자에게 확인하여 발급된 RF 사번으로 로그인이 필요합니다.</span> <!-- 2022-12-29 추가 --> 
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">게시 기간</th>
+							<td colspan="3">
+
+								<label class="label-check">
+									<input type="radio" name="fr2" checked="">
+									<span>상시 게시</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="fr2">
+									<span>기간설정</span>
+								</label>
+								<span class="date-range">
+									<input type="text" data-role="start" value="" placeholder="시작일 선택">
+									<span class="util">~</span>
+									<input type="text" data-role="end" placeholder="종료일 선택">
+								</span>
+								<label class="label-check">
+									<input type="radio" name="fr2">
+									<span>게시 안 함</span>
+								</label>
+							</td>
+						</tr>
+						<tr class="row2">
+							<th scope="row">배경 이미지 등록</th>
+							<td>
+								<div class="img-area">
+									<img src="">
+									[임시]이미지 view 영역
+								</div>
+								<button type="button" class="btn-sub1 c3">추천 배경</button>
+								<span class="wrap-file">
+									<input type="file" tabindex="-1" accept="image/*">
+									<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic3">첨부하기</button>
+								</span>
+								<p class="list-dot1">App 디자인 스타일과 해상도 유지를 위하여 가로 해상도 최소 1400px로 업로드 부탁드립니다.</p>
+							</td>
+							<th scope="row">문구 입력</th>
+							<td>
+
+								<ul class="list-dot1">
+									<li class="point1">[소분류],[타이틀 첫째줄]은 필수입력 사항입니다.</li>
+									<!-- 2022-12-29 텍스트 변경 -->
+									<li>항목 표시는 [소분류]에,<br>
+										컨텐츠 내용은 [  타이틀 n째줄]  에 입력해주세요.<br>
+										줄 바꿈은 지원하지 않으므로 줄 바꿈이 필요할 시 둘째줄, 셋째줄에 각각 입력해주세요.
+									</li>
+									<!-- //2022-12-29 텍스트 변경 -->
+								</ul>
+								<div class="form-box1">
+									<div class="form-row">
+										<span class="form-tit">소분류<em class="imp"><span>필수</span></em></span>
+										<input type="text" name="" id="" class="text" style="width:280px;" placeholder="띄어쓰기 포함 8글자 이하만 입력가능">
+									</div>
+
+									<div class="form-row">
+										<span class="form-tit">타이틀 첫째줄<em class="imp"><span>필수</span></em></span>
+										<input type="text" name="" id="" class="text" style="width:280px;" placeholder="띄어쓰기 포함 14글자 이하만 입력가능">
+									</div>
+									<div class="form-row">
+										<span class="form-tit">타이틀 둘째줄</span>
+										<input type="text" name="" id="" class="text" style="width:280px;" placeholder="띄어쓰기 포함 14글자 이하만 입력가능">
+									</div>
+									<div class="form-row">
+										<span class="form-tit">타이틀 셋째줄</span>
+										<input type="text" name="" id="" class="text" style="width:280px;" placeholder="띄어쓰기 포함 14글자 이하만 입력가능">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">최종 수정일시</th>
+							<td colspan="3">2022.06.10 22:22:22 </td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="wrap-btn">
+				<div class="btns">
+					<button type="button" class="btn-action c3">초기화</button>
+				</div>
+				<div class="btns">
+					<button type="button" class="btn-action c3" aria-controls="uiPOPID1" onclick="uiFunctionOpen()">미리보기</button>
+					<button type="button" class="btn-action c1">적용하기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ##################################### -->
+<!-- # 레이어팝업 : 기본텍스트 -->
+<!-- ##################################### -->
+<div id="uiPOPID1" class="pop-mes1" data-popmodal="true" role="dialog">
+	<dl>
+		<dt class="hide">미리보기</dt>
+		<dd>
+			<!-- // -->
+			<p>미리보기 없이<br>메인 화면을 바로<br>적용 하시겠습니까?</p>
+			<!-- // -->
+		</dd>
+		<dd><button type="button" class="pop-close" onclick="uiFunctionClose()">팝업 닫기</button></dd>
+		<!-- // -->
+		<dd class="area-action">
+			<button type="button" class="btn-action" onclick="uiFunctionClose()">미리보기</button>
+			<button type="button" class="btn-action c1" onclick="uiFunctionClose()">확인</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- ##################################### -->
+
+<script>
+//<!--
+	//열기
+	function uiFunctionOpen(){
+		$('uiPOPID1').addClass('load');
+	}
+
+	//닫기
+	function uiFunctionClose(){
+		$('uiPOPID1').removeClass('load');
+		setTimeout(function(){
+			alert('dddd');
+		},0);
+	}
+//-->
+</script>
+</body>
+</html>

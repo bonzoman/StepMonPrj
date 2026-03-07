@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>개인 | 고객정보상세 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-08]	① 클래스명변경 : info-con1 > data1
+	*	[M 2022-11-07]	① 업종, 직장명, 직무 영역 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>고객정보</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [고객정보] 개인 -->
+		<!-- ######################### -->
+		<div class="info-summary2 t3">
+			<h2 class="data-info2" data-value="102701">
+				<strong>공지철</strong>
+				<span>
+					<span>1997.01.01</span>
+					<span>남</span>
+				</span>
+			</h2>
+			<div class="side"><a href="#uiTOOLTIPINFO1" data-btn="tooltip" class="icon-com2 ic2 donotcall" aria-haspopup="dialog">연락중지청구권 안내</a></div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [기본정보] -->
+		<!-- ######################### -->
+		<div class="wrap-section">
+			<h3 class="tit-sub1">기본정보</h3>
+			<!-- 2022-12-02 버튼 추가 -->
+			<div class="side">
+				<button type="button" class="btn-sub3 c2">수정하기</button>
+			</div>
+			<!-- //2022-12-02 버튼 추가 -->
+
+			<!-- # 기본정보 # -->
+			<section>
+				<h4 class="hide">고객 기본정보</h4>
+				<div class="info-con1">
+					<dl>
+						<dt>고객이름</dt>
+						<dd>공지철</dd>
+					</dl>
+					<dl>
+						<dt>고객이름(영문)</dt>
+						<dd>JICHEOL GONG</dd>
+					</dl>
+					<dl>
+						<dt>생년월일/성별</dt>
+						<dd>
+							<div class="data-word3 t1">
+								<span>1990.01.01</span>
+								<span>남</span>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>국적</dt>
+						<dd>한국</dd>
+					</dl>
+					<dl>
+						<dt>직업</dt>
+						<dd>소방 사무직 관리자(소방감 이상)</dd>
+					</dl>
+					<!-- 2022-12-02 삭제 -->
+					<!-- <dl>
+						<dt>업종</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>직장명</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>직무(하시는일)</dt>
+						<dd>-</dd>
+					</dl> -->
+					<!-- //2022-12-02 삭제 -->
+					<dl>
+						<dt>발굴경로</dt>
+						<dd>소개 - 박소개자</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- # 연락처, 주소 # -->
+			<section>
+				<h4 class="tit-sub2">연락처</h4>
+				<div class="info-con1">
+					<dl>
+						<dt>휴대폰</dt>
+						<dd>010-6444-1255</dd>
+					</dl>
+					<dl>
+						<dt>자택</dt>
+						<dd>02-7777-2222</dd>
+					</dl>
+				</div>
+
+				<h4 class="tit-sub2">주소</h4>
+				<div class="info-con1">
+					<dl>
+						<dt>자택</dt>
+						<dd>(04406) 서울특별시 중구 소월로 3 롯데손해보험빌딩</dd>
+					</dl>
+					<dl>
+						<dt>직장</dt>
+						<dd>(04528) 서울특별시 화양구 선비로 125-3</dd>
+					</dl>
+					<dl>
+						<dt>이메일</dt>
+						<dd>lotte233@gmail.com</dd>
+					</dl>
+				</div>
+			</section>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [기타정보] -->
+		<!-- ######################### -->
+		<div class="area-toggle1" data-autoset="toggle">
+			<section class="active">
+				<header class="tit">
+					<h3>기타정보</h3>
+					<button type="button" data-toggle="btn" aria-expanded="false">기타정보 상세보기</button>
+				</header>
+				<div data-toggle="content" class="info-con1 w1">
+					<!-- // -->
+					<dl>
+						<dt>가족정보</dt>
+						<!-- 2022-12-06 변경 -->
+						<dd>
+							<div>2명</div>
+						</dd>
+						<div class="side"><button type="button" class="btn-sub3 c2">수정</button></div>
+						<!-- //2022-12-06 변경 -->
+					</dl>
+					<!-- // -->
+					<dl>
+						<dt>우편물수령지</dt>
+						<!-- 2022-12-05 케이스 추가 -->
+						<dd>
+							<!-- 데이터 있을경우 -->
+							<dl class="txt-bul1">
+								<dt>자택</dt>
+								<dd>자동차 DB324832484126416</dd>
+								<dd>장기보험 LA2020121546462020</dd>
+							</dl>
+							<dl class="txt-bul1">
+								<dt>직장</dt>
+								<dd>자동차 DB324832484126416</dd>
+							</dl>
+							<div class="area-btn4 end"><button type="button" class="btn-sub3 c2">수정</button></div>
+							<!-- 데이터 있을경우 -->
+						</dd>
+						<!-- 데이터 없을경우 -->
+						<!-- <dd>-</dd>
+						<div class="side">
+							<button type="button" class="btn-sub3 c2">수정</button>
+						</div> -->
+						<!-- //데이터 없을경우 -->
+						<!-- //2022-12-05 케이스 추가 -->
+					</dl>
+					<!-- // -->
+					<dl>
+						<!-- 2022-12-05 변경 -->
+						<dt>외국인식별번호 증빙자료</dt>
+						<dd>
+							<div>2022.08.22</div>
+						</dd>
+						<div class="side">
+							<button type="button" class="btn-sub3 c2">등록하기</button>
+						</div>
+						<!-- //2022-12-05 변경 -->
+					</dl>
+					<!-- // -->
+				</div>
+			</section>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [동의정보] -->
+		<!-- ######################### -->
+		<div class="area-toggle1" data-autoset="toggle">
+			<section class="active">
+				<header class="tit">
+					<h3>동의정보</h3>
+					<button type="button" data-toggle="btn" aria-expanded="false">동의정보 상세보기</button>
+				</header>
+				<div data-toggle="content" class="info-con1">
+					<!-- // -->
+					<dl>
+						<dt>가입설계</dt>
+						<dd><div class="area-btn4"><button type="button" class="btn-sub3 c2">동의받기</button></div></dd>
+					</dl>
+					<dl>
+						<dt>상품소개</dt>
+						<dd class="data-word3">
+							<span>2022.03.17</span>
+							<span>URL</span>
+						</dd>
+					</dl>
+					<dl class="form block">
+						<dt>광고성정보 수신동의</dt>
+						<dd class="label-check1 box col2 disabled">
+							<label>
+								<input type="checkbox" name="form-check-box" checked disabled>
+								<span>문자</span>
+							</label>
+							<label>
+								<input type="checkbox" name="form-check-box" disabled>
+								<span>전화</span>
+							</label>
+							<label>
+								<input type="checkbox" name="form-check-box" disabled>
+								<span>이메일</span>
+							</label>
+							<label>
+								<input type="checkbox" name="form-check-box" checked disabled>
+								<span>우편</span>
+							</label>
+						</dd>
+					</dl>
+					<!-- # 버튼영역 # -->
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">동의현황 상세보기</button>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [그룹정보] -->
+		<!-- ######################### -->
+		<div class="area-toggle1" data-autoset="toggle">
+			<section class="active">
+				<header class="tit">
+					<h3>그룹정보</h3>
+					<button type="button" data-toggle="btn" aria-expanded="false">그룹정보 상세보기</button>
+				</header>
+				<div data-toggle="content" class="list-con1">
+					<div class="list-con1">
+						<ul>
+							<!-- // -->
+							<li>
+								<a href="javascript:void(0);">
+									<strong>본사소개(5)</strong>
+									<span>본사에서 소개받았음</span>
+								</a>
+							</li>
+							<!-- // -->
+							<li>
+								<a href="javascript:void(0);">
+									<strong>미정씨지인들(10)</strong>
+									<span>미정씨가 소개해준 분</span>
+								</a>
+							</li>
+							<!-- // -->
+							<li>
+								<a href="javascript:void(0);">
+									<strong>00싸이클동호회(11)</strong>
+									<span>매주 토요일 오후 2시 상암동 정기모임, 회비..</span>
+								</a>
+							</li>
+							<!-- // -->
+						</ul>
+						<!-- # 버튼영역 # -->
+						<div class="area-btn1">
+							<button type="button" class="btn-com1">수정하기</button>
+						</div>
+
+						<!-- 2022-12-02 없을 경우 추가 -->
+						<div class="mes-result1">
+							<p>
+								<strong>해당 고객님께 속한 그룹이 없습니다.</strong>
+							</p>
+						</div>
+						<!-- 2022-12-02 없을 경우 추가 -->
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [계약정보] -->
+		<!-- ######################### -->
+		<div class="area-toggle1" data-autoset="toggle">
+			<section class="active">
+				<header class="tit">
+					<h3>계약정보</h3>
+					<em class="icon-noti1 ic2">N</em>
+					<p class="data">계약상태 정상건만 확인 가능</p>
+					<button type="button" data-toggle="btn" aria-expanded="false">계약정보 상세보기</button>
+				</header>
+				<div data-toggle="content" class="wrap-section">
+					<!-- # 장기보험 # -->
+					<section>
+						<h4 class="tit-sub2">장기보험(2건)</h4>
+						<div class="info-data2">
+							<ul>
+								<li>
+									<!-- # 상품명 # -->
+									<strong class="tit">롯데힐링케어 건강보험</strong>
+									<!-- # 상태 / 증권번호 # -->
+									<div class="info">
+										<i class="icon-state2 ic3">정상</i>
+										<span>LA123456789</span>
+									</div>
+									<!-- # 정보 # -->
+									<div class="data1"> <!-- [M 2022-10-08] 클래스명 변경 -->
+										<dl>
+											<dt>계약자</dt>
+											<dd class="info2"> <!-- [M 2022-10-08] 클래스명 변경 -->
+												<strong data-masking="true">하*미</strong>
+												<span>
+													<span>1990.01.10</span>
+													<span>여</span>
+												</span>
+											</dd>
+										</dl>
+										<dl>
+											<dt>피보험자</dt>
+											<dd class="info2"> <!-- [M 2022-10-08] 클래스명 변경 -->
+												<strong data-masking="true">하*미</strong>
+												<span>
+													<span>1990.01.10</span>
+													<span>여</span>
+												</span>
+												외 3명
+											</dd>
+										</dl>
+										<dl>
+											<dt>계약상태</dt>
+											<dd>2020.01.30~2022.02.22</dd>
+										</dl>
+									</div>
+									<!-- # 상세링크 # -->
+									<a href="javascript:void(0);" class="link">상세보기</a>
+									<!-- # // # -->
+								</li>
+								<li>
+									<strong class="tit">롯데힐링케어 건강보험</strong>
+									<!-- // -->
+									<div class="info">
+										<i class="icon-state2 ic3">정상</i>
+										<span>LA123456789</span>
+										<span>이관</span>
+									</div>
+									<!-- // -->
+									<div class="data1">
+										<dl>
+											<dt>계약자</dt>
+											<dd class="info2">
+												<strong data-masking="true">하*미</strong>
+												<span>
+													<span>1990.01.10</span>
+													<span>여</span>
+												</span>
+											</dd>
+										</dl>
+										<dl>
+											<dt>피보험자</dt>
+											<dd class="info2">
+												<strong data-masking="true">하*미</strong>
+												<span>
+													<span>1990.01.10</span>
+													<span>여</span>
+												</span>
+												외 3명
+											</dd>
+										</dl>
+										<dl>
+											<dt>계약상태</dt>
+											<dd>2020.01.30~2022.02.22</dd>
+										</dl>
+									</div>
+									<!-- // -->
+									<a href="javascript:void(0);" class="link">상세보기</a>
+									<!-- // -->
+								</li>
+							</ul>
+						</div>
+						<!-- 2022-12-02 없을 경우 추가 -->
+						<div class="mes-result1">
+							<p>
+								<strong>등록된 계약건이 없습니다.</strong>
+							</p>
+						</div>
+						<!-- 2022-12-02 없을 경우 추가 -->
+					</section>
+
+					<!-- # 자동차보험 # -->
+					<section>
+						<h4 class="tit-sub2">자동차보험(1건)</h4>
+						<div class="info-data2">
+							<ul>
+								<li>
+									<!-- # 상품명 # -->
+									<strong class="tit">롯데힐링케어 건강보험</strong>
+									<!-- # 상태 / 증권번호 # -->
+									<div class="info">
+										<i class="icon-state2 ic3">정상</i>
+										<span>LA123456789</span>
+									</div>
+									<!-- # 정보 # -->
+									<div class="data1">
+										<dl>
+											<dt>계약자</dt>
+											<dd class="info2">
+												<strong data-masking="true">하*미</strong>
+												<span>
+													<span>1990.01.10</span>
+													<span>여</span>
+												</span>
+											</dd>
+										</dl>
+										<dl>
+											<dt>피보험자</dt>
+											<dd class="info2">
+												<strong data-masking="true">하*미</strong>
+												<span>
+													<span>1990.01.10</span>
+													<span>여</span>
+												</span>
+												외 3명
+											</dd>
+										</dl>
+										<dl>
+											<dt>계약상태</dt>
+											<dd>2020.01.30~2022.02.22</dd>
+										</dl>
+									</div>
+									<!-- # 상세링크 # -->
+									<a href="javascript:void(0);" class="link">상세보기</a>
+									<!-- # // # -->
+								</li>
+							</ul>
+						</div>
+						<!-- 2022-12-02 없을 경우 추가 -->
+						<div class="mes-result1">
+							<p>
+								<strong>등록된 계약건이 없습니다.</strong>
+							</p>
+						</div>
+						<!-- 2022-12-02 없을 경우 추가 -->
+					</section>
+
+					<!-- # 일반보험 # -->
+					<section>
+						<h4 class="tit-sub2">일반보험(1건)</h4>
+						<div class="info-data2">
+							<ul>
+								<li>
+									<!-- # 상품명 # -->
+									<strong class="tit">롯데힐링케어 건강보험</strong>
+									<!-- # 상태 / 증권번호 # -->
+									<div class="info">
+										<i class="icon-state2 ic3">정상</i>
+										<span>LA123456789</span>
+									</div>
+									<!-- # 정보 # -->
+									<div class="data1">
+										<dl>
+											<dt>계약자</dt>
+											<dd class="info2">
+												<strong data-masking="true">하*미</strong>
+												<span>
+													<span>1990.01.10</span>
+													<span>여</span>
+												</span>
+											</dd>
+										</dl>
+										<dl>
+											<dt>피보험자</dt>
+											<dd class="info2">
+												<strong data-masking="true">하*미</strong>
+												<span>
+													<span>1990.01.10</span>
+													<span>여</span>
+												</span>
+												외 3명
+											</dd>
+										</dl>
+										<dl>
+											<dt>계약상태</dt>
+											<dd>2020.01.30~2022.02.22</dd>
+										</dl>
+									</div>
+									<!-- # 상세링크 # -->
+									<a href="javascript:void(0);" class="link">상세보기</a>
+									<!-- # // # -->
+								</li>
+							</ul>
+						</div>
+						<!-- 2022-12-02 없을 경우 추가 -->
+						<div class="mes-result1">
+							<p>
+								<strong>등록된 계약건이 없습니다.</strong>
+							</p>
+						</div>
+						<!-- 2022-12-02 없을 경우 추가 -->
+					</section>
+				</div>
+			</section>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [최근 1년 간 보험청구이력] -->
+		<!-- ######################### -->
+		<div class="area-toggle1" data-autoset="toggle">
+			<section class="active">
+				<header class="tit">
+					<h3>최근 1년 간 보험청구이력</h3>
+					<button type="button" data-toggle="btn" aria-expanded="false">최근 1년 간 보험청구이력 상세보기</button>
+				</header>
+				<div data-toggle="content">
+					<div class="info-con1">
+						<!-- // -->
+						<ul>
+							<li>
+								<div>등록일자</div>
+								<div>2021.08.03</div>
+							</li>
+							<li>
+								<div>종목</div>
+								<div>장기보험</div>
+							</li>
+							<li>
+								<div>사고번호</div>
+								<div>84633</div>
+							</li>
+							<li>
+								<div>증권번호</div>
+								<div>201520090007434</div>
+							</li>
+							<li>
+								<div>처리상태</div>
+								<div>종결</div>
+							</li>
+						</ul>
+						<!-- // -->
+						<ul>
+							<li>
+								<div>등록일자</div>
+								<div>2021.08.03</div>
+							</li>
+							<li>
+								<div>종목</div>
+								<div>장기보험</div>
+							</li>
+							<li>
+								<div>사고번호</div>
+								<div>84633</div>
+							</li>
+							<li>
+								<div>증권번호</div>
+								<div>201520090007434</div>
+							</li>
+							<li>
+								<div>처리상태</div>
+								<div>종결</div>
+							</li>
+						</ul>
+						<!-- // -->
+					</div>
+					<!-- 2022-12-02 없을 경우 추가 -->
+					<div class="mes-result1">
+						<p>
+							<strong>최근 1년 간 보험청구이력이 없습니다.</strong>
+						</p>
+					</div>
+					<!-- 2022-12-02 없을 경우 추가 -->
+				</div>
+			</section>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [접촉이력] -->
+		<!-- ######################### -->
+		<div class="area-toggle1" data-autoset="toggle">
+			<section class="active">
+				<header class="tit">
+					<h3>접촉이력</h3>
+					<button type="button" data-toggle="btn" aria-expanded="false">접촉이력 상세보기</button>
+				</header>
+				<div data-toggle="content">
+					<div class="info-con1">
+						<!-- // -->
+						<ul>
+							<li>
+								<div>일정계획</div>
+								<div>2021.08.03/종일</div>
+							</li>
+							<li>
+								<div>제목</div>
+								<div>이웃집 아저씨 만남</div>
+							</li>
+							<li>
+								<div>메모</div>
+								<div>안부인사 겸 전화연락</div>
+							</li>
+							<li class="data-word2">
+								<span>#보험서비스</span>
+								<span>#설계사</span>
+								<span>#암보험</span>
+							</li>
+						</ul>
+						<!-- // -->
+						<ul>
+							<li>
+								<div>일정계획</div>
+								<div>2021.08.03/종일</div>
+							</li>
+							<li>
+								<div>제목</div>
+								<div>이웃집 아저씨 만남</div>
+							</li>
+							<li>
+								<div>메모</div>
+								<div>안부인사 겸 전화연락</div>
+							</li>
+							<li class="data-word2">
+								<span>#보험서비스</span>
+								<span>#설계사</span>
+								<span>#암보험</span>
+							</li>
+						</ul>
+
+						<!-- # 버튼영역 # -->
+						<div class="area-btn1 line">
+							<button type="button" class="btn-com1">접촉이력목록 보기</button>
+						</div>
+					</div>
+					<!-- 2022-12-02 없을 경우 추가 -->
+					<div class="mes-result1">
+						<p>
+							<strong>접촉이력이 없습니다.</strong>
+						</p>
+					</div>
+					<!-- 2022-12-02 없을 경우 추가 -->
+				</div>
+			</section>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ######################### -->
+<!-- [툴팁영역] 연락중지청구권 안내 -->
+<!-- ######################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">연락중지청구권 안내</dt>
+		<dd>해당 고객님은 연락중지청구권(Do-not-call)<br>신청 고객이예요. 고객님께 마케팅 목적으로<br>연락(전화 또는 문자)을 삼가해주세요.</dd>
+		<dd class="txt-bul4 t1">연락중지청구권(Do-not-call): 고객의 요청으로<br>상품가입 권유등 마케팅 목적의 연락을 거절하는 권리</dd>
+		<dd><button type="button" data-btn="pop-close">연락중지청구권 안내 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+</body>
+</html>

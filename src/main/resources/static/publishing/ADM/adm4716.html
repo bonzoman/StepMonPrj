@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>모든꿀팁  | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-28]	1. 미리보기 버튼 추가
+	*	[M 2022-11-10]	1. 내용 삭제
+						2. 버튼 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">모든꿀팁 &gt; 등록</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="tit-sub2">
+				<h2>게시글 정보</h2>
+			</div>
+			<div class="tbl-write1">
+				<table>
+					<colgroup>
+						<col style="width:120px;">
+						<col>
+						<col style="width:120px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">분류</th>
+							<td colspan="3">
+
+                                <label class="label-check">
+                                    <input type="radio" name="f1" checked="checked">
+                                    <span>보험꿀팁</span>
+                                </label>
+                                <label class="label-check">
+                                    <input type="radio" name="f1">
+                                    <span>건강꿀팁</span>
+                                </label>
+                                <label class="label-check">
+                                    <input type="radio" name="f1">
+                                    <span>시험꿀팁</span>
+                                </label>
+							</td>
+						</tr>
+						<!-- <tr>
+							<th scope="row">게시글 주소</th>
+							<td colspan="3">
+								<input type="text" name="" id="" class="text" style="width:400px;">
+							</td>
+						</tr> --><!-- [M 2022-11-10] 내용 삭제 -->
+						<tr>
+							<th scope="row">게시 설정</th>
+							<td colspan="3">
+
+								<label class="label-check">
+									<input type="radio" name="fr2" checked>
+									<span>상시 게시</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="fr2">
+									<span>기간설정</span>
+								</label>
+								<span class="date-range2">
+									<input type="text" data-role="start" placeholder="시작월 선택">
+									<span class="util">~</span>
+									<input type="text" data-role="end" placeholder="종료월 선택">
+								</span>
+								<label class="label-check">
+									<input type="radio" name="fr2">
+									<span>게시 안 함</span>
+								</label>
+							</td>
+						</tr>
+						<tr class="row2">
+							<th scope="row">대표 이미지 등록</th>
+							<td>
+								<div class="img-area">
+									<img src="">
+									[임시]이미지 view 영역
+								</div>
+								<span class="wrap-file">
+									<input type="file" tabindex="-1" accept="image/*">
+									<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic3">첨부하기</button>
+								</span>
+								<p class="list-dot1">App 디자인 스타일과 해상도 유지를 위하여 가로 해상도 최소 1400px로 업로드 부탁드립니다.</p>
+							</td>
+							<th scope="row">내용 입력</th>
+							<td>
+								<p class="list-dot1">하얀 글씨로 두껍게 들어가는 타이틀 영역은 [타이틀 n쨰줄]에 입력해주세요. <br>
+									줄 바꿈은 지원하지 않으므로 줄 바꿈이 필요할 시 둘째줄에 각각 입력합니다.<br>
+									본문 타이틀은 이미지 영역 하단의 텍스트 시작부분에 큰 글씨로 들어갑니다.
+								 </p>
+								 <div class="form-box1">
+
+									<div class="form-row">
+										<span class="form-tit">타이틀 첫째줄</span>
+										<input type="text" name="" id="" class="text" style="width:280px;" placeholder="띄어쓰기 포함 11글자 이하만 입력가능">
+									</div>
+									<div class="form-row">
+										<span class="form-tit">타이틀 둘째줄</span>
+										<input type="text" name="" id="" class="text" style="width:280px;" placeholder="띄어쓰기 포함 11글자 이하만 입력가능">
+									</div>
+									<!-- <div class="form-row">
+										<span class="form-tit">본문 타이틀</span>
+										<input type="text" name="" id="" class="text" style="width:240px;">
+										<span class="util">0/40</span>
+									</div>
+									<div class="form-row">
+										<span class="form-tit">본문</span>
+										<textarea name="" id="" class="textarea" style="width:240px;"></textarea>
+										<span class="util">0/2,000</span>
+									</div> --><!-- [M 2022-11-10] 내용 삭제 -->
+									<div class="form-row">
+										<span class="form-tit">이미지 첨부</span>
+										<span class="wrap-file">
+											<input type="file" tabindex="-1" accept="image/*">
+											<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic3">첨부하기</button>
+										</span>
+										<div class="file-div">
+											<span class="file-name">가나다라마바사.pptx <button type="button" class="btn-del1">삭제</button></span>
+										</div>
+										<div class="file-div">
+											<span class="file-name">가나다라마바사.pptx <button type="button" class="btn-del1">삭제</button></span>
+										</div>
+										<div class="file-div">
+											<span class="file-name">가나다라마바사.pptx <button type="button" class="btn-del1">삭제</button></span>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- [M 2022-11-10] 버튼 수정 -->
+			<div class="wrap-btn">
+				<div class="btns">
+					<button type="button" class="btn-action c3">초기화</button>
+					<button type="button" class="btn-action c2">미리보기</button>
+					
+				</div>
+				<div class="btns">
+					<button type="button" class="btn-action c3">목록보기</button>
+					<button type="button" class="btn-action c1">등록</button>
+				</div>
+			</div>
+			<!-- //[M 2022-11-10] 버튼 수정 -->
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 전사 공지사항</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>전사 공지사항</h1>
+			<button type="button" data-btn="pop-close">전사 공지사항 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container" data-page="2">
+			<!-- ######################### -->
+			<!-- [이미지영역] -->
+			<!-- ######################### -->
+			<div class="area-img1"><img src="../../resource/img/temp/@img_edu2.jpg" alt=""></div> <!-- [D] 관리자 등록 이미지 -->
+
+			<!-- ######################### -->
+			<!-- [텍스트영역] 관리자 입력 텍스트 -->
+			<!-- ######################### -->
+			<p class="mes-t3">관리자에서 입력한 텍스트가 표시됩니다. 최대 3줄까지 고려해서 노출하려고해요 3줄이 넘으면 ... 처리를 해볼까요?</p>
+
+			<!-- ######################### -->
+			<!-- [하단버튼]  -->
+			<!-- ######################### -->
+			<!--   관리자에서  그만보기 설정이 되어있고 연결URL 있을경우  -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-com1 c2">@1일@ 동안 보지 않기</button>
+				<button type="button" class="btn-com1 c2">자세히 보기</button>
+			</div>
+			<!--   관리자에서  그만보기 설정이 되어있고 연결URL 없을경우  -->
+			<!-- <div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-com1 c2">@1일@ 동안 보지 않기</button>
+			</div> -->
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 서비스 이용 안내 | 모아보기</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>서비스 이용 안내</h1>
+			<button type="button" data-btn="pop-close">서비스 이용 안내 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [약관영역] -->
+			<!-- ######################### -->
+			<div class="area-terms">
+                <dl class="bul1">
+                    <dt>1. 서비스 이용 소개</dt>
+                    <dd>만보기는 서비스 사용 및 위치 정보 수집 이용에 동의한 사용자만 이용할 수 있습니다.</dd>
+                    <dd>만보기 포인트는 사용자의 단말기에서 측정된 걸음 수에 따라 적립됩니다.</dd>
+                </dl>
+                <dl class="bul1">
+                    <dt>2. 포인트 적립 및 수령 안내</dt>
+                    <dd>만보기 포인트는 사용자의 단말기에 측정된 걸음 수에 따라 적립됩니다.</dd>
+                    <dd>측정된 걸음 수에 따른 포인트 및 최대 적립 포인트는 회사에 정한 기준에 따르며, 그 기준은 회사 사정에 따라 변동될 수 있습니다.</dd>
+                    <dd>적립된 포인트의 지급은 회사에 정한 기준에 따르며, 그 기준은 회사 사정에 따라 변동될 수 있습니다.</dd>
+                    <dd>포인트 적립 서비스는 사전 고지 없이 변경될 수 있습니다.</dd>
+                </dl>
+                <dl class="bul1">
+                    <dt>3. 서비스 제한 및 유의 사항</dt>
+                    <dd>만보기 서비스는 대한민국 시간을 기준으로 제공되며, 포인트 지급은 회사가 정한 기준에 따라 수령할 수 있습니다.</dd>
+                    <dd>걸음 수 측정 기능을 제공하는 단말기에서만 만보기 서비스를 이용할 수 있습니다. 이에 따라, 미지원 단말기를 보유한 사용자는 본 서비스 이용이 제한됩니다.</dd>
+                    <dd>구글의 정책에 따라, 안드로이드 OS 기반의 단말기는 걸음 수 측정을 위해 알림센터에 앱이 항상 노출됩니다.</dd>
+                    <dd>측정된 걸음 수는 단말기 또는 운영체제 특성에 따라 실제 걸음 수와 차이가 발생할 수 있습니다.</dd>
+                    <dd>본 서비스는 회사의 앱이 설치된 단말기에서 측정된 걸음 수를 기준으로 합니다. 단말기 외 기타 주변기기(스마트 워치 등)에서 측정된 걸음 수는 포함되지 않습니다.</dd>
+                    <dd>회사 정책 변경에 따라 본 서비스는 변경 또는 중단될 수 있습니다.</dd>
+                </dl>
+            </div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

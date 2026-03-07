@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>(샘플) 확인창</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+	<button type="button" class="btn-com1" id="btnConfirm1">기본</button>
+	<button type="button" class="btn-com1" id="btnConfirm2">변경</button>
+	<button type="button" class="btn-com1" id="btnConfirm3">타이틀필요</button>
+<script>
+//<!--
+	$('#btnConfirm1').on('click',function(){
+		ui.confirm('확인창 메세지 출력 영역',function(){
+			//확인
+			ui.alert('확인');
+		},function(){
+			//취소
+			ui.alert('취소');
+		});
+	});
+
+	$('#btnConfirm2').on('click',function(){
+		ui.confirm('<strong>강조문구</strong> 확인창 메세지 출력 영역',function(){
+			//예
+			ui.alert('예');
+		},function(){
+			//아니요
+			ui.alert('아니요');
+		},'아니요','예');
+	});
+
+	$('#btnConfirm3').on('click',function(){
+		ui.confirm('<strong>강조문구</strong> 확인창 메세지 출력 영역',function(){
+			//예
+			ui.alert('예');
+		},function(){
+			//아니요
+			ui.alert('아니요');
+		},'아니요','예','타이틀');
+	});
+//-->
+</script>
+</body>
+</html>

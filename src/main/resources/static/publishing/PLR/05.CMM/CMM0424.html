@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>상세 | 노하우 | 커뮤니티</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+
+<!-- 샘플 : 하이차트 적용 시 필요한 스크립트 파일 -->
+<script src="../../resource/js/chart/highcharts.js"></script>
+<script src="../../resource/js/chart/data.js"></script>
+<script src="../../resource/js/chart/highcharts-more.js"></script>
+<script src="../../resource/js/chart/solid-gauge.js"></script>
+<!-- // 샘플 -->
+
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-19]	① 차트 적용
+	*					② 댓글 삭제/수정 버튼 추가
+	*	[M 2022-10-06]	① 차트 수정
+						② 플랜소개 수정
+	*	[M 2022-11-10]	① 아이콘 삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>노하우공유</h1> <!-- [M 2022-07-19] 문구 변경 -->
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [게시글상세] -->
+		<!-- ######################### -->
+		<article class="board-view1">
+			<!-- ### [게시물 정보] ################################## -->
+			<header>
+				<div class="tit">
+					<i class="icon-state2 ic1">승인대기중</i>
+					<i class="icon-state2 ic4">승인완료</i>
+					<i class="icon-state2 ic7">반려</i>
+					<i class="icon-state2 ic2">게시종료</i>
+					<h1>사회 초년생을 위한 저렴한 보험 이렇게 설계해보세요.</h1>
+				</div>
+				<!-- [CASE1] : 승인완료 시 -->
+				<dl class="info">
+					<dt>작성일</dt>
+					<dd><span>0000.00.00</span></dd>
+				</dl>
+				<!-- [CASE2] : 반려, 승인대기중 시 -->
+				<dl class="info2">
+					<dt>승인요청 일시</dt>
+					<dd>0000.00.00 00:00</dd>
+				</dl>
+				<!-- [CASE2_1] : 반려 내용 -->
+				<dl class="mes-t1 box">
+					<dt>반려사유</dt>
+					<dd>반려사유 노출영역 입니다. 반려사유 노출영역 노출영역 반려사유 노출영역 입니다. </dd>
+				</dl>
+				<!-- // -->
+				<div class="data">
+					<dl class="icon-com1 ic9">
+						<dt>조회</dt>
+						<dd>000,000</dd>
+					</dl>
+
+					<!-- [M 2022-07-19] 댓글 추가 -->
+					<dl class="icon-com1 ic11">
+						<dt>댓글</dt>
+						<dd>000,000</dd>
+					</dl>
+					 <!-- // -->
+
+					<dl class="icon-com1 ic15">
+						<dt>설계복사</dt>
+						<dd>000,000</dd>
+					</dl>
+				</div>
+				<!-- // -->
+			</header>
+
+			<!-- ### [플랜소개] ################################## -->
+			<div class="wrap-section1"><!-- [M 2022-08-02] 클래스명수정 및 data속성 삭제 -->
+				<section>
+					<h2 class="hide">상품상세</h2><!-- [M 2022-10-06] 텍스트 수정 -->
+					<div class="tit-sub2">
+						<h3>Let:smile 종합건강보험(프리미엄)</h3>
+						<p class="data-num1">월 <strong>34,700</strong><span>원</span></p>
+						<em class="data3 ic3">지급률 450%</em>
+					</div>
+					<h3 class="tit-sub1">플랜소개</h3><!-- [M 2022-10-06] 플랜소개 추가 -->
+					<div class="tbl-data1 t1">
+						<table>
+							<caption class="tit-sub2">내생애 성공플랜</caption><!-- [M 2022-10-06] 플랜소개 수정 -->
+							<colgroup>
+								<col style="width:33%">
+								<col style="width:33%">
+								<col style="width:33%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">납입면제</th>
+									<th scope="col">보험기간</th>
+									<th scope="col">납입주기</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>있음</strong></td>
+									<td><strong>100세만기</strong></td>
+									<td><strong>20년납</strong></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="area-btn1">
+						<a href="javascript:void(0);" class="btn-com1 c1">특약확인</a>
+					</div>
+				</section>
+
+				<section>
+					<div class="tit-sub1">
+						<h3>상품 특징</h3>
+						<!-- <p>
+							<span class="icon-txt2 t1 ic3">갱신형</span>
+							<span class="icon-txt2 t1 ic2">세만기</span>
+						</p> --><!-- [M 2022-11-10] 아이콘 삭제 -->
+					</div>
+
+					<!-- 차트영역 : /PUB/99.work/script_chart.html : Spider Web -->
+					<div id="SpiderWeb" data-chart="Spider-Web" class="area-chart"></div> <!-- [M 2022-08-19]	① 차트 적용 : id="SpiderWeb" data-chart="Spider-Web" 추가 -->
+				</section>
+			</div>
+
+			<!-- ### [설계사소개 / 판매 TIP3 / 해시태그] ################################## -->
+			<div class="wrap-section3">
+				<!-- # 설계사소개 # -->
+				<section>
+					<h4 class="hide">설계사소개</h4>
+					<dl class="data-info1">
+						<dt>
+							<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+							<span><strong>하다미</strong><span>20대</span><span>여</span></span>
+							<span>사업부</span>
+							<span>00차월</span>
+							<span class="txt2"><em class="icon-grade1">우수설계사</em></span> <!-- [D] 우수설계사일 경우 추가 -->
+						</dt>
+						<dd class="area-data1">60대 이상 고객님들의 마음을 잘 아는 20대
+							설계사 이지영입니다.
+							걱정되는 담보만 집중하기 않고
+							다양한 위험상황에 대비해야 합니다.
+						</dd>
+					</dl>
+				</section>
+
+				<!-- # 해시태그 # -->
+				<section>
+					<h5 class="hide">해시태그</h5>
+					<p class="data-word2">
+						<span>#해시태그</span>
+						<span>#해시태그</span>
+						<span>#해시태그</span>
+						<span>#해시태그</span>
+						<span>#해시태그</span>
+						<span>#해시태그</span>
+					</p>
+				</section>
+
+				<!-- # 판매 TIP3 # -->
+				<section>
+					<h6 class="tit-sub1">설계사님이 공유하는 유용한 TIP도 함께 확인해보세요.</h6> <!-- [M 2022-07-19] 문구 및 클래스명 변경 -->
+					<dl class="mes-t3 t2">
+						<dt class="ic1">TIP 1</dt>
+						<dd>고객님은 사회초년생이기에 보험 뿐만 아니라 저축, 생활비들 지출을 하고 있습니다.</dd>
+					</dl>
+					<dl class="mes-t3 t2">
+						<dt class="ic1">TIP 2</dt>
+						<dd>고객님은 사회초년생이기에 보험 뿐만 아니라 저축, 생활비들 지출을 하고 있습니다. 많은 보장은 비싼 보험료를 의미하고 이는 부담으로 다가 올수 있다 생각했습니다. 이점을 고객님들이 쉽게 공감할 수 있도록 설명드렸습니다.</dd>
+					</dl>
+				</section>
+				<!-- # // # -->
+			</div>
+
+			<!-- ### [첨부파일영역] ################################## -->
+			<aside>
+				<!-- # 이미지첨부 # -->
+				<dl class="tit-sub3">
+					<dt class="icon-com1 ic23">이미지 첨부 00건</dt>
+					<dd class="data-file2">
+						<ul>
+							<li><a href="javascript:void(0);" class="img"><img src="../../resource/img/temp/@img_banner1.png" alt="첨부이미지1"></a></li>
+							<li><a href="javascript:void(0);" class="img"><img src="../../resource/img/temp/@img_banner2.png" alt="첨부이미지2"></a></li>
+							<li><a href="javascript:void(0);" class="img"><img src="../../resource/img/temp/@img_banner1.png" alt="첨부이미지3"></a></li>
+							<li><a href="javascript:void(0);" class="img"><img src="../../resource/img/temp/@img_banner2.png" alt="첨부이미지4"></a></li>
+						</ul>
+					</dd>
+				</dl>
+
+				<!-- # 관련컨텐츠 # -->
+				<div class="area-toggle1" data-autoset="toggle">
+					<dl>
+						<dt class="tit">
+							<strong class="icon-com1 ic14">관련 컨텐츠 첨부 00건</strong> <!-- [M 2022-06-09] 문구 수정 -->
+							<button type="button" data-toggle="btn" aria-expanded="false">관련 컨텐츠 첨부 상세보기</button>
+						</dt>
+						<dd data-toggle="content" class="info-data1 t1 bg">
+							<ul>
+								<li>
+									<strong class="tit">고객들에게 좋은 보험이란 보험</strong>
+									<span class="img w1"><img src="../../resource/img/com/noimg.png" alt=""></span> <!-- [D] 이미지없음 : /resource/img/com/noimg.png  -->
+									<div class="data-word2">
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+									</div>
+									<div class="btn"><a href="javascript:void(0);">상세보기</a></div>
+								</li>
+								<li>
+									<strong class="tit">뇌혈관질환 진단비 분석</strong>
+									<span class="img w1"><img src="../../resource/img/temp/@img_banner1.png" alt=""></span>
+									<div class="data-word2">
+										<span>#보험서비스 발송</span>
+										<span>#상품</span>
+									</div>
+									<div class="btn"><a href="javascript:void(0);">상세보기</a></div>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<!-- # // # -->
+			</aside>
+
+			<!-- ### [버튼영역] ################################## -->
+			<!-- [D] 작성자, 수정권한이 있는 자에게만 노출 -->
+			<div class="area-btn1">
+				<button type="button" class="btn-com1">삭제</button>
+				<a href="javascript:void(0);" class="btn-com1">수정</a> <!-- [D] 승인완료, 반려 경우 미노출 # -->
+			</div>
+
+			<!-- ### [댓글영역 : M 2022-07-18] 추가 ################################## -->
+			<footer data-scroll-bg="1">
+				<!-- 댓글 입력 -->
+				<fieldset class="form-wrap1" data-mode="write">
+					<legend>댓글입력</legend>
+					<dl class="form">
+						<dt class="data-info1">
+							<span><strong>이지수</strong><span>(강남 8지점)</span></span>
+							<span><em class="icon-grade1">우수설계사</em></span>
+						</dt>
+						<dd>
+							<!-- [M 2022-07-14] 버튼 위치 변경 -->
+							<div class="textarea">
+								<textarea cols="50" rows="3" title="댓글" placeholder="댓글을 입력해주세요."></textarea>
+								<span class="util2"><strong>0</strong>/4,000자</span>
+							</div>
+							<div class="area-btn3"><button type="button" class="btn-sub3 c1">등록</button></div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- 댓글 총 건수 -->
+				<div class="area-info1">
+					<p>총 <strong>171건</strong></p>
+				</div>
+
+				<!-- 댓글 목록 -->
+				<div class="board-list2 t1">
+					<ul>
+						<!-- [CASE] 다른사람의 노하우의 댓글 : 비공개 -->
+						<li>
+							<!-- // -->
+							<dl class="info">
+								<dt>작성자(소속)</dt>
+								<dd class="data-info1">
+									<span><strong>비공개</strong></span>
+								</dd>
+								<dt>작성일</dt>
+								<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+							</dl>
+							<!-- // -->
+							<div class="cont">비공개 댓글입니다.</div>
+
+							<!-- [M 2022-08-19] ② 버튼추가 -->
+							<div class="btn">
+								<button type="button" class="btn-sub3 c2">삭제</button>
+								<button type="button" class="btn-sub3 c2">수정</button>
+							</div>
+							<!-- // [M 2022-08-19] -->
+
+							<!-- 답글 영역 -->
+							<div class="area1" data-autoset="toggle">
+								<button type="button" data-toggle="btn" aria-expanded="false">답글 <i>2</i></button> <!-- 답글이 없을때 : 답글 작성 -->
+								<div data-toggle="content">
+									<!-- 답글 목록 -->
+									<ul class="area2">
+										<!-- // -->
+										<li>
+											<dl class="info">
+												<dt>작성자(소속)</dt>
+												<dd class="data-info1">
+													<span><strong>비공개</strong></span>
+												</dd>
+												<dt>작성일</dt>
+												<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+											</dl>
+											<div class="cont">비공개 댓글입니다.</div>
+										</li>
+										<!-- // -->
+										<li>
+											<dl class="info">
+												<dt>작성자(소속)</dt>
+												<dd class="data-info1">
+													<span><strong>비공개</strong></span>
+												</dd>
+												<dt>작성일</dt>
+												<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+											</dl>
+											<div class="cont">비공개 댓글입니다.</div>
+										</li>
+										<!-- // -->
+									</ul>
+								</div>
+							</div>
+							<!-- // -->
+						</li>
+
+						<!-- [CASE] 나의 노하우의 댓글 -->
+						<li>
+							<dl class="info">
+								<dt>작성자(소속)</dt>
+								<dd class="data-info1">
+									<span class="img"><img src="../../resource/img/temp/@img_user2.png" alt=""></span>
+									<span><strong>이지수</strong><span>(강남 8지점)</span></span>
+								</dd>
+								<dt>작성일</dt>
+								<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+							</dl>
+							<div class="cont">작성내용 노출 영역</div>
+							<div class="area1" data-autoset="toggle">
+								<button type="button" data-toggle="btn" aria-expanded="false">답글 작성</button>
+								<div data-toggle="content">
+									<fieldset class="form-wrap1" data-mode="write">
+										<legend>답글 입력</legend>
+										<dl class="form">
+											<dt class="data-info1">
+												<span><strong>이지수</strong><span>(강남 8지점)</span></span>
+												<span><em class="icon-grade1">우수설계사</em></span>
+											</dt>
+											<dd>
+												<div class="textarea">
+													<textarea cols="50" rows="3" title="답글" placeholder="답글을 입력해주세요."></textarea>
+													<span class="util2"><strong>0</strong>/4,000자</span>
+												</div>
+												<div class="area-btn3">
+													<button type="button" class="btn-sub3">취소</button>
+													<button type="button" class="btn-sub3 c1">등록</button>
+												</div>
+											</dd>
+										</dl>
+									</fieldset>
+								</div>
+							</div>
+						</li>
+						<!-- // -->
+					</ul>
+
+					<!-- 더보기 -->
+					<div class="area-btn2"><button type="button" class="btn-util2">더보기 <span>(2/10)</span></button></div>
+					<!-- // -->
+				</div>
+				<!-- // -->
+			</footer>
+			<!-- ################################################# -->
+		</article>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">설계복사</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	// 샘플 :  [M 2022-10-04] ① 차트 수정
+	Highcharts.chart("SpiderWeb", {
+		chart:{
+			polar:true, //극선
+		},
+		xAxis:{
+			tickmarkPlacement:'on',
+			categories:["보험료","수수료","인기도","납입기간","보장기간"],
+		},
+		yAxis:{
+			gridLineInterpolation:"polygon", //다각형 모양 지정
+			tickInterval:1, //다각형 라인 간격
+			min:0,
+			max:5
+		},
+		series:[
+			{
+				name:"해당상품",
+				data:[1, 2, 3, 4, 5],
+				zIndex:2, //zIndex 위치
+				pointPlacement:"on"
+			},
+			/*{
+				name:"상품평균",
+				data:[50, 39, 42, 31, 26],
+				pointPlacement:"on",
+			}*/				
+		],
+		responsive:{
+			rules: [{
+				condition:{maxWidth: 720}, //차트 최대사이즈
+				chartOptions:{
+					pane:{size:'63%'} //차트영역 사이즈 : label이 짤림을 막기 위해 적용
+				}
+			}]
+		}
+	})
+	$(document).ready(function(){
+		$('.btn-sub3.c1').on('click', function(){
+			alert('test');
+		});
+	});
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 특수건물 | 고객정보 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>특수건물</h1>
+			<button type="button" data-btn="pop-close">특수건물 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- // -->
+			<div class="wrap-section1">
+				<section>
+					<h2 class="tit-sub1">특수건물이란?</h2>
+					<p class="mes-t3">국공유건물, 교육시설, 백화점, 시장, 의료시설, 흥행장, 숙박업소, 다중이용업소, 운수시설, 공장, 공동주택과 그밖에 여러 사람이 출입 또는 근무하거나 거주하는 건물로서 화재의 위험이나 건물의 면적 등을 고려하여 대통령령으로 정하는 건물을 뜻합니다.</p>
+				</section>
+
+				<section>
+					<h3 class="tit-sub2">관련법령</h3>
+					<ul class="txt-bul1 t1">
+						<li>「화재로 인한 재해보상과 보험가입에 관한 법률」제2조 제3호</li>
+						<li><em>「화재로 인한 재해보상과 보험가입에 관한 법률 시행령」제2조 제1항</em>
+                            <ul class="txt-bul3">
+                                <li>벌칙 : 특약부화재보험 미가입자는 500만원 이하의 벌금에 처한다.</li>
+                            </ul>
+                        </li>
+					</ul>
+				</section>
+            </div>
+
+            <div class="wrap-section line">
+                <h2 class="tit-sub1">특수건물 연면적 합계에 따른 분류</h2>
+				<section>
+					<dl class="txt-bul1 t1">
+						<dt>1. 1천㎡ 이상</dt>
+						<dd><strong>국유 부동산</strong><br>
+                            (단, 대통령관저와 특수용도로 사용하는 건물로서 금융위원회가 지정하는 건물제외)
+                        </dd>
+						<dd><strong>공유 부동산</strong><br>
+                            (단, 한국지방재정공제회 또는 교육시설 등의 안전 및 유지관리 등에 관한 법 제35조에 따른 한국교육시설 안전원이 운영하는 공제중 특약부화재보험과 같은 정도의 손해를 보상하는 공제에 가입한 지방자치단체 소유 건물 제외)
+                        </dd>
+					</dl>
+                    <dl class="txt-bul1 t2">
+                        <dt><strong>2. 2천㎡ 이상</strong></dt>
+						<dd>게임제공업</dd>
+						<dd>공유주방 운영업</dd>
+						<dd>노래연습장업</dd>
+                        <dd>단란주점 영업</dd>
+                        <dd>목욕장</dd>
+                        <dd>영화상영관</dd>
+                        <dd>유흥주점 영업</dd>
+                        <dd>인터넷컴퓨터게임시설제공업</dd>
+                        <dd>일반음식점 영업</dd>
+                        <dd>휴계음식점 영업</dd>
+                        <dd>학원</dd>
+                    </dl>
+                    <dl class="txt-bul1 t2">
+                        <dt><strong>3. 3천㎡ 이상</strong></dt>
+						<dd>공연장</dd>
+						<dd>공장</dd>
+						<dd>관광숙박업</dd>
+                        <dd>농수산물도매시장</dd>
+                        <dd>대규모점포</dd>
+                        <dd>도시철도의 역사 및 역시설</dd>
+                        <dd>민영농수산물도매시장</dd>
+                        <dd>방송사업</dd>
+                        <dd>병원급 의료기관</dd>
+                        <dd>숙박업</dd>
+                        <dd>학교</dd>
+                    </dl>
+                    <dl class="txt-bul1 t2">
+                        <dt><strong>4. 기타</strong></dt>
+						<dd>16층 이상 아파트</dd>
+						<dd>층수가 11층 이상인 건물</dd>
+						<dd><em>실내사격장으로 사용하는 건물</em>
+                            <ul class="txt-bul3">
+                                <li>단, 건물의 층수 계산방법은 건축법 시행령 제 110조 제1항 제9호에 따르되, 건축물의 옥상부분으로서 그 용도가 명백한 계단실 또는 물탱크실인 경우에는 층수로 산입하지 아니하며 지하층은 이를 층으로 보지 아니한다.</li>
+                            </ul>
+                        </dd>
+                    </dl>
+				</section>
+			</div>
+			<!-- // -->
+
+            <!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>조직증감추이 | 조직관리 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">조직증감추이</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<dl class="form w5">
+						<dt>기준년도<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<input type="text" name="" id="" value="2022" class="text" style="width:80px;">
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w3"> <!-- 숨길때 hide-->
+						<dt>조직구분<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>취급자</option>
+								</select>
+								<input type="text" name="" id="" class="text" style="width:80px;">
+								<input type="text" name="" id="" class="text" style="width:120px;" disabled>
+								<button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w1 hide"> <!-- 숨길때 hide-->
+						<dt>조회구분</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="radio" name="fr1" checked="checked">
+									<span>보장성</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="fr1">
+									<span>장기신규</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c3">초기화</button>
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+			<div class="tab-wrap">
+				<ul class="tab1">
+					<li><a href="#tab1-1" class="current">조직증감추이(사업단별)</a></li>
+					<li><a href="#tab1-2" class="">조직증감추이(지점별)</a></li>
+					<li><a href="#tab1-3" class="">생산성추이(사업단별)</a></li>
+					<li><a href="#tab1-4" class="">생산성추이(지점별)</a></li>
+				</ul>
+				<div id="tab1-1" class="tab-cont" style="display:block;">
+					<div class="data-table1 point_last">
+						<div class="info1">단위: 명</div>
+						<div class="list-table" data-pos="top">
+							<!--최초 접근시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								아직 실적이 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--조회시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								해당하는 자료가 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--하위조직 case-->
+							<table>
+								<colgroup>
+									<col style="width:150px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" colspan="3">구분</th>
+										<th scope="col">2022.01</th>
+										<th scope="col">2022.02</th>
+										<th scope="col">2022.03</th>
+										<th scope="col">2022.04</th>
+									</tr>
+								</thead>
+								<tbody>
+
+									<tr>
+										<th scope="row" rowspan="12"><a href="#" class="btn-link1">강남사업단<br>(E001239)</a></th>
+										<th scope="row" rowspan="4">재적</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="4">위촉</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+                                    </tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="4">해촉</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+                                    </tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+
+									<tr>
+										<th scope="row" rowspan="12"><a href="#" class="btn-link1">강남사업단<br>(E001239)</a></th>
+										<th scope="row" rowspan="4">재적</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="4">위촉</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+                                    </tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="4">해촉</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+                                    </tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<table>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="12">합계</th>
+										<th scope="row" rowspan="4">재적</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="4">위촉</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+                                    </tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="4">해촉</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+                                    </tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="tab1-2" class="tab-cont">
+					<div class="data-table1 point_last">
+						<div class="info1">단위: 명</div>
+						<div class="list-table" data-pos="top">
+							<!--최초 접근시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								아직 실적이 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--조회시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								해당하는 자료가 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--하위조직 case-->
+							<table>
+								<colgroup>
+									<col style="width:150px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" colspan="3">구분</th>
+										<th scope="col">2022.01</th>
+										<th scope="col">2022.02</th>
+										<th scope="col">2022.03</th>
+										<th scope="col">2022.04</th>
+									</tr>
+								</thead>
+								<tbody>
+
+									<tr>
+										<th scope="row" rowspan="12">전속지원교차01팀<br>(T500143)</th>
+										<th scope="row" rowspan="4">재적</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="4">위촉</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+                                    </tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="4">해촉</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+                                    </tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<table>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="12">합계</th>
+										<th scope="row" rowspan="4">재적</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="4">위촉</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+                                    </tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="4">해촉</th>
+										<th scope="row">전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+                                    </tr>
+									<tr>
+										<th scope="row">비전속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">교차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="tab1-3" class="tab-cont">
+					<div class="data-table1">
+						<div class="info1">단위: 원,명</div>
+						<div class="list-table" data-pos="top">
+							<!--최초 접근시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								아직 실적이 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--조회시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								해당하는 자료가 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--하위조직 case-->
+							<table>
+								<colgroup>
+									<col style="width:150px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" colspan="3">구분</th>
+										<th scope="col">2022.01</th>
+										<th scope="col">2022.02</th>
+										<th scope="col">2022.03</th>
+										<th scope="col">2022.04</th>
+									</tr>
+								</thead>
+								<tbody>
+
+									<tr>
+										<th scope="row" rowspan="20"><a href="#" class="btn-link1">강남사업단<br>(E001239)</a></th>
+										<th scope="row" rowspan="5">전속</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="5">비전속</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="5">교차</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="5">합계</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<table>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="20">합계</th>
+										<th scope="row" rowspan="5">전속</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="5">비전속</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="5">교차</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="5">합계</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="tab1-4" class="tab-cont">
+					<div class="data-table1">
+						<div class="info1">단위: 원,명</div>
+						<div class="list-table" data-pos="top">
+							<!--최초 접근시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								아직 실적이 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--조회시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								해당하는 자료가 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--하위조직 case-->
+							<table>
+								<colgroup>
+									<col style="width:150px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" colspan="3">구분</th>
+										<th scope="col">2022.01</th>
+										<th scope="col">2022.02</th>
+										<th scope="col">2022.03</th>
+										<th scope="col">2022.04</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="20">지점명<br>(244440032)</th>
+										<th scope="row" rowspan="5">전속</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="5">비전속</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="5">교차</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="5">합계</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<table>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="20">합계</th>
+										<th scope="row" rowspan="5">전속</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="5">비전속</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="5">교차</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+                                    <tr>
+										<th scope="row" rowspan="5">합계</th>
+										<th scope="row">실적</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+									<tr>
+										<th scope="row">실적건수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">재적인원수</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">실가동</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">생산성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		/*
+			@title : 틀 고정 table
+			@description :
+		     grid 를 사용한 data table 이 아닌 관계로 별도로 script 작성
+		     작성된 table 을 복사하여 회면 위에 띄워서 배치 시킨 후 필요한 부분만 보여지게 사이즈를 조정함
+
+
+			.sort 클릭시 복사된 table에 내용이 바로 반영 되지 않으므로 하기 샘플 참조
+
+
+			[.sort 클릭시 발생시킬 이벤트 sample;]
+			틀고정 영역 내용 변경을 위한 scirpt
+
+			table 의 내용 추가,변경,정렬 시 _fixTable.update(); 호출
+
+		*/
+
+		//_fixTable.update();
+
+
+		_fixTable.init({
+            fixColumn : '3'
+        });
+	</script>
+</div>
+</body>
+</html>

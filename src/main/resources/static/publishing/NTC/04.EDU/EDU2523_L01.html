@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>강의 이어보기</title>
+	<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/page.css">
+	<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/ui.plugin.js"></script>
+	<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+
+<!-- ##################################### -->
+<!-- # 강의 이어보기여부 확인 -->
+<!-- ##################################### -->
+<div id="uiPOPID1" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>이어보기</h1>
+			<button type="button" data-btn="pop-close">이어보기 닫기</button>
+		</header>
+		<div class="content">
+			<div class="follow-up">
+				<div class="title">
+					<strong>
+						'뜯어보면 돈이 되는 보험상자'를<br>
+						시청한 기록이 있어요.
+					</strong>
+					이어서 수강하시겠어요?
+				</div>
+				<div class="progress-rate">
+					<div class="graphbar">
+						<!-- 진행률 inline style 입력 -->
+						<p style="width:30%"></p>
+					</div>
+					<div class="legend">
+						<p class="value-current">02:03 시청</p>
+						<p class="value-min">02:57 남음</p>
+						<p class="value-max">05:00</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="area-action">
+			<a href="javascript:void(0);" class="btn-action">아니오</a>
+			<a href="javascript:void(0);" class="btn-action c1">확인</a>
+		</footer>
+	</article>
+</div>
+<!-- ##################################### -->
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPID1');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPID1').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

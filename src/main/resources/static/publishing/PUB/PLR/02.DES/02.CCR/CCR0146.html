@@ -1,0 +1,763 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 원수수납(보험료수납)	| 청약(개인/업무/영업) | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-31]	1. 팝업으로 변경
+	*	[M 2022-11-01]	1. 타이틀 변경
+	**************************************************************************
+-->
+</head>
+<!-- 2022-10-31 팝업으로 변경 -->
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<!-- 2022-11-01 텍스트 변경 -->
+			<h1>보험료수납</h1>
+			<button type="button" data-btn="pop-close">보험료수납 닫기</button>
+			<!-- //2022-11-01 텍스트 변경 -->
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<div class="area-toggle1" data-autoset="toggle">
+				<!-- ######################### -->
+				<!-- [기본정보 노출] -->
+				<!-- ######################### -->
+				<section>
+					<header class="tit">
+						<h2>상품명</h2>
+						<div class="info">
+							<em class="icon-txt2 ic1">신계약</em>
+							<em class="icon-txt2 ic1">배서</em>
+							<span>CA220308111701</span>
+						</div>
+						<dl class="data2">
+							<dt>피보험자</dt>
+							<dd>하다미</dd>
+						</dl>
+						<button type="button" data-toggle="btn" aria-expanded="false">기본정보 상세보기</button>
+					</header>
+					<div data-toggle="content" class="info-con1">
+						<dl>
+							<dt>보험기간</dt>
+							<dd>2022.03.01~2023.03.01</dd>
+						</dl>
+						<dl>
+							<dt>상품명</dt>
+							<dd>Let:way개인용자동차보험</dd>
+						</dl>
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info1">
+								<strong>하다미</strong>
+								<span>1990.01.01</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>총보험료</dt>
+							<dd class="data-num1"><strong>85,900</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>수금자</dt>
+							<dd class="info1">
+								<strong>공지철</strong>
+								<span>000000</span>
+							</dd>
+						</dl>
+					</div>
+				</section>
+	
+				<!-- ######################### -->
+				<!-- [전계약정보 노출] -->
+				<!-- ######################### -->
+				<section>
+					<header class="tit">
+						<h3>전계약정보</h3>
+						<button type="button" data-toggle="btn" aria-expanded="false">전계약정보 상세보기</button>
+					</header>
+					<div data-toggle="content" class="info-con1">
+						<dl>
+							<dt>증권번호</dt>
+							<dd>CA220308111701</dd>
+						</dl>
+						<dl>
+							<dt>금권구분</dt>
+							<dd>카드</dd>
+						</dl>
+						<dl>
+							<dt>카드회사</dt>
+							<dd>현대카드</dd>
+						</dl>
+						<dl>
+							<dt>할부개월</dt>
+							<dd>3개월</dd>
+						</dl>
+						<dl>
+							<dt>영수보험료</dt>
+							<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</section>
+				<!-- // -->
+			</div>
+	
+			<!-- ######################### -->
+			<!-- [전계약정보 노출] -->
+			<!-- ######################### -->
+			<div class="area-info2">
+				<dl>
+					<dt>보험료결제</dt>
+					<dd class="data-num1"><strong>500,000</strong><span>원</span></dd>
+				</dl>
+			</div>
+			<!-- [CASE] 재수납 대상일 경우 노출 -->
+			<p class="icon-invalid2">재수납전환 대상입니다. 입금확인 탭을 확인해주세요.</p>
+	
+			<!-- ######################### -->
+			<!-- [탭버튼] -->
+			<!-- ######################### -->
+			<div class="nav-tab1" data-autoset="tab" data-sticky="top">
+				<ul>
+					<li class="active"><a href="#uiTabCont1">즉시출금</a></li>
+					<li><a href="#uiTabCont2">카드</a></li>
+					<li><a href="#uiTabCont3"><i class="icon-invalid2">재수납대상</i>입금확인</a></li> <!-- [CASE] 재수납 대상일 경우 : <i class="icon-invalid2">재수납대상</i> -->
+				</ul>
+			</div>
+	
+			<div class="wrap-section2" data-scroll-bg="1">
+				<!-- ######################### -->
+				<!-- [탭컨텐츠] 즉시출금 -->
+				<!-- ######################### -->
+				<div id="uiTabCont1" class="ui-tabcon active">
+					<h4 class="hide">즉시출금</h4>
+	
+					<!-- 동시출금동의 -->
+					<fieldset class="form-wrap1">
+						<legend class="tit">동시출금동의</legend>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="radio1" checked>
+								<span>동의</span>
+							</label>
+							<label>
+								<input type="radio" name="radio1">
+								<span>동의안함</span>
+							</label>
+						</div>
+					</fieldset>
+	
+					<!-- 계좌설정 -->
+					<div class="area-toggle1" data-autoset="toggle">
+						<!-- // -->
+						<fieldset>
+							<legend class="tit">
+								<strong>출금계좌정보</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">출금계좌정보 상세보기</button>
+							</legend>
+							<div data-toggle="content" class="form-wrap1">
+								<!-- [은행/계좌번호] -->
+								<dl class="form">
+									<dt>은행/계좌번호 <em class="icon-required2">필수</em></dt>
+									<dd class="side"><button type="button" class="btn-sub3 c2">계좌조회</button></dd> <!-- [D] CON0000_P01.html 참조 -->
+									<dd>
+										<!-- [CASE1] 기본 -->
+										<div class="input-btn1">
+											<data class="selectbox" value="" data-label="은행 선택"></data>
+											<button type="button">은행 선택</button>
+										</div>
+										<div class="validation">은행을 선택해주세요.</div>
+										<div class="input-wrap1">
+											<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요">
+											<button type="button" class="btn-sub1">계좌확인</button>
+										</div>
+										<div class="validation">계좌번호 입력 및 계좌확인을 해주세요.</div>
+	
+										<!-- [CASE1] 은행 유효성체크 -->
+										<div class="input-btn1">
+											<data class="selectbox" value="" data-label="은행 선택" aria-invalid="true"></data>
+											<button type="button">은행 선택</button>
+										</div>
+										<div class="validation">은행을 선택해주세요.</div>
+										<div class="input-wrap1">
+											<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요">
+											<button type="button" class="btn-sub1">계좌확인</button>
+										</div>
+										<div class="validation">계좌번호 입력 및 계좌확인을 해주세요.</div>
+	
+										<!-- [CASE1] 계좌번호 유효성체크 -->
+										<div class="input-btn1">
+											<data class="selectbox" value="" data-label="은행 선택"></data>
+											<button type="button">은행 선택</button>
+										</div>
+										<div class="validation">은행을 선택해주세요.</div>
+										<div class="input-wrap1">
+											<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요" aria-invalid="true">
+											<button type="button" class="btn-sub1">계좌확인</button>
+										</div>
+										<div class="validation">계좌번호 입력 및 계좌확인을 해주세요.</div>
+										<!-- // -->
+									</dd>
+									<dd>
+										<div class="data1">
+											<div>예금주:</div>
+											<div class="info"><strong>홍두한</strong><span><span>1965.03.21</span><span>남</span></span></div>
+											<!-- [D] 계좌 확인 후 노출 -->
+											<div class="txt">
+												<strong class="txt-c1">불일치</strong> <!-- [D] 예금주 일치 -->
+												<strong class="txt-c2">확인완료</strong> <!-- [D] 예금주 불일치 -->
+											</div>
+											<!-- // -->
+										</div>
+									</dd>
+								</dl>
+	
+								<!-- [출금금액] -->
+								<dl class="form">
+									<dt>출금금액 <em class="icon-required2">필수</em></dt>
+									<dd class="side label-check1">
+										<label>
+											<input type="checkbox" checked>
+											<span>보험료금액 적용</span>
+										</label>
+									</dd>
+									<dd>
+										<div class="text num1">
+											<input type="tel" placeholder="출금금액을 입력해주세요." value="500,000">
+											<span class="util1">원</span>
+										</div>
+										<div class="validation">출금금액을 입력해주세요.</div>
+	
+										<!-- [CASE4] 유효성체크 -->
+										<div class="text num1">
+											<input type="tel" placeholder="출금금액을 입력해주세요." aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+											<span class="util1">원</span>
+										</div>
+										<div class="validation">출금금액을 입력해주세요.</div>
+									</dd>
+								</dl>
+	
+								<dl class="form">
+									<dt>출금동의 <em class="icon-required2">필수</em></dt>
+									<!-- [CASE1] 기본 -->
+									<dd class="area-btn1"><button type="button" class="btn-com1">동의 요청</button></dd>
+									<!-- [CASE2] 정상확인 + 출금동의 완료 -->
+									<dd class="area-btn1"><button type="button" class="btn-com1" disabled>동의 완료</button></dd>
+									<!-- [CASE3] 불일치 + 출금동의 실패 -->
+									<dd class="area-btn1">
+										<button type="button" class="btn-com1">동의 요청</button>
+										<div class="icon-invalid">실패 (주민번호 또는 사업자번호가 상이)</div>
+									</dd>
+									<!-- [CASE4] 유효성체크 -->
+									<dd class="area-btn1">
+										<button type="button" class="btn-com1" aria-invalid="true">동의 요청</button>
+										<div class="validation">출금 동의를 요청해주세요.</div>
+									</dd>
+								</dl>
+	
+							</div>
+						</fieldset>
+	
+						<!-- // -->
+						<fieldset>
+							<legend class="tit">
+								<strong>출금계좌정보</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">출금계좌정보 상세보기</button>
+							</legend>
+							<div data-toggle="content" class="form-wrap1">
+								<dl class="form">
+									<dt>은행/계좌번호 <em class="icon-required2">필수</em></dt>
+									<dd class="side"><button type="button" class="btn-sub3 c2">계좌조회</button></dd> <!-- [D] CON0000_P01.html 참조 -->
+									<dd>
+										<div class="input-btn1">
+											<data class="selectbox" value="" data-label="은행 선택"></data>
+											<button type="button">은행 선택</button>
+										</div>
+										<div class="validation">은행을 선택해주세요.</div>
+										<div class="input-wrap1">
+											<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요">
+											<button type="button" class="btn-sub1">계좌확인</button>
+										</div>
+										<div class="validation">계좌번호 입력 및 계좌확인을 해주세요.</div>
+									</dd>
+									<dd>
+										<div class="data1">
+											<div>예금주:</div>
+											<div class="info"><strong>홍두한</strong><span><span>1965.03.21</span><span>남</span></span></div>
+										</div>
+									</dd>
+								</dl>
+								<dl class="form">
+									<dt>출금금액 <em class="icon-required2">필수</em></dt>
+									<dd class="side label-check1">
+										<label>
+											<input type="checkbox" checked>
+											<span>보험료금액 적용</span>
+										</label>
+									</dd>
+									<dd>
+										<div class="text num1">
+											<input type="tel" placeholder="출금금액을 입력해주세요." value="500,000">
+											<span class="util1">원</span>
+										</div>
+									</dd>
+								</dl>
+								<dl class="form">
+									<dt>출금동의 <em class="icon-required2">필수</em></dt>
+									<dd class="area-btn1"><button type="button" class="btn-com1">동의 요청</button></dd>
+								</dl>
+							</div>
+						</fieldset>
+						<!-- // -->
+					</div>
+				</div>
+	
+				<!-- ######################### -->
+				<!-- [탭컨텐츠] 카드정보 -->
+				<!-- ######################### -->
+				<div id="uiTabCont2" class="ui-tabcon">
+					<h4 class="hide">카드</h4>
+	
+					<!-- 카드설정 -->
+					<div class="area-toggle1" data-autoset="toggle">
+						<!-- // -->
+						<fieldset>
+							<legend class="tit">
+								<strong>카드정보</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">카드정보 상세보기</button>
+							</legend>
+							<div data-toggle="content" class="form-wrap1">
+								<!-- [카드번호] -->
+								<dl class="form">
+									<dt>카드번호 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<!-- [CASE] 기본 -->
+										<div class="text num2">
+											<input type="tel" title="카드번호 첫번째" maxlength="4" value="1111">
+											<span class="util1">-</span>
+											<input type="tel" title="카드번호 두번째" maxlength="4" value="2222">
+											<span class="util1">-</span>
+											<input type="tel" title="카드번호 세번째" maxlength="4" value="3333">
+											<span class="util1">-</span>
+											<input type="tel" title="카드번호 네번째" maxlength="4" value="4444">
+										</div>
+										<div class="validation">카드번호 입력 및 카드확인을 해주세요.</div>
+	
+										<!-- [CASE] 오류 -->
+										<div class="text num2">
+											<input type="tel" title="카드번호 첫번째" maxlength="4" value="1111" aria-invalid="true">
+											<span class="util1">-</span>
+											<input type="tel" title="카드번호 두번째" maxlength="4" value="2222">
+											<span class="util1">-</span>
+											<input type="tel" title="카드번호 세번째" maxlength="4" value="3333">
+											<span class="util1">-</span>
+											<input type="tel" title="카드번호 네번째" maxlength="4" value="4444">
+										</div>
+										<div class="validation">카드번호 입력 및 카드확인을 해주세요.</div>
+									</dd>
+								</dl>
+	
+								<!-- [유효기간] -->
+								<dl class="form">
+									<dt>유효기간 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<!-- 2022-12-01 변경 -->
+										<div class="input-wrap1">
+											<div class="text num2">
+												<input type="tel" title="유효기간 년" maxlength="2" value="" placeholder="YY(월)">
+												<span class="util1">/</span>
+												<input type="tel" title="유효기간 월" maxlength="2" value="" placeholder="MM(년)">
+											</div>
+											<button type="button" class="btn-sub1">카드확인</button>
+											<div class="validation">유효기간을 입력해주세요.</div>
+										</div>
+										<!-- [CASE] 기본 -->
+										
+
+										<!-- [CASE] 오류 -->
+										<div class="input-wrap1">
+											<div class="text num2" aria-invalid="true">
+												<input type="tel" title="유효기간 년" maxlength="2" value="" placeholder="YY(월)">
+												<span class="util1">/</span>
+												<input type="tel" title="유효기간 월" maxlength="2" value="" placeholder="MM(년)">
+											</div>
+											<button type="button" class="btn-sub1">카드확인</button>
+											<div class="validation">유효기간을 입력해주세요.</div>
+										</div>
+										<!-- //2022-12-01 변경 -->
+									</dd>
+									<dd>
+										<div class="data1">
+											<div>카드주:</div>
+											<div class="info"><strong>홍두한</strong><span><span>1965.03.21</span><span>남</span></span></div>
+											<div class="info"><strong>삼성카드(신용)</strong></div>
+											<!-- [D] 카드 확인 후 노출 -->
+											<div class="txt">
+												<strong class="txt-c1">불일치</strong> <!-- [D] 예금주 일치  -->
+												<strong class="txt-c2">확인완료</strong> <!-- [D] 예금주 불일치  -->
+											</div>
+											<!-- // -->
+										</div>
+									</dd>
+								</dl>
+	
+								<!-- [할부] -->
+								<dl class="form">
+									<dt>할부 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<div class="select-wrap" data-autoset="select">
+											<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+												<span data-select="title">할부</span>
+												<span data-select="text" data-value="1">일시불</span>
+											</button>
+											<div class="list">
+												<div data-label="할부">
+													<div class="option">
+														<label><input type="radio" name="selectOpeion" value="1"><span>일시불</span></label>
+														<label><input type="radio" name="selectOpeion" value="2"><span>1개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="3"><span>2개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="4"><span>3개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="5"><span>4개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="6"><span>5개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="7"><span>6개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="8"><span>7개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="9"><span>8개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="10"><span>9개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="11"><span>10개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="12"><span>11개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="13"><span>12개월</span></label>
+													</div>
+													<button type="button" data-toggle="closebtn">확인</button>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+	
+								<!-- [출금금액] -->
+								<dl class="form">
+									<dt>출금금액 <em class="icon-required2">필수</em></dt>
+									<dd class="side label-check1">
+										<label>
+											<input type="checkbox" checked>
+											<span>보험료금액 적용</span>
+										</label>
+									</dd>
+									<dd>
+										<div class="text num1">
+											<input type="tel" placeholder="출금금액을 입력해주세요." value="500,000">
+											<span class="util1">원</span>
+										</div>
+										<div class="validation">출금금액을 입력해주세요.</div>
+	
+										<!-- [CASE4] 유효성체크 -->
+										<div class="text num1">
+											<input type="tel" placeholder="출금금액을 입력해주세요." aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+											<span class="util1">원</span>
+										</div>
+										<div class="validation">출금금액을 입력해주세요.</div>
+									</dd>
+								</dl>
+	
+								<!-- [후청구] -->
+								<dl class="form">
+									<dt>후청구 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<div class="label-btn1">
+											<label>
+												<input type="radio" name="radio12">
+												<span>선택</span>
+											</label>
+											<label>
+												<input type="radio" name="radio12" checked>
+												<span>선택안함</span>
+											</label>
+										</div>
+									</dd>
+									<dd class="mes2">후청구 시 보험시기에 카드대금이 청구됩니다.</dd>
+								</dl>
+							</div>
+						</fieldset>
+	
+						<!-- // -->
+						<fieldset>
+							<legend class="tit">
+								<strong>카드정보</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">카드정보 상세보기</button>
+							</legend>
+							<div data-toggle="content" class="form-wrap1">
+								<!-- [카드번호] -->
+								<dl class="form">
+									<dt>카드번호 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<!-- [CASE] 기본 -->
+										<div class="text num2">
+											<input type="tel" title="카드번호 첫번째" maxlength="4" value="1111">
+											<span class="util1">-</span>
+											<input type="tel" title="카드번호 두번째" maxlength="4" value="2222">
+											<span class="util1">-</span>
+											<input type="tel" title="카드번호 세번째" maxlength="4" value="3333">
+											<span class="util1">-</span>
+											<input type="tel" title="카드번호 네번째" maxlength="4" value="4444">
+										</div>
+										<div class="validation">카드번호 입력 및 카드확인을 해주세요.</div>
+	
+										<!-- [CASE] 오류 -->
+										<div class="text num2">
+											<input type="tel" title="카드번호 첫번째" maxlength="4" value="1111" aria-invalid="true">
+											<span class="util1">-</span>
+											<input type="tel" title="카드번호 두번째" maxlength="4" value="2222">
+											<span class="util1">-</span>
+											<input type="tel" title="카드번호 세번째" maxlength="4" value="3333">
+											<span class="util1">-</span>
+											<input type="tel" title="카드번호 네번째" maxlength="4" value="4444">
+										</div>
+										<div class="validation">카드번호 입력 및 카드확인을 해주세요.</div>
+									</dd>
+								</dl>
+	
+								<!-- [유효기간] -->
+								<dl class="form">
+									<dt>유효기간 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<!-- 2022-12-01 변경 -->
+										<div class="input-wrap1">
+											<div class="text num2">
+												<input type="tel" title="유효기간 년" maxlength="2" value="" placeholder="YY(월)">
+												<span class="util1">/</span>
+												<input type="tel" title="유효기간 월" maxlength="2" value="" placeholder="MM(년)">
+											</div>
+											<button type="button" class="btn-sub1">카드확인</button>
+											<div class="validation">유효기간을 입력해주세요.</div>
+										</div>
+										<!-- [CASE] 기본 -->
+										
+
+										<!-- [CASE] 오류 -->
+										<div class="input-wrap1">
+											<div class="text num2" aria-invalid="true">
+												<input type="tel" title="유효기간 년" maxlength="2" value="" placeholder="YY(월)">
+												<span class="util1">/</span>
+												<input type="tel" title="유효기간 월" maxlength="2" value="" placeholder="MM(년)">
+											</div>
+											<button type="button" class="btn-sub1">카드확인</button>
+											<div class="validation">유효기간을 입력해주세요.</div>
+										</div>
+										<!-- //2022-12-01 변경 -->
+									</dd>
+									<dd>
+										<div class="data1">
+											<div>카드주:</div>
+											<div class="info"><strong>홍두한</strong><span><span>1965.03.21</span><span>남</span></span></div>
+											<div class="info"><strong>삼성카드(신용)</strong></div>
+											<!-- [D] 카드 확인 후 노출 -->
+											<div class="txt">
+												<strong class="txt-c1">불일치</strong> <!-- [D] 예금주 일치  -->
+												<strong class="txt-c2">확인완료</strong> <!-- [D] 예금주 불일치  -->
+											</div>
+											<!-- // -->
+										</div>
+									</dd>
+								</dl>
+	
+								<!-- [할부] -->
+								<dl class="form">
+									<dt>할부 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<div class="select-wrap" data-autoset="select">
+											<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+												<span data-select="title">할부</span>
+												<span data-select="text" data-value="1">일시불</span>
+											</button>
+											<div class="list">
+												<div data-label="할부">
+													<div class="option">
+														<label><input type="radio" name="selectOpeion" value="1"><span>일시불</span></label>
+														<label><input type="radio" name="selectOpeion" value="2"><span>1개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="3"><span>2개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="4"><span>3개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="5"><span>4개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="6"><span>5개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="7"><span>6개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="8"><span>7개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="9"><span>8개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="10"><span>9개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="11"><span>10개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="12"><span>11개월</span></label>
+														<label><input type="radio" name="selectOpeion" value="13"><span>12개월</span></label>
+													</div>
+													<button type="button" data-toggle="closebtn">확인</button>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+	
+								<!-- [출금금액] -->
+								<dl class="form">
+									<dt>출금금액 <em class="icon-required2">필수</em></dt>
+									<dd class="side label-check1">
+										<label>
+											<input type="checkbox" checked>
+											<span>보험료금액 적용</span>
+										</label>
+									</dd>
+									<dd>
+										<div class="text num1">
+											<input type="tel" placeholder="출금금액을 입력해주세요." value="500,000">
+											<span class="util1">원</span>
+										</div>
+										<div class="validation">출금금액을 입력해주세요.</div>
+									</dd>
+								</dl>
+	
+								<!-- [후청구] -->
+								<dl class="form">
+									<dt>후청구 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<div class="label-btn1">
+											<label>
+												<input type="radio" name="radio13">
+												<span>선택</span>
+											</label>
+											<label>
+												<input type="radio" name="radio13" checked>
+												<span>선택안함</span>
+											</label>
+										</div>
+									</dd>
+									<dd class="mes2">후청구 시 보험시기에 카드대금이 청구됩니다.</dd>
+								</dl>
+							</div>
+						</fieldset>
+						<!-- // -->
+					</div>
+				</div>
+	
+				<!-- ######################### -->
+				<!-- [탭컨텐츠] 입금확인 -->
+				<!-- ######################### -->
+				<div id="uiTabCont3" class="ui-tabcon">
+					<h4 class="hide">입금확인</h4>
+	
+					<!-- [D] 입금사항 추가 시 노출 -->
+					<div class="wrap-section">
+						<!-- // -->
+						<section>
+							<div class="tit-sub1">
+								<h5>예금</h5>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+							<div class="info-con1">
+								<dl>
+									<dt>입금일자</dt>
+									<dd>2021.01.12</dd>
+								</dl>
+								<dl>
+									<dt>금액</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>적요</dt>
+									<dd>적요정보 노출</dd>
+								</dl>
+								<dl>
+									<dt>자동수납</dt>
+									<dd>자동</dd>
+								</dl>
+								<dl>
+									<dt>비고</dt>
+									<dd>롯데손해보험 비고내용 출력</dd>
+								</dl>
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<div class="tit-sub1">
+								<h5>카드</h5>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+							<div class="info-con1">
+								<dl>
+									<dt>입금일자</dt>
+									<dd>2021.01.12</dd>
+								</dl>
+								<dl>
+									<dt>금액</dt>
+									<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>적요</dt>
+									<dd>적요정보 노출</dd>
+								</dl>
+								<dl>
+									<dt>자동수납</dt>
+									<dd>자동</dd>
+								</dl>
+								<dl>
+									<dt>비고</dt>
+									<dd>롯데손해보험 비고내용 출력</dd>
+								</dl>
+							</div>
+						</section>
+						<!-- // -->
+					</div>
+	
+					<!-- 추가버튼 -->
+					<div class="area-btn1"><button class="btn-com1 ic3">입금사항 추가</button></div>
+					<!-- // -->
+				</div>
+	
+				<!-- ######################### -->
+				<!-- [안내문구] -->
+				<!-- ######################### -->
+				<div class="mes-info2 box">
+					<ul>
+						<li>계약자 소유의 계좌 또는 카드 수납을 지원합니다.</li>
+						<li>계약자가 아닌 제 3자 소유의 계좌 또는 카드로 수납을 원하시는 경우 업무요청을 통해 별도로 진행해주세요.</li>
+					</ul>
+				</div>
+			</div>
+	
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">수납</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+<!-- //2022-10-31 팝업으로 변경 -->
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<style>
+	.guide-wrap:first-child {margin-top:80px;}
+	.guide-wrap {display:flex;flex-wrap:wrap;width:100%;}
+	.guide-wrap iframe {width:100%;height:100%;min-height:200px;border:1px solid #ddd;}
+	.guide-wrap .textarea {width:100%;height:100%;}
+	.guide-wrap .txt2 {padding:10px;width:100%;height:100%;border:1px solid #ddd;}
+	.guide-wrap .txt {margin-bottom:4px;font-size:13px;line-height:20px;color:#292929;}
+	.guide-wrap .img {position:relative;width:100%;height:100%;border:1px solid #ddd;}
+	.guide-wrap > .area1 {flex:1;display:flex;flex-direction:column;}
+	.guide-wrap > .area1 + .area1 {margin-left:16px;}
+	.guide-wrap > .area1 > .btn-sub1 {display:block;width:100%;text-align:left;}
+	.guide-wrap > .area1 > .btn-sub1 + .btn-sub1 {margin-top:4px;}
+	.guide-wrap > .area1 > .text {width:100%;}
+	.guide-wrap > .area2 {margin-top:8px;width:100%;}
+	.guide-wrap > .area2 .txt {margin-top:4px;}
+	.guide-wrap + .guide-wrap {margin-top:32px;}
+	.input-wrap1 {display:flex;}
+	.input-wrap1 > .btn-sub1 {width:210px;text-align:left;}
+	.input-wrap1 > .text {flex:1;}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header" >
+		<h1><span>롯데 손해보험 Admin</span></h1>
+	</div>
+
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- // -->
+		<div class="guide-wrap">
+			<!-- [썸네일] -->
+			<div class="area1">
+				<div class="txt">썸네일</div>
+				<div class="img"><img src="../resource/img/admin/tmp_image.png" alt=""></div>
+			</div>
+
+			<!-- [컨텐츠] -->
+			<div class="area1">
+				<div class="txt">컨텐츠</div>
+				<iframe src="삽입할페이지주소"></iframe>
+			</div>
+
+			<!-- [버튼영역] -->
+			<div class="area2">
+				<button type="button" class="btn-sub1 c1">교육팝업열기</button>
+				<div class="txt">컨텐츠</div>
+			</div>
+		</div>
+		<!-- // -->
+		<div class="guide-wrap">
+			<!-- [버튼영역] -->
+			<div class="area1">
+				<button type="button" class="btn-sub1 c1">로그인한 회원의 굥육 진척현황</button>
+				<button type="button" class="btn-sub1 c1">수강신청</button>
+				<button type="button" class="btn-sub1 c1">SSO 로그인</button>
+				<button type="button" class="btn-sub1 c1">로그인한 회원의 교육 수료여부 반환</button>
+				<button type="button" class="btn-sub1 c1">회원등록</button>
+				<button type="button" class="btn-sub1 c1">회원탈퇴</button>
+			</div>
+
+			<!-- [input] -->
+			<div class="area1">
+				<input type="text" class="text">
+			</div>
+
+			<!-- [output] -->
+			<div class="area1">
+				<textarea class="textarea"></textarea>
+			</div>
+		</div>
+		<!-- // -->
+		<div class="guide-wrap">
+			<!-- [버튼영역] -->
+			<div class="area1">
+				<div class="input-wrap1">
+					<button type="button" class="btn-sub1 c1">로그인한 회원의 굥육 진척현황</button>
+					<input type="text" class="text">
+				</div>
+				<div class="input-wrap1">
+					<button type="button" class="btn-sub1 c1">수강신청</button>
+					<input type="text" class="text">
+				</div>
+				<div class="input-wrap1">
+					<button type="button" class="btn-sub1 c1">SSO 로그인</button>
+					<input type="text" class="text">
+				</div>
+				<div class="input-wrap1">
+					<button type="button" class="btn-sub1 c1">로그인한 회원의 교육 수료여부 반환</button>
+					<input type="text" class="text">
+				</div>
+				<div class="input-wrap1">
+					<button type="button" class="btn-sub1 c1">회원등록</button>
+					<input type="text" class="text">
+				</div>
+				<div class="input-wrap1">
+					<button type="button" class="btn-sub1 c1">회원탈퇴</button>
+					<input type="text" class="text">
+				</div>
+			</div>
+
+
+			<!-- [output] -->
+			<div class="area1">
+				<div class="txt2">텍스트 노출 영역</div>
+			</div>
+		</div>
+		<!-- // -->
+	</div>
+</div>
+</body>
+</html>

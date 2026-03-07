@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 가상계좌 | 취급자수납 | 수금관리 | 자급관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-22]	① 계좌번호 생성영역 전체 마크업 변경
+	*	[M 2022-11-04]	① 수납번호 삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<!-- 2022-12-20 텍스트 변경 -->
+			<h1>가상계좌</h1>
+			<button type="button" data-btn="pop-close">가상계좌 닫기</button>
+			<!-- //2022-12-20 텍스트 변경 -->
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 기본정보 -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<!-- # 납부할대상 # -->
+				<h2 class="data-info2 t1" data-value="102702"> <!-- [D] 국적(1/9)나이(000)성별(01/02)조합 -->
+					<strong>하다미</strong>
+					<span>
+						<span>1996.01.01</span>
+						<span>여</span>
+					</span>
+				</h2>
+
+				<!-- # 수납대상계약 # -->
+				<div class="info-con2">
+					<dl>
+						<dt>수납대기 계약건</dt>
+						<dd data-autoset="toggle">
+							<div class="area1">
+								<div class="data-num1 txt-c1"><span>총</span><strong>3</strong><span>건</span></div>
+								<button type="button" data-toggle="btn" aria-expanded="false">수납대기 계약건 상세보기</button>
+							</div>
+							<div data-toggle="content" class="area2 t1">
+								<dl>
+									<dt>[연체]무배당치아보험</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>롯데건강보험 </dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>롯데어린이보험</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+								</dl>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- # 총 수납 보험료 # -->
+				<div class="area-info2">
+					<dl>
+						<dt>총 수납 보험료</dt>
+						<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+				</div>
+				<!-- # // # -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [계좌번호 생성] -->
+			<!-- [M 2022-08-22]	① 계좌번호 생성영역 전체 마크업 변경 -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<h3 class="tit-sub1">가상계좌 신규발급</h3>
+				<div class="area-btn1"><button type="button" class="btn-com1 ic3">계좌발급</button></div>
+
+				<!-- [D] 계좌번호 미발급시 -->
+				<div class="area-btn1 invalid"><button type="button" class="btn-com1 ic3">계좌발급</button></div>
+				<div class="validation">계좌발급을 진행해주세요.</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [계좌번호 목록] -->
+			<!--
+				은행클래스명 정의
+				BKCD_003 : 기업은행
+				BKCD_004 : 국민은행
+				BKCD_005 : 외환은행
+				BKCD_007 : 수협중앙회
+				BKCD_011 : 농협중앙회
+				BKCD_020 : 우리은행
+				BKCD_023 : SC제일은행
+				BKCD_088 : 신한(통합)은행
+				BKCD_027 : 씨티은행
+				BKCD_031 : 대구은행
+				BKCD_032 : 부산은행
+				BKCD_034 : 광주은행
+				BKCD_035 : 제주은행
+				BKCD_037 : 전북은행
+				BKCD_039 : 경남은행
+				BKCD_045 : 새마을금고중앙회
+				BKCD_048 : 신협중앙회
+				BKCD_071 : 우체국
+				BKCD_081 : 하나은행
+				BKCD_089 : 케이뱅크
+				BKCD_090 : 한국카카오은행
+				BKCD_092 : 토스뱅크
+				BKCD_240 : 삼성증권
+			-->
+			<!-- ######################### -->
+			<div class="con-t1">
+				<ul>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="form-radio-con3" checked>
+							<strong class="BKCD_007">수협중앙회</strong>
+						</label>
+						<div class="data2">
+							<dl>
+								<dt>가상계좌번호</dt>
+								<dd>110-111-111111</dd>
+							</dl>
+							<dl>
+								<dt>발급일자</dt>
+								<dd>2022.03.01</dd>
+							</dl>
+							<dl>
+								<dt>발급자</dt>
+								<dd>하다미(123456)</dd>
+							</dl>
+							<!-- 2022-11-04 삭제 -->
+							<!-- <dl>
+								<dt>수납번호</dt>
+								<dd>LA1111111111</dd>
+							</dl> -->
+							<!-- //2022-11-04 삭제 -->
+							<dl>
+								<dt>입금금액</dt>
+								<dd class="data-num1"><strong>600,000</strong><span>원</span></dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="form-radio-con3" checked>
+							<strong class="BKCD_090">한국카카오은행</strong>
+						</label>
+						<div class="data2">
+							<dl>
+								<dt>가상계좌번호</dt>
+								<dd>110-111-111111</dd>
+							</dl>
+							<dl>
+								<dt>발급일자</dt>
+								<dd>2022.03.01</dd>
+							</dl>
+							<dl>
+								<dt>발급자</dt>
+								<dd>하다미(123456)</dd>
+							</dl>
+							<!-- 2022-11-04 삭제 -->
+							<!-- <dl>
+								<dt>수납번호</dt>
+								<dd>LA1111111111</dd>
+							</dl> -->
+							<!-- 2022-11-04 삭제 -->
+							<dl>
+								<dt>입금금액</dt>
+								<dd class="data-num1"><strong>600,000</strong><span>원</span></dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- [더보기] -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">알림톡 발송</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

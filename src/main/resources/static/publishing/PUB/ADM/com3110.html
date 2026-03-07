@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>이벤트 관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220418">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-18]	1. 응모 결과 다운로드 항목 추가
+	*	[M 2022-11-23]	추가버튼 위치 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">이벤트 관리</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="tab-wrap">
+				<ul class="tab2">
+					<li><a href="#tab2-1" class="current">설계사 APP</a></li>
+					<li><a href="#tab2-2">도입 APP</a></li>
+				</ul>
+				<div id="tab2-1" class="tab-cont">
+					
+					
+					<fieldset class="form-search1">
+						<div class="form-field">
+							<dl class="form w1">
+								<dt>이벤트ID</dt>
+								<dd><input type="text" class="text" style="width:100%;" name="" id="" placeholder="이벤트ID를 입력해주세요."></dd>
+							</dl>
+							<dl class="form w1">
+								<dt>등록자</dt>
+								<dd><input type="text" class="text" style="width:100%;" name="" id="" placeholder="등록자명을 입력해주세요."></dd>
+							</dl>
+							<dl class="form w1">
+								<dt>노출여부</dt>
+								<dd>
+                                    <div class="form-row">
+                                        <label class="label-check">
+                                            <input type="radio" name="fr2" checked="checked">
+                                            <span>Y</span>
+                                        </label>
+                                        <label class="label-check">
+                                            <input type="radio" name="fr2">
+                                            <span>N</span>
+                                        </label>
+                                    </div>
+                                </dd>
+							</dl>
+							<dl class="form w1">
+								<dt>형식</dt>
+								<dd>
+                                    <select name="" id="" class="selectbox" style="width:100%;">
+                                        <option value="">전체</option>
+                                        <option value="">참여</option>
+                                        <option value="">정보</option>
+                                        <option value="">링크</option>
+                                    </select>
+                                </dd>
+							</dl>
+							<dl class="form w2">
+								<dt>이벤트명</dt>
+								<dd><input type="text" class="text" style="width:100%;" name="" id="" placeholder="이벤트명을 입력해주세요."></dd>
+							</dl>
+						</div>
+
+						<div class="area-action">
+							<button type="button" class="btn-action c1">검색</button>
+						</div>
+					</fieldset>
+
+
+					
+					<div class="tit-sub2">
+						<h3 class="">전체 1200개</h3>
+						<!-- 2022-11-23 추가버튼 위치변경 -->
+						<div class="sub">
+							<button type="button" class="btn-action c1">추가</button>
+						</div>
+						<!-- //2022-11-23 추가버튼 위치변경 -->
+					</div>
+
+					<div class="tbl-list1">
+						<table>
+							<colgroup>
+								<col style="width:60px;">
+								<col style="width:100px;">
+								<col style="width:100px;">
+								<col>
+								<col style="width:120px;">
+								<col style="width:150px;">
+								<col style="width:100px;">
+								<col style="width:100px;">
+								<col style="width:60px;">
+								<col style="width:140px;"><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">이벤트ID</th>
+									<th scope="col">형식</th>
+									<th scope="col">이벤트명</th>
+									<th scope="col">등록자</th>
+									<th scope="col">노출기간</th>
+									<th scope="col">등록일</th>
+									<th scope="col">좋아요/클릭수</th>
+									<th scope="col">노출</th>
+									<th scope="col">결과</th><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr class="row-point1">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr class="row-point2">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>N</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr class="row-point3">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr class="row-point3">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr class="row-point3">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="paging">
+						<a class="ic_first disabled"></a>
+						<a class="ic_prev disabled"></a>
+						<span class="num current">1</span>
+						<a href="#" class="num">2</a>
+						<a href="#" class="num">3</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="num">9</a>
+						<a href="#" class="num">10</a>
+						<a href="#" class="ic_next"></a>
+						<a href="#" class="ic_last"></a>
+					</div>
+				</div>
+				<div id="tab2-2" class="tab-cont">
+					
+					
+					<fieldset class="form-search1">
+						<div class="form-field">
+							<dl class="form w1">
+								<dt>이벤트ID</dt>
+								<dd><input type="text" class="text" style="width:100%;" name="" id="" placeholder="이벤트ID를 입력해주세요."></dd>
+							</dl>
+							<dl class="form w1">
+								<dt>등록자</dt>
+								<dd><input type="text" class="text" style="width:100%;" name="" id="" placeholder="등록자명을 입력해주세요."></dd>
+							</dl>
+							<dl class="form w1">
+								<dt>노출여부</dt>
+								<dd>
+                                    <div class="form-row">
+                                        <label class="label-check">
+                                            <input type="radio" name="fr3" checked="checked">
+                                            <span>Y</span>
+                                        </label>
+                                        <label class="label-check">
+                                            <input type="radio" name="fr3">
+                                            <span>N</span>
+                                        </label>
+                                    </div>
+                                </dd>
+							</dl>
+							<dl class="form w1">
+								<dt>형식</dt>
+								<dd>
+                                    <select name="" id="" class="selectbox" style="width:100%;">
+                                        <option value="">전체</option>
+                                        <option value="">참여</option>
+                                        <option value="">정보</option>
+                                        <option value="">링크</option>
+                                    </select>
+                                </dd>
+							</dl>
+							<dl class="form w2">
+								<dt>이벤트명</dt>
+								<dd><input type="text" class="text" style="width:100%;" name="" id="" placeholder="이벤트명을 입력해주세요."></dd>
+							</dl>
+						</div>
+
+						<div class="area-action">
+							<button type="button" class="btn-action c1">검색</button>
+						</div>
+					</fieldset>
+
+
+					
+					<div class="tit-sub2">
+						<h3 class="">전체 1200개</h3>
+						<!-- 2022-11-23 추가버튼 위치변경 -->
+						<div class="sub">
+							<button type="button" class="btn-action c1">추가</button>
+						</div>
+						<!-- //2022-11-23 추가버튼 위치변경 -->
+					</div>
+
+					<div class="tbl-list1">
+						<table>
+							<colgroup>
+								<col style="width:60px;">
+								<col style="width:100px;">
+								<col style="width:100px;">
+								<col>
+								<col style="width:120px;">
+								<col style="width:150px;">
+								<col style="width:100px;">
+								<col style="width:100px;">
+								<col style="width:60px;">
+								<col style="width:140px;"><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">이벤트ID</th>
+									<th scope="col">형식</th>
+									<th scope="col">이벤트명</th>
+									<th scope="col">등록자</th>
+									<th scope="col">노출기간</th>
+									<th scope="col">등록일</th>
+									<th scope="col">좋아요/클릭수</th>
+									<th scope="col">노출</th>
+									<th scope="col">결과</th><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr class="row-point1">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr class="row-point2">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>N</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr class="row-point3">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr class="row-point3">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+								<tr class="row-point3">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>참여</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+									<td><button type="button" class="btn-sub1 c3">응모 결과 다운로드</button></td><!-- [M 2022-10-18] 응모 결과 다운로드 항목 추가 -->
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="paging">
+						<a class="ic_first disabled"></a>
+						<a class="ic_prev disabled"></a>
+						<span class="num current">1</span>
+						<a href="#" class="num">2</a>
+						<a href="#" class="num">3</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="num">9</a>
+						<a href="#" class="num">10</a>
+						<a href="#" class="ic_next"></a>
+						<a href="#" class="ic_last"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+</script>
+</body>
+</html>

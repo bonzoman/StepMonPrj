@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 설계보완요청 | 가입설계조회 | 일반보험</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>설계보완요청</h1>
+			<button type="button" data-btn="pop-close">설계보완요청 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [계약정보] -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">let:discover 국내여행보험</h2>
+				<div class="info">
+					<dl>
+						<dt>접수번호</dt>
+						<dd>20220000000000</dd>
+					</dl>
+				</div>
+
+				<!-- # 계약자 정보 # -->
+				<div class="area1">
+					<dl class="info2">
+						<dt>계약자</dt>
+						<dd class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong>하다미</strong>
+							<span>
+								<span>0000.00.00</span>
+								<span>남</span>
+							</span>
+						</dd>
+					</dl>
+					<dl class="info2">
+						<dt>피보험자</dt>
+						<dd class="data-info2" data-value="102702">
+							<strong>이자녀</strong>
+							<span>
+								<span>0000.00.00</span>
+								<span>여</span>
+							</span>
+						</dd>
+					</dl>
+					<dl class="data3">
+						<dt>설계번호</dt>
+						<dd>FALI20220517062</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [요청내역] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>설계보완요청</legend>
+
+				<!-- # 수정요청사항 # -->
+				<dl class="form">
+					<dt>수정요청사항</dt>
+					<dd>
+						<textarea class="textarea" title="수정요청사항" placeholder="요청하실 내용을 입력해주세요."></textarea>
+					</dd>
+				</dl>
+
+				<!-- # 파일첨부 # -->
+				<dl class="form">
+					<dt>파일첨부 <a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt>
+					<dd class="data-file1">
+						<ul>
+							<li>
+								<span>담보확인 첨부화면내용 캡쳐.png</span>
+								<span class="sub">46.3KB</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+							<li>
+								<span>건물사진1.jpg</span>
+								<span class="sub">56KB</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+						</ul>
+					</dd>
+					<dd class="area-btn1">
+						<button class="btn-com1 ic3">파일첨부</button>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [보완요청/첨부파일] -->
+			<!-- ######################### -->
+			<div class="wrap-section3">
+				<!-- # 보완요청내용 # -->
+				<section>
+					<h3 class="tit-sub1">보완요청내용</h3>
+					<p class="area-data1">설계매니저가 전달하고자 하는 문구를 기재하여
+						설계사에게 전달합니다.
+					</p>
+				</section>
+
+				<!-- # 첨부파일 # -->
+				<section>
+					<h3 class="hide">첨부파일</h3>
+					<p class="mes-t3"><span class="icon-com1 ic23">첨부파일이 2건 있습니다.</span></p>
+				</section>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">재요청</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 파일 첨부 안내 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">파일 첨부 안내사항</dt>
+		<dd>
+			<ul class="txt-bul3">
+				<li>첨부파일의 사이즈는 <strong>000px X 000px</strong> 사이즈를 준수해주세요.</li>
+				<li>첨부파일은 <strong>png, jpg, jpeg, bmp, gif</strong> 파일만 등록이 가능합니다.</li>
+				<li>첨부파일 용량은 <strong>5M</strong>를 넘을 수 없습니다.</li>
+				<li>첨부파일을 등록하면, 퀴즈 내용 하단에 자동으로 노출됩니다.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">파일 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+<!-- ##################################### -->
+</body>
+</html>

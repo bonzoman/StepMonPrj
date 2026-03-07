@@ -1,0 +1,6612 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>리포트 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+
+
+<!-- 하이차트 라이브러리 -->
+<link rel="stylesheet" href="../resource/css/content_chart.css">
+<script src="../resource/js/chart/highcharts.js"></script>
+<script src="../resource/js/chart/data.js"></script>
+
+<!-- 차트 솔리드 게이지용 js 모듈 -->
+<script src="../resource/js/chart/highcharts-more.js"></script>
+<script src="../resource/js/chart/solid-gauge.js"></script>
+
+<!-- 차트 Heat Map 모듈 -->
+<script src="../resource/js/chart/heatmap.js"></script>
+
+<!-- 차트 Large tree map -->
+<script src="../resource/js/chart/treemap.js"></script>
+
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-05]	1. 텍스트 수정
+						2. 표 리스트 내 순서 변경 (당월, 전월, 전전월 → 전전월, 전월, 당월​)
+						3. 툴팁 내용 변경
+	*	[M 2022-10-06]	1. 설계사 구분 검색 수정 
+						2. 텍스트 수정
+	*	[M 2022-10-11]	1. 텍스트, 띄어쓰기 수정
+						2. 검색 중복 삭제 
+	*	[M 2022-10-12]	1. D-day 삭제
+						2. 최대적립 삭제
+						3. 텍스트 수정
+						4. '1달 퀘스트 추이' 차트 수정
+						5. '1달 지점별 퀘스트 추이' 중도포기자 삭제
+	*	[M 2022-10-24]	1. [CASE] 자료가 없을 경우 추가
+						2. 셀렉트 박스 삭제
+						3. 툴팁 추가
+	*	[M 2022-10-25]	1. 마이너스 차트 수정
+	*	[M 2022-10-26]	1. No Data 안내문구가 수정
+	*	[M 2022-11-07]	1. No Data 안내문구가 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">리포트</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="sub">
+				<button type="button" class="btn-report1 ic-s">리포트 통합조회</button>
+				<button type="button" class="btn-report1">리포트 항목 순서 변경</button>
+			</div>
+			<ul class="tab2">
+				<li><a href="#" class="">혜택</a></li>
+				<li><a href="#" class="current">업적</a></li>
+				<li><a href="#" class="">조직</a></li>
+				<li><a href="#" class="">코칭</a></li>
+				<li><a href="#" class="">활동</a></li>
+			</ul>
+			<div class="report-wrap">
+				<!--
+					[M : 2022-09-05 수정]
+					검색조건 영역 수정
+				-->
+				<fieldset class="form-search1">
+					<div class="form-field">
+						<dl class="form w3">
+							<dt>조직/소속 구분</dt>
+							<dd>
+								<select name="" id="" class="selectbox" style="min-width:120px;">
+									<option value="">강남사업단</option>
+								</select>
+								<select name="" id="" class="selectbox" style="min-width:160px;">
+									<option value="">지점명</option>
+									<option value="">리더스박진형RM2지점</option>
+								</select>
+							</dd>
+						</dl>
+						<dl class="form w1">
+							<dt>설계사 구분</dt>
+							<!-- [M 2022-10-06] 설계사 구분 검색 수정 -->
+							<dd>
+								<!-- [CASE 검색 후] -->
+								<span class="search-name">김롯데 <button type="button" class="btn-del1">삭제</button></span>
+								<!-- // -->
+								<button type="button" class="btn-search">검색</button>
+							</dd>
+							<!-- // -->
+						</dl>
+						<dl class="form w1">
+							<dt>기준월</dt>
+							<dd>
+								<div class="form-row">
+									<input type="text" class="date-m" value="" placeholder="월 선택" data-start-year="2022">
+								</div>
+							</dd>
+						</dl>
+					</div>
+
+					<div class="area-action">
+						<button type="button" class="btn-action c1">조회</button>
+					</div>
+				</fieldset>
+				<!--
+					class="row" 하나당 그룹핑
+				-->
+
+				<div class="row">
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">보종별 목표 달성률 추이</h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											장기신규 : 월납(보장성+재물), 비월납 합
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info2">(단위 천원, %)</div>
+								<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- 사업단장 -->
+								<!--
+									[M : 2022-09-05 수정]
+									보종별 목표 달성률 추이
+									차트  width 값 제거
+								-->
+								<!-- <div class="report-slide1" data-view="3">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="tit3">보장성</div>
+											<div class="data" style="height:248px;">
+												<div id="perfomanceChart1-1" data-chart="Pareto-chart3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart1-1",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height : 220
+														},
+														title:null,
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														yAxis:{
+															visible : false
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														plotOptions:{
+															column:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"목표",
+															data:[39,54,39],
+															dataLabels:{
+																enabled:false
+															},
+														},{
+															name:"실적",
+															data:[25,40,25]
+														},{
+															type:"line",
+															name:"달성률",
+															data:[90.5,100,80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">재물</div>
+											<div class="data" style="height:248px;">
+												<div id="perfomanceChart1-2" data-chart="Pareto-chart3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart1-2",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height : 220
+														},
+														title:null,
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														yAxis:{
+															visible : false
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														plotOptions:{
+															column:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"목표",
+															data:[39,54,39],
+															dataLabels:{
+																enabled:false
+															},
+														},{
+															name:"실적",
+															data:[25,40,25]
+														},{
+															type:"line",
+															name:"달성률",
+															data:[90.5,100,80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">장기신규(월납)</div>
+											<div class="data" style="height:248px;">
+												<div id="perfomanceChart1-3" data-chart="Pareto-chart3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart1-3",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height : 220
+														},
+														title:null,
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														yAxis:{
+															visible : false
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														plotOptions:{
+															column:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"목표",
+															data:[39,54,39],
+															dataLabels:{
+																enabled:false
+															},
+														},{
+															name:"실적",
+															data:[25,40,25]
+														},{
+															type:"line",
+															name:"달성률",
+															data:[90.5,100,80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">장기계속</div>
+											<div class="data" style="height:248px;">
+												<div id="perfomanceChart1-4" data-chart="Pareto-chart3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart1-4",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height : 220
+														},
+														title:null,
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														yAxis:{
+															visible : false
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														plotOptions:{
+															column:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"목표",
+															data:[39,54,39],
+															dataLabels:{
+																enabled:false
+															},
+														},{
+															name:"실적",
+															data:[25,40,25]
+														},{
+															type:"line",
+															name:"달성률",
+															data:[90.5,100,80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">일반</div>
+											<div class="data" style="height:248px;">
+												<div id="perfomanceChart1-5" data-chart="Pareto-chart3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart1-5",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height : 220
+														},
+														title:null,
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														yAxis:{
+															visible : false
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														plotOptions:{
+															column:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"목표",
+															data:[39,54,39],
+															dataLabels:{
+																enabled:false
+															},
+														},{
+															name:"실적",
+															data:[25,40,25]
+														},{
+															type:"line",
+															name:"달성률",
+															data:[90.5,100,80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">자동차</div>
+											<div class="data" style="height:248px;">
+												<div id="perfomanceChart1-6" data-chart="Pareto-chart3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart1-6",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height : 220
+														},
+														title:null,
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														yAxis:{
+															visible : false
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														plotOptions:{
+															column:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"목표",
+															data:[39,54,39],
+															dataLabels:{
+																enabled:false
+															},
+														},{
+															name:"실적",
+															data:[25,40,25]
+														},{
+															type:"line",
+															name:"달성률",
+															data:[90.5,100,80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">총량</div>
+											<div class="data" style="height:248px;">
+												<div id="perfomanceChart1-7" data-chart="Pareto-chart3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart1-7",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height : 220
+														},
+														title:null,
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														yAxis:{
+															visible : false
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														plotOptions:{
+															column:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"목표",
+															data:[39,54,39],
+															dataLabels:{
+																enabled:false
+															},
+														},{
+															name:"실적",
+															data:[25,40,25]
+														},{
+															type:"line",
+															name:"달성률",
+															data:[90.5,100,80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+									</div>
+									
+									<div class="slide-prev"></div>
+									<div class="slide-next"></div>
+								</div> -->
+
+								<!-- 지점장,설계사
+								<div class="report-slide1" data-view="3">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="tit3">보장성</div>
+											<div class="data" style="height:260px;"></div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">재물</div>
+											<div class="data" style="height:260px;"></div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">총량</div>
+											<div class="data" style="height:260px;"></div>
+										</div>
+									</div>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+							<!-- [CASE] 자료가 있을 경우 -->
+							<!-- <div class="more">
+								<a href="#"><span>보종별 목표 달성률 확인하기</span></a>
+							</div>
+							<div class="data-more">
+								<button type="button">표 한눈에 보기</button>
+								<div class="report-table1 t1">
+									<table>
+										<colgroup>
+											<col style="width:10%;">
+											<col>
+											<col style="width:12.5%;">
+											<col style="width:12.5%;">
+											<col style="width:12.5%;">
+											<col style="width:12.5%;">
+											<col style="width:12.5%;">
+											<col style="width:16%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col"><em class="point1">전전월 <br>(22.03)</em></th>
+												<th scope="col"><em>총량</em></th>
+												<th scope="col">장기신규 <em>월납</em></th>
+												<th scope="col">장기신규 <em>보장성</em></th>
+												<th scope="col">장기신규 <em>재물</em></th>
+												<th scope="col"><em>장기계속</em></th>
+												<th scope="col"><em>일반</em></th>
+												<th scope="col"><em>자동차</em></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">목표</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+											</tr>
+											<tr>
+												<th scope="row">실적</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+											</tr>
+											<tr>
+												<th scope="row">달성률</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="report-table1 t1">
+									<table>
+										<colgroup>
+											<col style="width:10%;">
+											<col>
+											<col style="width:12.5%;">
+											<col style="width:12.5%;">
+											<col style="width:12.5%;">
+											<col style="width:12.5%;">
+											<col style="width:12.5%;">
+											<col style="width:16%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col"><em class="point1">전월 <br>(22.04)</em></th>
+												<th scope="col"><em>총량</em></th>
+												<th scope="col">장기신규 <em>월납</em></th>
+												<th scope="col">장기신규 <em>보장성</em></th>
+												<th scope="col">장기신규 <em>재물</em></th>
+												<th scope="col"><em>장기계속</em></th>
+												<th scope="col"><em>일반</em></th>
+												<th scope="col"><em>자동차</em></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">목표</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+											</tr>
+											<tr>
+												<th scope="row">실적</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+											</tr>
+											<tr>
+												<th scope="row">달성률</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="report-table1 t1">
+									<table>
+										<colgroup>
+											<col style="width:10%;">
+											<col>
+											<col style="width:12.5%;">
+											<col style="width:12.5%;">
+											<col style="width:12.5%;">
+											<col style="width:12.5%;">
+											<col style="width:12.5%;">
+											<col style="width:16%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col"><em class="point1">당월 <br>(22.05)</em></th>
+												<th scope="col"><em>총량</em></th>
+												<th scope="col">장기신규 <em>월납</em></th>
+												<th scope="col">장기신규 <em>보장성</em></th>
+												<th scope="col">장기신규 <em>재물</em></th>
+												<th scope="col"><em>장기계속</em></th>
+												<th scope="col"><em>일반</em></th>
+												<th scope="col"><em>자동차</em></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">목표</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+											</tr>
+											<tr>
+												<th scope="row">실적</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+											</tr>
+											<tr>
+												<th scope="row">달성률</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+												<td>2,777,777</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div> -->
+							<!-- //[CASE] 자료가 있을 경우 -->
+						</div>
+					</div>
+				</div>
+				<!--[실적 - 매출현황 및 실적추이]-->
+				<div class="row">
+					<div class="row-sub"><!-- [M 2022-11-07] 감싸는 태그 <div class="row-sub"> 추가  -->
+						<div class="col-2">
+							<div class="inner">
+
+								<div class="head">
+									<div class="tit">
+										<h3 class="">동영업일 기준 보장성 실적 현황</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												실적 정보 : 장기신규(보장성) 기준
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<strong>0</strong><!-- [CASE] 자료가 없을 경우 -->
+											<!-- <strong>14,111</strong> --><!-- [CASE] 자료가 있을 경우 -->
+											<span class="unit">천원</span>
+										</div>
+										<div class="info02">
+											<em class="r-hold"><span>변동없음</span>전월대비 -천원</em>
+											<!-- <em class="r-inc"><span>증가</span>전월대비 -10천원</em> -->
+											<!-- <em class="r-des"><span>감소</span>전월대비 +10천원</em> -->
+											<!-- <em class="r-hold"><span>변동없음</span>전월대비 -천원</em> -->
+										</div>
+									</div>
+									<div class="col-info2">(단위 천원)</div>
+									<div class="data" style="height:246px;">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="perfomanceChart2" data-chart="Basic-Bar2"></div>
+										<script>
+											Highcharts.chart('perfomanceChart2', {
+												chart: {
+													type: 'bar',
+													marginTop:[20],
+													marginBottom:[0],
+													height:200
+												},
+												title:null,
+												legend:{
+													enabled:false
+												},
+												xAxis: {
+													categories: ['당월', '전월', '전년']
+												},
+												yAxis:{
+													visible : false,
+													max : 5000000  // max를 data 의 {최대값 x 2} 정도 해줘야 차트 우측에 여백이 넉넉히생김
+												},
+												plotOptions:{
+													bar:{
+														dataLabels:{
+															enabled:true
+														},
+													},
+												},
+												series: [{
+													colorByPoint:true,
+													name: '장기신규',
+													data: [1616920,2516920,1716920]
+												}]
+											});
+
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>상세실적 확인하기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="inner">
+
+								<div class="head">
+									<div class="tit">
+										<h3 class="">보장성 인당생산성 현황</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												보장성 인당생산성 = 장기신규 보장성 월납 / 실가동
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<strong>0</strong><!-- [CASE] 자료가 없을 경우 -->
+											<!-- <strong>14,111</strong> --><!-- [CASE] 자료가 있을 경우 -->
+											<span class="unit">천원</span>
+										</div>
+										<div class="info02">
+											<em class="r-hold"><span>변동없음</span>전월대비 -천원</em>
+											<!-- <em class="r-inc"><span>증가</span>전월대비 -10천원</em> -->
+											<!-- <em class="r-des"><span>감소</span>전월대비 +10천원</em> -->
+											<!-- <em class="r-hold"><span>변동없음</span>전월대비 -천원</em> -->
+										</div>
+									</div>
+									<div class="col-info2">(단위 천원)</div>
+									<div class="data" style="height:246px;">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="perfomanceChart3" data-chart="Basic-Column3"></div>
+										<script>
+											Highcharts.chart("perfomanceChart3",{
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height: 230,
+												},
+												title:null,
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'center',
+													layout:"horizontal"
+												},
+												xAxis:{
+													categories:["전전월", "전월", "당월"]
+												},
+												yAxis:{
+													visible : false,
+													max : 140000  // max를 data 의 {최대값 x 2} 정도 해줘야 차트 상단에 여백이 넉넉히생김
+												},
+												plotOptions:{
+													column:{
+														groupPadding : 0.4,//그래프 간격
+														dataLabels:{
+															enabled:true,
+															format:"{point.y:,.0f}"
+														},
+													}
+												},
+												series:[{
+														name:"전속그룹",
+														data:[10000,5000,70000],
+														dataLabels:{
+															enabled:false,
+														},
+													},{
+														name:"강남사업단",
+														data:[12500,6000,500]
+													}
+												]
+											});
+
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>LP별 실적 확인하기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+					</div><!-- [M 2022-11-07] 감싸는 태그 <div class="row-sub"> 추가  -->
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">실적순위 TOP10</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="row">
+									<div class="col-2">
+										<div class="head">
+											<div class="tit">
+												<h4 class="">사업단 보장성 달성률 TOP10</h4>
+											</div>
+										</div>
+										<div class="cont">
+											<div class="col-info2">(단위 천원, %)</div>
+											<div class="data">
+												<div class="report-table1">
+													<table>
+														<colgroup>
+															<col style="width:20%;">
+															<col>
+															<col style="width:15%;">
+															<col style="width:15%;">
+															<col style="width:15%;">
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="col">순위</th>
+																<th scope="col">사업단명</th>
+																<th scope="col">목표</th>
+																<th scope="col">실적</th>
+																<th scope="col">달성률</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr class="current"><!--현재 사업단-->
+																<td>13</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+																<td>12,900</td>
+																<td>41.0</td>
+															</tr>
+															<tr>
+																<td>1</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+																<td>12,900</td>
+																<td>41.0</td>
+															</tr>
+															<tr>
+																<td>2</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+																<td>12,900</td>
+																<td>41.0</td>
+															</tr>
+															<tr>
+																<td>3</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+																<td>12,900</td>
+																<td>41.0</td>
+															</tr>
+															<tr>
+																<td>4</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+																<td>12,900</td>
+																<td>41.0</td>
+															</tr>
+															<tr>
+																<td>5</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+																<td>12,900</td>
+																<td>41.0</td>
+															</tr>
+															<tr>
+																<td>6</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+																<td>12,900</td>
+																<td>41.0</td>
+															</tr>
+															<tr>
+																<td>7</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+																<td>12,900</td>
+																<td>41.0</td>
+															</tr>
+															<tr>
+																<td>8</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+																<td>12,900</td>
+																<td>41.0</td>
+															</tr>
+															<tr>
+																<td>9</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+																<td>12,900</td>
+																<td>41.0</td>
+															</tr>
+															<tr>
+																<td>10</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+																<td>12,900</td>
+																<td>41.0</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="more">
+													<a href="#"><span>전체순위 확인하기</span></a>
+												</div>
+											</div>
+										</div>
+
+										<!-- 지점장 케이스
+										<div class="cont">
+											<div class="col-info2">(단위 천원)</div>
+											<div class="data">
+												<div class="report-table1">
+													<table>
+														<colgroup>
+															<col style="width:20%;">
+															<col>
+															<col style="width:25%;">
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="col">순위</th>
+																<th scope="col">사업단명</th>
+																<th scope="col">달성률</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr class="current">
+																<td>13</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>1</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>2</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>3</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>4</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>5</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>6</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>7</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>8</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>9</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>10</td>
+																<td>@@사업단</td>
+																<td>12,900</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="more">
+													<a href="#"><span>전체순위 확인하기</span></a>
+												</div>
+											</div>
+										</div> -->
+									</div>
+									<div class="col-2">
+										<div class="head">
+											<div class="tit">
+												<h4 class="">설계사 보장성 실적 TOP10</h4>
+											</div>
+										</div>
+										<div class="cont">
+											<div class="col-info2">(단위 천원, 건)</div>
+											<div class="data">
+												<div class="report-table1">
+													<table>
+														<colgroup>
+															<col style="width:20%;">
+															<col>
+															<col style="width:20%;">
+															<col style="width:20%;">
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="col">순위</th>
+																<th scope="col">이름</th>
+																<th scope="col">건수</th>
+																<th scope="col">실적</th>
+															</tr>
+														</thead>
+														<tbody>
+															<!-- .current 미사용시 맨 하단에 빈 tr>td 로 빈칸만 냅둠   -->
+															<tr>
+																<td>1</td>
+																<td>김크림(강님1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>2</td>
+																<td>김크림(강님1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>3</td>
+																<td>김크림(강님1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>4</td>
+																<td>김크림(강님1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>5</td>
+																<td>김크림(강님1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>6</td>
+																<td>김크림(강님1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>7</td>
+																<td>김크림(강님1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>8</td>
+																<td>김크림(강님1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>9</td>
+																<td>김크림(강님1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>10</td>
+																<td>김크림(강님1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="more">
+													<a href="#"><span>전체순위 확인하기</span></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">실적순위 TOP10</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="row">
+									<div class="col">
+										<div class="head">
+											<div class="tit">
+												<h4 class="">신인설계사 보장성 실적 TOP10</h4>
+											</div>
+										</div>
+										<div class="cont">
+											<div class="col-info2">(단위 천원, 건)</div>
+											<div class="data">
+												<div class="report-table1">
+													<table>
+														<colgroup>
+															<col style="width:20%;">
+															<col>
+															<col style="width:20%;">
+															<col style="width:20%;">
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="col">순위</th>
+																<th scope="col">이름</th>
+																<th scope="col">건수</th>
+																<th scope="col">실적</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr class="current"><!--현재 사업단-->
+																<td>13</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>1</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>2</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>3</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>4</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>5</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>6</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>7</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>8</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>9</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>10</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="more">
+													<a href="#"><span>전체순위 확인하기</span></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">실적순위 TOP10</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="row">
+									<div class="col">
+										<div class="head">
+											<div class="tit">
+												<h4 class="">기존설계사 보장성 실적 TOP10</h4>
+											</div>
+										</div>
+										<div class="cont">
+											<div class="col-info2">(단위 천원, 건)</div>
+											<div class="data">
+												<div class="report-table1">
+													<table>
+														<colgroup>
+															<col style="width:20%;">
+															<col>
+															<col style="width:20%;">
+															<col style="width:20%;">
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="col">순위</th>
+																<th scope="col">이름</th>
+																<th scope="col">건수</th>
+																<th scope="col">실적</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr class="current"><!--현재 사업단-->
+																<td>13</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>1</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>2</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>3</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>4</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>5</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>6</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>7</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>8</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>9</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+															<tr>
+																<td>10</td>
+																<td>김크림(강남1지점)</td>
+																<td>100</td>
+																<td>12,900</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="more">
+													<a href="#"><span>전체순위 확인하기</span></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">보장성 일별 실적 추이</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info2">(단위 천원)</div>
+								<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="data" style="height:482px">
+									<div id="perfomanceChart4" data-chart="Basic-Line3"></div>
+									<script>
+										Highcharts.chart("perfomanceChart4",{
+											chart:{
+												type:"line",
+												marginLeft:0,
+												marginTop : 40,
+												height:450
+											},
+											title:null,
+											xAxis:{
+												categories:["5월2일","5월4일","5월6일","5월8일","5월10일","5월12일","5월14일","5월16일","5월18일","5월20일","5월22일","5월244일","5월26일","5월28일","5월30일"],
+											},
+											yAxis:{
+												max : 15000,
+												plotLines:[{
+													value: 12500,	// 크로스라인 위치
+													label: {
+														text: '목표 12,500',
+														y:18,
+														x:0
+													}
+												}]
+											},
+											legend:{
+												enabled:true,
+												verticalAlign:"bottom",
+												align:'left',
+												layout:"horizontal"
+											},
+											plotOptions:{
+												line:{
+													dataLabels:{
+														enabled:true
+													}
+												}
+											},
+											series:[
+												{
+													name:'장기신규(보장)',
+													data:[300,400,100,450,5400,700,1200,1500,4000,6500,5000,6000,7000,7900,8450]
+												}
+											]
+										});
+
+									</script>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+							<!-- [CASE] 자료가 있을 경우 -->
+							<!-- <div class="more">
+								<a href="#"><span>일별 실적 추이</span></a>
+							</div> -->
+							<!-- //[CASE] 자료가 있을 경우 -->
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">보장성 상품 포트폴리오</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info2">(단위 천원, %)</div>
+								<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="row">
+									<div class="col-2">
+
+										<div class="tit3">전략 상품 구성비 및 금액</div>
+										<div class="data" style="height:338px;">
+											<div id="perfomanceChart5" data-chart="Donut-Line4"></div>
+											<div class="chart-info1 t1">
+												<div class="c1">종합 <span>10,222</span></div>
+												<div class="c3">자녀 <span>10,222</span></div>
+												<div class="c4">간편 <span>10,222</span></div>
+												<div class="c5">운전자 <span>10,222</span></div>
+												<div class="c6">기타 <span>10,222</span></div>
+											</div>
+											<script>
+												Highcharts.chart("perfomanceChart5", {
+													chart:{
+														type:"pie",
+														margin:[50,0,0,0],
+														height : 220
+													},
+													title:{
+														text:"장기(보장)",
+														y:110,
+													},
+													subtitle:{
+														text:"28,043",
+														y:140,
+													},
+													legend:{
+														enabled:false
+													},
+													plotOptions:{
+														pie:{
+															dataLabels:{
+																enabled:true,
+																format: '{point.percentage:.1f}',
+																distance: 1
+															},
+															showInLegend:true,
+															innerSize:"90%",
+														}
+													},
+													series:[{
+														name:'',
+														data:[{
+																y:56,
+																name:"종합"
+															},{
+																y:24,
+																name:"자녀"
+															},{
+																y:20,
+																name:"간편"
+															},{
+																y:24,
+																name:"운전자"
+															},{
+																y:20,
+																name:"기타"
+															}
+														]
+													}]
+												});
+
+											</script>
+										</div>
+									</div>
+									<div class="col-2">
+
+										<div class="tit3">보장성 상품 구성비 및 금액</div>
+										<div class="data" style="height:338px;">
+											<div id="perfomanceChart6" data-chart="Basic-Column4"></div>
+											<div class="chart-info5">
+												<div>
+													<em>일반형</em>
+													<div><span class="txt1">강남사업단</span><span class="txt2">15,583</span></div>
+													<div><span class="txt1">전속그룹</span><span class="txt2">15,583</span></div>
+												</div>
+												<div>
+													<em>무해지형</em>
+													<div><span class="txt1">강남사업단</span><span class="txt2">15,583</span></div>
+													<div><span class="txt1">전속그룹</span><span class="txt2">15,583</span></div>
+												</div>
+											</div>
+
+											<script>
+												Highcharts.chart("perfomanceChart6",{
+													chart:{
+														type:"column",
+														marginLeft:0,
+														marginRight:0,
+														height: 180,
+													},
+													title:null,
+													legend:{
+														enabled:false,
+													},
+													xAxis:{
+														categories:["일반형", "무해지형"]
+													},
+													yAxis:{
+														visible : false
+													},
+													plotOptions:{
+														column:{
+															groupPadding : 0.4,//그래프 간격
+															dataLabels:{
+																enabled:true,
+
+															},
+														}
+													},
+													series:[{
+															name:"전속그룹",
+															data:[20.4,10.3],
+															dataLabels:{
+																enabled:false,
+															},
+														},{
+															name:"강남사업단",
+															data:[50.1,30.2]
+														}
+													]
+												});
+
+											</script>
+										</div>
+									</div>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">지점별 보장성 실적 추이</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info2">(단위 천원)</div>
+								<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!--
+									[M : 2022-09-05 수정]
+									지점별 보장성 실적 추이
+									차트  width 값 제거
+									차트  groupPadding 값 변경
+									차트 data명 수정
+								-->
+								<!-- <div class="report-slide1" data-view="3">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart7-1" data-chart="Basic-Column3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart7-1",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:260
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"]
+														},
+														yAxis:{
+															labels:{
+																enabled:false
+															}
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.2,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[
+															{
+																name:"보장성실적",
+																data:[10000,30003,44020],
+															},{
+																name:"장기수수료환산실적",
+																data:[22000,44000,44000]
+															}
+														]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart7-2" data-chart="Basic-Column3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart7-2",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:260
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"]
+														},
+														yAxis:{
+															labels:{
+																enabled:false
+															}
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.2,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[
+															{
+																name:"보장성실적",
+																data:[10000,30003,20020],
+															},{
+																name:"장기수수료환산실적",
+																data:[22000,44000,44000]
+															}
+														]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart7-3" data-chart="Basic-Column3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart7-3",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:260
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"]
+														},
+														yAxis:{
+															labels:{
+																enabled:false
+															}
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.2,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[
+															{
+																name:"보장성실적",
+																data:[10000,30003,20020],
+															},{
+																name:"장기수수료환산실적",
+																data:[22000,44000,44000]
+															}
+														]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart7-4" data-chart="Basic-Column3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart7-4",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:260
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"]
+														},
+														yAxis:{
+															labels:{
+																enabled:false
+															}
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.2,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[
+															{
+																name:"보장성실적",
+																data:[10000,30003,20020],
+															},{
+																name:"장기수수료환산실적",
+																data:[22000,44000,44000]
+															}
+														]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart7-5" data-chart="Basic-Column3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart7-5",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:260
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"]
+														},
+														yAxis:{
+															labels:{
+																enabled:false
+															}
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.2,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[
+															{
+																name:"보장성실적",
+																data:[10000,30003,20020],
+															},{
+																name:"장기수수료환산실적",
+																data:[22000,44000,44000]
+															}
+														]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart7-6" data-chart="Basic-Column3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart7-6",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:260
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"]
+														},
+														yAxis:{
+															labels:{
+																enabled:false
+															}
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.2,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[
+															{
+																name:"보장성실적",
+																data:[10000,30003,20020],
+															},{
+																name:"장기수수료환산실적",
+																data:[22000,44000,44000]
+															}
+														]
+													});
+
+												</script>
+											</div>
+										</div>
+									</div>
+									
+									<div class="slide-prev"></div>
+									<div class="slide-next"></div>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+							<!-- [CASE] 자료가 있을 경우 -->
+							<!-- <div class="more">
+								<a href="#"><span>지점별 실적 확인하기</span></a>
+							</div> -->
+							<!-- //[CASE] 자료가 있을 경우 -->
+						</div>
+					</div>
+
+					<!-- [M 2022-10-05] [CASE : 설계사] 보장성 실적 추이 추가 -->
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">보장성 실적 추이</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info2">(단위 천원)</div>
+								<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="data" style="height:400px;">
+									<div id="perfomanceChart17-1" data-chart="Basic-Column11"></div>
+									<script>
+										Highcharts.chart("perfomanceChart17-1",{
+											chart:{
+												type:"column",
+												marginTop:30, // [M 2022-10-25] 마이너스 차트 수정 : 추가
+												marginLeft:0,
+												marginRight:0,
+												height:380 // [M 2022-10-25] 마이너스 차트 수정 : height 값 변경
+											},
+											title:null,
+											legend:{
+												enabled:true,
+												verticalAlign:"bottom",
+												align:'center',
+												layout:"horizontal"
+											},
+											xAxis:{
+												categories:["전전월", "전월", "당월"]
+											},
+											yAxis:{
+												plotLines:[{
+													value:0,	// 크로스라인 위치 //[M 2022-10-25] 마이너스 차트 수정 : 추가
+												}]
+											},
+											plotOptions:{
+												column:{
+													groupPadding : 0.4,//그래프 간격
+													dataLabels:{
+														enabled:true,
+													},
+												}
+											},
+											tooltip: {
+												//valueSuffix: ' %'
+											},
+											series:[
+												{
+													name:"보장성실적",
+													data:[10000,-30003,20020],
+												},{
+													name:"장기수수료환산실적",
+													data:[-34000,-40050,45000]
+												}
+											]
+										});
+
+									</script>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+							<!-- [CASE] 자료가 있을 경우 -->
+							<!-- <div class="more">
+								<a href="#"><span>실적 확인하기</span></a>
+							</div> -->
+							<!-- //[CASE] 자료가 있을 경우 -->
+						</div>
+					</div>
+					<!-- // -->
+
+					<!--[M : 2022-09-23 추가] 장기신규 설계 현황-->
+					<div class="col">
+						<div class="inner">
+							
+							<div class="head">
+								<div class="tit">
+									<h3 class="">장기신규 설계 현황</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info2">(단위 건)</div><!-- [M 2022-10-11] 텍스트 수정 -->
+								<div class="row">
+									<div class="col-2">
+										
+										<div class="head">
+											<div class="tit t1">
+												<h3 class="">당일 건수</h3>
+											</div>
+										</div>
+										<div class="report-summary t2">
+											<ul>
+												<li>
+													<em>01.설계중</em><!-- [M 2022-10-11] 텍스트 수정 -->
+													<div class="info01">
+														<strong>11</strong>
+														<span class="unit">건</span>
+													</div>
+												</li>
+												<li>
+													<em>02.설계완료<br>(심사결과)</em><!-- [M 2022-10-11] 텍스트 수정 -->
+													<div class="info01">
+														<strong>11</strong>
+														<span class="unit">건</span>
+													</div>
+												</li>
+												<li>
+													<em>03.청약중</em><!-- [M 2022-10-11] 텍스트 수정 -->
+													<div class="info01">
+														<strong>11</strong>
+														<span class="unit">건</span>
+													</div>
+												</li>
+												<li>
+													<em>04.수납완료</em><!-- [M 2022-10-11] 텍스트 수정 -->
+													<div class="info01">
+														<strong>11</strong>
+														<span class="unit">건</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<div class="head">
+											<div class="tit t1">
+												<h3 class="">당월 누계</h3>
+											</div>
+										</div>
+										<div class="report-summary t2">
+											<ul>
+												<li>
+													<em>01.설계중</em><!-- [M 2022-10-11] 텍스트 수정 -->
+													<div class="info01">
+														<strong>11</strong>
+														<span class="unit">건</span>
+													</div>
+												</li>
+												<li>
+													<em>02.설계완료<br>(심사결과)</em><!-- [M 2022-10-11] 텍스트 수정 -->
+													<div class="info01">
+														<strong>11</strong>
+														<span class="unit">건</span>
+													</div>
+												</li>
+												<li>
+													<em>03.청약중</em><!-- [M 2022-10-11] 텍스트 수정 -->
+													<div class="info01">
+														<strong>11</strong>
+														<span class="unit">건</span>
+													</div>
+												</li>
+												<li>
+													<em>04.수납완료</em><!-- [M 2022-10-11] 텍스트 수정 -->
+													<div class="info01">
+														<strong>11</strong>
+														<span class="unit">건</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-2">
+										<div class="row">
+											<div class="col-2">
+												<div class="tit3">월별 전체설계 건수</div>
+												<div class="data" style="height:320px;">
+													<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+													<div class="nodata" style="display:block;">
+														기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+														조건을 변경해보세요.
+													</div>
+													<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+													<!-- [CASE] 자료가 있을 경우 -->
+													<!-- <div id="chart11" data-chart="Basic-Column9"></div>
+													<script>
+														Highcharts.chart("chart11",{
+															chart:{
+																type:"column",
+																marginLeft:0,
+																marginRight:0,
+																height : 300
+															},
+															title:null,
+															legend:{
+																enabled:true,
+																verticalAlign:"bottom",
+																align:'center',
+																layout:"horizontal"
+															},
+															xAxis:{
+																categories:["전전월", "전월", "당월"]
+															},
+															plotOptions:{
+																column:{
+																	dataLabels:{
+																		enabled:true
+																	},
+																}
+															},
+															series:[
+																{
+																	name:"전체 설계 건수", //[M 2022-10-11] 텍스트 수정
+																	data:[100,50,70]
+																}
+															]
+														})
+													</script> -->
+													<!-- //[CASE] 자료가 있을 경우 -->
+												</div>
+											</div>
+											<div class="col-2">
+												<div class="tit3">인당 설계 건수</div>
+												<div class="data" style="height:320px;">
+													<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+													<div class="nodata" style="display:block;">
+														기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+														조건을 변경해보세요.
+													</div>
+													<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+													<!-- [CASE] 자료가 있을 경우 -->
+													<!-- <div id="chart12" data-chart="Basic-Column9"></div>
+													<script>
+														Highcharts.chart("chart12",{
+															chart:{
+																type:"column",
+																marginLeft:0,
+																marginRight:0,
+																height : 300
+															},
+															title:null,
+															legend:{
+																enabled:true,
+																verticalAlign:"bottom",
+																align:'center',
+																layout:"horizontal"
+															},
+															xAxis:{
+																categories:["전전월", "전월", "당월"]
+															},
+															plotOptions:{
+																column:{
+																	dataLabels:{
+																		enabled:true
+																	},
+																}
+															},
+															series:[
+																{
+																	name:"인당 설계 건수",
+																	data:[100,50,70]
+																}
+															]
+														})
+													</script> -->
+													<!-- //[CASE] 자료가 있을 경우 -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--[지표 - 장기수금률 현황]-->
+				<div class="row">
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">장기수금목표액현황</h3><!-- [M 2022-10-05] 텍스트 수정 -->
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>순수 정상: 당월 수금목표액(수금액) 중​ 연체분이 없는 수금목표액(수금액)</li><!-- [M 2022-10-05] 툴팁 내용 변경 -->
+												<li>연체분 정상: 당월 수금목표액(수금액) 중​ 연체분이 있는 수금목표액(수금액)​</li><!-- [M 2022-10-05] 툴팁 내용 변경 -->
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info1">
+									<div class="info01">
+										<dl>
+											<dt>수금목표액</dt><!-- [M 2022-10-05] 텍스트 수정 -->
+											<dd>
+												<strong>-</strong><!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+												<!-- <strong>11,111,111</strong> --><!-- [CASE] 자료가 있을 경우 -->
+												<span class="unit">천원</span>
+
+												<div class="info02">
+													<em class="r-hold"><span>변동없음</span>전월대비 -천원</em><!-- [M 2022-10-05] 텍스트 수정 -->
+													<!-- <em class="r-inc"><span>증가</span>전월대비 10천원</em> --><!-- [M 2022-10-05] 텍스트 수정 -->
+													<!-- <em class="r-des"><span>감소</span>전월대비 10천원</em> --><!-- [M 2022-10-05] 텍스트 수정 -->
+													<!-- <em class="r-hold"><span>변동없음</span>전월대비 -천원</em> --><!-- [M 2022-10-05] 텍스트 수정 -->
+												</div>
+											</dd>
+										</dl>
+										<dl>
+											<dt>수금률</dt><!-- [M 2022-10-05] 텍스트 수정 -->
+											<dd>
+												<strong>-</strong><!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+												<!-- <strong>11</strong> --><!-- [CASE] 자료가 있을 경우 -->
+												<span class="unit">%</span>
+
+												<div class="info02">
+													<em class="r-hold"><span>변동없음</span>전월대비 -%</em>
+													<!-- <em class="r-inc"><span>증가</span>전월대비 -10%</em> -->
+													<!-- <em class="r-des"><span>감소</span>전월대비 +10%</em> -->
+													<!-- <em class="r-hold"><span>변동없음</span>전월대비 -%</em> -->
+												</div>
+											</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="col-info2">(단위 천원, %)</div>
+								<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="row">
+									<div class="col-3">
+										<div class="tit3">수금목표액</div>
+										<div class="data" style="height:260px;">
+											<div id="perfomanceChart8-1" data-chart="Basic-Column4"></div>
+											<script>
+												Highcharts.chart("perfomanceChart8-1",{
+													chart:{
+														type:"column",
+														marginLeft:0,
+														marginRight:0,
+														height:240
+													},
+													title:null,
+													legend:{
+														enabled:true,
+														verticalAlign:"bottom",
+														align:'center',
+														layout:"horizontal"
+													},
+													xAxis:{
+														categories:["전전월", "전월", "당월"]
+													},
+													yAxis:{
+														labels:{
+															enabled:false
+														}
+													},
+													plotOptions:{
+														column:{
+															groupPadding : 0.4,//그래프 간격
+															dataLabels:{
+																enabled:true,
+															},
+														}
+													},
+													series:[
+														{
+															name:"전속그룹",
+															data:[10000,30003,20020],
+
+															dataLabels:{
+
+																enabled:false,
+															}
+														},{
+															name:"강남사업단",
+															data:[22000,44000,44000]
+														}
+													]
+												})
+
+											</script>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="tit3">수금액</div>
+										<div class="data" style="height:260px;">
+											<div id="perfomanceChart8-2" data-chart="Basic-Column4"></div>
+											<script>
+												Highcharts.chart("perfomanceChart8-2",{
+													chart:{
+														type:"column",
+														marginLeft:0,
+														marginRight:0,
+														height:240
+													},
+													title:null,
+													legend:{
+														enabled:true,
+														verticalAlign:"bottom",
+														align:'center',
+														layout:"horizontal"
+													},
+													xAxis:{
+														categories:["전전월", "전월", "당월"]
+													},
+													yAxis:{
+														labels:{
+															enabled:false
+														}
+													},
+													plotOptions:{
+														column:{
+															groupPadding : 0.4,//그래프 간격
+															dataLabels:{
+																enabled:true,
+															},
+														}
+													},
+													series:[
+														{
+															name:"전속그룹",
+															data:[10000,30003,20020],
+															dataLabels:{
+																enabled:false,
+															},
+														},{
+															name:"강남사업단",
+															data:[22000,44000,44000]
+														}
+													]
+												})
+
+											</script>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="tit3">수금률</div>
+										<div class="data" style="height:260px;">
+											<div id="perfomanceChart8-3" data-chart="Basic-Column4"></div>
+											<script>
+												Highcharts.chart("perfomanceChart8-3",{
+													chart:{
+														type:"column",
+														marginLeft:0,
+														marginRight:0,
+														height:240
+													},
+													title:null,
+													legend:{
+														enabled:true,
+														verticalAlign:"bottom",
+														align:'center',
+														layout:"horizontal"
+													},
+													xAxis:{
+														categories:["전전월", "전월", "당월"]
+													},
+													yAxis:{
+														labels:{
+															enabled:false
+														}
+													},
+													plotOptions:{
+														column:{
+															groupPadding : 0.4,//그래프 간격
+															dataLabels:{
+																enabled:true,
+															},
+														}
+													},
+													series:[
+														{
+															name:"전속그룹",
+															data:[22.1,33.2,22.3],
+															dataLabels:{
+																enabled:false,
+															},
+														},{
+															name:"강남사업단",
+															data:[22.2,44.6,44.4]
+														}
+													]
+												})
+
+											</script>
+										</div>
+									</div>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+							<!-- [CASE] 자료가 있을 경우 -->
+							<!-- <div class="more">
+								<a href="#"><span>수금목표액 현황 확인하기</span></a>
+								<a href="#"><span>미수납 연체내용 확인하기</span></a>
+							</div>
+
+							<div class="data-more">
+								<button type="button">표 한눈에 보기</button>
+								<div class="report-table1 t1">
+									<table>
+										<colgroup>
+											<col style="width:160px;">
+											<col>
+											<col style="width:18%;">
+											<col style="width:18%;">
+											<col style="width:18%;">
+											<col style="width:16%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col"><em class="point1">전전월 <br>(22.03)</em></th>
+												<th scope="col"><em>합계</em></th>
+												<th scope="col">정상 <em>순수 정상</em></th>
+												<th scope="col">정상 <em>연체분 정상</em></th>
+												<th scope="col">정상 <em>정상 합계</em></th>
+												<th scope="col"><em>연체</em></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">수금목표액</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+											</tr>
+											<tr>
+												<th scope="row">수금액</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+											</tr>
+											<tr>
+												<th scope="row">수금률</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="report-table1 t1">
+									<table>
+										<colgroup>
+											<col style="width:160px;">
+											<col>
+											<col style="width:18%;">
+											<col style="width:18%;">
+											<col style="width:18%;">
+											<col style="width:16%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col"><em class="point1">전월 <br>(22.04)</em></th>
+												<th scope="col"><em>합계</em></th>
+												<th scope="col">정상 <em>순수 정상</em></th>
+												<th scope="col">정상 <em>연체분 정상</em></th>
+												<th scope="col">정상 <em>정상 합계</em></th>
+												<th scope="col"><em>연체</em></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">수금목표액</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+											</tr>
+											<tr>
+												<th scope="row">수금액</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+											</tr>
+											<tr>
+												<th scope="row">수금률</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="report-table1 t1">
+									<table>
+										<colgroup>
+											<col style="width:160px;">
+											<col>
+											<col style="width:18%;">
+											<col style="width:18%;">
+											<col style="width:18%;">
+											<col style="width:16%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col"><em class="point1">당월 <br>(22.05)</em></th>
+												<th scope="col"><em>합계</em></th>
+												<th scope="col">정상 <em>순수 정상</em></th>
+												<th scope="col">정상 <em>연체분 정상</em></th>
+												<th scope="col">정상 <em>정상 합계</em></th>
+												<th scope="col"><em>연체</em></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">수금목표액</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+											</tr>
+											<tr>
+												<th scope="row">수금액</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+											</tr>
+											<tr>
+												<th scope="row">수금률</th>
+												<td>2,888,888</td>
+												<td>2,111,200</td>
+												<td>2,222,222</td>
+												<td>120.7</td>
+												<td>2,777,777</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div> -->
+							<!-- //[CASE] 자료가 있을 경우 -->
+						</div>
+					</div>
+					<div class="row-sub"><!-- [M 2022-11-07] 감싸는 태그 <div class="row-sub"> 추가  -->
+						<div class="col-2">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">수금률 지표(장기 전체)</h3>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<strong>0</strong><!-- [CASE] 자료가 없을 경우 -->
+											<!-- <strong>18.8</strong> --><!-- [CASE] 자료가 있을 경우 -->
+											<span class="unit">%</span>
+										</div>
+										<!-- [M : 2022-09-05 수정]
+											전월대비 - > 전속그롭 대비
+										-->
+										<div class="info02">
+											<em class="r-hold"><span>변동없음</span>전속그룹 대비 -원</em>
+											<!-- <em class="r-inc"><span>증가</span>전속그룹 대비 +3%</em> -->
+											<!-- <em class="r-des"><span>감소</span>전속그룹 대비 -3%</em> -->
+											<!-- <em class="r-hold"><span>변동없음</span>전속그룹 대비 0원</em> -->
+										</div>
+									</div>
+									<div class="col-info2">(단위 천원, %)</div>
+									<div class="data t2" style="height:246px">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div>
+											<div id="perfomanceChart9-1" data-chart="Solid-Gauge1"></div>
+											<div class="chart-info1 t2">
+												<div class="c1">수금액 <span>1,658,000천원</span></div>
+												<div class="c5">수금목표액 <span>1,658,000천원</span></div>
+											</div>
+											<script>
+												Highcharts.chart("perfomanceChart9-1",{
+													chart:{
+														type:"solidgauge",
+														margin:[0,0,0,0]
+													},
+													title:null,
+													pane:{
+														center:["50%", "85%"],
+														size:"100%",
+														startAngle:-90,
+														endAngle:90,
+														background:{
+															innerRadius:"97%",
+															outerRadius:"100%",
+															shape:"arc"
+														}
+													},
+													yAxis:{
+														min:0,
+														max:100,
+														minorTickInterval:null,
+														labels:{
+															enabled:false
+														}
+													},
+													plotOptions:{
+														solidgauge:{
+															innerRadius:"97%",
+															dataLabels:{
+																enabled:true,
+																format:"{point.y:f}%",
+																y:-20
+															},
+															enableMouseTracking:false //툴팁
+														}
+													},
+													series:[{
+														data:[80]
+													}]
+												});
+
+											</script>
+										</div>
+
+										<div>
+											<div id="perfomanceChart9-2" data-chart="Basic-Column4"></div>
+											<script>
+												Highcharts.chart("perfomanceChart9-2",{
+													chart:{
+														type:"column",
+														marginLeft:0,
+														marginRight:0,
+														height:210
+													},
+													title:null,
+													legend:{
+														enabled:true,
+														verticalAlign:"bottom",
+														align:'center',
+														layout:"horizontal",
+														width:200
+													},
+													xAxis:{
+														categories:['수금률']
+													},
+													yAxis:{
+														labels:{
+															enabled:false
+														}
+													},
+													plotOptions:{
+														column:{
+															groupPadding : 0.4,//그래프 간격
+															dataLabels:{
+																enabled:true,
+															},
+														}
+													},
+													series:[
+														{
+															name:"전속그룹",
+															data:[22],
+															dataLabels:{
+																enabled:false,
+															},
+														},{
+															name:"강남사업단",
+															data:[22]
+														}
+													]
+												})
+
+											</script>
+										</div> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>수금률 확인하기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">최근 3개월 수금률 지표(7, 13회차 수금률)</h3>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info2">(단위 %)</div>
+									<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+									<div class="data" style="height:310px; display:block;">
+										<div class="nodata">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+									</div>
+									<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+									<!-- [CASE] 자료가 있을 경우 -->
+									<!-- <div class="row">
+										<div class="col-2">
+											<div class="tit3">7회차</div>
+											<div class="data" style="height:258px">
+												<div id="perfomanceChart10-1" data-chart="Basic-Column3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart10-1",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height: 250,
+															width:210
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:200
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"]
+														},
+														yAxis:{
+															visible : false
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+
+																},
+															}
+														},
+														series:[{
+																name:"전속그룹",
+																data:[100,50,70],
+																dataLabels:{
+																	enabled:false,
+																},
+															},{
+																name:"강남사업단",
+																data:[125,60,50]
+															}
+														]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="col-2">
+											<div class="tit3">13회차</div>
+											<div class="data" style="height:258px">
+												<div id="perfomanceChart10-2" data-chart="Basic-Column3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart10-2",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height: 250,
+															width:210
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:200
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"]
+														},
+														yAxis:{
+															visible : false
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+
+																},
+															}
+														},
+														series:[{
+																name:"전속그룹",
+																data:[100,50,70],
+																dataLabels:{
+																	enabled:false,
+																},
+															},{
+																name:"강남사업단",
+																data:[125,60,50]
+															}
+														]
+													});
+
+												</script>
+											</div>
+										</div>
+									</div> -->
+									<!-- [//CASE] 자료가 있을 경우 -->
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>수금률 확인하기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+					</div><!-- //[M 2022-11-07] 감싸는 태그 <div class="row-sub"> 추가  -->
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">지점별 수금률 추이</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<h4 class="">전월대비 수금률 하락 지점</h4>
+								<div class="col-info2">(단위 %)</div>
+								<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="data-div2">
+									<div class="data" style="height:412px;">
+										<em class="tit4">전월대비 하락률이 가장 높은 순</em>
+
+										<div class="report-table1 header">
+											<table>
+												<colgroup>
+													<col style="width:40%;">
+													<col>
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">지점명</th>
+														<th scope="col">수금률(전월대비)</th>
+													</tr>
+												</thead>
+											</table>
+										</div>
+										<div class="report-table1 body" style="height:272px;">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<table>
+														<colgroup>
+															<col style="width:40%;">
+															<col>
+														</colgroup>
+														<tbody>
+															<tr class="current">
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="swiper-scrollbar"></div>
+										</div>
+									</div>
+									<div class="data2">
+										
+										<div class="report-slide1" data-view="3">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="tit3">지점명</div>
+													<div class="data" style="height:360px;">
+														<div id="perfomanceChart11-1" data-chart="Basic-Line2"></div>
+														<script>
+															Highcharts.chart("perfomanceChart11-1",{
+																chart:{
+																	type:"line",
+																	marginLeft:0,
+																	marginRight:0,
+																	height:320
+																},
+																title:null,
+																yAxis : {
+																	visible:false
+																},
+																xAxis:{
+																	categories:["전전월", "전월", "당월"]
+																},
+																legend:{
+																	enabled:false
+																},
+																plotOptions:{
+																	line:{
+																		dataLabels:{
+																			enabled:true
+																		}
+																	}
+																},
+																series:[
+																	{
+																		name:'',
+																		data:[80,90, 130]
+																	}
+																]
+															});
+
+														</script>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="tit3">지점명</div>
+													<div class="data" style="height:360px;">
+														<div id="perfomanceChart11-2" data-chart="Basic-Line2"></div>
+														<script>
+															Highcharts.chart("perfomanceChart11-2",{
+																chart:{
+																	type:"line",
+																	marginLeft:0,
+																	marginRight:0,
+																	height:320
+																},
+																title:null,
+																yAxis : {
+																	visible:false
+																},
+																xAxis:{
+																	categories:["전전월", "전월", "당월"]
+																},
+																legend:{
+																	enabled:false
+																},
+																plotOptions:{
+																	line:{
+																		dataLabels:{
+																			enabled:true
+																		}
+																	}
+																},
+																series:[
+																	{
+																		name:'',
+																		data:[80,90, 130]
+																	}
+																]
+															});
+
+														</script>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="tit3">지점명</div>
+													<div class="data" style="height:360px;">
+														<div id="perfomanceChart11-3" data-chart="Basic-Line2"></div>
+														<script>
+															Highcharts.chart("perfomanceChart11-3",{
+																chart:{
+																	type:"line",
+																	marginLeft:0,
+																	marginRight:0,
+																	height:320
+																},
+																title:null,
+																yAxis : {
+																	visible:false
+																},
+																xAxis:{
+																	categories:["전전월", "전월", "당월"]
+																},
+																legend:{
+																	enabled:false
+																},
+																plotOptions:{
+																	line:{
+																		dataLabels:{
+																			enabled:true
+																		}
+																	}
+																},
+																series:[
+																	{
+																		name:'',
+																		data:[80,90, 130]
+																	}
+																]
+															});
+
+														</script>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="tit3">지점명</div>
+													<div class="data" style="height:360px;">
+														<div id="perfomanceChart11-4" data-chart="Basic-Line2"></div>
+														<script>
+															Highcharts.chart("perfomanceChart11-4",{
+																chart:{
+																	type:"line",
+																	marginLeft:0,
+																	marginRight:0,
+																	height:320
+																},
+																title:null,
+																yAxis : {
+																	visible:false
+																},
+																xAxis:{
+																	categories:["전전월", "전월", "당월"]
+																},
+																legend:{
+																	enabled:false
+																},
+																plotOptions:{
+																	line:{
+																		dataLabels:{
+																			enabled:true
+																		}
+																	}
+																},
+																series:[
+																	{
+																		name:'',
+																		data:[80,90, 130]
+																	}
+																]
+															});
+
+														</script>
+													</div>
+												</div>
+											</div>
+											
+											<div class="slide-prev"></div>
+											<div class="slide-next"></div>
+										</div>
+									</div>
+								</div> -->
+								<!-- // -->
+							</div>
+							<!-- [CASE] 자료가 있을 경우 -->
+							<!-- <div class="more">
+								<a href="#"><span>지점별 수금률 확인하기</span></a>
+							</div> -->
+							<!-- // -->
+						</div>
+					</div>
+				</div>
+				<!--[지표 - 주요회차별 유지율 현황]-->
+				<div class="row">
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">주요 회차별 유지율 지표</h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											보장성 보험료 기준 / 일시납 제외
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info1">
+									<div class="info01">
+										<strong>0</strong><!-- [CASE] 자료가 없을 경우 -->
+										<!-- <strong>16</strong> --><!-- [CASE] 자료가 있을 경우 -->
+										<span class="unit">%</span>
+									</div>
+									<div class="info02">
+										<span>전속그룹 대비(13회차)</span>
+										<em class="r-hold"><span>증가</span> -%</em>
+										<!-- <em class="r-inc"><span>증가</span> +3%</em> -->
+										<!-- <em class="r-des"><span>감소</span> -3%</em> -->
+										<!-- <em class="r-hold"><span>변동없음</span> 0%</em> -->
+									</div>
+								</div>
+								<div class="col-info2">(단위 %)</div>
+
+								<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!--
+									[M : 2022-09-05 수정]
+									주요 회차별 유지율 지표
+									차트  width 값 제거
+								-->
+								<!-- <div class="report-slide1" data-view="3">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="tit3">13회차</div>
+											<div class="data" style="height:260px;">
+												<div id="perfomanceChart12-1" data-chart="Basic-Column3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart12-1",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height: 250,
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:200
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"]
+														},
+														yAxis:{
+															visible : false
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+
+																},
+															}
+														},
+														series:[{
+																name:"전속그룹",
+																data:[100,50,70],
+																dataLabels:{
+																	enabled:false,
+																},
+															},{
+																name:"강남사업단",
+																data:[100,60,50]
+															}
+														]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">19회차</div>
+											<div class="data" style="height:260px;">
+												<div id="perfomanceChart12-2" data-chart="Basic-Column3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart12-2",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height: 250,
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:200
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"]
+														},
+														yAxis:{
+															visible : false
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+
+																},
+															}
+														},
+														series:[{
+																name:"전속그룹",
+																data:[100,50,70],
+																dataLabels:{
+																	enabled:false,
+																},
+															},{
+																name:"강남사업단",
+																data:[125,60,50]
+															}
+														]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">25회차</div>
+											<div class="data" style="height:260px;">
+												<div id="perfomanceChart12-3" data-chart="Basic-Column3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart12-3",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height: 250,
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:200
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"]
+														},
+														yAxis:{
+															visible : false
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+
+																},
+															}
+														},
+														series:[{
+																name:"전속그룹",
+																data:[100,50,70],
+																dataLabels:{
+																	enabled:false,
+																},
+															},{
+																name:"강남사업단",
+																data:[125,60,50]
+															}
+														]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">2~13회차</div>
+											<div class="data" style="height:260px;">
+												<div id="perfomanceChart12-4" data-chart="Basic-Column3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart12-4",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height: 250,
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:200
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"]
+														},
+														yAxis:{
+															visible : false
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+
+																},
+															}
+														},
+														series:[{
+																name:"전속그룹",
+																data:[100,50,70],
+																dataLabels:{
+																	enabled:false,
+																},
+															},{
+																name:"강남사업단",
+																data:[125,60,50]
+															}
+														]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">2~25회차</div>
+											<div class="data" style="height:260px;">
+												<div id="perfomanceChart12-5" data-chart="Basic-Column3"></div>
+												<script>
+													Highcharts.chart("perfomanceChart12-5",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height: 250,
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:200
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"]
+														},
+														yAxis:{
+															visible : false
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+
+																},
+															}
+														},
+														series:[{
+																name:"전속그룹",
+																data:[100,50,70],
+																dataLabels:{
+																	enabled:false,
+																},
+															},{
+																name:"강남사업단",
+																data:[125,60,50]
+															}
+														]
+													});
+
+												</script>
+											</div>
+										</div>
+									</div>
+									
+									<div class="slide-prev"></div>
+									<div class="slide-next"></div>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+							<!-- [CASE] 자료가 있을 경우 -->
+							<!-- <div class="more">
+								<a href="#"><span>유지율 확인하기</span></a>
+							</div> -->
+							<!-- //[CASE] 자료가 있을 경우 -->
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">지점별 유지율 추이</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<h4>전월대비 13회차 유지율 하락 지점</h4>
+
+								<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="data-div2">
+									<div class="data" style="height:470px;">
+										<em class="tit4">전월대비 하락률이 가장 높은 순</em>
+
+										<div class="report-table1 header">
+											<table>
+												<colgroup>
+													<col style="width:40%;">
+													<col>
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">지점명</th>
+														<th scope="col">유지율(전월대비)</th>
+													</tr>
+												</thead>
+											</table>
+										</div>
+										<div class="report-table1 body" style="height:330px;">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<table>
+														<colgroup>
+															<col style="width:40%;">
+															<col>
+														</colgroup>
+														<tbody>
+															<tr class="current">
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+															<tr>
+																<td>@@지점</td>
+																<td>29.0 <span class="util">(-11.8)</span></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="swiper-scrollbar"></div>
+										</div>
+									</div>
+									<div class="data2">
+										<div class="report-tab">
+											<a href="#" class="current">13회차</a>
+											<a href="#">19회차</a>
+											<a href="#">25회차</a>
+											<a href="#">2~13회차</a>
+											<a href="#">2~25회차</a>
+										</div>
+										<div class="col-info2">(단위 %)</div>
+
+										<div class="report-slide1" data-view="3">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="tit3">지점명</div>
+													<div class="data" style="height:360px;">
+														<div id="perfomanceChart13-1" data-chart="Basic-Line2"></div>
+														<script>
+															Highcharts.chart("perfomanceChart13-1",{
+																chart:{
+																	type:"line",
+																	marginLeft:0,
+																	marginRight:0,
+																	height:320
+																},
+																title:null,
+																yAxis : {
+																	visible:false
+																},
+																xAxis:{
+																	categories:["전전월", "전월", "당월"]
+																},
+																legend:{
+																	enabled:false
+																},
+																plotOptions:{
+																	line:{
+																		dataLabels:{
+																			enabled:true
+																		}
+																	}
+																},
+																series:[
+																	{
+																		name:'',
+																		data:[80,90, 130]
+																	}
+																]
+															});
+
+														</script>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="tit3">지점명</div>
+													<div class="data" style="height:360px;">
+														<div id="perfomanceChart13-2" data-chart="Basic-Line2"></div>
+														<script>
+															Highcharts.chart("perfomanceChart13-2",{
+																chart:{
+																	type:"line",
+																	marginLeft:0,
+																	marginRight:0,
+																	height:320
+																},
+																title:null,
+																yAxis : {
+																	visible:false
+																},
+																xAxis:{
+																	categories:["전전월", "전월", "당월"]
+																},
+																legend:{
+																	enabled:false
+																},
+																plotOptions:{
+																	line:{
+																		dataLabels:{
+																			enabled:true
+																		}
+																	}
+																},
+																series:[
+																	{
+																		name:'',
+																		data:[80,90, 130]
+																	}
+																]
+															});
+
+														</script>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="tit3">지점명</div>
+													<div class="data" style="height:360px;">
+														<div id="perfomanceChart13-3" data-chart="Basic-Line2"></div>
+														<script>
+															Highcharts.chart("perfomanceChart13-3",{
+																chart:{
+																	type:"line",
+																	marginLeft:0,
+																	marginRight:0,
+																	height:320
+																},
+																title:null,
+																yAxis : {
+																	visible:false
+																},
+																xAxis:{
+																	categories:["전전월", "전월", "당월"]
+																},
+																legend:{
+																	enabled:false
+																},
+																plotOptions:{
+																	line:{
+																		dataLabels:{
+																			enabled:true
+																		}
+																	}
+																},
+																series:[
+																	{
+																		name:'',
+																		data:[80,90, 130]
+																	}
+																]
+															});
+
+														</script>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="tit3">지점명</div>
+													<div class="data" style="height:360px;">
+														<div id="perfomanceChart13-4" data-chart="Basic-Line2"></div>
+														<script>
+															Highcharts.chart("perfomanceChart13-4",{
+																chart:{
+																	type:"line",
+																	marginLeft:0,
+																	marginRight:0,
+																	height:320
+																},
+																title:null,
+																yAxis : {
+																	visible:false
+																},
+																xAxis:{
+																	categories:["전전월", "전월", "당월"]
+																},
+																legend:{
+																	enabled:false
+																},
+																plotOptions:{
+																	line:{
+																		dataLabels:{
+																			enabled:true
+																		}
+																	}
+																},
+																series:[
+																	{
+																		name:'',
+																		data:[80,90, 130]
+																	}
+																]
+															});
+
+														</script>
+													</div>
+												</div>
+											</div>
+											
+											<div class="slide-prev"></div>
+											<div class="slide-next"></div>
+										</div>
+									</div>
+								</div> -->
+								<!-- // -->
+								
+							</div>
+							<!-- [CASE] 자료가 있을 경우 -->
+							<!-- <div class="more">
+								<a href="#"><span>지점별 유지율 확인하기</span></a>
+							</div> -->
+							<!-- // -->
+						</div>
+					</div>
+				</div>
+				<!--[인원 - 실가동 유실적 및 비가동 조직현황]-->
+				<div class="row">
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">실가동 지표</h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>실가동 : 장기 1건 이상 가동</li>
+												<li>유실적: 보장성 월납 실적 누계 5만원 이상<br> (자기 계약 및 크로스 계약 제외)
+												</li>
+												<li>Core LP: 보장성 월납 누계 20만원 이상</li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="report-summary">
+									<ul>
+										<li>
+											<a href="#">
+												<i class="report-ic11"></i>
+												<em>당월 실가동 LP 인원</em>
+												<div class="info01">
+													<strong>11</strong>
+													<span class="unit">명</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="report-ic12"></i>
+												<em>당월 비가동 전환 LP 인원</em>
+												<div class="info01">
+													<strong>11</strong>
+													<span class="unit">명</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-info2">(단위 명, %)</div>
+								<div class="row">
+									<div class="col-3">
+										<div class="data" style="height:322px;">
+											<div id="perfomanceChart14-1" data-chart="Donut-Line2"></div>
+											<div class="chart-info6">
+												<div><span class="txt1">실가동 LP</span> <span class="txt2">49명(50.0%)</span></div>
+												<div><span class="txt1">비가동 LP</span> <span class="txt2">49명(50.0%)</span></div>
+											</div>
+											
+											<script>
+												Highcharts.chart("perfomanceChart14-1", {
+													chart:{
+														type:"pie",
+														margin:[0,0,0,0],
+														height:180
+													},
+													title:{
+														text:"전체 LP",
+														y:72,
+													},
+													subtitle:{
+														text:"48명",
+														y:95,
+													},
+													legend:{
+														enabled:false
+													},
+													plotOptions:{
+														pie:{
+															dataLabels:{
+																enabled:false,
+															},
+															innerSize:"90%",
+														},
+													},
+													series:[{
+														name : '',
+														data:[
+															{
+																y:78,
+																name:"비가동 LP" //[M 2022-10-11] 텍스트 수정
+															},{
+																y:39,
+																name:"실가동 LP" //[M 2022-10-11] 텍스트 수정
+															}
+														]
+													}]
+												});
+
+											</script>
+											<div class="more">
+												<a href="#"><span>실가동 충족 LP 확인하기</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="data" style="height:322px;">
+											<div id="perfomanceChart14-2" data-chart="Donut-Line2"></div>
+											<div class="chart-info6">
+												<div><span class="txt1">유실적 충족 LP</span> <span class="txt2">49명(50.0%)</span></div>
+												<div><span class="txt1">유실적 미충족 LP</span> <span class="txt2">49명(50.0%)</span></div>
+											</div>
+
+											
+											<script>
+												Highcharts.chart("perfomanceChart14-2", {
+													chart:{
+														type:"pie",
+														margin:[0,0,0,0],
+														height:180
+													},
+													title:{
+														text:"전체 LP",
+														y:72,
+													},
+													subtitle:{
+														text:"48명",
+														y:95,
+													},
+													legend:{
+														enabled:false
+													},
+													plotOptions:{
+														pie:{
+															dataLabels:{
+																enabled:false,
+															},
+															innerSize:"90%",
+														},
+													},
+													series:[{
+														name : '',
+														data:[
+															{
+																y:78,
+																name:"유실적 충족 LP" //[M 2022-10-11] 띄어쓰기 수정
+															},{
+																y:39,
+																name:"유실적 미충족 LP" //[M 2022-10-11] 띄어쓰기 수정
+															}
+														]
+													}]
+												});
+
+											</script>
+											<div class="more">
+												<a href="#"><span>유실적 충족LP 확인하기</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="data" style="height:322px;">
+											<div id="perfomanceChart14-3" data-chart="Donut-Line2"></div>
+											<div class="chart-info6">
+												<div><span class="txt1">Core 충족 LP</span> <span class="txt2">49명(50.0%)</span></div>
+												<div><span class="txt1">Core 미충족 LP</span> <span class="txt2">49명(50.0%)</span></div>
+											</div>
+
+											
+											<script>
+												Highcharts.chart("perfomanceChart14-3", {
+													chart:{
+														type:"pie",
+														margin:[0,0,0,0],
+														height:180
+													},
+													title:{
+														text:"실가동 LP",
+														y:72,
+													},
+													subtitle:{
+														text:"48명",
+														y:95,
+													},
+													legend:{
+														enabled:false
+													},
+													plotOptions:{
+														pie:{
+															dataLabels:{
+																enabled:false,
+															},
+															innerSize:"90%",
+														},
+													},
+													series:[{
+														name : '',
+														data:[
+															{
+																y:78,
+																name:"Core 충족 LP" //[M 2022-10-11] 띄어쓰기 수정
+															},{
+																y:39,
+																name:"Core 미충족 LP" //[M 2022-10-11] 띄어쓰기 수정
+															}
+														]
+													}]
+												});
+
+											</script>
+											<div class="more">
+												<a href="#"><span>Core 충족LP 확인하기</span></a>
+											</div>
+										</div>
+									</div>
+								</div> -->
+								<!-- // [CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">실가동/유실적 인원 추이</h3>
+
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>실가동 : 장기 1건 이상 가동</li>
+												<li>유실적: 보장성 월납 실적 누계 5만원 이상<br> (자기 계약 및 크로스 계약 제외)
+												</li>
+												<li>Core LP: 보장성 월납 누계 20만원 이상</li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+								<!-- <div class="sub">
+									<select name="" id="" class="report-sel w240">
+										<option value="">전체</option>
+										<option value="">지점</option>
+										<option value="">지점</option>
+									</select>
+								</div> --><!-- [M 2022-10-11] 검색 중복 삭제 -->
+							</div>
+							<div class="cont">
+								<div class="col-info2">(단위 명)</div><!-- [M 2022-10-11] 검색 중복 삭제 : class명 t1 삭제 -->
+
+								<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								
+								<!--[M : 2022-09-05 수정]
+									실가동/유실적 인원 추이 영역 차트
+									div.data 에 height 값 변경
+									차트  width 값 제거
+									차트  height 값 변경
+								-->
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="report-slide1" data-view="3">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="tit3">실가동 LP</div>
+											<div class="data" style="height:400px;">
+												<div id="perfomanceChart15-1" data-chart="Pareto-chart4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart15-1",{
+														chart:{
+															type:"column",
+															marginTop : 10,
+															marginLeft:0,
+															marginRight:0,
+															height:380
+														},
+														title:null,
+														yAxis : {
+															visible:false
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:300
+														},
+														plotOptions:{
+															column:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"신인",
+															data:[39,54,39]
+														},{
+															name:"기존",
+															data:[25,40,25]
+														},{
+															type:"line",
+															name:"합계",
+															data:[64,94,100]
+														},{
+															type:"line",
+															name:"전체 재적",
+															data:[84,140,104]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">유실적 LP</div>
+											<div class="data" style="height:400px;">
+												<div id="perfomanceChart15-2" data-chart="Pareto-chart4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart15-2",{
+														chart:{
+															type:"column",
+															marginTop : 10,
+															marginLeft:0,
+															marginRight:0,
+															height:380
+														},
+														title:null,
+														yAxis : {
+															visible:false
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:300
+														},
+														plotOptions:{
+															column:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"신인",
+															data:[39,54,39]
+														},{
+															name:"기존",
+															data:[25,40,25]
+														},{
+															type:"line",
+															name:"합계",
+															data:[64,94,64]
+														},{
+															type:"line",
+															name:"전체 재적",
+															data:[84,140,104]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">Core LP</div>
+											<div class="data" style="height:400px;">
+												<div id="perfomanceChart15-3" data-chart="Pareto-chart4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart15-3",{
+														chart:{
+															type:"column",
+															marginTop : 10,
+															marginLeft:0,
+															marginRight:0,
+															height:380
+														},
+														title:null,
+														yAxis : {
+															visible:false
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:300
+														},
+														plotOptions:{
+															column:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"신인",
+															data:[39,54,39]
+														},{
+															name:"기존",
+															data:[25,40,25]
+														},{
+															type:"line",
+															name:"합계",
+															data:[64,79,46]
+														},{
+															type:"line",
+															name:"전체 재적",
+															data:[90,100,80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">3개월 연속가동 LP</div>
+											<div class="data" style="height:400px;">
+												<div id="perfomanceChart15-4" data-chart="Pareto-chart4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart15-4",{
+														chart:{
+															type:"column",
+															marginTop : 10,
+															marginLeft:0,
+															marginRight:0,
+															height:380
+														},
+														title:null,
+														yAxis : {
+															visible:false
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+															width:300
+														},
+														plotOptions:{
+															column:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"신인",
+															data:[39,54,39]
+														},{
+															name:"기존",
+															data:[25,40,25]
+														},{
+															type:"line",
+															name:"합계",
+															data:[64,79,46]
+														},{
+															type:"line",
+															name:"전체 재적",
+															data:[90.5,100,80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+									</div>
+									
+									<div class="slide-prev"></div>
+									<div class="slide-next"></div>
+								</div> -->
+								<!-- // -->
+							</div>
+							
+							<!-- [CASE] 자료가 있을 경우 -->
+							<!-- <div class="more">
+								<a href="#"><span>실가동/유실적 추이 확인하기​</span></a>
+							</div> -->
+							<!-- // -->
+						</div>
+					</div>
+					<div class="row-sub"><!-- [M 2022-10-24] 감싸는 태그 <div class="row-sub"> 추가  -->
+						<div class="col-3">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">이탈예상 설계사</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												모바일 활동량, 실적 등을 기준으로 휴면설계사가 될 확률이 높은 설계사
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<strong>-</strong><!-- [M 2022-10-24] [CASE] 자료가 없을 경우 -->
+											<!-- <strong>16</strong> --><!-- [CASE] 자료가 있을 경우 -->
+											<span class="unit">명</span>
+										</div>
+										<div class="info02">
+											<em class="r-hold"><span>변동없음</span>전월대비 -명</em>
+											<!-- <em class="r-inc"><span>증가</span>전월대비 +3명</em> -->
+											<!-- <em class="r-des"><span>감소</span>전월대비 -3명</em> -->
+											<!-- <em class="r-hold"><span>변동없음</span>전월대비 -명</em> -->
+										</div>
+									</div>
+									<div class="col-info2">(단위 명)</div>
+									<!-- <select name="" id="" class="report-sel w100">
+										<option value="">전체</option>
+										<option value="">지점</option>
+									</select> --><!-- [M 2022-10-11] 검색 중복 삭제 -->
+									<!-- <div class="tit3">지점명</div> -->
+									<div class="data" style="height:260px;">
+
+										<!-- [M 2022-10-24] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-10-24] [CASE] 자료가 없을 경우 -->
+
+										<!--  [CASE] 자료가 있을 경우 -->
+										<!-- <div id="perfomanceChart16-1" data-chart="Basic-Column2"></div>
+										<script>
+											Highcharts.chart("perfomanceChart16-1",{
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height:240
+												},
+												title:null,
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'center',
+													layout:"horizontal"
+												},
+												yAxis:{
+													visible:false
+												},
+												xAxis:{
+													categories:["전전월", "전월", "당월"]
+												},
+												plotOptions:{
+													column:{
+														dataLabels:{
+															enabled:true
+														},
+													}
+												},
+												series:[
+													{
+														colorByPoint:true,
+														name:"이탈예상 LP",
+														data:[100,50,70]
+													}
+												]
+											});
+
+										</script> -->
+										<!-- // -->
+									</div>
+								</div>
+
+								<!--  [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>이탈예상 설계사 확인하기</span></a>
+								</div> -->
+								<!-- // -->
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">휴면설계사</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												직전 3개월 장기, 자동차, 일반 무실적인 설계사
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<strong>-</strong><!-- [M 2022-10-24] [CASE] 자료가 없을 경우 -->
+											<!-- <strong>16</strong> --><!-- [CASE] 자료가 있을 경우 -->
+											<span class="unit">명</span>
+										</div>
+										<div class="info02">
+											<em class="r-hold"><span>변동없음</span>전월대비 -명</em>
+											<!-- <em class="r-inc"><span>증가</span>전월대비 +3명</em> -->
+											<!-- <em class="r-des"><span>감소</span>전월대비 -3명</em> -->
+											<!-- <em class="r-hold"><span>변동없음</span>전월대비 -명</em> -->
+										</div>
+									</div>
+									<div class="col-info2">(단위 명)</div>
+									<!-- <select name="" id="" class="report-sel w100">
+										<option value="">전체</option>
+										<option value="">지점</option>
+									</select> --><!-- [M 2022-10-11] 검색 중복 삭제 -->
+									<!-- <div class="tit3">지점명</div> -->
+									<div class="data" style="height:260px;">
+										<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="perfomanceChart16-2" data-chart="Basic-Column2"></div>
+										<script>
+											Highcharts.chart("perfomanceChart16-2",{
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height:240
+												},
+												title:null,
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'center',
+													layout:"horizontal"
+												},
+												yAxis:{
+													visible:false
+												},
+												xAxis:{
+													categories:["전전월", "전월", "당월"]
+												},
+												plotOptions:{
+													column:{
+														dataLabels:{
+															enabled:true
+														},
+													}
+												},
+												series:[
+													{
+														colorByPoint:true,
+														name:"휴면예상 LP",
+														data:[100,50,70]
+													}
+												]
+											});
+
+										</script> -->
+										<!-- // -->
+									</div>
+								</div>
+								
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>휴면설계사 확인하기</span></a>
+								</div> -->
+								<!-- // -->
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">마케팅동의율</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												<ul>
+													<li>전월 –당월 차이, 인원 및 비율</li>
+													<li>전체 등록 고객 중 마케팅동의를 진행한 인원 통계</li>
+												</ul>
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<strong>-</strong><!-- [M 2022-10-24] [CASE] 자료가 없을 경우 -->
+											<!-- <strong>16</strong> --><!-- [CASE] 자료가 있을 경우 -->
+											<span class="unit">%</span>
+										</div>
+										<div class="info02">
+											<em class="r-hold"><span>변동없음</span>전월대비 -%</em>
+											<!-- <em class="r-inc"><span>증가</span>전월대비 +3%</em> -->
+											<!-- <em class="r-des"><span>감소</span>전월대비 -3%</em> -->
+											<!-- <em class="r-hold"><span>변동없음</span>전월대비 -%</em> -->
+										</div>
+									</div>
+									<div class="col-info2">(단위 %)</div>
+									<!-- <select name="" id="" class="report-sel w100">
+										<option value="">전체</option>
+										<option value="">지점</option>
+									</select> --><!-- [M 2022-10-11] 검색 중복 삭제 -->
+									<!-- <div class="tit3">지점명</div> -->
+									<div class="data" style="height:260px;"><!-- [M 2022-10-24] class nm 삭제 -->
+
+										<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="perfomanceChart16-3" data-chart="Basic-Column3"></div>
+										<script>
+											Highcharts.chart("perfomanceChart16-3",{
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height:240
+												},
+												title:null,
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'center',
+													layout:"horizontal"
+												},
+												xAxis:{
+													categories:["전전월", "전월", "당월"]
+												},
+												yAxis:{
+													visible:false
+												},
+												plotOptions:{
+													column:{
+														groupPadding : 0.4,//그래프 간격
+														dataLabels:{
+															enabled:true,
+
+														},
+													}
+												},
+												tooltip: {
+													valueSuffix: ' %'
+												},
+												series:[
+													{
+
+														name:"전속그룹",
+														data:[100,50,70],
+														dataLabels:{
+															enabled:false,
+
+														}
+													},{
+														name:"강남01지점", //[M 2022-10-24] 텍스트 수정
+														data:[100,60,50]
+													}
+												]
+											});
+
+										</script> -->
+										<!-- // -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- // [M 2022-10-24] 감싸는 div 태그 추가  -->
+
+					<!-- <div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">마케팅동의율</h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>전월 –당월 차이, 인원 및 비율</li>
+												<li>전체 등록 고객 중 마케팅동의를 진행한 인원 통계</li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info1">
+									<div class="info01">
+										<strong>16</strong>
+										<span class="unit">%</span>
+									</div>
+									<div class="info02">
+										<em class="r-inc"><span>증가</span>전월대비 +3%</em>
+									</div>
+								</div>
+								<div class="col-info2">(단위 %)</div>
+								<div class="data nm" style="height:260px;">
+									<div id="perfomanceChart16-4" data-chart="Basic-Column3"></div>
+									<script>
+										Highcharts.chart("perfomanceChart16-4",{
+											chart:{
+												type:"column",
+												marginLeft:0,
+												marginRight:0,
+												height:240
+											},
+											title:null,
+											legend:{
+												enabled:true,
+												verticalAlign:"bottom",
+												align:'center',
+												layout:"horizontal"
+											},
+											xAxis:{
+												categories:["전전월", "전월", "당월"]
+											},
+											yAxis:{
+												visible:false
+											},
+											plotOptions:{
+												column:{
+													groupPadding : 0.4,//그래프 간격
+													dataLabels:{
+														enabled:true,
+
+													},
+												}
+											},
+											tooltip: {
+												valueSuffix: ' %'
+											},
+											series:[
+												{
+
+													name:"전속그룹",
+													data:[100,50,70],
+													dataLabels:{
+														enabled:false,
+
+													}
+												},{
+													name:"강남사업단",
+													data:[100,60,50]
+												}
+											]
+										});
+
+									</script>
+								</div>
+							</div>
+						</div>
+					</div> --><!-- // [M 2022-10-24] No Data 안내문구 노출로 변경하여 해당 케이스 삭제  -->
+				</div>
+				<!--[퀘스트 - 퀘스트 달성 현황 및 추이]-->
+				<div class="row">
+					<div class="row-sub"><!-- [M 2022-10-24] 감싸는 태그 <div class="row-sub"> 추가  -->
+						<div class="col-2">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">퀘스트 달성률/참여율</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												<ul>
+													<li>달성률: 퀘스트의 목표를 완수한 설계사의 비율</li>
+													<li>참여율: 퀘스트 목표를 완수한 설계사 + 완수를 못했지만 참여를 시작한 설계사의 비율</li>
+												</ul>
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<dl class="info01">
+											<dt class="hide">퀘스트 달성률</dt><!-- [M 2022-10-12] D-day 삭제 수정 -->
+											<dd>
+												<strong>16</strong>
+												<span class="unit">건 중 </span>
+												<strong class="point1">5</strong>
+												<span class="unit">건 달성</span>
+											</dd>
+										</dl>
+										<div class="info01-txt">(이번주 기준)</div>
+									</div>
+									<div class="col-info2">(단위 %)</div>
+									<div class="data" style="height:320px;"><!-- [M 2022-10-25] 최대적립 삭제 : height 값 수정 -->
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="perfomanceChart17" data-chart="Basic-Bar3"></div>
+
+										<div class="chart-info1 t1">
+											<div class="c1">달성률 <span>10%</span></div>
+											<div class="c3">참여율 <span>10%</span></div>
+										</div>
+										<div class="chart-info7">
+											<div class="item1">당월 평균 달성률 <span>10%</span></div>
+										</div>
+										<script>
+											Highcharts.chart('perfomanceChart17', {
+												chart: {
+													type: 'bar',
+													marginTop:[20],
+													marginBottom:[0],
+													height:170
+												},
+												title:null,
+												legend:{
+													enabled:false
+												},
+												xAxis: {
+													categories: ['달성률', '참여율']
+												},
+												yAxis: {
+													visible : false,
+													max:100,
+													tickInterval: 1,
+												},
+												plotOptions:{
+													bar:{
+														dataLabels:{
+															enabled:true
+														}
+													}
+												},
+												tooltip: {
+													valueSuffix: ' %'
+												},
+												series: [{
+													colorByPoint:true,
+													name:"",
+													data: [60.8,69.9]
+												}]
+											});
+
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+
+										<!-- <div class="more">
+											<a href="#"><span>수금률 확인하기</span></a>
+										</div> --><!-- [M 2022-10-25] 삭제  -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>퀘스트 진척률 보러가기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">퀘스트 분류별 달성자/미달성자</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												퀘스트 카테고리 별 달성자와 미달성자에요.
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<!-- <div class="con-info1">
+										<div class="info01 t1">
+											<strong>D-2</strong>
+										</div>
+										<div class="info01-txt">(이번주 기준)</div>
+									</div> --><!-- [M 2022-10-12] D-day 삭제 -->
+									<div class="info01-txt t1">(이번주 기준)</div><!-- [M 2022-10-12] D-day 삭제로 내용 이동 class 추가 -->
+									<div class="col-info2">(단위 %)</div>
+									<div class="data" style="height:320px"><!-- [M 2022-11-07] class nm 삭제 -->
+
+										<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 --><!-- [M 2022-10-24] style="height:300px" 추가 -->
+										<!-- <div id="perfomanceChart18" data-chart="Basic-Bar1" style="height:300px"></div>
+										<script>
+											Highcharts.chart('perfomanceChart18', {
+												chart: {
+													type: 'bar',
+													marginTop:20,
+													marginBottom:60,
+												},
+												title:null,
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'left',
+													layout:"horizontal"
+												},
+												xAxis: {
+													categories: ['교육', '업적', '로그인', '커뮤니티']
+												},
+												yAxis: {
+													labels:{
+														enabled:false
+													}
+												},
+												tooltip: {
+													valueSuffix: ' %'
+												},
+												plotOptions:{
+													bar:{
+														groupPadding : 0.25,//그래프 간격
+														dataLabels:{
+															enabled:true
+														},
+													}
+												},
+												series: [{
+													name: '미달성자',
+													data: [85, 75, 55, 35]
+												}, {
+													name: '달성자',
+													data: [15, 25, 45, 65]
+												}]
+											});
+
+										</script> -->
+										<!-- // [CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- // [M 2022-10-24] 감싸는 태그 <div class="row-sub"> 추가  -->
+					<div class="row-sub"><!-- [M 2022-10-24] 감싸는 태그 <div class="row-sub"> 추가  -->
+						<div class="col-2">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">진행 설계사 비율</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												설계사 분류별 퀘스트 달성자/미달성자를 볼 수 있어요.
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+									<!-- <div class="sub">
+										<select name="" id="" class="report-sel w240" disabled>
+											<option value="">새로운도전형</option>
+											<option value="">전환준비형</option>
+											<option value="">성장준비형</option>
+											<option value="">재도약형</option>
+											<option value="">쑥쑥성장형</option>
+											<option value="">롤모델형</option>
+											<option value="">이탈예상</option>
+											<option value="">휴면</option>
+										</select>
+									</div> --><!-- [M 2022-10-24] 삭제 -->
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<dl>
+												<dt>평균대비</dt>
+												<dd>
+													<strong class="r-hold"><span>변동없음</span> -</strong>
+													<!-- <strong class="r-inc"><span>증가</span> 3</strong> -->
+													<!-- <strong class="r-des"><span>감소</span> 3</strong> -->
+													<!-- <strong class="r-hold"><span>변동없음</span> -</strong> -->
+													<span class="unit">%</span>
+												</dd>
+											</dl>
+										</div>
+										<div class="info01-txt">(이번주 기준)</div>
+									</div>
+									<div class="col-info2">(단위 100명)</div>
+									<div class="data" style="height:246px;">
+										
+										<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="perfomanceChart19" data-chart="Basic-Column4"></div>
+										<script>
+											Highcharts.chart("perfomanceChart19",{
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height:220
+												},
+												title:null,
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'center',
+													layout:"horizontal"
+												},
+												xAxis:{
+													categories: ['새로운<br>도전형', '전환<br>준비형', '성장<br>준비형', '재도약형','쑥쑥<br>성장형','롤모델형','이탈예상','휴면']
+												},
+												yAxis:{
+													visible:false
+												},
+												plotOptions:{
+													column:{
+														groupPadding : 0.2,//그래프 간격
+														dataLabels:{
+															enabled:true,
+
+														},
+													}
+												},
+												series:[{
+														name:"미달성자",
+														data:[100,50,70,120,100,50,70,120]
+													},{
+														name:"달성자",
+														data:[125,60,50,130,110,50,70,120]
+													}
+												]
+											});
+
+										</script> -->
+										<!-- // [CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>자세히보기</span></a>
+								</div> -->
+								<!-- // [CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">1달 퀘스트 추이</h3><!-- [M 2022-10-12] 텍스트 수정 -->
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<dl>
+												<dt>달성률 전월대비</dt>
+												<dd>
+													<strong class="r-hold"><span>변동없음</span>-</strong>
+													<!-- <strong class="r-inc"><span>증가</span>11</strong> -->
+													<!-- <strong class="r-des"><span>감소</span>11</strong> -->
+													<!-- <strong class="r-hold"><span>변동없음</span> 0</strong> -->
+													<span class="unit">%</span>
+												</dd>
+											</dl>
+											<dl>
+												<dt>참여율 전월대비</dt>
+												<dd>
+													<strong class="r-hold"><span>변동없음</span>-</strong>
+													<!-- <strong class="r-inc"><span>증가</span>11</strong> -->
+													<!-- <strong class="r-des"><span>감소</span>11</strong> -->
+													<!-- <strong class="r-hold"><span>변동없음</span> 0</strong> -->
+													<span class="unit">%</span>
+												</dd>
+											</dl>
+										</div>
+										<div class="info01-txt">(저번/이번달 기준)</div>
+									</div>
+									<div class="col-info2">(단위 %)</div>
+									<div class="data" style="height:246px;">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="perfomanceChart20" data-chart="Basic-Column3"></div>
+										<script>
+											Highcharts.chart("perfomanceChart20",{
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height:220
+												},
+												title:null,
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'center',
+													layout:"horizontal"
+												},
+												xAxis:{
+													categories:["4월 1주차", "4월 2주차","4월 3주차","4월 4주차","4월 5주차"] // [M 2022-10-12] 전월 삭제, 5주차 추가
+												},
+												yAxis:{
+													labels:{
+														enabled:false
+													},
+													plotLines:[{
+														value:45.5,	// 크로스라인 위치
+														label: {
+															text: '달성률<br>평균 45.5', // [M 2022-10-12] 텍스트 수정
+															y:18,
+															x:0
+														}
+													}]
+												},
+												plotOptions:{
+													column:{
+														groupPadding : 0.4,//그래프 간격
+														dataLabels:{
+															enabled:true,
+														},
+													}
+												},
+												series:[
+													{
+														name:"달성률",
+														data:[30.3,30.3,30.3,30.3,30.3]
+													},
+													{
+														name:"참여율",
+														data:[70.4,70.4,70.4,70.4,70.4]
+													}
+												]
+											})
+
+										</script> -->
+										<!-- [CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>LP별 실적 확인하기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+					</div><!-- // [M 2022-10-24] 감싸는 태그 <div class="row-sub"> 추가  -->
+
+					<div class="col-2">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">미달성자 분류</h3><!-- [M 2022-11-07] 텍스트 수정 -->
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											퀘스트 미달성자를 분류별로 볼 수 있어요.
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info1">
+									<div class="info01">
+										<dl>
+											<dt>퀘스트 미달성자</dt><!-- [M 2022-11-07] 텍스트 수정 -->
+											<dd>
+												<strong>-</strong><!-- [M 2022-10-24] [CASE] 자료가 없을 경우 -->
+												<!-- <strong>15</strong> --><!-- [CASE] 자료가 있을 경우 -->
+												<span class="unit">명</span>
+
+												<div class="info02">
+													<em class="r-hold"><span>변동없음</span>전월대비 -명</em><!-- [M 2022-11-07] 텍스트 수정 -->
+													<!-- <em class="r-inc"><span>증가</span>전주대비 -10명</em> -->
+													<!-- <em class="r-des"><span>감소</span>전주대비 +10명</em> -->
+													<!-- <em class="r-hold"><span>변동없음</span>전주대비 -명</em> -->
+												</div>
+											</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="col-info2">(단위 %)</div>
+								<div class="data" style="height:268px;">
+
+									<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+									<div class="nodata" style="display:block;">
+										기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+										조건을 변경해보세요.
+									</div>
+									<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+									<!-- [CASE] 자료가 있을 경우 -->
+									<!-- <div id="perfomanceChart21" data-chart="Donut-Line2"></div>
+									<div class="chart-info1 t1">
+										<div class="c1">중도기간 경과 <span>60</span></div>
+										<div class="c6">미진행 <span>40</span></div>
+									</div> -->
+
+									<!--
+										[M : 2022-09-05 수정]
+										chart : margin,height 수정
+										범례 class명 변경
+									-->
+									<!-- <script>
+										Highcharts.chart("perfomanceChart21", {
+											chart:{
+												type:"pie",
+												margin:[0,0,0,0],
+												height:180
+											},
+											title:{
+												text:"전체",
+												y:72,
+											},
+											subtitle:{
+												text:"48명",
+												y:95,
+											},
+											legend:{
+												enabled:false
+											},
+											plotOptions:{
+												pie:{
+													dataLabels:{
+														enabled:false,
+													},
+													innerSize:"90%",
+												},
+											},
+											series:[{
+												name : '',
+												data:[
+													{
+														y:78,
+														name:"Core 충족LP"
+													},{
+														y:39,
+														name:"Core 미충족LP"
+													}
+												]
+											}]
+										});
+
+									</script> -->
+									<!-- // -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-2">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">달성률별 대상자</h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											달성률 구간 별 달성자 숫자를 알 수 있어요.
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+								<div class="sub">
+									<select name="" id="" class="report-sel w240" disabled><!-- [M 2022-10-24] 자료가 없을 경우 disabled 추가 -->
+										<option value="1">달성률 0%</option>
+										<option value="2">달성률 1%~30%</option>
+										<option value="3">달성률 50%미만</option>
+										<option value="4">달성률 50~70%</option>
+										<option value="5">달성률 71~100%</option>
+									</select>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info1">
+									<div class="info01">
+										<strong>-</strong><!-- [M 2022-10-24] [CASE] 자료가 없을 경우 -->
+										<!-- <strong>15</strong> --><!-- [CASE] 자료가 있을 경우 -->
+										<span class="unit">명</span>
+									</div>
+								</div>
+								<div class="col-info2 t3">(단위 명, %)</div>
+								<div class="data" style="height:268px;">
+
+									<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+									<div class="nodata" style="display:block;">
+										기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+										조건을 변경해보세요.
+									</div>
+									<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+									<!-- [CASE] 자료가 있을 경우 -->
+									<!-- <div id="perfomanceChart22" data-chart="Donut-Line2"></div>
+									<div class="chart-info1 t1">
+										<div class="c1">조건 대상자 <span>60</span></div>
+										<div class="c6">전체 LP <span>40</span></div>
+									</div> -->
+
+									<!--
+										[M : 2022-09-05 수정]
+										chart : margin,height 수정
+										범례 class명 변경
+									-->
+									<!-- <script>
+										Highcharts.chart("perfomanceChart22", {
+											chart:{
+												type:"pie",
+												margin:[0,0,0,0],
+												height:180
+											},
+											title:{
+												text:"전체",
+												y:72,
+											},
+											subtitle:{
+												text:"48명",
+												y:95,
+											},
+											legend:{
+												enabled:false
+											},
+											plotOptions:{
+												pie:{
+													dataLabels:{
+														enabled:false,
+													},
+													innerSize:"90%",
+												},
+											},
+											series:[{
+												name : '',
+												data:[
+													{
+														y:78,
+														name:"Core 충족LP"
+													},{
+														y:39,
+														name:"Core 미충족LP"
+													}
+												]
+											}]
+										});
+
+									</script> -->
+									<!-- // -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">하위 참여율 퀘스트 TOP 5 </h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info2 ">(단위 %)</div>
+								<div class="data">
+
+									<div class="report-table1">
+										<table>
+											<colgroup>
+												<col style="width:20%;">
+												<col>
+												<col >
+												<col >
+												<col >
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">순위</th>
+													<th scope="col">구분</th>
+													<th scope="col">적요</th>
+													<th scope="col">달성률</th>
+													<th scope="col">미참여</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="current"><!-- -->
+													<td>1</td>
+													<td>커뮤니티</td>
+													<td>노하우등록</td>
+													<td>10%</td>
+													<td>10%</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>커뮤니티</td>
+													<td>노하우등록</td>
+													<td>10%</td>
+													<td>10%</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>커뮤니티</td>
+													<td>노하우등록</td>
+													<td>10%</td>
+													<td>10%</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>커뮤니티</td>
+													<td>노하우등록</td>
+													<td>10%</td>
+													<td>10%</td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>커뮤니티</td>
+													<td>노하우등록</td>
+													<td>10%</td>
+													<td>10%</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">1달 지점별 퀘스트 추이</h3><!-- [M 2022-10-06] 텍스트 수정 -->
+								</div>
+							</div>
+							<div class="cont">
+								<div class="info01-txt">(조회월 기준)</div><!-- [M 2022-10-06] 텍스트 수정 -->
+								<div class="col-info2">(단위 명)</div>
+
+								<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								
+								<!-- [CASE] 자료가 없을 경우 -->
+								<!--
+									[M : 2022-09-05 수정]
+									최근 1달 지점별 퀘스트 추이
+									차트  width 값 제거
+								-->
+								<!-- <div class="report-slide1">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart23-1" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart23-1",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["참여자", "미참여자", "달성자"] //[M 2022-10-12] 중도포기자 삭제
+														},
+														yAxis:{
+															visible : false,
+															max :  200 // max를 data 의 {최대값 x 2} 정도 해줘야 차트 상단에 여백이 넉넉히생김
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,73] //[M 2022-10-12] 중도포기자 삭제
+														},{
+															name:"강남1지점",
+															data:[90,50,75] //[M 2022-10-12] 중도포기자 삭제
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart23-2" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart23-2",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["참여자", "미참여자", "달성자"] //[M 2022-10-12] 중도포기자 삭제
+														},
+														yAxis:{
+															visible : false,
+															max :  200 // max를 data 의 {최대값 x 2} 정도 해줘야 차트 상단에 여백이 넉넉히생김
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,73] //[M 2022-10-12] 중도포기자 삭제
+														},{
+															name:"강남1지점",
+															data:[90,50,75] //[M 2022-10-12] 중도포기자 삭제
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart23-3" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart23-3",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["참여자", "미참여자", "달성자"] //[M 2022-10-12] 중도포기자 삭제
+														},
+														yAxis:{
+															visible : false,
+															max :  200 // max를 data 의 {최대값 x 2} 정도 해줘야 차트 상단에 여백이 넉넉히생김
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,73] //[M 2022-10-12] 중도포기자 삭제
+														},{
+															name:"강남1지점",
+															data:[90,50,75] //[M 2022-10-12] 중도포기자 삭제
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart23-4" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart23-4",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["참여자", "미참여자", "달성자"] //[M 2022-10-12] 중도포기자 삭제
+														},
+														yAxis:{
+															visible : false,
+															max :  200 // max를 data 의 {최대값 x 2} 정도 해줘야 차트 상단에 여백이 넉넉히생김
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,73] //[M 2022-10-12] 중도포기자 삭제
+														},{
+															name:"강남1지점",
+															data:[90,50,75] //[M 2022-10-12] 중도포기자 삭제
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart23-5" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart23-5",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["참여자", "미참여자", "달성자"] //[M 2022-10-12] 중도포기자 삭제
+														},
+														yAxis:{
+															visible : false,
+															max :  200 // max를 data 의 {최대값 x 2} 정도 해줘야 차트 상단에 여백이 넉넉히생김
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,73] //[M 2022-10-12] 중도포기자 삭제
+														},{
+															name:"강남1지점",
+															data:[90,50,75] //[M 2022-10-12] 중도포기자 삭제
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart23-6" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart23-6",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["참여자", "미참여자", "달성자"] //[M 2022-10-12] 중도포기자 삭제
+														},
+														yAxis:{
+															visible : false,
+															max :  200 // max를 data 의 {최대값 x 2} 정도 해줘야 차트 상단에 여백이 넉넉히생김
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,73] //[M 2022-10-12] 중도포기자 삭제
+														},{
+															name:"강남1지점",
+															data:[90,50,75] //[M 2022-10-12] 중도포기자 삭제
+														}]
+													});
+												</script>
+											</div>
+										</div>
+									</div>
+									
+									<div class="slide-prev"></div>
+									<div class="slide-next"></div>
+								</div> -->
+								<!-- // -->
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">지점별 퀘스트 달성률 추이​</h3><!-- [M 2022-10-12] 텍스트 수정 -->
+									<!-- [M 2022-10-24] 툴팁추가 -->
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>최근 4주 퀘스트 달성률 정보 제공</li>
+												<li>달성률 : 퀘스트를 1건 이상 달성한 비율 </li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+									<!-- // [M 2022-10-24] 툴팁추가 -->
+								</div>
+							</div>
+							<div class="cont">
+								<div class="info01-txt">(조회월 기준)</div><!-- [M 2022-10-06] 텍스트 수정 -->
+								<div class="col-info2">(단위 %)</div>
+
+								<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								
+								<!-- [CASE] 자료가 없을 경우 -->
+								<!--
+									[M : 2022-09-05 수정]
+									최근 4주 달성률 퀘스트 추이
+									차트  width 값 제거
+								-->
+								<!-- <div class="report-slide1">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart24-1" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart24-1",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["1주", "2주", "3주","4주"],
+														},
+														yAxis:{
+															visible : false,
+															max :  120
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,23,73]
+														},{
+															name:"강남1지점",
+															data:[90,50,70,75],
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart24-2" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart24-2",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["1주", "2주", "3주","4주"],
+														},
+														yAxis:{
+															visible : false,
+															max :  120
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,23,73]
+														},{
+															name:"강남1지점",
+															data:[90,50,70,75],
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart24-3" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart24-3",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["1주", "2주", "3주","4주"],
+														},
+														yAxis:{
+															visible : false,
+															max :  120
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,23,73]
+														},{
+															name:"강남1지점",
+															data:[90,50,70,75],
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart24-4" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart24-4",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["1주", "2주", "3주","4주"],
+														},
+														yAxis:{
+															visible : false,
+															max :  120
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,23,73]
+														},{
+															name:"강남1지점",
+															data:[90,50,70,75],
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart24-5" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart24-5",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["1주", "2주", "3주","4주"],
+														},
+														yAxis:{
+															visible : false,
+															max :  120
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,23,73]
+														},{
+															name:"강남1지점",
+															data:[90,50,70,75],
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart24-6" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart24-6",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["1주", "2주", "3주","4주"],
+														},
+														yAxis:{
+															visible : false,
+															max :  120
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,23,73]
+														},{
+															name:"강남1지점",
+															data:[90,50,70,75],
+														}]
+													});
+												</script>
+											</div>
+										</div>
+									</div>
+									
+									<div class="slide-prev"></div>
+									<div class="slide-next"></div>
+								</div> -->
+								<!-- // -->
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">지점별 퀘스트 달성률 추이</h3><!-- [M 2022-10-12] 텍스트 수정 -->
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>최근 4주 퀘스트 달성률 정보 제공</li>
+												<li>달성률 : 퀘스트를 1건 이상 달성한 비율 </li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="info01-txt">(조회월 기준)</div><!-- [M 2022-10-06] 텍스트 수정 -->
+								<div class="col-info2">(단위 %)</div>
+
+								<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								
+								<!-- [CASE] 자료가 없을 경우 -->
+								<!-- <div class="tit3">지점명</div>
+								<div class="data" style="height:320px;">
+									<div id="perfomanceChart23-7" data-chart="Basic-Column4"></div>
+									<script>
+										Highcharts.chart("perfomanceChart23-7",{
+											chart:{
+												type:"column",
+												marginLeft:0,
+												marginRight:0,
+												height:300
+											},
+											title:null,
+											legend:{
+												enabled:true,
+												verticalAlign:"bottom",
+												align:'center',
+												layout:"horizontal"
+											},
+											xAxis:{
+												categories:["1주", "2주", "3주","4주"],
+											},
+											yAxis:{
+												visible : false,
+												max : 120
+											},
+											plotOptions:{
+												column:{
+													groupPadding : 0.4,//그래프 간격
+													dataLabels:{
+														enabled:true,
+													},
+												}
+											},
+											series:[{
+												dataLabels:{
+													enabled:false,
+												},
+												name:"사업단평균",
+												data:[72,68.0,23,73]
+											},{
+												name:"강남1지점",
+												data:[90,50,70,75],
+											}]
+										});
+									</script>
+								</div> -->
+								<!-- // -->
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">지점별 퀘스트 참여율 추이</h3><!-- [M 2022-10-12] 텍스트 수정 -->
+									<!-- [M 2022-10-24] 툴팁추가 -->
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>최근 4주 퀘스트 참여율 정보 제공 </li>
+												<li>참여율 : 퀘스트의 조건 중 1건 이상 참여한 비율  </li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+									<!-- // [M 2022-10-24] 툴팁추가 -->
+								</div>
+							</div>
+							<div class="cont">
+								<div class="info01-txt">(조회월 기준)</div><!-- [M 2022-10-12] 텍스트 수정 -->
+								<div class="col-info2">(단위 %)</div>
+
+								<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								
+								<!-- [CASE] 자료가 없을 경우 -->
+								<!--[M : 2022-09-05 수정]
+									최근 4주 참여율 퀘스트 추이
+									차트  width 값 제거
+								-->
+								<!-- <div class="report-slide1">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart25-1" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart25-1",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["1주", "2주", "3주","4주"],
+														},
+														yAxis:{
+															visible : false,
+															max :  120
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,23,73]
+														},{
+															name:"강남1지점",
+															data:[90,50,70,75],
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart25-2" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart25-2",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["1주", "2주", "3주","4주"],
+														},
+														yAxis:{
+															visible : false,
+															max :  120
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,23,73]
+														},{
+															name:"강남1지점",
+															data:[90,50,70,75],
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart25-3" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart25-3",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["1주", "2주", "3주","4주"],
+														},
+														yAxis:{
+															visible : false,
+															max :  120
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,23,73]
+														},{
+															name:"강남1지점",
+															data:[90,50,70,75],
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart25-4" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart25-4",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["1주", "2주", "3주","4주"],
+														},
+														yAxis:{
+															visible : false,
+															max :  120
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,23,73]
+														},{
+															name:"강남1지점",
+															data:[90,50,70,75],
+														}]
+													});
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart25-5" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart25-5",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["1주", "2주", "3주","4주"],
+														},
+														yAxis:{
+															visible : false,
+															max :  120
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,23,73]
+														},{
+															name:"강남1지점",
+															data:[90,50,70,75],
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">지점명</div>
+											<div class="data" style="height:320px;">
+												<div id="perfomanceChart25-6" data-chart="Basic-Column4"></div>
+												<script>
+													Highcharts.chart("perfomanceChart25-6",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal"
+														},
+														xAxis:{
+															categories:["1주", "2주", "3주","4주"],
+														},
+														yAxis:{
+															visible : false,
+															max :  120
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+																dataLabels:{
+																	enabled:true,
+																},
+															}
+														},
+														series:[{
+															dataLabels:{
+																enabled:false,
+															},
+															name:"사업단평균",
+															data:[72,68.0,23,73]
+														},{
+															name:"강남1지점",
+															data:[90,50,70,75],
+														}]
+													});
+												</script>
+											</div>
+										</div>
+									</div>
+									
+									<div class="slide-prev"></div>
+									<div class="slide-next"></div>
+								</div> -->
+								<!-- // -->
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">지점별 퀘스트 참여율 추이</h3><!-- [M 2022-10-12] 텍스트 수정 -->
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>최근 4주 퀘스트 참여율 정보 제공 </li>
+												<li>참여율 : 퀘스트의 조건 중 1건 이상 참여한 비율  </li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="info01-txt">(조회월 기준)</div><!-- [M 2022-10-12] 텍스트 수정 -->
+								<div class="col-info2">(단위 %)</div>
+
+								<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								
+								<!-- [CASE] 자료가 없을 경우 -->
+								<!-- <div class="tit3">지점명</div>
+								<div class="data" style="height:320px;">
+									<div id="perfomanceChart24-7" data-chart="Basic-Column4"></div>
+									<script>
+										Highcharts.chart("perfomanceChart24-7",{
+											chart:{
+												type:"column",
+												marginLeft:0,
+												marginRight:0,
+												height:300
+											},
+											title:null,
+											legend:{
+												enabled:true,
+												verticalAlign:"bottom",
+												align:'center',
+												layout:"horizontal"
+											},
+											xAxis:{
+												categories:["1주", "2주", "3주","4주"],
+											},
+											yAxis:{
+												visible : false,
+												max :  120
+											},
+											plotOptions:{
+												column:{
+													groupPadding : 0.4,//그래프 간격
+													dataLabels:{
+														enabled:true,
+													},
+												}
+											},
+											series:[{
+												dataLabels:{
+													enabled:false,
+												},
+												name:"사업단평균",
+												data:[72,68.0,23,73]
+											},{
+												name:"강남1지점",
+												data:[100,50,70,75],
+											}]
+										});
+									</script>
+								</div> -->
+								<!-- // -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="#" class="report-top"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

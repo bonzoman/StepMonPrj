@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>포인트 조회 | 포인트 조회 | 포인트 관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220513">
+<link rel="stylesheet" href="../../resource/css/content.css?20220513">
+<link rel="stylesheet" href="../../resource/css/page.css?20220513">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220513"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>포인트 조회</h1>
+		<a href="javascript:void(0);" class="btn-t1">퀘스트<em class="icon-noti1 ic1">알림</em></a>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [포인트 배너영역] -->
+		<!-- ######################### -->
+		<!-- [CASE] 포인트 이벤트 -->
+		<div class="point-banner">
+			<dl>
+				<dt>현금화 신청 이벤트<br>잠자고 있는 포인트를 깨워보세요</dt>
+				<dd>2022.5.30 까지</dd>
+				<dd class="btn"><button type="button">상세보기</button></dd>
+			</dl>
+		</div>
+		<!-- [CASE] 위촉축하 포인트 -->
+		<div class="point-appoint">
+			<dl>
+				<dt>위촉축하 포인트</dt>
+				<dd>35,000P</dd>
+				<dd class="btn"><button type="button">상세보기</button></dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [적립 포인트] -->
+		<!-- ######################### -->
+		<div class="point-info">
+			<div class="point-total">
+				<h2>적립 포인트</h2>
+				<p class="data-num">720,000</p>
+				<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+			</div>
+			<div class="info-con2">
+				<dl>
+					<dt><a href="#uiTOOLTIPINFO1"  class="icon-com2 ic2 right" data-btn="tooltip" aria-haspopup="dialog">현금화 가능 포인트</a></dt>
+					<dd>40,000P</dd>
+					<dd class="data1">(이번달 최대 지급가능 포인트 40,000P)</dd>
+				</dl>
+			</div>
+			<div data-toggle="content">
+				<!-- [CASE] 신청가능  -->
+				<div class="info-con2">
+					<dl>
+						<dt>당월누적실적</dt>
+						<dd class="data-num1"><strong>250,000</strong><span>원</span></dd>
+					</dl>
+					<dl>
+						<dt>지급 예정 금액</dt>
+						<dd class="data-num1"><strong>40,000</strong><span>원</span></dd>
+					</dl>
+					<dl>
+						<dt>소멸 예정 포인트</dt>
+						<dd>1,500P</dd>
+						<dd class="data1"><span class="ico-sub txt-c1">소멸예정일 2023.07.12</span></dd>
+					</dl>
+				</div>
+				<!-- [CASE] 신청불가  -->
+				<div class="info-con2">
+					<dl>
+						<dt>소멸 예정 포인트</dt>
+						<dd>1,500P</dd>
+						<dd class="data1"><span class="ico-sub txt-c1">소멸예정일 2023.07.12</span></dd>
+					</dl>
+					<!-- [CASE] 신청불가_당월 신규 계약 가동전 ① 4만 P 미만, ② 4만 P 이상  -->
+					<div class="mes-t3 t2">이번달 신규계약 체결전이기에 현금화 신청이 불가합니다.</div>
+					<!-- [CASE] 신청불가 당월 신규 계약 가동후 ③ 4만 P 미만  -->
+					<div class="mes-t3 t2"><strong>4만</strong> 포인트 이상 보유 시, 현금화 신청이 가능합니다.</div>
+					<!-- // -->
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- [CASE] 현금화신청 전 -->
+			<div class="area-btn1">
+				<button type="button" class="btn-com1 c1">현금화 신청</button>
+			</div>
+			<!-- [CASE] 현금화신청 후 -->
+			<div class="area-btn1">
+				<button type="button" class="btn-com1">현금화 취소</button>
+			</div>
+			<!-- // -->
+		</div>
+		
+		<!-- ######################### -->
+		<!-- [필터 영역] -->
+		<!-- ######################### -->
+		<div class="area-info1 line2">
+			<p>총 <strong>12,340건</strong></p>
+			<div class="side">
+				<button type="button" class="icon-com1 ic18 right">필터</button>
+			</div>
+		</div>
+		
+		<!-- ######################### -->
+		<!-- [포인트 거래내역] -->
+		<!-- ######################### -->
+		<div class="point-list">
+			<h3 class="hide">포인트 거래내역</h3>
+			<!-- [적립] -->
+			<dl class="plus">
+				<dt>데일리 퀴즈 참여</dt>
+				<dd class="txt"><span>2022.04.02</span><span>퀘스트</span></dd>
+				<dd class="data-num1"><strong>500</strong><span>P</span></dd>
+			</dl>
+			<!-- // -->
+			<dl class="plus">
+				<dt>조인워크 매칭 적립</dt>
+				<dd class="txt"><span>2022.04.01</span><span>혜택</span></dd>
+				<dd class="data-num1"><strong>1,500</strong><span>P</span></dd>
+			</dl>
+			<!-- [사용] -->
+			<dl class="minus">
+				<dt>현금화전환신청</dt>
+				<dd class="txt"><span>2022.03.20</span><span>사용</span></dd>
+				<dd class="data-num1"><strong>-5,500</strong><span>P</span></dd>
+			</dl>
+			<!-- // -->
+			<dl class="plus">
+				<dt>조인워크 매칭 적립</dt>
+				<dd class="txt"><span>2022.03.14</span><span>혜택</span></dd>
+				<dd class="data-num1"><strong>3,000</strong><span>P</span></dd>
+			</dl>
+			<!-- // -->
+			<dl class="minus">
+				<dt>현금화전환신청</dt>
+				<dd class="txt"><span>2022.03.08</span><span>사용</span></dd>
+				<dd class="data-num1"><strong>-5,500</strong><span>P</span></dd>
+			</dl>
+			<!-- // -->
+			<dl class="minus">
+				<dt>현금화전환신청</dt>
+				<dd class="txt"><span>2022.02.29</span><span>사용</span></dd>
+				<dd class="data-num1"><strong>-5,500</strong><span>P</span></dd>
+			</dl>
+			<!-- // -->
+		</div>
+		
+		<!-- 더보기(현재페이지/총페이지) -->
+		<div class="area-btn2">
+			<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [데이터없음] -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>내역이 없습니다.</strong>
+			</p>
+		</div>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer"></footer>
+	<!-- -------------------------------------- -->
+</main>
+<!-- ################################################### -->
+<!-- [툴팁내용] 현금화 가능 포인트 -->
+<!-- ################################################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl class="txt-bul1">
+		<dt></dt>
+		<dd>당월 현금화 신청 처리는 익월 수수료 <br>지급일에 명세서에 확인할 수 있습니다. </dd>
+		<dd>지급 가능한 포인트 기준은 변동 될 수 <br>있습니다. 이에 따라 다음달에 지급액이 변동<br> 될 수 있습니다.</dd>
+		<dd>2달 연속가동 시 추가로 포인트가 <br>지급됩니다.</dd>
+		<dd><button type="button" data-btn="pop-close">현금화 가능 포인트 닫기</button></dd>
+	</dl>
+</div>
+<!-- ################################################### -->
+<script>
+	$plugin.togglecon('.point-info',{
+		selector_group : false
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 검색 | 크루게시판</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>렛:크루 검색</h1>
+			<button type="button" data-btn="pop-close">렛:크루 검색 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [검색영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-search1" data-sticky="top">
+				<legend>컨텐츠 검색</legend>
+				<div class="input-wrap1">
+					<div class="text">
+						<input type="search" title="검색" placeholder="검색어를 입력해주세요." value="지원">
+						<button type="button" class="icon-com1 ic2">검색</button>
+					</div>
+					<!-- // -->
+				</div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [탭버튼] -->
+			<!-- ######################### -->
+			<div class="nav-tab1" data-scroll="true">
+				<ul>
+					<li class="active"><a href="javascript:void(0)">사업단(4)</a></li>
+					<li><a href="javascript:void(0)">주부(3)</a></li>
+					<li><a href="javascript:void(0)">라이더스(8)</a></li>
+					<li><a href="javascript:void(0)">학생(9)</a></li>
+					<li><a href="javascript:void(0)">직장인(0)</a></li>
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [검색결과] -->
+			<!-- ######################### -->
+			<!-- [총 건수] -->
+			<div class="area-info1">
+				<p>총 <strong>12,340건</strong></p>
+			</div>
+
+			<!-- [검색 목록] -->
+			<div class="board-list1">
+				<ul>
+					<!-- // -->
+					<li>
+						<a href="javascript:void(0);">
+							<div class="tit">
+								<strong>2022년 02월 정보보호의 날 수행업무 <mark>지원</mark> 안내드립니다.</strong>
+							</div>
+							<dl class="info">
+								<dt>작성자(소속)</dt>
+								<dd>공지철(강남 4지점)</dd>
+								<dt>작성일</dt>
+								<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+							</dl>
+							<div class="data">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>0,000</dd>
+								</dl>
+								<dl class="icon-com1 ic11">
+									<dt>댓글</dt>
+									<dd>000</dd>
+								</dl>
+								<dl class="icon-com1 ic8">
+									<dt>좋아요</dt>
+									<dd>000</dd>
+								</dl>
+							</div>
+						</a>
+					</li>
+					<!-- // -->
+					<li>
+						<a href="javascript:void(0);">
+							<div class="tit">
+								<strong>사업단의 새로운 <mark>지원</mark> 제공 방식에 여러분들의 의견을 표현해주세요.</strong>
+							</div>
+							<dl class="info">
+								<dt>작성자(소속)</dt>
+								<dd>공지철(강남 4지점)</dd>
+								<dt>작성일</dt>
+								<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+							</dl>
+							<div class="data">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>0,000</dd>
+								</dl>
+								<dl class="icon-com1 ic11">
+									<dt>댓글</dt>
+									<dd>000</dd>
+								</dl>
+								<dl class="icon-com1 ic8">
+									<dt>좋아요</dt>
+									<dd>000</dd>
+								</dl>
+							</div>
+						</a>
+					</li>
+					<!-- // -->
+					<li>
+						<a href="javascript:void(0);">
+							<div class="tit">
+								<strong>2022년 02월 정보보호의 날 수행<mark>지원</mark> 업무 안내드립니다.</strong>
+							</div>
+							<dl class="info">
+								<dt>작성자(소속)</dt>
+								<dd>하다미(강남사업단)</dd>
+								<dt>작성일</dt>
+								<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+							</dl>
+							<div class="data">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>0,000</dd>
+								</dl>
+								<dl class="icon-com1 ic11">
+									<dt>댓글</dt>
+									<dd>000</dd>
+								</dl>
+								<dl class="icon-com1 ic8">
+									<dt>좋아요</dt>
+									<dd>000</dd>
+								</dl>
+							</div>
+						</a>
+					</li>
+					<!-- // -->
+
+					<!-- [CASE] 검색결과없음 -->
+					<li class="nodata">
+						<strong>일치하는 내용이 없습니다.</strong>
+						<span>검색 내용을 다시 확인해주세요.</span>
+					</li>
+				</ul>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

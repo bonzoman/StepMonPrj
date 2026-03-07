@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]주행거리정보 | 자동차 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>주행거리정보</h1>
+			<button type="button" data-btn="pop-close">주행거리정보 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [주행거리특약 상세정보] -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<div class="tit-sub1">
+					<h2>주행거리특약 상세정보</h2>
+					<div class="side"><a href="javascript:void(0);" class="btn-sub2 c2">예상환급계산</a></div>
+				</div>
+
+				<div class="info-con1">
+					<dl>
+						<dt>보험기간</dt>
+						<dd>2021.01.10~2022.01.09</dd>
+					</dl>
+					<dl>
+						<dt>최초등록</dt>
+						<dd>42,900Km(2021.01.21)</dd>
+					</dl>
+					<!-- [D] 미등록, 대체차량있을 경우 노출 -->
+					<div>
+						<dl>
+							<dt>차량대체1 (2022.01.21)</dt>
+							<dd>
+								<!-- [M_2022-06-03] (-)를 (:)로 변경 -->
+								<div>전: 209,383Km(2022.01.21)</div>
+								<div>후: 209,383Km(2022.03.22)</div>
+								<!-- //[M_2022-06-03] -->
+							</dd>
+						</dl>
+					</div>
+					<!-- // -->
+					<dl>
+						<dt>최종등록</dt>
+						<dd>0Km(-)</dd>
+					</dl>
+					<dl>
+						<dt>주행거리계산</dt>
+						<dd>0Km</dd>
+					</dl>
+				</div>
+
+				<div class="mes-info2 box">
+					<p>주행거리계산은 등록된 최초주행거리와 최종주행거리를 단순 차감한 것으로 주행거리 정산을 위한 평균/연간 주행거리와는 차이가 있을 수 있습니다.</p>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정산결과] -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<div class="tit-sub1">
+					<h3>정산결과</h3>
+					<p>정산배서 완료 후 조회가능</p>
+				</div>
+
+				<div class="info-con1">
+					<dl>
+						<dt>할인대상여부</dt>
+						<dd>비대상</dd>
+					</dl>
+					<dl>
+						<dt>할인보험료</dt>
+						<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>전속그룹 실적순위 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-01]	1. 표 상단 틀고정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">전속그룹 실적순위</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1 active">
+				<div class="form-field">
+					<button class="more-search" type="button"></button>
+					<dl class="form w1">
+						<dt>기준년월<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<span class="date-range">
+									<input type="text" data-role="start" placeholder="시작일 선택">
+									<span class="util">~</span>
+									<input type="text" data-role="end" placeholder="종료일 선택">
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w2"> <!-- 숨길때 hide-->
+						<dt>조직구분<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>취급자</option>
+								</select>
+								<input type="text" name="" id="" value="D034400" class="text" style="width:80px;" readonly>
+								<input type="text" name="" id="" value="전속지원팀" class="text" style="width:120px;" disabled>
+								<button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+					<div class="search-cont">
+						<dl class="form w1">
+							<dt>전속구분</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr2" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr2">
+										<span>전속(전속+비전속)</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr2">
+										<span>교차</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w2">
+							<dt>신입구분</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr3" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr3">
+										<span>신인(1-12차월)</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr3">
+										<span>기존(13차월 이상)</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form">
+							<dt>보험종목</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr4">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr4" checked="checked">
+										<span>보장성(상해, 질병, 운전자)</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr4">
+										<span>재물</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr4">
+										<span>저축성(저축성, 연금)</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form">
+							<dt>순위정렬</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr5" checked="checked">
+										<span>보장성실적순</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr5">
+										<span>달성률순</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr5">
+										<span>증원순</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr5">
+										<span>실가동순</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr5">
+										<span>수금률순</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr5">
+										<span>유지율 2~13회차 순</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr5">
+										<span>유지율 2~25회차 순</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c3">초기화</button>
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+			<div class="tab-wrap">
+				<ul class="tab1">
+					<li><a href="#tab1-1" class="">사업단</a></li>
+					<li><a href="#tab1-2" class="current">지점</a></li>
+					<li><a href="#tab1-3" class="">팀</a></li>
+					<li><a href="#tab1-4" class="">설계사</a></li>
+				</ul>
+				<div id="tab1-1" class="tab-cont">
+					<div class="data-table1">
+						<div class="info1">페이지 1/2 <span class="bar"></span> 단위: 원, 명, 건, %</div><!--[M: 2022-07-07 단위 추가]-->
+						<!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-thead" data-pos="thead">
+							<table>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2">순위</th>
+										<th scope="col" rowspan="2">상위부서명</th>
+										<th scope="col" rowspan="2">사업자명</th>
+										<th scope="col" rowspan="2">관리자</th>
+										<th scope="col" rowspan="2">관리자차월</th>
+										<th scope="col" colspan="4">보장성</th>
+										<th scope="col" colspan="3">증원</th>
+										<th scope="col" colspan="2">실가동</th>
+										<th scope="col" rowspan="2">수금률</th>
+										<th scope="col" colspan="2">유지율</th>
+									</tr>
+									<tr>
+										<th scope="col">목표</th>
+										<th scope="col">실적</th>
+										<th scope="col">달성</th>
+										<th scope="col">전월마감</th>
+										<th scope="col">합계</th>
+										<th scope="col">전속</th>
+										<th scope="col">교차</th>
+										<th scope="col">전월마감</th>
+										<th scope="col">당월</th>
+										<th scope="col">2~13회차</th>
+										<th scope="col">2~25회차</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-table" data-pos="top">
+							<!--최초 접근시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								아직 실적이 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--조회시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								해당하는 자료가 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--[M: 2022-07-06 보장성 항목 추가]-->
+							<table>
+								<colgroup>
+									<col style="width:60px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:100px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+								</colgroup>
+								<!-- <thead>
+									<tr>
+										<th scope="col" rowspan="2">순위</th>
+										<th scope="col" rowspan="2">상위부서명</th>
+										<th scope="col" rowspan="2">사업자명</th>
+										<th scope="col" rowspan="2">관리자</th>
+										<th scope="col" rowspan="2">관리자차월</th>
+										<th scope="col" colspan="4">보장성</th>
+										<th scope="col" colspan="3">증원</th>
+										<th scope="col" colspan="2">실가동</th>
+										<th scope="col" rowspan="2">수금률</th>
+										<th scope="col" colspan="2">유지율</th>
+									</tr>
+									<tr>
+										<th scope="col">목표</th>
+										<th scope="col">실적</th>
+										<th scope="col">달성</th>
+										<th scope="col">전월마감</th>
+										<th scope="col">합계</th>
+										<th scope="col">전속</th>
+										<th scope="col">교차</th>
+										<th scope="col">전월마감</th>
+										<th scope="col">당월</th>
+										<th scope="col">2~13회차</th>
+										<th scope="col">2~25회차</th>
+									</tr>
+								</thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+								<tbody>
+									<tr>
+										<td>0</td>
+										<td>전속지원팀</td>
+										<td>파트너센터</td>
+										<td>김크림</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">3,389,994</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+								</tbody>
+							</table>
+							<!--// [M: 2022-07-06 보장성 항목 추가]-->
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<div class="total-btns">
+								<div class="btns2">
+									<button type="button" class="btn-sub1 c3" disabled>이전</button>
+									<button type="button" class="btn-sub1 c3" disabled>다음</button>
+									<button type="button" class="btn-sub1 c3">엑셀다운로드</button><!--[M: 2022-07-08 버튼 추가]-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tab1-2" class="tab-cont">
+					<div class="data-table1">
+						<div class="info1">페이지 1/2 <span class="bar"></span> 단위: 원, 명, 건, %</div><!--[M: 2022-07-07 단위 추가]-->
+						<!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-thead" data-pos="thead">
+							<table>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2">순위</th>
+										<th scope="col" rowspan="2">상위부서명</th>
+										<th scope="col" rowspan="2">사업자명</th>
+										<th scope="col" rowspan="2">지점명</th>
+										<th scope="col" rowspan="2">관리자</th>
+										<th scope="col" rowspan="2">관리자직책</th>
+										<th scope="col" rowspan="2">관리자차월</th>
+										<th scope="col" rowspan="2">실적</th>
+										<th scope="col" colspan="3">증원</th>
+										<th scope="col" colspan="2">실가동</th>
+										<th scope="col" rowspan="2">수금률</th>
+										<th scope="col" colspan="2">유지율</th>
+									</tr>
+									<tr>
+										<th scope="col">합계</th>
+										<th scope="col">전속</th>
+										<th scope="col">교차</th>
+										<th scope="col">전월마감</th>
+										<th scope="col">당월</th>
+										<th scope="col">2~13회차</th>
+										<th scope="col">2~25회차</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-table" data-pos="top">
+							<!--최초 접근시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								아직 실적이 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--조회시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								해당하는 자료가 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!-- [M: 2022-07-08 테이블 항목 수정] -->
+							<table>
+								<colgroup>
+									<col style="width:60px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+								</colgroup>
+								<!-- <thead>
+									<tr>
+										<th scope="col" rowspan="2">순위</th>
+										<th scope="col" rowspan="2">상위부서명</th>
+										<th scope="col" rowspan="2">사업자명</th>
+										<th scope="col" rowspan="2">지점명</th>
+										<th scope="col" rowspan="2">관리자</th>
+										<th scope="col" rowspan="2">관리자직책</th>
+										<th scope="col" rowspan="2">관리자차월</th>
+										<th scope="col" rowspan="2">실적</th>
+										<th scope="col" colspan="3">증원</th>
+										<th scope="col" colspan="2">실가동</th>
+										<th scope="col" rowspan="2">수금률</th>
+										<th scope="col" colspan="2">유지율</th>
+									</tr>
+									<tr>
+										<th scope="col">합계</th>
+										<th scope="col">전속</th>
+										<th scope="col">교차</th>
+										<th scope="col">전월마감</th>
+										<th scope="col">당월</th>
+										<th scope="col">2~13회차</th>
+										<th scope="col">2~25회차</th>
+									</tr>
+								</thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+								<tbody>
+									<tr>
+										<td>0</td>
+										<td>전속지원팀</td>
+										<td>파트너센터</td>
+										<td>0</td>
+										<td>김크림(3131311)</td>
+										<td>P2</td>
+										<td>18</td>
+										<td class="point1">3,389,994</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- // [M: 2022-07-08 테이블 항목 수정] -->
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<div class="total-btns">
+								<div class="btns2">
+									<button type="button" class="btn-sub1 c3" disabled>이전</button>
+									<button type="button" class="btn-sub1 c3" disabled>다음</button>
+									<button type="button" class="btn-sub1 c3">엑셀다운로드</button><!--[M: 2022-07-08 버튼 추가]-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tab1-3" class="tab-cont">
+					<div class="data-table1">
+						<div class="info1">페이지 1/2 <span class="bar"></span> 단위: 원, 명, 건, %</div><!--[M: 2022-07-07 단위 추가]-->
+						<!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-thead" data-pos="thead">
+							<table>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2">순위</th>
+										<th scope="col" rowspan="2">상위부서명</th>
+										<th scope="col"	rowspan="2">사업자명</th>
+										<th scope="col"	rowspan="2">지점명</th>
+										<th scope="col"	rowspan="2">팀명</th>
+										<th scope="col"	rowspan="2">관리자</th>
+										<th scope="col"	rowspan="2">관리자<br>영업차월</th>
+										<th scope="col"	rowspan="2">관리자<br>임명차월</th>
+										<th scope="col" rowspan="2">실적</th>
+										<th scope="col" rowspan="2">수금률</th>
+										<th scope="col" colspan="2">유지율</th>
+									</tr>
+									<tr>
+										<th scope="col">2~13회차</th>
+										<th scope="col">2~25회차</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-table" data-pos="top">
+							<!--최초 접근시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								아직 실적이 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--조회시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								해당하는 자료가 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!-- [M: 2022-07-08 테이블 항목 수정] -->
+							<table>
+								<colgroup>
+									<col style="width:60px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+								</colgroup>
+								<!-- <thead>
+									<tr>
+										<th scope="col" rowspan="2">순위</th>
+										<th scope="col" rowspan="2">상위부서명</th>
+										<th scope="col"	rowspan="2">사업자명</th>
+										<th scope="col"	rowspan="2">지점명</th>
+										<th scope="col"	rowspan="2">팀명</th>
+										<th scope="col"	rowspan="2">관리자</th>
+										<th scope="col"	rowspan="2">관리자<br>영업차월</th>
+										<th scope="col"	rowspan="2">관리자<br>임명차월</th>
+										<th scope="col" rowspan="2">실적</th>
+										<th scope="col" rowspan="2">수금률</th>
+										<th scope="col" colspan="2">유지율</th>
+									</tr>
+									<tr>
+										<th scope="col">2~13회차</th>
+										<th scope="col">2~25회차</th>
+									</tr>
+								</thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+								<tbody>
+									<tr>
+										<td>0</td>
+										<td>전속지원팀</td>
+										<td>파트너센터</td>
+										<td>-</td>
+										<td>-</td>
+										<td>김크림(3123131)</td>
+										<td>0</td>
+										<td>48</td>
+										<td class="point1">3,389,994</td>
+										<td>96.6</td>
+										<td>99.9</td>
+										<td>95</td>
+									</tr>
+								</tbody>
+							</table>
+							<!--// [M: 2022-07-08 테이블 항목 수정] -->
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<div class="total-btns">
+								<div class="btns2">
+									<button type="button" class="btn-sub1 c3" disabled>이전</button>
+									<button type="button" class="btn-sub1 c3" disabled>다음</button>
+									<button type="button" class="btn-sub1 c3">엑셀다운로드</button><!--[M: 2022-07-08 버튼 추가]-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tab1-4" class="tab-cont" style="display:block;">
+					<div class="data-table1">
+						<div class="info1">페이지 1/2 <span class="bar"></span> 단위: 원, 명, 건, %</div><!--[M: 2022-07-07 단위 추가]-->
+						<!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-thead" data-pos="thead">
+							<table>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2">순위</th>
+										<th scope="col" rowspan="2">상위부서명</th>
+										<th scope="col" rowspan="2">사업자명</th>
+										<th scope="col" rowspan="2">지점명</th>
+										<th scope="col" rowspan="2">팀명</th>
+										<th scope="col" rowspan="2">유치자</th>
+										<th scope="col" rowspan="2">전속/교차</th>
+										<th scope="col" rowspan="2">차월</th>
+										<th scope="col" rowspan="2">직책</th>
+										<th scope="col" rowspan="2">성명</th>
+										<th scope="col" rowspan="2">건수</th>
+										<th scope="col" rowspan="2">실적</th>
+										<th scope="col" rowspan="2">수금률</th>
+										<th scope="col" colspan="2">유지율</th>
+									</tr>
+									<tr>
+										<th scope="col">2~13회차</th>
+										<th scope="col">2~25회차</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-table" data-pos="top">
+							<!--최초 접근시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								아직 실적이 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--조회시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								해당하는 자료가 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!-- [M: 2022-07-08 테이블 항목 수정] -->
+							<table>
+								<colgroup>
+									<col style="width:60px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+									<col style="width:80px;">
+									<col style="width:100px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+								</colgroup>
+								<!-- <thead>
+									<tr>
+										<th scope="col" rowspan="2">순위</th>
+										<th scope="col" rowspan="2">상위부서명</th>
+										<th scope="col" rowspan="2">사업자명</th>
+										<th scope="col" rowspan="2">지점명</th>
+										<th scope="col" rowspan="2">팀명</th>
+										<th scope="col" rowspan="2">유치자</th>
+										<th scope="col" rowspan="2">전속/교차</th>
+										<th scope="col" rowspan="2">차월</th>
+										<th scope="col" rowspan="2">직책</th>
+										<th scope="col" rowspan="2">성명</th>
+										<th scope="col" rowspan="2">건수</th>
+										<th scope="col" rowspan="2">실적</th>
+										<th scope="col" rowspan="2">수금률</th>
+										<th scope="col" colspan="2">유지율</th>
+									</tr>
+									<tr>
+										<th scope="col">2~13회차</th>
+										<th scope="col">2~25회차</th>
+									</tr>
+								</thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+								<tbody>
+									<tr>
+										<td>0</td>
+										<td>전속지원팀</td>
+										<td>호남사업단</td>
+										<td>호남RM8지점</td>
+										<td>호남RM8지점</td>
+										<td>김크림(11163096)</td>
+										<td>전속</td>
+										<td>F2</td>
+										<td>0</td>
+										<td>김둘리</td>
+										<td>0</td>
+										<td class="point1">3,389,994</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+								</tbody>
+							</table>
+							<!--// [M: 2022-07-08 테이블 항목 수정] -->
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<div class="total-btns">
+								<div class="btns2">
+									<button type="button" class="btn-sub1 c3" disabled>이전</button>
+									<button type="button" class="btn-sub1 c3" disabled>다음</button>
+									<button type="button" class="btn-sub1 c3">엑셀다운로드</button><!--[M: 2022-07-08 버튼 추가]-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		_fixTable.init();
+	</script>
+</div>
+</body>
+</html>

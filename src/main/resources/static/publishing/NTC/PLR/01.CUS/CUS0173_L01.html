@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 대항목(B/S) | [P] 표준산업분류코드조회 | 개인사업자/보유자 | 추가정보입력 | 사업자 | 고객등록</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="form-search2">
+			<!-- // -->
+			<div class="input-btn1">
+				<data class="selectbox" value="" data-label="대항목"></data>
+				<button type="button" aria-controls="uiPOPDPCUS0074L01">대항목 선택</button> <!-- [레이어팝업 호출 버튼] -->
+			</div>
+			<!-- // -->
+			<div class="input-btn1">
+				<data class="selectbox" value="" data-label="대분류"></data>
+				<button type="button">대분류 선택</button>
+			</div>
+			<!-- // -->
+			<div class="input-btn1">
+				<data class="selectbox" value="" data-label="중분류"></data>
+				<button type="button">중분류 선택</button>
+			</div>
+			<!-- // -->
+			<div class="input-btn1">
+				<data class="selectbox" value="" data-label="소분류"></data>
+				<button type="button">소분류 선택</button>
+			</div>
+			<!-- // -->
+			<div class="input-btn1">
+				<data class="selectbox" value="" data-label="세분류"></data>
+				<button type="button">세분류 선택</button>
+			</div>
+			<!-- // -->
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 대항목 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCUS0074L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>대항목</h1>
+			<button type="button" data-btn="pop-close">대항목 닫기</button>
+		</header>
+		<div class="content">
+			<div class="label-check2">
+				<label>
+					<input type="radio" name="form-radio6">
+					<span>A 농업, 임업 및 어업</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio6">
+					<span>B 광업</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio6">
+					<span>C 제조업</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio6">
+					<span>D 전기, 가스, 증기 및 수도</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio6">
+					<span>E 하수, 폐기물 처리, 원료재생 및 환경복원업</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1" onclick="uiFunction('uiPOPDPCUS0074L02',this)">다음</button>
+		</footer>
+	</article>
+</div>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 대분류 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCUS0074L02" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>대분류</h1>
+			<button type="button" data-btn="pop-close">대분류 닫기</button>
+		</header>
+		<div class="content">
+			<div class="label-check2">
+				<label>
+					<input type="radio" name="form-radio6">
+					<span>01 농업</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio6">
+					<span>02 임업</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio6">
+					<span>03 어업</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action" onclick="uiFunction('uiPOPDPCUS0074L01',this)">이전</button>
+			<button type="button" class="btn-action c1" onclick="uiFunction('uiPOPDPCUS0074L03',this)">다음</button>
+		</footer>
+	</article>
+</div>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 분류명 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCUS0074L03" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>분류명</h1>
+			<button type="button" data-btn="pop-close">분류명 닫기</button>
+		</header>
+		<div class="content">
+			<div class="label-check2">
+				<label>
+					<input type="radio" name="form-radio6">
+					<span>항목명</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio6">
+					<span>항목명</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio6">
+					<span>항목명</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action" onclick="uiFunction('uiPOPDPCUS0074L02',this)">이전</button>
+			<button type="button" class="btn-action c1" onclick="uiFunction('',this)">확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPDPCUS0074L01');
+	$plugin.popmodal('#uiPOPDPCUS0074L02');
+	$plugin.popmodal('#uiPOPDPCUS0074L03');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPDPCUS0074L01').trigger('outputOpen');
+
+	//샘플 : 버튼 클릭 이벤트
+	function uiFunction(page,el){
+		var _wrap = $(el).parents('.pop-modal1').attr('id');
+		if(page != ''){
+			$plugin.popmodal('#'+_wrap).outputClose(); //현재팝업 닫기
+			$('#'+page).trigger('outputOpen'); //다음팝업 열기
+		}
+	}
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>회차별 | 상세 | 미수납조회 | 실적관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-05]	1. ‘계속분’ → ‘수금액’ 텍스트 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>미수납조회 상세</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li><a href="javascript:void(0);">상태별</a></li>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">회차별</a></li>
+			</ul>
+		</div>
+
+		<div class="area-btn4" data-scroll="btn">
+			<button type="button" class="btn-t1 c2 active" title="선택됨">전체</button> <!-- 선택됨 -->
+			<button type="button" class="btn-t1 c2">2 ~ 7회차</button>
+			<button type="button" class="btn-t1 c2">8 ~ 13회차</button>
+			<button type="button" class="btn-t1 c2">14회차 이상</button>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [합계 정보] -->
+		<!-- ######################### -->
+		<h2 class="tit-sub1">강남사업단</h2>
+
+		<div class="tbl-data1">
+			<table>
+				<caption class="tit">합계</caption>
+				<colgroup>
+					<col style="width:33%">
+					<col style="width:33%">
+					<col style="width:33%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col" class="left">구분</th>
+						<th scope="col" class="right">건수(건)</th>
+						<th scope="col" class="right">금액(천원)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>수금목표액</th>
+						<td class="data-num1 right"><strong>000,000,000</strong></td>
+						<td class="data-num1 right"><strong>000,000,000</strong></td>
+					</tr>
+					<tr class="data1">
+						<th>미수납금액</th>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+					</tr>
+					<tr class="data1">
+						<th>유지</th>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+					</tr>
+					<tr class="data1">
+						<th>취소철회</th>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+					</tr>
+					<tr class="data1">
+						<th>해약</th>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+					</tr>
+					<tr>
+						<th>미수납비율</th>
+						<td class="right"><strong>00.00</strong><span>%</span></td>
+						<td class="right"><strong>00.00</strong><span>%</span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- [D] 회차 선택 시 노출 -->
+		<div class="tbl-data1 line">
+			<table>
+				<caption class="tit">정상</caption>
+				<colgroup>
+					<col style="width:33%">
+					<col style="width:33%">
+					<col style="width:33%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col" class="left">구분</th>
+						<th scope="col" class="right">건수(건)</th>
+						<th scope="col" class="right">금액(천원)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>수금목표액</th>
+						<td class="data-num1 right"><strong>000,000,000</strong></td>
+						<td class="data-num1 right"><strong>000,000,000</strong></td>
+					</tr>
+					<tr class="data1">
+						<th>미수납금액</th>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+					</tr>
+					<tr class="data1">
+						<th>유지</th>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+					</tr>
+					<tr class="data1">
+						<th>취소철회</th>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+					</tr>
+					<tr class="data1">
+						<th>해약</th>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+					</tr>
+					<tr>
+						<th>미수납비율</th>
+						<td class="right"><strong>00.00</strong><span>%</span></td>
+						<td class="right"><strong>00.00</strong><span>%</span></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table>
+				<caption class="tit">연체</caption>
+				<colgroup>
+					<col style="width:33%">
+					<col style="width:33%">
+					<col style="width:33%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col" class="left">구분</th>
+						<th scope="col" class="right">건수(건)</th>
+						<th scope="col" class="right">금액(천원)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>수금목표액</th>
+						<td class="data-num1 right"><strong>000,000,000</strong></td>
+						<td class="data-num1 right"><strong>000,000,000</strong></td>
+					</tr>
+					<tr class="data1">
+						<th>미수납금액</th>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+					</tr>
+					<tr class="data1">
+						<th>유지</th>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+					</tr>
+					<tr class="data1">
+						<th>취소철회</th>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+					</tr>
+					<tr class="data1">
+						<th>해약</th>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+						<td class="right"><div class="data-num1"><strong>000,000,000</strong></div></td>
+					</tr>
+					<tr>
+						<th>미수납비율</th>
+						<td class="right"><strong>00.00</strong><span>%</span></td>
+						<td class="right"><strong>00.00</strong><span>%</span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- // -->
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1 col" data-sticky="bottom">
+			<a href="javascript:void(0);" class="btn-action c1">장기수금액현황</a><!-- [M 2022-10-05] 텍스트 수정 -->
+			<a href="javascript:void(0);" class="btn-action c1">수금관리</a>
+		</div>
+		<!-- ######################### -->
+	</div>
+</main>
+</body>
+</html>

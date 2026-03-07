@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 일정등록 | 캘린더 | 일정관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1" aria-controls="uiPOPDPCOM1420L01">등록</button> <!-- [D] 레이어팝업 호출 샘플 -->
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 일정등록 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCOM1420L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>일정등록</h1>
+			<button type="button" data-btn="pop-close">일정등록 닫기</button>
+		</header>
+		<div class="content">
+			<p>휴대폰의 달력에 일정을 저장합니다.<br>일정 관리에 등록된 일정은 휴대폰 달력에 저장만 가능합니다.</p>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1">저장</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPDPCOM1420L01');
+
+	//레이어팝업 강제오픈
+	$('[aria-controls="uiPOPDPCOM1420L01"]').trigger('click');
+//-->
+</script>
+</body>
+</html>

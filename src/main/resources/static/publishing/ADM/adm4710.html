@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>도입 공지사항 | 커뮤니티 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">공지사항 등록</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="sub">
+				<button type="button" class="btn-action c3">목록</button>
+				<button type="button" class="btn-action c1">등록</button>
+			</div>
+			<div class="tbl-write1">
+				<table>
+					<colgroup>
+						<col style="width:150px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">분류<em class="imp"><span>필수</span></em></th>
+							<td>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="formA" checked="checked">
+										<span>공지</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="formA">
+										<span>일반</span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">고정여부</th>
+							<td>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="checkbox" name="ck01" checked="checked">
+										<span>고정</span>
+									</label>
+									<input type="text" class="date" placeholder="날짜 선택">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">게시기한</th>
+							<td>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="rd01">
+										<span>선택</span>
+									</label>
+									<input type="text" class="date" placeholder="날짜 선택">
+									<label class="label-check">
+										<input type="radio" name="rd01" checked="checked">
+										<span>영구</span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">예약게시</th>
+							<td>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="checkbox" name="ck03" checked="checked">
+										<span>선택</span>
+									</label>
+									<input type="text" class="date" placeholder="날짜 선택">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">제목<em class="imp"><span>필수</span></em></th>
+							<td>
+								<div class="form-row">
+									<input type="text" class="text" name="" id="" value="" placeholder="제목 입력" style="width:100%">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">내용<em class="imp"><span>필수</span></em></th>
+							<td class="editor">
+								<div style="height:200px;">
+									에디터영역
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">이미지 첨부
+								<div class="tooltip ">
+									<button type="button"></button>
+									<div class="tooltip-layer">
+										<ul class="list-dot1">
+											<li>첨부파일의 사이즈는 <b>000px X 000px</b> 사이즈를 준수해주세요.</li>
+											<li>첨부파일은 <b>png, jpg, jpeg, bmp, gif</b> 파일만 등록이 가능합니다.  </li>
+											<li>첨부파일 용량은 <b>5M</b>를 넘을 수 없습니다. </li>
+										</ul>
+									</div>
+								</div>
+							</th>
+							<td>
+								<span class="wrap-file">
+									<input type="file" tabindex="-1">
+									<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic3">첨부하기</button>
+								</span>
+								<div class="file-div">
+									<span class="file-name">가나다라마바사.png(0.2mb)<button type="button" class="btn-del1">삭제</button></span>
+								</div>
+								<div class="file-div">
+									<span class="file-name">가나다라마바사.jpg(2.2mb) <button type="button" class="btn-del1">삭제</button></span>
+								</div>
+							</td>
+						</tr>
+						<!-- <tr>
+							<th scope="row">게시물 노출 여부<em class="imp"><span>필수</span></em></th>
+							<td>
+								<label class="label-check">
+									<input type="radio" name="form11" checked="checked">
+									<span>노출</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="form11">
+									<span>미노출</span>
+								</label>
+							</td>
+						</tr> -->
+					</tbody>
+				</table>
+			</div>
+			<div class="wrap-btn">
+				<div class="btns">
+					<button type="button" class="btn-action c3">목록</button>
+				</div>
+				<div class="btns">
+					<button type="button" class="btn-action c1">등록</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

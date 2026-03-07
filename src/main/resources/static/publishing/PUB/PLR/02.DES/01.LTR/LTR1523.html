@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>STEP1) 고객정보 | 쉬운설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-19]	① 띄어쓰기 추가
+	*	[M 2022-11-17]	① 할인대상 2번으로 옮김
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>쉬운 설계</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [입력정보요약] DP-설계-0521 -->
+		<!-- ######################### -->
+		<div class="wrap-step1" data-sticky="top">
+			<!-- ### [단계이동 및 입력정보요약] ###
+				현재단계표시 : <li aria-current="step">
+			-->
+			<div class="info-step1" data-autoset="toggle">
+				<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+				<div data-toggle="content">
+					<ol>
+						<!-- // -->
+						<li aria-current="step">
+							<span>01.고객정보</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a> <!-- 2022-12-20 이동버튼 추가 -->
+							<div class="data1">
+								<dl>
+									<dt>계/피 유형</dt>
+									<dd>상이</dd>
+								</dl>
+								<dl>
+									<dt>피보험자 정보</dt>
+									<dd>공지철/30세/여/1급 (사무직)<br>공지철/30세/여/1급(사무직)공지철/30세/여/1급 (사무직)공지철/30세/여/1급 (사무직)</dd> <!-- 2022-10-19 띄어쓰기 추가 -->
+								</dl>
+								<dl>
+									<dt>계약자 정보</dt>
+									<dd>하다미</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<span>02.상품선택</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							<div class="data1 none">
+								<dl>
+									<dt>보험종류</dt>
+									<dd>let:simple 간편345 건강보험(2207)</dd>
+								</dl>
+								<dl>
+									<dt>보험시기</dt>
+									<dd>2020.03.01</dd>
+								</dl>
+								<dl>
+									<dt>보험유형</dt>
+									<dd>1종/20년납/100세만기/납입면제/해지환급금/미지급형</dd>
+								</dl>
+								<!-- 2022-11-17 마크업 변경 -->
+								<dl>
+									<dt>할인대상</dt>
+									<dd>건강정보 할인대상 Y<br>유공자 할인대상 N</dd>
+								</dl>
+								<!-- //2022-11-17 마크업 변경 -->
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<span>03.보장(담보)설정</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							<div class="data1 none">
+								<!-- 2022-11-17 마크업 변경 -->
+								<dl>
+									<dt>보장(담보)</dt>
+									<dd>상해후유장해3%이상 외 7건</dd>
+								</dl>
+								<!-- //2022-11-17 마크업 변경 -->
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<span>04.보험료 및 기타</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							<div class="data1 none">
+								<dl>
+									<dt>월 보험료</dt>
+									<dd class="data-num1"><strong>253,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>알릴사항</dt>
+									<dd>유</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<span>05.일반사항</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							<div class="data1">
+								<dl>
+									<dt>증권발송유형</dt>
+									<dd>알림톡</dd>
+								</dl>
+								<dl>
+									<dt>첫회보험료</dt>
+									<dd>카드납부</dd>
+									<dd class="side">
+										<!--
+											카드클래스명 정의
+											CACD_AI3 : 롯데
+											CACD_AF3 : 삼성
+											CACD_AA3 : 비씨
+											CACD_AG3 : 신한
+											CACD_AB3 : 국민
+											CACD_AD3 : 현대
+											CACD_AC3 : 하나
+											CACD_AL3 : 농협
+											CACD_AH3 : 씨티
+											CACD_AE3 : 신한(구_엘지)
+										-->
+										<span class="CACD_AF3">삼성카드(1212121212121212)삼성카드(1212121212121212)삼성카드(1212121212121212) 삼성카드(1212121212121212)삼성카드(1212121212121212)삼성카드(1212121212121212)</span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>계속 보험료</dt>
+									<dd class="side">
+										<!--
+											은행클래스명 정의
+											BKCD_003 : 기업은행
+											BKCD_004 : 국민은행
+											BKCD_005 : 외환은행
+											BKCD_007 : 수협중앙회
+											BKCD_011 : 농협중앙회
+											BKCD_020 : 우리은행
+											BKCD_023 : SC제일은행
+											BKCD_088 : 신한(통합)은행
+											BKCD_027 : 씨티은행
+											BKCD_031 : 대구은행
+											BKCD_032 : 부산은행
+											BKCD_034 : 광주은행
+											BKCD_035 : 제주은행
+											BKCD_037 : 전북은행
+											BKCD_039 : 경남은행
+											BKCD_045 : 새마을금고중앙회
+											BKCD_048 : 신협중앙회
+											BKCD_071 : 우체국
+											BKCD_081 : 하나은행
+											BKCD_089 : 케이뱅크
+											BKCD_090 : 한국카카오은행
+											BKCD_092 : 토스뱅크
+											BKCD_240 : 삼성증권
+										-->
+										<span class="BKCD_020">우리은행(12345678912345)</span>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+					</ol>
+
+					<!-- # 바로가기 # -->
+					<div class="btn-set1 img-set1">
+						<a href="#" class="ic1">실손정액조회</a>
+						<a href="#" class="ic2">승환여부</a>
+						<a href="#" class="ic3">가입제안서</a>
+						<a href="#" class="ic4">모바일 전자서명</a>
+					</div>
+
+					<!-- # 보험모집인 # -->
+					<div class="data1">
+						<dl>
+							<dt>모집인</dt>
+							<dd>하다미(111455)</dd>
+						</dl>
+					</div>
+					<!-- # // # -->
+				</div>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [계피동일 여부확인] DP-설계-0523 -->
+		<!-- ######################### -->
+		<div class="wrap-area1">
+			<h2 class="hide">고객정보</h2>
+
+			<div class="tit-section">
+				<p>보험을 보장받으실 분과<br>보험료를 납부하실 분이 같은가요?</p>
+				<span>쉬운설계란? <a href="#uiTOOLTIPINFO1" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></span>
+			</div>
+
+			<fieldset class="label-img3 img-set1">
+				<legend>계피동일 확인</legend>
+
+				<label class="ic1">
+					<input type="radio" name="form-radio-img1">
+					<em>예</em>
+					<span>동일한<br>사람이에요.</span>
+				</label>
+
+				<label class="ic2">
+					<input type="radio" name="form-radio-img1">
+					<em>아니오</em>
+					<span>다른 사람이<br>보장받아요.</span>
+				</label>
+			</fieldset>
+
+			<dl class="txt-bul1 line2">
+				<dt>보험계약자와 피보험자란?</dt>
+				<dd><strong>피보험자</strong>: 보험을 보장받으실 분</dd>
+				<dd><strong>계약자</strong>: 보험료를 납부하실 분</dd>
+			</dl>
+			<p class="mes-t1">보험료 납부자와 계약자는 다른 사람일 수 있어요.</p>
+
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" onclick="uiFunction(this,'next')">다음</button>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [피보험자 선택] DP-설계-0524 -->
+		<!-- ######################### -->
+		<div class="wrap-area1 none">
+			<h2 class="hide">피보험자 선택</h2>
+
+			<div class="tit-section line2">
+				<!-- [CASE1] 계/피 동일 --><div class="info-step3"><p><strong>2</strong>개의 내용 중 <strong>1</strong>번째 입력</p></div>
+				<!-- [CASE2] 계/피 상이 --><div class="info-step3"><p><strong>4</strong>개의 내용 중 <strong>1</strong>번째 입력</p></div>
+				<p>보험을 보장받으실 고객님을<br>선택해주세요.</p>
+				<div class="area-btn4">
+					<button type="button" class="btn-sub3 c2">고객등록</button>
+				</div>
+			</div>
+
+			<fieldset class="form-search1">
+				<legend>고객검색</legend>
+				<div class="text">
+					<input type="text" placeholder="고객을 검색해주세요" title="고객이름">
+					<button type="button" class="icon-com1 ic2">검색하기</button>
+				</div>
+			</fieldset>
+
+			<div class="wrap-section">
+				<!-- [총 명수] -->
+				<div class="area-info1">
+					<p><strong>최근등록고객</strong></p> <!-- 2022-12-14 변경 -->
+				</div>
+
+				<!-- [고객목록] -->
+				<div class="info-data3 t1">
+					<ul>
+						<!-- // -->
+						<li>
+							<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+								<strong>하다미</strong>
+								<span>
+									<span>1984.02.05</span>
+									<span>32세</span>
+									<span>남</span>
+								</span>
+							</div>
+							<div class="data3">
+								<span>보험생일</span>
+								<strong>03.01</strong>
+							</div>
+							<div class="data4">
+								<span>보장분석일</span>
+								<strong>2022.01.01</strong>
+							</div>
+							<div class="data4">
+								<span>가입동의설계 만료일</span>
+								<strong>2022.02.01</strong>
+							</div>
+							<button type="button" data-btn="selection" class="selected">선택</button> <!-- [D] 선택된 경우 클래스(selected) 추가 -->
+						</li>
+						<!-- // -->
+						<li>
+							<div class="data-info2" data-value="102701">
+								<strong>하다미</strong>
+								<span>
+									<span>1984.02.05</span>
+									<span>32세</span>
+									<span>남</span>
+								</span>
+							</div>
+							<div class="data3">
+								<span>보험생일</span>
+								<strong>03.01</strong>
+							</div>
+							<div class="data4">
+								<span>보장분석일</span>
+								<strong>2022.01.01</strong>
+							</div>
+							<div class="data4">
+								<span>가입동의설계 만료일</span>
+								<strong>2022.02.01</strong>
+							</div>
+							<button type="button" data-btn="selection">선택</button>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="data-info2" data-value="102701">
+								<strong>하다미</strong>
+								<span>
+									<span>1984.02.05</span>
+									<span>32세</span>
+									<span>남</span>
+								</span>
+							</div>
+							<div class="data3">
+								<span>보험생일</span>
+								<strong>03.01</strong>
+							</div>
+							<div class="data4">
+								<span>보장분석일</span>
+								<strong>2022.01.01</strong>
+							</div>
+							<div class="data4">
+								<span>가입동의설계 만료일</span>
+								<strong>2022.02.01</strong>
+							</div>
+							<button type="button" data-btn="selection">선택</button>
+						</li>
+						<!-- [CASE] 사업자 -->
+						<li>
+							<div class="data-info2" data-value="ic1">
+								<strong>사업자명</strong>
+							</div>
+							<div class="data1">
+								<span>사업자번호</span>
+								<strong>104-81-30770</strong>
+							</div>
+							<div class="data4">
+								<span>보장분석일</span>
+								<strong>2022.01.01</strong>
+							</div>
+							<div class="data4">
+								<span>가입동의설계 만료일</span>
+								<strong>2022.02.01</strong>
+							</div>
+							<button type="button" data-btn="selection">선택</button>
+						</li>
+						<!-- // -->
+					</ul>
+					<!-- // -->
+				</div>
+				<!-- // -->
+			</div>
+
+			<div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action c3" onclick="uiFunction(this,'prev')">이전</button>
+				<button type="button" class="btn-action c1" onclick="uiFunction(this,'next')">다음</button>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [주계약자정보확인] DP-설계-0524 -->
+		<!-- ######################### -->
+		<div class="wrap-area1 none">
+			<h2 class="hide">주계약자정보확인</h2>
+
+			<div class="tit-section line2">
+				<!-- [CASE1] 계/피 동일 --><div class="info-step3"><p><strong>2</strong>개의 내용 중 <strong>2</strong>번째 입력</p></div>
+				<!-- [CASE2] 계/피 상이 --><div class="info-step3"><p><strong>4</strong>개의 내용 중 <strong>2</strong>번째 입력</p></div>
+				<p>보험을 보장받으실 고객님의<br>정보를 확인해주세요.</p>
+				<div class="area-btn4">
+					<button type="button" class="btn-sub3 c2">정보수정</button> <!-- 2022-12-14 변경 -->
+				</div>
+			</div>
+
+			<div class="wrap-section">
+				<!-- [고객정보] -->
+				<div class="info-data3 t1">
+					<!-- [CASE] 고객 -->
+					<dl>
+						<dt class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong>하다미</strong>
+							<span>
+								<span>1984.02.05</span>
+								<span>32세</span>
+								<span>남</span>
+							</span>
+						</dt>
+						<dd class="data3">
+							<span>보험생일</span>
+							<strong>03.01</strong>
+						</dd>
+						<dd class="data2">
+							<span>주소</span>
+							<strong>주소지</strong>
+						</dd>
+					</dl>
+
+					<!-- [CASE] 사업자 -->
+					<dl>
+						<dt class="data-info2" data-value="ic1">
+							<strong>사업자명</strong>
+						</dt>
+						<dd class="data1">
+							<span>사업자번호</span>
+							<strong>104-81-30770</strong>
+						</dd>
+						<dd class="data2">
+							<span>주소</span>
+							<strong>주소지</strong>
+						</dd>
+					</dl>
+					<!-- // -->
+				</div>
+
+				<!-- [직업정보] -->
+				<div class="con-t7 t1">
+					<dl>
+						<dt>직업</dt>
+						<dd>
+							<strong>정보통신(IT)관련 개발자 및 프로그래머(모바일 애플리케이션 프로그래머 제외)</strong>
+							<span>상해급수 1급</span> <!-- 2022-12-26 텍스트 변경 -->
+						</dd>
+					</dl>
+				</div>
+
+				<!-- [안내문구] -->
+				<div class="mes-info2 box">
+					<dl>
+						<dt>직업정보를 꼭 확인해주세요!</dt>
+						<dd>직업에 따라 보험료가 인상되거나, 가입할 수 있는 보험이 제한될 수 있어요.</dd>
+					</dl>
+				</div>
+
+				<!-- [선택영역] -->
+				<fieldset class="form-wrap1 line">
+					<legend>운전형태 및 이륜차 운전여부 확인</legend>
+
+					<dl class="form">
+						<dt>운전형태</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="formRadio1">
+									<span>자가용</span>
+								</label>
+								<label>
+									<input type="radio" name="formRadio1">
+									<span>영업용</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>이륜차</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="formRadio2">
+									<span>운전 안함</span>
+								</label>
+								<label>
+									<input type="radio" name="formRadio2">
+									<span>운전함</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+				<!-- // -->
+			</div>
+
+			<div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action c3" onclick="uiFunction(this,'prev')">이전</button>
+				<button type="button" class="btn-action c1" onclick="uiFunction(this,'next')">다음</button>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [계피상이:계약자정보확인] DP-설계-0524 -->
+		<!-- ######################### -->
+		<div class="wrap-area1 none">
+			<h2 class="hide">계약자정보확인</h2>
+
+			<div class="tit-section line2">
+				<div class="info-step3"><p><strong>4</strong>개의 내용 중 <strong>3</strong>번째 입력</p></div>
+				<p>보험료를 납부하실 고객님을<br>선택해주세요.</p>
+			</div>
+
+			<fieldset class="form-search1">
+				<legend>고객검색</legend>
+				<div class="text">
+					<input type="text" placeholder="고객을 검색해주세요" title="고객이름">
+					<button type="button" class="icon-com1 ic2">검색하기</button>
+				</div>
+			</fieldset>
+
+			<div class="wrap-section">
+				<div class="area-info1">
+					<p>총 <strong>000명</strong></p>
+				</div>
+
+				<!-- [고객목록] -->
+				<div class="info-data3 t1">
+					<ul>
+						<!-- // -->
+						<li>
+							<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+								<strong>하다미</strong>
+								<span>
+									<span>1984.02.05</span>
+									<span>32세</span>
+									<span>남</span>
+								</span>
+							</div>
+							<div class="data3">
+								<span>보험생일</span>
+								<strong>03.01</strong>
+							</div>
+							<div class="data4">
+								<span>보장분석일</span>
+								<strong>2022.01.01</strong>
+							</div>
+							<div class="data4">
+								<span>가입동의설계 만료일</span>
+								<strong>2022.02.01</strong>
+							</div>
+							<button type="button" data-btn="selection" class="selected">선택</button> <!-- [D] 선택된 경우 클래스(selected) 추가 -->
+						</li>
+						<!-- // -->
+						<li>
+							<div class="data-info2" data-value="102701">
+								<strong>하다미</strong>
+								<span>
+									<span>1984.02.05</span>
+									<span>32세</span>
+									<span>남</span>
+								</span>
+							</div>
+							<div class="data3">
+								<span>보험생일</span>
+								<strong>03.01</strong>
+							</div>
+							<div class="data4">
+								<span>보장분석일</span>
+								<strong>2022.01.01</strong>
+							</div>
+							<div class="data4">
+								<span>가입동의설계 만료일</span>
+								<strong>2022.02.01</strong>
+							</div>
+							<button type="button" data-btn="selection">선택</button>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="data-info2" data-value="102701">
+								<strong>하다미</strong>
+								<span>
+									<span>1984.02.05</span>
+									<span>32세</span>
+									<span>남</span>
+								</span>
+							</div>
+							<div class="data3">
+								<span>보험생일</span>
+								<strong>03.01</strong>
+							</div>
+							<div class="data4">
+								<span>보장분석일</span>
+								<strong>2022.01.01</strong>
+							</div>
+							<div class="data4">
+								<span>가입동의설계 만료일</span>
+								<strong>2022.02.01</strong>
+							</div>
+							<button type="button" data-btn="selection">선택</button>
+						</li>
+						<!-- [CASE] 사업자 -->
+						<li>
+							<div class="data-info2" data-value="ic1">
+								<strong>사업자명</strong>
+							</div>
+							<div class="data1">
+								<span>사업자번호</span>
+								<strong>104-81-30770</strong>
+							</div>
+							<div class="data4">
+								<span>보장분석일</span>
+								<strong>2022.01.01</strong>
+							</div>
+							<div class="data4">
+								<span>가입동의설계 만료일</span>
+								<strong>2022.02.01</strong>
+							</div>
+							<button type="button" data-btn="selection">선택</button>
+						</li>
+						<!-- // -->
+					</ul>
+					<!-- // -->
+				</div>
+				<!-- // -->
+			</div>
+
+			<div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action c3" onclick="uiFunction(this,'prev')">이전</button>
+				<button type="button" class="btn-action c1" onclick="var el = this; ui.alert('LTR1527_L01.html 참고',function(e){uiFunction(el,'next')})">다음</button>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [계피상이:계피정보확인] DP-설계-0524 -->
+		<!-- ######################### -->
+		<div class="wrap-area1 none">
+			<h2 class="hide">계피정보확인</h2>
+
+			<div class="tit-section line2">
+				<div class="info-step3"><p><strong>4</strong>개의 내용 중 <strong>4</strong>번째 입력</p></div>
+				<p>고객님의 정보를<br>확인해주세요.</p>
+			</div>
+
+			<div class="wrap-section">
+				<section>
+					<div class="tit-sub1">
+						<h3>보장받으실 고객 정보</h3>
+						<div class="side"><button type="button" class="btn-sub2 c2">정보변경</button></div>
+					</div>
+
+					<div class="data-info2 t1" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+						<strong>하다미</strong>
+						<span>
+							<span>1990.01.01</span>
+							<span>남</span>
+						</span>
+					</div>
+
+					<div class="info-con1">
+						<dl>
+							<dt>직업</dt>
+							<dd>소방 사무직 관리자(소방감 이상)</dd>
+						</dl>
+						<dl>
+							<dt>자택 주소</dt>
+							<dd>
+								<div>(04406)</div>
+								<div data-masking="true">서울특별시 중구 소월로 3 롯데손해보험빌딩 **** , ***</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>운전형태</dt>
+							<dd>자가용</dd>
+						</dl>
+						<dl>
+							<dt>이륜차</dt>
+							<dd>운전 안함</dd>
+						</dl>
+					</div>
+				</section>
+
+				<section>
+					<h3 class="tit-sub1">납부하실 고객 정보</h3>
+					<div class="data-info2 t1" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+						<strong>하다미</strong>
+						<span>
+							<span>1990.01.01</span>
+							<span>남</span>
+						</span>
+					</div>
+					<div class="info-con1">
+						<dl>
+							<dt>관계</dt>
+							<dd>
+								<div>부모</div>
+								<div class="area-btn4"><button type="button" class="btn-sub3 c2">관계변경</button></div>
+							</dd>
+						</dl>
+					</div>
+				</section>
+			</div>
+
+			<div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action c3" onclick="uiFunction(this,'prev')">이전</button>
+				<button type="button" class="btn-action c1" onclick="ui.alert('상품선택페이지이동')">다음</button>
+			</div>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ######################### -->
+<!-- [툴팁영역] 쉬운설계란? -->
+<!-- ######################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">쉬운설계 안내사항</dt>
+		<dd>가입설계에 익숙하지 않은 신인 설계사님이<br>쉽게 장기 보험 설계를 할 수 있도록 도와주는<br>기능이에요.<br>기존 설계사님도 빠르게 설계를 할 수 있어요.</dd> <!-- 2022-12-01 텍스트 변경 -->
+		<dd><button type="button" data-btn="pop-close">파일 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+
+<script>
+//<!--
+	/* ************************************
+	*  샘플 : [다음][이전] 클릭이벤트
+	************************************ */
+	function uiFunction(el, target){
+		var _parents = $(el).parents('.wrap-area1');
+		$('.wrap-area1').addClass('none');
+		if(target == 'next') _parents.next().removeClass('none');
+		else _parents.prev().removeClass('none');
+	}
+//-->
+</script>
+</body>
+</html>

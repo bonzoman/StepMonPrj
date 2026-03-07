@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>상세 | 동의현황조회 | 고객동의</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>동의현황조회 상세</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [고객정보] -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<h2 class="data-info2 t2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+				<strong>고객명</strong>
+				<span>
+					<span>생년월일</span>
+					<span>성별</span>
+				</span>
+			</h2>
+			<!-- [CASE] 고객정보가 있을 경우 -->
+			<button type="button" class="btn">고객정보상세이동</button>
+			<!-- [CASE] 고객정보가 없을 경우 -->
+			<button type="button" class="icon-com1 ic1 simple">고객등록</button>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭버튼] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-autoset="tab" data-sticky="top">
+			<ul>
+				<li class="active"><a href="#uiTabSection1" aria-current="page">가입설계동의</a></li>
+				<li><a href="#uiTabSection2">상품소개동의</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭영역] : 가입설계동의 -->
+		<!-- ######################### -->
+		<div id="uiTabSection1" class="ui-tabcon active">
+			<!-- # [CASE] 이력있음 # -->
+			<section>
+				<h3 class="tit-sub1">가입설계동의정보</h3>
+				<div class="info-con2">
+					<dl>
+						<dt>동의구분</dt>
+						<dd>휴대폰(LMS)</dd>
+					</dl>
+					<dl>
+						<dt>등록상태</dt>
+						<dd>정상</dd>
+					</dl>
+					<dl>
+						<dt>수집이용조회</dt>
+						<dd>동의(전체)</dd>
+					</dl>
+					<dl>
+						<dt>동의일</dt>
+						<dd>2025.11.15</dd>
+					</dl>
+					<dl>
+						<dt>동의만료일</dt>
+						<dd>2026.11.14</dd>
+					</dl>
+					<dl>
+						<dt>등록일시</dt>
+						<dd>2025.11.15 12:03:11</dd>
+					</dl>
+					<dl>
+						<dt>기준일<br>(상태확정일)</dt>
+						<dd>2025.11.15 12:03:11</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- # [CASE] 이력없을 경우 # -->
+			<div class="mes-result1">
+				<p>
+					<strong>동의이력 내용이 없어요.</strong>
+					<span>가입설계동의를 받아<br>고객등록을 진행해보세요!</span>
+				</p>
+			</div>
+
+			<!-- # 하단버튼 # -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">가입설계동의 받기</button>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭영역] : 상품소개동의 -->
+		<!-- ######################### -->
+		<div id="uiTabSection2" class="ui-tabcon">
+			<!-- # [CASE] 이력있음 # -->
+			<section>
+				<h3 class="tit-sub1">상품소개동의현황</h3>
+				<div class="info-con2">
+					<ul>
+						<li>
+							<div>동의일</div>
+							<div>2022.05.18</div>
+						</li>
+						<li>
+							<div>동의만료일</div>
+							<div>2027.05.18</div>
+						</li>
+						<li>
+							<div>동의입력자</div>
+							<div>3392898/변선미</div>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<div>수집 &middot; 이용동의</div>
+							<div>동의</div>
+						</li>
+						<li>
+							<div>조회동의</div>
+							<div>동의</div>
+						</li>
+						<li>
+							<div>제공동의</div>
+							<div>동의</div>
+						</li>
+						<li>
+							<div>광고성정보 수신동의</div>
+							<div class="data-word3">
+								<span>문자</span>
+								<span>이메일</span>
+								<span>우편</span>
+							</div>
+						</li>
+						<li>
+							<div>Do Not Call</div>
+							<div>비동의</div>
+						</li>
+						<li>
+							<div>이메일수신동의</div>
+							<div>
+								<div>동의</div>
+								<div class="area-btn3"><a href="javascript:void(0);" class="btn-sub3 c2">이력보기</a></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- # 동의이력 # -->
+				<div class="wrap-section3">
+					<h4 class="tit-sub1">동의이력</h4>
+					<div class="info-data2">
+						<!-- // -->
+						<dl>
+							<dt class="tit">동의이력</dt>
+							<dd class="info">
+								<i class="icon-state2 ic4">동의</i>
+								<i class="icon-state2 ic2">동의안함</i>
+								<span>0000.00.00~0000.00.00</span>
+							</dd>
+							<dd class="txt data-word3">
+								<span>문자수신</span>
+								<span>전화수신</span>
+								<span>이메일수신</span>
+								<span>우편수신</span>
+							</dd>
+							<dd><a href="javascript:void(0);" class="link">상세보기</a></dd>
+						</dl>
+						<!-- // -->
+						<dl>
+							<dt class="tit">마케팅활용수집, 이용동의여부</dt>
+							<dd class="info">
+								<i class="icon-state2 ic4">동의</i>
+								<span>2022.05.14~2027.05.14</span>
+							</dd>
+							<dd class="txt data-word3">
+								<span>문자수신</span>
+							</dd>
+							<dd><a href="javascript:void(0);" class="link">상세보기</a></dd>
+						</dl>
+						<!-- // -->
+						<dl>
+							<dt class="tit">설계사대리점제공여부</dt>
+							<dd class="info">
+								<i class="icon-state2 ic2">동의안함</i>
+								<span>2021.12.25</span>
+							</dd>
+							<dd><a href="javascript:void(0);" class="link">상세보기</a></dd>
+						</dl>
+						<!-- // -->
+						<dl>
+							<dt class="tit">마케팅활용수집, 이용동의여부</dt>
+							<dd class="info">
+								<i class="icon-state2 ic2">동의안함</i>
+								<span>2021.12.25</span>
+							</dd>
+							<dd><a href="javascript:void(0);" class="link">상세보기</a></dd>
+						</dl>
+						<!-- // -->
+						<dl>
+							<dt class="tit">마케팅활용수집, 이용동의여부</dt>
+							<dd class="info">
+								<i class="icon-state2 ic4">동의</i>
+								<span>2018.03.08~2023.03.08</span>
+							</dd>
+							<dd class="txt data-word3">
+								<span>문자수신</span>
+								<span>전화수신</span>
+							</dd>
+							<dd><a href="javascript:void(0);" class="link">상세보기</a></dd>
+						</dl>
+						<!-- // -->
+					</div>
+				</div>
+			</section>
+
+			<!-- # [CASE] 이력없을 경우 # -->
+			<div class="mes-result1">
+				<p>
+					<strong>동의이력 내용이 없어요.</strong>
+					<span>고객님으로부터<br>상품소개동의를 받아보세요!</span>
+				</p>
+			</div>
+
+			<!-- # 하단버튼 # -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">상품소개동의 받기</button>
+			</div>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

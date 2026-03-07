@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>고객찾기 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220215">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+
+<div id="popup">
+	<div class="pop-header">
+		<h1>고객 찾기</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<fieldset class="form-search1">
+			<div class="form-field">
+				<dl class="form">
+					<dt>고객유형</dt>
+					<dd>
+						<div class="form-row">
+							<select name="" id="" class="selectbox" style="width:100px;">
+								<option value="">전체</option>
+								<option value="">개인</option>
+								<option value="">사업자</option>
+								<option value="">단체</option>
+							</select>
+						</div>
+					</dd>
+				</dl>
+				<dl class="form w3">
+					<dt>고객명</dt>
+					<dd><input type="text" name="" id="" class="text" style="width:150px;" placeholder="고객/사업자/단체명"></dd>
+				</dl>
+				<dl class="form w3">
+					<dt>고객식별번호</dt>
+					<dd><input type="text" name="" id="" class="text" style="width:200px;" placeholder="사업자/법인/보유자/단체 번호"></dd>
+				</dl>
+				<dl class="form w3">
+					<dt>생년월일</dt>
+					<dd><input type="text" name="" id="" class="text" style="width:150px;" placeholder="예) YYMMDD"></dd>
+				</dl>
+				<dl class="form w3">
+					<dt>휴대폰번호</dt>
+					<dd><input type="text" name="" id="" class="text" style="width:200px;" placeholder="예) 01012341234"></dd>
+				</dl>
+			</div>
+
+			<div class="area-action">
+				<button type="button" class="btn-action c1">검색</button>
+			</div>
+		</fieldset>
+
+		<div class="tit-sub2">
+			<h2>전체 135건</h2>
+		</div>
+		<div class="tbl-list1 scr1">
+			<table>
+				<colgroup>
+					<col style="width:100px;">
+					<col style="width:120px;">
+					<col style="width:100px;">
+					<col style="width:80px;">
+					<col style="width:140px;">
+					<col style="width:110px;">
+					<col style="width:110px;">
+					<col style="width:120px;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col"><span class="sort">고객명</span></th>
+						<th scope="col">고객식별번호</th>
+						<th scope="col">고객유형</th>
+						<th scope="col">연락처</th>
+						<th scope="col"><span class="sort">주소</span></th>
+						<th scope="col"><span class="sort">가입설계동의</span></th>
+						<th scope="col"><span class="sort">상품소개동의</span></th>
+						<th scope="col">법인번호</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="current"><!-- 선택시 -->
+						<td>김지민</td>
+						<td>951212-1******</td>
+						<td>개인</td>
+						<td>010****6666</td>
+						<td>서울 중구</td>
+						<td>Y</td>
+						<td>Y</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>김크림</td>
+						<td>930215-2******</td>
+						<td>개인사업자</td>
+						<td>010****6666</td>
+						<td>서울 종로구</td>
+						<td>Y</td>
+						<td>Y</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>김크림</td>
+						<td>930215-2******</td>
+						<td>단체</td>
+						<td>010****6666</td>
+						<td>서울 강남구</td>
+						<td>Y</td>
+						<td>Y</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>김크림</td>
+						<td>930215-2******</td>
+						<td>개인사업자</td>
+						<td>010****6666</td>
+						<td>서울 종로구</td>
+						<td>Y</td>
+						<td>Y</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>김크림</td>
+						<td>930215-2******</td>
+						<td>단체</td>
+						<td>010****6666</td>
+						<td>서울 강남구</td>
+						<td>Y</td>
+						<td>Y</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>김지민</td>
+						<td>951212-1******</td>
+						<td>개인</td>
+						<td>010****6666</td>
+						<td>서울 중구</td>
+						<td>Y</td>
+						<td>Y</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>김크림</td>
+						<td>930215-2******</td>
+						<td>개인사업자</td>
+						<td>010****6666</td>
+						<td>서울 종로구</td>
+						<td>Y</td>
+						<td>Y</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>김크림</td>
+						<td>930215-2******</td>
+						<td>단체</td>
+						<td>010****6666</td>
+						<td>서울 강남구</td>
+						<td>Y</td>
+						<td>Y</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>김크림</td>
+						<td>930215-2******</td>
+						<td>개인사업자</td>
+						<td>010****6666</td>
+						<td>서울 종로구</td>
+						<td>Y</td>
+						<td>Y</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>김크림</td>
+						<td>930215-2******</td>
+						<td>단체</td>
+						<td>010****6666</td>
+						<td>서울 강남구</td>
+						<td>Y</td>
+						<td>Y</td>
+						<td>-</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</div>
+		<!-- <div class="nodata">검색결과가 없습니다.</div> -->
+		<div class="paging">
+			<a class="ic_first disabled"></a>
+			<a class="ic_prev disabled"></a>
+			<span class="num current">1</span>
+			<a href="#" class="num">2</a>
+			<a href="#" class="num">3</a>
+			<a href="#" class="num">4</a>
+			<a href="#" class="num">5</a>
+			<a href="#" class="num">6</a>
+			<a href="#" class="num">7</a>
+			<a href="#" class="num">8</a>
+			<a href="#" class="num">9</a>
+			<a href="#" class="num">10</a>
+			<a href="#" class="ic_next"></a>
+			<a href="#" class="ic_last"></a>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c1">확인</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

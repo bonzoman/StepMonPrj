@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>포인트 적립내역 | 활동 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">포인트 적립</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1">
+
+				<div class="form-field">
+					<dl class="form w3">
+						<dt>대상구분</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="radio" name="f1" checked="checked">
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="f1">
+									<span>설계사</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="f1">
+									<span>후보자</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w1">
+						<dt>조회기간</dt>
+						<dd>
+							<div class="form-row">
+								<span class="date-range2"> <!-- 2022-12-28 클래스 변경 -->
+									<input type="text" data-role="start" placeholder="시작일 선택">
+									<span class="util">~</span>
+									<input type="text" data-role="end" placeholder="종료일 선택">
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w3"> <!-- 숨길때 hide-->
+						<dt>조직구분</dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>취급자</option>
+								</select>
+								<input type="text" name="" id="" class="text" style="width:80px;">
+								<input type="text" name="" id="" class="text" style="width:120px;" disabled>
+								<button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w3">
+						<dt>사용구분</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="radio" name="f11" checked="checked">
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="f11">
+									<span>적립</span>
+								</label>
+								<select name="" id="" class="selectbox" style="width:80px;">
+									<option value="">전체</option>
+									<option value="">퀘스트</option>
+									<option value="">혜택</option>
+									<option value="">기타</option>
+								</select>
+								<label class="label-check">
+									<input type="radio" name="f11">
+									<span>사용</span>
+								</label>
+								<select name="" id="" class="selectbox"  style="width:80px;">
+									<option value="">전체</option>
+									<option value="">현금화</option>
+									<option value="">기타</option>
+								</select>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+			<div class="data-table1">
+				<table>
+					<colgroup>
+						<col style="width:150px;">
+						<col style="width:150px;">
+						<col>
+						<col style="width:150px;">
+						<col style="width:150px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th colspan="2" scope="row">기준월</th>
+							<td>2022.04 ~ 2022.04</td>
+							<th colspan="2" scope="row">대상건</th>
+							<td>132</td>
+						</tr>
+						<tr>
+							<th scope="row" rowspan="4">적립</th>
+							<th scope="row">합계</th>
+							<td><strong>100,000P</strong></td>
+							<th scope="row" rowspan="4">사용</th>
+							<th scope="row">합계</th>
+							<td><strong>100,000P</strong></td>
+						</tr>
+						<tr>
+							<th scope="row">퀘스트</th>
+							<td>100,000P</td>
+							<th scope="row">현금화</th>
+							<td>100,000P</td>
+						</tr>
+						<tr>
+							<th scope="row">혜택</th>
+							<td>100,000P</td>
+							<th scope="row">기타</th>
+							<td>100,000P</td>
+						</tr>
+						<tr>
+							<th scope="row">기타</th>
+							<td>100,000P</td>
+							<th scope="row"></th>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tit-sub2">
+				<h3 class="">전체<span>총 16건</span></h3>
+				<div class="sub">
+					<button type="button" class="btn-sub1 c3">포인트 정정</button>
+				</div>
+			</div>
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<!-- 2022-12-28 테이블 사이즈 변경 -->
+						<col style="width:55px;">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col style="width:125px;">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<!-- //2022-12-28 테이블 사이즈 변경 -->
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"><span class="sort">No</span></th>
+							<th scope="col"><span class="sort">대상</span></th>
+							<th scope="col"><span class="sort">사업단</span></th>
+							<th scope="col"><span class="sort">팀</span></th>
+							<th scope="col"><span class="sort">설계사명</span></th>
+							<th scope="col"><span class="sort">설계사 사번</span></th> <!-- 2022-12-28 변경 -->
+							<th scope="col"><span class="sort">포인트 처리일시</span></th>
+							<th scope="col"><span class="sort">사용구분</span></th>
+							<th scope="col">포인트적립</th>
+							<th scope="col">포인트사용</th>
+							<th scope="col"><span class="sort">활동구분</span></th>
+							<th scope="col"><span class="sort">적요명</span></th>
+							<th scope="col">처리자</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1341</td>
+							<td>설계사</td>
+							<td>강남사업단</td>
+							<td>강남1-1팀</td>
+							<td>김다미</td>
+							<td>3327630</td>
+							<td>2022.02.22 22:22</td>
+							<td>사용</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>기타</td>
+							<td>넌 도움이 안되요</td>
+							<td>system</td>
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>후보자</td>
+							<td>강남사업단</td>
+							<td>강남1-1팀</td>
+							<td>김다미</td>
+							<td>3327630</td>
+							<td>2022.02.22 22:22</td>
+							<td>사용</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>기타</td>
+							<td>난 도움이 되요</td>
+							<td>system</td>
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>후보자</td>
+							<td>강남사업단</td>
+							<td>강남1-1팀</td>
+							<td>김다미</td>
+							<td>3327630</td>
+							<td>2022.02.22 22:22</td>
+							<td>사용</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>기타</td>
+							<td>난 도움이 되요</td>
+							<td>system</td>
+						</tr>
+						<tr>
+							<td>1341</td>
+							<td>후보자</td>
+							<td>강남사업단</td>
+							<td>강남1-1팀</td>
+							<td>김다미</td>
+							<td>3327630</td>
+							<td>2022.02.22 22:22</td>
+							<td>사용</td>
+							<td>123,000</td>
+							<td>14,000</td>
+							<td>기타</td>
+							<td>난 도움이 되요</td>
+							<td>system</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="nodata hide">
+					조회결과가 없습니다.
+				</div>
+			</div>
+
+			<div class="paging">
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

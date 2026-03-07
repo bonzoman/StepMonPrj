@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>실가동 및 유실적 조회 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-11]	1. 주요통계 탭에서 조회조건은 기준년월만 노출 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">실가동 및 유실적 조회</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1" id="form-search1">
+				<!-- [M 2022-10-11] 주요통계 탭에서 조회조건은 기준년월만 노출 수정 -->
+				<div class="form-field">
+					<dl class="form w1">
+						<dt>기준년월<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<input type="text" class="date-m" value="2022.02" placeholder="월 선택">
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<!-- // -->
+				<div class="area-action">
+					<button type="button" class="btn-action c3">초기화</button>
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+            <div class="tab-wrap">
+                <ul class="tab1">
+					<li><a href="#tab1-1" class="current">주요통계</a></li><!-- [M 2022-10-11] 주요통계 탭에서 조회조건은 기준년월만 노출 수정 -->
+					<li><a href="#tab1-2">실가동 및 유실적</a></li><!-- [M 2022-10-11] 주요통계 탭에서 조회조건은 기준년월만 노출 수정 -->
+				</ul>
+				<div class="tab-cont" id="tab1-1">
+					<div class="report-wrap">
+						<div class="tooltip right2">
+							<button type="button"></button>
+							<div class="tooltip-layer">
+								<ul class="list-dot1">
+									<li>실가동: 장기신규 1건 이상</li>
+									<li>유실적: 장기인보험 누계 5만원 이상</li>
+									<li>Core: 장기인보험 누계 20만원 이상</li>
+									<li>상세지침은 제규정 참고</li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="inner">
+									<div class="cont">
+										<div class="row">
+											<div class="col-3">
+												<div class="tit3">재적 인원대비 비가동 LP</div>
+												<div class="data">
+													<div class="info-graph">
+														<strong>비가동 여부</strong>
+														<i style="transform:rotate(145deg);"></i>  <!-- 100(%) * 1.8 을 곱함. 0deg ~ 180deg-->
+														<div class="graph"  style="transform:rotate(145deg)"></div>  <!-- 100(%) * 1.8 을 곱함. 0deg ~ 180deg-->
+													</div>
+													<div class="graph-info1">
+														<div>
+															<span class="txt1">비가동 LP</span> <span class="txt2 point1">51%</span>
+															<span class="txt3">비가동 LP</span> <span class="txt4">총 49명</span>
+															<span class="txt3">신인</span> <span class="txt4">21명</span>
+															<span class="txt3">기존</span> <span class="txt4">28명</span>
+														</div>
+														<div><span class="txt1">가동 LP</span> <span class="txt2">49%</span></div>
+													</div>
+													<div class="more">
+														<a href="#"><span>자세히보기</span></a>
+													</div>
+												</div>
+											</div>
+											<div class="col-3">
+												<div class="tit3">재적 인원대비 유실적 미충족 LP</div>
+												<div class="data">
+													<div class="info-graph">
+														<strong>미충족 여부</strong>
+														<i style="transform:rotate(45deg);"></i>  <!-- 100(%) * 1.8 을 곱함. 0deg ~ 180deg-->
+														<div class="graph"  style="transform:rotate(45deg)"></div>  <!-- 100(%) * 1.8 을 곱함. 0deg ~ 180deg-->
+													</div>
+													<div class="graph-info1">
+														<div>
+															<span class="txt1">미충족 LP</span> <span class="txt2 point1">51%</span>
+															<span class="txt3">유실적 미충족 LP</span> <span class="txt4">총 49명</span>
+															<span class="txt3">신인</span> <span class="txt4">21명</span>
+															<span class="txt3">기존</span> <span class="txt4">28명</span>
+														</div>
+														<div><span class="txt1">충족 LP</span> <span class="txt2">49%</span></div>
+													</div>
+													<div class="more">
+														<a href="#"><span>자세히보기</span></a>
+													</div>
+												</div>
+											</div>
+											<div class="col-3">
+												<div class="tit3">실가동 인원대비 Core LP</div>
+												<div class="data">
+													<div class="info-graph">
+														<strong>Core LP 여부</strong>
+														<i style="transform:rotate(180deg);"></i>  <!-- 100(%) * 1.8 을 곱함. 0deg ~ 180deg-->
+														<div class="graph"  style="transform:rotate(180deg)"></div>  <!-- 100(%) * 1.8 을 곱함. 0deg ~ 180deg-->
+													</div>
+													<div class="graph-info1">
+														<div>
+															<span class="txt1">충족 LP</span> <span class="txt2 point1">51%</span>
+															<span class="txt3">Core LP</span> <span class="txt4">총 49명</span>
+															<span class="txt3">신인</span> <span class="txt4">21명</span>
+															<span class="txt3">기존</span> <span class="txt4">28명</span>
+														</div>
+														<div><span class="txt1">미충족 LP</span> <span class="txt2">49%</span></div>
+													</div>
+													<div class="more">
+														<a href="#"><span>자세히보기</span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-cont" id="tab1-2">
+					<div class="data-table1">
+						<div class="info1">
+							현재 조회된 건수: 21건
+							<span class="bar"></span>
+							단위 : 천원
+							<div class="tooltip right2">
+								<button type="button"></button>
+								<div class="tooltip-layer">
+									<ul class="list-dot1">
+										<li>실가동: 장기신규 1건 이상</li>
+										<li>유실적: 장기인보험 누계 5만원 이상</li>
+										<li>Core: 장기인보험 누계 20만원 이상</li>
+										<li>상세지침은 제규정 참고</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="list-table" data-pos="top">
+							<table>
+								<colgroup>
+									<col style="width:60px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:60px;">
+									<col style="width:90px;">
+									<col style="width:60px;">
+									<col style="width:90px;">
+									<col style="width:60px;">
+									<col style="width:90px;">
+									<col style="width:60px;">
+									<col style="width:60px;">
+									<col style="width:60px;">
+									<col style="width:60px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="3">No</th>
+										<th scope="col" rowspan="3">사업단</th>
+										<th scope="col" rowspan="2">지점</th>
+										<th scope="col" rowspan="2">LP명</th>
+										<th scope="col" rowspan="2">위촉일자</th>
+										<th scope="col" rowspan="2">전속/교차</th>
+										<th scope="col" rowspan="2">경력구분</th>
+										<th scope="col" rowspan="2">성별</th>
+										<th scope="col" colspan="9">당월장기신규</th>
+										<th scope="col" rowspan="3">일반</th>
+										<th scope="col" colspan="3">자동차</th>
+										<th scope="col">계속분</th>
+										<th scope="col" rowspan="3">총량</th>
+									</tr>
+									<tr>
+										<th scope="col" colspan="2">월납</th>
+										<th scope="col" colspan="2">보장성</th>
+										<th scope="col" colspan="2">재물</th>
+										<th scope="col" rowspan="2">실가동</th>
+										<th scope="col" rowspan="2">유실적</th>
+										<th scope="col" rowspan="2">Core</th>
+										<th scope="col" rowspan="2">당사갱신</th>
+										<th scope="col" rowspan="2">신규타사</th>
+										<th scope="col" rowspan="2">계</th>
+										<th scope="col" rowspan="2">당월</th>
+									</tr>
+									<tr>
+										<th scope="col">팀</th>
+										<th scope="col">코드</th>
+										<th scope="col">해촉일자</th>
+										<th scope="col">직책</th>
+										<th scope="col">차월</th>
+										<th scope="col">나이</th>
+										<th scope="col">원수</th>
+										<th scope="col">판매건수</th>
+										<th scope="col">원수</th>
+										<th scope="col">판매건수</th>
+										<th scope="col">원수</th>
+										<th scope="col">판매건수</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="2">1</td>
+										<td rowspan="2">드림사업단</td>
+										<td>드림1지점</td>
+										<td>대한강일대리점</td>
+										<td>2022.02.22</td>
+										<td>전속</td>
+										<td>경력</td>
+										<td>여</td>
+										<td rowspan="2">7,333</td>
+										<td rowspan="2">2</td>
+										<td rowspan="2">7,333</td>
+										<td rowspan="2">2</td>
+										<td rowspan="2">7,333</td>
+										<td rowspan="2">2</td>
+										<td rowspan="2" class="point1">Y</td>
+										<td rowspan="2" class="point1">N</td>
+										<td rowspan="2" class="point1">N</td>
+										<td rowspan="2">0</td>
+										<td rowspan="2">1,000,000</td>
+										<td rowspan="2">1,000,000</td>
+										<td rowspan="2">1,000,000</td>
+										<td rowspan="2">1,000,000</td>
+										<td rowspan="2">1,000,000</td>
+									</tr>
+									<tr>
+										<td>드림1-1팀</td>
+										<td>1231231</td>
+										<td>2222.22.22</td>
+										<td>12312341</td>
+										<td>436</td>
+										<td>62</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="total-div" data-pos="bottom" data-match="false">
+							<div class="total-btns">
+								<div class="btns2">
+									<button type="button" class="btn-sub1 c3">다음</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+	</div>
+    <script>
+		/*
+			@title : 틀 고정 table
+			@description :
+		     grid 를 사용한 data table 이 아닌 관계로 별도로 script 작성
+		     작성된 table 을 복사하여 회면 위에 띄워서 배치 시킨 후 필요한 부분만 보여지게 사이즈를 조정함
+
+
+			.sort 클릭시 복사된 table에 내용이 바로 반영 되지 않으므로 하기 샘플 참조
+
+
+			[.sort 클릭시 발생시킬 이벤트 sample;]
+			틀고정 영역 내용 변경을 위한 scirpt
+
+			table 의 내용 추가,변경,정렬 시 _fixTable.update(); 호출
+
+		*/
+
+		_fixTable.init({
+			fixColumn : 8
+		});
+    </script>
+</div>
+</body>
+</html>

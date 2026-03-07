@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 형제할인 등록 | 고객정보 | 표준설계 | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>형제할인 등록</h1>
+			<button type="button" data-btn="pop-close">형제할인 등록 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 설계/증권번호  -->
+			<!-- ######################### -->
+			<!-- [M 2022-10-23] -->
+			<div class="info-summary2">
+				<div class="info-con1">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA22022108551-1</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 자녀등록  -->
+			<!-- ######################### -->
+			<div class="form-wrap1">
+				<!-- // -->
+				<fieldset>
+					<legend class="tit">자녀1</legend>
+
+					<!-- # 국적분류 # -->
+					<dl class="form">
+						<dt>국적분류 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="cd1" checked>
+									<span>내국인</span>
+								</label>
+								<label>
+									<input type="radio" name="cd1">
+									<span>외국인</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 이름 # -->
+					<dl class="form">
+						<dt>이름 <em class="icon-required2">필수</em></dt>
+						<dd><input type="text" class="text" title="이름" value="김다미" placeholder="이름을 입력해주세요."></dd>
+					</dl>
+
+					<!-- # 주민등록번호 # -->
+					<dl class="form">
+						<dt>주민등록번호 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="주민등록번호앞6자리" maxlength="6" value="210324" placeholder="주민등록번호">
+								<span class="util">-</span>
+								<input type="password" title="주민등록번호첫자리" maxlength="7" value="0000000">
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 접수일 # -->
+					<dl class="form">
+						<dt>접수일 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="input-date1">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>접수일 선택</button>
+									<input type="text" class="text" title="접수일" value="2022.04.01" placeholder="접수일을 선택해주세요." readonly>
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- ### 자녀추가 버튼 ### -->
+				<div class="area-btn1 line"><button type="button" class="btn-com1 ic3">자녀추가</button></div>
+
+				<!-- ### 자녀2 ### -->
+				<fieldset>
+					<legend class="tit">자녀2</legend>
+
+					<!-- # 국적분류 # -->
+					<dl class="form">
+						<dt>국적분류 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="cd2" checked>
+									<span>내국인</span>
+								</label>
+								<label>
+									<input type="radio" name="cd2">
+									<span>외국인</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 이름 # -->
+					<dl class="form">
+						<dt>이름 <em class="icon-required2">필수</em></dt>
+						<dd><input type="text" class="text" title="이름" placeholder="이름을 입력해주세요."></dd>
+					</dl>
+
+					<!-- # 주민등록번호 # -->
+					<dl class="form">
+						<dt>주민등록번호 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="주민등록번호앞6자리" maxlength="6" placeholder="주민등록번호">
+								<span class="util">-</span>
+								<input type="password" title="주민등록번호첫자리" maxlength="7">
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 접수일 # -->
+					<dl class="form">
+						<dt>접수일 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="input-date1">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>접수일 선택</button>
+									<input type="text" class="text" title="접수일" value="2022.04.01" placeholder="접수일을 선택해주세요." readonly>
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

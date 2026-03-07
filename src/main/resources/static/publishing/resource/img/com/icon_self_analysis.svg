@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="40" viewBox="0 0 34 40">
+    <g transform="translate(-279 -474)">
+        <rect data-name="사각형 9942" width="26" height="37" rx="1" transform="translate(279 475)" style="fill:#fff"/>
+        <path data-name="사각형 9938" d="M2 0a2 2 0 0 1 2 2v8H0V2a2 2 0 0 1 2-2z" transform="translate(291 504)" style="fill:#666"/>
+        <path data-name="사각형 9939" d="M2 0a2 2 0 0 1 2 2v13H0V2a2 2 0 0 1 2-2z" transform="translate(297 499)" style="fill:#666"/>
+        <path data-name="사각형 9941" d="M2 0a2 2 0 0 1 2 2v13H0V2a2 2 0 0 1 2-2z" transform="translate(309 499)" style="fill:#666"/>
+        <path data-name="사각형 9940" d="M2 0a2 2 0 0 1 2 2v20H0V2a2 2 0 0 1 2-2z" transform="translate(303 492)" style="fill:#e84427"/>
+        <rect data-name="사각형 9943" width="16" height="3" rx="1.5" transform="translate(284 474)" style="fill:#d0d0d0"/>
+        <rect data-name="사각형 9945" width="16" height="1" rx=".5" transform="translate(284 484)" style="fill:#666"/>
+        <rect data-name="사각형 9946" width="16" height="1" rx=".5" transform="translate(284 488)" style="fill:#666"/>
+        <rect data-name="사각형 9947" width="8" height="1" rx=".5" transform="translate(284 492)" style="fill:#666"/>
+    </g>
+</svg>

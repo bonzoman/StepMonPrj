@@ -1,0 +1,1645 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>ICON | CONTENTS | PUBLISHING GUIDE</title>
+	<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/publish.css?20220913">
+	<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/ui.plugin.js"></script>
+	<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+	<div class="guide-wrap">
+		<header>
+			<h1>
+				<i>롯데손해보험</i> CONTENTS <strong>ICON</strong>
+				<a href="../99.work/coding_list1.html" class="guide-btn1">작업목록</a>
+			</h1>
+			<nav>
+				<ul>
+					<li><a href="content_basic.html">INFO</a></li>
+					<li><a href="content_txt.html">TITLE/TXT</a></li>
+					<li><a href="content_btn.html">BUTTON</a></li>
+					<li class="active"><a href="content_icon.html" aria-current="page">ICON</a></li>
+					<li><a href="content_form.html">FORM ELEMENT</a></li>
+					<li><a href="content_formarea.html">FORM 약관/검색</a></li>
+					<li><a href="content_formarea2.html">FORM 입력</a></li>
+					<li><a href="content_tab.html">TAB/TOGGLE</a></li>
+					<li><a href="content_tbl.html">TABLE</a></li>
+					<li><a href="content_box.html">BOX/BANNER</a></li>
+					<li><a href="content_info.html">INFO/DATA</a></li>
+					<li><a href="content_list.html">LIST</a></li>
+					<li><a href="content_bbs.html">BOARD</a></li>
+				</ul>
+			</nav>
+		</header>
+		<article class="guide-container">
+			<h1 class="hide">아이콘 작업 가이드</h1>
+			<!-- ############################## -->
+			<!-- [아이콘 변수] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">아이콘 변수 정의</h2>
+				<h3 class="guide-tit2">레이아웃 관련 아이콘</h3>
+				<div class="guide-info">
+					<dl>
+						<dt>var(--path-home)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-home)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-home2);border-radius:0;"></span><br>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-home3);border-radius:0;"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-bell)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-bell)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-bell2);border-radius:0;"></span><br>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-bell3);"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-setting)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-setting)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-setting2);border-radius:0;"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-community)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-community)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-study)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-study)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-my)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-my)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-prev)</dt>
+						<dd>
+							<span class="guide-icon2"  style="--el-guide-path:var(--path-prev)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-menu)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-menu)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-close)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-close)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-com2) var(--path-close)"></span>
+						</dd>
+					</dl>
+				</div>
+
+				<h3 class="guide-tit2">잠금관련 아이콘</h3>
+				<div class="guide-info">
+					<dl>
+						<dt>var(--path-locked-closed)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-locked-closed)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-locked-closed2)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-locked-line)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-locked-line)"></span>
+						</dd>
+					</dl>
+				</div>
+
+				<h3 class="guide-tit2">고객관련 아이콘</h3>
+				<div class="guide-info">
+					<dl>
+						<dt>var(--path-customer)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-customer)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-add-customer)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-add-customer)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-add-customer2);border-radius:0;"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-add-customer3);border-radius:0;"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-customer-list)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-customer-list)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-customer-list2);border-radius:0;"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-customer-search)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-customer-search)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-customer-group)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-customer-group)"></span>
+						</dd>
+					</dl>
+				</div>
+
+				<h3 class="guide-tit2">도형</h3>
+				<div class="guide-info">
+					<dl>
+						<dt>var(--path-arrow)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-arrow)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-arrow-thin);border-radius:0;"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-top)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-top)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-up)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-up)"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-down)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-down)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-same)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-same)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-change)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-change)"></span>
+						</dd>
+					</dl>
+				</div>
+
+				<h3 class="guide-tit2">인증</h3>
+				<div class="guide-info">
+					<dl>
+						<dt>var(--path-cert1)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-cert1)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-cert2_1 ~ 2)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-cert2_1), var(--path-cert2_2);"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-cert3)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-cert3)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-cert4)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-cert4)"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-cert5)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-cert5)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-cert5-2);border-radius:0;"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-cert6)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-cert6)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-cert7)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-cert7)"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-cert8)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-cert8)"></span>
+						</dd>
+					</dl>
+				</div>
+
+				<h3 class="guide-tit2">기타</h3>
+				<div class="guide-info">
+
+					<dl>
+						<dt>var(--path-car)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-car)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-car3);border-radius:0;"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-car2);"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-cancer)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-cancer)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-new-design)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-new-design)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-our-renewal)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-our-renewal)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-another-renewal)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-another-renewal)"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-office)</dt>
+						<dd>
+							<span class="guide-icon2"  style="--el-guide-path:var(--path-office)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-agency)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-agency)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-agency2);border-radius:0;"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-building)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-building)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-performance)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-performance)"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-data)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-data)"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-subscription-design)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-subscription-design)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-file3)"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-page)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-page)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-page2);border-radius:0;"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-guarantee-analysis)</dt>
+						<dd>
+							<span class="guide-icon2"  style="--el-guide-path:var(--path-guarantee-analysis)"></span>
+							<span class="guide-icon2"  style="--el-guide-path:var(--path-guarantee-analysis2)"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-test-application)</dt>
+						<dd>
+							<span class="guide-icon2"  style="--el-guide-path:var(--path-test-application)"></span>
+							<span class="guide-icon2"  style="--el-guide-path:var(--path-test-application2);border-radius:0;"></span>
+						</dd>
+					</dl>
+					<style>
+						.path-icon {
+							clip-path:polygon(
+
+							) !important;
+						}
+					</style>
+					<dl>
+						<dt>var(--path-actual)</dt>
+						<dd>
+							<span class="guide-icon2"  style="--el-guide-path:var(--path-actual)"></span>
+							<span class="guide-icon2"  style="--el-guide-path:var(--path-actual2);border-radius:0;"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-help)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-help)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-calendar)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-calendar)"></span>
+							<span class="guide-icon2"  style="--el-guide-path:var(--path-calendar2)"></span>
+						</dd>
+					</dl>
+
+
+					<dl>
+						<dt>var(--path-quiz)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-quiz)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-play1)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-play1)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-play2) var(--path-play1) var(--path-play2-1)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-video)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-video)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-book)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-book)"></span></dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-camera)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-camera)"></span></dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-plus)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-plus)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-com2) var(--path-plus)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-plus2)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-minus)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-minus)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-search)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-search)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-customer-inquiry)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-customer-inquiry)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-check)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-check)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-com2) var(--path-check)"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-pin)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-pin)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-com2) var(--path-pin);"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-time)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-time)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-com1) var(--path-time2)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-download)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-download)"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-send)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-send)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-send2);border-radius:0;"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-graph)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-graph)"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-request)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-request)"></span>
+							<span class="guide-icon2 path-icon" style="--el-guide-path:var(--path-request2);border-radius:0;"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-copy)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-copy)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-copy2); border-radius:0;"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-copy3); border-radius:0;"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-bookmark)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-bookmark)"></span>
+						</dd>
+					</dl>
+
+
+					<dl>
+						<dt>var(--path-compare)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-compare)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-analysis)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-analysis)"></span>
+						</dd>
+					</dl>
+
+					<style>
+						.path-icon {
+							clip-path:polygon(
+
+
+							) !important;
+						}
+					</style>
+					<dl>
+						<dt>var(--path-face1~4)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-face1)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-face2)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-face3)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-face4)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-face5~6)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-face5)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-face6)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-won)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-won)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-calculator)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-calculator)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-phone)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-phone)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-call)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-call)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-list-view)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-list-view)"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-care)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-care)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-teeth)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-teeth)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-health)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-health)"></span>
+						</dd>
+					</dl>
+					<style>
+						.path-icon {
+							clip-path:polygon(
+
+
+							) !important;
+						}
+					</style>
+					<dl>
+						<dt>var(--path-appointment)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-appointment)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-appointment2);border-radius:0;"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-mark1)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-mark1)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-com2) var(--path-mark1)"></span><br>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-mark2)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-com1) var(--path-mark2)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-mark3)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-mark3)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-mark4)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-mark4)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-mark5)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-mark5)"></span>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-arr-left)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-arr-left)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-com1) var(--path-arr-left)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-arr-right)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-arr-right)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-com2) var(--path-arr-right)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-arr-toggle)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-arr-toggle)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-com2) var(--path-arr-toggle)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-q)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-q)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-com2) var(--path-q)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-a)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-a)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-com1) var(--path-a)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-crown)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-crown)"></span>
+							<span class="guide-icon2 t1" style="--el-guide-path:var(--path-com2) var(--path-crown)"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-hit)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-hit)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-comment1)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-comment1)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-comment2)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-comment2)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-comment3)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-comment3)"></span></dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-good1)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-good1)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-good2)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-good2)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-heart1)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-heart1) var(--path-heart2)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-heart2)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-heart2)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-file1)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-file1)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-file2)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-file2)"></span></dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-file4)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-file4)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-file5)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-file5)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-file6)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-file6)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-money)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-money)"></span></dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-activity)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-activity)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-filter)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-filter)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-retry)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-retry)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-pen)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-pen)"></span>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-pen2);border-radius:0;"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>var(--path-list)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-list)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-group)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-group)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-point1)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-point1)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-point2)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-point2)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-star)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-star)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-cup)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-cup)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-share)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-share)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-share2)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-share2)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-tip)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-tip)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-summary)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-summary)"></span></dd>
+					</dl>
+					<dl>
+						<dt>var(--path-detail)</dt>
+						<dd><span class="guide-icon2" style="--el-guide-path:var(--path-detail)"></span></dd>
+					</dl>
+
+					<dl>
+						<dt>var(--path-bg1)</dt>
+						<dd>
+							<span class="guide-icon2" style="--el-guide-path:var(--path-bg1)"></span>
+							<span class="guide-icon2"  style="--el-guide-path:var(--path-bg2)"></span>
+						</dd>
+					</dl>
+				</div>
+
+			</section>
+			<!-- ############################## -->
+			<!-- [일반아이콘] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">일반아이콘</h2>
+				<h3 class="guide-tit2">유형1 : .icon-com1 <span class="sub">[H32]</span></h3>
+				<div class="guide-tbl">
+					<table>
+						<caption>일반아이콘 유형1</caption>
+						<colgroup><col span="2" style="width:10%;"/><col span="3"/></colgroup>
+						<thead>
+							<tr>
+								<th colspan="2">구분</th>
+								<th>아이콘 + 텍스트</th>
+								<th>아이콘</th>
+								<th>체크박스</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>추가</td>
+								<td>.ic1</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic1">추가</a>
+									<button type="button" class="icon-com1 ic1 right">추가</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic1 simple">추가</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>검색</td>
+								<td>.ic2</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic2">검색</a>
+									<button type="button" class="icon-com1 ic2 right">검색</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic2 simple">검색</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>이전/다음</td>
+								<td>.ic3</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic3">이전</a>
+									<button type="button" class="icon-com1 ic3 right">다음</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic3 simple">이전</button>
+									<button type="button" class="icon-com1 ic3 right simple">다음</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>달력</td>
+								<td>.ic4</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic4">날짜선택</a>
+									<button type="button" class="icon-com1 ic4 right">날짜선택</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic4 simple">날짜선택</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>시간</td>
+								<td>.ic5</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic5">시간선택</a>
+									<button type="button" class="icon-com1 ic5 right">시간선택</button>
+								</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic5 simple">시간선택</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>삭제</td>
+								<td>.ic6</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic6">삭제</a>
+									<button type="button" class="icon-com1 ic6 right">삭제</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic6 simple">삭제</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>다운로드</td>
+								<td>.ic7</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic7">다운로드</a>
+									<button type="button" class="icon-com1 ic7 right">다운로드</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic7 simple">다운로드</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>좋아요</td>
+								<td>.ic8</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic8">좋아요</a>
+									<button type="button" class="icon-com1 ic8 right">좋아요</button>
+								</td>
+								<td>
+									<span class="icon-com1 ic8 simple">좋아요</span>
+								</td>
+								<td>
+									<label class="icon-com1 ic8">
+										<input type="checkbox" checked>
+										<span>좋아요 780</span>
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<td>조회수</td>
+								<td>.ic9</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic9">조회수</a>
+									<button type="button" class="icon-com1 ic9 right">조회수</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic9 simple">조회수</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>답변</td>
+								<td>.ic10</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic10">답변</a>
+									<button type="button" class="icon-com1 ic10 right">답변</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic10 simple">답변</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>댓글</td>
+								<td>.ic11</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic11">댓글</a>
+									<button type="button" class="icon-com1 ic11 right">댓글</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic11 simple">댓글</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>파일첨부</td>
+								<td>.ic12</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic12">파일첨부</a>
+									<button type="button" class="icon-com1 ic12 right">파일첨부</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic12 simple">파일첨부</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>발송</td>
+								<td>.ic13</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic13">발송</a>
+									<button type="button" class="icon-com1 ic13 right">발송</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic13 simple">발송</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>컨텐츠</td>
+								<td>.ic14</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic14">관련컨텐츠</a>
+									<button type="button" class="icon-com1 ic14 right">관련컨텐츠</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic14 simple">관련컨텐츠</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>설계복사</td>
+								<td>.ic15</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic15">설계복사</a>
+									<button type="button" class="icon-com1 ic15 right">설계복사</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic15 simple">설계복사</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>도움돼요</td>
+								<td>.ic16</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic16">도움돼요</a>
+									<button type="button" class="icon-com1 ic16 right">도움돼요</button>
+									<button type="button" class="icon-com1 ic16" aria-pressed="true">도움돼요</button>
+									<button type="button" class="icon-com1 ic16 checked">도움돼요</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic16 simple">도움돼요</button>
+								</td>
+								<td>
+									<label class="icon-com1 ic16">
+										<input type="checkbox" checked>
+										<span>도움돼요 780</span>
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<td>설정</td>
+								<td>.ic17</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic17">설정</a>
+									<button type="button" class="icon-com1 ic17 right">설정</button>
+									<a href="javascript:void(0);" class="icon-com1 ic17-1">설정</a>
+									<button type="button" class="icon-com1 ic17-1 right">설정</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic17 simple">설정</button>
+									<button type="button" class="icon-com1 ic17-1 simple">설정</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>필터</td>
+								<td>.ic18</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic18">필터</a>
+									<button type="button" class="icon-com1 ic18 right">필터</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic18 simple">필터</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>홈</td>
+								<td>.ic19</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic19">홈으로 가기</a>
+									<button type="button" class="icon-com1 ic19 right">홈으로 가기</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic19 simple">홈으로 가기</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>조직도</td>
+								<td>.ic20</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic20">소속검색</a>
+									<button type="button" class="icon-com1 ic20 right">소속검색</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic20 simple">소속검색</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>새로고침</td>
+								<td>.ic21</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic21">새로고침</a>
+									<button type="button" class="icon-com1 ic21 right">새로고침</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic21 simple">새로고침</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>찜하기</td>
+								<td>.ic22</td>
+								<td>
+									<button type="button" class="icon-com1 ic22">찜하기</button>
+									<button type="button" class="icon-com1 ic22 right">찜하기</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic22 simple">찜하기</button>
+									<button type="button" class="icon-com1 ic22 simple checked" title="선택됨">찜하기</button>
+								</td>
+								<td>
+									<label class="icon-com1 ic22">
+										<input type="checkbox" checked>
+										<span>찜하기</span>
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<td>이미지첨부</td>
+								<td>.ic23</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic23">이미지첨부</a>
+									<button type="button" class="icon-com1 ic23 right">이미지첨부</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic23 simple">이미지첨부</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>도움안돼요</td>
+								<td>.ic24</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic24">도움안돼요</a>
+									<button type="button" class="icon-com1 ic24 right">도움안돼요</button>
+									<button type="button" class="icon-com1 ic24" aria-pressed="true">도움안돼요</button>
+									<button type="button" class="icon-com1 ic24 checked">도움안돼요</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic24 simple">도움안돼요</button>
+								</td>
+								<td>
+									<label class="icon-com1 ic24">
+										<input type="checkbox" checked>
+										<span>도움안돼요 780</span>
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<td>공유</td>
+								<td>.ic25</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic25">공유</a>
+									<button type="button" class="icon-com1 ic25 right">공유</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic25 simple">공유</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>수정</td>
+								<td>.ic26</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic26">수정</a>
+									<button type="button" class="icon-com1 ic26 right">수정</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic26 simple">수정</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>평수</td>
+								<td>.ic27</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic27">평수</a>
+									<button type="button" class="icon-com1 ic27 right">평수</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic27 simple">평수</button>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>알림</td>
+								<td>.ic28</td>
+								<td>
+									<a href="javascript:void(0);" class="icon-com1 ic28">알림</a>
+									<button type="button" class="icon-com1 ic28 right">알림</button>
+								</td>
+								<td>
+									<button type="button" class="icon-com1 ic28 simple">알림</button>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h3 class="guide-tit2">유형2 : .icon-com2 <span class="sub">[H16]</span></h3>
+				<div class="guide-tbl">
+					<table>
+						<caption>일반아이콘 유형2</caption>
+						<colgroup><col span="2" style="width:20%;"/><col span="2"/></colgroup>
+						<thead>
+							<tr>
+								<th colspan="2">구분</th>
+								<th>버튼/선택</th>
+								<th>텍스트</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>도움말팝업</td>
+								<td>.ic1</td>
+								<td><a href="javascript:void(0);" class="icon-com2 ic1">도움말</a></td>
+								<td><a href="javascript:void(0);" class="icon-com2 ic1 right">도움말</a></td>
+							</tr>
+							<tr>
+								<td>툴팁</td>
+								<td>.ic2</td>
+								<td><a href="javascript:void(0);" class="icon-com2 ic2">안내</a></td>
+								<td><a href="javascript:void(0);" class="icon-com2 ic2 right">안내</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- ############################## -->
+			<!-- [상태아이콘] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">상태아이콘</h2>
+				<div class="guide-tbl">
+					<table>
+						<caption>상태아이콘 유형</caption>
+						<colgroup><col span="3" style="width:20%;"/><col /></colgroup>
+						<thead>
+							<tr>
+								<th colspan="3">구분</th>
+								<th>내용</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="5">강의수료</td>
+								<td rowspan="5">.icon-state1</td>
+								<td>ic1</td>
+								<td><i class="icon-state1 ic1">미수료</i></td>
+							</tr>
+							<tr>
+								<td>ic2</td>
+								<td><i class="icon-state1 ic2">수료</i></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td rowspan="7">게시글/계약</td>
+								<td rowspan="7">.icon-state2</td>
+								<td>ic1</td>
+								<td><i class="icon-state2 ic1">대기</i></td>
+							</tr>
+							<tr>
+								<td>ic2</td>
+								<td><i class="icon-state2 ic2">마감</i></td>
+							</tr>
+							<tr>
+								<td>ic3</td>
+								<td><i class="icon-state2 ic3">완료</i></td>
+							</tr>
+							<tr>
+								<td>ic4</td>
+								<td><i class="icon-state2 ic4">완료</i></td>
+							</tr>
+							<tr>
+								<td>ic5</td>
+								<td><i class="icon-state2 ic5">완료</i><i class="icon-state2 ic5 t1">완료</i></td>
+							</tr>
+							<tr>
+								<td>ic6</td>
+								<td><i class="icon-state2 ic6">진행중</i></td>
+							</tr>
+							<tr>
+								<td>ic7</td>
+								<td><i class="icon-state2 ic7">불능</i></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td rowspan="2">강의출석</td>
+								<td rowspan="2">.icon-state3</td>
+								<td>ic1</td>
+								<td>
+									<strong class="icon-state3 ic1">출석</strong>
+								</td>
+							</tr>
+							<tr>
+								<td>ic2</td>
+								<td>
+									<strong class="icon-state3 ic2">결석</strong>
+								</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td rowspan="3">보장분석</td>
+								<td rowspan="3">.icon-state4</td>
+								<td>ic1</td>
+								<td>
+									<strong class="icon-state4 ic1">미가입</strong>
+									<strong class="icon-state4 ic1 t1">미가입</strong><br>
+									<strong class="icon-state4 ic1 txt">미가입</strong><br>
+								</td>
+							</tr>
+							<tr>
+								<td>ic2</td>
+								<td>
+									<strong class="icon-state4 ic2">충분</strong><br>
+									<strong class="icon-state4 ic2 t1">충분</strong><br>
+									<strong class="icon-state4 ic2 txt">충분</strong>
+								</td>
+							</tr>
+							<tr>
+								<td>ic3</td>
+								<td>
+									<strong class="icon-state4 ic3">부족</strong><br>
+									<strong class="icon-state4 ic3 t1">부족</strong><br>
+									<strong class="icon-state4 ic3 txt">부족</strong>
+								</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td rowspan="5">상승/하락</td>
+								<td rowspan="5">.icon-state5</td>
+								<td>ic1</td>
+								<td>
+									<div class="icon-state5 ic1"><strong>000,000,000</strong><span>원</span></div>
+									<div class="icon-state5 ic1 t1"><strong>000,000,000</strong><span>원</span></div>
+								</td>
+							</tr>
+							<tr>
+								<td>ic2</td>
+								<td>
+									<div class="icon-state5 ic2"><strong>000,000,000</strong><span>원</span></div>
+									<div class="icon-state5 ic2 t1"><strong>000,000,000</strong><span>원</span></div>
+								</td>
+							</tr>
+							<tr>
+								<td>ic3</td>
+								<td>
+									<div class="icon-state5 ic3"><strong>000,000,000</strong><span>원</span></div>
+									<div class="icon-state5 ic3 t1"><strong>000,000,000</strong><span>원</span></div>
+								</td>
+							</tr>
+							<tr>
+								<td>ic4</td>
+								<td>
+									<div class="icon-state5 ic4"><strong>000,000,000</strong><span>원</span></div>
+									<div class="icon-state5 ic4 t1"><strong>000,000,000</strong><span>원</span></div>
+								</td>
+							</tr>
+							<tr>
+								<td>ic5</td>
+								<td>
+									<div class="icon-state5 ic5"><strong>000,000,000</strong><span>원</span></div>
+									<div class="icon-state5 ic5 t1"><strong>000,000,000</strong><span>원</span></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- ############################## -->
+			<!-- [텍스트아이콘] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">텍스트아이콘</h2>
+				<div class="guide-tbl">
+					<table>
+						<caption>텍스트아이콘 유형</caption>
+						<colgroup><col span="3" style="width:20%;"/><col /></colgroup>
+						<thead>
+							<tr>
+								<th colspan="3">구분</th>
+								<th>내용</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>라운드 텍스트1</td>
+								<td>icon-txt1</td>
+								<td>ic1</td>
+								<td><span class="icon-txt1 ic1">텍스트</span></td>
+							</tr>
+							<tr>
+								<td rowspan="10">라운드 텍스트2</td>
+								<td rowspan="10">icon-txt2</td>
+								<td>ic1</td>
+								<td>
+									<span class="icon-txt2 ic1">텍스트</span>
+									<span class="icon-txt2 t1 ic1">텍스트</span>
+								</td>
+							</tr>
+							<tr>
+								<td>ic2</td>
+								<td>
+									<span class="icon-txt2 ic2">텍스트</span>
+									<span class="icon-txt2 t1 ic2">텍스트</span>
+								</td>
+							</tr>
+							<tr>
+								<td>ic3</td>
+								<td>
+									<span class="icon-txt2 ic3">텍스트</span>
+									<span class="icon-txt2 t1 ic3">텍스트</span>
+								</td>
+							</tr>
+							<tr>
+								<td>ic4</td>
+								<td>
+									<span class="icon-txt2 ic4">텍스트</span>
+									<span class="icon-txt2 t1 ic4">텍스트</span>
+								</td>
+							</tr>
+							<tr>
+								<td>ic5</td>
+								<td>
+									<span class="icon-txt2 ic5">텍스트</span>
+									<span class="icon-txt2 t1 ic5">텍스트</span>
+								</td>
+							</tr>
+							<tr>
+								<td>ic6</td>
+								<td>
+									<span class="icon-txt2 ic6">텍스트</span>
+									<span class="icon-txt2 t1 ic6">텍스트</span>
+								</td>
+							</tr>
+							<tr>
+								<td>ic7</td>
+								<td>
+									<span class="icon-txt2 ic7">텍스트</span>
+									<span class="icon-txt2 t1 ic7">텍스트</span>
+								</td>
+							</tr>
+							<tr>
+								<td>ic8</td>
+								<td>
+									<span class="icon-txt2 ic8">텍스트</span>
+									<span class="icon-txt2 t1 ic8">텍스트</span>
+								</td>
+							</tr>
+							<tr>
+								<td>ic9</td>
+								<td>
+									<span class="icon-txt2 ic9">텍스트</span>
+									<span class="icon-txt2 t1 ic9">텍스트</span>
+								</td>
+							</tr>
+							<tr>
+								<td>ic10</td>
+								<td>
+									<span class="icon-txt2 ic10">텍스트</span>
+									<span class="icon-txt2 t1 ic10">텍스트</span>
+								</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td rowspan="5">등급유형</td>
+								<td rowspan="5">icon-txt3</td>
+								<td>.grade1</td>
+								<td><span class="icon-txt3 grade1">안심</span></td>
+							</tr>
+							<tr>
+								<td>.grade2</td>
+								<td><span class="icon-txt3 grade2">다소안심</span></td>
+							</tr>
+							<tr>
+								<td>.grade3</td>
+								<td><span class="icon-txt3 grade3">보통</span></td>
+							</tr>
+							<tr>
+								<td>.grade4</td>
+								<td><span class="icon-txt3 grade4">신중</span></td>
+							</tr>
+							<tr>
+								<td>.grade5</td>
+								<td><span class="icon-txt3 grade5">주의</span></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td rowspan="2">Q/A</td>
+								<td rowspan="2">icon-txt4</td>
+								<td>ic1</td>
+								<td><span class="icon-txt4 ic1">질문</span></td>
+							</tr>
+							<tr>
+								<td>ic2</td>
+								<td><span class="icon-txt4 ic2">답변</span></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td rowspan="3">필수/선택 항목</td>
+								<td>icon-required</td>
+								<td></td>
+								<td><em class="icon-required">필수</em></td>
+							</tr>
+							<tr>
+								<td>icon-required2</td>
+								<td></td>
+								<td><em class="icon-required2">필수</em></td>
+							</tr>
+							<tr>
+								<td>icon-optional</td>
+								<td></td>
+								<td><em class="icon-optional">선택</em></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- ############################## -->
+			<!-- [기타아이콘] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">기타아이콘</h2>
+				<div class="guide-tbl">
+					<table>
+						<caption>기타아이콘 유형</caption>
+						<colgroup><col span="3" style="width:20%;"/><col /></colgroup>
+						<thead>
+							<tr>
+								<th colspan="3">구분</th>
+								<th>내용</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>포인트</td>
+								<td>icon-point1</td>
+								<td></td>
+								<td><em class="icon-point1">포인트</em><em class="icon-point1 c1">포인트</em></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td>우수설계사</td>
+								<td>icon-grade1</td>
+								<td></td>
+								<td><em class="icon-grade1">우수설계사</em></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td rowspan="6">별점</td>
+								<td rowspan="6">.icon-star</td>
+								<td>5점</td>
+								<td><span class="icon-star" data-value="5">평점 5점</span></td>
+							</tr>
+							<tr>
+								<td>4점</td>
+								<td><span class="icon-star" data-value="4">평점 4점</span></td>
+							</tr>
+							<tr>
+								<td>3점</td>
+								<td><span class="icon-star" data-value="3">평점 3점</span></td>
+							</tr>
+							<tr>
+								<td>2점</td>
+								<td><span class="icon-star" data-value="2">평점 2점</span></td>
+							</tr>
+							<tr>
+								<td>1점</td>
+								<td><span class="icon-star" data-value="1">평점 1점</span></td>
+							</tr>
+							<tr>
+								<td>0점</td>
+								<td><span class="icon-star" data-value="0">평점 0점</span></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td>홈</td>
+								<td>.icon-home</td>
+								<td></td>
+								<td><em class="icon-home">홈</em></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td rowspan="3">알림 표기</td>
+								<td rowspan="3">.icon-noti1</td>
+								<td>.ic1</td>
+								<td>
+									<em class="icon-noti1 ic1">알림</em>
+								</td>
+							</tr>
+							<tr>
+								<td>.ic2</td>
+								<td>
+									<em class="icon-noti1 ic2">NEW</em>
+								</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td rowspan="3">오류 표기</td>
+								<td rowspan="3">.icon-invalid</td>
+								<td>.ic1</td>
+								<td>
+									<i class="icon-invalid">오류</i>
+									<div class="icon-invalid">오류메세지 노출</div>
+								</td>
+							</tr>
+							<tr>
+								<td>.ic2</td>
+								<td>
+									<i class="icon-invalid2">오류</i>
+									<div class="icon-invalid2">오류메세지 노출</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<!-- ############################## -->
+		</article>
+	</div>
+	<script src="../../resource/js/publish.plugin.js"></script>
+	<script src="../../resource/js/publish.common.js"></script>
+	<script>
+	//<!--
+
+	//-->
+	</script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>상세보기 | 리포트 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+
+
+<!-- 하이차트 라이브러리 -->
+<link rel="stylesheet" href="../resource/css/content_chart.css">
+<script src="../resource/js/chart/highcharts.js"></script>
+<script src="../resource/js/chart/data.js"></script>
+
+<!-- 차트 솔리드 게이지용 js 모듈 -->
+<script src="../resource/js/chart/highcharts-more.js"></script>
+<script src="../resource/js/chart/solid-gauge.js"></script>
+
+<!-- 차트 Heat Map 모듈 -->
+<script src="../resource/js/chart/heatmap.js"></script>
+
+<!-- 차트 Large tree map -->
+<script src="../resource/js/chart/treemap.js"></script>
+
+</head>
+<body>
+
+<div id="popup">
+	<div class="pop-header">
+		<h1>시간대별 방문자 수</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="report-wrap">
+
+			<div class="search-condition">
+				<span>강남사업단</span>
+				<span>강1지점</span>
+				<span>기준일자 2022.02.22 ~ 2022.02.28</span>
+			</div>
+			<div class="data">
+				<div class="head">
+					<div class="tit">
+						<h3>가입/설계</h3><!--[M: 2022-09-21] select 삭제하고 텍스트로 변경-->
+					</div>
+				</div>
+				<div id="activityChart4" data-chart="Heat-Map"></div>
+				<script>
+					Highcharts.chart("activityChart4", {
+						chart:{
+							type:"heatmap",
+						},
+						title:null,
+						xAxis:{
+							categories:["1일","2일","3일","4일","5일","6일","7일","8일","9일","10일","11일","12일","13일","14일","15일"]
+						},
+						yAxis:{
+							categories:["00시","02시","04시","06시","08시","10시","12시","14시","16시","18시","20시","22시"],
+							title:null
+						},
+						colorAxis:{
+							min:0,
+							minColor:"#FFFFFF",
+							maxColor: "#e84427"
+						},
+						legend:{
+							enabled:false
+						},
+						tooltip:{
+							formatter:function () {
+								return "<strong>" + this.point.value + "명 </strong>";
+							}
+						},
+						series:[{
+							name:null,
+							data:[
+								[0,0,10], [0,1,19], [0,2,8], [0,3,24], [0,4,67], [0,5,92], [0,6,58], [0,7,78], [0,8,117], [0,9,48], [0,10,35], [0,11,15],
+								[1,0,123], [1,1,64], [1,2,52], [1,3,72], [1,4,132], [1,5,114], [1,6,19], [1,7,16], [1,8,38], [1,9,5], [1,10,8], [1,11,117],
+								[2,0,115], [2,1,88], [2,2,32], [2,3,12], [2,4,6], [2,5,120], [2,6,13], [2,7,44], [2,8,88], [2,9,98], [2,10,96], [2,11,31],
+								[3,0,1], [3,1,82], [3,2,32], [3,3,30], [3,4,85], [3,5,97], [3,6,123], [3,7,64], [3,8,84], [3,9,47], [3,10,114], [3,11,31],
+								[4,0,10], [4,1,19], [4,2,8], [4,3,24], [4,4,67], [4,5,92], [4,6,58], [4,7,78], [4,8,117], [4,9,48], [4,10,35], [4,11,15],
+								[5,0,123], [5,1,64], [5,2,52], [5,3,72], [5,4,132], [5,5,114], [5,6,19], [5,7,16], [5,8,38], [5,9,5], [5,10,8], [5,11,117],
+								[6,0,115], [6,1,88], [6,2,32], [6,3,12], [6,4,6], [6,5,120], [6,6,13], [6,7,44], [6,8,88], [6,9,98], [6,10,96], [6,11,31],
+								[7,0,1], [7,1,82], [7,2,32], [7,3,30], [7,4,85], [7,5,97], [7,6,123], [7,7,64], [7,8,84], [7,9,47], [7,10,114], [7,11,31],
+								[8,0,115], [8,1,88], [8,2,32], [8,3,12], [8,4,6], [8,5,120], [8,6,13], [8,7,44], [8,8,88], [8,9,98], [8,10,96], [8,11,31],
+								[9,0,1], [9,1,82], [9,2,32], [9,3,30], [9,4,85], [9,5,97], [9,6,123], [9,7,64], [9,8,84], [9,9,47], [9,10,114], [9,11,31],
+								[10,0,10], [10,1,19], [10,2,8], [10,3,24], [10,4,67], [10,5,92], [10,6,58], [10,7,78], [10,8,117], [10,9,48], [10,10,35], [10,11,15],
+								[11,0,123], [11,1,64], [11,2,52], [11,3,72], [11,4,132], [11,5,114], [11,6,19], [11,7,16], [11,8,38], [11,9,5], [11,10,8], [11,11,117],
+								[12,0,1], [12,1,82], [12,2,32], [12,3,30], [12,4,85], [12,5,97], [12,6,123], [12,7,64], [12,8,84], [12,9,47], [12,10,114], [12,11,31],
+								[13,0,10], [13,1,19], [13,2,8], [13,3,24], [13,4,67], [13,5,92], [13,6,58], [13,7,78], [13,8,117], [13,9,48], [13,10,35], [13,11,15],
+								[14,0,16], [14,1,38], [14,2,5], [14,3,8], [14,4,117], [14,5,115], [14,6,88], [14,7,32], [14,8,12], [14,9,6], [14,10,120], [14,11,13],
+							]
+						}],
+					});
+				</script>
+			</div>
+			<div class="data-table1">
+				<table>
+					<colgroup>
+						<col style="width:10%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">시간대</th>
+							<th scope="col">2일</th>
+							<th scope="col">3일</th>
+							<th scope="col">4일</th>
+							<th scope="col">5일</th>
+							<th scope="col">6일</th>
+							<th scope="col">7일</th>
+							<th scope="col">8일</th>
+							<th scope="col">9일</th>
+							<th scope="col">10일</th>
+							<th scope="col">11일</th>
+							<th scope="col">12일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>00시</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>02시</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>04시</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>06시</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>08시</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>10시</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>12시</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c2">닫기</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

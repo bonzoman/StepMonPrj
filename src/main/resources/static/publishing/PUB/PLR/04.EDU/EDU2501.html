@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>메인(인큐베이팅) | 내강의실 | 교육</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>내 강의실</h1>
+		<button type="button" class="btn-t1">찜한 컨텐츠</button>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [여정가이드] -->
+		<!-- ######################### -->
+		<div class="area-info4">
+			<p><strong class="txt-c1">D-00</strong> @여정명</p>
+			<div class="side"><a href="javascript:void(0);" class="btn-sub4 c1">여정가이드</a></div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [필수 교육] -->
+		<!-- ######################### -->
+		<div class="area-toggle2 t1" data-autoset="toggle">
+			<section>
+				<header class="tit">
+					<h2><em class="icon-txt2">필수</em> 상품숙지 필수교육</h2>
+					<button type="button" data-toggle="btn" aria-expanded="false">상품숙지 필수교육 상세보기</button>
+				</header>
+				<div class="info-con1" data-toggle="content">
+					<p class="mes-t1">가입 설계를 위해 수강해야 하는 교육이에요.</p>
+					<!-- # 강의목록 # -->
+					<div class="list-data2">
+						<ul>
+							<li>
+								<a href="javascript:void(0);" class="ic1">
+									<strong class="data1">강의명</strong>
+									<span class="data2">수강완료</span> <!-- [D] 수강완료일 경우 노출 -->
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="ic1">
+									<strong class="data1">강의명이 길어질 경우 말줄임 처리가 됩니다.</strong>
+									<span class="data2">수강완료</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="ic1">
+									<strong class="data1">장기서비스 이해</strong>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="ic1">
+									<strong class="data1">일반서비스 이해</strong>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="ic1">
+									<strong class="data1">자동처서비스 이해</strong>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- # // # -->
+				</div>
+			</section>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [패키지] -->
+		<!-- ######################### -->
+		<div class="banner-con1">
+			<h2 class="hide">패키지</h2>
+			<ul class="swiper-t1" data-slider="list1" data-slider-title="패키지 배너" data-pagination="bullet" data-callback-load="uiPackageSlider">
+				<!--
+					[D] 잠김패키지 클래스명(disabled) 추가
+					[D] 열린패키지/ 잠긴패키지 내용은 클래스명에 따라 노출/비노출 처리됨
+				-->
+				<!-- # banner1 : OT 패키지 # -->
+				<li class="banner1">
+					<a href="#">
+						<strong>OT 패키지</strong>
+						<!-- [D] 열린패키지 -->
+						<dl class="data1">
+							<dt>수강완료</dt>
+							<dd>00/00</dd>
+						</dl>
+						<dl class="data1">
+							<dt>받은 포인트</dt>
+							<dd>000,000P</dd>
+						</dl>
+						<!-- [D] 잠긴패키지 -->
+						<p>0000.00.00 00:00에 열려요.</p>
+					</a>
+				</li>
+				<!-- # banner2 : 고객 중심 패키지 # -->
+				<li class="banner2 disabled">
+					<a href="#">
+						<strong>고객 중심 패키지</strong>
+						<!-- [D] 열린패키지 -->
+						<dl class="data1">
+							<dt>수강완료</dt>
+							<dd>00/00</dd>
+						</dl>
+						<dl class="data1">
+							<dt>받은 포인트</dt>
+							<dd>000,000P</dd>
+						</dl>
+						<!-- [D] 잠긴패키지 -->
+						<p>0000.00.00 00:00에 열려요.</p>
+					</a>
+				</li>
+				<!-- # banner3 : 커리어 중심 패키지 # -->
+				<li class="banner3 disabled" data-package="true"> <!-- [D] 현재 진행중인 패키지 표시 : data-package="true" -->
+					<a href="#">
+						<strong>커리어 중심 패키지</strong>
+						<!-- [D] 열린패키지 -->
+						<dl class="data1">
+							<dt>수강완료</dt>
+							<dd>3/10</dd>
+						</dl>
+						<dl class="data1">
+							<dt>받은 포인트</dt>
+							<dd>1,200P</dd>
+						</dl>
+						<!-- [D] 잠긴패키지 -->
+						<p>0000.00.00 00:00에 열려요.</p>
+					</a>
+				</li>
+				<!-- # banner4 : 상품 중심 패키지 # -->
+				<li class="banner4 disabled">
+					<a href="#">
+						<strong>상품 중심 패키지</strong>
+						<!-- [D] 열린패키지 -->
+						<dl class="data1">
+							<dt>수강완료</dt>
+							<dd>3/10</dd>
+						</dl>
+						<dl class="data1">
+							<dt>받은 포인트</dt>
+							<dd>1,200P</dd>
+						</dl>
+						<!-- [D] 잠긴패키지 -->
+						<p>0000.00.00 00:00에 열려요.</p>
+					</a>
+				</li>
+				<!-- # banner5 : 판매 중심 패키지 # -->
+				<li class="banner5 disabled">
+					<a href="#">
+						<strong>판매 중심 패키지</strong>
+						<!-- [D] 열린패키지 -->
+						<dl class="data1">
+							<dt>수강완료</dt>
+							<dd>3/10</dd>
+						</dl>
+						<dl class="data1">
+							<dt>받은 포인트</dt>
+							<dd>1,200P</dd>
+						</dl>
+						<!-- [D] 잠긴패키지 -->
+						<p>0000.00.00 00:00에 열려요.</p>
+					</a>
+				</li>
+				<!-- # banner6 : 메디컬 중심 패키지 # -->
+				<li class="banner6 disabled">
+					<a href="#">
+						<strong>메디컬 중심 패키지</strong>
+						<!-- [D] 열린패키지 -->
+						<dl class="data1">
+							<dt>수강완료</dt>
+							<dd>3/10</dd>
+						</dl>
+						<dl class="data1">
+							<dt>받은 포인트</dt>
+							<dd>1,200P</dd>
+						</dl>
+						<!-- [D] 잠긴패키지 -->
+						<p>0000.00.00 00:00에 열려요.</p>
+					</a>
+				</li>
+				<!-- # banner7 : 컨설팅 중심 패키지 # -->
+				<li class="banner7 disabled">
+					<a href="#">
+						<strong>컨설팅 중심 패키지</strong>
+						<!-- [D] 열린패키지 -->
+						<dl class="data1">
+							<dt>수강완료</dt>
+							<dd>3/10</dd>
+						</dl>
+						<dl class="data1">
+							<dt>받은 포인트</dt>
+							<dd>1,200P</dd>
+						</dl>
+						<!-- [D] 잠긴패키지 -->
+						<p>0000.00.00 00:00에 열려요.</p>
+					</a>
+				</li>
+				<!-- # // # -->
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [테마 교육] -->
+		<!-- ######################### -->
+		<div class="wrap-section4">
+			<h2 class="hide">테마 교육</h2>
+
+			<!-- # 테마명/테마설명 # -->
+			<div class="tit-sub1">
+				<h3>@테마명@</h3>
+				<p>@테마설명@</p>
+			</div>
+
+			<!-- # 강의목록 # -->
+			<div class="list-data1">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="data1"><strong>강의명</strong></div>
+						<div class="data-info3">
+							<span class="img"><img src="../../resource/img/temp/@img_img2.png" alt=""></span>
+							<span class="time" title="재생시간 00:00">00:00</span>
+						</div>
+						<label class="icon-com1 ic22">
+							<input type="checkbox" checked>
+							<span>찜하기</span>
+						</label>
+						<a href="javascript:void(0);" class="btn">상세보기</a>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data1"><strong>강의제목이 길어질 경우 두줄 말줄임 처리 됩니다.</strong></div>
+						<div class="data-info3">
+							<span class="img"><img src="../../resource/img/temp/@img_img3.png" alt=""></span>
+							<span class="time" title="재생시간 00:00">00:00</span>
+						</div>
+						<label class="icon-com1 ic22">
+							<input type="checkbox">
+							<span>찜하기</span>
+						</label>
+						<a href="javascript:void(0);" class="btn">상세보기</a>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data1"><strong>[롯데손해보험 특강] 소개를 부르는 세일즈</strong></div>
+						<div class="data-info3">
+							<span class="img"><img src="../../resource/img/temp/@img_edu1.png" alt=""></span>
+							<span class="time" title="재생시간 00:00">00:00</span>
+						</div>
+						<label class="icon-com1 ic22">
+							<input type="checkbox">
+							<span>찜하기</span>
+						</label>
+						<a href="javascript:void(0);" class="btn">상세보기</a>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+			<!-- # // # -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [배너영역] 성장뱃지 -->
+		<!-- ######################### -->
+		<div class="banner-t2">
+			<a href="javascript:void(0);" class="ic1">
+				<!-- [M 2022-08-10] 테스트 수정사항 반영 -->
+				<strong>내 성장 뱃지 보기</strong>
+				<span>내가 받을 수 있는 뱃지 보러 갈까요?</span>
+				<!-- // -->
+			</a>
+		</div>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer">
+		<dl class="select-toggle1" data-autoset="select">
+			<dt>홈화면 선택</dt>
+			<dd>
+				<div class="basic">
+					<button type="button" class="icon-home" data-value="1" onclick="ui.alert('모아보기')">모아보기</button>
+					<button type="button" data-toggle="selectbtn" aria-expanded="false">홈 화면 선택목록</button>
+				</div>
+				<div class="list">
+					<button type="button" data-option="1" aria-selected="true"><span>모아보기</span></button>
+					<button type="button" data-option="2"><span>고객조회</span></button>
+					<button type="button" data-option="3"><span>렛:톡</span></button>
+					<button type="button" data-option="4"><span>보장분석</span></button>
+					<button type="button" data-option="5"><span>내강의실</span></button>
+					<button type="button" class="icon-settiong"><span>홈 설정</span></button>
+				</div>
+			</dd>
+		</dl>
+		<a href="javascript:void(0);" onclick="ui.alert('신규설계')" class="ic1">신규설계</a>
+		<a href="javascript:void(0);" onclick="ui.alert('알림')" class="ic2">알림<em class="icon-noti1 ic1">미확인 알림 있음</em></a>
+		<a href="javascript:void(0);" onclick="ui.alert('나의정보')" class="info"><img src="../../resource/img/temp/@img_user1.png" alt="">나의정보</a>
+	</footer>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+//<!--
+	/* ****************************************
+	* [샘플] 패키지배너 SLIDER EVENT
+	* 현재 진행중인 패키지 슬라이드로 이동
+	* uiPackageSlider() : 함수명 임시 적용
+	* 페이지 진입시 호출
+	* data-package="true"으로 현재 진행중 패키지 표시
+	**************************************** */
+	function uiPackageSlider(e){
+		var _el = $(e.$wrapperEl).find('[data-package]').index(); //현재 진행중 패키지
+		setTimeout(function(){
+			e.slideTo(_el, 0); //현재 진행중 패키지로 이동
+		},20)
+	}
+//-->
+</script>
+</body>
+</html>

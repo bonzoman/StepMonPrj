@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>가망후보자관리 | 후보자 조회 | 도입(위촉)</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>후보자 조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] -->
+		<!-- [D] 설계사일 경우 비노출 -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<!-- [CASE1] 사업단장 -->
+			<h2 class="info3 ic1 t2">강남사업단</h2>
+
+			<!-- [CASE2] 지점장
+			<h2 class="info3 ic6 t2">강남7지점</h2>
+             -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">가망 후보자</a></li>
+				<li><a href="javascript:void(0);">후보자</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [등록된 가망 후보자 있음] -->
+		<!-- ######################### -->
+		<div class="wrap-section">
+			<!-- # [총 명수 / 정렬 / 필터] # -->
+			<div class="area-info1">
+				<p>총 <strong>00명</strong></p>
+				<div class="side">
+					<!-- // -->
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">정렬</span>
+							<span data-select="text" data-value="1">최근순</span>
+						</button>
+						<div class="list">
+							<div data-label="정렬">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion" value="1"><span>최근순</span></label>
+									<label><input type="radio" name="selectOpeion" value="2"><span>과거순</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<!-- // -->
+					<button type="button" class="icon-com1 ic18 right">필터</button>
+					<!-- // -->
+				</div>
+			</div>
+
+			<!-- # [목록] # -->
+			<div class="info-data3 line">
+				<ul>
+					<!-- [M 2022-09-26] 필터에서 조회된 값이 없을 경우 추가 -->
+					<li class="nodata">
+						<strong>조회하신 결과가 없어요.</strong>
+						<span>다시 조회해보세요.</span>
+					</li>
+					<!-- // [M 2022-09-26] -->
+				</ul>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- # [가망 후보자 등록] # -->
+		<!-- ######################### -->
+		<a href="javascript:void(0);" class="btn-util1 ic5" data-sticky="bottom">가망 후보자 등록</a>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer">
+		<dl class="select-toggle1" data-autoset="select">
+			<dt>홈화면 선택</dt>
+			<dd>
+				<div class="basic">
+					<button type="button" class="icon-home" data-value="1" onclick="ui.alert('모아보기')">모아보기</button>
+					<button type="button" data-toggle="selectbtn" aria-expanded="false">홈 화면 선택목록</button>
+				</div>
+				<div class="list">
+					<button type="button" data-option="1" aria-selected="true"><span>모아보기</span></button>
+					<button type="button" data-option="2"><span>고객조회</span></button>
+					<button type="button" data-option="3"><span>렛:톡</span></button>
+					<button type="button" data-option="4"><span>보장분석</span></button>
+					<button type="button" data-option="5"><span>내강의실</span></button>
+					<button type="button" class="icon-settiong"><span>홈 설정</span></button>
+				</div>
+			</dd>
+		</dl>
+		<a href="javascript:void(0);" onclick="ui.alert('신규설계')" class="ic1">신규설계</a>
+		<a href="javascript:void(0);" onclick="ui.alert('알림')" class="ic2">알림<em class="icon-noti1 ic1">미확인 알림 있음</em></a>
+		<a href="javascript:void(0);" onclick="ui.alert('나의정보')" class="info"><img src="../../resource/img/temp/@img_user1.png" alt="">나의정보</a>
+	</footer>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

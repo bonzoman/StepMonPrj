@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <g data-name="그룹 627162">
+        <g data-name="그룹 627161">
+            <g data-name="그룹 627126">
+                <g data-name="그룹 627124" transform="translate(24.002 22.838)">
+                    <g data-name="그룹 627122">
+                        <g data-name="그룹 626933" transform="translate(-.001 3.802)">
+                            <rect data-name="사각형 460135" width="64.89" height="76.676" rx="2" style="fill:#fecf48"/>
+                            <path data-name="사각형 460203" d="M0 0h29.33a2 2 0 0 1 2 2v72.676a2 2 0 0 1-2 2H0V0z" transform="translate(33.559)" style="fill:#fec127"/>
+                            <path data-name="패스 1504682" d="M0 0v13.783" transform="rotate(90 -10.398 34.948)" style="stroke-linecap:round;stroke:#fff;stroke-width:4px;fill:none"/>
+                            <path data-name="패스 1504683" d="M0 0v33.349" transform="rotate(90 -5.402 49.504)" style="stroke-linecap:round;stroke:#fff;stroke-width:4px;fill:none"/>
+                            <path data-name="패스 1504900" d="M0 0v33.349" transform="rotate(90 -10.182 54.283)" style="stroke-linecap:round;stroke:#fff;stroke-width:4px;fill:none"/>
+                        </g>
+                    </g>
+                    <rect data-name="사각형 460204" width="24.538" height="8.923" rx="2" transform="translate(19.759)" style="fill:#dbdbdb"/>
+                </g>
+                <g data-name="그룹 627125" transform="translate(32.35 39.782)">
+                    <ellipse data-name="타원 14389" cx="10.937" cy="10.94" rx="10.937" ry="10.94" style="fill:#fff"/>
+                    <ellipse data-name="타원 14390" cx="3.646" cy="3.647" rx="3.646" ry="3.647" transform="translate(7.291 2.917)" style="fill:#dbdbdb"/>
+                    <path data-name="교차 1" d="M0 6.285a8.752 8.752 0 0 1 16.794 0 10.918 10.918 0 0 1-8.4 3.93A10.91 10.91 0 0 1 0 6.285z" transform="translate(2.54 11.668)" style="fill:#dbdbdb"/>
+                </g>
+            </g>
+            <g data-name="그룹 625848">
+                <path data-name="합치기 144" d="M7.512 32.378.979 33.593l1.664-6.415A17.68 17.68 0 1 1 17.7 35.623a17.538 17.538 0 0 1-10.188-3.245z" transform="rotate(15 -25.757 318.893)" style="fill:#ffd6d6"/>
+            </g>
+        </g>
+        <g data-name="그룹 626938">
+            <path data-name="패스 1503981" d="m0-.447 2.568-3.987L5.3-.447l.009 13.5h-5.3z" transform="rotate(-135 55.52 3.238)" style="stroke:#e84427;stroke-linejoin:round;fill:#e84427;stroke-linecap:round"/>
+            <path data-name="사각형 459713" d="M0 0h6.532v3.355a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V0z" transform="rotate(-135 57.946 -1.748)" style="fill:#fffbed"/>
+            <path data-name="패스 1503982" d="M0 0h6.532v11.723H0z" transform="rotate(-135 55.744 3.569)" style="fill:#e84427"/>
+        </g>
+    </g>
+    <path data-name="사각형 459566" style="fill:none" d="M0 0h120v120H0z"/>
+</svg>

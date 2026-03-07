@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>타사갱신 | 갱신설계 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>타사갱신 설계요청</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" id="uiInclude" data-page="1">
+		<article id="PAGE1" class="">
+			<h1 class="hide">설계요청사항</h1>
+
+			<!-- ######################### -->
+			<!-- [단계이동] -->
+			<!-- ######################### -->
+			<div class="wrap-step1" data-sticky="top">
+				<div class="info-step1" data-autoset="toggle">
+					<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+					<div data-toggle="content">
+						<ol>
+							<li>
+								<span>01. 고객 정보</span>
+								<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							</li>
+							<li aria-current="step">
+								<span>02. 설계요청사항</span>
+								<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [상단타이틀] -->
+			<!-- ######################### -->
+			<div class="tit-section">
+				<p>설계요청 사항을<br>입력해주세요.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>설계정보</legend>
+
+				<!-- # 기존가입회사 # -->
+				<dl class="form">
+					<dt>기존가입회사</dt>
+					<dd><input type="text" class="text" title="기존가입회사" placeholder="가입하신 회사를 입력해주세요."></dd>
+				</dl>
+
+				<!-- # 사고이력(최근3년) # -->
+				<dl class="form">
+					<dt>사고이력(최근3년) <em class="icon-required2">필수</em></dt>
+					<!-- // -->
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>있음</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>없음</span>
+							</label>
+						</div>
+					</dd>
+					<!-- // -->
+					<dd>
+						<!-- # [CASE1] 사고이력 미체크시 # -->
+						<textarea class="textarea" title="사고이력 있음 경우 사고이력 기재" placeholder="사고 “있음” 경우, 최근 3개년 전 가입사 및 사고이력 (사고건수, 사고내용, 손해액)을 기재해주세요." aria-invalid="true"></textarea>
+						<div class="validation">사고 유무 선택 및 이력을 기재해주세요.</div>
+
+						<!-- # [CASE2] 사고이력 있음 경우 # -->
+						<textarea class="textarea" title="사고이력 있음 경우 사고이력 기재" placeholder="사고 “있음” 경우, 최근 3개년 전 가입사 및 사고이력 (사고건수, 사고내용, 손해액)을 기재해주세요."></textarea>
+
+						<!-- # [CASE3] 사고이력 없음 경우 # -->
+						<textarea class="textarea" title="사고이력 있음 경우 사고이력 기재" placeholder="사고 “있음” 경우, 최근 3개년 전 가입사 및 사고이력 (사고건수, 사고내용, 손해액)을 기재해주세요." disabled=""></textarea>
+					</dd>
+					<!-- // -->
+				</dl>
+
+				<!-- # 기타요청사항 # -->
+				<dl class="form">
+					<dt>기타요청사항</dt>
+					<dd>
+						<div class="textarea">
+							<textarea cols="50" rows="3" title="기타 요청사항" placeholder="※ 전년도 타사증권 첨부 (필수)&#10;※ 전 증권 없을 경우 신규로 요청&#10;※ 전 계약 대비 변경된 사항이나 요청사항 작성&#10;※ 간편설계는 계/피, 소재지 입력 없이&#10;보험료산출이 가능합니다"></textarea>
+							<span class="util2"><strong>0</strong>/4,000자</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 파일첨부 # -->
+				<dl class="form">
+					<dt>파일첨부 <a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt>
+					<dd class="data-file1">
+						<ul>
+							<li>
+								<span>담보확인 첨부화면내용 캡쳐.png</span>
+								<span class="sub">46.3KB</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+							<li>
+								<span>건물사진1.jpg</span>
+								<span class="sub">56KB</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+						</ul>
+					</dd>
+					<dd class="area-btn1">
+						<button class="btn-com1 ic3">파일첨부</button>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">설계요청</button>
+			</div>
+			<!-- ######################### -->
+		</article>
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 파일 첨부 안내 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">파일 첨부 안내사항</dt>
+		<dd>
+			<ul class="txt-bul3">
+				<li>첨부파일의 사이즈는 <strong>000px X 000px</strong> 사이즈를 준수해주세요.</li>
+				<li>첨부파일은 <strong>png, jpg, jpeg, bmp, gif</strong> 파일만 등록이 가능합니다.</li>
+				<li>첨부파일 용량은 <strong>5M</strong>를 넘을 수 없습니다.</li>
+				<li>첨부파일을 등록하면, 퀴즈 내용 하단에 자동으로 노출됩니다.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">파일 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+<!-- ##################################### -->
+
+</body>
+</html>

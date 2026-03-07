@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 고객연락처관리 | 개인 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>고객연락처관리</h1>
+			<button type="button" data-btn="pop-close">고객연락처관리 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단부분] 추가하기 버튼 -->
+			<!-- ######################### -->
+			<div class="area-btn1">
+				<button type="button" class="btn-com1 ic3">추가하기</button>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [연락처 추가] -->
+			<!-- ######################### -->
+			<fieldset  class="form-wrap1">
+				<legend>연락처 추가</legend>
+
+				<dl class="form">
+					<dt>연락처</dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" disabled>
+								<span data-select="title">선택해주세요.</span>
+								<span data-select="text" data-value="1">휴대전화</span>
+							</button>
+							<div class="list">
+								<div data-label="연락처 구분">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="1"><span>휴대전화</span></label>
+										<label><input type="radio" name="selectOpeion1" value="2"><span>자택전화</span></label>
+										<label><input type="radio" name="selectOpeion1" value="3"><span>직장전화</span></label>
+										<label><input type="radio" name="selectOpeion1" value="4"><span>기타전화</span></label>
+										<label><input type="radio" name="selectOpeion1" value="5"><span>자택/소재지패스</span></label>
+										<label><input type="radio" name="selectOpeion1" value="6"><span>직장/본사패스</span></label>
+										<label><input type="radio" name="selectOpeion1" value="7"><span>소재지전화</span></label>
+										<label><input type="radio" name="selectOpeion1" value="8"><span>본사전화</span></label>
+										<label><input type="radio" name="selectOpeion1" value="9"><span>거주지전화</span></label>
+										<label><input type="radio" name="selectOpeion1" value="10"><span>보상웹팩스</span></label>
+										<label><input type="radio" name="selectOpeion1" value="11"><span>보상휴대전화</span></label>
+										<label><input type="radio" name="selectOpeion1" value="12"><span>여행자보험연락처</span></label>
+										<label><input type="radio" name="selectOpeion1" value="13"><span>외국전화</span></label>
+										<label><input type="radio" name="selectOpeion1" value="14"><span>외국팩스</span></label>
+										<label><input type="radio" name="selectOpeion1" value="15"><span>은행지점전화</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrap1">
+							<!-- [M 2022-07-27] 변경 -->
+							<div class="text">
+								<input type="tel" title="연락처(통신사 및 국번)" placeholder="02" value="010" disabled>
+								<span class="util1">-</span>
+								<input type="tel" title="연락처(가운데번호)" placeholder="1234" value="1234" disabled>
+								<span class="util1">-</span>
+								<input type="tel" title="연락처(끝번호)" placeholder="1234" value="1234" disabled>
+							</div>
+							<!-- // -->
+							<button type="button" class="btn-sub1" disabled>인증완료</button>
+						</div>
+					</dd>
+					<dd class="side">
+						<button type="button" class="btn-sub3 c2">수정</button>
+						<button type="button" class="btn-sub3 c2">삭제</button>
+					</dd>
+				</dl>
+
+				<!-- [CASE2-1] 입력 전 -->
+				<dl class="form">
+					<dt>연락처</dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택해주세요.</span>
+								<span data-select="text"></span>
+							</button>
+							<div class="list">
+								<div data-label="연락처 구분">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value="1"><span>휴대전화</span></label>
+										<label><input type="radio" name="selectOpeion2" value="2"><span>자택전화</span></label>
+										<label><input type="radio" name="selectOpeion2" value="3"><span>직장전화</span></label>
+										<label><input type="radio" name="selectOpeion2" value="4"><span>기타전화</span></label>
+										<label><input type="radio" name="selectOpeion2" value="5"><span>자택/소재지패스</span></label>
+										<label><input type="radio" name="selectOpeion2" value="6"><span>직장/본사패스</span></label>
+										<label><input type="radio" name="selectOpeion2" value="7"><span>소재지전화</span></label>
+										<label><input type="radio" name="selectOpeion2" value="8"><span>본사전화</span></label>
+										<label><input type="radio" name="selectOpeion2" value="9"><span>거주지전화</span></label>
+										<label><input type="radio" name="selectOpeion2" value="10"><span>보상웹팩스</span></label>
+										<label><input type="radio" name="selectOpeion2" value="11"><span>보상휴대전화</span></label>
+										<label><input type="radio" name="selectOpeion2" value="12"><span>여행자보험연락처</span></label>
+										<label><input type="radio" name="selectOpeion2" value="13"><span>외국전화</span></label>
+										<label><input type="radio" name="selectOpeion2" value="14"><span>외국팩스</span></label>
+										<label><input type="radio" name="selectOpeion2" value="15"><span>은행지점전화</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrap1">
+							<!-- [M 2022-07-27] 변경 -->
+							<div class="text">
+								<input type="tel" title="연락처(통신사 및 국번)" placeholder="02">
+								<span class="util1">-</span>
+								<input type="tel" title="연락처(가운데번호)" placeholder="1234">
+								<span class="util1">-</span>
+								<input type="tel" title="연락처(끝번호)" placeholder="1234">
+							</div>
+							<!-- // -->
+							<!-- [CASE] 휴대전화 -->
+							<button type="button" class="btn-sub1" disabled>본인인증</button>
+							<!-- [CASE] 자택전화, 직장전화 -->
+							<!-- <button type="button" class="btn-sub1" disabled>중복확인</button> -->
+						</div>
+					</dd>
+					<dd class="side">
+						<button type="button" class="btn-sub3 c2">삭제</button>
+					</dd>
+				</dl>
+
+				<!-- [CASE2-2] 입력 후 : 본인인증/중복확인 전 -->
+				<dl class="form">
+					<dt>연락처</dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택해주세요.</span>
+								<span data-select="text" data-value="3">직장전화</span>
+							</button>
+							<div class="list">
+								<div data-label="연락처 구분">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion3" value="1"><span>휴대전화</span></label>
+										<label><input type="radio" name="selectOpeion3" value="2"><span>자택전화</span></label>
+										<label><input type="radio" name="selectOpeion3" value="3" checked><span>직장전화</span></label>
+										<label><input type="radio" name="selectOpeion3" value="4"><span>기타전화</span></label>
+										<label><input type="radio" name="selectOpeion3" value="5"><span>자택/소재지패스</span></label>
+										<label><input type="radio" name="selectOpeion3" value="6"><span>직장/본사패스</span></label>
+										<label><input type="radio" name="selectOpeion3" value="7"><span>소재지전화</span></label>
+										<label><input type="radio" name="selectOpeion3" value="8"><span>본사전화</span></label>
+										<label><input type="radio" name="selectOpeion3" value="9"><span>거주지전화</span></label>
+										<label><input type="radio" name="selectOpeion3" value="10"><span>보상웹팩스</span></label>
+										<label><input type="radio" name="selectOpeion3" value="11"><span>보상휴대전화</span></label>
+										<label><input type="radio" name="selectOpeion3" value="12"><span>여행자보험연락처</span></label>
+										<label><input type="radio" name="selectOpeion3" value="13"><span>외국전화</span></label>
+										<label><input type="radio" name="selectOpeion3" value="14"><span>외국팩스</span></label>
+										<label><input type="radio" name="selectOpeion3" value="15"><span>은행지점전화</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrap1">
+							<!-- [M 2022-07-27] 변경 -->
+							<div class="text">
+								<input type="tel" title="연락처(통신사 및 국번)" placeholder="02" value="031">
+								<span class="util1">-</span>
+								<input type="tel" title="연락처(가운데번호)" placeholder="1234" value="1234">
+								<span class="util1">-</span>
+								<input type="tel" title="연락처(끝번호)" placeholder="1234" value="1234">
+							</div>
+							<!-- // -->
+							<!-- <button type="button" class="btn-sub1">본인인증</button> [CASE] 휴대전화 -->
+							<button type="button" class="btn-sub1">중복확인</button> <!-- [CASE] 자택전화, 직장전화 -->
+						</div>
+					</dd>
+					<dd class="side">
+						<button type="button" class="btn-sub3 c2">삭제</button>
+					</dd>
+				</dl>
+
+				<!-- [CASE2-3] 입력 후 : 본인인증/중복확인 후 -->
+				<dl class="form">
+					<dt>연락처</dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" disabled>
+								<span data-select="title">연락처 구분</span>
+								<span data-select="text" data-value="1">휴대전화</span>
+							</button>
+							<div class="list">
+								<div data-label="연락처 구분">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion4" value="1" checked><span>휴대전화</span></label>
+										<label><input type="radio" name="selectOpeion4" value="2"><span>자택전화</span></label>
+										<label><input type="radio" name="selectOpeion4" value="3"><span>직장전화</span></label>
+										<label><input type="radio" name="selectOpeion4" value="4"><span>기타전화</span></label>
+										<label><input type="radio" name="selectOpeion4" value="5"><span>자택/소재지패스</span></label>
+										<label><input type="radio" name="selectOpeion4" value="6"><span>직장/본사패스</span></label>
+										<label><input type="radio" name="selectOpeion4" value="7"><span>소재지전화</span></label>
+										<label><input type="radio" name="selectOpeion4" value="8"><span>본사전화</span></label>
+										<label><input type="radio" name="selectOpeion4" value="9"><span>거주지전화</span></label>
+										<label><input type="radio" name="selectOpeion4" value="10"><span>보상웹팩스</span></label>
+										<label><input type="radio" name="selectOpeion4" value="11"><span>보상휴대전화</span></label>
+										<label><input type="radio" name="selectOpeion4" value="12"><span>여행자보험연락처</span></label>
+										<label><input type="radio" name="selectOpeion4" value="13"><span>외국전화</span></label>
+										<label><input type="radio" name="selectOpeion4" value="14"><span>외국팩스</span></label>
+										<label><input type="radio" name="selectOpeion4" value="15"><span>은행지점전화</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrap1">
+							<div class="text">
+								<input type="tel" title="연락처(통신사 및 국번)" placeholder="02" value="010" disabled>
+								<span class="util1">-</span>
+								<input type="tel" title="연락처(가운데번호)" placeholder="1234" value="1234" disabled>
+								<span class="util1">-</span>
+								<input type="tel" title="연락처(끝번호)" placeholder="1234" value="1234" disabled>
+							</div>
+							<button type="button" class="btn-sub1" disabled>인증완료</button> <!-- [CASE] 휴대전화 -->
+							<!-- <button type="button" class="btn-sub1" disabled>중복확인</button>  [CASE] 자택전화, 직장전화 -->
+						</div>
+					</dd>
+					<dd class="side">
+						<button type="button" class="btn-sub3 c2">수정</button>
+						<button type="button" class="btn-sub3 c2">삭제</button>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [토글영역] -->
+			<!-- ######################### -->
+			<div class="area-toggle1" data-autoset="toggle">
+				<dl>
+					<dt class="tit">
+						<strong>고객 연락처 관리 안내사항</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">고객 연락처 관련 안내사항 상세보기</button>
+					</dt>
+					<dd data-toggle="content">
+						<ul class="txt-mark2 t1">
+							<li>연락처구분 항목 중 기타전화를 제외한 나머지 항목은 중복으로 선택할 수 없어요.</li>
+							<li>고객 연락처는 최소한 1개 이상 저장해주셔야 고객 정보를 등록&middot;수정할 수 있어요. 휴대폰번호 등록이 안 되면 자택, 직장, 기타 연락처 등을 입력해서 고객정보를 저장해야 해요.</li>
+							<li>고객님의 휴대폰번호를 수정 또는 재등록할 경우, 본인인증(문자인증방식)을 진행해주셔야 해요.</li>
+							<li>이전과 다른 번호로 본인인증을 진행했을 경우, 1년 이내에 해당 번호로 언제든지 변경할 수 있어요. 고객님 본인 명의 휴대폰인 경우에만 본인인증을 할 수 있어요.</li>
+							<li>자택, 직장의 경우 중복 연락처 확인이 필요해요. 연락처가 중복될 경우, 중복 연락처 접수 신청을 진행해주세요.</li>
+							<li>고객님 본인 명의의 휴대폰이 없는 경우, 아래 방법으로 진행하실 수 있어요.
+								<ul class="txt-mark1">
+									<li><i>1)</i>서면신청서 제출(고객에게 서명받은 고객연락처 등록/변경 예외처리 신청서를 소속 사업단에 제출)</li>
+									<li><i>2)</i>롯데손해보험 고객센터(☎1588-3344)를 통해 고객이 직접 변경</li>
+									<li><i>3)</i>홈페이지에서 고객이 직접 변경</li>
+								</ul>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">저장</button> <!-- [D] 비활성화 속성 : disabled 추가  -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]차량 소유자 불일치 사유입력 | 설계(개인/업무/영업) | 가입설계 | 자동차보험 | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>차량 소유자 불일치 사유입력</h1>
+			<button type="button" data-btn="pop-close">차량 소유자 불일치 사유입력 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 안내문구 -->
+			<!-- ######################### -->
+			<div class="tit-section">
+				<p>차량소유자와 기명피보험자가<br>상이합니다.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>모든항목 필수입력</legend>
+
+				<!-- ### 소유자불일치 사유 ### -->
+				<dl class="form">
+					<dt>소유자불일치 사유</dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택하세요.</span>
+								<span data-select="text"></span>
+							</button>
+							<div class="list">
+								<div data-label="소유자불일치 사유 선택">
+									<div class="option">
+										<label><input type="radio" name="selOpt" value="1"><span>명의이전 예정</span></label>
+										<label><input type="radio" name="selOpt" value="2"><span>리스자동차</span></label>
+										<label><input type="radio" name="selOpt" value="3"><span>공동명의</span></label>
+										<label><input type="radio" name="selOpt" value="4"><span>비영리법인(종교단체 등)</span></label>
+										<label><input type="radio" name="selOpt" value="5"><span>기타 합리적 사유</span></label>
+										<label><input type="radio" name="selOpt" value="6"><span>기타 합리적 사유(장애인 등)</span></label>
+										<label><input type="radio" name="selOpt" value="7"><span>최초가입</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- ### [CASE1] 추가설정항목 : 리스자동차 ### -->
+				<div>
+					<!-- [피보험자 관계] -->
+					<dl class="form">
+						<dt>피보험자 관계</dt>
+						<dd><data class="selectbox" value="임대인">임대인</data></dd>
+					</dl>
+
+					<!-- [리스업체] -->
+					<dl class="form">
+						<dt>리스업체</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택하세요.</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="리스업체 선택">
+										<div class="option">
+											<label><input type="radio" name="selOpt1" value="1"><span>업체명(업체코드)</span></label>
+											<label><input type="radio" name="selOpt1" value="2"><span>현대캐피탈주식회사(110111-0995378)</span></label>
+											<label><input type="radio" name="selOpt1" value="3"><span>현대캐피탈주식회사 현대캐피탈주식회사(110111-0995378)</span></label>
+											<label><input type="radio" name="selOpt1" value="4"><span>직접입력</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- [D] 직접입력 선택시 노출 -->
+							<div>
+								<input type="text" class="text" title="리스업체명" placeholder="리스업체명을 입력해주세요.">
+								<input type="tel" class="text" title="리스업체코드" placeholder="리스업체코드를 입력해주세요.">
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- [안내사항] -->
+					<ul class="txt-bul1 line2">
+						<li>리스업체 정보(①업체명, ②사업자번호)를 입력하세요.</li>
+						<li>입력하신 리스업체 정보와 국토부 차량등록 자료가 불일치 할 경우 진행할 수 없습니다.</li>
+						<li>리스차량 등록은 대개의 경우 <strong>리스업체의 법인등록번호(13자리)</strong>로 이루어집니다.</li>
+						<li>심사자의 판단에 의하여 아래 서류가 요청될 수 있습니다.
+							<div class="txt-bul2">리스계약서, 자동차등록증, 사유서 등</div>
+						</li>
+						<li>
+							<em>[리스업체 등록번호 참고]</em>
+							<ul class="info">
+								<li><span>110111-0995378</span><strong>현대캐피탈주식회사</strong></li>
+								<li><span>110111-2278756</span><strong>비엠더블유파이낸셜서비스코리아</strong></li>
+								<li><span>110111-4385856</span><strong>폭스바겐파이낸셜서비스코리아(주)</strong></li>
+								<li><span>110111-2614786</span><strong>메르세데스벤츠파이넨셜서비스<span>코리아(주)</span></strong></li>
+								<li><span>110111-0412926</span><strong>신한카드(주)</strong></li>
+								<li><span>135011-0034400</span><strong>신한캐피탈 주식회사</strong></li>
+								<li><span>110111-0519970</span><strong>하나캐피탈(주)</strong></li>
+								<li><span>110111-0137558</span><strong>산은캐피탈(주)</strong></li>
+								<li><span>110111-3634428</span><strong>엔에이치농협캐피탈</strong></li>
+								<li><span>130111-0013499</span><strong>케이비캐피탈 주식회사</strong></li>
+								<li><span>110111-1217416</span><strong>롯데캐피탈(주)</strong></li>
+								<li><span>160111-0038524</span><strong>아주캐피탈(주)</strong></li>
+								<li><span>110111-1419286</span><strong>효성캐피탈(주)</strong></li>
+								<li><span>170111-0092784</span><strong>제이비우리캐피탈(주)</strong></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- // -->
+				</div>
+
+				<!-- ### [CASE2] 추가설정항목 : 공동명의 ### -->
+				<div>
+					<!-- [피보험자 관계] -->
+					<dl class="form">
+						<dt>피보험자 관계</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택하세요.</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="피보험자 관계 선택">
+										<div class="option">
+											<label><input type="radio" name="selOpt2" value="1"><span>배우자</span></label>
+											<label><input type="radio" name="selOpt2" value="2"><span>부모</span></label>
+											<label><input type="radio" name="selOpt2" value="3"><span>자녀</span></label>
+											<label><input type="radio" name="selOpt2" value="4"><span>형제/자매</span></label>
+											<label><input type="radio" name="selOpt2" value="5"><span>배우자부모</span></label>
+											<label><input type="radio" name="selOpt2" value="6"><span>자녀배우자</span></label>
+											<label><input type="radio" name="selOpt2" value="7"><span>사실혼배우자</span></label>
+											<label><input type="radio" name="selOpt2" value="8"><span>기타</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- [공동명의자명] -->
+					<dl class="form">
+						<dt>공동명의자명</dt>
+						<dd><input type="text" class="text" title="공동명의자명" placeholder="공동명의자명을 입력해주세요."></dd>
+					</dl>
+
+					<!-- [공동명의자 주민번호 앞 7자리] -->
+					<dl class="form">
+						<dt>공동명의자 주민번호 앞 7자리</dt>
+						<dd><input type="tel" class="text" maxlength="7" title="공동명의자 주민번호 앞 7자리" placeholder="주민번호 앞 7자리 입력해주세요."></dd>
+					</dl>
+
+					<!-- [안내사항] -->
+					<ul class="txt-bul1 line2">
+						<li>공동명의자 정보(①관계, ②이름, ③주민번호 앞7자리)를 입력하세요.</li>
+						<li>심사자의 판단에 의하여 아래 서류가 요청될 수 있습니다.
+							<div class="txt-bul2">공동명의자의 신분증, 자동차등록증, 사유서 등록번호</div>
+						</li>
+					</ul>
+					<!-- // -->
+				</div>
+
+				<!-- ### [CASE3] 안내사항 : 명의이전예정 ### -->
+				<div>
+					<ul class="txt-bul1 line2">
+						<li>중고차 매입 시 양수인이 보험가입하여 차량등록이 예정중인 경우에 한하여 선택할 수 있습니다.</li>
+						<li>명의이전 미 이행 시, 기명피보험자 선정 기준에 위배되어 사고접수 및 보상처리에 문제가 발생할 수 있습니다.</li>
+						<li>심사자의 판단에 의하여 아래 서류가 요청 될 수 있습니다.
+							<div class="txt-bul2">매매계약서, 자동차등록증, 차량매도자용인감즘명서, 사유서 등</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- ### [CASE4] 안내사항 : 비영리법인(종교단체 등) ### -->
+				<div>
+					<ul class="txt-bul1 line2">
+						<li>종교단체, 교육기관, 아파트관리사무소 등 비영리법인의 경우 등록증 상 소유주가 개인(주민등록번호)일지라도 병행 기재된 단체업체 명칭을 확인하여 법인(사업자번호)를 기명피보험자로 지정해야 합니다.</li>
+						<li>심사자의 판단에 의하여 아래 서류가 요청될 수 있습니다.
+							<div class="txt-bul2">자동차등록증,(단체명 병행기재 限), 사업자등록증사본, 사유서 등</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- ### [CASE5] 안내사항 : 기타 합리적 사유 ### -->
+				<div>
+					<p class="txt-bul1 line2">부당 점유차량은 적격기명피보험자 선정이 불하하며 인수할 수 없습니다.</p>
+				</div>
+
+				<!-- ### [CASE5] 안내사항 : 기타 합리적 사유(장애인 등) ### -->
+				<div>
+					<ul class="txt-bul1 line2">
+						<li>기타 합리적인 사유로 소유자불일치 계약을 진행해야 할 경우 차량 소유자불일치 확인서 첨부 후 인수심사를 진행해야 합니다.</li>
+						<li>심사자의 판단에 의하여 추가 서류가 요청될 수 있습니다.
+							<div class="txt-bul2">차량소유자불일치 확인서</div>
+						</li>
+					</ul>
+				</div>
+				<!-- ### // ### -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">적용</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

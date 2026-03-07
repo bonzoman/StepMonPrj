@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 가입담보모아보기 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>가입보장(담보) 모아보기</h1>
+			<button type="button" data-btn="pop-close">가입보장(담보) 모아보기 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [피보험자/소유자목록] -->
+			<!-- ######################### -->
+			<fieldset class="form-search1" data-sticky="top">
+				<legend>피보험자/소유자 선택</legend>
+
+				<dl class="form">
+					<dt>피보험자/소유자 목록</dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">피보험자/소유자 목록</span>
+								<span data-select="text" data-value="selectOpeion1">피보험자1</span>
+							</button>
+							<div class="list">
+								<div data-label="피보험자/소유자 목록">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1"><span>피보험자1</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [가입보장(담보) 목록] -->
+			<!-- ######################### -->
+			<!-- # 총 00건 # -->
+			<div class="area-info1">
+				<p>총 <strong>00건</strong></p>
+			</div>
+
+			<!-- # 목록 # -->
+			<div class="info-data1 line">
+				<ul>
+					<!-- // -->
+					<li>
+						<strong class="tit">재난배상책임</strong>
+						<div class="info-con2">
+							<dl>
+								<dt>가입금액</dt>
+								<dd class="data-num1"><strong>1,500</strong>만원</dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>6,831</strong>원</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">화재손해보험(폭발포함)배상책임 II화재(폭발포함)배상책임 II</strong>
+						<div class="info-con2">
+							<dl>
+								<dt>가입금액</dt>
+								<dd class="data-num1"><strong>1,500</strong>만원</dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>6,831</strong>원</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">재난배상책임</strong>
+						<div class="info-con2">
+							<dl>
+								<dt>가입금액</dt>
+								<dd class="data-num1"><strong>1,500</strong>만원</dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>6,831</strong>원</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [보장담보 보험료] -->
+			<!-- ######################### -->
+			<div class="area-info2 t1">
+				<dl>
+					<dt>보장(담보)보험료</dt>
+					<dd class="data-num1"><strong>53,000</strong><span>원</span></dd>
+				</dl>
+			</div>
+			<!-- # 안내문구 # -->
+			<div class="mes-info2"><p>원단위 보험료 절사로 인하여 보장보험료의 차이가 발생할 수 있습니다.</p></div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

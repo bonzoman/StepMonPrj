@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title> 영업목표조회 | 실적관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-18]	1. 검색결과 결과 없음 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>영업목표조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [기준설정] -->
+		<!-- ######################### -->
+		<div class="area-info1 line3">
+			<p>2022.03~2022.06</p>
+			<div class="side"><button type="button" class="icon-com1 ic18 right">필터</button></div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [합계영역] -->
+		<!-- ######################### -->
+		<div class="wrap-section">
+			<h2 class="tit-sub1">사용자 권한별 본인 팀명</h2>
+			<!-- # 목표내용 # -->
+			<div class="info-con2">
+				<!-- [장기신규] -->
+				<dl>
+					<dt>장기신규</dt>
+					<dd data-autoset="toggle">
+						<div class="area1">
+							<div class="data-num1 txt-c1"><strong>000,000,000</strong><span>천원</span></div>
+							<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+						</div>
+						<div data-toggle="content">
+							<!-- 납방별 -->
+							<strong class="tit">납방별</strong>
+							<div class="area2">
+								<dl>
+									<dt>월납</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+								</dl>
+								<dl>
+									<dt>비월납</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+								</dl>
+							</div>
+							<!-- 보종별 -->
+							<strong class="tit">보종별</strong>
+							<div class="area2">
+								<dl>
+									<dt>보장</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+								</dl>
+								<dl>
+									<dt>재물</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+								</dl>
+								<dl>
+									<dt>저축</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+								</dl>
+							</div>
+							<!-- // -->
+						</div>
+					</dd>
+				</dl>
+				<!-- [장기계속] -->
+				<dl>
+					<dt>장기계속</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+				</dl>
+				<!-- [일반] -->
+				<dl>
+					<dt>일반</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+				</dl>
+				<!-- [자동차] -->
+				<dl>
+					<dt>자동차</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+				</dl>
+				<!-- // -->
+			</div>
+
+			<!-- # 총 합계 # -->
+			<div class="area-info2">
+				<dl>
+					<dt>합계</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+				</dl>
+			</div>
+			<!-- # // # -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [목록영역] -->
+		<!-- ######################### -->
+		<div class="info-data1 line">
+			<ul>
+				<!-- [CASE1] 월별 -->
+				<li>
+					<strong class="tit">2022.02</strong>
+					<!-- // -->
+					<div class="info-con2">
+						<!-- // -->
+						<dl>
+							<dt>장기신규</dt>
+							<dd data-autoset="toggle">
+								<div class="area1">
+									<div class="data-num1 txt-c1"><strong>000,000</strong><span>천원</span></div>
+									<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<!-- // -->
+									<strong class="tit">납방별</strong>
+									<div class="area2">
+										<dl>
+											<dt>월납</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>비월납</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+									</div>
+									<!-- // -->
+									<strong class="tit">보종별</strong>
+									<div class="area2">
+										<dl>
+											<dt>보장</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>재물</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>저축</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+									</div>
+									<!-- // -->
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl>
+							<dt>장기계속</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+						</dl>
+						<!-- // -->
+						<dl>
+							<dt>일반</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+						</dl>
+						<!-- // -->
+						<dl>
+							<dt>자동차</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+						</dl>
+						<!-- // -->
+					</div>
+					<!-- // -->
+					<div class="area-info2 c1">
+						<dl>
+							<dt>합계</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+						</dl>
+					</div>
+					<!-- // -->
+				</li>
+				<!-- [CASE1] 하위조직 -->
+				<li>
+					<strong class="tit">강남사업단</strong>
+					<div class="info-con2">
+						<dl>
+							<dt>장기신규</dt>
+							<dd data-autoset="toggle">
+								<div class="area1">
+									<div class="data-num1 txt-c1"><strong>000,000</strong><span>천원</span></div>
+									<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<strong class="tit">납방별</strong>
+									<div class="area2">
+										<dl>
+											<dt>월납</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>비월납</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+									</div>
+									<strong class="tit">보종별</strong>
+									<div class="area2">
+										<dl>
+											<dt>보장</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>재물</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>저축</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>장기계속</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+						</dl>
+						<dl>
+							<dt>일반</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+						</dl>
+						<dl>
+							<dt>자동차</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+						</dl>
+					</div>
+					<div class="area-info2 c1">
+						<dl>
+							<dt>합계</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+						</dl>
+					</div>
+				</li>
+				<!-- // -->
+			</ul>
+
+			<!-- # 더보기 버튼 # -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+			<!-- # // # -->
+		</div>
+
+		<!-- [M 2022-10-18] 검색결과 결과 없음 추가 -->
+		<!-- ######################### -->
+		<!-- [검색결과] 결과없음 -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<!-- [CASE1] 화면 진입 시 데이터 없는 경우 -->
+				<strong>아직 실적이 없어요.</strong>
+				<!-- // -->
+				<!-- [CASE2] 필터 검색 시 데이터 없는 경우  -->
+				<strong>해당하는 자료가 없어요.</strong>
+				<!-- // -->
+				<span>조건을 변경해보세요.</span>
+			</p>
+		</div>
+		<!-- //[M 2022-10-18] 검색결과 결과 없음 추가 -->
+
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

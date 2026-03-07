@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <g data-name="그룹 629900" transform="translate(-11.781 -6)">
+        <circle data-name="타원 14347" cx="5.5" cy="5.5" transform="translate(39.5 18)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#292929;stroke-width:2px;fill:none" r="5.5"/>
+        <path data-name="패스 1504950" d="M3 31V20.355C3 16.6 6.134 15 10 15h7c3.866 0 7 1.6 7 5.355V31" transform="translate(31.5 18)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#292929;stroke-width:2px;fill:none"/>
+        <rect data-name="사각형 460910" width="4.826" height="31.084" rx="2" transform="rotate(45 -5.008 81.95)" style="fill:#292929"/>
+        <g data-name="그룹 629926">
+            <g data-name="그룹 629896">
+                <g data-name="빼기 86" style="fill:#fff">
+                    <path d="M28.738 16.636H1.104C1.035 16.069 1 15.496 1 14.923c0-3.719 1.448-7.215 4.077-9.845A13.829 13.829 0 0 1 14.921 1c3.719 0 7.214 1.448 9.844 4.078a13.833 13.833 0 0 1 4.077 9.845c0 .573-.035 1.146-.104 1.713z" style="stroke:none" transform="translate(30.079 37.182)"/>
+                    <path d="M27.823 15.636a12.84 12.84 0 0 0-3.765-9.85A12.836 12.836 0 0 0 14.92 2a12.835 12.835 0 0 0-9.136 3.785 12.84 12.84 0 0 0-3.766 9.85h25.804m1.773 2H.246A15.047 15.047 0 0 1 0 14.924C0 10.937 1.552 7.19 4.37 4.371A14.822 14.822 0 0 1 14.921 0c3.986 0 7.733 1.552 10.551 4.371a14.826 14.826 0 0 1 4.37 10.552c0 .91-.082 1.823-.245 2.712z" style="fill:#292929;stroke:none" transform="translate(30.079 37.182)"/>
+                </g>
+                <path data-name="패스 1512472" d="M0 0h7.848" transform="rotate(37 -48.91 73.91)" style="stroke:#292929;stroke-width:2px;fill:none"/>
+                <g data-name="빼기 87" style="fill:none">
+                    <path d="M10.125 8.14H.726a5.425 5.425 0 1 1 9.4 0z" style="stroke:none" transform="translate(39.575 46.678)"/>
+                    <path d="M8.776 6.14A3.43 3.43 0 0 0 5.426 2a3.43 3.43 0 0 0-3.351 4.14h6.701m1.349 2h-9.4A5.423 5.423 0 0 1 0 5.427 5.432 5.432 0 0 1 5.425 0a5.432 5.432 0 0 1 5.426 5.427c0 .953-.251 1.891-.726 2.712z" style="fill:#292929;stroke:none" transform="translate(39.575 46.678)"/>
+                </g>
+                <path data-name="패스 1512484" d="M0 0h8.595" transform="scale(-1) rotate(-37 -94.01 60.959)" style="stroke:#292929;stroke-width:2px;fill:none"/>
+            </g>
+        </g>
+    </g>
+    <path data-name="사각형 460897" style="fill:none" d="M0 0h64v64H0z"/>
+</svg>

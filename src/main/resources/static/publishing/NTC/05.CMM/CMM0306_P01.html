@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 검색 | 목록 | Q&amp;A</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>Q&amp;A 검색</h1>
+			<button type="button" data-btn="pop-close">Q&amp;A 검색 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [검색영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-search1" data-sticky="top">
+				<legend>컨텐츠 검색</legend>
+				<div class="text">
+					<input type="search" title="검색" placeholder="검색어를 입력해주세요." value="서류">
+					<button type="button" class="icon-com1 ic2">검색</button>
+				</div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [검색결과] 결과있음 -->
+			<!-- ######################### -->
+			<!-- [총 건수] -->
+			<div class="area-info1">
+				<p>총 <strong>000,000건</strong></p>
+			</div>
+
+			<!-- [검색 목록] -->
+			<div class="board-list1">
+				<!-- 2022-11-24 마크업 변경 공통가이드 board 참고 -->
+				<ul>
+					<!-- // -->
+					<li>
+						<a href="javascript:void(0);">
+							<i class="icon-txt4 ic1">질문</i>
+							<div class="tit">
+								<i class="cate">구분</i>
+								<strong>제목이 노출 <mark>검색어 강조</mark>됩니다.</strong>
+							</div>
+							<dl class="info">
+								<dt>작성자</dt>
+								<dd>사업단</dd>
+								<dt>작성일</dt>
+								<dd>2022.02.22 20:48</dd>
+							</dl>
+							<div class="data">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>000,000</dd>
+								</dl>
+								<dl class="icon-com1 ic10">
+									<dt>답변</dt>
+									<dd>000,000</dd>
+								</dl>
+							</div>
+						</a>
+					</li>
+					<!-- // -->
+					<li>
+						<a href="javascript:void(0);">
+							<i class="icon-txt4 ic1">질문</i>
+							<div class="tit">
+								<i class="cate">도입</i>
+								<strong>설계사를 꿈꾸는 후보자인데, 지원 관련 <mark>서류</mark>를 준비하는 중에 궁금합니다.</strong>
+							</div>
+							<dl class="info">
+								<dt>작성자(소속)</dt>
+								<dd>강남사업단</dd>
+								<dt>작성일</dt>
+								<dd>2022.02.22 20:48</dd>
+							</dl>
+							<div class="data">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>000,000</dd>
+								</dl>
+								<dl class="icon-com1 ic10">
+									<dt>답변</dt>
+									<dd>000,000</dd>
+								</dl>
+							</div>
+						</a>
+					</li>
+					<!-- // -->
+					<li>
+						<a href="javascript:void(0);">
+							<i class="icon-txt4 ic1">질문</i>
+							<div class="tit">
+								<i class="cate">수수료</i>
+								<strong>꿈꾸는 후보자인데, 지원 관련 <mark>서류</mark> 준비하는 중에 궁금합니다.</strong>
+							</div>
+							<dl class="info">
+								<dt>작성자(소속)</dt>
+								<dd>강남사업단</dd>
+								<dt>작성일</dt>
+								<dd>2022.02.22 20:48</dd>
+							</dl>
+							<div class="data">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>000,000</dd>
+								</dl>
+								<dl class="icon-com1 ic10">
+									<dt>답변</dt>
+									<dd>000,000</dd>
+								</dl>
+							</div>
+						</a>
+					</li>
+					<!-- // -->
+				</ul>
+				<!-- //2022-11-24 마크업 변경 공통가이드 board 참고 -->
+
+				<!-- 더보기 버튼 -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [검색결과] 결과없음 -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p>
+					<strong>일치하는 내용이 없습니다.</strong>
+					<span>검색 내용을 다시 확인해주세요.</span>
+				</p>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

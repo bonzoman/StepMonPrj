@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 승환대상 확인 | 고객정보 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>승환대상확인</h1>
+			<button type="button" data-btn="pop-close">승환대상확인 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [안내문구] -->
+			<!-- ######################### -->
+			<div class="mes-info2 box">
+				<p>아래 보유계약 중 6개월 이내 소멸된 계약인 경우 자동 입력됩니다. 소멸예정건은 반드시 선택해주세요.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [승환대상확인] -->
+			<!-- ######################### -->
+			<!-- # 버튼영역 [M 2022-07-14] : 클래스명 및 버튼 추가 # -->
+			<div class="area-btn3 line">
+				<a href="javascript:void(0);" class="btn-sub2 c2">타사승환추가</a>
+				<a href="javascript:void(0);" class="btn-sub2 c2">타사승환복사</a>
+				<a href="javascript:void(0);" class="btn-com1 w100">추가승환내용보기</a>
+			</div>
+
+			<!-- # 승환대상 # -->
+			<div class="info-data2">
+				<ul>
+					<!-- // -->
+					<li>
+						<!-- # 상품명 # -->
+						<div class="tit label-check1"> <!-- [M 2022-07-14] 클래스명 추가 -->
+							<label>
+								<input type="checkbox" checked> <!-- [M 2022-07-14] type 변경 -->
+								<span>상품명</span>
+							</label>
+						</div>
+						<!-- # 상태 / 증권번호 # -->
+						<div class="info">
+							<i class="icon-state2 ic3">정상</i>
+							<i class="icon-state2 ic2">해약</i>
+							<i class="icon-state2 ic2">해지</i>
+							<span>LA123456789</span>
+							<span>타사</span>
+						</div>
+						<!-- # 정보 # -->
+						<div class="data1"> <!-- [M 2022-07-14] 클래스명 변경 -->
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong>피보험자명</strong>
+									<span>0000.00.00</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>상태변경일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<dl>
+								<dt>영업보험료</dt>
+								<dd class="data-num1"><strong>123,456</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>보험시작일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<dl>
+								<dt>보험종료일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- [CASE] 정상/자사 -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox">
+								<span>let:smile 종합건강보험</span>
+							</label>
+						</div>
+						<div class="info">
+							<i class="icon-state2 ic3">정상</i>
+							<span>LA123456789</span>
+						</div>
+						<div class="data1">
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong >하다미</strong>
+									<span>1990.01.01</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>상태변경일</dt>
+								<dd>2022.03.25</dd>
+							</dl>
+							<dl>
+								<dt>영업보험료</dt>
+								<dd class="data-num1"><strong>123,350</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>보험시작일</dt>
+								<dd>2022.04.26</dd>
+							</dl>
+							<dl>
+								<dt>보험종료일</dt>
+								<dd>2030.04.26</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- [CASE] 정상/타사 -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox">
+								<span>let:smile 종합건강보험</span>
+							</label>
+						</div>
+						<div class="info">
+							<i class="icon-state2 ic3">정상</i>
+							<span>타사</span>
+						</div>
+						<div class="data1">
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong >하다미</strong>
+									<span>1990.01.01</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>상태변경일</dt>
+								<dd>2022.03.25</dd>
+							</dl>
+							<dl>
+								<dt>영업보험료</dt>
+								<dd class="data-num1"><strong>123,350</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>보험시작일</dt>
+								<dd>2022.04.26</dd>
+							</dl>
+							<dl>
+								<dt>보험종료일</dt>
+								<dd>2030.04.26</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- [CASE] 해약/자사 -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox">
+								<span>let:smile 종합건강보험(더끌림플러스)(2201)</span>
+							</label>
+						</div>
+						<div class="info">
+							<i class="icon-state2 ic2">해약</i>
+							<span>LA123456789</span>
+						</div>
+						<div class="data1">
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong >하다미</strong>
+									<span>1990.01.01</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>상태변경일</dt>
+								<dd>2022.03.25</dd>
+							</dl>
+							<dl>
+								<dt>영업보험료</dt>
+								<dd class="data-num1"><strong>123,350</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>보험시작일</dt>
+								<dd>2022.04.26</dd>
+							</dl>
+							<dl>
+								<dt>보험종료일</dt>
+								<dd>2030.04.26</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- [CASE] 해지/타사 -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox">
+								<span>let:smile 종합건강보험(더끌림플러스)(2201)</span>
+							</label>
+						</div>
+						<div class="info">
+							<i class="icon-state2 ic2">해지</i>
+							<span>타사</span>
+						</div>
+						<div class="data1">
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong >하다미</strong>
+									<span>1990.01.01</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>상태변경일</dt>
+								<dd>2022.03.25</dd>
+							</dl>
+							<dl>
+								<dt>영업보험료</dt>
+								<dd class="data-num1"><strong>123,350</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>보험시작일</dt>
+								<dd>2022.04.26</dd>
+							</dl>
+							<dl>
+								<dt>보험종료일</dt>
+								<dd>2030.04.26</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- [M 2022-07-14] 버튼명 변경 -->
+			<!-- ######################### -->
+			<div class="area-action col" data-sticky="bottom">
+				<button type="button" class="btn-action">자사예정추가</button>
+				<button type="button" class="btn-action c1">자사승환없음</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

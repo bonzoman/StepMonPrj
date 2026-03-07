@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>관리자 추가 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-19]	1. 재직상태 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>직원 검색</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+        <fieldset class="form-search1">
+            <div class="form-field">
+                <dl class="form">
+                    <dt>조직</dt>
+                    <dd>
+                        <div class="form-row">
+                            <input type="text" name="" id="" class="text" style="width:60%;" placeholder="조직명을 입력해 주세요.">
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="form">
+                    <dt>이름</dt>
+                    <dd>
+                        <div class="form-row">
+                            <input type="text" name="" id="" class="text" style="width:60%;" placeholder="이름을 입력해 주세요.">
+                        </div>
+                    </dd>
+                </dl>
+                <!-- [M 2022-10-19] 재직상태 추가 -->
+                <dl class="form">
+                    <dt>재직상태</dt>
+                    <dd>
+                        <select class="selectbox" style="width:60%;">
+                            <option>전체</option>
+                            <option>재직</option>
+                            <option>퇴사</option>
+                            <option>해촉</option>
+                            <option>말소</option>
+                        </select>
+                    </dd>
+                </dl>
+                <!-- // [M 2022-10-19] 재직상태 추가 -->
+            </div>
+
+            <div class="area-action">
+                <button type="button" class="btn-action c1">검색</button>
+            </div>
+        </fieldset>
+
+		<h3 class="tit-sub2">직원 검색결과</h3>
+        <div class="tbl-list1 scr1">
+            <table>
+                <colgroup>
+                    <col style="width:120px">
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">조직</th>
+                        <th scope="col">직원명</th>
+                        <th scope="col">재직상태</th>
+                        <th scope="col">사번</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="current">
+                        <td>조직명</td>
+                        <td>직원명</td>
+                        <td>재직상태</td>
+                        <td>사번</td>
+                    </tr>
+                    <tr>
+                        <td>조직명</td>
+                        <td>직원명</td>
+                        <td>재직상태</td>
+                        <td>사번</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="nodata">
+                            검색결과가 없습니다.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+		<div class="area-action">
+			<button type="button" class="btn-action c1">확인</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>알림 | 리포트</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>알림</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<h2 class="tit-sub2">사업단장님의 알림메세지</h2>
+		<p>아래 내용을 꼭 확인하세요.</p>
+		<h3 class="tit-sub2">선택한 조회 항목</h3>
+		<div class="report-noti">
+			<!-- <dl>
+				<dt>업적</dt>
+				<dd></dd>
+			</dl>
+			<dl>
+				<dt>혜택</dt>
+				<dd></dd>
+			</dl> -->
+			<dl>
+				<dt>조직</dt>
+				<dd>교육대상자 <em>인큐베이터</em></dd>
+				<dd>교육수강여부 <em>수강</em></dd>
+			</dl>
+			<dl>
+				<dt>활동</dt>
+				<dd>월 평균 로그인 횟수  <em>0~10회</em></dd>
+				<dd>전월대비 로그인 횟수 <em>감소</em></dd>
+				<dd>일 평균 접속 시간 <em>0~30분</em></dd>
+			</dl>
+		</div>
+		<div class="pop-util">
+			<label class="label-check">
+				<input type="checkbox" name="ct1">
+				<span>오늘 하루동안 뜨지 않기</span>
+			</label>
+			<button type="button" class="btn-sub1 c3">닫기</button>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c1">결과바로보기</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

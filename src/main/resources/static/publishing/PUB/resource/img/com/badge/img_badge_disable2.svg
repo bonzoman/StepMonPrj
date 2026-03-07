@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="72" viewBox="0 0 64 72">
+    <g data-name="그룹 32469">
+        <path data-name="다각형 66" d="M51.661 0a4 4 0 0 1 3.486 2.039l15.75 28a4 4 0 0 1 0 3.922l-15.75 28A4 4 0 0 1 51.661 64H20.339a4 4 0 0 1-3.486-2.039l-15.75-28a4 4 0 0 1 0-3.922l15.75-28A4 4 0 0 1 20.339 0z" transform="rotate(90 32 32)" style="fill:#c6c6c6"/>
+        <path data-name="다각형 66 - 윤곽선" d="M20.339 4 4.589 32l15.75 28h31.322l15.75-28-15.75-28H20.339m0-4h31.322a4 4 0 0 1 3.486 2.039l15.75 28a4 4 0 0 1 0 3.922l-15.75 28A4 4 0 0 1 51.661 64H20.339a4 4 0 0 1-3.486-2.039l-15.75-28a4 4 0 0 1 0-3.922l15.75-28A4 4 0 0 1 20.339 0z" transform="rotate(90 32 32)" style="fill:#6f6237"/>
+        <path data-name="다각형 72" d="M14.67.5a1.5 1.5 0 0 0-1.307.765l-12.375 22a1.509 1.509 0 0 0 0 1.471l12.375 22a1.5 1.5 0 0 0 1.307.765h24.66a1.5 1.5 0 0 0 1.307-.765l12.375-22a1.509 1.509 0 0 0 0-1.471l-12.375-22A1.5 1.5 0 0 0 39.33.5H14.67m0-.5h24.66a2 2 0 0 1 1.743 1.019l12.375 22a2 2 0 0 1 0 1.961l-12.375 22A2 2 0 0 1 39.33 48H14.67a2 2 0 0 1-1.743-1.019l-12.375-22a2 2 0 0 1 0-1.961l12.375-22A2 2 0 0 1 14.67 0z" transform="rotate(90 23.5 32.5)" style="fill:#ddd"/>
+        <path data-name="다각형 75" d="M20.339 4 4.589 32l15.75 28h31.322l15.75-28-15.75-28H20.339m0-4h31.322a4 4 0 0 1 3.486 2.039l15.75 28a4 4 0 0 1 0 3.922l-15.75 28A4 4 0 0 1 51.661 64H20.339a4 4 0 0 1-3.486-2.039l-15.75-28a4 4 0 0 1 0-3.922l15.75-28A4 4 0 0 1 20.339 0z" transform="rotate(90 32 32)" style="fill:#ddd"/>
+        <path data-name="사각형 8871" style="fill:none" d="M0 0h20v20H0z" transform="translate(22 26)"/>
+        <g transform="translate(-232.5 -232.008)" style="opacity:.7">
+            <rect data-name="사각형 8783" width="10" height="7" rx="1.5" transform="translate(259.5 267.008)" style="fill:#292929"/>
+            <g data-name="사각형 8784" style="stroke:#292929;stroke-width:1.5px;fill:none">
+                <path d="M3 0a3 3 0 0 1 3 3v5H0V3a3 3 0 0 1 3-3z" style="stroke:none" transform="translate(261.5 262.008)"/>
+                <path d="M3 .75A2.25 2.25 0 0 1 5.25 3v4.25H.75V3A2.25 2.25 0 0 1 3 .75z" style="fill:none" transform="translate(261.5 262.008)"/>
+            </g>
+        </g>
+    </g>
+</svg>

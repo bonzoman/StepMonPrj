@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]푸시상세 | 푸시관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+	<!--
+
+	-->
+<div id="popup">
+	<div class="pop-header">
+		<h1>신규 푸시 추가</h1>
+		<!-- <h1>푸시 상세</h1> -->
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="tit-sub2">
+			<h3 class="">푸시 정보</h3>
+			<!--  푸시 상세로 접근 시 버튼노출
+			<div class="sub">
+				<button type="button" class="btn-sub1 c3">푸시 복사</button>
+			</div> -->
+		</div>
+
+		<div class="tbl-write1">
+			<table>
+				<colgroup>
+					<col style="width:140px;">
+					<col>
+					<col style="width:120px;">
+					<col>
+					<col style="width:120px;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">푸시ID<em class="imp"><span>필수</span></em></th>
+						<td>푸시-00020</td>
+						<th scope="row">등록자</th>
+						<td>김크림(****01)</td>
+						<th scope="row">등록일자</th>
+						<td>2022.02.22</td>
+					</tr>
+					<tr>
+						<th scope="row">푸시명<em class="imp"><span>필수</span></em></th>
+						<td colspan="5">
+							<div class="form-row">
+								<input type="text" class="text" style="width:300px;" name="" id="">
+								<label class="label-check">
+									<input type="checkbox" name="f11">
+									<span>광고</span>
+								</label>
+							</div>
+						</td>
+					</tr>
+					<!-- 상세일 경우
+					<tr>
+						<th scope="row">푸시명<em class="imp"><span>필수</span></em></th>
+						<td colspan="3">
+							<div class="form-row">
+								<input type="text" class="text" style="width:300px;" name="" id="">
+								<label class="label-check">
+									<input type="checkbox" name="f11">
+									<span>광고</span>
+								</label>
+							</div>
+						</td>
+						<th scope="row">상태</th>
+						<td>-</td>
+					</tr>
+					 -->
+					<tr>
+						<th scope="row">메시지<em class="imp"><span>필수</span></em></th>
+						<td colspan="5">
+							<textarea name="" id="" style="width:100%;height:80px;" class="textarea"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+							<label class="label-check">
+								<input type="checkbox" name="f4">
+								<span>첨부링크</span>
+							</label>
+						</th>
+						<td colspan="5">
+							<input type="text" class="text" style="width:400px;" name="" id="">
+							<button type="button" class="btn-sub1 c3">연결URL</button>
+							<!-- 2022-12-26 추가 -->
+							<p class="list-dot1"><b>[연결URL] 클릭 후 연결하실 화면을 선택하여 [주소복사]를 해주세요.</b> <br>
+								해당기능은 Internet Explorer에서는 지원되지 않습니다. Internet Explorer에서 등록시 직접입력해주세요.<br>도입APP의 경우 가입 후 IT관리자에게 확인하여 발급된 RF사번으로 로그인이 필요합니다.</p>
+							<!-- 2022-12-26 추가 -->
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+
+							<label class="label-check ">
+								<input type="checkbox" name="f1">
+								<span>첨부이미지</span>
+							</label>
+
+							<div class="tooltip ">
+								<button type="button"></button>
+								<div class="tooltip-layer">
+									<ul class="list-dot1">
+										<!-- 2022-12-05 텍스트 변경 -->
+										<li>첨부이미지의 사이즈는 ( 1024px x 512px) 를 권장합니다.</li>
+										<li>첨부이미지는 각 항목당 png, jpg, jpeg, bmp, gif 형식의 파일 1건만 등록이 가능합니다.</li>
+										<li>첨부이미지 용량은 2MB를 넘을 수 없습니다.</li>
+										<!-- //2022-12-05 텍스트 변경 -->
+									</ul>
+								</div>
+							</div>
+						</th>
+						<td colspan="5">
+							<div class="form-row">
+								<span class="wrap-file">
+									<input type="file" tabindex="-1">
+									<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic3">첨부하기</button>
+								</span>
+							</div>
+							<div class="file-div">
+								<span class="file-name">가나다라마바사.jpg <button type="button" class="btn-del1">삭제</button></span>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="area-btn2">
+			<input type="text" class="text" style="width:150px;" placeholder="사번을 입력해주세요."> <!-- 2022-12-26 추가 -->
+			<button type="button" class="btn-sub1 c3">테스트발송</button>
+		</div>
+
+		<div class="tbl-write1">
+			<table>
+				<colgroup>
+					<col style="width:140px;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">날짜<em class="imp"><span>필수</span></em></th>
+						<td>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="radio" name="f11" checked>
+									<span>즉시 발송</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="f11">
+									<span>예약 발송</span>
+								</label>
+								<input type="text" class="date" value="" placeholder="날짜 선택">
+								<span class="input-clock">
+									<select name="" id="" class="selectbox">
+										<option value="">01</option>
+										<option value="">02</option>
+										<option value="">03</option>
+										<option value="">04</option>
+										<option value="">05</option>
+										<option value="">06</option>
+										<option value="">07</option>
+										<option value="">08</option>
+										<option value="">09</option>
+										<option value="">10</option>
+										<option value="">11</option>
+										<option value="" selected="">12</option>
+										<option value="">13</option>
+										<option value="">14</option>
+										<option value="">15</option>
+										<option value="">16</option>
+										<option value="">17</option>
+										<option value="">18</option>
+										<option value="">19</option>
+										<option value="">20</option>
+										<option value="">21</option>
+										<option value="">22</option>
+										<option value="">23</option>
+										<option value="">24</option>
+									</select>
+									<span class="util">:</span>
+									<select name="" id="" class="selectbox">
+										<option value="">00</option>
+										<option value="">01</option>
+										<option value="">02</option>
+										<option value="">03</option>
+										<option value="">04</option>
+										<option value="">05</option>
+										<option value="">06</option>
+										<option value="">07</option>
+										<option value="">08</option>
+										<option value="">09</option>
+										<option value="">10</option>
+										<option value="">11</option>
+										<option value="">12</option>
+										<option value="">13</option>
+										<option value="">14</option>
+										<option value="">15</option>
+										<option value="">16</option>
+										<option value="">17</option>
+										<option value="">18</option>
+										<option value="">19</option>
+										<option value="">20</option>
+										<option value="">21</option>
+										<option value="">22</option>
+										<option value="">23</option>
+										<option value="">24</option>
+										<option value="">25</option>
+										<option value="">26</option>
+										<option value="">27</option>
+										<option value="">28</option>
+										<option value="">29</option>
+										<option value="">30</option>
+										<option value="">31</option>
+										<option value="">32</option>
+										<option value="">33</option>
+										<option value="">34</option>
+										<option value="">35</option>
+										<option value="">36</option>
+										<option value="">37</option>
+										<option value="">38</option>
+										<option value="">39</option>
+										<option value="">40</option>
+										<option value="">41</option>
+										<option value="">42</option>
+										<option value="">43</option>
+										<option value="">44</option>
+										<option value="">45</option>
+										<option value="">46</option>
+										<option value="">47</option>
+										<option value="">48</option>
+										<option value="">49</option>
+										<option value="">50</option>
+										<option value="">51</option>
+										<option value="">52</option>
+										<option value="">53</option>
+										<option value="">54</option>
+										<option value="">55</option>
+										<option value="">56</option>
+										<option value="">57</option>
+										<option value="">58</option>
+										<option value="">59</option>
+									</select>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">수신자등록<em class="imp"><span>필수</span></em></th>
+						<td>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="radio" name="f12" checked>
+									<span>즉시 발송</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="f12">
+									<span>예약 발송</span>
+								</label>
+							</div>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="checkbox" name="c11">
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="c11">
+									<span>단장</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="c11">
+									<span>총무</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="c11">
+									<span>설계사</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="c11">
+									<span>지점장</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="c11">
+									<span>AM</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="c11">
+									<span>기타 임직원</span>
+								</label>
+							</div>
+							<div class="form-row">
+								<span class="wrap-file">
+									<input type="file" tabindex="-1">
+									<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic2">첨부하기</button>
+								</span>
+								<button type="button" class="btn-sub1 c3">양식받기</button>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c3">취소</button>
+			<button type="button" class="btn-action c1">저장</button>
+			<button type="button" class="btn-action c2">발송</button>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c3">취소</button>
+			<button type="button" class="btn-action c1">중단</button>
+			<button type="button" class="btn-action c2" disabled>발송</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

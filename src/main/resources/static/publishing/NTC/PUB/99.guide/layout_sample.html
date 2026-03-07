@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>LAYOUT | PUBLISHING GUIDE</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20221103"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] #popup ### -->
+<!-- ################################################### -->
+<div id="popup" class="popup-wrapper" data-popmodal="true">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>testtest</h1>
+			<button type="button" data-btn="pop-close">@팝업 타이틀 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ### 테스트용 : 풀팝업 닫기 샘플 ### -->
+			<div class="area-btn1">
+				<a href="javascript:void(0);" class="btn-sub2" data-btn="pop-close">풀팝업 기본닫기 A</a>
+				<button type="button" class="btn-sub2" data-btn="pop-close">풀팝업 기본닫기 B</button>
+			</div>
+			<div class="area-btn1">
+				<a href="javascript:void(0);" class="btn-sub2" role="button" id="uiBtnClose1_1">풀팝업 호출닫기 A</a>
+				<button type="button" class="btn-sub2" id="uiBtnClose1_2">풀팝업 호출닫기 B</button>
+			</div>
+
+			<!-- ### 테스트용 : 풀팝업에서 레이어팝업 열기 ### -->
+			<div class="area-btn1">
+				<a href="#uiPOP1" class="btn-sub2">레이어 기본열기 A</a>
+				<button type="button" class="btn-sub2" aria-controls="uiPOP1">레이어 기본열기 B</button>
+			</div>
+			<div class="area-btn1">
+				<a href="javascript:void(0);" class="btn-sub2" role="button" id="uiBtnOpen3_1">호출열기 A</a>
+				<button type="button" class="btn-sub2" id="uiBtnOpen3_2">호출열기 B</button>
+			</div>
+
+			<!-- ### 테스트용 : 풀팝업에서 로딩바 열기 ### -->
+			<div class="area-btn1">
+				<button type="button" class="btn-sub2" id="uiBtnOpen4_2">로딩 열기</button>
+			</div>
+
+			<p class="area-temp">
+				내용시작<br/>
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">통신사 선택</span>
+						<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+					</button>
+					<div class="list">
+						<div data-label="통신사 선택">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion1" value="selectOpeion1_1"><span>SKT</span></label>
+								<label><input type="radio" name="selectOpeion1" value="selectOpeion1_2"><span>KT</span></label>
+								<label><input type="radio" name="selectOpeion1" value="selectOpeion1_3"><span>LG U+</span></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">통신사 선택</span>
+						<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+					</button>
+					<div class="list">
+						<div data-label="통신사 선택">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion1" value="selectOpeion1_1"><span>SKT</span></label>
+								<label><input type="radio" name="selectOpeion1" value="selectOpeion1_2"><span>KT</span></label>
+								<label><input type="radio" name="selectOpeion1" value="selectOpeion1_3"><span>LG U+</span></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+				내용끝
+			</p>
+			<button type="button" class="btn-util1 ic1" data-sticky="bottom">일정등록</button>
+			<!-- ### 하단버튼영역:액션버튼 ### -->
+			<div class="area-action" data-sticky="bottom">
+				<button class="btn-action c1">버튼명</button>
+			</div>
+			<!-- ### // ### -->
+		</div>
+	</article>
+</div>
+
+<!-- ################################################### -->
+<!-- ### [바닥페이지] #wrapper ### -->
+<!-- ################################################### -->
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>페이지 타이틀</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ### 테스트용 : 기본페이지에서 풀팝업 열기 ### -->
+		<div class="area-btn1">
+			<a href="javascript:void(0);" class="btn-sub2" role="button" id="uiBtnOpen1_1">풀팝업 호출열기 [A]</a>
+			<button type="button" class="btn-sub2" id="uiBtnOpen1_2">풀팝업 호출열기 [BTN]</button>
+		</div>
+
+
+		<!-- ### 테스트용 : 기본페이지에서 레이어팝업 열기 ###  -->
+		<div class="area-btn1">
+			<a href="#uiPOP1" class="btn-sub2 c1">레이어 기본열기 [A]</a>
+			<button type="button" class="btn-sub2 c1" aria-controls="uiPOP1">레이어 기본열기 [BTN]</button>
+		</div>
+
+		<!-- ### 테스트용 : 풀팝업에서 로딩바 열기 ### -->
+		<div class="area-btn1">
+			<button type="button" class="btn-sub2" id="uiBtnOpen4_1">로딩 열기</button>
+		</div>
+
+		<p class="area-temp">
+			내용시작<br/>
+			<div class="select-wrap" data-autoset="select">
+				<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+					<span data-select="title">통신사 선택</span>
+					<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+				</button>
+				<div class="list">
+					<div data-label="통신사 선택">
+						<div class="option">
+							<label><input type="radio" name="selectOpeion1" value="selectOpeion1_1"><span>SKT</span></label>
+							<label><input type="radio" name="selectOpeion1" value="selectOpeion1_2"><span>KT</span></label>
+							<label><input type="radio" name="selectOpeion1" value="selectOpeion1_3"><span>LG U+</span></label>
+						</div>
+						<button type="button" data-toggle="closebtn">확인</button>
+					</div>
+				</div>
+			</div>
+			<br/>
+			<div style="width:100%;font-size:1.8rem;border:1px solid #ff6600;">(무)let:smile종합건강보험(더끌림포맨)(2209)(무)let:smile종합건강보험(더끌림포맨)(2209)</div>
+			<div style="width:100%;font-size:1.8rem;border:1px solid #ff6600;word-break:normal;overflow-wrap:normal;">(무)let:smile종합건강보험(더끌림포맨)(2209)(무)let:smile종합건강보험(더끌림포맨)(2209)</div>
+			<div style="width:100%;font-size:1.8rem;border:1px solid #ff6600;white-space:pre-line;overflow-wrap:break-word;word-break:break-word;">(무)let:smile종합건강보험(더끌림포맨)(2209)(무)let:smile종합건강보험 (더끌림포맨) (2209)</div>
+			<br/>
+			<input type="text" class="text">
+			<div class="area-btn1">
+				<a href="#popup" class="btn-sub2">풀팝업 기본열기 [A]</a>
+				<button type="button" class="btn-sub2" aria-controls="popup">풀팝업 기본열기 [BTN]</button>
+			</div>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<div class="area-btn1">
+				<a href="javascript:void(0);" class="btn-sub2 c1" role="button" id="uiBtnOpen2_1">레이어 호출열기 [A]</a>
+				<button type="button" class="btn-sub2 c1" id="uiBtnOpen2_2">레이어 호출열기 [BTN]</button>
+			</div>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			내용끝
+		</p>
+
+		<!-- ### 하단버튼영역:문구 ### -->
+		<p class="mes-t2" data-fixed="bottom">
+			문구가 노출됩니다.
+		</p>
+		<button type="button" class="btn-util1 ic1" data-sticky="bottom">일정등록</button>
+		<!-- ### 하단버튼영역:액션버튼 ### -->
+		<div class="area-action" data-sticky="bottom">
+			<button class="btn-action c1" id="uiBtnToast">버튼명</button>
+		</div>
+		<!-- ### // ### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer">
+		<dl class="select-toggle1" data-autoset="select">
+			<dt>홈화면 선택</dt>
+			<dd>
+				<div class="basic">
+					<button type="button" class="icon-home" data-value="1" onclick="ui.alert('모아보기')">모아보기</button>
+					<button type="button" data-toggle="selectbtn" aria-expanded="false">홈 화면 선택목록</button>
+				</div>
+				<div class="list">
+					<button type="button" data-option="1" aria-selected="true"><span>모아보기</span></button>
+					<button type="button" data-option="2"><span>고객조회</span></button>
+					<button type="button" data-option="3"><span>렛:톡</span></button>
+					<button type="button" data-option="4"><span>보장분석</span></button>
+					<button type="button" data-option="5"><span>내강의실</span></button>
+					<button type="button" class="icon-settiong"><span>홈 설정</span></button>
+				</div>
+			</dd>
+		</dl>
+		<a href="javascript:void(0);" onclick="ui.alert('신규설계')" class="ic1">신규설계</a>
+		<a href="javascript:void(0);" onclick="ui.alert('알림')" class="ic2">알림<em class="icon-noti1 ic1">미확인 알림 있음</em></a>
+		<a href="javascript:void(0);" onclick="ui.alert('나의정보')" class="info"><img src="../../resource/img/temp/@img_user1.png" alt="">나의정보</a>
+	</footer>
+
+	<!-- -------------------------------------- -->
+	<!-- # [ASIDE_MENU] 전체메뉴 -->
+	<!-- -------------------------------------- -->
+	<aside id="asideTotalMenu" class="aside-menu" data-popmodal="true" aria-label="전체메뉴">
+		<div>전체메뉴영역<button type="button" data-btn="pop-close">전체메뉴닫기</button></div>
+	</aside>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] .pop-modal ### -->
+<!-- ################################################### -->
+<div id="uiPOP1" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>레이어샘플1</h1>
+			<button type="button" data-btn="pop-close">레이어샘플1 닫기</button>
+		</header>
+		<div class="content">
+			내용시작
+			내용끝
+		</div>
+	</article>
+</div>
+<div id="uiPOP2" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>레이어샘플2</h1>
+			<button type="button" data-btn="pop-close">레이어샘플2 닫기</button>
+		</header>
+		<div class="content">
+			내용시작
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			내용끝
+		</div>
+	</article>
+</div>
+
+<!-- ################################################### -->
+<!-- ### [LOADING]  ### -->
+<!-- ################################################### -->
+<div class="area-loading"><div>LOADING</div></div>
+<!-- ################################################### -->
+<script>
+//<!--
+	/* ************************************
+		팝업선언
+	************************************ */
+	var _full_pop = $plugin.popmodal('#popup',{
+		selector_close : '[data-btn="pop-close"]',
+		callback_after : function(){
+			ui.setPage();
+		}
+	});
+	//_full_pop.outputOpen();
+	/* ************************************
+	* 팝업열기 샘플2 : 호출
+	************************************ */
+	$('[id^="uiBtnOpen1"]').on('click', function(ev){
+		_full_pop.outputOpen(ev.target);
+	});
+
+	/* ************************************
+	* 팝업닫기 샘플2 : 호출
+	************************************ */
+	$('#uiBtnClose1_1').on('click', function(){
+		$('#popup').trigger('outputClose');
+	});
+
+	$('#uiBtnClose1_2').on('click', function(){
+		_full_pop.outputClose();
+	});
+
+	/* ************************************
+	* 레이어선언
+	************************************ */
+	var _layer1 = $plugin.popmodal('#uiPOP1');
+	var _layer2 = $plugin.popmodal('#uiPOP2');
+
+	/* ************************************
+	* 레이어 샘플1 : 호출
+	************************************ */
+	$('[id^="uiBtnOpen2"]').on('click', function(ev){
+		ev.preventDefault();
+		_layer1.outputOpen(ev.target);
+	});
+
+	/* ************************************
+	* 레이어 샘플2 : 호출
+	************************************ */
+	$('[id^="uiBtnOpen3"]').on('click', function(ev){
+		ev.preventDefault();
+		_layer2.outputOpen(ev.target);
+	});
+
+	/* ************************************
+	* Toast POPUP 호출샘플
+	************************************ */
+	$('#uiBtnToast').on('click', function(ev){
+		ui.toast('비밀번호가 변경되었습니다.', function(){
+			ui.alert('닫힐때 실행'); //닫힐때 실행 이벤트 영역
+		});
+	});
+
+	/* ************************************
+	* LOADING 호출샘플
+	************************************ */
+	$('[id^="uiBtnOpen4"]').on('click', function(ev){
+		$('.area-loading').addClass('load');
+		setTimeout(function(){
+			$('.area-loading').removeClass('load');
+		},1000);
+	});
+
+//-->
+</script>
+</body>
+</html>

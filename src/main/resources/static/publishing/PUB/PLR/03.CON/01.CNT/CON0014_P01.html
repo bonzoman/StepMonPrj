@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 우편물수령지 변경 | [T] 계약기본 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>우편물수령지 변경</h1>
+			<button type="button" data-btn="pop-close">우편물수령지 변경 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [정보영역]  -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<!-- [D] 고객정보 : 개인 -->
+				<h2 class="data-info2 t2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+					<strong>공지철</strong>
+					<span>
+						<span>0000.00.00</span>
+						<span>성별</span>
+					</span>
+				</h2>
+
+				<!-- [D] 고객정보 : 사업자 -->
+				<h2 class="info3 ic1 t2">
+					<strong>FAIR CON LINE CO., LTD</strong>
+					<span>110-81-36400</span>
+				</h2>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [조회영역]  -->
+			<!-- ######################### -->
+			<fieldset class="form-search2">
+				<legend>우편물 수령지 조회</legend>
+				<dl class="form t1">
+					<dt>계약별 우편물수령지변경<a href="#uiTOOLTIPINFO1" data-btn="tooltip" class="icon-com2 ic2">우편물수령지변경 안내</a></dt>
+					<dd>
+						<!-- [우편물 수령지 선택] -->
+						<div class="input-wrap1">
+							<div class="select-wrap w100" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="우편물수령지 선택">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion2" value=""><span>선택</span></label>
+											<label><input type="radio" name="selectOpeion2" value="5"><span>자택</span></label>
+											<label><input type="radio" name="selectOpeion2" value="6"><span>직장</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<button type="button" class="btn-sub1">전체적용</button>
+						</div>
+						<!-- // -->
+					</dd>
+					<dd class="side"><button type="button" class="btn-sub2 ic8">초기화</button></dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [목록]  -->
+			<!-- ######################### -->
+			<div class="info-con1 line">
+				<ul>
+					<li>
+						<div>증권/대출번호</div>
+						<div>CA123456(장기약대)</div>
+					</li>
+					<li>
+						<div>상태</div>
+						<div class="txt-c2">정상</div>
+					</li>
+					<li>
+						<div>상품명</div>
+						<div>롯데힐링케어 건강보험</div>
+					</li>
+					<li>
+						<div>보험/대출기간</div>
+						<div>2020.01.30~2022.02.22</div>
+					</li>
+					<!--[D] 우편물 수령지 변경 case-->
+					<li class="form active">
+						<div>우편물수령지</div>
+						<div>
+							<div class="input-btn1">
+								<data class="selectbox" value="1">자택</data>
+								<button type="button">우편물수령지 팝업 열기</button>
+							</div>
+							<div class="validation mes3">우편물수령지가 변경되었습니다.</div>
+						</div>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<div>증권/대출번호</div>
+						<div>LA123456</div>
+					</li>
+					<li>
+						<div>상태</div>
+						<div class="txt-c1">해지</div>
+					</li>
+					<li>
+						<div>상품명</div>
+						<div>롯데힐링케어 건강보험</div>
+					</li>
+					<li>
+						<div>보험/대출기간</div>
+						<div>2020.01.30~2022.02.22</div>
+					</li>
+					<!--[D] 우편물 수령지 변경 case-->
+					<li class="form">
+						<div>우편물수령지</div>
+						<div>
+							<div class="input-btn1">
+								<data class="selectbox" value="1">직장</data>
+								<button type="button">우편물수령지 팝업 열기</button>
+							</div>
+							<div class="validation mes3">우편물수령지가 변경되었습니다.</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- [더보기] -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+
+	<!-- ######################### -->
+	<!-- [툴팁] 우편물수령지변경 안내 -->
+	<!-- ######################### -->
+	<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+		<dl>
+			<dt class="hide">우편물수령지변경 안내</dt>
+			<dd>변경한 우편물수령지는  <em class="icon-noti1 ic1">변경알림</em> 가 표시됩니다.</dd>
+			<dd><button type="button" data-btn="pop-close">샘플툴팁 닫기</button></dd>
+		</dl>
+	</div>
+	<!-- ######################### -->
+</div>
+</body>
+</html>

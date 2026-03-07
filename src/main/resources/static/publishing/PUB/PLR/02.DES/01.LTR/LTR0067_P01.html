@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title> [P] 예외질환조회 | 담보추가속성 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>예외질환조회 <a href="#uiTOOLTIPINFO1" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">공통기준</a></h1>
+			<button type="button" data-btn="pop-close">예외질환조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [M 2022-08-05] 내용 추가 -->
+			<!-- [검색영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-search1" data-sticky="top">
+				<legend>질병조회</legend>
+
+				<!-- // -->
+				<div class="select-wrap" data-autoset="select" data-callback="uiSampleFunction"> <!-- [D] uiSampleFunction : 샘플함수명 : 하단 스크립트 참고 -->
+					<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">예외질환조회</span>
+						<span data-select="text" data-value="2">질병코드</span>
+					</button>
+					<div class="list">
+						<div data-label="예외질환조회">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion1" value=""><span>전체</span></label>
+								<label><input type="radio" name="selectOpeion1" value="1"><span>계열</span></label>
+								<label><input type="radio" name="selectOpeion1" value="2"><span>질병코드</span></label>
+								<label><input type="radio" name="selectOpeion1" value="3"><span>질병명</span></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- [CASE1] 계열/질병코드/질병명 -->
+				<div class="ui-tabcon active" data-select-con="1">
+					<div class="text">
+						<input type="search" title="계열/질병코드/질병명" placeholder="입력해주세요.">
+						<button type="button" class="icon-com1 ic2">검색하기</button>
+					</div>
+
+					<!-- [오류] -->
+					<div class="text">
+						<input type="search" title="계열/질병코드/질병명" placeholder="입력해주세요." aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<button type="button" class="icon-com1 ic2">검색하기</button>
+					</div>
+					<div class="validation">영문 및 숫자만 입력해주세요.</div>
+				</div>
+				<!-- [CASE2] 전체 -->
+				<div class="ui-tabcon" data-select-con="2">
+					<div class="area-btn1">
+						<button type="button" class="btn-com1 c1">조회</button>
+					</div>
+				</div>
+				<!-- // -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [예외질환]-->
+			<!-- ######################### -->
+			<!-- # 총 00건 # [M 2022-08-05] 내용 삭제
+			<div class="area-info1 line2">
+				<p>총 <strong>12,340건</strong></p>
+				<div class="side"><button type="button" class="icon-com1 ic18 right">필터</button></div>
+			</div>
+			-->
+
+			<!-- # 예외질환 목록 # -->
+			<div class="list-t1">
+				<ul>
+					<!-- // -->
+					<li>
+						<strong class="tit">[코드] 질병명</strong>
+						<button type="button" class="icon-com2 ic1">조건 내용 보기</button> <!-- [M 2022-08-05] 버튼 클래스 명 변경 및 data/aria 속성 삭제 -->
+						<!-- [M 2022-08-05] 내용 삭제
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl class="txt-bul1">
+								<dt>조건/조건초과 시 가능</dt>
+								<dd>조건: 내용</dd>
+								<dd>조건초과 시 가능: 내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+						-->
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">[B30.0] 바이러스 결막염(단, B30.1 아데노바이러스 결막염 별도기준적용)</strong>
+						<button type="button" class="icon-com2 ic1">조건 내용 보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">[A01.3] 장티푸스(보균자 제외)</strong>
+						<button type="button" class="icon-com2 ic1">조건 내용 보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">[A00] 콜레라</strong>
+						<button type="button" class="icon-com2 ic1">조건 내용 보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">[A01.3] 장티푸스 (장티푸스 보균자)</strong>
+						<button type="button" class="icon-com2 ic1">조건 내용 보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">[A01.3] 장티푸스(장티푸스 보균자 제외)</strong>
+						<button type="button" class="icon-com2 ic1">조건 내용 보기</button>
+					</li>
+					<!-- // -->
+					<li class="nodata">
+						<strong>일치하는 내용이 없어요.</strong>
+						<span>입력하신 정보를 확인하시고<br>다시 검색해 보세요.</span>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+
+<!-- ######################### -->
+<!-- [툴팁영역] 공통기준 -->
+<!-- ######################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl class="txt-bul1">
+		<dt>공통기준</dt>
+		<dd>염좌, 타박상 동일 부위 진단코드 예외 적용 인수 가능</dd>
+		<dd>2년 내 4회 병력 예외 적용</dd>
+		<dd>관혈적수술(개복술, 개흉술, 골절 등 관혈적 정복 수술) 3개월 경과 이외 1개월 경과 시 예외 적용 가능(레이저, 복강경, 내시경, 시술)</dd>
+		<dd>(질병/상해) 사망+후유80% 이상담보 - 예외 질병인 경우 조건 초과 시 가능</dd>
+		<dd>동일 질환 코드 3회 이하 재발 - [조건 초과 시 가능] 적용, 4회 이상 - 2차 심사 문의 또는 자문</dd>
+		<dd>질병 수술비 제외→질병 수술비, 34대, 64대 담보 제외/(질병(종)수술비는 가능)</dd>
+		<dd>전체 예외질환 325종(중복담보 7종 제외)</dd>
+		<dd><button type="button" data-btn="pop-close">공통기준 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+
+<script>
+//<!--
+	/* ************************************
+	* 샘플 : 조회구분 셀렉트
+	************************************ */
+	function uiSampleFunction(e){
+		var _select_val = e.val();
+		if(e.val() == '') $('[data-select-con="2"].ui-tabcon').addClass('active').siblings().removeClass('active');
+		else $('[data-select-con="1"].ui-tabcon').addClass('active').siblings().removeClass('active');
+	}
+//-->
+</script>
+</body>
+</html>

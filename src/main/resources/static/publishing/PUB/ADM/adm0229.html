@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>포인트 상세내역 | 포인트적립/소진내역 | 포인트/소득관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>현금화 신청 상세내역</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="tit-sub2">
+			<h2 class="">현금화 신청 상세내역</h2>
+		</div>
+        <div class="tbl-view1">
+            <table>
+				<colgroup>
+					<col style="width:150px;">
+					<col>
+					<col style="width:150px;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">취급자정보</th>
+						<td colspan="3">
+							강남사업단/강남5지점/강남5-1팀/홍길동(12312312)
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">상태</th>
+						<td>신청/정산/실패</td>
+						<th scope="row">보너스포인트 신청여부</th>
+						<td>신청/대상아님</td>
+					</tr>
+					<tr>
+						<th scope="row">신청일시</th>
+						<td>2022.02.22 22:22:22</td>
+						<th scope="row">취소일시</th>
+						<td>2022.02.22 22:22:22</td>
+					</tr>
+					<tr>
+						<th scope="row">정산일시</th>
+						<td>2022.02.22 22:22:22</td>
+						<th scope="row">실패일시</th>
+						<td>2022.02.22 22:22:22</td>
+					</tr>
+					<tr>
+						<!--[M : 2022-08-03 포인트 정책 변경]-->
+						<th scope="row">신청액</th>
+						<td colspan="3">70,000</td>
+						<!--// [M : 2022-08-03 포인트 정책 변경]-->
+					</tr>
+				</tbody>
+            </table>
+        </div>
+        <div class="tbl-view1">
+            <table>
+				<colgroup>
+					<col style="width:150px;">
+					<col>
+					<col style="width:150px;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<!--[M : 2022-08-03 포인트 정책 변경]-->
+						<th scope="row">정산액</th>
+						<td colspan="3">70,000</td>
+						<!--// [M : 2022-08-03 포인트 정책 변경]-->
+					</tr>
+				</tbody>
+            </table>
+        </div>
+		<div class="area-action">
+			<button type="button" class="btn-action c3" onclick="window.close();">닫기</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 검색 | 노하우</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>노하우 검색</h1>
+			<button type="button" data-btn="pop-close">노하우 검색 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [검색영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-search1" data-sticky="top">
+				<legend>컨텐츠 검색</legend>
+				<div class="input-wrap1">
+					<div class="text">
+						<input type="search" title="검색" placeholder="검색어를 입력해주세요." value="저렴">
+						<button type="button" class="icon-com1 ic2">검색</button>
+					</div>
+					<!-- // -->
+				</div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [검색결과] -->
+			<!-- ######################### -->
+			<!-- [검색 목록] -->
+			<div class="board-list3">
+				<ul>
+					<!-- [CASE1] 우수설계사 -->
+					<li>
+						<a href="javascript:void(0);">
+							<!-- [제목] -->
+							<strong class="tit">제목 <mark>검색어</mark>가 노출됩니다.</strong>
+							<!-- [상품명] -->
+							<div class="txt">상품명</div>
+							<!-- [지급률]
+								ic1 : 0~400%
+								ic2 : 400%초과~800%미만
+								ic3 : 800%초과
+							-->
+							<div class="data3 icon-t1 ic1">지급률 400%</div>
+							<!-- [월납입보험료] -->
+							<div class="data-num1">월 <strong>000,000,000</strong><span>원</span></div>
+							<!-- [해시태그] -->
+							<div class="data-word2">
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+							</div>
+							<!-- [작성자] -->
+							<div class="data-info1">
+								<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+								<span><strong>작성자</strong></span>
+								<span><em class="icon-grade1">우수설계사</em></span> <!-- [D] 우수설계자일 경우 노출 -->
+							</div>
+							<!-- [작성일] -->
+							<dl class="data2">
+								<dt>작성일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<!-- [조회/설계복사] -->
+							<div class="data1">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>000</dd>
+								</dl>
+								<dl class="icon-com1 ic11">
+									<dt>댓글</dt>
+									<dd>000</dd>
+								</dl>
+								<dl class="icon-com1 ic15">
+									<dt>설계복사</dt>
+									<dd>000</dd>
+								</dl>
+							</div>
+							<!-- // -->
+						</a>
+					</li>
+					<!-- [CASE2] 일반 -->
+					<li>
+						<a href="javascript:void(0);">
+							<strong class="tit">제목 <mark>검색어</mark>가 노출됩니다.</strong>
+							<div class="txt">무배당 letsmile 종합건강보험(더끌림 포우먼)(2209) (추가가입용)</div>
+							<div class="data3 icon-t1 ic2">지급률 500%</div>
+							<div class="data-num1">월 <strong>000,000,000</strong><span>원</span></div>
+							<div class="data-word2">
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+							</div>
+							<div class="data-info1">
+								<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+								<span><strong>하다미</strong></span>
+							</div>
+							<dl class="data2">
+								<dt>작성일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<div class="data1">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>000</dd>
+								</dl>
+								<dl class="icon-com1 ic11">
+									<dt>댓글</dt>
+									<dd>000</dd>
+								</dl>
+								<dl class="icon-com1 ic15">
+									<dt>설계복사</dt>
+									<dd>000</dd>
+								</dl>
+							</div>
+						</a>
+					</li>
+					<!-- [CASE3] No.1 설계사 -->
+					<li>
+						<a href="javascript:void(0);">
+							<strong class="tit">사회초년생을 위한 <mark>저렴</mark>한 보험상품</strong>
+							<div class="txt">(실속형)무배당 let:play 자녀보험(도담도담)(무해지형)(2209.2)</div>
+							<div class="data-num1">월 <strong>000,000,000</strong><span>원</span></div>
+							<div class="data3 icon-t1 ic3">지급률 900%</div>
+							<div class="data-word2">
+								<span>#60대이상</span>
+								<span>#기혼</span>
+								<span>#10만원이하</span>
+								<span>#실손</span>
+							</div>
+							<div class="data-info1">
+								<span class="img"><img src="../../resource/img/com/img_man2030.png" alt=""></span>
+								<span class="txt1"><em>No.1</em></span>
+								<span><strong>이름</strong></span>
+								<span><em class="icon-grade1">우수설계사</em></span>
+								<span>연령대 대상 판매1등</span>
+							</div>
+							<dl class="data2">
+								<dt>작성일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<div class="data1">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>000</dd>
+								</dl>
+								<dl class="icon-com1 ic11">
+									<dt>댓글</dt>
+									<dd>000</dd>
+								</dl>
+								<dl class="icon-com1 ic15">
+									<dt>설계복사</dt>
+									<dd>000</dd>
+								</dl>
+							</div>
+						</a>
+					</li>
+					<!-- // -->
+
+					<!-- [CASE] 검색결과없음 -->
+					<li class="nodata">
+						<strong>일치하는 내용이 없습니다.</strong>
+						<span>검색 내용을 다시 확인해주세요.</span>
+					</li>
+				</ul>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

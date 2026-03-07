@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 외국인증빙자료 상세정보 입력 | 외국인식별번호증빙자료첨부 | 개인 | 고객정보상세 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>외국인 증빙자료 촬영</h1>
+			<button type="button" data-btn="pop-close">외국인 증빙자료 촬영 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] -->
+			<!-- ######################### -->
+			<div class="tit-section">
+				<p>증빙자료 상세정보를 기입하신 뒤,<br>등록을 진행해주세요.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [이미지영역] 촬영된 사진 영역 -->
+			<!-- ######################### -->
+			<div class="area-img1"><img src="../../resource/img/temp/@img_id.jpg" alt=""></div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>상세정보입력</legend>
+
+				<!-- # 체류코드 # -->
+				<dl class="form">
+					<dt>체류코드</dt>
+					<dd>
+						<!-- 체류코드1  -->
+						<div class="select-wrap" data-autoset="select" data-callback="uiFunction"> <!-- [D] uiFunction : 임의 함수명 : 하단 스크립트 참고 -->
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택해주세요.</span>
+								<span data-select="text" data-value=""></span>
+							</button>
+							<div class="list">
+								<div data-label="체류코드(1/2)">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion" value="A"><span>A</span></label>
+										<label><input type="radio" name="selectOpeion" value="B"><span>B</span></label>
+										<label><input type="radio" name="selectOpeion" value="C"><span>C</span></label>
+										<label><input type="radio" name="selectOpeion" value="D"><span>D</span></label>
+										<label><input type="radio" name="selectOpeion" value="E"><span>E</span></label>
+										<label><input type="radio" name="selectOpeion" value="F"><span>F</span></label>
+										<label><input type="radio" name="selectOpeion" value="G"><span>G</span></label>
+										<label><input type="radio" name="selectOpeion" value="H"><span>H</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- 체류코드2 -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" disabled>
+								<span data-select="title">선택해주세요.</span>
+								<span data-select="text" data-value=""></span>
+							</button>
+							<div class="list">
+								<div data-label="체류코드(2/2)">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value="A-1"><span>1(외교)</span></label>
+										<label><input type="radio" name="selectOpeion2" value="A-2"><span>2(공무)</span></label>
+										<label><input type="radio" name="selectOpeion2" value="A-3"><span>3(협정)</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 체류 만료일자 # -->
+				<dl class="form">
+					<dt>체류 만료일자</dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+								<input type="text" title="날짜 선택" placeholder="날짜를 선택해주세요." readonly>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 안내문구 # -->
+				<p class="mes">장기보험 설계 시 "체류코드" 및 "체류 만료일자" 필수 입력</p>
+			</fieldset>
+			<!-- // -->
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">재촬영</button>
+				<button type="button" class="btn-action c1">등록</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+
+<script>
+//<!--
+	/* ************************************
+	* 샘플 : B/S 셀렉트 이벤트
+	************************************ */
+	function uiFunction(e){
+		var _parent = e.parents('.select-wrap');
+		console.log(_parent)
+		_parent.next().find('.selectbox').removeAttr('disabled');
+	}
+//-->
+</script>
+</body>
+</html>

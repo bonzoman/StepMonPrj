@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>STEP6 | 04.기타동의 | 스마트폰청약 | 표준설계 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>스마트폰청약</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [진행상태] STEP 04 -->
+		<!-- ######################### -->
+		<div class="info-step1" data-autoset="toggle" data-sticky="top">
+			<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+			<ol data-toggle="content">
+				<li><button type="button">01. 보험계약자 확인</button></li>
+				<li><button type="button">02. 청약서류 확인</button></li>
+				<li><button type="button">03. 내용확인 및 동의</button></li>
+				<li aria-current="step"><button type="button">04. 기타동의</button></li>
+				<li><button type="button" disabled>05. 결제수단</button></li>
+				<li><button type="button" disabled>06. 전자서명</button></li>
+			</ol>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [상단영역] 안내문구 -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<div class="info-step3">
+				<p><strong>9</strong>개의 내용 중 <strong>6</strong>번째 내용</p>
+			</div>
+			<p>기타 정보 동의사항에 대해 <br>선택해주세요.</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [동의영역] -->
+		<!-- ######################### -->
+		<fieldset class="form-agree2">
+			<legend>전체항목 필수동의</legend>
+			<!-- // -->
+			<div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<span><strong>건강등급 적용 상품 가입 내용에 대한 계약자 확인</strong></span>
+				</label>
+			</div>
+			<!-- //	-->
+			<div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<span>이 보험은 피보험자의 건강상태에 따라 산출한 "건강등급"을 적용하고, "건강등급"에 따라 영업보험료의 할인(또는 환금)을 적용하는 상품입니다.</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>이 보험은 매 1년주기로 건강등급을 재산정하기 때문에 "건강등급 재산정기간" 내에 건강등급을 산출하지 않거나 "건강등급 재산정일"에 건강등급이 변경되는 경우, 건강등급에 따른 보험료 환급 사항이 변경되거나 적용되지 않을 수 있습니다.</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>건강등급 산출 시 최근 1년 이내의 건강검진 결과 중 가장 최신 결과(다만, 1년 이내의 건강검진 결과가 없거나 건강등급 산출에 필요한 지표가 충분하지 않은 경우 2년 이내의 건강검진 결과) 및 직전 2개월을 기준으로 최근 12개월간의 의료이용기록이 사용되며, 건강등급 산출에 필요한 지표는 다음과 같습니다. (건강등급 산출에 필요한 지표 : BMI, 혈압(수축기/이완기), 요단백, 혈색소, 공복혈당, HDL 콜레스테롤, 중성지방, 혈청크레아티닌, 간기능 수치(ALT, 감마GTP), 내원일수, 총 급여비용, 흡연여부 등)</span>
+				</label>
+			</div>
+			<!-- //	-->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [정보입력] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap3">
+			<legend>난임치료비 가입에 대한 계약자 확인 정보 입력</legend>
+			<div class="form t1">
+				<span>위 내용에 대하여 모집자는 보험계약자에게 충분히</span>
+				<div class="text2" data-label="설명"> <!-- [D] data-label="덧쓰기 텍스트" -->
+					<input type="text" required>
+				</div><span>하였고, 보험계약자는 설명 받은 내용을</span>
+				<div class="text2" data-label="이해"> <!-- [D] data-label="덧쓰기 텍스트" -->
+					<input type="text" required>
+				</div><span>하였음을 확인합니다.</span>
+			</div>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action ">이전</button>
+			<button type="button" class="btn-action c1" disabled>다음</button>
+			<!-- <button type="button" class="btn-action c1">다음</button> -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

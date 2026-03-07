@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>고객조회 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-23]	① 목록 : 최신메세지 영역 추가
+	*	[M 2022-11-17]	① empty 케이스 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>고객 조회</h1>
+		<button type="button" class="btn-t1 icon-com1 ic2">고객 찾기</button>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [이슈확인 버튼] -->
+		<!-- ######################### -->
+		<div class="banner-t2">
+			<a href="javascript:void(0);" class="ic5">
+				<strong>고객님들의 이슈를 확인해보세요.</strong>
+				<span>전일자 기준</span>
+			</a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [조회영역] -->
+		<!-- ######################### -->
+		<!-- # 총 00명 # -->
+		<div class="area-info1">
+			<p>총 <strong>00명</strong></p>
+			<div class="side">
+				<!-- 2022-12-02 버튼 추가 및 변경 -->
+				<button type="button" class="btn-sub3 c2 ic19">주변고객</button>
+				<button type="button" class="btn-sub3 c2 ic20">필터</button>
+				<!-- //2022-12-02 버튼 추가 및 변경 -->
+			</div>
+		</div>
+
+		<!-- 2022-11-17 추가 -->
+		<div class="mes-result1">
+			<p>
+				<strong>등록된 고객님이 아직 없어요.</strong>
+				<span>아래의 ‘+’ 버튼을 눌러<br>고객님을 등록해보세요!</span>
+			</p>
+		</div>
+
+		<div class="mes-result1">
+			<p>
+				<strong>조회된 고객님이 없어요.</strong>
+				<span>입력한 정보를 확인하고<br>다시 조회해보세요.</span>
+			</p>
+		</div>
+		<!-- //2022-11-17 추가 -->
+
+		<!-- # 목록 # -->
+		<div class="info-data3 t3 case-scroll">
+			<ul>
+				<!-- [CASE] 고객 -->
+				<li>
+					<div class="area1">
+						<div class="data-info2" data-value="000000"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong data-masking="true">고객이름</strong>
+							<span>
+								<span>0000.00.00</span>
+								<span>성별</span>
+							</span>
+						</div>
+						<div class="txt">최신 메세지가 노출됩니다.</div> <!-- [M 2022-08-23] 최신메세지 영역 추가 -->
+						<div class="side">
+							<span class="txt">00.00.00</span>
+							<span class="icon-noti1 ic2">N</span> <!-- 신규이슈레이징 -->
+						</div>
+					</div>
+					<div class="area2">
+						<a href="tel:000-000-0000" class="btn ic1">전화</a>
+						<button type="button" class="btn ic2">문자</button>
+					</div>
+				</li>
+				<!-- [CASE] 사업자 -->
+				<li>
+					<div class="area1">
+						<div class="info2 ic2">
+							<strong>한빛소프트웨어</strong>
+							<span>714-88-00112</span>
+						</div>
+						<div class="txt">최신 메세지가 노출됩니다.</div> <!-- [M 2022-08-23] 최신메세지 영역 추가 -->
+						<div class="side">
+							<span class="txt">22.07.14</span>
+						</div>
+					</div>
+					<div class="area2">
+						<a href="tel:000-000-0000" class="btn ic1">전화</a>
+						<button type="button" class="btn ic2">문자</button>
+					</div>
+				</li>
+				<!-- [CASE] 단체 -->
+				<li>
+					<div class="area1">
+						<div class="info2 ic3">
+							<strong>나주박씨종친회</strong>
+							<span>714-88-00112</span>
+						</div>
+						<div class="txt">최신 메세지가 노출됩니다.</div> <!-- [M 2022-08-23] 최신메세지 영역 추가 -->
+						<div class="side">
+							<span class="txt">22.07.14</span>
+						</div>
+					</div>
+					<div class="area2">
+						<a href="tel:000-000-0000" class="btn ic1">전화</a>
+						<button type="button" class="btn ic2">문자</button>
+					</div>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="area1">
+						<div class="data-info2" data-value="102701">
+							<strong data-masking="true">하*민</strong>
+							<span>
+								<span>1997.01.01</span>
+								<span>남</span>
+							</span>
+						</div>
+						<div class="txt">최신 메세지가 노출됩니다.</div> <!-- [M 2022-08-23] 최신메세지 영역 추가 -->
+						<div class="side">
+							<span class="txt">22.07.14</span>
+						</div>
+					</div>
+					<div class="area2">
+						<a href="tel:000-000-0000" class="btn ic1">전화</a>
+						<button type="button" class="btn ic2">문자</button>
+					</div>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="area1">
+						<div class="data-info2" data-value="102702">
+							<strong data-masking="true">라*희</strong>
+							<span>
+								<span>1997.01.01</span>
+								<span>여</span>
+							</span>
+						</div>
+						<div class="txt">최신 메세지가 노출됩니다.</div> <!-- [M 2022-08-23] 최신메세지 영역 추가 -->
+						<div class="side">
+							<span class="txt">22.07.14</span>
+						</div>
+					</div>
+					<div class="area2">
+						<a href="tel:000-000-0000" class="btn ic1">전화</a>
+						<button type="button" class="btn ic2">문자</button>
+					</div>
+				</li>
+				<!-- // -->
+			</ul>
+
+			<!-- 더보기(현재페이지/총페이지) -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [버튼영역] 추가기능 -->
+		<!-- ######################### -->
+		<a href="javascript:void(0);" class="btn-util1 ic1" data-fixed="bottom">추가활동선택</a>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer"></footer>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

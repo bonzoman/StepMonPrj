@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>수금률조회 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-05]	1. ‘계속분’ → ‘수금액’ 텍스트 수정
+						2. 툴팁 내용 변경
+	*	[M 2022-11-01]	1. 표 상단 틀고정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">수금률조회</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<button class="more-search" type="button"></button>
+					<dl class="form w1">
+						<dt>기준년월<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<span class="date-range2">
+									<input type="text" data-role="start" placeholder="시작월 선택">
+									<span class="util">~</span>
+									<input type="text" data-role="end" placeholder="종료월 선택">
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w2"> <!-- 숨길때 hide-->
+						<dt>조직구분<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>취급자</option>
+								</select>
+								<input type="text" name="" id="" class="text" style="width:80px;">
+								<input type="text" name="" id="" class="text" style="width:120px;" disabled>
+								<button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+					<div class="search-cont">
+						<dl class="form w1">
+							<dt>조회형태</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr1" checked="checked">
+										<span>하위조직</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr1">
+										<span>월별</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w1">
+							<dt>조회기준</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr2" checked="checked">
+										<span>금액</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr2">
+										<span>건수</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w3">
+							<dt>채널구분</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr3" checked="checked">
+										<span>전통</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr3">
+										<span>전문</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr3">
+										<span>신채널</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr3">
+										<span>방카슈랑스</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr3">
+										<span>기타</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w3 hide"><!-- 보여야할때 hide 제거-->
+							<dt>전통</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr4" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr4">
+										<span>교차제외</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr4">
+										<span>교차</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w3 hide"><!-- 보여야할때 hide 제거-->
+							<dt>전문</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr5" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr5">
+										<span>자동차</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr5">
+										<span>장기</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr5">
+										<span>총판</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="form">
+							<dt>상태구분</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr6" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr6">
+										<span>정상</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr6">
+										<span>연체</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="form">
+							<dt>회차구분</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr7" checked="checked">
+										<span>2,3,4회차</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr7">
+										<span>전체</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c3">초기화</button>
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+			<div class="tab-wrap">
+				<ul class="tab1">
+					<li class="hide"><a href="#tab1-1">Summary</a></li>
+					<li><a href="#tab1-2" class="current">장기</a></li>
+					<li><a href="#tab1-3" class="">일반</a></li>
+					<li><a href="#tab1-4" class="">자동차</a></li>
+				</ul>
+				<div id="tab1-1" class="tab-cont hide">
+				</div>
+				<div id="tab1-2" class="tab-cont" style="display:block;">
+					<!-- Tab 인거 같지만 Tab 아님 -->
+					<ul class="tab-sub">
+						<li><a href="#">상태별</a></li>
+						<li><a href="#">납입방식별</a></li>
+						<li><a href="#">군별</a></li>
+						<li><a href="#" class="current">회차별</a></li>
+					</ul>
+					<div class="data-table1">
+						<div class="info1">단위: 천원, 건, %
+							<div class="tooltip right2">
+								<button type="button"></button>
+								<div class="tooltip-layer">
+									<ul class="list-dot1">
+										<li>순수 정상: 당월 수금목표액(수금액) 중​ 연체분이 없는 수금목표액(수금액)</li><!-- [M 2022-10-05] 툴팁 내용 변경 -->
+										<li>연체분 정상: 당월 수금목표액(수금액) 중​ 연체분이 있는 수금목표액(수금액)</li><!-- [M 2022-10-05] 툴팁 내용 변경 -->
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--최초 접근시 DATA 없음-->
+						<div class="nodata" style="display:none;">
+							아직 실적이 없어요. <br>
+							조건을 변경해보세요
+						</div>
+						<!--조회시 DATA 없음-->
+						<div class="nodata" style="display:none;">
+							해당하는 자료가 없어요. <br>
+							조건을 변경해보세요
+						</div>
+						<!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-thead" data-pos="thead">
+							<table>
+								<thead>
+									<tr>
+										<th scope="col" colspan="2">하위조직</th>
+										<th scope="col" >2회차</th>
+										<th scope="col" >3회차</th>
+										<th scope="col" >4회차</th>
+										<!-- <th scope="col">5회차</th>
+										<th scope="col">6회차</th>
+										<th scope="col">7회차</th>
+										<th scope="col">8회차</th>
+										<th scope="col">9회차</th>
+										<th scope="col">10회차</th>
+										<th scope="col">11회차</th>
+										<th scope="col">12회차</th>
+										<th scope="col">13회차</th>
+										<th scope="col">24회차</th>
+										<th scope="col">25~36회차</th> -->
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-table" data-pos="top">
+							<!--하위조직 case-->
+							<table>
+								<colgroup>
+									<col style="width:150px;">
+									<col style="width:120px;">
+								</colgroup>
+								<!-- <thead>
+									<tr>
+										<th scope="col" colspan="2">하위조직</th>
+										<th scope="col" >2회차</th>
+										<th scope="col" >3회차</th>
+										<th scope="col" >4회차</th>
+										<th scope="col">5회차</th>
+										<th scope="col">6회차</th>
+										<th scope="col">7회차</th>
+										<th scope="col">8회차</th>
+										<th scope="col">9회차</th>
+										<th scope="col">10회차</th>
+										<th scope="col">11회차</th>
+										<th scope="col">12회차</th>
+										<th scope="col">13회차</th>
+										<th scope="col">24회차</th>
+										<th scope="col">25~36회차</th>
+									</tr>
+								</thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+								<tbody>
+
+									<tr>
+										<th scope="row" rowspan="3"><a href="#" class="btn-link1">강남사업단<br>(E001239)</a></th>
+										<th scope="row">수금목표액</th><!--[M: 2022-06-22 UX-Writing 수정]-->
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr class="point-row">
+										<th scope="row">수금률</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+
+									<tr>
+										<th scope="row" rowspan="3"><a href="#" class="btn-link1">강남사업단<br>(E001239)</a></th>
+										<th scope="row">수금목표액</th><!--[M: 2022-06-22 UX-Writing 수정]-->
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr class="point-row">
+										<th scope="row">수금률</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+
+									<tr>
+										<th scope="row" rowspan="3"><a href="#" class="btn-link1">강남사업단<br>(E001239)</a></th>
+										<th scope="row">수금목표액</th><!--[M: 2022-06-22 UX-Writing 수정]-->
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr class="point-row">
+										<th scope="row">수금률</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+
+									<tr>
+										<th scope="row" rowspan="3"><a href="#" class="btn-link1">강남사업단<br>(E001239)</a></th>
+										<th scope="row">수금목표액</th><!--[M: 2022-06-22 UX-Writing 수정]-->
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr class="point-row">
+										<th scope="row">수금률</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<!--월별 case-->
+							<!-- <table>
+								<colgroup>
+									<col style="width:150px;">
+									<col style="width:120px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+								</colgroup>
+
+								<thead>
+									<tr>
+										<th scope="col" colspan="2">월</th>
+										<th scope="col" >2회차</th>
+										<th scope="col" >3회차</th>
+										<th scope="col" >4회차</th>
+									</tr>
+								</thead>
+								<tbody>
+
+									<tr>
+										<th scope="row" rowspan="3">2022.06</th>
+										<th scope="row">수금목표액</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">수금액</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr class="point-row">
+										<th scope="row">수금률</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+
+									<tr>
+										<th scope="row" rowspan="3">2022.05</th>
+										<th scope="row">수금목표액</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">수금액</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr class="point-row">
+										<th scope="row">수금률</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+
+									<tr>
+										<th scope="row" rowspan="3">2022.04</th>
+										<th scope="row">수금목표액</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">수금액</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr class="point-row">
+										<th scope="row">수금률</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+
+									<tr>
+										<th scope="row" rowspan="3">2022.03</th>
+										<th scope="row">수금목표액</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th scope="row">수금액</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr class="point-row">
+										<th scope="row">수금률</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+								</tbody>
+							</table> -->
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<table>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="3">합계</th>
+										<th scope="row">수금목표액</th><!--[M: 2022-06-22 UX-Writing 수정]-->
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<!-- <td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td> -->
+									</tr>
+									<tr>
+										<th scope="row">수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<!-- <td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td> -->
+									</tr>
+									<tr class="point-row">
+										<th scope="row">수금률</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<!-- <td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td> -->
+									</tr>
+								</tbody>
+							</table>
+							<div class="total-btns">
+								<div class="btns1">
+									<button type="button" class="btn-sub1 c3">수금목표액 건별조회</button><!--[M : 2022-08-16 버튼명 변경]-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tab1-3" class="tab-cont">
+					일반 탭
+				</div>
+				<div id="tab1-4" class="tab-cont">
+					자동차 탭
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		_fixTable.init();
+	</script>
+</div>
+</body>
+</html>

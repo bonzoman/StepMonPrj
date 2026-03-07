@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 등록신청인 고지사항 | 위촉계약서 작성 | 전자위촉</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-25]	① 텍스트 변경 모두 아니오 > 모두 아니요
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>보험설계사 등록신청인 고지사항</h1>
+			<button type="button" data-btn="pop-close">보험설계사 등록신청인 고지사항 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [모두 아니오] -->
+			<!-- ######################### -->
+			<div class="label-check1" data-sticky="top">
+				<label>
+					<input type="checkbox">
+					<span>모두 아니요</span> <!-- 2022-10-25 텍스트 변경 -->
+				</label>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [고지사항 영역] -->
+			<!-- ######################### -->
+			<!-- ### CASE1 ### -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">01. 피성년후견인 또는 피한정후견인 <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="rd1" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="rd1">
+						<span>아니요</span>
+					</label>
+				</div>
+				<div class="validation">필수 확인 항목입니다.</div>
+			</fieldset>
+
+			<!-- ### CASE2 ### -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">02. 파산선고를 받은 자로서 복권되지 아니한 자 <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="rd2" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="rd2">
+						<span>아니요</span>
+					</label>
+				</div>
+				<div class="validation">필수 확인 항목입니다.</div>
+			</fieldset>
+
+			<!-- ### CASE3 ### -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">03. 보험업법 또는 금융소비자 보호에 관한 법률에 따라 벌금 이상의 형을 선고받고  그 집행이 끝나거나(집행이 끝난 것으로 보는 경우를 포함한다) 집행이 면제된 날 부터 2년이 지나지 아니한 자 <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="rd3" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="rd3">
+						<span>아니요</span>
+					</label>
+				</div>
+				<div class="validation">필수 확인 항목입니다.</div>
+			</fieldset>
+
+			<!-- ### CASE4 ### -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">04. 보험업법 또는 금융소비자 보호에 관한 법률에 따라 금고 이상의 형의 집행유예를 선고받고 그 유예기간 중에 있는 자 <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="rd4" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="rd4">
+						<span>아니요</span>
+					</label>
+				</div>
+				<div class="validation">필수 확인 항목입니다.</div>
+			</fieldset>
+
+			<!-- ### CASE5 ### -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">05. 보험업법에 따라 보험설계사․보험대리점 또는 보험중개사의 등록이 취소(제1호 또는 제2호에 해당하여 등록이 취소된 경우는 제외한다)된 후 2년이 지나지 아니한 자 <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="rd5" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="rd5">
+						<span>아니요</span>
+					</label>
+				</div>
+				<div class="validation">필수 확인 항목입니다.</div>
+			</fieldset>
+
+			<!-- ### CASE6 ### -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">06. 보험업법에 따라 보험설계사․보험대리점 또는 보험중개사 등록취소 처분을 2회 이상 받은 경우 최종 등록취소 처분을 받은 날부터 3년이 지나지 아니한 자 <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="rd6" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="rd6">
+						<span>아니요</span>
+					</label>
+				</div>
+				<div class="validation">필수 확인 항목입니다.</div>
+			</fieldset>
+
+			<!-- ### CASE7 ### -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">07. 보험업법 또는 금융소비자 보호에 관한 법률에 따라 과태료 또는 과징금 처분을 받고 이를 납부하지 아니하거나 업무정지 및 등록취소 처분을 받은 보험대리점. 보험중개사 소속의 임직원(영 제27조 제3항에 해당하는 자에 한함)이었던 자로서 과태료.과징금. 업무정지 및 등록취소 처분이 있었던 날부터 2년이 지나지 아니한 자 <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="rd7" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="rd7">
+						<span>아니요</span>
+					</label>
+				</div>
+				<div class="validation">필수 확인 항목입니다.</div>
+			</fieldset>
+
+			<!-- ### CASE8 ### -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">08. 영업에 관하여 성년자와 같은 능력을 가지지 아니한 미성년자로서 그 법정대리인이 제1호부터 제7호까지의 규정 중 어느 하나에 해당하는 자 <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="rd8" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="rd8">
+						<span>아니요</span>
+					</label>
+				</div>
+				<div class="validation">필수 확인 항목입니다.</div>
+			</fieldset>
+
+			<!-- ### CASE9 ### -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">09. 법인 또는 법인이 아닌 사단이나 재단으로서 그 임원이나 관리인 중에 제1호부터 제7호까지의 규정 중 어느 하나에 해당하는 자가 있는 자 <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="rd9" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="rd9">
+						<span>아니요</span>
+					</label>
+				</div>
+				<div class="validation">필수 확인 항목입니다.</div>
+			</fieldset>
+
+			<!-- ### CASE10 ### -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">10. 이전에 모집과 관련하여 받은 보험료, 대출금 또는 보험금을 다른 용도에 유용(流用)한 후 3년이 지나지 아니한 자 <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="rd10" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="rd10">
+						<span>아니요</span>
+					</label>
+				</div>
+				<div class="validation">필수 확인 항목입니다.</div>
+			</fieldset>
+
+			<!-- ### CASE11 ### -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">11. 현재 보험대리점․보험중개사·보험설계사로 등록되어 있거나 다른 보험회사․보험중개사․보험대리점의 임직원으로 등록되어 있습니까? <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="rd11" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="rd11">
+						<span>아니요</span>
+					</label>
+				</div>
+				<input type="text" class="text" title="사유" placeholder="사유를 입력해주세요.">
+				<div class="validation">필수 확인 항목입니다.</div>
+			</fieldset>
+
+			<!-- ### CASE12 ### -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">12. 영 제32조 제4호 및 제5호에 해당되는 사항이 있습니까?(보험대리점 소속 설계사가 되려는 자만 작성) <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="rd12" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="rd12">
+						<span>아니요</span>
+					</label>
+				</div>
+				<input type="text" class="text" title="사유" placeholder="사유를 입력해주세요.">
+				<div class="validation">필수 확인 항목입니다.</div>
+			</fieldset>
+
+			<!-- ### 안내문구 ### -->
+			<p class="mes-t3 t4">
+				<em>위 각 사항에 대한 기재사항은 사실과 다름없으며 신청인 본인이 직접 작성하였음을 확인합니다. 또한 위 기재사항을 허위로 작성하였음이 판명되는 때에는 보험설계사 등록을 취소하여도 이의가 없음을 서약합니다.</em>
+			</p>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

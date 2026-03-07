@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 변경내역상세 | [T] 변경내역 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>변경내역상세</h1>
+			<button type="button" data-btn="pop-close">변경내역상세 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 계약정보 -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+				<div class="info">
+					<dl>
+						<dt>증권번호</dt>
+						<dd>LA123456789</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [변경내역] -->
+			<!-- ######################### -->
+			<div class="info-con1">
+				<ul>
+					<li>
+						<div>변경종류</div>
+						<div>일반배서</div>
+					</li>
+					<li>
+						<div>변경구분</div>
+						<div>변경</div>
+					</li>
+					<li>
+						<div>변경승인일자</div>
+						<div>2022.10.20</div>
+					</li>
+					<li>
+						<div>입력</div>
+						<div>이입력/TM2지점</div>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<div>변경번호</div>
+						<div>0026</div>
+					</li>
+					<li>
+						<div>변경세부유형</div>
+						<div>수금방법변경</div>
+					</li>
+					<li>
+						<div>변경입력일자</div>
+						<div>2022.10.20</div>
+					</li>
+					<li>
+						<div>변경기준일자</div>
+						<div>2022.10.20</div>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- ######################### -->
+			<!-- [변경항목] -->
+			<!-- [D] 데이터가 없을 경우 해당영역 비노출 -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<div class="tit-sub1">
+					<h3 >변경항목</h3>
+					<div class="side"><button type="button" class="btn-sub2 c2">PDF 보기</button></div>
+				</div>
+
+				<div class="info-con1">
+					<!-- // -->
+					<ul>
+						<li>
+							<div>변경대상</div>
+							<div class="data-info2"><strong>김롯데</strong><span><span>1990.01.01</span><span>여</span></span></div>
+						</li>
+						<li>
+							<div>변경사항</div>
+							<div>상해사망(갱신형)</div>
+						</li>
+						<li>
+							<div>변경 전</div>
+							<div>
+								<div>상해사망(갱신형)</div>
+								<div>보험료 850원</div>
+							</div>
+						</li>
+						<li>
+							<div>변경 후</div>
+							<div>
+								<div>자동갱신</div>
+								<div>전기납 03년만기</div>
+								<div>50,000,000</div>
+								<div>보험료 600원</div>
+							</div>
+						</li>
+					</ul>
+					<!-- // -->
+					<ul>
+						<li>
+							<div>변경대상</div>
+							<div class="data-info2"><strong>김롯데</strong><span><span>1990.01.01</span><span>여</span></span></div>
+						</li>
+						<li>
+							<div>변경사항</div>
+							<div>상해사망(갱신형)</div>
+						</li>
+						<li>
+							<div>변경 전</div>
+							<div>
+								<div>상해사망(갱신형)</div>
+								<div>보험료 850원</div>
+							</div>
+						</li>
+						<li>
+							<div>변경 후</div>
+							<div>
+								<div>자동갱신</div>
+								<div>전기납 03년만기</div>
+								<div>50,000,000</div>
+								<div>보험료 600원</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- 더보기(현재페이지/총페이지) -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(1/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

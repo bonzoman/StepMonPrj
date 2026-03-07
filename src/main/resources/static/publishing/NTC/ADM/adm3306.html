@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>교육과정별 교육매칭 | 교육관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">교육관리</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<!-- 교육과정 리스트(정규교육)  CASE -->
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<dl class="form">
+						<dt>교육유형 검색</dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:300px;">
+									<option>정규교육</option>
+									<option>테마교육</option>
+									<option>필수교육</option>
+								</select>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>교육과정 검색</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="checkbox" name="form1" checked="">
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form1">
+									<span>인큐베이팅</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form1">
+									<span>어드밴스드</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form1">
+									<span>입문교육</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>상태 검색</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="checkbox" name="form2" checked="">
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form2">
+									<span>진행예정</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form2">
+									<span>진행중</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form2">
+									<span>진행 완료</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+			<div class="tit-sub2">
+				<h3>정규교육 <span>전체 4</span></h3>
+				<div class="sub">
+					<button type="button" class="btn-action c3">등록</button>
+				</div>
+			</div>
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<col style="width:60px;">
+						<col style="width:140px;">
+						<col>
+						<col>
+						<col>
+						<col style="width:140px;">
+						<col>
+						<col>
+						<col style="width:160px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">교육과정</th>
+							<th scope="col">1세트 내 <br>주차 수</th>
+							<th scope="col">1주 제공 <br>강의 수</th>
+							<th scope="col">교육 상세 설정</th>
+							<th scope="col">설정 값 <br> 적용 날짜</th>
+							<th scope="col">진행 상태</th>
+							<th scope="col">최종 수정 <br> 일시</th>
+							<th scope="col">최종 수정자</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>3</td>
+							<td>인큐베이팅</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>2022.03.22</td>
+							<td>진행 예정</td>
+							<td>2022.02.22 00:00</td>
+							<td>김롯데(111111)</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>입문교육</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>2022.03.22</td>
+							<td>진행 중</td>
+							<td>2022.02.22 00:00</td>
+							<td>김롯데(111111)</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>정규</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>2022.03.22</td>
+							<td>진행 예정</td>
+							<td>2022.02.22 00:00</td>
+							<td>김롯데(111111)</td>
+						</tr>
+						<tr>
+							<td colspan="9">
+								<div class="nodata">
+									등록된 정보가 없습니다.
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="paging">
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+
+
+			<!-- 교육과정 리스트(필수교육)  CASE -->
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<dl class="form">
+						<dt>교육유형 검색</dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:300px;">
+									<option>정규교육</option>
+									<option>테마교육</option>
+									<option selected>필수교육</option>
+								</select>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>교육과정 검색</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="checkbox" name="form1" checked="">
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form1">
+									<span>인큐베이팅</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form1">
+									<span>어드밴스드</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form1" disabled>
+									<span>입문교육</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>상태 검색</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="checkbox" name="form2" checked="">
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form2">
+									<span>진행예정</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form2">
+									<span>진행중</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form2">
+									<span>진행 완료</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+			<div class="tit-sub2">
+				<h3>필수교육 <span>전체 4</span></h3>
+				<div class="sub">
+					<button type="button" class="btn-action c3">등록</button>
+				</div>
+			</div>
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<col style="width:60px;">
+						<col style="width:180px;">
+						<col style="width:140px;">
+						<col>
+						<col>
+						<col style="width:160px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">교육과정</th>
+							<th scope="col">설정 값 <br> 적용 날짜</th>
+							<th scope="col">진행 상태</th>
+							<th scope="col">최종 수정 <br> 일시</th>
+							<th scope="col">최종 수정자</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2</td>
+							<td>어드밴스드</td>
+							<td>2022.03.22</td>
+							<td>진행 중</td>
+							<td>2022.02.22 00:00</td>
+							<td>김롯데(111111)</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>인큐베이팅</td>
+							<td>2022.03.22</td>
+							<td>진행 예정</td>
+							<td>2022.02.22 00:00</td>
+							<td>김롯데(111111)</td>
+						</tr>
+						<tr>
+							<td colspan="6">
+								<div class="nodata">
+									등록된 정보가 없습니다.
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="paging">
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+
+			<!-- 교육과정 리스트(테마교육)  CASE -->
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<dl class="form">
+						<dt>교육유형 검색</dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:300px;">
+									<option>정규교육</option>
+									<option selected>테마교육</option>
+									<option>필수교육</option>
+								</select>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>교육과정 검색</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="checkbox" name="form1" checked="">
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form1">
+									<span>인큐베이팅</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form1">
+									<span>어드밴스드</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form1" disabled>
+									<span>입문교육</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>상태 검색</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="checkbox" name="form2" checked="">
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form2">
+									<span>진행예정</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form2">
+									<span>진행중</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="form2">
+									<span>진행 완료</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+			<div class="tit-sub2">
+				<h3>테마교육 <span>전체 4</span></h3>
+				<div class="sub">
+					<button type="button" class="btn-action c3">등록</button>
+				</div>
+			</div>
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<col style="width:60px;">
+						<col style="width:140px;">
+						<col>
+						<col>
+						<col style="width:140px;">
+						<col style="width:140px;">
+						<col>
+						<col style="width:160px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">테마명</th>
+							<th scope="col">컨텐츠 수</th>
+							<th scope="col">교육과정</th>
+							<th scope="col">진행 시작일</th>
+							<th scope="col">진행 종료일</th>
+							<th scope="col">진행 상태</th>
+							<th scope="col">최종 수정 <br> 일시</th>
+							<th scope="col">최종 수정자</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>3</td>
+							<td>보험용어집4</td>
+							<td></td>
+							<td></td>
+							<td>2022.03.22</td>
+							<td>2022.03.22</td>
+							<td>진행 예정</td>
+							<td>2022.02.22 00:00</td>
+							<td>김롯데(111111)</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>정규</td>
+							<td></td>
+							<td></td>
+							<td>2022.03.22</td>
+							<td>2022.03.22</td>
+							<td>진행 중</td>
+							<td>2022.02.22 00:00</td>
+							<td>김롯데(111111)</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>정규</td>
+							<td></td>
+							<td></td>
+							<td>2022.03.22</td>
+							<td>2022.03.22</td>
+							<td>진행 예정</td>
+							<td>2022.02.22 00:00</td>
+							<td>김롯데(111111)</td>
+						</tr>
+						<tr>
+							<td colspan="9">
+								<div class="nodata">
+									등록된 교육이 없습니다.
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="paging">
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 가상계좌조회/발급 | [T] 계약기본 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-22]	① 타이틀변경
+	*					② 문구수정 : 발급일자 > 발급일
+	*					③ 문구수정 : SMS 발송 > 문자발송
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>가상계좌</h1> <!-- [M 2022-08-22] ① 타이틀변경 -->
+			<button type="button" data-btn="pop-close">가상계좌 닫기</button> <!-- [M 2022-08-22] ① 타이틀변경 -->
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [발급버튼] -->
+			<!-- ######################### -->
+			<div class="area-btn1">
+				<a href="javascript:void(0);" class="btn-com1 ic3">계좌발급</a> <!-- [D] 은행선택 공통 팝업 노출 : /00.COM/DPCOM0000_P01.html -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [가상계좌목록] -->
+			<!-- ######################### -->
+			<!-- # 총 건수 # -->
+			<div class="area-info1">
+				<p>총 <strong>000건</strong></p>
+			</div>
+
+			<!-- # 계좌목록 # -->
+			<div class="con-t1">
+				<!-- [CASE1] 최근 추가된 가상계좌 -->
+				<label>
+					<input type="radio" name="form-radio-con1" checked>
+					<strong class="tit">
+						<span>은행명</span>
+						<span>계좌번호</span>
+					</strong>
+					<span class="sub" data-label="발급일">0000.00.00</span> <!-- [M 2022-08-22] ② 문구수정 -->
+					<a href="javascript:void(0);" role="button" class="btn-sub3">재발급</a>
+				</label>
+				<!-- // -->
+				<label>
+					<input type="radio" name="form-radio-con1">
+					<strong class="tit">
+						<span>국민은행</span>
+						<span>172123-01-095248</span>
+					</strong>
+					<span class="sub" data-label="발급일">2022.03.23</span>
+					<a href="javascript:void(0);" role="button" class="btn-sub3">재발급</a>
+				</label>
+				<!-- [CASE2] 기간만료 -->
+				<label>
+					<input type="radio" name="form-radio-con1" disabled>
+					<strong class="tit">
+						<span>국민은행</span>
+						<span>000-0000-0000</span>
+					</strong>
+					<span class="sub" data-label="발급일">2022.03.23</span>
+					<a href="javascript:void(0);" role="button" class="btn-sub3">재발급</a>
+				</label>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action col" data-sticky="bottom">
+				<button type="button" class="btn-action c1">문자발송</button> <!-- [M 2022-08-22] ③ 문구수정 -->
+				<button type="button" class="btn-action c1">알림톡 발송</button>
+				<!-- <button type="button" class="btn-action c1" disabled>문자발송</button> : 비활성화 -->
+				<!-- <button type="button" class="btn-action c1" disabled>알림톡 발송</button> : 비활성화 -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+	//<!--
+		//[샘플] 재발급 클릭이벤트
+		$('.btn-sub3').on('click',function(){
+			var _parent = $(this).parent();
+			ui.alert('원리금수납 가상계좌 발급처리가 완료되었습니다.', function(){
+				_parent.find('input').removeAttr('disabled');
+			});
+			return false;
+		});
+	//-->
+	</script>
+</body>
+</html>

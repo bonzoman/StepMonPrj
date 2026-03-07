@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>목록 | 고객목록 | 보장분석</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>보장분석</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="3">
+		<div class="tit-section t2">
+			<p><strong>나와 함께하는 고객</strong></p>
+			<div class="data-num1"><strong>00</strong><span>명</span></div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="area-btn4" data-autoset="tab">
+			<a href="#uiTabCon1" class="btn-t1 c2 active">동의만료</a>
+			<a href="#uiTabCon2" class="btn-t1 c2">상담대기</a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭컨텐츠] 동의만료 -->
+		<!-- ######################### -->
+		<div id="uiTabCon1" class="ui-tabcon active">
+			<h2 class="hide">동의만료고객</h2>
+
+			<!-- ### 기고객 있을 경우 ### -->
+			<div class="tit-section t3">
+				<p><strong>12명</strong>고객님의<br><strong>가입설계동의만료일</strong>이 다가오고 있어요</p>
+			</div>
+			<div class="list-data6 t1">
+				<ul data-slider="list2" data-slider-title="동의만료고객" data-slides-view="auto">
+					<!-- // -->
+					<li>
+						<div class="side"><i class="icon-txt2 ic6">D-00</i></div>
+						<div class="data-info2" data-value="102701"><strong>고객명</strong><span>나이</span></div> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+						<a href="javascript:void(0);" class="link">가입설계동의만료일 이동</a>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="side"><i class="icon-txt2 ic6">D-30</i></div>
+						<div class="data-info2" data-value="102702"><strong>하다미</strong><span>27세</span></div>
+						<a href="javascript:void(0);" class="link">가입설계동의만료일 이동</a>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+			<!-- ### // ### -->
+
+			<!-- ### 기고객 없을 경우 [M 2022-07-22] 내용추가 ### -->
+			<div class="tit-section t3">
+				<p>
+					<strong>30일 이내</strong>에 <strong>가입설계동의</strong>가 <strong>만료</strong>되는<br>
+					고객님들을 여기에서 알려드릴게요
+				</p>
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭컨텐츠] 상담대기 -->
+		<!-- ######################### -->
+		<div id="uiTabCon2" class="ui-tabcon">
+			<h2 class="hide">상담대기고객</h2>
+
+			<!-- ### 기고객 있을 경우 ### -->
+			<div class="tit-section t3">
+				<p><strong>5명</strong>고객님께서<br><strong>설계사의 상담</strong>을 기다리고 있어요</p>
+			</div>
+			<div class="list-data6 t1">
+				<ul data-slider="list2" data-slider-title="상담대기고객" data-slides-view="auto">
+					<li>
+						<div class="data-info2" data-value="102701"><strong>고객명</strong><span>나이</span></div>
+						<a href="javascript:void(0);" class="link">상담신청상세</a>
+					</li>
+					<li>
+						<div class="data-info2" data-value="102702"><strong>하다미</strong><span>32세</span></div>
+						<a href="javascript:void(0);" class="link">상담신청상세</a>
+					</li>
+				</ul>
+			</div>
+			<!-- ### // ### -->
+
+			<!-- ### 기고객 없을 경우 [M 2022-07-22] 내용추가 ### -->
+			<div class="tit-section t3">
+				<p>
+					<strong>30일 이내</strong>에 <strong>가입설계동의</strong>가 <strong>만료</strong>되는<br>
+					고객님들을 여기에서 알려드릴게요
+				</p>
+			</div>
+			<!-- ### // ### -->
+
+			<!-- ### 상담대기없을 경우 [M 2022-07-22] 내용추가 ### -->
+			<div class="tit-section t3">
+				<p>
+					고객님께서 <strong>상담</strong>을 <strong>신청</strong>하시면<br>
+					여기에서 보여드릴게요
+				</p>
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [바로가기] : 기고객이 없을 경우 미노출 -->
+		<!-- ######################### -->
+		<div class="btn-util3 t1">
+			<a href="javascript:void(0);" class="ic1">고객등록</a>
+			<a href="javascript:void(0);" class="ic2">권장가입 금액</a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [배너] -->
+		<!-- ######################### -->
+		<div class="banner-t2">
+			<a href="javascript:void(0);" class="ic3">
+				<strong>셀프보장분석 공유</strong>
+				<span>가입설계동의&middot;고객등록&middot;보장분석을 한번에</span>
+			</a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [고객목록] -->
+		<!-- ######################### -->
+		<div class="wrap-section2" data-scroll-bg="2">
+			<!-- ### 기고객이 있을 경우 ### -->
+			<!-- 검색영역  -->
+			<fieldset class="form-search1" data-sticky="top">
+				<legend></legend>
+				<div class="text">
+					<input type="search" placeholder="고객명을 검색해주세요.">
+					<button type="button" class="icon-com1 ic2 simple">검색</button>
+				</div>
+			</fieldset>
+			<!-- 검색결과 : 총 건수 -->
+			<div class="area-info1">
+				<p>총 <strong>000명</strong></p>
+				<div class="side">
+					<!-- // -->
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">고객별 이력 정렬</span>
+							<span data-select="text" data-value="1">최근 동의순</span>
+						</button>
+						<div class="list">
+							<div data-label="고객별 이력 정렬">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion0" value="1"><span>최근 동의순</span></label>
+									<label><input type="radio" name="selectOpeion0" value="2"><span>최근 분석순</span></label>
+									<label><input type="radio" name="selectOpeion0" value="3"><span>최근 고객등록순</span></label>
+									<label><input type="radio" name="selectOpeion0" value="4"><span>가입설계동의 만료일순</span></label>
+									<label><input type="radio" name="selectOpeion0" value="5"><span>리포트발송순</span></label>
+									<label><input type="radio" name="selectOpeion0" value="6"><span>보험생일도래순</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<!-- // -->
+				</div>
+			</div>
+			<!-- 검색결과 : 목록 -->
+			<div class="list-data6" data-slider-vertical="true">
+				<ul>
+					<li class="active"> <!-- 활성화 -->
+						<div class="area1">
+							<div class="side">
+								<span class="txt">동의만료</span> <!-- [M 2022-08-31] 문구추가 -->
+								<i class="icon-txt2 ic6">만료</i>
+								<i class="icon-txt2 ic6">D-00</i>
+								<i class="icon-txt2 ic5">D-22</i>
+							</div>
+							<div class="data-info2" data-value="102701">
+								<strong>고객명</strong>
+								<span><span>나이</span><span>성별</span></span>
+							</div>
+							<div class="txt">
+								<span>1984.02.05</span>
+								<span>보험생일 03.01</span>
+							</div>
+							<div class="data1">
+								<dl>
+									<dt>보장분석일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+								<dl>
+									<dt>모바일발송일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="area2">
+							<a href="javascript:void(0);" class="ic1">전화</a>
+							<a href="javascript:void(0);" class="ic2">문자</a>
+							<a href="javascript:void(0);" class="ic3">보장분석&middot;설계</a>
+							<a href="javascript:void(0);" class="ic4">고객발송</a>
+						</div>
+					</li>
+					<li>
+						<div class="area1">
+							<div class="side">
+								<span class="txt">동의만료</span> <!-- [M 2022-08-31] 문구추가 -->
+								<i class="icon-txt2 ic5">D-22</i>
+							</div>
+							<div class="data-info2" data-value="103201">
+								<strong>하다미</strong>
+								<span>
+									<span>32세</span>
+									<span>남</span>
+								</span>
+							</div>
+							<div class="txt">
+								<span>1984.02.05</span>
+								<span>보험생일 03.01</span>
+							</div>
+							<div class="data1">
+								<dl>
+									<dt>보장분석일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+								<dl>
+									<dt>모바일발송일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="area2">
+							<a href="javascript:void(0);" class="ic1">전화</a>
+							<a href="javascript:void(0);" class="ic2">문자</a>
+							<a href="javascript:void(0);" class="ic3">보장분석&middot;설계</a>
+							<a href="javascript:void(0);" class="ic4">고객발송</a>
+						</div>
+					</li>
+					<li>
+						<div class="area1">
+							<div class="side">
+								<span class="txt">동의만료</span> <!-- [M 2022-08-31] 문구추가 -->
+								<i class="icon-txt2 ic5">D-22</i>
+							</div>
+							<div class="data-info2" data-value="104501">
+								<strong>하다미</strong>
+								<span>
+									<span>45세</span>
+									<span>남</span>
+								</span>
+							</div>
+							<div class="txt">
+								<span>1984.02.05</span>
+								<span>보험생일 03.01</span>
+							</div>
+							<div class="data1">
+								<dl>
+									<dt>보장분석일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+								<dl>
+									<dt>모바일발송일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="area2">
+							<a href="javascript:void(0);" class="ic1">전화</a>
+							<a href="javascript:void(0);" class="ic2">문자</a>
+							<a href="javascript:void(0);" class="ic3">보장분석&middot;설계</a>
+							<a href="javascript:void(0);" class="ic4">고객발송</a>
+						</div>
+					</li>
+					<li>
+						<div class="area1">
+							<div class="side">
+								<span class="txt">동의만료</span> <!-- [M 2022-08-31] 문구추가 -->
+								<i class="icon-txt2 ic5">D-22</i>
+							</div>
+							<div class="data-info2" data-value="103202">
+								<strong>하다미</strong>
+								<span>
+									<span>32세</span>
+									<span>여</span>
+								</span>
+							</div>
+							<div class="txt">
+								<span>1984.02.05</span>
+								<span>보험생일 03.01</span>
+							</div>
+							<div class="data1">
+								<dl>
+									<dt>보장분석일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+								<dl>
+									<dt>모바일발송일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="area2">
+							<a href="javascript:void(0);" class="ic1">전화</a>
+							<a href="javascript:void(0);" class="ic2">문자</a>
+							<a href="javascript:void(0);" class="ic3">보장분석&middot;설계</a>
+							<a href="javascript:void(0);" class="ic4">고객발송</a>
+						</div>
+					</li>
+					<li>
+						<div class="area1">
+							<div class="side">
+								<span class="txt">동의만료</span> <!-- [M 2022-08-31] 문구추가 -->
+								<i class="icon-txt2 ic5">D-22</i>
+							</div>
+							<div class="data-info2" data-value="903201">
+								<strong>하다미</strong>
+								<span>
+									<span>32세</span>
+									<span>남</span>
+								</span>
+							</div>
+							<div class="txt">
+								<span>1984.02.05</span>
+								<span>보험생일 03.01</span>
+							</div>
+							<div class="data1">
+								<dl>
+									<dt>보장분석일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+								<dl>
+									<dt>모바일발송일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="area2">
+							<a href="javascript:void(0);" class="ic1">전화</a>
+							<a href="javascript:void(0);" class="ic2">문자</a>
+							<a href="javascript:void(0);" class="ic3">보장분석&middot;설계</a>
+							<a href="javascript:void(0);" class="ic4">고객발송</a>
+						</div>
+					</li>
+					<li>
+						<div class="area1">
+							<div class="side">
+								<span class="txt">동의만료</span> <!-- [M 2022-08-31] 문구추가 -->
+								<i class="icon-txt2 ic5">D-22</i>
+							</div>
+							<div class="data-info2" data-value="103201">
+								<strong>하다미</strong>
+								<span>
+									<span>32세</span>
+									<span>남</span>
+								</span>
+							</div>
+							<div class="txt">
+								<span>1984.02.05</span>
+								<span>보험생일 03.01</span>
+							</div>
+							<div class="data1">
+								<dl>
+									<dt>보장분석일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+								<dl>
+									<dt>모바일발송일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="area2">
+							<a href="javascript:void(0);" class="ic1">전화</a>
+							<a href="javascript:void(0);" class="ic2">문자</a>
+							<a href="javascript:void(0);" class="ic3">보장분석&middot;설계</a>
+							<a href="javascript:void(0);" class="ic4">고객발송</a>
+						</div>
+					</li>
+					<li>
+						<div class="area1">
+							<div class="side">
+								<span class="txt">동의만료</span> <!-- [M 2022-08-31] 문구추가 -->
+								<i class="icon-txt2 ic5">D-22</i>
+							</div>
+							<div class="data-info2" data-value="103202">
+								<strong>하다미</strong>
+								<span>
+									<span>32세</span>
+									<span>여</span>
+								</span>
+							</div>
+							<div class="txt">
+								<span>1984.02.05</span>
+								<span>보험생일 03.01</span>
+							</div>
+							<div class="data1">
+								<dl>
+									<dt>보장분석일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+								<dl>
+									<dt>모바일발송일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="area2">
+							<a href="javascript:void(0);" class="ic1">전화</a>
+							<a href="javascript:void(0);" class="ic2">문자</a>
+							<a href="javascript:void(0);" class="ic3">보장분석&middot;설계</a>
+							<a href="javascript:void(0);" class="ic4">고객발송</a>
+						</div>
+					</li>
+					<li>
+						<div class="area1">
+							<div class="side">
+								<span class="txt">동의만료</span> <!-- [M 2022-08-31] 문구추가 -->
+								<i class="icon-txt2 ic5">D-22</i>
+							</div>
+							<div class="data-info2" data-value="107202">
+								<strong>하다미</strong>
+								<span>
+									<span>72세</span>
+									<span>남</span>
+								</span>
+							</div>
+							<div class="txt">
+								<span>1984.02.05</span>
+								<span>보험생일 03.01</span>
+							</div>
+							<div class="data1">
+								<dl>
+									<dt>보장분석일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+								<dl>
+									<dt>모바일발송일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="area2">
+							<a href="javascript:void(0);" class="ic1">전화</a>
+							<a href="javascript:void(0);" class="ic2">문자</a>
+							<a href="javascript:void(0);" class="ic3">보장분석&middot;설계</a>
+							<a href="javascript:void(0);" class="ic4">고객발송</a>
+						</div>
+					</li>
+					<li>
+						<div class="area1">
+							<div class="side">
+								<span class="txt">동의만료</span> <!-- [M 2022-08-31] 문구추가 -->
+								<i class="icon-txt2 ic5">D-22</i>
+							</div>
+							<div class="data-info2" data-value="103201">
+								<strong>하다미</strong>
+								<span>
+									<span>32세</span>
+									<span>남</span>
+								</span>
+							</div>
+							<div class="txt">
+								<span>1984.02.05</span>
+								<span>보험생일 03.01</span>
+							</div>
+							<div class="data1">
+								<dl>
+									<dt>보장분석일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+								<dl>
+									<dt>모바일발송일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="area2">
+							<a href="javascript:void(0);" class="ic1">전화</a>
+							<a href="javascript:void(0);" class="ic2">문자</a>
+							<a href="javascript:void(0);" class="ic3">보장분석&middot;설계</a>
+							<a href="javascript:void(0);" class="ic4">고객발송</a>
+						</div>
+					</li>
+					<li>
+						<div class="area1">
+							<div class="side">
+								<span class="txt">동의만료</span> <!-- [M 2022-08-31] 문구추가 -->
+								<i class="icon-txt2 ic5">D-22</i>
+							</div>
+							<div class="data-info2" data-value="101201">
+								<strong>하다미</strong>
+								<span>
+									<span>12세</span>
+									<span>남</span>
+								</span>
+							</div>
+							<div class="txt">
+								<span>1984.02.05</span>
+								<span>보험생일 03.01</span>
+							</div>
+							<div class="data1">
+								<dl>
+									<dt>보장분석일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+								<dl>
+									<dt>모바일발송일</dt>
+									<dd>2022.01.01</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="area2">
+							<a href="javascript:void(0);" class="ic1">전화</a>
+							<a href="javascript:void(0);" class="ic2">문자</a>
+							<a href="javascript:void(0);" class="ic3">보장분석&middot;설계</a>
+							<a href="javascript:void(0);" class="ic4">고객발송</a>
+						</div>
+					</li>
+					<!-- [결과없음] -->
+					<li class="nodata">
+						<strong>선택하신 조건의 결과가 없습니다.</strong>
+						<span>조회 조건을 바꾸어 조회해보세요.</span>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- [더보기 버튼] -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ### 등록된 고객 없음 : [M 2022-07-22] 내용 변경 ###  -->
+			<div class="mes-result1">
+				<p><strong>등록된 고객이 없습니다.</strong></p>
+				<div class="area-btn2">
+					<button type="button" class="btn-com1 c1 w2 ic15">고객등록</button>
+					<button type="button" class="btn-com1 w2">권장가입금액</button>
+				</div>
+			</div>
+			<!-- ### // ###  -->
+		</div>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<!-- <footer class="footer"></footer> -->
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+	var _html = '';
+	_html += '<li>',
+	_html += '    <div class="area1">',
+	_html += '        <div class="side">',
+	_html += '        <span class="txt">동의만료</span>',
+	_html += '            <i class="icon-txt2 ic5">D-22</i>',
+	_html += '        </div>',
+	_html += '        <div class="data-info2" data-value="103201">',
+	_html += '            <strong>하다미</strong>',
+	_html += '            <span>',
+	_html += '                <span>32세</span>',
+	_html += '                <span>남</span>',
+	_html += '            </span>',
+	_html += '        </div>',
+	_html += '        <div class="txt">',
+	_html += '            <span>1984.02.05</span>',
+	_html += '            <span>보험생일 03.01</span>',
+	_html += '        </div>',
+	_html += '        <div class="data1">',
+	_html += '            <dl>',
+	_html += '                <dt>보장분석일</dt>',
+	_html += '                <dd>2022.01.01</dd>',
+	_html += '            </dl>',
+	_html += '            <dl>',
+	_html += '                <dt>모바일발송일</dt>',
+	_html += '                <dd>2022.01.01</dd>',
+	_html += '            </dl>',
+	_html += '        </div>',
+	_html += '    </div>',
+	_html += '    <div class="area2">',
+	_html += '        <a href="javascript:void(0);" class="ic1">전화</a>',
+	_html += '        <a href="javascript:void(0);" class="ic2">문자</a>',
+	_html += '        <a href="javascript:void(0);" class="ic3">보장분석&middot;설계</a>',
+	_html += '        <a href="javascript:void(0);" class="ic4">고객발송</a>',
+	_html += '    </div>',
+	_html += '</li>';
+
+	$(document).ready(function(){
+		$('.btn-util2').on('click',function(){
+			for(var i = 0; i < 10; i++){
+				$('.list-data6 > ul').append(_html);
+			}
+			ui.initReload();
+		})
+		ui.setTop(); //2022-12-30 탑버튼 추가
+	});
+
+//-->
+</script>
+</body>
+</html>

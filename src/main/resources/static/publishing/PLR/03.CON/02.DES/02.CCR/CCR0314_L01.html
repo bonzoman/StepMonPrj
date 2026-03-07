@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 사진검증 확인결과 | 특별약관 사진검증 | 배서설계조회 | 가입설계조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="info-data2" data-display="list">
+			<ul>
+				<!-- // -->
+				<li>
+					<div class="info">
+						<i class="icon-txt2 t1 ic2">주행거리-차량대체전</i>
+						<span>CA220308111700</span>
+					</div>
+					<strong class="tit">55도 2568</strong>
+					<div class="data1">
+						<dl>
+							<dt>피보험자</dt>
+							<dd>하다미</dd>
+						</dl>
+						<dl>
+							<dt>확인결과</dt>
+							<dd>재이관 <button type="button" class="icon-com2 ic1" aria-controls="uiPOPCCR0314L01">확인결과 안내</button></dd><!-- [레이어팝업 호출 샘플] -->
+						</dl>
+					</div>
+				</li>
+				<!-- // -->
+			</ul>
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 사진검증 확인결과 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCCR0314L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>사진검증 확인결과</h1>
+			<button type="button" data-btn="pop-close">사진검증 확인결과 닫기</button>
+		</header>
+		<div class="content">
+			<dl class="mes-t3">
+				<dt>확인결과</dt>
+				<dd>이미지가 깨져서 저장되었습니다.<br>재등록 요청하세요.</dd>
+			</dl>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1" >확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCCR0314L01');
+
+	//레이어팝업 강제오픈
+	$('[aria-controls="uiPOPCCR0314L01"]').trigger('click');
+//-->
+</script>
+</body>
+</html>

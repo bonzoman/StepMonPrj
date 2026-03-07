@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>유지율 건별 조회 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-01]	1. 표 상단 틀고정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">유지율 건별 조회</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1 ">
+				<div class="form-field">
+                    <button class="more-search" type="button"></button>
+					<dl class="form w1">
+						<dt>기준년월<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<input type="text" class="date-m" value="2022.02" placeholder="월 선택">
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w2">
+						<dt>조직구분<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>취급자</option>
+								</select>
+                                <input type="text" name="" id="" class="text" style="width:80px;">
+                                <input type="text" name="" id="" class="text" style="width:120px;" disabled>
+                                <button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+					<div class="search-cont">
+						<dl class="form">
+							<dt>회차<em class="imp"><span>필수</span></em></dt>
+							<dd>
+								<div class="form-row">
+									<input type="text" name="" id="" style="width:72px;" class="text">
+									~
+									<input type="text" name="" id="" style="width:72px;" class="text">
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="form w1">
+							<dt>보험종목</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr7" checked="checked">
+										<span>보장성</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr7">
+										<span>재물</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr7">
+										<span>저축성</span>
+									</label>
+								</div>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr1"  checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr1">
+										<span>상해</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr1">
+										<span>질병</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr1">
+										<span>운전자</span>
+									</label>
+								</div>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr2"  checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr2">
+										<span>저축성</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr2">
+										<span>연금</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="form w1">
+							<dt>취급자기준</dt>
+							<dd>
+
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr12"  checked="checked">
+										<span>최초</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr12">
+										<span>최종</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w3">
+							<dt>계약상태</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr12"  checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr12">
+										<span>정상</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr12">
+										<span>해지</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr12">
+										<span>해약</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr12">
+										<span>취소</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr12">
+										<span>철회</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w1">
+							<dt>계약상태</dt>
+							<dd>
+
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr13"  checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr13">
+										<span>유지</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr13">
+										<span>미유지</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c3">초기화</button>
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+			<div class="data-table1">
+				<div class="info1">
+					현재 조회된 건수: 21건
+					<span class="bar"></span>
+					단위 : 원
+				</div>
+				<!-- [M 2022-11-01] 표 상단 틀고정 -->
+				<div class="list-thead" data-pos="thead">
+					<table>
+						<thead>
+							<tr>
+								<th scope="col">순번</th>
+								<th scope="col">상위부서</th>
+								<th scope="col">조직명</th>
+								<th scope="col">취급자명</th>
+								<th scope="col">증권번호</th>
+								<th scope="col">계약자명</th>
+								<th scope="col">납입방법</th>
+								<th scope="col">회차</th>
+								<th scope="col">납입기간</th>
+								<th scope="col">대상보험료</th>
+								<th scope="col">유지보험료</th>
+								<th scope="col">계약상태</th>
+								<th scope="col">유지여부</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+				<div class="list-table" data-pos="top">
+					<table>
+						<colgroup>
+							<col style="width:60px;">
+						</colgroup>
+						<!-- <thead>
+							<tr>
+								<th scope="col">순번</th>
+								<th scope="col">상위부서</th>
+								<th scope="col">조직명</th>
+								<th scope="col">취급자명</th>
+								<th scope="col">증권번호</th>
+								<th scope="col">계약자명</th>
+								<th scope="col">납입방법</th>
+								<th scope="col">회차</th>
+								<th scope="col">납입기간</th>
+								<th scope="col">대상보험료</th>
+								<th scope="col">유지보험료</th>
+								<th scope="col">계약상태</th>
+								<th scope="col">유지여부</th>
+							</tr>
+						</thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>전속지원팀<br>(D234563)</td>
+								<td>강남사업단<br>(E02453)</td>
+								<td>김크림<br>(100000)</td>
+								<td>LA20222133456454</td>
+								<td>생크림</td>
+								<td>월납</td>
+								<td>13</td>
+								<td>5</td>
+								<td>30,000</td>
+								<td>30,000</td>
+								<td>정상</td>
+								<td>N</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="total-div" data-pos="bottom" data-match="false">
+					<table>
+						<colgroup>
+							<col style="width:150px;">
+							<col>
+							<col style="width:150px;">
+							<col>
+							<col style="width:150px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">대상보험료</th> <!-- 2022-11-30 텍스트 변경 -->
+								<td>0</td>
+								<th scope="row">유지보험료</th>
+								<td>0</td>
+								<th scope="row">유지율</th> <!-- 2022-11-30 추가 -->
+								<td>0</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="total-btns">
+						<div class="btns1">
+							<button type="button" class="btn-sub1 c3">유지율 조회</button>
+						</div>
+						<div class="btns2">
+							<button type="button" class="btn-sub1 c3">이전</button>
+							<button type="button" class="btn-sub1 c3">다음</button>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+	</div>
+    <script>
+		/*
+			@title : 틀 고정 table
+			@description :
+		     grid 를 사용한 data table 이 아닌 관계로 별도로 script 작성
+		     작성된 table 을 복사하여 회면 위에 띄워서 배치 시킨 후 필요한 부분만 보여지게 사이즈를 조정함
+
+
+			.sort 클릭시 복사된 table에 내용이 바로 반영 되지 않으므로 하기 샘플 참조
+
+
+			[.sort 클릭시 발생시킬 이벤트 sample;]
+			틀고정 영역 내용 변경을 위한 scirpt
+
+			table 의 내용 추가,변경,정렬 시 _fixTable.update(); 호출
+
+		*/
+
+		_fixTable.init({
+		});
+    </script>
+</div>
+</body>
+</html>

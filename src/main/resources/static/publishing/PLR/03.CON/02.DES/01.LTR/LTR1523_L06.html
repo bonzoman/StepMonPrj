@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 이륜차운전자선택 | 쉬운설계 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container" data-page="1">
+		<div class="info-data3 t1">
+			<ul>
+				<li>
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+						<span>
+							<span>1984.02.05</span>
+							<span>32세</span>
+							<span>남</span>
+						</span>
+					</div>
+					<div class="data3">
+						<span>보험생일</span>
+						<strong>03.01</strong>
+					</div>
+					<div class="data4">
+						<span>보장분석일</span>
+						<strong>2022.01.01</strong>
+					</div>
+					<div class="data4">
+						<span>가입동의설계 만료일</span>
+						<strong>2022.02.01</strong>
+					</div>
+					<button type="button" data-btn="selection" aria-controls="uiPOPLTR1523L01">선택</button> <!-- [D] 레이어팝업 호출 샘플 -->
+				</li>
+			</ul>
+			<!-- // -->
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] ### -->
+<!-- ################################################### -->
+<div id="uiPOPLTR1523L01" class="pop-mes2" role="alertdialog" data-popmodal="true">
+	<dl>
+		<dt>이륜차를 운전하고 계신가요?<br>직업 내 상해급수를 변경하여 선택해주세요.</dt>
+		<dd>교통급수에따라 보험료가 인상되거나<br>가입할 수 있는 보험이 제한될 수 있어요.</dd>
+		<dd class="area-action">
+			<button type="button" class="btn-action" data-btn="pop-close">닫기</button>
+			<button type="button" class="btn-action c1">고객정보변경</button>
+		</dd>
+	</dl>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPLTR1523L01',{
+		callback_after:function(){
+			ui.alert('닫기 이벤트');
+		}
+	});
+
+	//레이어팝업 강제오픈
+	$('#uiPOPLTR1523L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]단건등록 | 담보컨텐츠 | 장기설계관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220513">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>단건등록</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="tbl-write1">
+            <table>
+                <colgroup>
+                    <col style="width:150px;">
+                    <col>
+                </colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">선택 이미지<em class="imp"><span>필수</span></em></th>
+						<td>
+							<div class="form-row">
+								<span class="wrap-file">
+									<input type="file" tabindex="-1">
+									<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic3">첨부하기</button>
+								</span>
+								<!-- [D] 이미지 등록 전 메시지 -->
+								<p class="list-dot1">컨텐츠 이미지를 등록해주세요.</p>
+								<!-- [D] 이미지 등록 후 목록 -->
+                                <div class="file-div">
+                                    <span class="file-name">가나다라마바사.jpg <button type="button" class="btn-del1">삭제</button></span>
+                                </div>
+								<!-- // -->
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">담보코드<em class="imp"><span>필수</span></em></th>
+						<td>
+							<div class="form-row">
+								<input type="text" class="text" name="" id="" value="ICLA000014" placeholder="담보코드를 입력하세요." style="width:150px">
+								<input type="text" class="text" name="" id="" value="5대사고상해사망1" placeholder="담보명을 입력하세요" style="width:calc(100% - 250px)">
+							</div>
+							<div class="form-row">
+								<input type="text" class="text" name="" id="" value="" placeholder="담보코드를 입력하세요." style="width:150px">
+								<input type="text" class="text" name="" id="" value="" placeholder="담보명을 입력하세요" style="width:calc(100% - 250px)">
+								<button type="button" class="btn-sub1 c3">추가</button>
+							</div>
+							<div class="form-row">
+								<input type="text" class="text" name="" id="" value="" placeholder="담보코드를 입력하세요." style="width:150px">
+								<input type="text" class="text" name="" id="" value="" placeholder="담보명을 입력하세요" style="width:calc(100% - 250px)">
+								<button type="button" class="btn-sub1 c3">삭제</button>
+							</div>
+							<div class="form-row">
+								<input type="text" class="text" name="" id="" value="" placeholder="담보코드를 입력하세요." style="width:150px">
+								<input type="text" class="text" name="" id="" value="" placeholder="담보명을 입력하세요" style="width:calc(100% - 250px)">
+								<button type="button" class="btn-sub1 c3">삭제</button>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c2">등록</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

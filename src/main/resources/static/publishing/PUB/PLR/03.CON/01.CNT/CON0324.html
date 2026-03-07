@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>서류발송 | 고객안내 | 계약상세 | 자동차 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>서류발송</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] 계약정보 -->
+		<!-- ######################### -->
+		<section class="info-summary2">
+			<h2 class="tit">Let:way개인용자동차보험</h2>
+			<div class="info">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>CA1111111111 </dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- ######################### -->
+		<!-- [선택영역] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend>서류발송 세부 항목 선택</legend>
+
+			<dl class="form">
+				<dt>발송서류 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="uiFormRadio1" checked>
+							<span>보험증권</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio1">
+							<span>가입증명서</span>
+						</label>
+					</div>
+				</dd>
+				<dd class="mes2">보험증권 발송횟수: 1/5회</dd> <!-- 2022-11-25 추가 -->
+			</dl>
+
+			<dl class="form">
+				<dt>발행구분</dt>
+				<dd>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="uiFormRadio2" checked>
+							<span>알림톡</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio2" disabled> <!-- [D] 발송불가 경우 disabled 추가 -->
+							<span>이메일</span>
+						</label>
+					</div>
+				</dd>
+				<dd class="mes2">알림톡 발송 실패 시 문자메시지(LMS)로 전송됩니다.</dd>
+			</dl>
+
+			<dl class="form">
+				<dt>수신자</dt>
+				<dd>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="uiFormRadio3" checked>
+							<span>계약자</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio3">
+							<span>피보험자</span>
+						</label>
+					</div>
+
+					<div class="info-data3"> <!-- 2022-11-25 클래스 변경 -->
+						<dl>
+							<dt class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+								<strong>하다미</strong>
+							</dt>
+
+							<!-- [CASE1] 방핼구분 알림톡 경우 -->
+							<dd class="data1">
+								<span>휴대폰번호</span>
+								<strong>010-5054-5262</strong>
+							</dd>
+
+							<!-- [CASE2] 방핼구분 알림톡 경우 -->
+							<dd class="data1">
+								<span>이메일</span>
+								<strong>honggildong@naver.com</strong>
+							</dd>
+							<!-- // -->
+						</dl>
+					</div>
+				</dd>
+			</dl>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [유의사항] -->
+		<!-- ######################### -->
+		<div class="box-t1">
+			<dl class="txt-mark2 t1">
+				<dt>알림톡이 도착하지 않을 경우</dt>
+				<dd>롯데손해보험 알림톡 친구 추가</dd>
+				<dd>롯데손해보험 알림톡 수신차단 해제</dd>
+				<dd>카카오톡 최신 버전으로 업데이트</dd>
+				<dd>영업고객정보의 휴대폰번호 확인</dd>
+				<dd>실제 휴대폰번호와 카카오톡에 등록된 휴대폰번호 일치 여부 확인</dd>
+			</dl>
+			<!-- <p class="txt-bul1">알림톡 발송 실패 시 문자메시지(LMS)로 전송됩니다.</p> --> <!-- 2022-12-30 삭제 -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">발송</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

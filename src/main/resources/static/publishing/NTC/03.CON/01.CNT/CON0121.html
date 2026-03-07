@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>차량번호확정변경 | 계약변경 | 자동차 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>차량번호(확정/변경)</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [기본정보] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend class="tit">기본정보</legend>
+			<div class="info-con1">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>CA12345678901</dd>
+				</dl>
+				<dl>
+					<dt>보험기간</dt>
+					<dd>2021.05.20~2022.05.20</dd>
+				</dl>
+				<dl>
+					<dt>차량번호</dt>
+					<dd><span data-masking="true">****2134</span></dd>
+				</dl>
+				<dl>
+					<dt>운전/연령특약</dt>
+					<dd>부부한정/48세이상</dd>
+				</dl>
+			</div>
+
+			<!-- ### 변경기준일 ### -->
+			<dl class="form line">
+				<dt>변경기준일 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="input-date1">
+						<span>
+							<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>날짜 선택</button>
+							<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.03.09" readonly>
+						</span>
+					</div>
+				</dd>
+			</dl>
+			<!-- ### // ### -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [정보입력] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1 line2">
+			<legend>차량번호입력</legend>
+
+			<!-- ### 차량번호 ### -->
+			<dl class="form">
+				<dt>차량번호 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="input-wrap1">
+						<data class="text disabled" value="" data-label="차량번호를 조회해주세요."></data>
+						<button type="button" class="btn-sub1">등록조회</button>
+					</div>
+				</dd>
+				<dd class="mes2">자동차 번호에 따라 차종이 달라질 수 있습니다.<br>정확히 입력하세요.</dd>
+			</dl>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [안내문구] -->
+		<!-- ######################### -->
+		<ul class="txt-bul1 line2">
+			<li>계약변경기준일을 잘못 입력하면 의무보험 미가입 과태료가 부과될 수 있어요.</li>
+			<li>등록조회 내용이 실제 등록번호와 다를 수 있으니, 반드시 확인 후 진행해주세요.</li>
+		</ul>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">보험료 계산</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

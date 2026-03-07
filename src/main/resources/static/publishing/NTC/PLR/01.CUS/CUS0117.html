@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>컨텐츠자동발송신청 | 컨텐츠자동발송신청 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-17]	툴팁버튼 클래스명 변경 : icon-com2 ic1 > icon-com2 ic2
+	*	[M 2022-10-20]	컨텐츠 삭제, 버튼명 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>컨텐츠 자동발송신청</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [자동발송신청] -->
+		<!-- ######################### -->
+		<div class="list-t1 t2">
+			<ul>
+				<!-- ### [자동발송 내역 푸시 알림 받기] ### -->
+				<li>
+					<div class="txt1">자동발송 내역 푸시 알림 받기</div>
+					<div class="txt2 label-toggle1 simple">
+						<label>
+							<input type="checkbox" name="form-check1">
+							<span>선택</span>
+						</label>
+					</div>
+				</li>
+
+				<!-- 2022-10-20 삭제 -->
+				<!-- ### [자동발송 설정 알림 받기] ### -->
+				<!-- <li>
+					<div class="txt1">자동발송 내역 푸시 알림 받기</div>
+					<div class="txt2 label-toggle1 simple">
+						<label>
+							<input type="checkbox" name="form-check1">
+							<span>선택</span>
+						</label>
+					</div>
+					<div class="txt-bul1">3개월 동안 컨텐츠 발송을 하지 않으실 경우 자동발송신청 권유 알림을 드립니다.</div>
+				</li> -->
+				<!-- //2022-10-20 삭제 -->
+			</ul>
+		</div>
+
+		<!-- ### [신청 항목] ### -->
+		<fieldset class="form-wrap1">
+			<legend class="tit">신청 항목</legend>
+
+			<!-- # 전체선택 # -->
+			<div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<strong>전체선택</strong>
+				</label>
+			</div>
+
+			<!-- # 신청항목 # -->
+			<div class="form line">
+				<div class="label-check1 box2">
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>생일</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">생일 내용 보기</button> <!--[M 2022-08-17] -->
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">생일 안내</dt>
+								<dd>생일 내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>보험생일</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">보험생일 내용 보기</button> <!--[M 2022-08-17] -->
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">보험생일 안내</dt>
+								<dd>생일 기준 6개월이 지나 보험나이가 오르는 날이에요. 상령일 이후 상품 가입 시 보험료가 비싸져요.</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>갱신</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">갱신 내용 보기</button> <!--[M 2022-08-17] -->
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">갱신 안내</dt>
+								<dd>갱신 내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>만기(장기)</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">만기(장기) 내용 보기</button> <!--[M 2022-08-17] -->
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">만기(장기) 안내</dt>
+								<dd>만기(장기) 내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>만기(자동차)</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">만기(자동차) 내용 보기</button> <!--[M 2022-08-17] -->
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">만기(자동차) 안내</dt>
+								<dd>만기(자동차) 내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>만기(일반)</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">만기(일반) 내용 보기</button> <!--[M 2022-08-17] -->
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">만기(일반) 안내</dt>
+								<dd>만기(일반) 내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>가입설계동의만료</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">가입설계동의만료 내용 보기</button> <!--[M 2022-08-17] -->
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">가입설계동의만료 안내</dt>
+								<dd>가입설계동의만료 내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>상품소개동의만료</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">상품소개동의만료 내용 보기</button> <!--[M 2022-08-17] -->
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">상품소개동의만료 안내</dt>
+								<dd>상품소개동의만료 내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>미수납</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">미수납 내용 보기</button> <!--[M 2022-08-17] -->
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">미수납 안내</dt>
+								<dd>미수납 내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>부활대상</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">부활대상 내용 보기</button> <!--[M 2022-08-17] -->
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">부활대상 안내</dt>
+								<dd>부활대상 내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>출생후등록</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">출생후등록 내용 보기</button> <!--[M 2022-08-17] -->
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">출생후등록 안내</dt>
+								<dd>출생후등록 내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>반송우편물</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">반송우편물 내용 보기</button> <!--[M 2022-08-17] -->
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">반송우편물 안내</dt>
+								<dd>반송우편물 내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>완전판매모니터링</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">완전판매모니터링 내용 보기</button> <!--[M 2022-08-17] -->
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">완전판매모니터링 안내</dt>
+								<dd>완전판매모니터링 내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+					<!-- // -->
+				</div>
+			</div>
+
+			<!-- # 신청항목 안내사항 # -->
+			<div class="mes-info2 box">
+				<p>1. 설정(신청/취소) 후 다음날부터 적용됩니다.</p>
+				<p>2. 위 신청서 전체 고객대상으로 적용됩니다.</p>
+			</div>
+		</fieldset>
+
+		<!-- ### [자동발송 신청이력/내역 보기] ### -->
+		<div class="list-t1 t1">
+			<ul>
+				<li><a href="javascript:void(0);" class="link1">자동발송 신청이력보기</a></li>
+				<li><a href="javascript:void(0);" class="link1">자동발송 내역보기</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">저장</button>
+			<!-- <button type="button" class="btn-action" disabled>신청하기</button> : 비활성화 -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

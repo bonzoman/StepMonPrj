@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 교육 신청 | 교육신청 | 교육</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="info-data4">
+			<ul>
+				<li>
+					<strong class="tit">4세대 실손 전환 컨설팅 초보설계사 단체 교육 오리엔테이션</strong>
+					<div class="info">
+						<em class="icon-state2 ic1">신청 대기</em>
+						<span class="icon-state1">온라인</span>
+					</div>
+					<div class="info-con1 w2">
+						<ul>
+							<li>
+								<div>교육 기간</div>
+								<div>2022.02.22~2022.04.22</div>
+							</li>
+							<li>
+								<div>교육 대상</div>
+								<div>설계사(1~3차월)</div>
+							</li>
+						</ul>
+					</div>
+					<div class="area-btn1">
+						<button type="button" class="btn-com1 c1" aria-controls="uiPOPEDU2606L01">신청하기</button> <!-- [샘플 : 레이어팝업 호출 버튼] -->
+					</div>
+					<a href="javascript:void(0);" class="btn">교육상세보기</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 교육신청 ### -->
+<!-- ################################################### -->
+<div id="uiPOPEDU2606L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>교육 신청</h1>
+			<button type="button" data-btn="pop-close">교육 신청 닫기</button>
+		</header>
+		<div class="content">
+			<p class="mes-t3">
+				<strong>@교육명@</strong><br>
+				<span>교육을 신청하시겠습니까?</span>
+			</p>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1">신청하기</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	var _popmodal = $plugin.popmodal('#uiPOPEDU2606L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPEDU2606L01').trigger('outputOpen');
+
+	//[샘플] 레이어팝업 닫기
+	$('#uiPOPEDU2606L01 .btn-action.c1').on('click',function(){
+		_popmodal.outputClose(); //팝업닫기
+		ui.toast('교육 신청이 완료 되었습니다.'); //토스트팝업 호출
+	});
+//-->
+</script>
+<!-- ################################################### -->
+</body>
+</html>

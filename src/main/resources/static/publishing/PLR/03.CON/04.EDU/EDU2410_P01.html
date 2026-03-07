@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]온라인 교육 진도율 상세 | 설계사 모니터링 | 교육관리 | 교육</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>온라인 교육 상세</h1>
+			<button type="button" data-btn="pop-close">온라인 교육 상세팝업 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 교육명 -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit">과정명</h2>
+				<p class="info">2022.01.01 입과 (+100일)</p>
+				<div class="input-date1 text">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+						<input type="text" title="시작날짜 선택" value="2022.04.18" placeholder="YYYY.MM.DD" readonly>
+					</span>
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+						<input type="text" title="종료날짜 선택" value="2022.04.25" placeholder="YYYY.MM.DD" readonly>
+					</span>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [진도율] -->
+			<!-- ######################### -->
+			<div class="wrap-progress">
+				<h3 class="tit">진도율</h3>
+				<!-- ### 진도율 ###
+					선택 기간 동안의 (수강 강의 수 / 열린 강의 수) 총 진도율
+					* style="--el-progress:00;"
+					* <em>00</em>
+				-->
+				<div class="area-progress2 t1" style="--el-progress:50;">
+					<span><em>50</em>%</span>
+				</div>
+				<!-- // -->
+				<div class="txt">
+					<dl>
+						<dt>수강 강의</dt>
+						<dd>10건</dd>
+					</dl>
+					<dl>
+						<dt>열린 강의</dt>
+						<dd>20건</dd>
+					</dl>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [진도율 현황 조회 결과] -->
+			<!-- ######################### -->
+			<div class="area-toggle1" data-autoset="toggle">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<strong>2022.02</strong>
+							<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+						</div>
+						<div data-toggle="content" class="info-data4 line">
+							<ul>
+								<!-- // -->
+								<li>
+									<strong class="tit">[네트워크 확대형] 설계사 시험 한번에 합격하는 베테랑 설계사의 시험 합격 노하우</strong>
+									<div class="info"><em class="icon-state1 ic2">2022.05.22 수료</em></div>
+								</li>
+								<li>
+									<strong class="tit">[네트워크 확대형] 쉬운 설계의 기본 2</strong>
+									<div class="info"><em class="icon-state1 ic1">수강안함</em></div>
+								</li>
+								<!-- // -->
+							</ul>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<strong>2022.01</strong>
+							<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+						</div>
+						<div data-toggle="content" class="info-data4 line">
+							<ul>
+								<!-- // -->
+								<li>
+									<strong class="tit">[네트워크 확대형] 설계사 시험 한번에 합격하는 베테랑 설계사의 시험 합격 노하우</strong>
+									<div class="info"><em class="icon-state1 ic2">2022.05.22 수료</em></div>
+								</li>
+								<li>
+									<strong class="tit">[네트워크 확대형] 쉬운 설계의 기본 2</strong>
+									<div class="info"><em class="icon-state1 ic1">수강안함</em></div>
+								</li>
+								<!-- // -->
+							</ul>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

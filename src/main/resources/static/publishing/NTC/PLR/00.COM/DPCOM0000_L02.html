@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>(샘플) 셀렉트팝업</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>셀렉트팝업(B/S)</h1>
+			<button type="button" data-btn="pop-close">셀렉트팝업(B/S) 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<div class="form-search1" data-sticky="top">
+				<h2 class="tit-sub3">선택된 값</h2>
+				<div class="data-word3">
+					<span>내용1 : <i id="uiFormVal1" class="txt-c1"></i></span>
+					<span>내용2 : <i id="uiFormVal2" class="txt-c1"></i></span>
+					<span>내용3 : <i id="uiFormVal3" class="txt-c1"></i></span>
+					<span>내용4 : <i id="uiFormVal4" class="txt-c1"></i></span>
+					<span>예제1 : <i id="uiFormVal5" class="txt-c1"></i></span>
+					<span>예제2 : <i id="uiFormVal6" class="txt-c1"></i></span>
+				</div>
+			</div>
+
+			<div class="form-wrap1 line2">
+				<!-- ########################################## -->
+				<!-- * [샘플] : 선택레이어 호출샘플 : 기본 -->
+				<!-- ########################################## -->
+				<fieldset>
+					<legend class="tit">기본</legend>
+					<dl class="form">
+						<dt>내용1</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">항목명</span>
+									<span data-select="text" data-value="">전체</span>
+								</button>
+								<div class="list">
+									<div data-label="항목명">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion0" value=""><span>전체</span></label>
+											<label><input type="radio" name="selectOpeion0" value="자동차"><span>자동차</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>내용2</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">항목명</span>
+									<span data-select="text" data-value="null">전체</span>
+								</button>
+								<div class="list">
+									<div data-label="항목명">
+										<div class="option">
+											<label><input type="radio" name="select1" value=""><span>전체</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="장기"><span>장기</span></label>
+											<label><input type="radio" name="select1" value="통합계약조회"><span>통합계약조회</span></label>
+											<label><input type="radio" name="select1" value="비활성화" disabled><span>비활성화</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>내용3</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">항목명</span>
+									<span data-select="text" data-value="null">전체</span>
+								</button>
+								<div class="list">
+									<div data-label="항목명">
+										<div class="option">
+											<label><input type="radio" name="select2" value=""><span>전체</span></label>
+											<label><input type="radio" name="select2" value="일반"><span>일반</span></label>
+											<label><input type="radio" name="select2" value="부활청약"><span>부활청약</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>내용4</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">항목명</span>
+									<span data-select="text" data-value="고객관리">고객관리</span>
+								</button>
+								<div class="list">
+									<div data-label="항목명">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion" value="고객관리"><span>고객관리</span></label>
+											<label><input type="radio" name="selectOpeion" value="커뮤니티"><span>커뮤니티</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ########################################## -->
+				<!-- * [샘플] : 선택레이어 호출샘플 : 활용 -->
+				<!-- * data-callback="함수명" : 닫을 때 실행 -->
+				<!-- ########################################## -->
+				<fieldset>
+					<legend class="tit">콜백함수 예제</legend>
+					<p class="txt-bul1">data-callback="함수명" : 닫을 때 실행</p>
+					<dl class="form">
+						<dt>예제1 : 이전값 추출</dt>
+						<dd>
+							<!-- # 대분류 # -->
+							<div class="select-wrap" data-autoset="select" data-callback="uiSampleCallback">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">대분류</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="직업 대분류">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion1" value=""><span>선택</span></label>
+											<label><input type="radio" name="selectOpeion1" value="option1_1"><span>대분류항목1</span></label>
+											<label><input type="radio" name="selectOpeion1" value="option1_2"><span>대분류항목2</span></label>
+											<label><input type="radio" name="selectOpeion1" value="option1_3"><span>대분류항목3</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- # 중분류 # -->
+							<div class="select-wrap" data-autoset="select" data-callback="uiSampleCallback">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" disabled>
+									<span data-select="title">중분류</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="직업 중분류">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion2" value="option2_1"><span>중분류항목1</span></label>
+											<label><input type="radio" name="selectOpeion2" value="option2_2"><span>중분류항목2</span></label>
+											<label><input type="radio" name="selectOpeion2" value="option2_3"><span>중분류항목3</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- # 소분류 # -->
+							<div class="select-wrap" data-autoset="select" data-callback="uiSampleCallback">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" disabled>
+									<span data-select="title">소분류</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="직업 소분류">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion2" value="option3_1"><span>소분류항목1</span></label>
+											<label><input type="radio" name="selectOpeion2" value="option3_2"><span>소분류항목2</span></label>
+											<label><input type="radio" name="selectOpeion2" value="option3_3"><span>소분류항목3</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- # // # -->
+						</dd>
+						<dd class="mes">이전값 추출 : 함수명(선택된input, 이전값)</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>예제2 : 특정값 선택 시 다음 B/S 내용 설정 (항목_당일)</dt>
+						<dd>
+							<!-- # 항목1 # -->
+							<div class="select-wrap" data-autoset="select" data-callback="uiSampleCallback2">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">항목선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="항목선택">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion55" value="option5_1"><span>항목1_당일</span></label>
+											<label><input type="radio" name="selectOpeion55" value="option5_2"><span>항목2_당월</span></label>
+											<label><input type="radio" name="selectOpeion55" value="option5_3"><span>항목3_기준</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- # 항목2 # -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">항목선택2</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="항목선택2">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion56" value="option6_1"><span>당일</span></label>
+											<label><input type="radio" name="selectOpeion56" value="option6_2"><span>당월</span></label>
+											<label><input type="radio" name="selectOpeion56" value="option6_3"><span>기준</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+			</div>
+		</div>
+	</article>
+</div>
+
+<script>
+//<!--
+	//[샘플] 셀렉트박스 닫을 때 실행
+	function uiSampleCallback(e,val){
+		var _select_wrap = $(e).parents('[data-autoset="select"]');
+		if(val == $(e).val()) ui.alert('이전값과 같음');
+		if(e.val() != ''){
+			_select_wrap.next().find('[data-toggle="selectbtn"]').removeAttr('disabled');
+		}
+		console.log('>>>>>>>>>'+e.val())
+	}
+
+	//[샘플] 셀렉트박스 닫을 때 실행
+	function uiSampleCallback2(e){
+		var _select_wrap = $(e).parents('[data-autoset="select"]');
+		var _select_wrap_next = _select_wrap.next();
+		if(e.val() == 'option5_1') {
+			_select_wrap_next.find('[data-select="text"]').attr('data-value','option6_1').text(_select_wrap_next.find('[value="option6_1"] + span').text());
+		}
+	}
+	function uiFormVal(){
+		var _val1 =  $('[name="selectOpeion0"]:checked').val();
+		var _val2 =  $('[name="select1"]:checked').val();
+		var _val3 =  $('[name="select2"]:checked').val();
+		var _val4 =  $('[name="selectOpeion"]:checked').val();
+		var _val5 =  $('[name="selectOpeion1"]:checked').val();
+		var _val6 =  $('[name="selectOpeion55"]:checked').val();
+
+		$('#uiFormVal1').text(_val1);
+		$('#uiFormVal2').text(_val2);
+		$('#uiFormVal3').text(_val3);
+		$('#uiFormVal4').text(_val4);
+		$('#uiFormVal5').text(_val5);
+		$('#uiFormVal6').text(_val6);
+	}
+
+	$(document).ready(function(){
+		uiFormVal()
+	});
+
+
+	//[샘플] 체크된 상태
+	$(document).on('change','[name^="select"]',function(i,obj){
+		uiFormVal();
+	});
+//-->
+</script>
+</body>
+</html>

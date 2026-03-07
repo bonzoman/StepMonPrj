@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>실적건별조회 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-01]	1. 표 상단 틀고정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">건별실적조회</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1">
+				<div class="form-field">
+                    <button class="more-search" type="button"></button>
+					<dl class="form w1">
+						<dt>기준일자<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<span class="date-range">
+									<input type="text" data-role="start" placeholder="시작일 선택">
+									<span class="util">~</span>
+									<input type="text" data-role="end" placeholder="종료일 선택">
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w2">
+						<dt>조직구분<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>취급자</option>
+									<option>고객번호</option>
+								</select>
+                                <input type="text" name="" id="" class="text" style="width:80px;">
+                                <input type="text" name="" id="" class="text" style="width:120px;" disabled>
+                                <button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+					<div class="search-cont">
+						<dl class="form w1">
+							<dt>금액</dt>
+							<dd>
+								<div class="form-row">
+                                    <input type="text" class="text" name="" id="" style="width:100px;"> ~ <input type="text" class="text" name="" id="" style="width:100px;">
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w2">
+							<dt>종목구분</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="f11">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f11">
+										<span>일반</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f11">
+										<span>장기</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f11">
+										<span>연금</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f11">
+										<span>자동차</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f11" checked="checked">
+										<span>장기/연금</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="form w1">
+							<dt>수납구분</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="f12" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f12">
+										<span>출수납</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f12">
+										<span>미수납</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w2">
+							<dt>실적구분</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="f13" checked="checked">
+										<span>원수</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f13">
+										<span>수입</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f13">
+										<span>수납</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f13">
+										<span>인정</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f13">
+										<span>수수료환산</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form">
+							<dt>수금구분</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="f14" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f14">
+										<span>직원수금</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f14">
+										<span>지로</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f14">
+										<span>자동이체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f14">
+										<span>급여이체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f14">
+										<span>방카</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f14">
+										<span>카드자동이체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f14">
+										<span>계열사수납</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f14">
+										<span>전자청구</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w1">
+							<dt>보장/저축성</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="f15" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f15">
+										<span>보장성</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f15">
+										<span>저축성</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w1">
+							<dt>신규구분</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="f16">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f16" checked="checked">
+										<span>신규</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f16">
+										<span>계속</span>
+									</label>
+									<input type="text" name="" id="" class="text" style="width:50px;margin-right: 0;">
+									<span>~</span>
+									<input type="text" name="" id="" class="text" style="width:50px;">
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w1">
+							<dt>전속구분</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="f17" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f17">
+										<span>전속</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f17">
+										<span>비전속</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="f17">
+										<span>교차</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c3">초기화</button>
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+			<div class="data-table1">
+                <div class="info1">현재 조회된 건수 : 100건
+					<div class="tooltip right2">
+						<button type="button"></button>
+						<div class="tooltip-layer">
+							<ul class="list-dot1">
+								<li>주) ＂구분＂설명: 자동차(신규/타사), 일반(신규/갱신/확대)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- [M 2022-11-01] 표 상단 틀고정 -->
+				<div class="list-thead" data-pos="thead">
+					<table>
+						<thead>
+							<tr>
+								<th scope="col" rowspan="2"><span class="sort">일자</span></th>
+								<th scope="col" rowspan="2"><span class="sort">증권번호</span></th>
+								<th scope="col" rowspan="2"><span class="sort">계약자명</span></th>
+								<th scope="col" rowspan="2"><span class="sort">계약자코드/차량</span></th>
+								<th scope="col" rowspan="2">상품명</th>
+								<th scope="col" rowspan="2">납입차수</th>
+								<th scope="col" rowspan="2">납입기간</th>
+								<th scope="col" rowspan="2">실적</th>
+								<th scope="col" rowspan="2">수수료환산</th>
+								<th scope="col" rowspan="2">수수료</th>
+								<th scope="col" rowspan="2"><span class="sort">상태</span></th>
+								<th scope="col" rowspan="2">계약상태</th>
+								<th scope="col" >취급점포</th>
+								<th scope="col" >취급자</th>
+								<th scope="col" rowspan="2">수금방법</th>
+								<th scope="col" rowspan="2"><span class="sort">수납실적일자</span></th>
+								<th scope="col" rowspan="2"><span class="sort">사용인</span></th>
+								<th scope="col" rowspan="2">미수여부</th>
+								<th scope="col" rowspan="2">전자서명</th>
+								<th scope="col" rowspan="2">납입방법</th>
+								<th scope="col" rowspan="2">설계번호</th>
+								<th scope="col" rowspan="2">보험시기</th>
+								<th scope="col" rowspan="2">피보험자명</th>
+								<th scope="col" rowspan="2">유의계약여부</th>
+								<th scope="col" rowspan="2">마케팅동의여부</th>
+							</tr>
+							<tr>
+								<th scope="col">취급점포코드</th>
+								<th scope="col">취급자코드</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+				<div class="list-table" data-pos="top">
+					<!--최초 접근시 DATA 없음-->
+					<div class="nodata" style="display:none;">
+						아직 실적이 없어요. <br>
+						조건을 변경해보세요
+					</div>
+					<!--조회시 DATA 없음-->
+					<div class="nodata" style="display:none;">
+						해당하는 자료가 없어요. <br>
+						조건을 변경해보세요
+					</div>
+					<table>
+						<colgroup>
+							<col style="width:100px;">
+							<col style="width:150px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:200px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:120px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:150px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+						</colgroup>
+						<!-- <thead>
+                            <tr>
+								<th scope="col" rowspan="2"><span class="sort">일자</span></th>
+								<th scope="col" rowspan="2"><span class="sort">증권번호</span></th>
+								<th scope="col" rowspan="2"><span class="sort">계약자명</span></th>
+								<th scope="col" rowspan="2"><span class="sort">계약자코드/차량</span></th>
+								<th scope="col" rowspan="2">상품명</th>
+								<th scope="col" rowspan="2">납입차수</th>
+								<th scope="col" rowspan="2">납입기간</th>
+								<th scope="col" rowspan="2">실적</th>
+								<th scope="col" rowspan="2">수수료환산</th>
+								<th scope="col" rowspan="2">수수료</th>
+								<th scope="col" rowspan="2"><span class="sort">상태</span></th>
+								<th scope="col" rowspan="2">계약상태</th>
+								<th scope="col" >취급점포</th>
+								<th scope="col" >취급자</th>
+								<th scope="col" rowspan="2">수금방법</th>
+								<th scope="col" rowspan="2"><span class="sort">수납실적일자</span></th>
+								<th scope="col" rowspan="2"><span class="sort">사용인</span></th>
+								<th scope="col" rowspan="2">미수여부</th>
+								<th scope="col" rowspan="2">전자서명</th>
+								<th scope="col" rowspan="2">납입방법</th>
+								<th scope="col" rowspan="2">설계번호</th>
+								<th scope="col" rowspan="2">보험시기</th>
+								<th scope="col" rowspan="2">피보험자명</th>
+								<th scope="col" rowspan="2">유의계약여부</th>
+								<th scope="col" rowspan="2">마케팅동의여부</th>
+                            </tr>
+							<tr>
+								<th scope="col">취급점포코드</th>
+								<th scope="col">취급자코드</th>
+							</tr>
+						</thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+                        <tbody>
+                            <tr>
+								<td rowspan="2">2022.02.22</td>
+								<td rowspan="2">LA20202779803000</td>
+								<td rowspan="2">김*림</td>
+								<td rowspan="2">990517-1*******</td>
+								<td rowspan="2">무배당 롯데갱신형실손의료보험Ⅲ(계약전환)(2004)</td>
+								<td rowspan="2">144</td>
+								<td rowspan="2">20</td>
+								<td rowspan="2" class="point1">10,307</td>
+								<td rowspan="2">1,415</td>
+								<td rowspan="2">140</td>
+								<td rowspan="2">계속/추징</td>
+								<td rowspan="2">정상</td>
+								<td>영남사업단</td>
+								<td>자유보험대리점</td>
+								<td rowspan="2">방문수금/즉시이체납입/대체납입</td>
+								<td rowspan="2">2022.04.01</td>
+								<td rowspan="2"></td>
+								<td rowspan="2">N</td>
+								<td rowspan="2">N</td>
+								<td rowspan="2">월납</td>
+								<td rowspan="2">LA200710232884</td>
+								<td rowspan="2">2020.07.10</td>
+								<td rowspan="2">박크림</td>
+								<td rowspan="2"></td>
+								<td rowspan="2">Y</td>
+                            </tr>
+                            <tr>
+								<td>E009224</td>
+								<td>2246417</td>
+                            </tr>
+                        </tbody>
+					</table>
+				</div>
+				<div class="total-div" data-pos="bottom" data-match="false">
+					<table>
+                        <colgroup>
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col>
+                            <col style="width:100px;">
+                            <col>
+                            <col style="width:100px;">
+                            <col>
+                            <col style="width:100px;">
+                            <col>
+                        </colgroup>
+						<tbody>
+                            <tr>
+                                <th scope="row" rowspan="2">합계</th>
+                                <th scope="row">건수</th>
+								<td class="point1">0</td>
+                                <th scope="row">원수</th>
+								<td class="point1">0</td>
+                                <th scope="row">수수료환산</th>
+								<td>0</td>
+								<td></td>
+								<td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수입</th>
+								<td>0</td>
+                                <th scope="row">인정</th>
+								<td>0</td>
+                                <th scope="row">수납</th>
+								<td>0</td>
+                                <th scope="row">수수료</th>
+								<td>0</td>
+                            </tr>
+						</tbody>
+					</table>
+					<div class="total-btns">
+						<div class="btns2">
+							<!-- <button type="button" class="btn-sub1 c3">이전</button> -->
+							<button type="button" class="btn-sub1 c3">다음</button>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+	</div>
+    <script>
+
+		_fixTable.init();
+    </script>
+</div>
+</body>
+</html>

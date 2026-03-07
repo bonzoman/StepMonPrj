@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>리포트 통합조회 상세 | 리포트</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-18]	① 인쇄 화면 수정
+	**************************************************************************
+-->
+<style>
+	#popup .pop-header .side {display:block;bottom: 0;}
+	@page {size:21cm 29.7cm;margin: 0; }
+	@media print{
+		* {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			-webkit-print-color-adjust: exact;
+			print-color-adjust: exact;
+		}
+		/* [M 2022-11-18] 인쇄 화면 수정 */
+		.report-data .data-top {margin-top:40px !important;}
+		#popup .area-action{display: none;;}
+		#popup .data-top .sub{display: none;}
+		#popup .report-data .data-top .top-txt button:after{display: none;}
+		#popup .report-data .data-top .top-txt .top-list{display:none}
+		#popup .pop-header .pop-close {display: none;}
+		#popup .pop-header .side {display:block;bottom: 20px;}
+
+		/* 배경만 남는 인쇄 버전 css 추가
+		 #popup .pop-header {height:77px;}
+		.search-condition {height:18px;;}
+		#popup .pop-header h1,
+		.search-condition span,
+		#popup .pop-header .side,
+		.report-data .data-top .top-txt button {display:none;}
+		.report-data .data-top .top-txt {height:22px;color:#fff;}
+		.data-table1 tbody td {color:#fff;}
+		.data-table1 thead th {color:#f7f7f7;}
+		.data-table1 tbody th {color:#fdfdfd;} */
+		/* //[M 2022-11-18] 인쇄 화면 수정 */
+	}
+
+</style>
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>리포트 통합조회 상세</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+		<div class="side">기준일자: 2022.05.22</div><!-- [M 2022-11-18]	인쇄 화면 기준일 추가 -->
+	</div>
+	<div class="pop-content">
+		<div class="search-condition">
+			<span>김롯데 (30차월)</span>
+			<span>1955.20.06/여</span>
+			<span>1454555</span>
+			<span>강남사업단</span>
+			<span>강남1지점</span>
+			<span>1팀</span>
+			<span>전속</span>
+		</div>
+		<div class="report-data">
+			<div class="data-top">
+				<div class="top-txt">
+					<button type="button">업적</button>
+					<div class="top-list">
+						<a href="#">실시간총실적조회</a>
+						<a href="#">실가동</a>
+						<a href="#">수금률조회</a>
+						<a href="#">퀘스트조회</a>
+						<a href="#">이탈예상 설계사</a>
+						<a href="#">휴면설계사 조회</a>
+					</div>
+				</div>
+				<div class="sub">
+					<a href="#" class="btn-link1">바로가기</a>
+				</div>
+			</div>
+			<div class="data-table1">
+				<table>
+					<colgroup>
+						<col style="width:40%">
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">항목</th>
+							<th scope="col">결과</th>
+							<th scope="col">사업단 평균</th>
+							<th scope="col">전속그룹 평균</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">보장성 실적</th>
+							<td>83,260원</td>
+							<td>83,260원</td>
+							<td>83,260원</td>
+						</tr>
+						<tr>
+							<th scope="row">보장성 동영업일 대비실적</th>
+							<td>감소</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">보장성 전속그룹 대비실적</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">실가동</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">수금률</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">퀘스트 달성률</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">전월대비 퀘스트 달성률</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">이탈예상 설계사</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">휴면설계사</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="data-top">
+				<div class="top-txt">
+					<button type="button">혜택</button>
+					<div class="top-list">
+						<a href="#">소득 현황 조회 </a>
+						<a href="#">전월/3개월 평균 소득항목 증감 조회</a>
+						<a href="#">포인트 적립 추이 조회</a>
+					</div>
+				</div>
+				<div class="sub">
+					<a href="#" class="btn-link1">바로가기</a>
+				</div>
+			</div>
+			<div class="data-table1">
+				<table>
+					<colgroup>
+						<col style="width:40%">
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">항목</th>
+							<th scope="col">결과</th>
+							<th scope="col">사업단 평균</th>
+							<th scope="col">전속그룹 평균</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">소득구간</th>
+							<td>83,260원</td>
+							<td>83,260원</td>
+							<td>83,260원</td>
+						</tr>
+						<tr>
+							<th scope="row">전월대비 소득</th>
+							<td>감소</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">포인트 적립</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="data-top">
+				<div class="top-txt">
+					<button type="button">조직</button>
+					<div class="top-list">
+						<a href="#">인큐베이팅 교육 대상자</a>
+						<a href="#">어드밴스드 대상자</a>
+						<a href="#">역량강화 대상자</a>
+					</div>
+				</div>
+				<div class="sub">
+					<a href="#" class="btn-link1">바로가기</a>
+				</div>
+			</div>
+			<div class="data-table1">
+				<table>
+					<colgroup>
+						<col style="width:40%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">교육대상자</th>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">교육수강여부</th>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="data-top">
+				<div class="top-txt">
+					활동
+				</div>
+				<div class="sub">
+					<a href="#" class="btn-link1">바로가기</a>
+				</div>
+			</div>
+            <div class="data-table1">
+                <table>
+                    <colgroup>
+                        <col style="width:40%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">월 평균 로그인 횟수</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">전월대비 로그인 횟수</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">일 평균 접속 시간</th>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c2">프린트하기</button>
+			<button type="button" class="btn-action c1">확인</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

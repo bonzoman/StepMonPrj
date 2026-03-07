@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 도움제공 상세 신청 | 상세 | 공동청약</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>도움요청 신청</h1>
+			<button type="button" data-btn="pop-close">도움요청 신청 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [요약 영역] -->
+			<!-- ######################### -->
+			<div class="con-t8">
+				<div class="data1">
+					<dl>
+						<dt>고객정보</dt>
+						<dd>남자/50세</dd>
+					</dl>
+					<dl>
+						<dt>고객과의 관계</dt>
+						<dd>가족</dd>
+					</dl>
+					<dl>
+						<dt>고객 접촉유무</dt>
+						<dd>없음</dd>
+					</dl>
+				</div>
+				<!-- [기여도]
+					점수 제어 부분 : 모집자 기여율
+					* style="--el-progress:00;"
+				-->
+				<div class="area-progress4" style="--el-progress:60;">
+					<dl>
+						<dt>도움받는 사람</dt> <!-- 2022-12-26 텍스트 변경 -->
+						<dd><strong>60</strong><span>%</span></dd>
+					</dl>
+					<dl>
+						<dt>도와주는 사람</dt> <!-- 2022-12-26 텍스트 변경 -->
+						<dd><strong>40</strong><span>%</span></dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [요청 내용] -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<h2 class="tit-sub2">요청 내용</h2>
+
+				<!-- 설계사정보 [D] 요청 신청자일 경우 비노출 -->
+				<dl class="data-info1 t2">
+					<dt>
+						<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+						<span><strong>김종현</strong></span>
+						<span class="icon-star" data-value="3">평점 3점</span> <!-- [D] 별점 있을 경우 -->
+					</dt>
+					<dd>강난사업단</dd>
+					<dd>00차월</dd>
+				</dl>
+
+				<!-- 내용 -->
+				<div class="area-con1">고객님은 30대 여성으로 자녀 보험 가입을 요청
+					하셨는데요. 부모는 보험 가입이 안 되어 있고,
+					보험가입 여력은 있는 걸로 보입니다.<br><br>
+
+					자녀보험과 건강보험을 같이 팔고 싶어요.
+					대전에 거주하고 주말에 상담 원하십니다.
+				</div>
+
+				<!-- 신청일시 -->
+				<dl class="data-word5">
+					<dt>신청일시:</dt>
+					<dd>2022.05.06 14:03</dd>
+				</dl>
+				<!-- // -->
+			</div>
+			<!-- // -->
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- [D] 타인일 경우 버튼 비노출 -->
+			<!-- ######################### -->
+			<!-- [CASE] 원글 작성자 일 경우 -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">신청</button>
+			</div>
+			<!-- [CASE] 요청 신청자 일 경우 -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">신청 취소</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

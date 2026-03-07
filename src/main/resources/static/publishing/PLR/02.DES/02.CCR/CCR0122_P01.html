@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]차명조회 | 차량정보 | 설계(개인/업무/영업) | 가입설계 | 자동차보험 | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-14]	① 문구수정 : 차량명 > 차명
+	*					② 문구수정 : 적용연식 > 적용년식
+	*					③ 클래스명 변경 : block > block2
+	*					④ 문구수정 : 차량연식 > 차량년식
+	*					⑤ 기본부속품 내용 추가
+	*					⑥ 출고이후 추가 장작 부속품 유무 체크박스 영역 위치 변경
+	*	[M 2022-11-09]	① 도로주행 체크박스 추가
+	*					② 1step 광고(등록정보) 영역 추가
+	*					③ 2step 세부정보 목록 데이터 추가
+	*					④ 3step 추가부속품 체크박스 삭제
+	*					⑤ 마지막 스텝 차량정보에서 제원에 적재량 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper" data-popmodal="true" id="uiPOPUP"> <!-- [D] 아이디 임의로 적용 -->
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>차명조회</h1>
+			<button type="button" data-btn="pop-close">차명조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [조회영역] -->
+			<!-- ######################### -->
+			<article id="CCR0122">
+				<!-- ### 상단문구 ### -->
+				<div class="tit-section2 t1"><p>차명을 조회해보세요.</p></div>
+
+				<!-- ### 조회영역 ### -->
+				<fieldset class="form-wrap1">
+					<legend>차명조회</legend>
+
+					<!-- 항목하나 -->
+					<dl class="form">
+						<dt>조회구분 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1" data-autoset="form">
+								<label>
+									<input type="radio" name="radioSearch" id="radioSearch2" checked>
+									<span>차명</span> <!-- [M 2022-09-14] 문구수정 -->
+								</label>
+								<label>
+									<input type="radio" name="radioSearch" id="radioSearch3">
+									<span>차명코드</span>
+								</label>
+								<label>
+									<input type="radio" name="radioSearch" id="radioSearch1">
+									<span>제작사</span>
+								</label>
+							</div>
+
+							<!-- [CASE1] 차량명 선택시 노출 -->
+							<div class="ui-tabcon active" data-id="radioSearch2">
+								<input type="text" class="text" placeholder="차량명을 입력해주세요.">
+							</div>
+							<!-- 미입력시:오류 -->
+							<div class="ui-tabcon active" data-id="radioSearch2">
+								<input type="text" class="text" placeholder="차량명을 입력해주세요." aria-invalid="true">
+								<div class="validation">차량명을 입력해주세요.</div>
+							</div>
+
+							<!-- [CASE2] 차명코드 선택시 노출 -->
+							<div class="ui-tabcon" data-id="radioSearch3">
+								<input type="text" class="text" placeholder="차명코드를 입력해주세요.">
+							</div>
+							<!-- 미입력시:오류 -->
+							<div class="ui-tabcon" data-id="radioSearch3">
+								<input type="text" class="text" placeholder="차명코드를 입력해주세요." aria-invalid="true">
+								<div class="validation">차명코드를 입력해주세요.</div>
+							</div>
+
+							<!-- [CASE3] 제작사 선택시 노출 -->
+							<div class="ui-tabcon" data-id="radioSearch1">
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="DMAFOMALG" checked>
+										<span>국산차</span>
+									</label>
+									<label>
+										<input type="radio" name="DMAFOMALG">
+										<span>외제차</span>
+									</label>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+						<!-- 2022-11-09 1step 광고(등록정보) 영역 추가 -->
+						<dd>
+							<div class="info-con1 t5">
+								<dl>
+									<dt>참고(등록정보)</dt>
+									<dd>12가1234, 카니발
+										<ul class="txt-bul1">
+											<li>최초등록 : 2022.12.01</li>
+											<li>연식 : 2022</li>
+											<li>연식 : 2022</li>
+											<li>연식 : 2022</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+						</dd>
+						<!-- //2022-11-09 1step 광고(등록정보) 영역 추가 -->
+						<dd class="side ui-tabcon active" data-id="radioSearch1 radioSearch2">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>임시</span>
+								</label>
+								<!-- 2022-11-09 도로주행 추가 -->
+								<label>
+									<input type="checkbox">
+									<span>도로주행</span>
+								</label>
+								<!-- //2022-11-09 도로주행 추가 -->
+							</div>
+						</dd>
+					</dl>
+
+					<!-- 항목하나 -->
+					<dl class="form">
+						<dt>최초등록일/적용년식 <em class="icon-required2">필수</em></dt> <!-- [M 2022-09-14] 문구수정 -->
+						<dd>
+							<div class="input-date1 text">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">최초등록일 선택</button>
+									<input type="text" title="시작날짜 선택" value="2022.04.17" placeholder="YYYY.MM.DD" readonly>
+								</span>
+							</div>
+
+							<!-- [CASE] 미입력시:오류 -->
+							<div class="input-date1">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">최초등록일 선택</button>
+									<input type="text" class="text" title="시작날짜 선택" value="" placeholder="YYYY.MM.DD" readonly aria-invalid="true">
+								</span>
+							</div>
+							<!-- // -->
+
+							<div class="input-wrap1">
+								<data class="text disabled" value="" data-label="적용년식"></data> <!-- [M 2022-09-14] 문구수정 -->
+								<data class="text w1 disabled" value="" data-label="연식구분"></data>
+							</div>
+							<div class="validation">최초등록일을 선택해주세요.</div>
+						</dd>
+					</dl>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### 하단버튼 ### -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action c1" onclick="sectionOn('#CCR0112RESULT')">조회</button>
+				</div>
+				<!-- ### // ### -->
+			</article>
+
+			<!-- ######################### -->
+			<!-- [조회결과] 결과없음 -->
+			<!-- ######################### -->
+			<div id="CCR0112RESULT" class="none">
+				<!-- ### 결과없음 ### -->
+				<div class="mes-result1">
+					<p>
+						<strong>선택하신 조건의 정보가 없습니다.</strong>
+						<span>조회조건을 바꾸어 조회해보세요</span>
+					</p>
+				</div>
+
+				<!-- ### 하단버튼 ### -->
+				<div class="area-action" data-fixed="bottom">
+					<button type="button" class="btn-action c1" onclick="sectionOn('#CCR0122')">이전</button>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [차량명_STEP1] 차명선택 : CCR0192 -->
+			<!-- ######################### -->
+			<article id="CCR0192PAGE1" class="none">
+				<h1 class="hide">차명선택</h1>
+
+				<!-- ### 상단문구 ### -->
+				<div class="info-step3">
+					<p><strong>3</strong>개의 내용 중 <strong>1</strong>번째 입력</p>
+				</div>
+				<div class="tit-section2 t1"><p><em>그랜저</em>차명을 선택해주세요.</p></div>
+
+				<!-- ### 선택 ### -->
+				<fieldset class="form-wrap1">
+					<legend>모든 항목 필수 입력</legend>
+					<dl class="form">
+						<dt>차명 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!--// -->
+							<div class="label-btn1 block2"> <!-- [M 2022-09-14] 클래스명 변경 : block > block2  -->
+								<label>
+									<input type="radio" name="MyList11">
+									<span>그랜저 IG 5</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList11">
+									<span>그랜저 HG</span>
+								</label>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 하단버튼 ### -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action" onclick="sectionOn('#CCR0122');">이전</button>
+					<button type="button" class="btn-action c1" onclick="sectionOn('#CCR0192PAGE2');">다음</button>
+				</div>
+				<!-- ### // ### -->
+			</article>
+
+			<!-- ######################### -->
+			<!-- [차량명_STEP2] 세부정보 선택 : CCR0192 -->
+			<!-- ######################### -->
+			<article id="CCR0192PAGE2" class="none">
+				<h1 class="hide">세부정보</h1>
+
+				<!-- ### 상단문구 ### -->
+				<div class="info-step3">
+					<p><strong>3</strong>개의 내용 중 <strong>2</strong>번째 입력</p>
+				</div>
+				<div class="tit-section2 t1"><p><em>@그랜저 IG 5@</em>세부정보를 선택해주세요.</p></div>
+
+				<!-- ### 선택 ### -->
+				<fieldset class="form-wrap1">
+					<legend>모든 항목 필수 입력</legend>
+
+					<dl class="form">
+						<dt>차량년식 <em class="icon-required2">필수</em></dt> <!-- [M 2022-09-14] 문구수정 -->
+						<dd>
+							<!--// -->
+							<div class="label-btn1 block2"> <!-- [M 2022-09-14] 클래스명 변경 : block col2 > block2 -->
+								<label>
+									<input type="radio" name="MyList33">
+									<span>2018년</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList33">
+									<span>2019년</span>
+								</label>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>세부정보 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!--// -->
+							<div class="label-btn1 block">
+								<label>
+									<input type="radio" name="MyList44" >
+									<!-- 2022-11-09 2step 세부정보 목록 데이터 추가 -->
+									<span>GT-Lline(2WD),오토,에어컨,P/S,ABS,AIR-D,IM 
+										<div class="info">
+											<span class="txt1">1,000만원</span><span class="txt1">0명</span><span class="txt1">0만원</span><span class="txt1">0명</span><span class="txt1">1,000kg</span>
+										</div>
+									</span>
+									<!-- //2022-11-09 2step 세부정보 목록 데이터 추가 -->
+								</label>
+								<label>
+									<input type="radio" name="MyList44">
+									<span class="info">EV6 스탠다드 <span class="txt1">1,000만원</span></span> <!-- 2022-11-09 클래스 추가 -->
+								</label>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 하단버튼 ### -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action" onclick="sectionOn('#CCR0192PAGE1');">이전</button>
+					<button type="button" class="btn-action c1" onclick="sectionOn('#CCR0192PAGE3');">다음</button>
+				</div>
+				<!-- ### // ### -->
+			</article>
+
+			<!-- ######################### -->
+			<!-- [차량명_STEP3] 추가정보 입력 : CCR0192 -->
+			<!-- ######################### -->
+			<article id="CCR0192PAGE3" class="none">
+				<h1 class="hide">추가정보 입력</h1>
+
+				<!-- ### 상단문구 ### -->
+				<div class="info-step3">
+					<p><strong>3</strong>개의 내용 중 <strong>3</strong>번째 입력</p>
+				</div>
+				<div class="tit-section2 t1"><p><em>@그랜저 IG 5 2019년@</em>추가정보를 입력해주세요.</p></div>
+
+				<!-- ### 선택 ### -->
+				<fieldset class="form-wrap1">
+					<legend>모든 항목 필수 입력</legend>
+
+					<dl class="form">
+						<dt>차종</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">차종</span>
+									<span data-select="text" data-value="1">승용차</span>
+								</button>
+								<div class="list">
+									<div data-label="차종 선택">
+										<div class="option">
+											<label><input type="radio" name="ht" value="1"><span>승용차</span></label>
+											<label><input type="radio" name="ht" value="2"><span>승합차</span></label>
+											<label><input type="radio" name="ht" value="3"><span>화물차</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- [차의형태/운행형태] -->
+					<dl class="form">
+						<dt>차의형태/운행형태</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">차의형태</span>
+									<span data-select="text" data-value="ht1">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="차의형태">
+										<div class="option">
+											<label><input type="radio" name="ht1" value="ht1"><span>선택</span></label>
+											<label><input type="radio" name="ht1" value="ht2"><span>기타</span></label>
+											<label><input type="radio" name="ht1" value="ht3"><span>보안경비차량</span></label>
+											<label><input type="radio" name="ht1" value="ht4"><span>일반승용</span></label>
+											<label><input type="radio" name="ht1" value="ht5"><span>RV차량</span></label>
+											<label><input type="radio" name="ht1" value="ht6"><span>긴급출동</span></label>
+											<label><input type="radio" name="ht1" value="ht7"><span>소방차</span></label>
+											<label><input type="radio" name="ht1" value="ht8"><span>순찰차(패트롤카)</span></label>
+											<label><input type="radio" name="ht1" value="ht9"><span>장애인차량</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">운행형태</span>
+									<span data-select="text" data-value="01">출퇴근 및 가정용</span>
+								</button>
+								<div class="list">
+									<div data-label="운행형태 선택">
+										<div class="option">
+											<label><input type="radio" name="CRUSUSECD" value="01"><span>출퇴근 및 가정용</span></label>
+											<label><input type="radio" name="CRUSUSECD" value="02"><span>개인사업용 및 기타용도</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- [CASE] 미선택시 -->
+							<div class="select-wrap invalid" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">차의형태</span>
+									<span data-select="text" data-value="ht1">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="차의형태">
+										<div class="option">
+											<label><input type="radio" name="ht11" value="ht1"><span>선택</span></label>
+											<label><input type="radio" name="ht11" value="ht2"><span>기타</span></label>
+											<label><input type="radio" name="ht11" value="ht3"><span>보안경비차량</span></label>
+											<label><input type="radio" name="ht11" value="ht4"><span>일반승용</span></label>
+											<label><input type="radio" name="ht11" value="ht5"><span>RV차량</span></label>
+											<label><input type="radio" name="ht11" value="ht6"><span>긴급출동</span></label>
+											<label><input type="radio" name="ht11" value="ht7"><span>소방차</span></label>
+											<label><input type="radio" name="ht11" value="ht8"><span>순찰차(패트롤카)</span></label>
+											<label><input type="radio" name="ht11" value="ht9"><span>장애인차량</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+							<div class="select-wrap invalid" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">운행형태</span>
+									<span data-select="text" data-value="null">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="운행형태 선택">
+										<div class="option">
+											<label><input type="radio" name="ht2" value="ht12"><span>출퇴근 및 가정용</span></label>
+											<label><input type="radio" name="ht2" value="ht13"><span>개인사업용 및 기타용도</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<div class="validation">차의형태 및 운행형태를 선택해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- [M 2022-09-14] 내용추가 -->
+					<dl class="form">
+						<dt>기본부속품</dt>
+						<dd><div class="data1">스테레오, 칼라유리, 에어컨, ABS, AUTO, 차선이탈경고, 전방충돌경고, 차선유지지원</div></dd>
+					</dl>
+					<!-- // [M 2022-09-14] -->
+
+					<dl class="form">
+						<dt>추가부속품 <em class="icon-required2">필수</em></dt>
+						<!-- [M 2022-09-14] 위치변경 -->
+						<!-- <dd class="side">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>출고이후 추가 장착 부속품 유무</span>
+								</label>
+							</div>
+						</dd> -->
+						<!-- // [M 2022-09-14] -->
+						<dd>
+							<div class="area-btn1">
+								<button type="button" class="btn-com1 ic3" disabled>추가 부속품</button>
+
+								<!-- [CASE] 출고이후 추가 장착 부속품 유무 선택시 활성화
+								<button type="button" class="btn-com1 ic3">추가 부속품</button>
+								-->
+							</div>
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>차량가액 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="text num1">
+								<input type="tel" title="차량가액" value="0">
+								<span class="util">만원</span>
+							</div>
+
+							<!-- [CASE] 미입력시:오류 -->
+							<div class="text num1">
+								<input type="tel" title="차량가액" value="0" aria-invalid="true">
+								<span class="util">만원</span>
+							</div>
+							<div class="validation">차량가액을 입력해주세요.</div>
+							<!-- // -->
+						</dd>
+						<dd class="side"><button type="button" class="btn-sub3 c2">차량감가상각계산</button></dd>
+					</dl>
+
+					<dl class="form">
+						<dt>추가부속가액</dt>
+						<dd>
+							<div class="text num1">
+								<data data-disabled="true" value="345">345</data>
+								<span class="util">만원</span>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- [총 가액] -->
+					<div class="area-info2 t1">
+						<dl>
+							<dt>총가액</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>만원</span></dd>
+						</dl>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### 하단버튼 ### -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action" onclick="">이전</button>
+					<button type="button" class="btn-action c1" onclick="sectionOn('#CCRPAGERESULT')">다음</button>
+				</div>
+				<!-- ### // ### -->
+			</article>
+
+			<!-- ######################### -->
+			<!-- [차명코드_STEP1] 세부정보 : CCR0249 -->
+			<!-- ######################### -->
+			<article id="CCR0249PAGE1" class="none">
+				<h1 class="hide">차명코드</h1>
+
+				<!-- ### 상단문구 ### -->
+				<div class="info-step3">
+					<p><strong>2</strong>개의 내용 중 <strong>1</strong>번째 입력</p>
+				</div>
+				<div class="tit-section2 t1"><p><em>차명코드 61K03</em>추가정보를 선택해주세요.</p></div>
+
+				<!-- ### 선택 ### -->
+				<fieldset class="form-wrap1">
+					<legend>모든 항목 필수 입력</legend>
+
+					<dl class="form">
+						<dt>차량년식 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1 block2">
+								<label>
+									<input type="radio" name="MyList">
+									<span>2018년</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList">
+									<span>2019년</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>세부정보 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!--// -->
+							<div class="label-btn1 block">
+								<label>
+									<input type="radio" name="MyList4" >
+									<!-- 2022-11-09 2step 세부정보 목록 데이터 추가 -->
+									<span>GT-Lline(2WD),오토,에어컨,P/S,ABS,AIR-D,IM 
+										<div class="info">
+											<span class="txt1">1,000CC</span>
+											<span class="txt1">0명</span>
+											<span class="txt1">0만원</span>
+											<span class="txt1">1,000kg</span>
+										</div>
+									</span>
+									<!-- //2022-11-09 2step 세부정보 목록 데이터 추가 -->
+								</label>
+								<label>
+									<input type="radio" name="MyList4">
+									<span>EV6 스탠다드 <span class="txt1">1,000만원</span></span>
+								</label>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 하단버튼 ### -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action" onclick="">이전</button>
+					<button type="button" class="btn-action c1" onclick="sectionOn('#CCR0249PAGE2');">다음</button>
+				</div>
+				<!-- ### // ### -->
+			</article>
+
+			<!-- ######################### -->
+			<!-- [차명코드_STEP2] 추가정보 : CCR0249 -->
+			<!-- ######################### -->
+			<article id="CCR0249PAGE2" class="none">
+				<h1 class="hide">추가정보 입력</h1>
+
+				<!-- ### 상단문구 ### -->
+				<div class="info-step3">
+					<p><strong>2</strong>개의 내용 중 <strong>2</strong>번째 입력</p>
+				</div>
+				<div class="tit-section2 t1"><p><em>67C33 포터II장축(CRDI)</em>추가정보를 입력해주세요.</p></div> <!-- 2022-11-09 텍스트 변경 -->
+
+				<!-- ### 정보입력 ### -->
+				<fieldset class="form-wrap1">
+					<legend>모든 항목 필수 입력</legend>
+
+					<dl class="form">
+						<dt>차종</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" disabled>
+									<span data-select="title">차종</span>
+									<span data-select="text" data-value="1">승용차</span>
+								</button>
+								<div class="list">
+									<div data-label="차종 선택">
+										<div class="option">
+											<label><input type="radio" name="ht00" value="1"><span>승용차</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>차의형태/운행형태</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">차의형태</span>
+									<span data-select="text" data-value="ht1">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="차의형태">
+										<div class="option">
+											<label><input type="radio" name="ht11" value="ht1"><span>선택</span></label>
+											<label><input type="radio" name="ht11" value="ht2"><span>기타</span></label>
+											<label><input type="radio" name="ht11" value="ht3"><span>보안경비차량</span></label>
+											<label><input type="radio" name="ht11" value="ht4"><span>일반승용</span></label>
+											<label><input type="radio" name="ht11" value="ht5"><span>RV차량</span></label>
+											<label><input type="radio" name="ht11" value="ht6"><span>긴급출동</span></label>
+											<label><input type="radio" name="ht11" value="ht7"><span>소방차</span></label>
+											<label><input type="radio" name="ht11" value="ht8"><span>순찰차(패트롤카)</span></label>
+											<label><input type="radio" name="ht11" value="ht9"><span>장애인차량</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">운행형태</span>
+									<span data-select="text" data-value="ht12">출퇴근 및 가정용</span>
+								</button>
+								<div class="list">
+									<div data-label="운행형태 선택">
+										<div class="option">
+											<label><input type="radio" name="ht2" value="ht12"><span>출퇴근 및 가정용</span></label>
+											<label><input type="radio" name="ht2" value="ht13"><span>개인사업용 및 기타용도</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>추가부속품</dt>
+						<!-- 2022-11-09 삭제 -->
+						<!-- <dd class="side">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>출고이후 추가 장착 부속품 유무</span>
+								</label>
+							</div>
+						</dd> -->
+						<!-- //2022-11-09 삭제 -->
+						<dd>
+							<div class="area-btn1">
+								<button type="button" class="btn-com1 ic3">추가 부속품</button>
+							</div>
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>차량가액 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="text num1">
+								<input type="tel" title="차량가액" value="0" disabled>
+								<span class="util">만원</span>
+							</div>
+						</dd>
+						<dd class="side"><button type="button" class="btn-sub3 c2" disabled>차량감가상각계산</button></dd>
+					</dl>
+
+					<dl class="form">
+						<dt>추가부속가액 </dt>
+						<dd>
+
+							<div class="text num1">
+								<data data-disabled="true" value="345">345</data>
+								<span class="util">만원</span>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- [총 가액] -->
+					<div class="area-info2 t1">
+						<dl>
+							<dt>총가액</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>만원</span></dd>
+						</dl>
+					</div>
+				</fieldset>
+
+				<!-- ### 하단버튼 ### -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action" onclick="">이전</button>
+					<button type="button" class="btn-action c1" onclick="sectionOn('#CCRPAGERESULT')">다음</button>
+				</div>
+				<!-- ### // ### -->
+			</article>
+
+			<!-- ######################### -->
+			<!-- [제작사_STEP1] 차량제조사 : CCR0122 -->
+			<!-- ######################### -->
+			<article id="CCR0122PAGE1" class="none">
+				<h1 class="hide">차량제조사</h1>
+
+				<!-- ### 상단문구 ### -->
+				<div class="info-step3">
+					<p><strong>5</strong>개의 내용 중 <strong>1</strong>번째 입력</p>
+				</div>
+				<div class="tit-section2 t1"><p><em>@국산차(임시)@</em>차량제조사를 선택해주세요.</p></div>
+
+				<!-- ### 선택 ### -->
+				<fieldset class="form-wrap1">
+					<legend>모든 항목 필수 입력</legend>
+
+					<dl class="form">
+						<dt>차량 제조사 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!--// -->
+							<div class="label-btn1 col2">
+								<label>
+									<input type="radio" name="MyList">
+									<span>현대</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList">
+									<span>기아</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList">
+									<span>제네시스</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList">
+									<span>쉐보레(GM대우)</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList">
+									<span>르노코리아(삼성)</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList">
+									<span>쌍용</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList">
+									<span>어울림모터스</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList">
+									<span>기타 제조시</span>
+								</label>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 하단버튼 ### -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action" onclick="sectionOn('#CCR0122');;">이전</button>
+					<button type="button" class="btn-action c1" onclick="sectionOn('#CCR0122PAGE2')">다음</button>
+				</div>
+				<!-- ### // ### -->
+			</article>
+
+			<!-- ######################### -->
+			<!-- [제작사_STEP2] 대표차명 선택 : CCR0122 -->
+			<!-- ######################### -->
+			<article id="CCR0122PAGE2" class="none">
+				<h1 class="hide">대표차명</h1>
+
+				<!-- ### 상단문구 ### -->
+				<div class="info-step3">
+					<p><strong>5</strong>개의 내용 중 <strong>2</strong>번째 입력</p>
+				</div>
+				<div class="tit-section2 t1"><p><em>@기아@</em>대표차명을 선택해주세요.</p></div>
+
+				<!-- ### 선택 ### -->
+				<fieldset class="form-wrap1">
+					<legend>모든 항목 필수 입력</legend>
+
+					<dl class="form">
+						<dt>대표차명 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!--// -->
+							<div class="label-btn1 col2">
+								<label>
+									<input type="radio" name="MyList2">
+									<span>레인지로버 이보크</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList2">
+									<span>디스커버리 스포츠</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList2">
+									<span>미니 해치백 쿠페</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList2">
+									<span>레인지로버 이보크</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList2">
+									<span>레인지로버 벨라</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList2">
+									<span>레인지로버 스포츠</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList2">
+									<span>레이</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList2">
+									<span>록스타</span>
+								</label>
+							</div>
+
+							<!-- 더보기 (현재페이지/총페이지) -->
+							<div class="area-btn2">
+								<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 하단버튼 ### -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action" onclick="sectionOn('#CCR0122PAGE1');;">이전</button>
+					<button type="button" class="btn-action c1" onclick="sectionOn('#CCR0122PAGE3');">다음</button>
+				</div>
+				<!-- ### // ### -->
+			</article>
+
+			<!-- ######################### -->
+			<!-- [제작사_STEP3] 연식/차명 선택 : CCR0122 -->
+			<!-- ######################### -->
+			<article id="CCR0122PAGE3" class="none">
+				<h1 class="hide">연식/차명 선택</h1>
+
+				<!-- ### 상단문구 ### -->
+				<div class="info-step3">
+					<p><strong>5</strong>개의 내용 중 <strong>3</strong>번째 입력</p>
+				</div>
+				<div class="tit-section2 t1"><p><em>기아 K5</em>대표차명을 선택해주세요.</p></div>
+
+				<!-- ### 선택 ### -->
+				<fieldset class="form-wrap1">
+					<legend>모든 항목 필수 입력</legend>
+
+					<dl class="form">
+						<dt>차량년식 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!--// -->
+							<div class="label-btn1 block2">
+								<label>
+									<input type="radio" name="MyList3" checked>
+									<span>2018</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList3" checked>
+									<span>2019년 ~ 현재</span>
+								</label>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>차명 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!--// -->
+							<div class="label-btn1 block2">
+								<label>
+									<input type="radio" name="MyList3-2">
+									<span>더 뉴 K5 2세대</span>
+								</label>
+								<label>
+									<input type="radio" name="MyList3-2">
+									<span>EV6 스탠다드</span>
+								</label>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 하단버튼 ### -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action" onclick="sectionOn('#CCR0122PAGE1');">이전</button>
+					<button type="button" class="btn-action c1" onclick="sectionOn('#CCR0122PAGE4');">다음</button>
+				</div>
+				<!-- ### // ### -->
+			</article>
+
+			<!-- ######################### -->
+			<!-- [제작사_STEP4] 세부정보 선택 : CCR0122 -->
+			<!-- ######################### -->
+			<article id="CCR0122PAGE4" class="none">
+				<h1 class="hide">세부정보 선택</h1>
+
+				<!-- ### 상단문구 ### -->
+				<div class="info-step3">
+					<p><strong>5</strong>개의 내용 중 <strong>4</strong>번째 입력</p>
+				</div>
+				<div class="tit-section2 t1"><p><em>기아 그랜저 2022년 EV6 롱 레인지</em>세부정보를 선택해주세요.</p></div>
+
+				<!-- ### 선택 ### -->
+				<fieldset class="form-wrap1">
+					<legend>모든 항목 필수 입력</legend>
+
+					<dl class="form">
+						<dt>세부정보 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!--// -->
+							<div class="label-btn1 block">
+								<label>
+									<input type="radio" name="MyList4" >
+									<span>GT-Lline(2WD),오토,에어컨,P/S,ABS,AIR-D,IM <span class="txt1">1,000만원</span></span>
+								</label>
+								<label>
+									<input type="radio" name="MyList4">
+									<span>EV6 스탠다드 <span class="txt1">1,000만원</span></span>
+								</label>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 하단버튼 ### -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action" onclick="sectionOn('#CCR0122PAGE1');">이전</button>
+					<button type="button" class="btn-action c1" onclick="sectionOn('#CCR0122PAGE5');">다음</button>
+				</div>
+				<!-- ### // ### -->
+			</article>
+
+			<!-- ######################### -->
+			<!-- [제작사_STEP5] 추가정보 입력 : CCR0122 -->
+			<!-- ######################### -->
+			<article id="CCR0122PAGE5" class="none">
+				<h1 class="hide">추가정보 입력</h1>
+
+				<!-- ### 상단문구 ### -->
+				<div class="info-step3">
+					<p><strong>5</strong>개의 내용 중 <strong>5</strong>번째 입력</p>
+				</div>
+				<div class="tit-section2 t1"><p><em>기아 그랜저 2022년 EV6 롱 레인지</em>추가정보를 입력해주세요.</p></div>
+
+				<!-- ### 정보입력 ### -->
+				<fieldset class="form-wrap1">
+					<legend>추가정보 입력</legend>
+
+					<dl class="form">
+						<dt>차종</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">차종</span>
+									<span data-select="text" data-value="1">승용차</span>
+								</button>
+								<div class="list">
+									<div data-label="차종 선택">
+										<div class="option">
+											<label><input type="radio" name="ht01" value="1"><span>승용차</span></label>
+											<label><input type="radio" name="ht01" value="2"><span>승합차</span></label>
+											<label><input type="radio" name="ht01" value="3"><span>화물차</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>차의형태/운행형태</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">차의형태</span>
+									<span data-select="text" data-value="ht1">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="차의형태">
+										<div class="option">
+											<label><input type="radio" name="ht1" value="ht1"><span>선택</span></label>
+											<label><input type="radio" name="ht1" value="ht2"><span>기타</span></label>
+											<label><input type="radio" name="ht1" value="ht3"><span>보안경비차량</span></label>
+											<label><input type="radio" name="ht1" value="ht4"><span>일반승용</span></label>
+											<label><input type="radio" name="ht1" value="ht5"><span>RV차량</span></label>
+											<label><input type="radio" name="ht1" value="ht6"><span>긴급출동</span></label>
+											<label><input type="radio" name="ht1" value="ht7"><span>소방차</span></label>
+											<label><input type="radio" name="ht1" value="ht8"><span>순찰차(패트롤카)</span></label>
+											<label><input type="radio" name="ht1" value="ht9"><span>장애인차량</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">운행형태</span>
+									<span data-select="text" data-value="ht11">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="운행형태 선택">
+										<div class="option">
+											<label><input type="radio" name="ht2" value="ht11"><span>선택</span></label>
+											<label><input type="radio" name="ht2" value="ht12"><span>출퇴근 및 가정용</span></label>
+											<label><input type="radio" name="ht2" value="ht13"><span>개인사업용 및 기타용도</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- [CASE] 미선택시 -->
+							<div class="select-wrap invalid" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">차의형태</span>
+									<span data-select="text" data-value="ht1">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="차의형태">
+										<div class="option">
+											<label><input type="radio" name="ht11" value="ht1"><span>선택</span></label>
+											<label><input type="radio" name="ht11" value="ht2"><span>기타</span></label>
+											<label><input type="radio" name="ht11" value="ht3"><span>보안경비차량</span></label>
+											<label><input type="radio" name="ht11" value="ht4"><span>일반승용</span></label>
+											<label><input type="radio" name="ht11" value="ht5"><span>RV차량</span></label>
+											<label><input type="radio" name="ht11" value="ht6"><span>긴급출동</span></label>
+											<label><input type="radio" name="ht11" value="ht7"><span>소방차</span></label>
+											<label><input type="radio" name="ht11" value="ht8"><span>순찰차(패트롤카)</span></label>
+											<label><input type="radio" name="ht11" value="ht9"><span>장애인차량</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+							<div class="select-wrap invalid" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">운행형태</span>
+									<span data-select="text" data-value="null">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="운행형태 선택">
+										<div class="option">
+											<label><input type="radio" name="ht2" value="ht12"><span>출퇴근 및 가정용</span></label>
+											<label><input type="radio" name="ht2" value="ht13"><span>개인사업용 및 기타용도</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<div class="validation">차의형태 및 운행형태를 선택해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>추가부속품 <em class="icon-required2">필수</em></dt>
+						<dd class="side">
+							<!-- 2022-11-09 삭제 -->
+							<!-- <div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>출고이후 추가 장착 부속품 유무</span>
+								</label>
+							</div> -->
+							<!-- //2022-11-09 삭제 -->
+						</dd>
+						<dd>
+							<div class="area-btn1">
+								<button type="button" class="btn-com1 ic3">추가 부속품</button>
+							</div>
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>차량가액 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="text num1">
+								<input type="tel" title="차량가액" value="0">
+								<span class="util">만원</span>
+							</div>
+
+							<!-- [CASE] 미입력시:오류 -->
+							<div class="text num1">
+								<input type="tel" title="차량가액" value="0" aria-invalid="true">
+								<span class="util">만원</span>
+							</div>
+							<div class="validation">차량가액을 입력해주세요.</div>
+							<!-- // -->
+						</dd>
+						<dd class="side"><button type="button" class="btn-sub3 c2">차량감가상각계산</button></dd>
+					</dl>
+
+					<dl class="form">
+						<dt>추가부속가액 </dt>
+						<dd>
+							<div class="text num1">
+								<data data-disabled="true" value="345">345</data>
+								<span class="util">만원</span>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- [총 가액] -->
+					<div class="area-info2 t1">
+						<dl>
+							<dt>총가액</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>만원</span></dd>
+						</dl>
+					</div>
+				</fieldset>
+
+				<!-- ### 하단버튼 ### -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action" onclick="">이전</button>
+					<button type="button" class="btn-action c1" onclick="sectionOn('#CCRPAGERESULT')">다음</button>
+				</div>
+				<!-- ### // ### -->
+			</article>
+
+			<!-- ######################### -->
+			<!-- [공통] 추가정보 입력 -->
+			<!-- ######################### -->
+			<article id="CCRPAGERESULT" class="none">
+				<div class="tit-sub1">
+					<h1>차량정보</h1>
+					<div class="side"><button type="button" class="btn-sub2 ic8">초기화</button></div>
+				</div>
+
+				<!-- // -->
+				<div class="info-con1">
+					<dl>
+						<dt>차량명</dt>
+						<dd><em>그랜저 IG</em></dd>
+					</dl>
+					<dl>
+						<dt>차명코드/차종</dt>
+						<dd>61k03/승용중형(22)</dd>
+					</dl>
+					<dl>
+						<dt>등록일/연식</dt>
+						<dd>2022.03.25/2022 - A</dd>
+					</dl>
+					<dl>
+						<dt>세부사항</dt>
+						<dd>ABS, IM, 에어백 등등</dd>
+					</dl>
+					<dl>
+						<dt>제원</dt>
+						<dd>5인승, 1999cc, 디젤, 1000kg</dd> <!-- 2022-11-09 텍스트 추가 -->
+					</dl>
+					<dl>
+						<dt>부속사항</dt>
+						<dd><button type="button" class="btn-sub3 c2">상세보기</button></dd>
+					</dl>
+					<dl>
+						<dt>차량/부속가액</dt>
+						<dd><em>1,555만원/10만원</em></dd>
+					</dl>
+				</div>
+
+				<!-- // -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action">이전</button>
+					<button type="button" class="btn-action c1">적용</button>
+				</div>
+				<!-- // -->
+			</article>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	/* 풀팝업 호출 샘플 */
+	var _full_pop = $plugin.popmodal('#uiPOPUP',{
+		selector_close : '[data-btn="pop-close"]'
+	}).outputOpen();
+
+	/* 샘플 : 조회구분 선택 시 내용 변경 */
+	$(document).on('change', '[name="radioSearch"]', function(ev){
+		var _el_value = $(this).attr('id');
+		$('[data-id]').removeClass('active');
+		$('[data-id*="'+ _el_value +'"]').addClass('active');
+
+		if(_el_value === 'radioSearch2'){
+			$('.container > article:first').find('.area-action button').attr('onclick',"sectionOn('#CCR0192PAGE1')")
+		}else if(_el_value === 'radioSearch3'){
+			$('.container > article:first').find('.area-action button').attr('onclick',"sectionOn('#CCR0249PAGE1')")
+		}else if(_el_value === 'radioSearch1'){
+			$('.container > article:first').find('.area-action button').attr('onclick',"sectionOn('#CCR0122PAGE1')")
+		}
+	});
+
+	/* 페이지 변경 호출 샘플*/
+	function sectionOn(el){
+		var _all_cont = $('.container > [id]'); //전체컨텐츠
+		_all_cont.addClass('none');
+		$(el).removeClass('none');
+	};
+//-->
+</script>
+</body>
+</html>

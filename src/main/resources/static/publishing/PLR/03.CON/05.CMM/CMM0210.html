@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>투표 | 수정 | 사업단 | 렛:크루 | 커뮤니티</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>수정</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [STEP1] 내용입력 -->
+		<!-- ######################### -->
+		<section class="wrap-section">
+			<!-- ### [상단영역] 안내문구 ### -->
+			<h2 class="tit-section">사업단에 등록하신 내용을<br>수정해 주세요.</h2>
+
+			<!-- ### [정보입력] ### -->
+			<fieldset class="form-wrap1">
+				<legend>등록 내용 입력</legend>
+
+				<!-- # 분류 # -->
+				<dl class="form">
+					<dt>분류 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- [M 2022-07-20] B/S로 변경 -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택해주세요</span>
+								<span data-select="text" data-value="2">투표</span>
+							</button>
+							<div class="list">
+								<div data-label="분류">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion0" value="0"><span>공지</span></label>
+										<label><input type="radio" name="selectOpeion0" value="1"><span>일반</span></label>
+										<label><input type="radio" name="selectOpeion0" value="2"><span>투표</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 제목 # -->
+				<dl class="form mes-t1">
+					<dt>제목 <em class="icon-required2">필수</em></dt>
+					<dd><input type="text" class="text" title="제목" value="우리 사업단의 새로운 인센티브 제공 방식에 여러분의 의견을 표현해주세요" placeholder="제목을 입력해주세요."></dd>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+								<input type="text" title="날짜 선택" placeholder="날짜 선택" value="2022.03.26" readonly>
+							</span>
+						</div>
+					</dd>
+					<dd class="side">
+						<div class="label-check1">
+							<label>
+								<input type="checkbox" checked>
+								<span>페이지 상단에 고정</span>
+							</label>
+						</div>
+					</dd>
+					<dd class="mes">선택한 날짜까지 페이지 상단에 고정될 예정입니다.</dd>
+				</dl>
+
+				<!-- # 내용 # -->
+				<dl class="form">
+					<dt>내용<em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="textarea">
+							<textarea cols="50" rows="3" title="등록내용" placeholder="내용을 입력해주세요.">현재 바른사업단 나주 출장소 통신 장애로 인해 전화 및 전산 업무가 어렵습니다. 급한 용무 있으신 분들은 아래 비상 연락처로 연락 부탁 드리겠습니다.</textarea>
+							<span class="util2"><strong>0</strong>/4,000자</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- [M 2022-05-12] 이미지 첨부 영역 추가 -->
+				<!-- # 이미지 첨부 # -->
+				<dl class="form">
+					<dt>이미지 첨부 <a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt>  <!-- [M 2022-05-31] (선택) 텍스트 삭제 -->
+					<!-- [D] 등록후 노출 -->
+					<dd class="data-file1">
+						<ul>
+							<li>
+								<span class="img"><img src="../../resource/img/temp/@img_banner1.png" alt=""></span>
+								<span>파일명</span>
+								<span class="sub">00KB</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+							<li>
+								<span class="img"><img src="../../resource/img/temp/@img_banner2.png" alt=""></span>
+								<span>유용한 정보활용방법 캡쳐</span>
+								<span class="sub">56KB</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+						</ul>
+					</dd>
+					<!-- // -->
+					<dd class="area-btn1">
+						<a href="javascript:void(0);" class="btn-com1 ic3">이미지 첨부</a>
+					</dd>
+				</dl>
+
+				<!-- [M 2022-05-12] 관련 컨텐츠 첨부 영역 추가 -->
+				<!-- # 관련 컨텐츠 첨부 # -->
+				<dl class="form">
+					<dt>관련 컨텐츠 첨부</dt>  <!-- [M 2022-05-31] (선택) 텍스트 삭제 -->
+					<!-- [D] 등록후 노출 -->
+					<dd class="data-file1">
+						<ul>
+							<li>
+								<span class="img"><img src="../../resource/img/temp/@img_banner1.png" alt=""></span>
+								<span>[교육] 뇌혈관질환 진단비 분석</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+							<li>
+								<span class="img"><img src="../../resource/img/temp/@img_banner2.png" alt=""></span>
+								<span>[활동] 지금 보험시장은 진단비 눈치싸움이 눈치싸움이</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+						</ul>
+					</dd>
+					<!-- // -->
+					<dd class="area-btn1">
+						<a href="javascript:void(0);" class="btn-com1 ic3">관련 컨텐츠 첨부</a>
+					</dd>
+				</dl>
+				<!-- # // # -->
+			</fieldset>
+			<!-- ### // ### -->
+		</section>
+
+		<!-- ######################### -->
+		<!-- [STEP2] 투표내용 입력 -->
+		<!-- ######################### -->
+		<section class="wrap-section">
+			<h2 class="tit-section">투표로 등록하실 내용과 시간을<br />설정해주세요.</h2>
+
+			<fieldset class="form-wrap1">
+				<legend>투표등록 설정 입력</legend>
+
+				<!-- # 제목 입력 # -->
+				<dl class="form">
+					<dt>제목 <em class="icon-required2">필수</em></dt>
+					<dd><input type="text" class="text" title="제목" value="새로운 인센티브 의견" placeholder="제목을 입력해주세요."></dd>
+				</dl>
+
+				<!-- # 투표 항목 입력 # -->
+				<dl class="form">
+					<!-- // -->
+					<dt>투표 항목 <em class="icon-required2">필수</em></dt>
+					<!-- // -->
+					<dd>
+						<div class="text">
+							<input type="text" title="항목명1" value="좋아요" placeholder="항목1">
+							<button type="button" data-btn="delete">내용 삭제</button>
+						</div>
+						<div class="text">
+							<input type="text" title="항목명1" value="보통이에요" placeholder="항목2">
+							<button type="button" data-btn="delete">내용 삭제</button>
+						</div>
+						<div class="text">
+							<input type="text" title="항목명1" value="별로에요" placeholder="항목3">
+							<button type="button" data-btn="delete">내용 삭제</button>
+						</div>
+						<div class="text">
+							<input type="text" title="항목명1" value="모르겠어요" placeholder="항목4">
+							<button type="button" data-btn="delete">내용 삭제</button>
+						</div>
+					</dd>
+					<!-- // -->
+					<dd class="area-btn1">
+						<button type="button" class="btn-com1 ic3">항목추가</button>
+					</dd>
+				</dl>
+
+				<!-- # 투표 마감시간 설정 # -->
+				<dl class="form">
+					<!-- // -->
+					<dt>투표 마감시간 설정 <em class="icon-required2">필수</em></dt>
+					<!-- // -->
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+								<input type="text" title="날짜 선택" placeholder="날짜 선택" value="2022.03.26" readonly>
+							</span>
+						</div>
+					</dd>
+					<!-- // -->
+					<dd>
+						<!-- [M 2022-07-20] 시간설정 변경 -->
+						<div class="input-wrap1">
+							<!-- 시간 선택 -->
+							<div class="select-wrap w100" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">시간 선택</span>
+									<span data-select="text" data-value="18">18시</span>
+								</button>
+								<div class="list">
+									<div data-label="시간 선택">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion0" value="1"><span>01시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="2"><span>02시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="3"><span>03시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="4"><span>04시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="5"><span>05시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="6"><span>06시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="7"><span>07시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="8"><span>08시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="9"><span>09시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="10"><span>10시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="11"><span>11시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="12"><span>12시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="13"><span>13시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="14"><span>14시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="15"><span>15시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="16"><span>16시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="17"><span>17시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="18"><span>18시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="19"><span>19시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="20"><span>20시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="21"><span>21시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="22"><span>22시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="23"><span>23시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="24"><span>24시</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- 분 선택 -->
+							<div class="select-wrap w100" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">분 선택</span>
+									<span data-select="text" data-value="3">30분</span>
+								</button>
+								<div class="list">
+									<div data-label="분 선택">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion1" value="0"><span>00분</span></label>
+											<label><input type="radio" name="selectOpeion1" value="1"><span>10분</span></label>
+											<label><input type="radio" name="selectOpeion1" value="2"><span>20분</span></label>
+											<label><input type="radio" name="selectOpeion1" value="3"><span>30분</span></label>
+											<label><input type="radio" name="selectOpeion1" value="4"><span>40분</span></label>
+											<label><input type="radio" name="selectOpeion1" value="5"><span>50분</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</div>
+						<!-- // -->
+					</dd>
+					<!-- // -->
+				</dl>
+
+				<!-- # 투표 형태 # -->
+				<dl class="form">
+					<!-- // -->
+					<dt>투표 형태<em class="icon-required2">필수</em></dt>
+					<!-- // -->
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="form-radio1" checked>
+								<span>단일선택</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio1">
+								<span>복수선택</span>
+							</label>
+						</div>
+					</dd>
+					<!-- // -->
+				</dl>
+
+				<!-- # 투표 결과 # -->
+				<dl class="form">
+					<!-- // -->
+					<dt>투표 결과<em class="icon-required2">필수</em></dt>
+					<!-- // -->
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="form-radio2" checked>
+								<span>공개투표</span> <!-- [M 2022-05-12] 문구 수정 -->
+							</label>
+							<label>
+								<input type="radio" name="form-radio2">
+								<span>익명투표</span>
+							</label>
+						</div>
+					</dd>
+					<!-- // -->
+				</dl>
+				<!-- // -->
+			</fieldset>
+		</section>
+
+		<!-- ######################### -->
+		<!-- [STEP3] 게시 설정 [M 2022-05-12]  추가 -->
+		<!-- ######################### -->
+		<section class="wrap-section">
+			<!-- ### [상단영역] 안내문구 ### -->
+			<h2 class="tit-section">예약게시 설정 및 게시 기한 설정을<br />희망하시면 설정해 주세요.</h2>
+
+			<!-- ### [정보입력] ### -->
+			<fieldset class="form-wrap1">
+				<legend>예약게시 설정 입력</legend>
+
+				<!-- # 예약게시 # -->
+				<dl class="form">
+					<dt class="label-check1">
+						<label>
+							<input type="checkbox" checked>
+							<span>예약게시</span>
+						</label>
+					</dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">예약게시 날짜 선택</button>
+								<input type="text" title="예약게시 날짜 선택" placeholder="날짜 선택" value="2022.03.26" readonly>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 게시기한 # -->
+				<dl class="form">
+					<dt class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>게시기한</span>
+						</label>
+					</dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">게시기한 날짜 선택</button>
+								<input type="text" title="게시기한 날짜 선택" placeholder="날짜 선택" value="2022.03.26" readonly>
+							</span>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+			</fieldset>
+		</section>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">수정</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 이미지 첨부 안내 -->
+<!-- [M 2022-05-12] 툴팁 영역 추가 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">이미지 첨부 안내사항</dt>
+		<dd>
+			<ul class="txt-bul3">
+				<li>첨부파일의 사이즈는 <strong>000px X 000px</strong> 사이즈를 준수해주세요.</li>
+				<li>첨부파일은 <strong>png, jpg, jpeg, bmp, gif</strong> 파일만 등록이 가능합니다.</li>
+				<li>첨부파일 용량은 <strong>5M</strong>를 넘을 수 없습니다.</li>
+				<li>첨부파일을 등록하면, 퀴즈 내용 하단에 자동으로 노출됩니다.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">이미지 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+<!-- ##################################### -->
+</body>
+</html>

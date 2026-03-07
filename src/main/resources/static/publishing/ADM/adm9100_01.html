@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>리포트 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+
+
+<!-- 하이차트 라이브러리 -->
+<link rel="stylesheet" href="../resource/css/content_chart.css">
+<script src="../resource/js/chart/highcharts.js"></script>
+<script src="../resource/js/chart/data.js"></script>
+
+<!-- 차트 솔리드 게이지용 js 모듈 -->
+<script src="../resource/js/chart/highcharts-more.js"></script>
+<script src="../resource/js/chart/solid-gauge.js"></script>
+
+<!-- 차트 Heat Map 모듈 -->
+<script src="../resource/js/chart/heatmap.js"></script>
+
+<!-- 차트 Large tree map -->
+<script src="../resource/js/chart/treemap.js"></script>
+
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-06]	1. 설계사 구분 검색 수정
+	*	[M 2022-10-24]	1. [CASE] 자료가 없을 경우 추가
+	*	[M 2022-10-26]	1. No Data 안내문구가 수정
+	*	[M 2022-11-07]	1. No Data 안내문구가 추가
+	*	[M 2022-11-30]	1. 단위 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">리포트</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="sub">
+				<button type="button" class="btn-report1 ic-s">리포트 통합조회</button>
+				<button type="button" class="btn-report1">리포트 항목 순서 변경</button>
+			</div>
+			<ul class="tab2">
+				<li><a href="#" class="current">혜택</a></li>
+				<li><a href="#" class="">업적</a></li>
+				<li><a href="#" class="">조직</a></li>
+				<li><a href="#" class="">코칭</a></li>
+				<li><a href="#" class="">활동</a></li>
+			</ul>
+			<div class="report-wrap">
+				<fieldset class="form-search1">
+					<!--
+						[M : 2022-09-05 수정]
+						검색조건 영역 수정
+					-->
+					<div class="form-field">
+						<dl class="form w3">
+							<dt>조직/소속 구분</dt>
+							<dd>
+								<select name="" id="" class="selectbox" style="min-width:120px;">
+									<option value="">강남사업단</option>
+									<option value="">스마트사업단</option>
+								</select>
+								<select name="" id="" class="selectbox" style="min-width:160px;">
+									<option value="">지점명</option>
+									<option value="">리더스박진형RM2지점</option>
+								</select>
+							</dd>
+						</dl>
+						<dl class="form w1">
+							<dt>설계사 구분</dt>
+							<!-- [M 2022-10-06] 설계사 구분 검색 수정 -->
+							<dd>
+								<!-- [CASE 검색 후] -->
+								<span class="search-name">김롯데 <button type="button" class="btn-del1">삭제</button></span>
+								<!-- // -->
+								<button type="button" class="btn-search">검색</button>
+							</dd>
+							<!-- // -->
+						</dl>
+						<dl class="form w1">
+							<dt>기준월</dt>
+							<dd>
+								<div class="form-row">
+									<input type="text" class="date-m" value="" placeholder="월 선택" data-start-year="2022">
+								</div>
+							</dd>
+						</dl>
+					</div>
+
+					<div class="area-action">
+						<button type="button" onclick="uiFunction(this)" class="btn-action c1">조회</button>
+					</div>
+				</fieldset>
+				<!--
+					class="row" 하나당 그룹핑
+				-->
+
+				<!--[소득 - 소득]-->
+				<div class="row">
+
+					<div class="row-sub"><!-- [M 2022-10-24] 감싸는 태그 <div class="row-sub"> 추가  -->
+						<div class="col-2">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">소득조회 현황</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												전월, 전전월 소득금액의 증감 비율
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<strong>-</strong>
+											<span class="unit">%</span>
+										</div>
+										<div class="info02">
+											<em class="r-hold"><span>증가</span>전월대비 -만원</em>
+											<!-- <em class="r-des"><span>감소</span>전월대비 +3900만원</em> -->
+											<!-- <em class="r-hold"><span>변동없음</span>전월대비 0만원</em> -->
+										</div>
+									</div>
+									<div class="col-info2">(단위 원)</div>
+									<div class="data" style="height:238px;">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="benefitChart1" data-chart="Basic-Column2"></div>
+										<script>
+											Highcharts.chart("benefitChart1",{
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height:200
+												},
+												title:null,
+												legend:{
+													enabled:false,
+												},
+												xAxis:{
+													categories:["전전월", "전월", "당월"]
+												},
+												yAxis : {
+													visible : false
+												},
+												plotOptions:{
+													column:{
+														dataLabels:{
+															enabled:true,
+															// format:"{point.y:f}%",
+														}
+													}
+												},
+												series:[{
+													colorByPoint:true,
+													name:"실지급금액",
+													data:[1600000,5000000,700000,]
+												}]
+											})
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>자세히보기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">저소득 대상자</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												전체 인원 중 항목별 저소득 인원 수
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+									<div class="sub">
+										<select name="" id="exID" class="report-sel w240" disabled><!-- [M 2022-10-24] [CASE] 자료가 없을 경우 disabled 추가 -->
+											<option value="1">0원</option>
+											<option value="2">30만원 미만</option>
+											<option value="3">50만원 미만</option>
+											<option value="4">100만원 미만</option>
+										</select>
+									</div>
+								</div>
+								<div class="cont">
+
+									<div class="col-info1">
+										<div class="info01">
+											<strong>-</strong><!-- [M 2022-10-24] [CASE] 자료가 없을 경우 -->
+											<!-- <strong>16</strong> --><!-- [CASE] 자료가 있을 경우 -->
+											<span class="unit">명</span>
+										</div>
+										<div class="info02">
+											<em class="r-hold"><span>변동없음</span>전월대비 -명</em>
+											<!-- <em class="r-inc"><span>증가</span>전월대비 -3명</em> -->
+											<!-- <em class="r-des"><span>감소</span>전월대비 +33명</em> -->
+											<!-- <em class="r-hold"><span>변동없음</span>전월대비 -명</em> -->
+										</div>
+									</div>
+									<!--
+										[M : 2022-09-05 수정]
+										.col-info2 텍스트 수정 (단위 명, %)
+										차트 plotOptions 내용 수정,
+										data 위치 및 항목명 수정
+										data-chart 속성 변경
+										chart-info1 항목 변경
+									-->
+									<div class="col-info2">(단위 명, %)</div>
+									<div class="data" style="height:238px;">
+										<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="benefitChart2" data-chart="Donut-Line2"></div>
+										<div class="chart-info1">
+											<div class="c1 item2">100만원 미만 소득 <span>10</span></div>
+											<div class="c6 item2">그외 <span>10</span></div>
+										</div>
+										<script>
+											Highcharts.chart("benefitChart2",{
+												chart:{
+													type:"pie",
+													margin:[0,0,0,0],
+													height:180
+												},
+												title:{
+													text:"전체",
+													y:72,
+												},
+												subtitle:{
+													text:"48명",
+													y:95,
+												},
+												legend:{
+													enabled : false,
+												},
+												plotOptions:{
+													pie:{
+														dataLabels:{
+															enabled:false
+														},
+														innerSize:"90%",
+													},
+												},
+												series:[{
+													name:'',
+													data:[
+														{
+															name:"그외",
+															y:14
+														},
+														{
+															name:"100만원미만 소득",
+															y:86
+														}
+													]
+												}]
+											});
+
+										</script> -->
+										<!-- // -->
+									</div>
+
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>자세히보기</span></a>
+								</div> -->
+								<!-- // -->
+							</div>
+						</div>
+					</div><!-- // [M 2022-10-24] 감싸는 태그 <div class="row-sub"> 추가  -->
+
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">이탈예상설계사 3개월 소득 추이</h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+
+											<ul>
+												<li>이탈예상설계사의 실급여 3개월 추이 </li>
+												<li>평균 : 본인 사업단 또는 지점의 평균액</li>
+												<li>위촉/해촉 대상자는 정보 제외함 </li>
+												<li>전월 데이터가 없는 경우 목록에서 제외함</li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info2">(단위 원)</div>
+
+								<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!--[M : 2022-09-05 수정]
+									이탈예상설계사 3개월 소득 추이
+									차트  width 값 제거
+									legend width 제거
+								-->
+								<!-- <div class="report-slide1">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="tit3">홍길동 (1234567)</div>
+											<div class="data" style="height:320px;">
+												<div id="benefitChart3-1" data-chart="Pareto-chart1"></div>
+												<script>
+													//4개월 이상 보유
+													Highcharts.chart("benefitChart3-1",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														yAxis : {
+															visible:false
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+														},
+														plotOptions:{
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"홍길동",
+															data:[90,50,70]
+														},
+														{
+															type:"line",
+															name:"사업단 평균",
+															data:[70,40,80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">홍길동 (1234567)</div>
+											<div class="data" style="height:320px;">
+												<div id="benefitChart3-2" data-chart="Pareto-chart1"></div>
+												<script>
+													// 2~3개월 보유 case
+													Highcharts.chart("benefitChart3-2",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														yAxis : {
+															visible:false
+														},
+														xAxis:{
+															categories:["전전월", "전월"],
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+														},
+														plotOptions:{
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"홍길동",
+															data:[90,50]
+														},
+														{
+															type:"line",
+															name:"사업단 평균",
+															data:[70,40]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">홍길동 (1234567)</div>
+											<div class="data" style="height:320px;">
+												<div id="benefitChart3-3" data-chart="Pareto-chart1"></div>
+												<script>
+													//전월만 있음
+													Highcharts.chart("benefitChart3-3",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														yAxis : {
+															visible:false
+														},
+														xAxis:{
+															categories:["전월"],
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+														},
+														plotOptions:{
+															column:{
+																groupPadding : 0.4,//그래프 간격
+															},
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"홍길동",
+															data:[70]
+														},
+														{
+															name:"사업단 평균",
+															data:[80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">홍길동 (1234567)</div>
+											<div class="data" style="height:320px;">
+												<div id="benefitChart3-4" data-chart="Pareto-chart1"></div>
+												<script>
+													Highcharts.chart("benefitChart3-4",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														yAxis : {
+															visible:false
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+														},
+														plotOptions:{
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"홍길동",
+															data:[90,50,70]
+														},
+														{
+															type:"line",
+															name:"사업단 평균",
+															data:[70,40,80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">홍길동 (1234567)</div>
+											<div class="data" style="height:320px;">
+												<div id="benefitChart3-5" data-chart="Pareto-chart1"></div>
+												<script>
+													Highcharts.chart("benefitChart3-5",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														yAxis : {
+															visible:false
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+														},
+														plotOptions:{
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"홍길동",
+															data:[90,50,70]
+														},
+														{
+															type:"line",
+															name:"사업단 평균",
+															data:[70,40,80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="tit3">홍길동 (1234567)</div>
+											<div class="data" style="height:320px;">
+												<div id="benefitChart3-6" data-chart="Pareto-chart1"></div>
+												<script>
+													Highcharts.chart("benefitChart3-6",{
+														chart:{
+															type:"column",
+															marginLeft:0,
+															marginRight:0,
+															height:300
+														},
+														title:null,
+														yAxis : {
+															visible:false
+														},
+														xAxis:{
+															categories:["전전월", "전월", "당월"],
+														},
+														legend:{
+															enabled:true,
+															verticalAlign:"bottom",
+															align:'center',
+															layout:"horizontal",
+														},
+														plotOptions:{
+															line:{
+																dataLabels:{
+																	enabled:true
+																},
+															},
+														},
+														series:[{
+															name:"홍길동",
+															data:[90,50,70]
+														},
+														{
+															type:"line",
+															name:"사업단 평균",
+															data:[70,40,80]
+														}]
+													});
+
+												</script>
+											</div>
+										</div>
+									</div>
+									
+									<div class="slide-prev"></div>
+									<div class="slide-next"></div>
+								</div> -->
+								<!-- // -->
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">전월, 전전월 평균 소득항목 증감</h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>전전월 대비 전월의 증감 비율 </li>
+												<li>누적 3개월 대비 전월의 증감 비율 비교</li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info2">(단위 만원)</div>
+
+								<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="data" style="height:248px;">
+
+									<div id="benefitChart4" data-chart="Basic-Column4"></div>
+									<script>
+										Highcharts.chart("benefitChart4",{
+											chart:{
+												type:"column",
+												marginLeft:0,
+												marginRight:0,
+												height: 240
+											},
+											title:null,
+											legend:{
+												enabled:true,
+												verticalAlign:"bottom",
+												align:'center',
+												layout:"horizontal"
+											},
+											xAxis:{
+												categories:["계약소득", "초대소득", "관리소득","기타","포인트","공제","기지급"]
+											},
+											yAxis:{
+												labels:{
+													enabled:false
+												}
+											},
+											plotOptions:{
+												column:{
+													groupPadding : 0.2,//그래프 간격
+													dataLabels:{
+														enabled:true,
+													},
+												}
+											},
+											series:[
+												{
+													name:"전전월",
+													data:[16914,16914,16914,16914,16914,16914,16914]
+												},{
+													name:"전월",
+													data:[20296,20296,20296,20296,20296,20296,20296]
+												}
+											]
+										})
+									</script>
+								</div> -->
+								<!-- // -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--[포인트 - 포인트현황/적립]-->
+				<div class="row">
+					<div class="row-sub"><!-- [M 2022-11-07] 감싸는 태그 <div class="row-sub"> 추가  -->
+						<div class="col-2">
+							<div class="inner"><!-- [M 2022-11-07] style="height:502px;" 삭제  -->
+								<div class="head">
+									<div class="tit">
+										<h3 class="">월별 포인트 현황 </h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												<ul>
+													<li>적립 : 당월 누적P - 사용P </li>
+													<li>사용 : 당월 사용P </li>
+												</ul>
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+
+									<div class="col-info1">
+										<dl class="info01">
+											<dt>당월누적</dt>
+											<dd>
+												<strong>-</strong>
+												<span class="unit">P</span>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-info2">(단위 P)</div>
+									<div class="data" style="height:246px;">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="benefitChart5" data-chart="Basic-Column3"></div>
+										<script>
+											Highcharts.chart("benefitChart5",{
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height:240
+												},
+												title:null,
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'center',
+													layout:"horizontal"
+												},
+												xAxis:{
+													categories:["전전월", "전월", "당월"]
+												},
+												yAxis:{
+													// max:100,
+												},
+												plotOptions:{
+													column:{
+														groupPadding : 0.4,//그래프 간격
+														dataLabels:{
+															enabled:true,
+														},
+													}
+												},
+												series:[{
+														name:"적립",
+														data:[100,50,70]
+													},{
+														name:"사용",
+														data:[125,60,50]
+													}
+												]
+											})
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>자세히보기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="inner"><!-- [M 2022-11-07] style="height:502px;" 삭제  -->
+								<div class="head">
+									<div class="tit">
+										<h3 class="">포인트 적립 추이 </h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												<ul>
+													<li>주차별 적립된 포인트 </li>
+													<li>사용 포인트를 차액하지 않음 </li>
+												</ul>
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+
+								<div class="cont">
+
+									<div class="col-info1">
+										<dl class="info01">
+											<dt>당월 누적 포인트 <span>(지난주 포함 최근 4주)</span></dt>
+											<dd>
+												<strong>-</strong>
+												<span class="unit">P</span>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-info2">(단위 P)</div>
+									<div class="data" style="height:248px;">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="benefitChart6" data-chart="Basic-Line1"></div>
+										<script>
+											Highcharts.chart("benefitChart6",{
+												chart:{
+													type:"line",
+													marginTop : 20,
+													marginLeft:0,
+													marginRight:0,
+													height:220
+												},
+												title:null,
+												xAxis:{
+													categories:["4월 3주", "4월 4주", "4월 4주", "4월 5주"],
+													plotLines: [{
+														value: 3,	// 크로스라인 위치
+														className : 'xLine'
+													}],
+												},
+												yAxis:{
+													plotLines: [{
+														value: 9000,	//  y 크로스라인 위치
+														label: {
+															text: '평균 9,000',
+															y:-5,
+															x:0
+														}
+													}],
+												},
+												legend:{
+													enabled:false
+												},
+												series:[
+													{
+														name:'누적포인트(4주 기준)',
+														data:[
+															{ y:8000 },
+															{ y:6000 },
+															{
+																y:10914,	//제일 높은 수치 보임
+																dataLabels:{
+																	enabled:true
+																}
+															},
+															{ y:9914 }
+														]
+
+													}
+												]
+											});
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- //[M 2022-11-07] 감싸는 태그 <div class="row-sub"> 추가  -->
+					<div class="col-2">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">적립포인트 높은 항목</h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>적립이 높은 항목의 포인트액</li>
+												<li>적립 구분에 따른 비율과 건수 표기</li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info1">
+									<div class="info01">
+										<em class="info-tit1">퀘스트</em>
+										<strong>-</strong>
+										<span class="unit">P</span>
+									</div>
+									<div class="info02">
+										<em class="r-hold"><span>변동없음</span>전월대비 -%</em>
+										<!-- <em class="r-inc"><span>증가</span>전월대비 -10%</em> -->
+										<!-- <em class="r-des"><span>감소</span>전월대비 +10%</em> -->
+										<!-- <em class="r-hold"><span>변동없음</span>전월대비 -%</em> -->
+									</div>
+								</div>
+								<div class="col-info2">(단위 %)</div>
+
+								<!--
+									[M : 2022-09-05 수정]
+									차트/범례 내 단위 삭제
+									범례 class 추가
+									div.data height 변경
+								-->
+								<div class="data" style="height:260px">
+									<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+									<div class="nodata" style="display:block;">
+										기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+										조건을 변경해보세요.
+									</div>
+									<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+									<!-- [CASE] 자료가 있을 경우 -->
+									<!-- <div id="benefitChart8" data-chart="Donut-Line3"></div>
+									<div class="chart-info1 t1">
+										<div class="c1">퀘스트 <span>60</span></div>
+										<div class="c2">혜택 <span>20</span></div>
+										<div class="c6">기타 <span>20</span></div>
+									</div>
+									<script>
+										Highcharts.chart("benefitChart8", {
+											chart:{
+												type:"pie",
+												margin:[0,0,0,0],
+												height:180
+											},
+											title:{
+												text:"전체",
+												y:72,
+											},
+											subtitle:{
+												text:"48건",
+												y:95,
+											},
+											legend:{
+												enabled:false
+											},
+											plotOptions:{
+												pie:{
+													dataLabels:{
+														enabled:false
+													},
+													innerSize:"90%",
+												}
+											},
+											series:[{
+												name:"",
+												data:[
+													{
+														y:20,
+														name:"기타"
+													},
+													{
+														y:24,
+														name:"혜택"
+													},
+													{
+														y:56,
+														name:"퀘스트"
+													}
+												]
+											}]
+										});
+									</script> -->
+									<!-- //[CASE] 자료가 있을 경우 -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-2">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">소액 적립 대상자 </h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											소액 대상자 인원 및 비율 표기
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+								<div class="sub">
+									<select name="" id="" class="report-sel w240" disabled><!-- [M 2022-10-24] [CASE] 자료가 없을 경우 disabled 추가 -->
+										<option value="">0P</option>
+										<option value="">1만P 미만</option>
+										<option value="">2만P 미만</option>
+										<option value="">3만P 미만</option>
+									</select>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info1">
+									<div class="info01">
+										<strong>-</strong><!-- [M 2022-10-24] [CASE] 자료가 없을 경우 -->
+										<!-- <strong>14</strong> --><!-- [CASE] 자료가 있을 경우 -->
+										<span class="unit">명</span>
+									</div>
+									<div class="info02">
+										<em class="r-hold"><span>변동없음</span>전월대비 -명</em><!-- [M 2022-11-30] 단위 수정 -->
+										<!-- <em class="r-inc"><span>증가</span>전월대비 -10명</em> -->
+										<!-- <em class="r-des"><span>감소</span>전월대비 +10명</em> -->
+										<!-- <em class="r-hold"><span>변동없음</span>전월대비 -명</em> -->
+									</div>
+								</div>
+								<!--
+									[M : 2022-09-05 수정]
+									.col-info2 텍스트 수정 (단위 명, %)
+									data 항목명 수정 , height 변경
+									data-chart 속성 변경
+									chart-info1 항목 변경
+									차트/범례 내 % 삭제
+									범례 class 추가
+								-->
+								<div class="col-info2">(단위 명, %)</div>
+								<div class="data" style="height:260px">
+
+									<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+									<div class="nodata" style="display:block;">
+										기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+										조건을 변경해보세요.
+									</div>
+									<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+									<!-- [CASE] 자료가 있을 경우 -->
+									<!-- <div id="benefitChart9" data-chart="Donut-Line2"></div>
+									<div class="chart-info1 t1">
+										<div class="c1">1만P 미만 대상자 <span>60</span></div>
+										<div class="c6">그외 <span>20</span></div>
+									</div>
+									<script>
+										Highcharts.chart("benefitChart9", {
+											chart:{
+												type:"pie",
+												margin:[0,0,0,0],
+												height:180
+											},
+											title:{
+												text:"전체",
+												y:72,
+											},
+											subtitle:{
+												text:"48명",
+												y:95,
+											},
+											legend:{
+												enabled:false
+											},
+											plotOptions:{
+												pie:{
+													dataLabels:{
+														enabled:false
+													},
+													innerSize:"90%",
+												}
+											},
+											series:[{
+												name:"",
+												data:[
+													{
+														y:24,
+														name:"그외"
+													},
+													{
+														y:56,
+														name:"1만P 미만 대상자"
+													}
+												]
+											}]
+										});
+									</script> -->
+									<!-- // -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">포인트 적립 경로 </h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>전월 적립 포인트 중 활동명으로 분류하여 정보 제공 </li>
+												<li>적립액을 퀘스트와 혜택으로 누적된 적립액을 제공</li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info1">
+									<div class="info01">
+										<strong>-</strong><!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<!-- <strong>14,111,111,111</strong> --><!-- [CASE] 자료가 있을 경우 -->
+										<span class="unit">P</span>
+									</div>
+									<div class="info02">
+										<em class="r-hold"><span>변동없음</span>전월대비 -%</em>
+										<!-- <em class="r-inc"><span>증가</span>전월대비 -10%</em> -->
+										<!-- <em class="r-des"><span>감소</span>전월대비 +10%</em> -->
+										<!-- <em class="r-hold"><span>변동없음</span>전월대비 -%</em> -->
+									</div>
+								</div>
+								<div class="col-info2">(단위 P)</div>
+									<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+								<div class="data nodata" style="display:block;">
+									기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+									조건을 변경해보세요.
+								</div>
+								<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+								<!--  [CASE] 자료가 있을 경우 -->
+								<!-- <div class="data" style="height:338px">
+									<div id="benefitChart10" data-chart="Basic-Bar1"></div>
+									<script>
+										Highcharts.chart('benefitChart10', {
+											chart: {
+												type: 'bar',
+												marginTop:20,
+												height:320
+											},
+											title:null,
+											legend:{
+												enabled:true,
+												verticalAlign:"bottom",
+												align:'left',
+												layout:"horizontal"
+											},
+											xAxis: {
+												categories: ['교육', '업적', '로그인', '커뮤니티']
+											},
+											yAxis: {
+												labels:{
+													enabled:false
+												}
+											},
+											plotOptions:{
+												bar:{
+													dataLabels:{
+														enabled:true
+													},
+												}
+											},
+											series: [{
+												name: '퀘스트',
+												data: [85, 75, 55, 35]
+											}, {
+												name: '혜택',
+												data: [15, 25, 45, 65]
+											}]
+										});
+									</script>
+								</div> -->
+								<!--  //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">이탈예상설계사 3개월 포인트 적립 추이</h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>이탈예상설계사의 실지급포인트 3개월 추이</li>
+												<li>평균 : 본인 사업단 또는 지점의 평균액</li>
+												<li>위촉/해촉 대상자는 정보 제외함</li>
+												<li>전월 데이터가 없는 경우 목록에서 제외함</li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-info2">(단위 P)</div><!-- [M 2022-10-24] 텍스트 수정 -->
+							<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+							<div class="data nodata" style="display:block;">
+								기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+								조건을 변경해보세요.
+							</div>
+							<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+							<!--  [CASE] 자료가 있을 경우 -->
+							<!--[M : 2022-09-05 수정]
+								이탈예상설계사 3개월 소득 추이
+								차트  width 값 제거
+								legend  width 값 제거
+							-->
+							<!-- <div class="report-slide1">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="tit3">지점명</div>
+										<div class="data" style="height:320px;">
+
+											<div id="benefitChart10-1" data-chart="Pareto-chart1"></div>
+											<script>
+												Highcharts.chart("benefitChart10-1",{
+													chart:{
+														type:"column",
+														marginLeft:0,
+														marginRight:0,
+														height:300
+													},
+													title:null,
+													yAxis : {
+														visible:false
+													},
+													xAxis:{
+														categories:["전전월", "전월", "당월"],
+													},
+													legend:{
+														enabled:true,
+														verticalAlign:"bottom",
+														align:'center',
+														layout:"horizontal",
+
+													},
+													plotOptions:{
+														line:{
+															dataLabels:{
+																enabled:true
+															},
+														},
+													},
+													series:[{
+														name:"강남1지점",
+														data:[90,50,70]
+													},
+													{
+														type:"line",
+														name:"사업단 평균",
+														data:[70,40,80]
+													}]
+												});
+
+											</script>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="tit3">지점명</div>
+										<div class="data" style="height:320px;">
+											<div id="benefitChart10-2" data-chart="Pareto-chart1"></div>
+											<script>
+												Highcharts.chart("benefitChart10-2",{
+													chart:{
+														type:"column",
+														marginLeft:0,
+														marginRight:0,
+														height:300
+													},
+													title:null,
+													yAxis : {
+														visible:false
+													},
+													xAxis:{
+														categories:["전전월", "전월", "당월"],
+													},
+													legend:{
+														enabled:true,
+														verticalAlign:"bottom",
+														align:'center',
+														layout:"horizontal",
+
+													},
+													plotOptions:{
+														line:{
+															dataLabels:{
+																enabled:true
+															},
+														},
+													},
+													series:[{
+														name:"강남1지점",
+														data:[90,50,70]
+													},
+													{
+														type:"line",
+														name:"사업단 평균",
+														data:[70,40,80]
+													}]
+												});
+
+											</script>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="tit3">지점명</div>
+										<div class="data" style="height:320px;">
+											<div id="benefitChart10-3" data-chart="Pareto-chart1"></div>
+											<script>
+												Highcharts.chart("benefitChart10-3",{
+													chart:{
+														type:"column",
+														marginLeft:0,
+														marginRight:0,
+														height:300
+													},
+													title:null,
+													yAxis : {
+														visible:false
+													},
+													xAxis:{
+														categories:["전전월", "전월", "당월"],
+													},
+													legend:{
+														enabled:true,
+														verticalAlign:"bottom",
+														align:'center',
+														layout:"horizontal",
+
+													},
+													plotOptions:{
+														line:{
+															dataLabels:{
+																enabled:true
+															},
+														},
+													},
+													series:[{
+														name:"강남1지점",
+														data:[90,50,70]
+													},
+													{
+														type:"line",
+														name:"사업단 평균",
+														data:[70,40,80]
+													}]
+												});
+
+											</script>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="tit3">지점명</div>
+										<div class="data" style="height:320px;">
+											<div id="benefitChart10-4" data-chart="Pareto-chart1"></div>
+											<script>
+												Highcharts.chart("benefitChart10-4",{
+													chart:{
+														type:"column",
+														marginLeft:0,
+														marginRight:0,
+														height:300
+													},
+													title:null,
+													yAxis : {
+														visible:false
+													},
+													xAxis:{
+														categories:["전전월", "전월", "당월"],
+													},
+													legend:{
+														enabled:true,
+														verticalAlign:"bottom",
+														align:'center',
+														layout:"horizontal",
+
+													},
+													plotOptions:{
+														line:{
+															dataLabels:{
+																enabled:true
+															},
+														},
+													},
+													series:[{
+														name:"강남1지점",
+														data:[90,50,70]
+													},
+													{
+														type:"line",
+														name:"사업단 평균",
+														data:[70,40,80]
+													}]
+												});
+
+											</script>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="tit3">지점명</div>
+										<div class="data" style="height:320px;">
+											<div id="benefitChart10-5" data-chart="Pareto-chart1"></div>
+											<script>
+												Highcharts.chart("benefitChart10-5",{
+													chart:{
+														type:"column",
+														marginLeft:0,
+														marginRight:0,
+														height:300
+													},
+													title:null,
+													yAxis : {
+														visible:false
+													},
+													xAxis:{
+														categories:["전전월", "전월", "당월"],
+													},
+													legend:{
+														enabled:true,
+														verticalAlign:"bottom",
+														align:'center',
+														layout:"horizontal",
+
+													},
+													plotOptions:{
+														line:{
+															dataLabels:{
+																enabled:true
+															},
+														},
+													},
+													series:[{
+														name:"강남1지점",
+														data:[90,50,70]
+													},
+													{
+														type:"line",
+														name:"사업단 평균",
+														data:[70,40,80]
+													}]
+												});
+
+											</script>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="tit3">지점명</div>
+										<div class="data" style="height:320px;">
+											<div id="benefitChart11-6" data-chart="Pareto-chart1"></div>
+											<script>
+												Highcharts.chart("benefitChart11-6",{
+													chart:{
+														type:"column",
+														marginLeft:0,
+														marginRight:0,
+														height:300
+													},
+													title:null,
+													yAxis : {
+														visible:false
+													},
+													xAxis:{
+														categories:["전전월", "전월", "당월"],
+													},
+													legend:{
+														enabled:true,
+														verticalAlign:"bottom",
+														align:'center',
+														layout:"horizontal",
+
+													},
+													plotOptions:{
+														line:{
+															dataLabels:{
+																enabled:true
+															},
+														},
+													},
+													series:[{
+														name:"강남1지점",
+														data:[90,50,70]
+													},
+													{
+														type:"line",
+														name:"사업단 평균",
+														data:[70,40,80]
+													}]
+												});
+
+											</script>
+										</div>
+									</div>
+								</div>
+
+								<div class="slide-prev"></div>
+								<div class="slide-next"></div>
+							</div> -->
+							<!-- // -->
+
+						</div>
+					</div>
+				</div>
+				<!--[포인트 - 포인트사용/소멸]-->
+				<div class="row">
+
+					<div class="row-sub"><!-- [M 2022-11-07] 감싸는 태그 <div class="row-sub"> 추가  -->
+						<div class="col-3">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">사용 포인트</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												<ul>
+													<li>전월 총 사용한 포인트액</li>
+													<li>사용 구분에 따른 비율과 건수 표기</li>
+
+												</ul>
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont ">
+									<div class="col-info1">
+										<div class="info01">
+											<strong>-</strong><!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+											<!-- <strong>14,111</strong> --><!-- [CASE] 자료가 있을 경우 -->
+											<span class="unit">P</span>
+										</div>
+										<div class="info02">
+											<em class="r-hold"><span>변동없음</span>전월대비 -%</em>
+											<!-- <em class="r-inc"><span>증가</span>전월대비 -10%</em> -->
+											<!-- <em class="r-des"><span>감소</span>전월대비 +10%</em> -->
+											<!-- <em class="r-hold"><span>변동없음</span>전월대비 -%</em> -->
+										</div>
+									</div>
+									<div class="col-info2">(단위 %)</div>
+									<!--
+										[M : 2022-09-05 수정]
+										차트/범례 내 % 삭제
+										범례 class t1 추가
+									-->
+									<div class="data" style="height:260px"><!-- [M 2022-11-07] class nm 삭제  -->
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="benefitChart7" data-chart="Donut-Line3"></div>
+										<div class="chart-info1 t1">
+											<div class="c1">현금화 <span>60</span></div>
+											<div class="c2">소멸 <span>20</span></div>
+											<div class="c6">기타 <span>20</span></div>
+										</div>
+										<script>
+											Highcharts.chart("benefitChart7", {
+												chart:{
+													type:"pie",
+													margin:[0,0,0,0],
+													height:180
+												},
+												title:{
+													text:"전체",
+													y:72,
+												},
+												subtitle:{
+													text:"48건",
+													y:95,
+												},
+												legend:{
+													enabled:false
+												},
+												plotOptions:{
+													pie:{
+														dataLabels:{
+															enabled:false
+														},
+														innerSize:"90%",
+													}
+												},
+												series:[{
+													name:"",
+													data:[
+														{
+															y:20,
+															name:"기타"
+														},
+														{
+															y:24,
+															name:"소멸"
+														},
+														{
+															y:56,
+															name:"현금화"
+														}
+													]
+												}]
+											});
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">소멸예정 포인트 </h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												<ul>
+													<li>소멸 1달 전부터 노출됨</li>
+													<li>소멸예정일 익일 자정에 자동 소멸됨</li>
+												</ul>
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<dl class="info01">
+											<dt>D-2</dt>
+											<dd>
+												<strong>-</strong><!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+												<!-- <strong>14,111,111,111</strong> --><!-- [CASE] 자료가 있을 경우 -->
+												<span class="unit">P</span>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-info2">(단위 %)</div><!-- [M 2022-11-30] 단위 수정 -->
+									<!--
+										[M : 2022-09-05 수정]
+										차트/범례 내 % 삭제
+										범례 class t1 추가
+									-->
+									<div class="data" style="height:260px;">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="benefitChart12" data-chart="Donut-Line2"></div>
+										<div class="chart-info1 t1">
+											<div class="c1">소멸 포인트 <span>60</span></div>
+											<div class="c6">사용 포인트 <span>40</span></div>
+										</div>
+										<script>
+											Highcharts.chart("benefitChart12", {
+												chart:{
+													type:"pie",
+													margin:[0,0,0,0],
+													height:180
+												},
+												title:{
+													text:"전체",
+													y:72,
+												},
+												subtitle:{
+													text:"480,000P",
+													y:95,
+												},
+												legend:{
+													enabled:false,
+												},
+												plotOptions:{
+													pie:{
+														dataLabels:{
+															enabled:false
+														},
+														innerSize:"90%",
+													}
+												},
+												series:[{
+													name:"",
+													data:[
+														{
+															y:40,
+															name:"사용포인트"
+														},
+														{
+															y:60,
+															name:"소멸포인트"
+														}
+													]
+												}]
+											});
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>자세히보기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="inner">
+								<div class="head">
+									<div class="tit">
+										<h3 class="">소멸포인트 소진 3개월 추이 </h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												전체 소멸포인트 중 순수한 소멸 포인트액 정보 제공
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<dl class="info01">
+											<dt>전월대비</dt>
+											<dd>
+												<strong class="r-hold"><span>증가</span>-</strong>
+												<!-- <strong class="r-inc"><span>증가</span>14,111,111,111</strong> -->
+												<!-- <strong class="r-des"><span>감소</span>14,111,111,111</strong> -->
+												<!-- <strong class="r-hold"><span>변동없음</span> 0</strong> -->
+												<span class="unit">P</span>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-info2">(단위 P)</div>
+									<!--
+										[M : 2022-09-05 수정]
+										div.data height 변경
+										차트 height 변경
+									-->
+									<div class="data" style="height:260px;"><!-- [M 2022-11-07] class nm 삭제  -->
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="benefitChart13" data-chart="Basic-Column3"></div>
+										<script>
+											Highcharts.chart("benefitChart13",{
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height:250
+												},
+												title:null,
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'center',
+													layout:"horizontal"
+												},
+												xAxis:{
+													categories:["전전월", "전월", "당월"]
+												},
+												yAxis:{
+													// max:100,
+												},
+												plotOptions:{
+													column:{
+														groupPadding : 0.4,//그래프 간격
+														dataLabels:{
+															enabled:true,
+
+														},
+													}
+												},
+												series:[{
+														name:"소멸",
+														data:[10000,5000,7000]
+													},{
+														name:"사용",
+														data:[12500,6000,15000]
+													}
+												]
+											})
+
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- //[M 2022-11-07] 감싸는 태그 <div class="row-sub"> 추가  -->
+					<div class="col-2 t1">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">이달 현금화신청 요청건</h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>현금화 신청은 당월 기준으로 집계된 건/포인트액</li>
+												<li>확정 실적에 따라 변경될 수 있음 </li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info1">
+									<div class="info01">
+										<strong>-</strong>
+										<span class="unit">건</span>
+									</div>
+									<div class="info02">
+										<!-- <span>D-2</span> --><!-- [CASE] 자료가 있을 경우 -->
+										<em class="r-hold"><span>변동없음</span>전월대비 -건</em>
+										<!-- <em class="r-inc"><span>증가</span>전월대비 10건</em> -->
+										<!-- <em class="r-des"><span>감소</span>전월대비 10건</em> -->
+										<!-- <em class="r-hold"><span>변동없음</span>전월대비 -건</em> -->
+									</div>
+								</div>
+								<div class="col-info2">(단위 P)</div>
+								<div class="data">
+									<dl>
+										<dt>신청포인트</dt>
+										<dd class="info01">
+											<strong>-</strong>
+											<span class="unit">P</span>
+										</dd>
+									</dl>
+								</div>
+
+							</div>
+						</div>
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">이달 현금화신청 정산건</h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul>
+												<li>매월 5일 도래전까지는 전전월 정산금액이 표기됨 </li>
+												<li>확정 실적에 따라 신청금액과 다를 수 있음 </li>
+											</ul>
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info1">
+									<div class="info01">
+										<strong>-</strong>
+										<span class="unit">건</span>
+									</div>
+									<div class="info02">
+										<!-- <span>D-2</span> --><!-- [CASE] 자료가 있을 경우 -->
+										<em class="r-hold"><span>변동없음</span>전월대비 -건</em>
+										<!-- <em class="r-inc"><span>증가</span>전월대비 10건</em> -->
+										<!-- <em class="r-des"><span>감소</span>전월대비 10건</em> -->
+										<!-- <em class="r-hold"><span>변동없음</span>전월대비 -건</em> -->
+									</div>
+								</div>
+								<div class="col-info2">(단위 P)</div>
+								<div class="data">
+									<dl>
+										<dt>정산금액</dt>
+										<dd class="info01">
+											<strong>-</strong>
+											<span class="unit">P</span>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-2 t2">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3 class="">현금화신청 정산 추이</h3>
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											매월 5일 도래전까지는 전전월 정산금액이 표기됨
+										</div>
+										<button type="button" class="tooltip-close"></button>
+									</div>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="col-info2 t1">(단위 건, P)</div><!-- [M 2022-11-30] 단위 수정 -->
+								<div class="data" style="height:346px;">
+									<!-- [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+									<div class="nodata" style="display:block;">
+										기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+										조건을 변경해보세요.
+									</div>
+									<!-- // [M 2022-10-26] [CASE] 자료가 없을 경우 -->
+
+									<!--  [CASE] 자료가 있을 경우 -->
+									<!--
+										[M : 2022-09-05 수정]
+										현금화신청 정산 추이
+										차트  groupPadding 값 변경
+									-->
+									<!-- <div id="benefitChart14" data-chart="Basic-Column3"></div>
+									<script>
+										Highcharts.chart("benefitChart14",{
+											chart:{
+												type:"column",
+												marginLeft:0,
+												marginRight:0,
+												height:320
+											},
+											title:null,
+											legend:{
+												enabled:true,
+												verticalAlign:"bottom",
+												align:'center',
+												layout:"horizontal"
+											},
+											xAxis:{
+												categories:["전전월", "전월", "당월"]
+											},
+											yAxis:{
+												// max:100,
+											},
+											plotOptions:{
+												column:{
+													groupPadding : 0.2,//그래프 간격
+													dataLabels:{
+														enabled:true,
+													},
+												}
+											},
+											series:[{
+													name:"신청건",
+													data:[10000,5000,7000]
+												},{
+													name:"신청포인트",
+													data:[12500,6000,15000]
+												}
+											]
+										})
+
+									</script> -->
+									<!-- // -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="#" class="report-top"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+ function uiFunction(el){
+	$('#exID').val(2).prop('selected',true).removeAttr('disabled').selectmenu('refresh');
+ }
+</script>
+</body>
+</html>

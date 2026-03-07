@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>환급금조회 | 계약상세 | 통합계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>환급금조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [계약정보] -->
+		<!-- ######################### -->
+		<div class="info-summary2 line">
+			<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+			<div class="info">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>LA123456789</dd>
+				</dl>
+			</div>
+
+			<!-- [기준일자] -->
+			<div class="input-date1">
+				<span>
+					<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+					<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.02.18" readonly>
+				</span>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [총 금액] -->
+		<!-- ######################### -->
+		<div class="area-info2">
+			<dl>
+				<dt>총 납입액</dt>
+				<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+			</dl>
+			<dl>
+				<dt>총 지급앱(차감지급액)</dt>
+				<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [정보영역] -->
+		<!-- ######################### -->
+		<div class="area-toggle1" data-autoset="toggle">
+			<!-- ### 지급액 ### -->
+			<section class="active">
+				<header class="tit">
+					<h3>지급액</h3>
+					<button type="button" data-toggle="btn" aria-expanded="true">지급액 상세보기</button>
+				</header>
+				<div data-toggle="content">
+					<!-- // -->
+					<div class="area-info2 c1">
+						<dl>
+							<dt>합계</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+					</div>
+					<!-- // -->
+					<div class="info-con2">
+						<dl>
+							<dt>해약환급금</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>감액해지금</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>만기환급금</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>중도환급금</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>배당금</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>연금</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>보험금</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>환급보험료</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>선납보험료</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>가수보험료</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>가산이자</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>약관대출금</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>미경과이자</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+					</div>
+					<!-- // -->
+				</div>
+			</section>
+
+			<!-- ### 공제액 ### -->
+			<section class="active">
+				<header class="tit">
+					<h3>공제액</h3>
+					<button type="button" data-toggle="btn" aria-expanded="false">공제액 상세보기</button>
+				</header>
+				<div data-toggle="content">
+					<!-- // -->
+					<div class="area-info2 c1">
+						<dl>
+							<dt>합계</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+					</div>
+					<!-- // -->
+					<div class="info-con2">
+						<dl>
+							<dt>약관대출금</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>대출이자</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>추징보험료</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>부활미납이자</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>이전수수료</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>세금</dt>
+							<dd>
+								<div class="data-num1"><strong>1,943,590</strong><span>원</span></div>
+								<div class="area-btn3"><a href="javascript:void(0);" class="btn-sub3 c2">내역</a></div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>환수보험금</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>기지급환급금</dt>
+							<dd class="data-num1">000,000,000<strong></strong><span>원</span></dd>
+						</dl>
+					</div>
+					<!-- // -->
+				</div>
+			</section>
+			<!-- ### // ### -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]플랜선택 | 주계약정보 | 표준설계 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>플랜선택</h1>
+			<button type="button" data-btn="pop-close">플랜선택 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상품명] -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit2">let:smile 종합건강보험(더끌림 플러스)(2201)_납입면제적용형</h2>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭버튼] -->
+			<!-- ######################### -->
+			<div class="nav-tab1" data-autoset="tab">
+				<ul>
+					<li class="active"><a href="#uiTab2Section1" aria-current="page">회사플랜</a></li>
+					<li><a href="#uiTab2Section2">지점플랜</a></li>
+					<li><a href="#uiTab2Section3">나만의 플랜</a></li>
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 회사플랜 -->
+			<!-- ######################### -->
+			<div id="uiTab2Section1" class="ui-tabcon active">
+				<h3 class="hide">회사플랜</h3>
+
+				<!-- # 주요업종플랜 # -->
+				<h4 class="tit-sub1">주요업종플랜</h4>
+				<div class="area-toggle2" data-autoset="toggle">
+					<ul>
+						<!-- // -->
+						<li>
+							<!-- [상품명] -->
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>@상품명</strong>
+								</label>
+							</div>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+
+				<!-- # 전체플랜 # -->
+				<h4 class="tit-sub1">전체플랜</h4>
+				<div class="area-toggle2" data-autoset="toggle">
+					<ul>
+						<!-- // -->
+						<li>
+							<!-- [상품명] -->
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>@상품명</strong>
+								</label>
+								<button type="button" data-toggle="btn" aria-expanded="false">@상품명 상세보기</button>
+							</div>
+							<!-- [상품설명] -->
+							<div data-toggle="content">
+								<div class="mes-t1">상품 설명에 대한 영역</div>
+							</div>
+							<!-- [//] -->
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>무배당 롯데손해보험 힐링건강 플랜</strong>
+								</label>
+								<button type="button" data-toggle="btn" aria-expanded="false">무배당 롯데손해보험 힐링건강 플랜 내용보기</button>
+							</div>
+							<div data-toggle="content">
+								<div class="mes-t1">쉽고 간편해진 보험금 지급 기준 국가에서 운영하는 국민건강보험공단 등급판정 위원회에 의해 장기요양 등급(1~4등급)을 판정 받은경우 보험금을 지급하여 드립니다.</div>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>2080 힐링케어 건강 플랜</strong>
+								</label>
+								<button type="button" data-toggle="btn" aria-expanded="false">무배당 롯데손해보험 힐링건강 플랜 힐링건강 플랜 롯데손해보험 내용보기</button>
+							</div>
+							<div data-toggle="content">
+								<div class="mes-t1">쉽고 간편해진 보험금 지급 기준 국가에서 운영하는 국민건강보험공단 등급판정 위원회에 의해 장기요양 등급(1~4등급)을 판정 받은경우 보험금을 지급하여 드립니다.</div>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>무배당 롯데손해보험 힐링건강 플랜 힐링건강 플랜 롯데손해보험</strong>
+								</label>
+								<button type="button" data-toggle="btn" aria-expanded="false">상품설명 내용보기</button>
+							</div>
+							<div data-toggle="content">
+								<div class="mes-t1">쉽고 간편해진 보험금 지급 기준 국가에서 운영하는 국민건강보험공단 등급판정 위원회에 의해 장기요양 등급(1~4등급)을 판정 받은경우 보험금을 지급하여 드립니다.</div>
+							</div>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+				<!-- # // # -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 지점플랜 -->
+			<!-- ######################### -->
+			<div id="uiTab2Section2" class="ui-tabcon">
+				<h3 class="hide">지점플랜</h3>
+
+				<!-- # 목록 # -->
+				<div class="area-toggle2" data-autoset="toggle">
+					<ul>
+						<!-- // -->
+						<li>
+							<!-- [상품명] -->
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>@상품명</strong>
+								</label>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>무배당 롯데손해보험 힐링건강 플랜</strong>
+								</label>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>2080 힐링케어 건강 플랜</strong>
+								</label>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>무배당 롯데손해보험 힐링건강 플랜 힐링건강 플랜 롯데손해보험</strong>
+								</label>
+							</div>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+				<!-- # // # -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 나만의 플랜 -->
+			<!-- ######################### -->
+			<div id="uiTab2Section3" class="ui-tabcon">
+				<h3 class="hide">나만의 플랜</h3>
+
+				<div class="area-toggle2" data-autoset="toggle">
+					<ul>
+						<!-- // -->
+						<li>
+							<!-- [상품명] -->
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>@상품명</strong>
+								</label>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>브론즈 플랜</strong>
+								</label>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>실버 플랜</strong>
+								</label>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>에메랄드 플랜</strong>
+								</label>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="pl1">
+									<strong>사파이어 플랜</strong>
+								</label>
+							</div>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

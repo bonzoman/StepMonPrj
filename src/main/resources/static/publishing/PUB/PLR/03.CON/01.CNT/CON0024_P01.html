@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 과거 알릴사항 | [T] 피보험자 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>과거 알릴사항</h1>
+			<button type="button" data-btn="pop-close">과거 알릴사항 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 계약정보 -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+				<div class="info">
+					<dl>
+						<dt>증권번호</dt>
+						<dd>LA123456789</dd>
+					</dl>
+				</div>
+
+				<!-- [CASE1] 고객 -->
+				<div class="info-data3">
+					<dl>
+						<dt>피보험자</dt>
+						<dd class="data-info2" data-value="102702"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong>하다미</strong>
+							<span>
+								<span>1997.01.01</span>
+								<span>여</span>
+							</span>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- [CASE2] 기업 -->
+				<div class="info-data3">
+					<dl>
+						<dt>피보험자</dt>
+						<dd class="info2 ic2">
+							<strong>한화솔루션</strong>
+							<span>711-88-00112</span>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- [CASE3] 단체 -->
+				<div class="info-data3">
+					<dl>
+						<dt>피보험자</dt>
+						<dd class="info2 ic3">
+							<strong>TOMFORD NEWYORK</strong>
+							<span>227-82-62112</span>
+						</dd>
+					</dl>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [알릴사항 선택] -->
+			<!-- ######################### -->
+			<div class="select-wrap" data-autoset="select">
+				<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+					<span data-select="title">알릴사항 항목 선택</span>
+					<span data-select="text" data-value="1">변경순번 0013</span>
+				</button>
+				<div class="list" data-label="알릴사항 선택">
+					<div data-label="알릴사항 선택">
+						<div class="option">
+							<label><input type="radio" name="selectOpeion1" value="1"><span>변경순번 0013</span><i>(2022.03.12 등록)</i></label>
+							<label><input type="radio" name="selectOpeion1" value="2"><span>변경순번 0009</span><i>(2022.03.12 등록)</i></label>
+							<label><input type="radio" name="selectOpeion1" value="3"><span>변경순번 0000</span><i>(2022.03.12 등록)</i></label>
+						</div>
+						<button type="button" data-toggle="closebtn">확인</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [알릴사항 정보] -->
+			<!-- ######################### -->
+			<div class="wrap-section">
+				<h3 class="hide">알릴사항 정보</h3>
+				<!-- // -->
+				<div class="info-con1">
+					<dl>
+						<dt>구분/상태</dt>
+						<dd>정상</dd>
+					</dl>
+					<dl>
+						<dt>등록일자</dt>
+						<dd>2020.10.22</dd>
+					</dl>
+				</div>
+				<!-- // -->
+				<div class="tbl-data1">
+					<table>
+						<caption class="tit-sub1">알릴사항</caption>
+						<colgroup>
+							<!-- 2022-12-30 테이블 사이즈 변경 -->
+							<col style="width:40%">
+							<col style="width:20%">
+							<col style="width:40%">
+							<!-- //2022-12-30 테이블 사이즈 변경 -->
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">질문</th>
+								<th scope="col">질문답변</th>
+								<th scope="col">답변세부</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">근무처</th>
+								<td></td>
+								<td>주부</td>
+							</tr>
+							<tr>
+								<th scope="row">고혈압 이력</th>
+								<td>아니오</td>
+								<td>2010.11.01 ~ 2010.12.01</td>
+							</tr>
+							<tr>
+								<th scope="row">최근 3개월 내 검진여부</th>
+								<td></td>
+								<td>목포</td>
+							</tr>
+							<tr>
+								<th scope="row">근무지역</th>
+								<td></td>
+								<td>목포</td>
+							</tr>
+							<tr>
+								<th scope="row">업종명</th>
+								<td></td>
+								<td>가사</td>
+							</tr>
+							<tr>
+								<th scope="row">구체적인 취급업무</th>
+								<td></td>
+								<td>가사</td>
+							</tr>
+							<tr>
+								<th scope="row">최근 3개월 내 약물 복용</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">최근 1년 이내 추가 검사 여부</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">최근 5년 이내 추가 검사 여부</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">최근 5년 이내 치료 여부</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">최근 5년 이내 중요 질병여부</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">당뇨병 이력</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">임신여부</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">태아이상증상여부</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">기능/정신/신경장애여부</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">지체장애여부</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">직업확인여부</th>
+								<td>예</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">운전여부</th>
+								<td>함</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">승용차</th>
+								<td>자가용</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">위험취미사항</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">부업여부</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">출국계획</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">음주여부</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">흡연여부</th>
+								<td>아니오</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">타사가입유무</th>
+								<td>없음</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">키(cm)</th>
+								<td>165</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">몸무게(kg)</th>
+								<td>58</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">계약자월평균소득(만원)</th>
+								<td>800</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- // -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

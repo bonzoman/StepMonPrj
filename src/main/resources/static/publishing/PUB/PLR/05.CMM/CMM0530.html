@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>리스트 | 나만의 공동청약 | 공동청약</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>나의 공동청약</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단정보] -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<!-- [설계사정보] -->
+			<dl class="data-info1 t2">
+				<dt>
+					<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+					<span><strong>김종현</strong></span>
+					<span class="icon-star" data-value="3">평점 3점</span>
+				</dt>
+				<dd>강난사업단</dd>
+				<dd>17차월</dd>
+				<dd>우수설계사</dd>
+			</dl>
+
+			<!-- [모집중/신청중/승인대기중 게시글] -->
+			<div class="board-list3">
+				<dl>
+					<dt class="tit">
+						<!-- [상태] -->
+						<span>
+							<i class="icon-state2 ic4">모집중</i>
+							<i class="icon-state2 ic3">신청중</i> <!-- 신청중 클래스 변경 2022-12-28 변경 -->
+							<i class="icon-state2 ic1">승인대기중</i>
+						</span>
+						<!-- [제목] -->
+						<strong>종합건강보험 설계 도와주실 분 찾 도와주실 분 찾</strong>
+					</dt>
+					<!-- [상품명] -->
+					<dd class="txt">let: smile 종합건강보험</dd>
+					<!-- [해시태그] -->
+					<dd class="data-word2">
+						<span>#해시태그</span>
+						<span>#해시태그</span>
+						<span>#해시태그</span>
+						<span>#해시태그</span>
+						<span>#해시태그</span>
+						<span>#해시태그</span>
+						<span>#해시태그</span>
+						<span>#해시태그</span>
+					</dd>
+					<!-- [기여도]
+						점수 제어 부분 : 모집자 기여율
+						* style="--el-progress:00;"
+					-->
+					<dd class="area-progress4" style="--el-progress:50;">
+						<dl>
+							<dt>도움받는 사람</dt> <!-- 2022-12-26 텍스트 변경 -->
+							<dd><strong>50</strong><span>%</span></dd>
+						</dl>
+						<dl>
+							<dt>도와주는 사람</dt> <!-- 2022-12-26 텍스트 변경 -->
+							<dd><strong>50</strong><span>%</span></dd>
+						</dl>
+					</dd>
+					<!-- 2022-12-26 삭제 -->
+					<!-- <dd class="area-progress4">
+						<dl>
+							<dt>기여율</dt>
+							<dd>협의희망</dd>
+						</dl>
+					</dd> -->
+					<!-- //2022-12-26 삭제 -->
+					<!-- [등록일] -->
+					<dd class="data2">
+						<dl>
+							<dt>등록일</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+					</dd>
+					<!-- [조회/복사] -->
+					<dd class="data1">
+						<dl class="icon-com1 ic9">
+							<dt>조회</dt>
+							<dd>000</dd>
+						</dl>
+						<dl class="icon-com1 ic14">
+							<dt>설계복사</dt>
+							<dd>0000</dd>
+						</dl>
+					</dd>
+					<!-- [버튼] -->
+					<dd class="area-btn1">
+						<button type="button" class="btn-com1">수정</button>
+						<button type="button" class="btn-com1">삭제</button>
+					</dd>
+					<!-- [//] -->
+				</dl>
+			</div>
+			<!-- // -->
+		</div>
+
+
+
+		<!-- ######################### -->
+		<!-- [CASE] 게시글 없음] -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>모집/신청중인 게시글이 없습니다.</strong>
+				<span>조인트워크를 등록해보세요.</span>
+			</p>
+		</div>
+		<!-- // -->
+
+		<!-- ######################### -->
+		<!-- [탭버튼] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-autoset="tab"  data-sticky="top">
+			<ul>
+				<li class="active"><a href="#uiTabSection1" aria-current="page">도와줄게요</a></li>
+				<li><a href="#uiTabSection2">도와주세요</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [도와줄게요 목록] -->
+		<!-- ######################### -->
+		<div id="uiTabSection1" class="ui-tabcon active">
+			<!-- [소팅영역] -->
+			<div class="form-search1">
+				<div class="area-btn4">
+					<button type="button" class="btn-t1 c2 active" title="선택됨">전체</button> <!-- 선택됨 -->
+					<button type="button" class="btn-t1 c2">모집</button>
+					<button type="button" class="btn-t1 c2">신청</button>
+				</div>
+			</div>
+
+			<!-- [건수] -->
+			<div class="area-info1">
+				<p>총 <strong>000건</strong></p>
+				<div class="side">
+					<button type="button" class="icon-com1 ic18 right">필터</button>
+				</div>
+			</div>
+
+			<!-- [목록] -->
+			<div class="info-data2 t1">
+				<ul>
+					<!-- // -->
+					<li>
+						<!-- # 제목 # -->
+						<div class="tit">제목</div>
+						<!-- # 상태, 일시 # -->
+						<div class="info">
+							<!-- 상태 아이콘
+								* <i class="icon-txt2 t1 ic2">신청</i>
+								* <i class="icon-txt2 t1 ic6">모집</i>
+
+								* <i class="icon-state2 t1 ic5">신청 완료</i>
+								* <i class="icon-state2 ic2">기한종료</i>
+								* <i class="icon-state2 ic2">미선정</i>
+								* <i class="icon-state2 ic7">반려</i>
+							-->
+							<i class="icon-txt2 t1 ic2">신청</i>
+							<i class="icon-state2 t1 ic5">신청 완료</i>
+							<span>체결 일시</span>
+							<span>0000.00.00 00:00</span>
+						</div>
+						<!-- # 정보 # -->
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+							<span>
+								<strong class="txt-c1">모집자</strong>
+								<strong class="txt-c2">신청자</strong>
+								<strong>설계사명</strong>
+							</span>
+							<span><span>강남사업단</span><span>00차월</span></span>
+							<a href="javascript:void(0);" class="btn-util1 t2 ic6">연락 방법 선택</a> <!-- [M 2022-09-19] 버튼명 수정 -->
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">실손보험 설계 도와줄게요</div>
+						<div class="info">
+							<i class="icon-txt2 t1 ic6">모집</i>
+							<i class="icon-state2 t1 ic5">설계 완료</i>
+							<span>체결 일시</span>
+							<span>2022.04.28 14:00</span>
+						</div>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+							<span><strong class="txt-c2">신청자</strong><strong>하다미</strong></span>
+							<span><span>강남사업단</span><span>3차월</span></span>
+							<a href="javascript:void(0);" class="btn-util1 t2 ic6">연락 방법 선택</a>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">어린이보험 설계 도와줄게요</div>
+						<div class="info">
+							<i class="icon-txt2 t1 ic6">모집</i>
+							<i class="icon-state2 ic2">기한종료</i>
+							<span>등록일</span>
+							<span>2022.04.28 14:00</span>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">어린이보험 설계 도와줄게요</div>
+						<div class="info">
+							<i class="icon-txt2 t1 ic6">모집</i>
+							<i class="icon-state2 ic7">반려</i>
+							<span>등록일</span>
+							<span>2022.04.28 14:00</span>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">어린이보험 설계 도와줄게요</div>
+						<div class="info">
+							<i class="icon-txt2 t1 ic2">신청</i>
+							<i class="icon-state2 ic2">미선정</i>
+							<span>등록일</span>
+							<span>2022.04.28 14:00</span>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- [CASE] 모집 내역 없음 -->
+					<li class="nodata">
+						<strong>모집 내역이 없습니다.</strong>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- 더보기(현재페이지/총페이지) -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [도와주세요 목록] -->
+		<!-- ######################### -->
+		<div id="uiTabSection2" class="ui-tabcon">
+			<!-- [소팅영역] -->
+			<div class="form-search1">
+				<div class="area-btn4">
+					<button type="button" class="btn-t1 c2 active" title="선택됨">전체</button> <!-- 선택됨 -->
+					<button type="button" class="btn-t1 c2">모집</button>
+					<button type="button" class="btn-t1 c2">신청</button>
+				</div>
+			</div>
+
+			<!-- [건수] -->
+			<div class="area-info1">
+				<p>총 <strong>000건</strong></p>
+				<div class="side">
+					<button type="button" class="icon-com1 ic18 right">필터</button>
+				</div>
+			</div>
+
+			<!-- [목록] -->
+			<div class="info-data2 t1">
+				<ul>
+					<!-- // -->
+					<li>
+						<!-- # 제목 # -->
+						<div class="tit">제목</div>
+						<!-- # 상태, 일시 # -->
+						<div class="info">
+							<!-- 상태 아이콘
+								* <i class="icon-txt2 t1 ic2">신청</i>
+								* <i class="icon-txt2 t1 ic6">모집</i>
+
+								* <i class="icon-state2 t1 ic5">신청 완료</i>
+								* <i class="icon-state2 ic2">기한종료</i>
+								* <i class="icon-state2 ic2">미선정</i>
+								* <i class="icon-state2 ic7">반려</i>
+							-->
+							<i class="icon-txt2 t1 ic2">신청</i>
+							<i class="icon-state2 t1 ic5">신청 완료</i>
+							<span>체결 일시</span>
+							<span>0000.00.00 00:00</span>
+						</div>
+						<!-- # 정보 # -->
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+							<span>
+								<strong class="txt-c1">모집자</strong>
+								<strong class="txt-c2">신청자</strong>
+								<strong>설계사명</strong>
+							</span>
+							<span><span>강남사업단</span><span>00차월</span></span>
+							<a href="tel:000-0000-0000" class="btn-util1 t2 ic6">전화걸기</a>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">실손보험 설계 도와주세요</div>
+						<div class="info">
+							<i class="icon-txt2 t1 ic6">모집</i>
+							<i class="icon-state2 t1 ic5">설계 완료</i>
+							<span>체결 일시</span>
+							<span>2022.04.28 14:00</span>
+						</div>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+							<span><strong class="txt-c2">신청자</strong><strong>하다미</strong></span>
+							<span><span>강남사업단</span><span>3차월</span></span>
+							<a href="tel:000-0000-0000" class="btn-util1 t2 ic6">전화걸기</a>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">어린이보험 설계 도와주세요</div>
+						<div class="info">
+							<i class="icon-txt2 t1 ic6">모집</i>
+							<i class="icon-state2 ic2">기한종료</i>
+							<span>등록일</span>
+							<span>2022.04.28 14:00</span>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">어린이보험 설계 도와주세요</div>
+						<div class="info">
+							<i class="icon-txt2 t1 ic6">모집</i>
+							<i class="icon-state2 ic7">반려</i>
+							<span>등록일</span>
+							<span>2022.04.28 14:00</span>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">어린이보험 설계 도와주세요</div>
+						<div class="info">
+							<i class="icon-txt2 t1 ic2">신청</i>
+							<i class="icon-state2 ic2">미선정</i>
+							<span>등록일</span>
+							<span>2022.04.28 14:00</span>
+						</div>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<!-- [CASE] 모집 내역 없음 -->
+					<li class="nodata">
+						<strong>모집 내역이 없습니다.</strong>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- 더보기(현재페이지/총페이지) -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [사용자 전체 게시글 없음] -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>모집/신청중인 게시글이 없습니다.</strong>
+				<span>게시글을 등록해보세요.</span> <!-- 2022-12-26 텍스트 변경 -->
+			</p>
+			<div class="area-btn2">
+				<button type="button" class="btn-com1">공동청약 글쓰기</button> <!-- 2022-12-26 텍스트 변경 -->
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [등록버튼] -->
+		<!-- ######################### -->
+		<button type="button" class="btn-util1 ic1" data-sticky="bottom">등록</button>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

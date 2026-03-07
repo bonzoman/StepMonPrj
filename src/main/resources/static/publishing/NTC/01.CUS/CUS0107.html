@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>고객상세(채팅UI) | 고객상세 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-27]	1. 미니버튼 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>하다미님</h1>
+		<button type="button" class="btn-t1">고객정보</button>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단 확인정보] -->
+		<!-- ######################### -->
+		<div class="area-toggle1 t2" data-autoset="toggle" data-sticky="top">
+			<dl>
+				<dt class="tit">
+					<strong>1건</strong>의 확인정보가 있어요. <em class="icon-noti1 ic1">알림</em>
+					<button type="button" data-toggle="btn" aria-expanded="true">공지사항 상세보기</button>
+				</dt>
+				<dd data-toggle="content">
+					<ul class="data1">
+						<!-- // -->
+						<li>
+							<div class="info">
+								<em>해약문의 1건</em>
+								<span>2022.02.16 13:25 기준</span>
+							</div>
+							<div class="tit">
+								<strong>Let:smile 종합건강보험(더끌림플러스)</strong>
+								<span>납입일 2022.02.09 (1일째 미납중)</span>
+							</div>
+							<button type="button" class="link">상세보기</button>
+						</li>
+						<!-- // -->
+					</ul>
+				</dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [채팅영역] -->
+		<!-- ######################### -->
+		<div class="wrap-chat">
+			<dl>
+				<!-- ### [날짜영역] ### -->
+				<dt>2022년 02월 10일 목요일</dt>
+
+				<!-- ### [채팅영역] 이슈도래 메시지 CASE ### -->
+				<!-- [CASE1] 신규고객 등록-->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<p>김하륌님이 신규고객으로 등록되었어요!</p>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE2] 생일 1개월 전 고객 -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<p>08월 19일은 고객님의 생일이예요.<br>축하의 메시지를 전해보세요.</p>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">컨텐츠 발송하기</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE2] 보험생일(상령일) 1개월 전 고객 -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<p>12월 29일은 고객님의 보험생일입니다.<br>보험생일 이후에는 보험료가 변경됩니다.</p>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">컨텐츠 발송하기</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE3] 가입설계동의/상품소개동의 만기 1개월 전 고객 -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<p>고객님의 가입설계동의기간이 1달 이내에 만료될 예정이에요.</p>
+						<span>
+							<span>동의만료일</span>
+							<span>2022.07.04</span>
+						</span>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">가입설계동의받기</button>
+						<button type="button" class="btn-t1 c1">상품소개동의받기</button>
+						<button type="button" class="btn-t1 c1">동의현황</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE4] 갱신도래 1개월 전 고객 -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<!-- 상단문구 -->
+						<p>한 달 이내<br>갱신도래계약이 <strong>1건</strong> 있어요.<br>계약관리 메뉴에서 확인해보세요.</p>
+
+						<!-- 정보 1 -->
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="info">
+									<strong>Let:smile 종합건강보험 (더끌림플러스)</strong>
+									<span>210N20150001363</span>
+								</div>
+								<div class="info-con1 w1 t2">
+									<dl>
+										<dt>갱신일</dt>
+										<dd>2022.05.14</dd>
+									</dl>
+									<dl>
+										<dt>현재보험료</dt>
+										<dd class="data-num1"><strong>45,490</strong><span>원</span></dd>
+									</dl>
+									<dl>
+										<dt>갱신보험료</dt>
+										<dd class="data-num1"><strong>550,488</strong><span>원</span></dd>
+									</dl>
+									<dl>
+										<dt>인상률</dt>
+										<dd>7.2%</dd>
+									</dl>
+									<dl>
+										<dt>갱신일기준납입상태</dt>
+										<dd>정상(완납)</dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+
+						<!-- 업무 팁 보기 -->
+						<div class="area-btn4">
+							<button type="button" class="icon-com1 ic3 right">업무 TIP 보기</button>
+						</div>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">갱신대상계약조회</button>
+						<button type="button" class="btn-t1 c1">계약상세</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE4] 장기 - 만기 1개월 전 고객 -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<!-- 상단문구 -->
+						<p>한 달 이내<br>장기 만기도래계약이 <strong>1건</strong> 있어요.<br>계약관리 메뉴에서 확인해보세요.</p>
+
+						<!-- 정보 1 -->
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="info">
+									<strong>Let:smile 종합건강보험 (더끌림플러스)</strong>
+									<span>210N20150001363</span>
+								</div>
+								<div class="info-con1 w1 t2">
+									<dl>
+										<dt>만기예정일</dt>
+										<dd>2022.05.14</dd>
+									</dl>
+									<dl>
+										<dt>환급금유형</dt>
+										<dd>만기</dd>
+									</dl>
+									<dl>
+										<dt>환급금발생예정일</dt>
+										<dd>2022.05.14</dd>
+									</dl>
+									<dl>
+										<dt>최종지급금액</dt>
+										<dd class="data-num1"><strong>45,490</strong><span>원</span></dd>
+									</dl>
+									<dl>
+										<dt>환급금지급여부</dt>
+										<dd>미지급</dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+
+						<!-- 업무 팁 보기 -->
+						<div class="area-btn4">
+							<button type="button" class="icon-com1 ic3 right">업무 TIP 보기</button>
+						</div>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">만기대상관리</button>
+						<button type="button" class="btn-t1 c1">계약상세</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE4] 자동차 - 만기 1개월 전 고객 -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<!-- 상단문구 -->
+						<p>한 달 이내<br>자동차 만기도래계약이 <strong>1건</strong> 있어요.<br>계약관리 메뉴에서 확인해보세요.</p>
+
+						<!-- 정보 1 -->
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="info">
+									<strong>Let:smile 종합건강보험 (더끌림플러스)</strong>
+									<span>210N20150001363</span>
+								</div>
+								<div class="info-con1 w1 t2">
+									<dl>
+										<dt>만기예정일</dt>
+										<dd>2022.05.14</dd>
+									</dl>
+									<dl>
+										<dt>피보험자명</dt>
+										<dd>이진솔</dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+
+						<!-- 업무 팁 보기 -->
+						<div class="area-btn4">
+							<button type="button" class="icon-com1 ic3 right">업무 TIP 보기</button>
+						</div>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">만기대상관리</button>
+						<button type="button" class="btn-t1 c1">계약상세</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE4] 일반보험 - 만기 1개월 전 고객 -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<!-- 상단문구 -->
+						<p>한 달 이내<br>일반보험 만기도래계약이 <strong>1건</strong> 있어요.<br>계약관리 메뉴에서 확인해보세요.</p>
+
+						<!-- 정보 1 -->
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="info">
+									<strong>Let:smile 종합건강보험 (더끌림플러스)</strong>
+									<span>210N20150001363</span>
+								</div>
+								<div class="info-con1 w1 t2">
+									<dl>
+										<dt>만기예정일</dt>
+										<dd>2022.05.14</dd>
+									</dl>
+									<dl>
+										<dt>갱신일</dt>
+										<dd>2022.05.14</dd>
+									</dl>
+									<dl>
+										<dt>보종</dt>
+										<dd>종합보험 (화재종합)</dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+
+						<!-- 업무 팁 보기 -->
+						<div class="area-btn4">
+							<button type="button" class="icon-com1 ic3 right">업무 TIP 보기</button>
+						</div>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">만기대상관리</button>
+						<button type="button" class="btn-t1 c1">계약상세</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE4] 실효예상(연체 건) -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<!-- 상단문구 -->
+						<p>고객님의 미납건수가 <strong>1건</strong> 있어요.</p>
+
+						<!-- 정보 1 -->
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="info">
+									<strong>Let:smile 종합건강보험 (더끌림플러스)</strong>
+									<span>210N20150001363</span>
+								</div>
+								<div class="info-con1 w1 t2">
+									<dl>
+										<dt>납입예정일</dt>
+										<dd>2022.05.14</dd>
+									</dl>
+									<dl>
+										<dt>최종수납일</dt>
+										<dd>2022.05.14</dd>
+									</dl>
+									<dl>
+										<dt>보험료</dt>
+										<dd class="data-num1"><strong>550,488</strong><span>원</span></dd>
+									</dl>
+									<dl>
+										<dt>수금방법</dt>
+										<dd>자동이체</dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">수금대상리스트</button>
+						<button type="button" class="btn-t1 c1">계약상세</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE5] 자동이체 미출금 -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<!-- 상단문구 -->
+						<p>자동이체 미입금 계약이 <strong>1건</strong> 있습니다.</p>
+
+						<!-- 정보 1 -->
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="info">
+									<strong>Let:smile 종합건강보험 (더끌림플러스)</strong>
+									<span>210N20150001363</span>
+								</div>
+								<div class="info-con1 w1 t2">
+									<dl>
+										<dt>자동이체일</dt>
+										<dd>2022.05.14</dd>
+									</dl>
+									<dl>
+										<dt>미이체사유</dt>
+										<dd>잔액부족</dd>
+									</dl>
+									<dl>
+										<dt>보험료</dt>
+										<dd class="data-num1"><strong>53,880</strong><span>원</span></dd>
+									</dl>
+									<dl>
+										<dt>다음이체일</dt>
+										<dd>2022.05.19</dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+
+						<!-- 업무 팁 보기 -->
+						<div class="area-btn4">
+							<button type="button" class="icon-com1 ic3 right">업무 TIP 보기</button>
+						</div>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">계약상세</button>
+						<button type="button" class="btn-t1 c1">컨텐츠 발송하기</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE4] 부활대상(당월해지 건) -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<!-- 상단문구 -->
+						<p>고객님의 미납으로 이번 달에 해지된 계약이 <strong>1건</strong> 있어요.</p>
+
+						<!-- 정보 1 -->
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="info">
+									<strong>Let:smile 종합건강보험 (더끌림플러스)</strong>
+									<span>210N20150001363</span>
+								</div>
+								<div class="info-con1 w1 t2">
+									<dl>
+										<dt>해지일자</dt>
+										<dd>2022.05.14</dd>
+									</dl>
+									<dl>
+										<dt>1회보험료</dt>
+										<dd class="data-num1"><strong>550,488</strong><span>원</span></dd>
+									</dl>
+									<dl>
+										<dt>최종납입</dt>
+										<dd>2022.05</dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+
+						<!-- 업무 팁 보기 -->
+						<div class="area-btn4">
+							<button type="button" class="icon-com1 ic3 right">업무 TIP 보기</button>
+						</div>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">계약상세</button>
+						<button type="button" class="btn-t1 c1">부활대상계약리스트</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE4] 이탈예상 -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<!-- 상단문구 -->
+						<p>고객님이 계약사항 문의를 하셨어요.</p>
+
+						<!-- 정보 1 -->
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="info">
+									<strong>Let:smile 종합건강보험 (더끌림플러스)</strong>
+									<span>210N20150001363</span>
+								</div>
+								<div class="info-con1 w1 t2">
+									<dl>
+										<dt>문의내용</dt>
+										<dd>해약환급금/콜센터인입</dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+
+						<!-- 업무 팁 보기 -->
+						<div class="area-btn4">
+							<button type="button" class="icon-com1 ic3 right">업무 TIP 보기</button>
+						</div>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">고객상세</button>
+						<button type="button" class="btn-t1 c1">계약상세</button>
+						<button type="button" class="btn-t1 c1">컨텐츠발송</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE4] 반송우편물(1개월 전 반송 건부터) -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<!-- 상단문구 -->
+						<p>고객님의 반송우편물이 있어요.<br>계약관리 메뉴에서 확인해보세요.</p>
+
+						<!-- 정보 1 -->
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="info">
+									<strong>미납안내등기(계약자)</strong>
+								</div>
+								<div class="info-con1 w1 t2">
+									<dl>
+										<dt>발송일</dt>
+										<dd>2022.05.14</dd>
+									</dl>
+									<dl>
+										<dt>반송일</dt>
+										<dd>2022.05.14</dd>
+									</dl>
+									<dl>
+										<dt>반송사유</dt>
+										<dd>수취인불명</dd>
+									</dl>
+									<dl>
+										<dt>주소지</dt>
+										<dd>서울송파구</dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+
+						<!-- 업무 팁 보기 -->
+						<div class="area-btn4">
+							<button type="button" class="icon-com1 ic3 right">업무 TIP 보기</button>
+						</div>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">반송우편물관리</button>
+						<button type="button" class="btn-t1 c1">컨텐츠발송</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE4] 태아등재대상(출생예정일 1개월 전 ~ 경과) -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<!-- 상단문구 -->
+						<p>출생후등록이 필요한 계약이 있어요.<br>계약관리 메뉴에서 확인해보세요. </p>
+
+						<!-- 정보 1 -->
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="info">
+									<strong>미납안내등기(계약자)</strong>
+								</div>
+								<div class="info-con1 w1 t2">
+									<dl>
+										<dt>출산예정월</dt>
+										<dd>2022.05.14</dd>
+									</dl>
+									<dl>
+										<dt>임신주수</dt>
+										<dd>22</dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+
+						<!-- 업무 팁 보기 -->
+						<div class="area-btn4">
+							<button type="button" class="icon-com1 ic3 right">업무 TIP 보기</button>
+						</div>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">출생후등록 요청</button>
+						<button type="button" class="btn-t1 c1">계약상세</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- ### [채팅영역] 이슈발생 메시지 CASE ### -->
+				<!-- [CASE5] 사고등록 (장기/자동차/일반보험)-->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<p>보험금 접수 건이 있어요.</p>
+
+						<div class="info-con1 w1 t2">
+							<dl>
+								<dt>접수일자</dt>
+								<dd>2022.05.14</dd>
+							</dl>
+							<dl>
+								<dt>사고종목</dt>
+								<dd>자동차</dd>
+							</dl>
+							<dl>
+								<dt>사고일자</dt>
+								<dd>2022.05.14</dd>
+							</dl>
+							<dl>
+								<dt>처리상태</dt>
+								<dd>완료</dd>
+							</dl>
+							<dl>
+								<dt>종결일자</dt>
+								<dd>2022.05.14</dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">고객상세</button>
+						<button type="button" class="btn-t1 c1">계약상세</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE5] 완판모니터링(보완마감일 1개월 전) -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<p>보완이 필요한 모니터링 건이 있어요.<br>기한 내에 처리해주세요!</p>
+
+						<div class="info-con1 w1 t2">
+							<dl>
+								<dt>청약일</dt>
+								<dd>2022.05.14</dd>
+							</dl>
+							<dl>
+								<dt>보완마감일</dt>
+								<dd>2022.05.14</dd>
+							</dl>
+							<dl>
+								<dt>구분</dt>
+								<dd>완전판매</dd>
+							</dl>
+							<dl>
+								<dt>모니터링대상</dt>
+								<dd>김은혜</dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">완전판매모니터링</button>
+						<button type="button" class="btn-t1 c1">계약상세</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE6] 커뮤니티 무드 -->
+				<dd class="area1">
+					<!-- # 고객명 # -->
+					<div class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+					</div>
+
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<p>금일 고객님께 발송할 수 있는 컨텐츠가 3건 있어요.</p>
+					</div>
+
+					<!-- # 컨텐츠영역 # -->
+					<div class="board-list3 t1" data-scroll="true">
+						<ul>
+							<!-- // -->
+							<li>
+								<a href="javascript:void(0);">
+									<!-- [이미지] -->
+									<div class="img"><img src="../../resource/img/temp/@img_img2.png" alt=""/></div>
+									<!-- [제목] -->
+									<strong class="tit">고객들에게 좋은 보험이란 보험 상품이 아니라 보험설계사 입니다.</strong>
+									<!-- [해시태그] -->
+									<div class="data-word2">
+										<span>#보험서비스 발송</span>
+										<span>#상품</span>
+									</div>
+									<!-- [작성일] -->
+									<dl class="data2">
+										<dt>작성일</dt>
+										<dd>2022.04.15 20:48</dd>
+									</dl>
+									<!-- [조회/설계복사] -->
+									<div class="data1">
+										<dl class="icon-com1 ic9">
+											<dt>조회</dt>
+											<dd>1,240</dd>
+										</dl>
+										<dl class="icon-com1 ic13">
+											<dt>발송</dt>
+											<dd>1,240</dd>
+										</dl>
+									</div>
+									<!-- // -->
+								</a>
+
+								<!-- # 버튼영역 # -->
+								<div class="area-btn4">
+									<button type="button" class="btn-t1 c1">컨텐츠 발송하기</button>
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<a href="javascript:void(0);">
+									<!-- [이미지] -->
+									<div class="img"><img src="../../resource/img/temp/@img_img3.png" alt=""/></div>
+									<!-- [제목] -->
+									<strong class="tit">고객들에게 좋은 보험이란 보험 상품이 아니라 보험설계사 입니다.</strong>
+									<!-- [해시태그] -->
+									<div class="data-word2">
+										<span>#보험서비스 발송</span>
+										<span>#상품</span>
+									</div>
+									<!-- [작성일] -->
+									<dl class="data2">
+										<dt>작성일</dt>
+										<dd>2022.04.15 20:48</dd>
+									</dl>
+									<!-- [조회/설계복사] -->
+									<div class="data1">
+										<dl class="icon-com1 ic9">
+											<dt>조회</dt>
+											<dd>1,240</dd>
+										</dl>
+										<dl class="icon-com1 ic13">
+											<dt>발송</dt>
+											<dd>1,240</dd>
+										</dl>
+									</div>
+									<!-- // -->
+								</a>
+
+								<!-- # 버튼영역 # -->
+								<div class="area-btn4">
+									<button type="button" class="btn-t1 c1">컨텐츠 발송하기</button>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- ### [채팅영역] 설계사 측에서 발송한 이력 CASE ### -->
+				<!-- [CASE1] 자동발송 발송완료 -->
+				<dd class="area2">
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<p>컨텐츠가 발송되었습니다.<span class="txt-bul4">자동발송 건</span></p>
+						<strong>고객들에게 좋은 보험이란 보험 상품이 아니라 보험설계사 입니다.</strong>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">자동발송이력</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE2] 가입제안서 발송완료 -->
+				<dd class="area2">
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<p>가입제안서가 발송되었습니다.</p>
+
+						<div class="info">
+							<strong>Let:smile 종합건강보험 (더끌림플러스)</strong>
+							<span>210N20150001363</span>
+						</div>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">설계이력조회</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+
+				<!-- [CASE3] 모바일 보장분석 결과 발송완료 -->
+				<dd class="area2">
+					<!-- # 내용표시 # -->
+					<div class="data1">
+						<p>모바일 보장분석 결과가 발송되었습니다.</p>
+					</div>
+
+					<!-- # 버튼영역 # -->
+					<div class="area-btn4">
+						<button type="button" class="btn-t1 c1">보장분석 결과</button>
+					</div>
+
+					<!-- # 전송시각 # -->
+					<span>오후 2:49</span>
+				</dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		 <div class="area-action t1" data-sticky="bottom">
+			<dl class="select-toggle1" data-autoset="select">
+				<dt>가능한 업무</dt>
+				<dd>
+					<div class="basic">
+						<span>가능한 업무</span>
+						<button type="button" data-toggle="selectbtn" aria-expanded="false">메뉴열기</button>
+					</div>
+					<div class="list">
+						<button type="button"><span>가입설계동의</span></button>
+						<button type="button"><span>상품소개동의</span></button>
+						<button type="button"><span>가족등록</span></button>
+						<button type="button"><span>보장분석</span></button>
+						<button type="button"><span>가입설계</span></button>
+						<button type="button"><span>가입설계조회</span></button>
+						<button type="button"><span>통합계약조회</span></button>
+						<button type="button"><span>컨텐츠 발송</span></button>
+					</div>
+				</dd>
+			</dl>
+			<button type="button" class="btn-action ic18 simple">MINI</button> <!-- 2022-10-27 MINI 버튼 추가 -->
+			<a href="tel:1234-5678" class="btn-action ic7 simple">전화걸기</a>
+			<button type="button" class="btn-action ic1 simple">문자보내기</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+</main>
+</body>
+</html>

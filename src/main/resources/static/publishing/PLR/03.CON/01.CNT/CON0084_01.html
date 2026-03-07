@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[STEP1] | 서류발송 | 계약상세 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>서류발송</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [상단영역] 상품정보 -->
+		<!-- ######################### -->
+		<div class="info-summary2 t2">
+			<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+			<div class="info">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>LA123456789</dd>
+				</dl>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [진행상태] STEP 01 -->
+		<!-- ######################### -->
+		<div class="info-step1" data-autoset="toggle" data-sticky="top">
+			<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+			<ol data-toggle="content">
+				<li aria-current="step"><span>01. 서류 및 발송방법 선택</span></li>
+				<li><span>02. 정보입력 및 확인</span></li>
+			</ol>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [발송방법선택] -->
+		<!-- ######################### -->
+		<div class="tit-section"><p>서류 및 발송방법을<br>선택해주세요.</p></div>
+		<fieldset class="form-wrap1">
+			<legend>발송 방법 선택</legend>
+
+			<dl class="form">
+				<dt>발송서류 <i class="icon-required2">필수</i></dt>
+				<dd>
+					<!-- // -->
+					<div class="select-wrap" data-autoset="select" data-callback="uiFunction"> <!-- data-function="uiFunction" : 함수호출 샘플 하단 참고 -->
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">발송서류 선택</span>
+							<span data-select="text" data-value="1">온라인증권</span>
+						</button>
+						<div class="list">
+							<div data-label="발송서류 선택">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion" value="1"><span>온라인증권</span></label>
+									<label><input type="radio" name="selectOpeion" value="2"><span>보험납입내역서</span></label>
+									<label><input type="radio" name="selectOpeion" value="3"><span>손금산입증명서</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<!-- // -->
+					<input type="text" class="text" placeholder="기준년도를 입력해주세요." disabled>
+				</dd>
+			</dl>
+
+			<dl class="form">
+				<dt>발송방법(복수선택가능) <i class="icon-required2">필수</i></dt>
+				<dd>
+					<!-- 2022-12-21 변경 -->
+					<div class="label-check1 col3">
+						<label>
+							<input type="checkbox">
+							<span>알림톡</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>이메일</span>
+						</label>
+						<!-- 2022-12-21 삭제 -->
+						<!-- <label>
+							<input type="checkbox">
+							<span>팩스</span>
+						</label> -->
+					</div>
+					<!-- //2022-12-21 변경 -->
+				</dd>
+			</dl>
+		</fieldset>
+
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">다음</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	$plugin.togglecon('.area-toggle1 > section');
+
+	//샘플 : 발송서류
+	function uiFunction(e){
+		var _select_val = e.val();
+		var _select_con = $(e).parents('.select-wrap').next('input');
+		if(_select_val == 1) _select_con.attr('disabled',true);
+		else _select_con.removeAttr('disabled');
+	}
+//-->
+</script>
+</body>
+</html>

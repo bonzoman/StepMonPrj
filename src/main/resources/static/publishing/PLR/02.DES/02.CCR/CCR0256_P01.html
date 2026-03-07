@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 심사요청 | 설계(개인/업무/영업) | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-31]	1. 0건 케이스 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>심사요청</h1>
+			<button type="button" data-btn="pop-close">심사요청 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- 2022-10-31 0건 케이스 추가 -->
+			<!-- # 인수위배내용 # -->
+			<div class="info-con1">
+				<dl>
+					<dt>인수위배내용</dt>
+					<dd>
+						<div>T6418: 스코어링심사예외</div>
+						<div>T6800: 요율정보수기심의물건</div>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- # 요청사유 # -->
+			<fieldset class="form-wrap1">
+				<legend>요청사유 필수입력</legend>
+
+				<dl class="form">
+					<dt>요청사유</dt>
+					<dd><textarea class="textarea" cols="50" rows="3" title="요청사유" placeholder="내용을 입력하세요."></textarea></dd>
+					<dd class="mes2">데이터베이스 암호화 정책에 따라 요청사유에서는 고객의 개인정보를 입력할 수 없어요.</dd>
+				</dl>
+			</fieldset>
+			<!-- # // # -->
+			<!-- //2022-10-31 0건 케이스 추가 -->
+
+			<div class="area-toggle1" data-autoset="toggle">
+				<!-- ######################### -->
+				<!-- [기심사정보] -->
+				<!-- ######################### -->
+				<section>
+					<header class="tit">
+						<h2>기심사정보(총 <strong>00</strong>건)</h2>
+						<button type="button" data-toggle="btn" aria-expanded="false">기심사정보 상세보기</button>
+					</header>
+					<div data-toggle="content">
+						<div class="info-con1">
+							<!-- // -->
+							<ul>
+								<li>
+									<div>심사일</div>
+									<div>2022.03.01</div>
+								</li>
+								<li>
+									<div>심사구분</div>
+									<div>인수심사</div>
+								</li>
+								<li>
+									<div>설계번호</div>
+									<div>CA220308111701</div>
+								</li>
+								<li>
+									<div>심사의견</div>
+									<div>승인</div>
+								</li>
+								<li>
+									<div>심사결과</div>
+									<div>일반승인</div>
+								</li>
+								<li>
+									<div>승인기관</div>
+									<div>자동차계약관리파트</div>
+								</li>
+							</ul>
+							<!-- // -->
+							<ul>
+								<li>
+									<div>심사일</div>
+									<div>2022.03.01</div>
+								</li>
+								<li>
+									<div>심사구분</div>
+									<div>인수심사</div>
+								</li>
+								<li>
+									<div>설계번호</div>
+									<div>CA220308111701</div>
+								</li>
+								<li>
+									<div>심사의견</div>
+									<div>반려</div>
+								</li>
+								<li>
+									<div>심사결과</div>
+									<div>일반반려</div>
+								</li>
+								<li>
+									<div>승인기관</div>
+									<div>자동차계약관리파트(인수심사본점관리팀)</div>
+								</li>
+							</ul>
+							<!-- // -->
+							<ul>
+								<li>
+									<div>심사일</div>
+									<div>2022.03.01</div>
+								</li>
+								<li>
+									<div>심사구분</div>
+									<div>인수심사</div>
+								</li>
+								<li>
+									<div>설계번호</div>
+									<div>CA220308111701</div>
+								</li>
+								<li>
+									<div>심사의견</div>
+									<div>승인</div>
+								</li>
+								<li>
+									<div>심사결과</div>
+									<div>일반승인</div>
+								</li>
+								<li>
+									<div>승인기관</div>
+									<div>자동차계약관리파트</div>
+								</li>
+							</ul>
+							<!-- // -->
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">심사요청</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

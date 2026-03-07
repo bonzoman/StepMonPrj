@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 조직정보인증 | 간편로그인</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>조직정보인증</h1>
+			<button type="button" data-btn="pop-close">조직정보인증 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container" data-page="2">
+			<!-- ######################### -->
+			<!-- [상단영역] 입력필드 -->
+			<!-- ######################### -->
+			<fieldset class="form-util1">
+				<legend>발송된 6자리를 인증번호를<br>입력해주세요.</legend>
+
+				<!-- [CASE] 입력전 -->
+				<div class="text">
+					<input type="text">
+					<span class="util2"></span>
+				</div>
+
+				<!-- [CASE] 입력후 -->
+				<div class="text">
+					<input type="text" value="1203456">
+					<span class="util2">00:00</span>
+				</div>
+
+				<!-- [CASE] 오류 -->
+				<div class="text">
+					<input type="text" value="1203456" aria-invalid="true">
+					<span class="util2">00:00</span>
+				</div>
+
+				<!-- [CASE] 인증번호 오류 시 노출 -->
+				<div class="area-info4">
+					<div class="validation">시간을 초과하였습니다.<br>인증번호 발송요청을 다시 하십시오. </div>
+					<button type="button" class="link-t1" disabled>재발송</button>
+				</div>
+				<!-- // -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 보안 키패드 영역 -->
+			<!-- ######################### -->
+			<div></div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+
+<script>
+//<!--
+	//샘플 : 간편비밀번호 autofocus
+	$(".input-pass1 > input").keydown(function(e) {
+		if (e.which == 8 && this.value.length == 0) {
+			$(this).prev('input').focus();
+		}
+	}).keyup(function(e) {
+		if (this.value.length == this.maxLength) {
+			$(this).next('input').focus();
+			return false;
+		}
+	});
+
+	//간편비밀번호 완료 시 토스트팝업 호출
+	//ui.toast('간편 비밀번호가 등록되었습니다.');
+//-->
+</script>
+</body>
+</html>

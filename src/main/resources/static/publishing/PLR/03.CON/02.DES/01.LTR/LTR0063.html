@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>화재기본담보 | 화재기본담보 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-16]	1. 텍스트 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>보장(담보) 상세</h1>
+			<button type="button" data-btn="pop-close">보장(담보) 상세 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<h2 class="tit-sub1">담보명</h2>
+
+			<!-- ######################### -->
+			<!-- [담보상세]-->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>담보상세입력</legend>
+
+				<!-- # 가입금액 # -->
+				<dl class="form">
+					<dt>가입금액</dt>
+					<dd>
+						<div class="text num1">
+							<input type="tel" title="가입금액" placeholder="가입금액" value="1,000">
+							<span class="util1">만원</span>
+						</div>
+					</dd>
+					<!-- [CASE] 화재기본담보 - 명기가재 -->
+					<dd class="mes2">명기가재 가입금액은 일반가재 가입금액의 30% 이하로 입력하시기 바랍니다. (500만원 한도)</dd>
+				</dl>
+
+				<!-- # 목적물 상세 # -->
+				<dl class="form">
+					<dt>목적물 상세</dt>
+					<dd>
+						<!-- [D] 입력 불가능 : readonly -->
+						<input type="text" class="text" title="목적물 상세" placeholder="목적물 상세" value="건물전체 면적 502m&sup2;" readonly>
+
+						<!-- [D] 입력 가능 : readonly 삭제 -->
+						<input type="text" class="text" title="목적물 상세" placeholder="목적물 상세" value="일체">
+					</dd>
+				</dl>
+
+				<!-- # 수용장소상세 # -->
+				<dl class="form">
+					<dt>수용장소상세</dt>
+					<dd><input type="text" class="text" title="수용장소상세" placeholder="수용장소상세" value="건물전체 면적 502m&sup2;"></dd>
+				</dl>
+
+				<!-- # 건물안/밖 # -->
+				<dl class="form">
+					<dt>건물안/밖</dt>
+					<dd>
+						<!-- [D] 입력 -->
+						<input type="text" class="text" title="건물안/밖" placeholder="건물안/밖" value="건물안" readonly>
+
+						<!-- [D] 선택 -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">건물안/밖</span>
+								<span data-select="text" data-value="selectOpeion1-1">건물안</span>
+							</button>
+							<div class="list">
+								<div data-label="건물안/밖">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1-1"><span>건물안</span></label>
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1-2"><span>건물밖(야적)</span></label>
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1-3"><span>운송중</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 야적물건 # -->
+				<dl class="form">
+					<dt>야적물건</dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">야적물건</span>
+								<span data-select="text" data-value="selectOpeion2-1">가연성</span>
+							</button>
+							<div class="list">
+								<div data-label="야적물건">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion2-1"><span>가연성</span></label>
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion2-2"><span>불연성</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 지하수용 # -->
+				<dl class="form">
+					<dt>지하수용</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio">
+								<span>예</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio" checked>
+								<span>아니오</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- [CASE] 화재기본담보 - 건물 -->
+				<div class="area-btn1 sub-con0">
+					<button type="button" class="btn-com1">건물예상가액</button>
+					<button type="button" class="btn-com1">질권설정</button>
+				</div>
+				<!-- // -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [담보설명] -->
+			<!-- ######################### -->
+			<div class="wrap-section3">
+				<!-- # 건물 # -->
+				<dl class="mes-t3">
+					<dt>보장(담보)상세</dt>
+					<dd>지붕과 기둥 또는 지붕과 벽이 있는 것으로 주거, 작업, 등을 위하여 인공적으로 축조된 건조물 건물의 부속물(칸막이, 대문 등), 부착물(간판, 네온사인 등), 부속설비(전기, 가스, 난방, 냉방설비 등)포함</dd> <!-- 2022-11-16 텍스트 변경 -->
+				</dl>
+
+				<!-- # 기계 # -->
+				<dl class="mes-t3">
+					<dt>보장(담보)상세</dt>
+					<dd>건물이나 공장가동을 위해 필요한 모든 기계장치 및 보조기구  구조가 간단한 기계</dd>
+				</dl>
+
+				<!-- # 시설 # -->
+				<dl class="mes-t3">
+					<dt>보장(담보)상세</dt>
+					<dd>벽, 천정, 바닥 등에 설치하는 내외부 마감재나 부대시설로서 재설치가 가능한 것 인테리어, 칸막이 등 보통 임차인이 설치한 재물</dd> <!-- 2022-11-16 텍스트 변경 -->
+				</dl>
+
+				<!-- # 집기비품 # -->
+				<dl class="mes-t3">
+					<dt>보장(담보)상세</dt>
+					<dd>작업상의 필요로 사용되며 사무실, 영업장에서 소지가 가능한 것으로 부착, 고정되지 않고 이동 가능한 제품<br>예시) 노래연습장 내 노래방 기계</dd> <!-- 2022-11-16 텍스트 변경 -->
+				</dl>
+
+				<!-- # 일반가재 # -->
+				<dl class="mes-t3">
+					<dt>보장(담보)상세</dt>
+					<dd>개인이 소유하고 있는 일상의 가정생활용구로 가구, 집기, 의류, 장신구, 침구류, 식량, 연료, 기타 가정생활에 필요한 일체의 물품을 포괄함 단, 귀금속(골동품 포함) 등의 명기가재는 제외</dd> <!-- 2022-11-16 텍스트 변경 -->
+				</dl>
+
+				<!-- # 동산 # -->
+				<dl class="mes-t3">
+					<dt>보장(담보)상세</dt>
+					<dd>판매 및 (공장)생산라인의 주요 제품으로 원·부재료, 재공품, 반 · 완제품, 보관물품, 저장품 및 이와 비슷한 것</dd> <!-- 2022-11-16 텍스트 변경 -->
+				</dl>
+
+				<!-- # 명기가재 # -->
+				<dl class="mes-t3">
+					<dt>보장(담보)상세</dt>
+					<dd>보험증권에 명확히 기재해야 보상받을 수 있는 가재 (귀금속, 귀중품, 보옥, 보석, 글∙그림, 골동품, 조각물 및 이와 비슷한 것, 원고, 설계서, 도안, 물건의 원본, 모형, 증서, 장부, 금형, 목형, 소프트웨어 및 이와 비슷한 것)</dd>
+				</dl>
+
+				<!-- # 공기구 # -->
+				<dl class="txt-bul1 t2">
+					<dt><strong>보장(담보)상세</strong></dt>
+					<dd>공구: 작업과정에서 주된 기계의 보조구로 사용되는 것</dd>
+					<dd>기구: 기계 중 구조가 간단한 것 또는 도구 일반을 표시</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">적용</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

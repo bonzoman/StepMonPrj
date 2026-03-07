@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>(샘플) 날짜선택</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220914">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<style>
+	.ui-datepicker-calendar {display:none;}
+</style>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="form-wrap1">
+			<!-- ########################################## -->
+			<!-- * [샘플] : 날짜선택 : 비활성화 -->
+			<!-- ########################################## -->
+			<dl class="form">
+				<dt>날짜선택 : 비활성화</dt>
+				<dd class="input-date1">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>날짜 선택</button>
+						<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" readonly>
+					</span>
+				</dd>
+				<dd class="input-date1 text disabled">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>시작날짜 선택</button>
+						<input type="text" title="시작날짜 선택" data-dateform="start" value="2022.04.17" placeholder="YYYY.MM.DD" readonly>
+					</span>
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>종료날짜 선택</button>
+						<input type="text" title="종료날짜 선택" data-dateform="end" placeholder="YYYY.MM.DD" readonly>
+					</span>
+				</dd>
+			</dl>
+
+			<!-- ########################################## -->
+			<!-- * [샘플] : 날짜선택 : 기본 -->
+			<!-- ########################################## -->
+			<dl class="form">
+				<dt>날짜선택 : 기본</dt>
+				<dd class="input-date1">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+						<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" readonly>
+					</span>
+				</dd>
+			</dl>
+			<dl class="form">
+				<dt>날짜선택 : 오늘 이전 날짜 선택 불가</dt>
+				<dd class="input-date1">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+						<input type="text" class="text" title="날짜 선택"  value="" data-dateform="today" placeholder="YYYY.MM.DD" readonly>
+					</span>
+				</dd>
+			</dl>
+
+			<!-- ########################################## -->
+			<!-- * [샘플] : 기간선택 : 기본 -->
+			<!-- ########################################## -->
+			<dl class="form">
+				<dt>기간선택 : 기본</dt>
+				<dd class="input-date1 text">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+						<input type="text" title="시작날짜 선택" data-dateform="start2" id="uiEx" placeholder="YYYY.MM.DD" readonly>
+					</span>
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+						<input type="text" title="종료날짜 선택" data-dateform="start2" placeholder="YYYY.MM.DD" readonly>
+					</span>
+				</dd>
+				<dd class="mes">
+					시작날짜 : data-dateform="start"<br>
+					종료날짜 : data-dateform="end"
+				</dd>
+			</dl>
+
+			<!-- ########################################## -->
+			<!-- * [샘플] : 기간선택 : 입력 -->
+			<!-- ########################################## -->
+			<dl class="form">
+				<dt>기간선택 : 입력</dt>
+				<dd class="input-date1 text t2">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+						<input type="text" title="시작날짜 선택" id="uiEx" placeholder="YYYY.MM.DD" data-dateform="input">
+					</span>
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+						<input type="text" title="종료날짜 선택" placeholder="YYYY.MM.DD" data-dateform="input">
+					</span>
+				</dd>
+				<dd class="mes">
+					시작날짜 : data-dateform="start"<br>
+					종료날짜 : data-dateform="end"
+				</dd>
+			</dl>
+
+			<!-- ########################################## -->
+			<!-- * [샘플] : 기간선택 : 오늘 이후 선택 불가 -->
+			<!-- ########################################## -->
+			<dl class="form">
+				<dt>기간선택 : 오늘 이후 선택 불가</dt>
+				<dd class="input-date1 text">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+						<input type="text" title="시작날짜 선택" data-dateform="today2" placeholder="YYYY.MM.DD" readonly>
+					</span>
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+						<input type="text" title="종료날짜 선택" id="exID" data-dateform="today2" placeholder="YYYY.MM.DD" readonly>
+					</span>
+				</dd>
+				<dd class="mes">
+					시작날짜 : data-dateform="start2"<br>
+					종료날짜 : data-dateform="end2"
+				</dd>
+			</dl>
+
+			<!-- ########################################## -->
+			<!-- * [샘플] : 날짜선택 : 월선택 -->
+			<!-- ########################################## -->
+			<dl class="form">
+				<dt>날짜선택 : 월선택</dt>
+				<dd class="input-date1 text">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">시작월 선택</button>
+						<input type="text" title="시작월 선택" data-dateform="month" value="2022.02" placeholder="YYYY.MM" readonly>
+					</span>
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">종료월  선택</button>
+						<input type="text" title="종료월 선택" data-dateform="month" value="2022.03" placeholder="YYYY.MM" readonly>
+					</span>
+				</dd>
+				<dd class="mes">
+					월선택 : data-dateform="month"
+				</dd>
+			</dl>
+
+			<!-- ########################################## -->
+			<!-- * [샘플] : 날짜선택 : 연도선택 -->
+			<!-- ########################################## -->
+			<dl class="form">
+				<dt>날짜선택 : 연도선택</dt>
+				<dd class="input-wrap2">
+					<div class="select-wrap w100" data-autoset="select">
+						<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="true">
+							<span data-select="title">2022년</span>
+							<span data-select="text" data-value=""></span>
+						</button>
+						<div class="list">
+							<div data-label="연도선택">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion" value="1"><span>2021년</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<span class="util1">-</span>
+					<div class="select-wrap w100" data-autoset="select">
+						<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="true">
+							<span data-select="title">2022년</span>
+							<span data-select="text" data-value=""></span>
+						</button>
+						<div class="list">
+							<div data-label="연도선택">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion" value="1"><span>2021년</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+				</dd>
+				<dd class="mes">
+					월선택 : data-dateform="month"
+				</dd>
+			</dl>
+			<!--
+			<dl>
+				<dt>단일선택</dt>
+				<dd>
+					<span>
+						<button type="button" data-btn="picker" >test</button>
+						<input type="text" data-dateform="select5" readonly>
+					</span>
+				</dd>
+			</dl>
+
+			<dl>
+				<dt>기간선택</dt>
+				<dd>
+					<span>
+						<button type="button" data-btn="picker" >test</button>
+						<input type="text" data-dateform="start3" readonly>
+					</span>
+					<span>
+						<button type="button" data-btn="picker" id="result-11" >test</button>
+						<input type="text" data-dateform="end3" readonly>
+					</span>
+				</dd>
+			</dl>
+			-->
+			<!-- ########################################## -->
+		</div>
+
+	</div>
+</main>
+<script>
+
+	$('[data-dateform="today"]').val(moment(new Date()).format('YYYY.MM.DD'));
+
+
+	// 단일선택
+	// var picker = new Lightpick({
+	// 	field: document.querySelector('[data-dateform="select5"]'),
+	// 	format: 'YYYY.MM.DD',
+	// 	singleDate: true, //단일선택
+	// 	autoApply: false,
+	// 	autoclose: false,// 자동닫기
+	// 	numberOfColumns: 1,
+	// 	numberOfMonths: 12,
+	// 	footer: true,
+	// 	hoveringTooltip: false,
+	// 	dropdowns: {
+	// 		years: {
+	// 			min: 1900,
+	// 			max: 2050,
+	// 		},
+	// 		months: true,
+	// 	},
+	// 	firstDay: 0, // 시작요일설정
+	// 	// minDate: moment().startOf('day').add(new Date(), 'day'), // 오늘 이전 비활성화
+	// 	//maxDate: moment().startOf('day').add(new Date(), 'day'), // 오늘 이후 비활성화
+	// });
+
+	// // 기간선택
+	// var picker = new Lightpick({
+	// 	// element: document.getElementById('datepicker'),
+	// 	field: document.querySelector('[data-dateform="start3"]'),
+	// 	secondField: document.querySelector('[data-dateform="end3"]'),
+	// 	format: 'YYYY.MM.DD',
+	// 	singleDate: false,
+	// 	autoApply: false,
+	// 	autoclose: false,// 자동닫기
+	// 	numberOfColumns: 1,
+	// 	numberOfMonths: 12,
+	// 	footer: true,
+	// 	hoveringTooltip: false,
+	// 	dropdowns: {
+	// 		years: {
+	// 			min: 1900,
+	// 			max: 2030,
+	// 		},
+	// 		months: true,
+	// 	},
+	// 	firstDay: 0, // 시작요일설정
+	// 	minDate: moment().startOf('day').add(new Date(), 'day'), // 오늘 이전 비활성화
+	// 	maxDate: moment().startOf('day').add(new Date(), 'day'), // 오늘 이후 비활성화
+	// });
+</script>
+</body>
+</html>

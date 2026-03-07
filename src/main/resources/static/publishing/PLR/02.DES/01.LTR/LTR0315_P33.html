@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 자동차렌트비용지원금담보 | 담보추가속성 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-08]	1. 버튼 텍스트 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>담보추가속성</h1>
+			<button type="button" data-btn="pop-close">담보추가속성 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 보험정보 -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">let:care 재물종합보험(2201)</h2>
+				<div class="info">
+					<dl>
+						<dt>설계/증권번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [담보추가속성] 자동차대인보험료할증지원금담보 -->
+			<!-- ######################### -->
+			<div class="form-wrap1 line2">
+				<fieldset>
+					<legend class="tit">자동차대인보험료할증지원금담보</legend>
+
+					<!-- // -->
+					<dl class="form">
+						<dt>업종구분</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">업종구분</span>
+									<span data-select="text" data-value="1">백화점내 스낵코너</span>
+								</button>
+								<div class="list">
+									<div data-label="업종구분">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion1-1" value="1"><span>백화점내 스낵코너</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>규모/수량</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="규모/수량" placeholder="규모를 입력해주세요" value="8,530">
+								<span class="util">m&sup2;</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>보상한도</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">보상한도</span>
+									<span data-select="text" data-value="1">1인당 5백만원, 1사고당</span>
+								</button>
+								<div class="list">
+									<div data-label="보상한도">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion2-1" value="1"><span>1인당 5백만원, 1사고당</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>본인부담금</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">본인부담금</span>
+									<span data-select="text" data-value="1">1사고당 30만원</span>
+								</button>
+								<div class="list">
+									<div data-label="본인부담금">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion3-1" value="1"><span>1사고당 30만원</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>보험료</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="보험료" placeholder="보험료를 입력해주세요" value="250,000">
+								<span class="util">원</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>상태</dt>
+						<dd><input type="text" class="text" title="상태" placeholder="상태" value="정상"></dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>트램펄린(에어바운스)</dt>
+						<dd><input type="text" class="text" title="트램펄린(에어바운스)" placeholder="트램펄린(에어바운스)를 입력해주세요"></dd>
+					</dl>
+					<!-- // -->
+				</fieldset>
+
+				<!-- # [추가 담보항목] # -->
+				<fieldset>
+					<legend class="tit">자동차대인보험료할증지원금담보</legend>
+
+					<!-- // -->
+					<dl class="form">
+						<dt>업종구분</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">업종구분</span>
+									<span data-select="text" data-value="1">백화점내 스낵코너</span>
+								</button>
+								<div class="list">
+									<div data-label="업종구분">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion1" value="1"><span>백화점내 스낵코너</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>규모/수량</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="규모/수량" placeholder="규모를 입력해주세요">
+								<span class="util">m&sup2;</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>보상한도</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">보상한도</span>
+									<span data-select="text" data-value="1">1인당 5백만원, 1사고당</span>
+								</button>
+								<div class="list">
+									<div data-label="보상한도">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion2" value="1"><span>1인당 5백만원, 1사고당</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>본인부담금</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">본인부담금</span>
+									<span data-select="text" data-value="1">1사고당 30만원</span>
+								</button>
+								<div class="list">
+									<div data-label="본인부담금">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion3" value="1"><span>1사고당 30만원</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>보험료</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="보험료" placeholder="보험료를 입력해주세요">
+								<span class="util">원</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>상태</dt>
+						<dd><input type="text" class="text" title="상태" placeholder="상태" value="정상"></dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>트램펄린(에어바운스)</dt>
+						<dd><input type="text" class="text" title="트램펄린(에어바운스)" placeholder="트램펄린(에어바운스)를 입력해주세요"></dd>
+					</dl>
+
+					<!-- # 삭제버튼 # -->
+					<div class="side">
+						<button type="button" class="btn-sub3 c2">삭제</button>
+					</div>
+				</fieldset>
+			</div>
+
+			<!-- # [추가하기 버튼] # -->
+			<div class="area-btn1 line">
+				<button type="button" class="btn-com1 ic3">자동차대인보험료할증지원금담보 추가하기</button>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<!-- [CASE] 마지막 단계 -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action">이전</button>
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- [CASE] 중간 진입 -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action">이전</button>
+				<button type="button" class="btn-action c1">다음</button>
+			</div>
+			<!-- [CASE] 최초 진입 -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action c1">확인</button> <!-- 2022-11-10 텍스트 변경 -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

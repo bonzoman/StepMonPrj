@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>휴대폰본인인증 | 본인인증</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-29]	① 필수값 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- 2022-12-23 : 카톡브라우저 대응 수정 -->
+<main id="wrapper" style="overflow-y:auto;position:fixed;left:0;top:0;width:100%;height:100%;z-index:50;">
+<!-- // 2022-12-23 : 카톡브라우저 대응 수정 -->
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>휴대폰 본인인증</h1>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [정보입력] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend>휴대폰 본인인증 입력</legend>
+
+			<!-- # 이름 # -->
+			<dl class="form">
+				<dt>이름 <i class="icon-required2">필수</i></dt> <!-- [M 2022-09-29] 필수값 추가 -->
+				<dd><data class="text" value="하다미">하다미</data></dd>
+			</dl>
+
+			<!-- # 생년월일/성별 # -->
+			<dl class="form">
+				<dt>생년월일/성별 <i class="icon-required2">필수</i></dt> <!-- [M 2022-09-29] 필수값 추가 -->
+				<dd>
+					<div class="text">
+						<data value="910101">910101</data>
+						<span class="util">-</span>
+						<data value="2" class="maxlength">2</data>
+						<span class="util" data-masking="true">******</span>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # [M 2022-09-08] 약관영역 위치 이동 / 아코디언으로 변경 #  -->
+			<div class="area-toggle1">
+				<dl class="active">
+					<dt class="tit label-check1">
+						<!-- 전체동의 -->
+						<label>
+							<input type="checkbox" id="chAgreeAll">
+							<span><em class="icon-required">필수</em>휴대폰 본인인증 동의</span>
+						</label>
+						<!-- 상세열기 -->
+						<button type="button" data-toggle="btn" aria-expanded="true">상세보기</button>
+					</dt>
+
+					<!-- 개인정보 및 이용 약관 항목 -->
+					<dd data-toggle="content" class="form-agree1">
+						<div class="label-check2">
+							<label>
+								<input type="checkbox" id="chAgree1" name="chAgree" value="1" required>
+								<span><!--  <em class="icon-required">필수</em> [M 2022-09-08] 필수 삭제 -->개인정보 수집 및 이용동의</span>
+								<a href="javascript:void(0);" class="btn">개인정보 수집 및 이용동의 내용 상세보기</a>
+							</label>
+							<label>
+								<input type="checkbox" id="chAgree2" name="chAgree" value="2" required>
+								<span><!--  <em class="icon-required">필수</em> [M 2022-09-08] 필수 삭제 -->고유식별정보 처리 동의</span>
+								<a href="javascript:void(0);" class="btn">고유식별정보 처리 동의 내용 상세보기</a>
+							</label>
+							<label>
+								<input type="checkbox" id="chAgree3" name="chAgree" value="3" required>
+								<span><!--  <em class="icon-required">필수</em> [M 2022-09-08] 필수 삭제 -->통신사 이용약관 동의</span>
+								<a href="javascript:void(0);" class="btn">통신사 이용약관 동의 내용 상세보기</a>
+							</label>
+							<label>
+								<input type="checkbox" id="chAgree4" name="chAgree" value="4" required>
+								<span><!--  <em class="icon-required">필수</em> [M 2022-09-08] 필수 삭제 -->서비스 이용약관 동의</span>
+								<a href="javascript:void(0);" class="btn">서비스 이용약관 동의 내용 상세보기</a>
+							</label>
+							<label>
+								<input type="checkbox" id="chAgree5" name="chAgree" value="5" required>
+								<span><!--  <em class="icon-required">필수</em> [M 2022-09-08] 필수 삭제 -->개인정보 제3자 제공 동의(알뜰폰)</span>
+								<a href="javascript:void(0);" class="btn">개인정보 제3자 제공 동의(알뜰폰) 상세보기</a>
+							</label>
+						</div>
+						<!-- // -->
+					</dd>
+					<!-- // -->
+				</dl>
+			</div>
+			<!-- # // [M 2022-09-08] #  -->
+
+			<!-- # 휴대폰번호 # -->
+			<dl class="form">
+				<dt>휴대폰번호 <i class="icon-required2">필수</i></dt> <!-- [M 2022-09-29] 필수값 추가 -->
+				<!-- [CASE1] 기본 -->
+				<dd>
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">통신사 선택</span>
+							<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+						</button>
+						<div class="list">
+							<div data-label="통신사 선택">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_1"><span>SKT</span></label>
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_2"><span>KT</span></label>
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_3"><span>LG U+</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<div class="input-wrap1">
+						<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요.">
+						<button type="button" class="btn-sub1">발송하기</button>
+					</div>
+					<div class="input-wrap1">
+						<div class="text">
+							<input type="tel" title="인증번호" placeholder="인증번호" disabled>
+							<span class="util2">03:00</span>
+						</div>
+						<button type="button" class="btn-sub1" disabled>인증확인</button>
+					</div>
+					<div class="validation"></div>
+				</dd>
+				<!-- [CASE2] 완료 -->
+				<dd>
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">통신사 선택</span>
+							<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+						</button>
+						<div class="list">
+							<div data-label="통신사 선택">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion2" value="selectOpeion1_1"><span>SKT</span></label>
+									<label><input type="radio" name="selectOpeion2" value="selectOpeion1_2"><span>KT</span></label>
+									<label><input type="radio" name="selectOpeion2" value="selectOpeion1_3"><span>LG U+</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<div class="input-wrap1">
+						<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요." value="01012345678">
+						<button type="button" class="btn-sub1">발송하기</button>
+					</div>
+					<div class="input-wrap1">
+						<div class="text">
+							<input type="tel" title="인증번호" placeholder="인증번호" value="123456" aria-invalid="false"> <!-- [D] 속성: aria-invalid="false" 추가 -->
+							<span class="util2">03:00</span>
+						</div>
+						<button type="button" class="btn-sub1">인증확인</button>
+					</div>
+					<div class="validation">인증이 완료되었습니다.</div>
+				</dd>
+				<!-- [CASE3] 오류 -->
+				<dd>
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">통신사 선택</span>
+							<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+						</button>
+						<div class="list">
+							<div data-label="통신사 선택">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion3" value="selectOpeion1_1"><span>SKT</span></label>
+									<label><input type="radio" name="selectOpeion3" value="selectOpeion1_2"><span>KT</span></label>
+									<label><input type="radio" name="selectOpeion3" value="selectOpeion1_3"><span>LG U+</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<div class="input-wrap1">
+						<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요." value="01012345678">
+						<button type="button" class="btn-sub1">발송하기</button>
+					</div>
+					<div class="input-wrap1">
+						<div class="text">
+							<input type="tel" title="인증번호 입력" value="46365" placeholder="인증번호" aria-invalid="true"> <!-- [D] 속성: aria-invalid="true" 추가 -->
+							<span class="util2">01:00</span>
+						</div>
+						<button type="button" class="btn-sub1">인증확인</button>
+					</div>
+					<div class="validation">인증번호를 정확하게 입력해주세요.</div>
+				</dd>
+				<!-- // -->
+			</dl>
+		</fieldset>
+
+
+		<!-- ######################### -->
+		<!-- [버튼영역] -->
+		<!-- ######################### -->
+		<div class="area-btn1">
+			<a href="javascript:void(0);" class="btn-com1">타인증 수단 선택</a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action">이전</button>
+			<button type="button" class="btn-action c1">다음</button>
+			<!-- <button type="button" class="btn-action c1" disabled>다음</button> : 비활성화 -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	//전체동의 샘플
+	var _el = $plugin.togglecon('.area-toggle1 > dl');
+
+	//전체동의 이벤트
+	$(document).on('change','#chAgreeAll', function(){
+		if($(this).prop('checked')){ //전체동의 함
+			_el.outputClose();
+			$('[name="chAgree"]').prop('checked',true);
+		}else{//전체동의 하지 않음
+			_el.outputOpen();
+			$('[name="chAgree"]').prop('checked',false);
+		}
+	});
+
+	//개별 약관 이벤트
+	$(document).on('change','[name="chAgree"]',function(){
+		var _elTotal = $('[name="chAgree"]').length;
+		var _elChecked = $('[name="chAgree"]:checked').length;
+
+		if(_elTotal == _elChecked) $('#chAgreeAll').prop('checked',true).trigger('change');
+		else if(_elTotal > _elChecked) $('#chAgreeAll').prop('checked',false).trigger('change');
+	});
+//-->
+</script>
+</body>
+</html>

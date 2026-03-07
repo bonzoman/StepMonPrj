@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>설계(이륜) | 가입설계 | 자동차보험 | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-23]	① 문구수정 : 담보사항 > 보장(담보)사항
+	*					② 보장(담보)사항 > 정보 영역 구조 변경
+	*					③ 보장(담보)사항 > 영수보험료 영역 추가
+	*	[M 2022-10-31]	① 최하단 영수보험료 영역 디자인 변경
+	*	[M 2022-11-17]	① 변경관리로인한 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>자동차설계</h1>
+		<button type="button" class="btn-t1">청약</button>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<article id="CCR0204" class="none">
+			<!-- ######################### -->
+			<!-- [STEP 영역] -->
+			<!-- ######################### -->
+			<div class="wrap-step1" data-sticky="top" data-scroll-tab="true">
+				<!-- # 상품명/담당LP정보 # -->
+				<div class="info-summary2">
+					<h2 class="tit">let:way개인용자동차보험 (일반)</h2>
+					<div class="data2">
+						<p>담당LP 강다니엘(123456)</p>
+					</div>
+				</div>
+
+				<!-- # 진행상태 # -->
+				<div class="info-step1" data-autoset="toggle">
+					<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+					<div data-toggle="content">
+						<!-- // -->
+						<div class="area-btn1">
+							<button type="button" class="btn-sub2 c2 ic8" onclick="sectionOn('#CCR0270');">가입설계 다시하기</button>
+						</div>
+						<!-- // -->
+						<ol>
+							<li aria-current="step">
+								<span>01. 기본정보</span>
+								<a href="#uiTabSection1" class="btn-sub3 c2">이동</a>
+							</li>
+							<li>
+								<span>02. 차량정보</span>
+								<a href="#uiTabSection2" class="btn-sub3 c2">이동</a>
+							</li>
+							<li>
+								<span>03. 특별약관</span>
+								<a href="#uiTabSection3" class="btn-sub3 c2">이동</a>
+							</li>
+							<li>
+								<span>04. 요율정보</span>
+								<a href="#uiTabSection4" class="btn-sub3 c2">이동</a>
+							</li>
+							<li>
+								<span>05. 특별요율</span>
+								<a href="#uiTabSection5" class="btn-sub3 c2">이동</a>
+							</li>
+							<li>
+								<span>06. 보장(담보)사항</span> <!-- [M 2022-08-23]	① 문구수정 -->
+								<a href="#uiTabSection6" class="btn-sub3 c2">이동</a>
+							</li>
+						</ol>
+						<!-- // -->
+					</div>
+				</div>
+				<!-- # // # -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [요약정보] -->
+			<!-- ######################### -->
+			<div class="info-summary1">
+				<dl class="info">
+					<dt>설계번호</dt>
+					<dd class="ic1"><strong>CA1234567891000</strong></dd>
+				</dl>
+				<dl class="data2">
+					<dt>설계상태</dt>
+					<dd>설계완료</dd>
+					<dt>인수상태</dt>
+					<dd>일반인수</dd>
+				</dl>
+				<!-- [D] 증권번호 없을 시 미노출 -->
+				<dl class="data1">
+					<dt>증권번호</dt>
+					<dd>11223369000000</dd>
+				</dl>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [기본정보] -->
+			<!-- ######################### -->
+			<div id="uiTabSection1" class="wrap-section" data-scroll-con="1">
+				<!-- // -->
+				<div class="tit-sub1">
+					<h3>기본정보</h3>
+					<div class="side"><button type="button" onclick="sectionOn('#page1')" class="btn-sub2 c2">정보변경</button></div>
+				</div>
+
+				<!-- [입력항목오류알림문구] -->
+				<p class="validation">기본 정보 중 누락된 항목을 확인 후 작성해주세요.</p>
+
+				<!-- [정보영역] -->
+				<div class="info-con1">
+					<dl>
+						<dt>피보험자 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<div class="data-info2">
+								<strong>피보험자명</strong>
+								<span>
+									<span>0000.00.00</span>
+									<span>성별</span>
+									<span>나이</span>
+								</span>
+							</div>
+							<div>집/서울 서초구 서운로26길 11-12</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>계약자 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<div class="data-info2">
+								<strong>계약자명</strong>
+								<span>
+									<span>0000.00.00</span>
+									<span>성별</span>
+									<span>나이</span>
+								</span>
+							</div>
+							<div>집/서울 서초구 서운로26길 11-12</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>취득경로 <i class="icon-required2">필수</i></dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>보험기간 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<div>2022.03.01~2023.03.01</div>
+							<div>(365일)</div>
+						</dd>
+					</dl>
+				</div>
+				<!-- [//] -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [차량정보] -->
+			<!-- ######################### -->
+			<div id="uiTabSection2" class="wrap-section3 invalid" data-scroll-con="2"> <!-- [D] 입력항목 오류 case 시 invalid class 추가-->
+				<!-- // -->
+				<div class="tit-sub1">
+					<h3>차량정보</h3>
+					<div class="side"><button type="button" onclick="sectionOn('#page2')" class="btn-sub2 c2">정보변경</button></div>
+				</div>
+
+				<!-- [입력항목오류알림문구] -->
+				<p class="validation">기본 정보 중 누락된 항목을 확인 후 작성해주세요.</p>
+
+				<!-- [정보영역] -->
+				<div class="info-con1">
+					<dl>
+						<dt>차량번호 <i class="icon-required2">필수</i></dt>
+						<dd>신차구입/00가1234</dd>
+					</dl>
+					<dl>
+						<dt>차명 <i class="icon-required2">필수</i></dt>
+						<dd>오토바이0</dd>
+					</dl>
+					<dl>
+						<dt>등록일/연식 <i class="icon-required2">필수</i></dt>
+						<dd>2022.03.01/2022/A</dd>
+					</dl>
+					<dl>
+						<dt>배기 <i class="icon-required2">필수</i></dt>
+						<dd>1500cc</dd>
+					</dl>
+					<dl>
+						<dt>차의형태 <i class="icon-required2">필수</i></dt>
+						<dd>이륜</dd>
+					</dl>
+					<dl>
+						<dt>차종 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<div>개인소형이륜차B</div>
+							<div>(50cc이상 100cc 이하)</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>차량용도 <i class="icon-required2">필수</i></dt>
+						<dd>자가용/출퇴근가정용 및 업무용</dd>
+					</dl>
+					<dl>
+						<dt>차량가액 <i class="icon-required2">필수</i></dt>
+						<dd class="data-num1"><strong>1,000</strong><span>만원</span></dd>
+					</dl>
+					<dl>
+						<dt>부속사항/ 부속가액</dt>
+						<dd><button type="button" class="btn-sub3 c2">상세보기</button></dd>
+					</dl>
+					<dl>
+						<dt>총가액 <i class="icon-required2">필수</i></dt>
+						<dd class="data-num1"><strong>1,000</strong><span>만원</span></dd>
+					</dl>
+				</div>
+				<!-- [//] -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [특별약관] -->
+			<!-- ######################### -->
+			<div id="uiTabSection3" class="wrap-section3" data-scroll-con="3">
+				<!-- // -->
+				<div class="tit-sub1">
+					<h3>특별약관</h3>
+					<div class="side"><button type="button" onclick="sectionOn('#page3')" class="btn-sub2 c2">정보변경</button></div>
+				</div>
+
+				<!-- [입력항목오류알림문구] -->
+				<p class="validation">기본 정보 중 누락된 항목을 확인 후 작성해주세요.</p>
+
+				<!-- [정보영역] -->
+				<div class="info-con1">
+					<dl>
+						<dt>운전한정 <i class="icon-required2">필수</i></dt>
+						<dd>1인한정특약</dd>
+					</dl>
+					<dl>
+						<dt>연령한정 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<div>만35세이상</div>
+							<div>1987년 3월 4일 이전 출생자</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>기타특약</dt>
+						<dd><button type="button" class="btn-sub3 c2">상세보기</button></dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [요율정보] -->
+			<!-- ######################### -->
+			<div id="uiTabSection4" class="wrap-section3" data-scroll-con="4">
+				<!-- // -->
+				<div class="tit-sub1">
+					<h3>요율정보</h3>
+					<div class="side"><button type="button" onclick="sectionOn('#page4')" class="btn-sub2 c2">정보변경</button></div>
+				</div>
+
+				<!-- [입력항목오류알림문구] -->
+				<div class="validation">기본 정보 중 누락된 항목을 확인 후 작성해주세요.</div>
+
+				<!-- [정보영역] -->
+				<div class="info-con1">
+					<dl>
+						<dt>가입경력 <i class="icon-required2">필수</i></dt>
+						<dd>5년미만/-%</dd>
+					</dl>
+					<dl>
+						<dt>할인할증 <i class="icon-required2">필수</i></dt>
+						<dd>17Z/51.1%</dd>
+					</dl>
+					<dl>
+						<dt>3년&middot;1년사고 <i class="icon-required2">필수</i></dt>
+						<dd>0회/0회/-%</dd>
+					</dl>
+					<dl>
+						<dt>법규위반 <i class="icon-required2">필수</i></dt>
+						<dd>C012:할인그룹/-%</dd>
+					</dl>
+					<dl>
+						<dt>전계약사</dt>
+						<dd>롯데손해보험/CA202134138420</dd>
+					</dl>
+					<dl>
+						<dt>배정번호</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>물적할증 기준금액 <i class="icon-required2">필수</i></dt>
+						<dd class="data-num1"><strong>1,000</strong><span>만원</span></dd>
+					</dl>
+				</div>
+				<!-- [//] -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [특별요율] -->
+			<!-- ######################### -->
+			<div id="uiTabSection5" class="wrap-section3" data-scroll-con="5">
+				<!-- // -->
+				<div class="tit-sub1">
+					<h3>특별요율</h3>
+					<div class="side"><button type="button" onclick="sectionOn('#page5')" class="btn-sub2 c2">정보변경</button></div>
+				</div>
+
+				<!-- [입력항목오류알림문구] -->
+				<div class="validation">기본 정보 중 누락된 항목을 확인 후 작성해주세요.</div>
+
+				<!-- [정보영역] -->
+				<div class="info-con1">
+					<dl>
+						<dt>특별요율</dt>
+						<dd><button type="button" class="btn-sub3 c2">상세보기</button></dd>
+					</dl>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [보장(담보)사항] -->
+			<!-- ######################### -->
+			<div id="uiTabSection6" class="wrap-section3" data-scroll-con="6">
+				<!-- // -->
+				<div class="tit-sub1">
+					<h3>보장(담보)사항</h3> <!-- [M 2022-08-23]	① 문구수정 -->
+					<div class="side"><button type="button" onclick="sectionOn('#page6')" class="btn-sub2 c2">정보변경</button></div>
+				</div>
+
+				<!-- [입력항목오류알림문구] -->
+				<div class="validation">기본 정보 중 누락된 항목을 확인 후 작성해주세요.</div>
+
+				<!-- [정보영역] -->
+				<!-- [M 2022-08-23] ② 보장(담보)사항 > 정보 영역 구조 변경 -->
+				<div class="info-con1">
+					<!-- 적용전 -->
+					<dl>
+						<dt>대인1</dt>
+						<dd>-</dd>
+						<dd class="data-num1 txt-c2"><strong>-</strong><span>원</span></dd>
+					</dl>
+					<!-- 적용중 -->
+					<dl>
+						<dt>대물</dt>
+						<dd>10억7,000만원</dd>
+						<dd class="data-num1 txt-c2"><strong>-</strong><span>원</span></dd>
+					</dl>
+					<!-- 적용후 -->
+					<dl>
+						<dt>자손&middot;자상특약</dt>
+						<dd>사망&middot;장애 5천/부상 5천</dd>
+						<dd class="data-num1 txt-c2"><strong>10,000,000</strong><span>원</span></dd>
+					</dl>
+					<!-- // -->
+					<dl>
+						<dt>자기차량손해</dt>
+						<dd>20%(20~50만원)/771</dd>
+						<dd class="data-num1 txt-c2"><strong>10,000,000</strong><span>원</span></dd>
+					</dl>
+					<dl>
+						<dt>분납</dt>
+						<dd>책임분납/일시납</dd>
+						<dd class="data-num1 txt-c2"><strong>10,000,000</strong><span>원</span></dd>
+					</dl>
+				</div>
+				<!-- // [M 2022-08-23] -->
+				<!-- [//] -->
+
+				<!-- 2022-10-31 마크업 변경 -->
+				<!-- [M 2022-08-23] ③ 영수보험료 : 담보 설정 후 보험료 계산된 경우  -->
+				<div class="area-info2 t6">
+					<dl>
+						<dt>영수보험료</dt>
+						<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+				</div>
+				<div class="area-btn1">
+					<button type="button" class="btn-com1">영수보험료 상세보기</button>
+				</div>
+				<!-- // [M 2022-08-23] -->
+				<!-- //2022-10-31 마크업 변경 -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<!-- [M 2022-09-07] 버튼 케이스 추가 -->
+			<!-- [CASE] 보험료 계산 전 : 설정정보 변경 포함 -->
+			<div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action simple ic4">가능한 업무</button>
+				<button type="button" class="btn-action c1">보험료계산</button>
+			</div>
+
+			<!-- [CASE] 보험료 계산 후 : 설계번호 있는 상태/인수심사대상-요청전 -->
+			<div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action simple ic4">메뉴 더보기</button>
+				<button type="button" class="btn-action c1">보험료계산</button>
+				<button type="button" class="btn-action c1">심사요청</button>
+			</div>
+
+			<!-- [CASE] 보험료 계산 후 : 설계번호 있는 상태/심사대상-심사의뢰 -->
+			<div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action simple ic4">메뉴 더보기</button>
+				<button type="button" class="btn-action c1">보험료계산</button>
+				<button type="button" class="btn-action" disabled>심사중</button>
+			</div>
+
+			<!-- [CASE] 보험료 계산 후 : 설계번호 있는 상태/심사대상-일반인수 외 -->
+			<div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action simple ic4">메뉴 더보기</button>
+				<button type="button" class="btn-action c1">보험료계산</button>
+				<button type="button" class="btn-action c1">심사완료</button>
+			</div>
+
+			<!-- [CASE] 보험료 계산 후 : 설계번호 있는 상태/일반인수(승인)-심사비대상포함 -->
+			<div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action simple ic4">메뉴 더보기</button>
+				<button type="button" class="btn-action c1">청약이동</button>
+				<button type="button" class="btn-action c1">보험료계산</button>
+
+			</div>
+		</article>
+
+		<!-- ######################### -->
+		<!-- [정보수정] 기본정보 -->
+		<!-- ######################### -->
+		<article id="page1" class="none">
+			<h1 class="hide">기본정보 수정</h1>
+
+			<div class="form-wrap1 line2">
+				<!-- ### 피보험자 ### -->
+				<fieldset>
+					<legend class="tit">피보험자</legend>
+
+					<!-- # 피보험자 # -->
+					<dl class="form">
+						<dt>피보험자 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<div class="input-btn1">
+								<data class="text" value="" data-label="고객을 검색해주세요."></data>
+								<button type="button" class="icon-com1 ic2">검색</button>
+							</div>
+
+							<!-- [CASE] 미선택시 -->
+							<div class="input-btn1">
+								<data class="text" value="" data-label="고객을 검색해주세요." aria-invalid="true"></data> <!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+								<button type="button" class="icon-com1 ic2">검색</button>
+							</div>
+							<div class="validation">피보험자를 선택해주세요.</div>
+							<!-- // -->
+
+							<!-- [CASE1] 고객검색전 : 최근가설동의고객 -->
+							<div>
+								<div class="info-data3 t2" data-scroll-wrap="true">
+									<!-- // -->
+									<label class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+										<input type="radio" name="gg1">
+										<strong>고객명</strong>
+										<span>나이</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="102701">
+										<input type="radio" name="gg1">
+										<strong>김롯데</strong>
+										<span>27세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="101002">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>10세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="101802">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>18세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="902502">
+										<input type="radio" name="gg1">
+										<strong>MARIA</strong>
+										<span>25세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="903502">
+										<input type="radio" name="gg1">
+										<strong>Monica Barbaro</strong>
+										<span>35세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="109002">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>90세</span>
+									</label>
+									<!-- // -->
+								</div>
+								<div class="area-info4">
+									<p class="ic1">선택 고객을 기명 피보험자로 입력하기</p>
+									<div class="side"><button type="button" class="btn-sub3 c1">확인</button></div>
+								</div>
+							</div>
+
+							<!-- [CASE2] 고객검색후 : 고객정보노출 -->
+							<div class="info-data3">
+								<dl>
+									<dt class="data-info2" data-value="104001">
+										<strong>고객명</strong>
+										<span>
+											<span>0000.00.00</span>
+											<span>성별</span>
+										</span>
+									</dt>
+									<dd class="data1">
+										<span>나이</span>
+										<strong>40세</strong>
+									</dd>
+									<dd class="side"><button type="button" class="btn-sub3 c2">수정</button></dd> <!-- 2022-11-17 텍스트 변경 -->
+								</dl>
+							</div>
+							<!-- // -->
+						</dd>
+						<dd class="side">
+							<button type="button" class="btn-sub3 c2">고객등록</button>
+							<button type="button" class="btn-sub3 c2">고객재선택</button> <!-- 2022-11-17 텍스트 변경 -->
+						</dd>
+					</dl>
+
+					<!-- # 주소 # -->
+					<dl class="form">
+						<dt>주소 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<!-- 선택 -->
+							<div class="label-btn1">
+								<label><input type="radio" name="js" value="js1" checked><span>집</span></label>
+								<label><input type="radio" name="js" value="js2"><span>직장</span></label>
+							</div>
+							<!-- [CASE1] 주소검색전 -->
+							<data class="text disabled" value="" data-label="주소를 선택해주세요."></data>
+							<!-- [CASE2] 주소검색후 -->
+							<data class="text disabled" value="(12345) 서울시 중구 소월로3 ">(12345) 서울시 중구 소월로3 </data>
+							<!-- // -->
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- ### 계약자 ### -->
+				<fieldset>
+					<legend class="tit">계약자</legend>
+
+					<!-- # 계약자와의 관계 # -->
+					<dl class="form">
+						<dt>계약자와의 관계 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">계약자와의 관계</span>
+									<span data-select="text" data-value="ss1">본인</span>
+								</button>
+								<div class="list">
+									<div data-label="계약자와의 관계 선택">
+										<div class="option">
+											<label><input type="radio" name="ggg1" value="ss0"><span>선택</span></label>
+											<label><input type="radio" name="ggg1" value="ss1"><span>본인</span></label>
+											<label><input type="radio" name="ggg1" value="ss2"><span>배우자</span></label>
+											<label><input type="radio" name="ggg1" value="ss3"><span>부모</span></label>
+											<label><input type="radio" name="ggg1" value="ss4"><span>자녀</span></label>
+											<label><input type="radio" name="ggg1" value="ss5"><span>형제자매</span></label>
+											<label><input type="radio" name="ggg1" value="ss6"><span>임직원</span></label>
+											<label><input type="radio" name="ggg1" value="ss7"><span>고용관계</span></label>
+											<label><input type="radio" name="ggg1" value="ss8"><span>사위/며느리</span></label>
+											<label><input type="radio" name="ggg1" value="ss9"><span>기타</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 계약자 # -->
+					<dl class="form">
+						<dt>계약자 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<div class="input-btn1">
+								<data class="text" value="" data-label="고객을 검색해주세요."></data>
+								<button type="button" class="icon-com1 ic2">검색</button>
+							</div>
+
+							<!-- [CASE] 미선택시 -->
+							<div class="input-btn1">
+								<data class="text" value="" data-label="고객을 검색해주세요." aria-invalid="true"></data> <!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+								<button type="button" class="icon-com1 ic2">검색</button>
+							</div>
+							<div class="validation">계약자를 선택해주세요.</div>
+							<!-- // -->
+
+							<!-- [CASE1] 고객검색전 : 최근가설동의고객 -->
+							<div>
+								<div class="info-data3 t2" data-scroll-wrap="true">
+									<!-- // -->
+									<label class="data-info2" data-value="000000">
+										<input type="radio" name="gg1">
+										<strong>고객명</strong>
+										<span>나이</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="100501">
+										<input type="radio" name="gg1">
+										<strong>김롯데</strong>
+										<span>5세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="101001">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>10세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="101801">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>18세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="102501">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>25세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2" data-value="103501">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>35세</span>
+									</label>
+									<!-- // -->
+									<label class="data-info2 " data-value="106001">
+										<input type="radio" name="gg1">
+										<strong>김롯데보험</strong>
+										<span>60세</span>
+									</label>
+									<!-- // -->
+								</div>
+								<div class="area-info4">
+									<p class="ic1">선택 고객을 계약자로 입력하기</p>
+									<div class="side"><button type="button" class="btn-sub3 c1">확인</button></div>
+								</div>
+							</div>
+
+							<!-- [CASE2] 고객검색후 : 고객정보노출 -->
+							<div class="info-data3">
+								<dl>
+									<dt class="data-info2" data-value="102702">
+										<strong>고객명</strong>
+										<span>
+											<span>0000.00.00</span>
+											<span>성별</span>
+										</span>
+									</dt>
+									<dd class="data1">
+										<span>나이</span>
+										<strong>27세</strong>
+									</dd>
+									<dd class="side"><button type="button" class="btn-sub3 c2">수정</button></dd> <!-- 2022-11-17 텍스트 변경 -->
+								</dl>
+							</div>
+							<!-- // -->
+						</dd>
+						<dd class="side"><button type="button" class="btn-sub3 c2">고객등록</button></dd>
+					</dl>
+
+					<!-- # 주소 # -->
+					<dl class="form">
+						<dt>주소 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<!-- 선택 -->
+							<div class="label-btn1">
+								<label><input type="radio" name="js" value="js1" checked><span>집</span></label>
+								<label><input type="radio" name="js" value="js2"><span>직장</span></label>
+							</div>
+							<!-- [CASE1] 주소검색전 -->
+							<data class="text disabled" value="" data-label="주소를 선택해주세요."></data>
+							<!-- [CASE2] 주소검색후 -->
+							<data class="text disabled" value="(12345) 서울시 중구 소월로3 ">(12345) 서울시 중구 소월로3 </data>
+							<!-- // -->
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- ### 취득경로 ### -->
+				<fieldset>
+					<legend class="tit">취득경로</legend>
+					<!-- // -->
+					<dl class="form">
+						<dt>취득경로 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">취득경로 선택</span>
+									<span data-select="text" data-value="cd1">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="취득경로 선택">
+										<div class="option">
+											<label><input type="radio" name="cd000" value="cd1"><span>선택</span></label>
+											<label><input type="radio" name="cd000" value="cd2"><span>개척</span></label>
+											<label><input type="radio" name="cd000" value="cd3"><span>소개</span></label>
+											<label><input type="radio" name="cd000" value="cd4"><span>연고</span></label>
+											<label><input type="radio" name="cd000" value="cd5"><span>본인</span></label>
+											<label><input type="radio" name="cd000" value="cd6"><span>가족</span></label>
+											<label><input type="radio" name="cd000" value="cd7"><span>지인</span></label>
+											<label><input type="radio" name="cd000" value="cd8"><span>인바운드(전화인입)</span></label>
+											<label><input type="radio" name="cd000" value="cd9"><span>단체계약</span></label>
+											<label><input type="radio" name="cd000" value="cd10"><span>기타</span></label>
+											<label><input type="radio" name="cd000" value="cd11"><span>TM</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- [CASE] 미선택시 -->
+							<div class="select-wrap invalid" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">취득경로 선택</span>
+									<span data-select="text" data-value="cd1">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="취득경로 선택">
+										<div class="option">
+											<label><input type="radio" name="cd000" value="cd1"><span>선택</span></label>
+											<label><input type="radio" name="cd000" value="cd2"><span>개척</span></label>
+											<label><input type="radio" name="cd000" value="cd3"><span>소개</span></label>
+											<label><input type="radio" name="cd000" value="cd4"><span>연고</span></label>
+											<label><input type="radio" name="cd000" value="cd5"><span>본인</span></label>
+											<label><input type="radio" name="cd000" value="cd6"><span>가족</span></label>
+											<label><input type="radio" name="cd000" value="cd7"><span>지인</span></label>
+											<label><input type="radio" name="cd000" value="cd8"><span>인바운드(전화인입)</span></label>
+											<label><input type="radio" name="cd000" value="cd9"><span>단체계약</span></label>
+											<label><input type="radio" name="cd000" value="cd10"><span>기타</span></label>
+											<label><input type="radio" name="cd000" value="cd11"><span>TM</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<div class="validation">취득경로를 선택해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### 보험기간 ### -->
+				<fieldset>
+					<legend class="tit">보험기간</legend>
+					<!-- // -->
+					<div class="input-date1 text">
+						<span>
+							<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+							<input type="text" title="시작날짜 선택" data-dateform="start2" value="2022.04.18" placeholder="YYYY.MM.DD" readonly>
+						</span>
+						<span>
+							<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+							<input type="text" title="종료날짜 선택" data-dateform="end2" value="2022.04.25" placeholder="YYYY.MM.DD" readonly>
+						</span>
+					</div>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="uiFormRadio5">
+							<span>3개월</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio5">
+							<span>6개월</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio5">
+							<span>9개월</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio5">
+							<span>12개월</span>
+						</label>
+					</div>
+					<p class="mes txt-c2">총 보험기간 365일</p>
+
+					<!-- [CASE] 미선택시 -->
+					<div class="input-date1 text">
+						<span>
+							<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+							<input type="text" title="시작날짜 선택" data-dateform="start2" value="" placeholder="YYYY.MM.DD" readonly aria-invalid="true"> <!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						</span>
+						<span>
+							<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+							<input type="text" title="종료날짜 선택" data-dateform="end2" value="" placeholder="YYYY.MM.DD" readonly>
+						</span>
+					</div>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="uiFormRadio5">
+							<span>3개월</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio5">
+							<span>6개월</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio5">
+							<span>9개월</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio5">
+							<span>12개월</span>
+						</label>
+					</div>
+					<div class="validation">보험기간을 선택해주세요.</div>
+					<!-- // -->
+				</fieldset>
+				<!-- ### // ### -->
+			</div>
+
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" onclick="sectionOff();">적용</button>
+			</div>
+		</article>
+
+		<!-- ######################### -->
+		<!-- [정보수정] 차량정보 -->
+		<!-- ######################### -->
+		<article id="page2" class="none">
+			<h1 class="hide">차량정보 수정</h1>
+
+			<div class="form-wrap1 line2">
+				<!-- ### 차량번호 ### -->
+				<fieldset>
+					<legend class="tit">차량번호</legend>
+					<!-- // -->
+					<dl class="form">
+						<dt>처음가입</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="cg1" checked>
+									<span>신차구입</span>
+								</label>
+								<label>
+									<input type="radio" name="cg1">
+									<span>중고차구입</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>차량번호 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<!-- // -->
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="cb1" checked>
+									<span>차량번호</span>
+								</label>
+								<label>
+									<input type="radio" name="cb1">
+									<span>차대번호</span>
+								</label>
+							</div>
+							<input type="text" class="text" title="차량번호" placeholder="차량번호를 입력해주세요.">
+
+							<!-- [CASE] 미입력시 -->
+							<input type="text" class="text" title="차량번호" placeholder="차량번호를 입력해주세요." aria-invalid="true"> <!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+							<div class="validation">차량번호 입력해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 차명정보 ### -->
+				<fieldset>
+					<legend class="tit">차명정보</legend>
+
+					<!-- [차명] -->
+					<dl class="form">
+						<dt>차명 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<input type="text" class="text" title="차명" value="오토바이" placeholder="차명을 입력해주세요.">
+
+							<!-- [CASE] 미입력시 -->
+							<input type="text" class="text" title="차명" value="" placeholder="차명을 입력해주세요." aria-invalid="true"> <!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+							<div class="validation">차명을 입력해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- [등록일] -->
+					<dl class="form">
+						<dt>등록일 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<div class="input-date1">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">등록일 선택</button>
+									<input type="text" class="text" title="등록일 선택" value="2022.03.09" placeholder="YYYY.MM.DD" readonly>
+								</span>
+							</div>
+
+							<!-- [CASE] 미선택시 -->
+							<div class="input-date1">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">등록일 선택</button>
+									<input type="text" class="text" title="등록일 선택" value="" placeholder="YYYY.MM.DD" readonly aria-invalid="true"> <!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+								</span>
+							</div>
+							<div class="validation">등록일을 선택해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- [연식] -->
+					<dl class="form">
+						<dt>연식/연식구분 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<input type="tel" class="text" title="연도" value="2022" placeholder="연식을 입력해주세요.">
+
+							<!-- [CASE] 미입력시 -->
+							<input type="tel" class="text" title="연도" value="" placeholder="연식을 입력해주세요." aria-invalid="true"> <!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+							<div class="validation">연식을 입력해주세요.</div>
+							<!-- // -->
+
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio01" checked/>
+									<span>A</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio01" />
+									<span>B</span>
+								</label>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- [배기] -->
+					<dl class="form">
+						<dt>배기 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<div class="text num1">
+								<input type="tel" title="배기" placeholder="배기량을 입력해주세요" value="520"> <!-- 2022-11-23 클래스 제거 -->
+								<span class="util1">cc/kw</span>
+							</div>
+
+							<!-- [CASE] 미입력시 -->
+							<div class="text num1">
+								<input type="tel" title="배기" placeholder="배기량을 입력해주세요" value="" aria-invalid="true"> <!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->  <!-- 2022-11-23 클래스 제거 -->
+								<span class="util1">cc/kw</span>
+							</div>
+							<div class="validation">배기량을 입력해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+
+					<!-- [차의형태] -->
+					<dl class="form">
+						<dt>차의형태 <i class="icon-required2">필수</i></dt>
+						<dd><data class="selectbox" value="0">이륜</data></dd>
+					</dl>
+
+					<!-- [차종] -->
+					<dl class="form">
+						<dt>차종 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">차종</span>
+									<span data-select="text" data-value="">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="차종 선택">
+										<div class="option">
+											<label><input type="radio" name="ht20000" value=""><span>선택</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- [CASE] 미선택시 -->
+							<div class="select-wrap invalid" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">차종</span>
+									<span data-select="text" data-value="">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="차종 선택">
+										<div class="option">
+											<label><input type="radio" name="ht20000" value=""><span>선택</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<div class="validation">차종을 선택해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- [차의형태/운행형태] -->
+					<dl class="form">
+						<dt>차의형태/운행형태 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">차의형태</span>
+									<span data-select="text" data-value="ht1">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="차의형태">
+										<div class="option">
+											<label><input type="radio" name="ht11" value="ht1"><span>선택</span></label>
+											<label><input type="radio" name="ht11" value="ht2"><span>기타</span></label>
+											<label><input type="radio" name="ht11" value="ht3"><span>보안경비차량</span></label>
+											<label><input type="radio" name="ht11" value="ht4"><span>일반승용</span></label>
+											<label><input type="radio" name="ht11" value="ht5"><span>RV차량</span></label>
+											<label><input type="radio" name="ht11" value="ht6"><span>긴급출동</span></label>
+											<label><input type="radio" name="ht11" value="ht7"><span>소방차</span></label>
+											<label><input type="radio" name="ht11" value="ht8"><span>순찰차(패트롤카)</span></label>
+											<label><input type="radio" name="ht11" value="ht9"><span>장애인차량</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">운행형태</span>
+									<span data-select="text" data-value="ht12">출퇴근 및 가정용</span>
+								</button>
+								<div class="list">
+									<div data-label="운행형태 선택">
+										<div class="option">
+											<label><input type="radio" name="ht2" value="ht12"><span>출퇴근 및 가정용</span></label>
+											<label><input type="radio" name="ht2" value="ht13"><span>개인사업용 및 기타용도</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 차량가액 및 부속정보 ### -->
+				<fieldset>
+					<legend class="tit">차량가액 및 부속정보</legend>
+
+					<!-- // -->
+					<dl class="form">
+						<dt>차량가액</dt>
+						<dd>
+							<div class="text num1">
+								<input type="tel" class="text" title="금액" value="1,000">
+								<span class="util1">만원</span>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- // -->
+					<dl class="form">
+						<dt>부속정보</dt>
+						<dd class="list-data7 t1">
+							<ul>
+								<li>블랙박스(20만원)</li>
+								<li>자동차휠(30만원)</li>
+							</ul>
+						</dd>
+						<dd class="side"><button type="button" class="btn-sub3 c2">추가 부속품</button></dd>
+					</dl>
+
+					<!-- // -->
+					<dl class="form">
+						<dt>총가액</dt>
+						<dd>
+							<div class="text num1">
+								<data data-disabled="true" value="1">1,000</data>
+								<span class="util1">만원</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+				</fieldset>
+				<!-- ### // ### -->
+			</div>
+
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" onclick="sectionOff();">적용</button>
+			</div>
+		</article>
+
+		<!-- ######################### -->
+		<!-- [정보수정] 특별약관 -->
+		<!-- ######################### -->
+		<article id="page3" class="none">
+			<h1 class="hide">특별약관 수정</h1>
+
+			<div class="form-wrap1 line2">
+				<!-- ### 운전자 범위 ### -->
+				<fieldset>
+					<legend class="tit">운전자 범위</legend>
+					<dl class="form">
+						<dt>운전한정 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- 선택 -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">운전한정</span>
+									<span data-select="text" data-value="yr1">1인한정특약</span>
+								</button>
+								<div class="list">
+									<div data-label="운전한정 선택">
+										<div class="option">
+											<label><input type="radio" name="yr1000" value="yr1"><span>1인한정특약</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 연령한정 ### -->
+				<fieldset>
+					<legend class="tit">연령한정</legend>
+
+					<dl class="form">
+						<dt>연령한정 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<!-- 선택 -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">연령한정</span>
+									<span data-select="text" data-value="yr3">만22세이상</span>
+								</button>
+								<div class="list">
+									<div data-label="연령한정 선택">
+										<div class="option">
+											<label><input type="radio" name="yr1" value="yr1"><span>전연령</span></label>
+											<label><input type="radio" name="yr1" value="yr2"><span>만21세이상</span></label>
+											<label><input type="radio" name="yr1" value="yr3"><span>만22세이상</span></label>
+											<label><input type="radio" name="yr1" value="yr4"><span>만24세이상</span></label>
+											<label><input type="radio" name="yr1" value="yr5"><span>만26세이상</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- 연령확인 -->
+							<data class="text disabled" value="1987년 3월 4일 이전 출생자">1987년 3월 4일 이전 출생자</data>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 기타특약 ### -->
+				<dl class="tit-sub1 line2">
+					<dt>기타특약</dt>
+					<dd class="side"><a href="javascript:void(0);" class="btn-sub2 c2">기타특약선택</a></dd>
+					<!-- [CASE] 기타특약 데이터가 있을 경우 -->
+					<dd class="list-data7 t1">
+						<ul>
+							<li>다른자동차운전담보특약</li>
+							<li>후할인주행거리특약</li>
+							<li>병실료차액 특약</li>
+						</ul>
+					</dd>
+					<!-- // -->
+				</dl>
+				<!-- ### // ### -->
+			</div>
+
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" onclick="sectionOff();">적용</button>
+			</div>
+		</article>
+
+		<!-- ######################### -->
+		<!-- [정보수정] 요율정보 -->
+		<!-- ######################### -->
+		<article id="page4" class="none">
+			<h1 class="hide">요율정보 수정</h1>
+
+			<div class="form-wrap1 line2">
+				<dl class="tit-sub1">
+					<dt>요율정보</dt>
+					<dd class="side"><button type="button" class="btn-sub2 c2">요율조회</button></dd>
+				</dl>
+
+				<!-- ### 가입경력 ### -->
+				<fieldset>
+					<legend class="tit">가입경력</legend>
+
+					<dl class="form">
+						<dt>가입경력 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<div class="input-wrap1">
+								<!-- 선택 -->
+								<div class="select-wrap w100" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">가입경력</span>
+										<span data-select="text" data-value="ggg0">선택</span>
+									</button>
+									<div class="list">
+										<div data-label="가입경력 선택">
+											<div class="option">
+												<label><input type="radio" name="ggg" value="ggg0"><span>선택</span></label>
+												<label><input type="radio" name="ggg" value="ggg1"><span>1년미만</span></label>
+												<label><input type="radio" name="ggg" value="ggg2"><span>2년미만</span></label>
+												<label><input type="radio" name="ggg" value="ggg3"><span>8년미만</span></label>
+												<label><input type="radio" name="ggg" value="ggg4"><span>8년이상</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- 경력기간에 따른 룰 -->
+								<div class="text w1">
+									<data value="" data-disabled="true"></data>
+									<span class="util">%</span>
+								</div>
+								<!-- // -->
+							</div>
+
+							<!-- [CASE] 미선택시 -->
+							<div class="input-wrap1">
+								<div class="select-wrap w100 invalid" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">가입경력</span>
+										<span data-select="text" data-value="ggg0">선택</span>
+									</button>
+									<div class="list">
+										<div data-label="가입경력 선택">
+											<div class="option">
+												<label><input type="radio" name="ggg" value="ggg0"><span>선택</span></label>
+												<label><input type="radio" name="ggg" value="ggg1"><span>1년미만</span></label>
+												<label><input type="radio" name="ggg" value="ggg2"><span>2년미만</span></label>
+												<label><input type="radio" name="ggg" value="ggg3"><span>8년미만</span></label>
+												<label><input type="radio" name="ggg" value="ggg4"><span>8년이상</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- 경력기간에 따른 룰 -->
+								<div class="text w1">
+									<data value="" data-disabled="true"></data>
+									<span class="util">%</span>
+								</div>
+								<!-- // -->
+							</div>
+							<div class="validation">가입경력을 선택해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 할인할증 ### -->
+				<fieldset>
+					<legend class="tit">할인할증</legend>
+					<dl class="form">
+						<dt>할인할증 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<!-- Z/P -->
+							<div class="input-wrap1 w100">
+								<!-- // -->
+								<div class="select-wrap w100" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">Z/P</span>
+										<span data-select="text" data-value="zp1">Z/P</span>
+									</button>
+									<div class="list">
+										<div data-label="Z/P 선택">
+											<div class="option">
+												<label><input type="radio" name="zp" value="zp1"><span>Z/P</span></label>
+												<label><input type="radio" name="zp" value="zp2"><span>01Z</span></label>
+												<label><input type="radio" name="zp" value="zp3"><span>02Z</span></label>
+												<label><input type="radio" name="zp" value="zp4"><span>29Z</span></label>
+												<label><input type="radio" name="zp" value="zp5"><span>29P</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- // -->
+								<div class="text w1">
+									<data value="" data-disabled="true"></data>
+									<span class="util">%</span>
+								</div>
+								<!-- // -->
+							</div>
+
+							<!-- F -->
+							<div class="input-wrap1">
+								<!-- // -->
+								<div class="select-wrap w100" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">F</span>
+										<span data-select="text" data-value="f1">F</span>
+									</button>
+									<div class="list">
+										<div data-label="F 선택">
+											<div class="option">
+												<label><input type="radio" name="f" value="f1"><span>F</span></label>
+												<label><input type="radio" name="f" value="f2"><span>01F</span></label>
+												<label><input type="radio" name="f" value="f3"><span>02F</span></label>
+												<label><input type="radio" name="f" value="f4"><span>03F</span></label>
+												<label><input type="radio" name="f" value="f5"><span>28F</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- // -->
+								<div class="text w1">
+									<data value="" data-disabled="true"></data>
+									<span class="util">%</span>
+								</div>
+								<!-- // -->
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 3년,1년 사고 횟수 ### -->
+				<fieldset>
+					<legend class="tit">3년&middot;1년 사고 횟수</legend>
+
+					<dl class="form">
+						<dt>3년&middot;1년사고 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<div class="input-wrap1">
+								<div class="text">
+									<input type="tel" value="0" maxlength="3" title="3년 사고 횟수" placeholder="3년 사고 횟수">
+									<span class="util">회</span>
+								</div>
+								<div class="text">
+									<input type="tel" value="0" maxlength="3" title="1년 사고 횟수" placeholder="1년 사고 횟수">
+									<span class="util">회</span>
+								</div>
+							</div>
+
+							<!-- [CASE] 미입력시 -->
+							<div class="input-wrap1">
+								<div class="text">
+									<input type="tel" value="" maxlength="3" title="3년 사고 횟수" placeholder="3년 사고 횟수" aria-invalid="true"> <!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+									<span class="util">회</span>
+								</div>
+								<div class="text">
+									<input type="tel" value="" maxlength="3" title="1년 사고 횟수" placeholder="1년 사고 횟수" aria-invalid="true">
+									<span class="util">회</span>
+								</div>
+							</div>
+							<div class="validation">3년&middot;1년 사고횟수를 입력해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 법규위반 ### -->
+				<fieldset>
+					<legend class="tit">법규위반</legend>
+
+					<dl class="form">
+						<dt>법규위반 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<div class="input-wrap1">
+								<!-- // -->
+								<div class="select-wrap w100" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">법규위반 그룹 선택</span>
+										<span data-select="text" data-value="bgw1">선택</span>
+									</button>
+									<div class="list">
+										<div data-label="법규위반 그룹 선택">
+											<div class="option">
+												<label><input type="radio" name="bgw" value="bgw1"><span>선택</span></label>
+												<label><input type="radio" name="bgw" value="bgw2"><span>@기간계준용 - 개발확인필요@</span></label>
+												<label><input type="radio" name="bgw" value="bgw3"><span>@기간계준용 - 개발확인필요@</span></label>
+												<label><input type="radio" name="bgw" value="bgw4"><span>@기간계준용 - 개발확인필요@</span></label>
+												<label><input type="radio" name="bgw" value="bgw5"><span>@기간계준용 - 개발확인필요@</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- // -->
+								<div class="text w1">
+									<data value="" data-disabled="true"></data>
+									<span class="util">%</span>
+								</div>
+								<!-- // -->
+							</div>
+
+							<!-- [CASE] 미선택시 -->
+							<div class="input-wrap1">
+								<!-- // -->
+								<div class="select-wrap w100 invalid" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">법규위반 그룹 선택</span>
+										<span data-select="text" data-value="bgw1">선택</span>
+									</button>
+									<div class="list">
+										<div data-label="법규위반 그룹 선택">
+											<div class="option">
+												<label><input type="radio" name="bgw" value="bgw1"><span>선택</span></label>
+												<label><input type="radio" name="bgw" value="bgw2"><span>@기간계준용 - 개발확인필요@</span></label>
+												<label><input type="radio" name="bgw" value="bgw3"><span>@기간계준용 - 개발확인필요@</span></label>
+												<label><input type="radio" name="bgw" value="bgw4"><span>@기간계준용 - 개발확인필요@</span></label>
+												<label><input type="radio" name="bgw" value="bgw5"><span>@기간계준용 - 개발확인필요@</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- // -->
+								<div class="text w1">
+									<data value="" data-disabled="true"></data>
+									<span class="util">%</span>
+								</div>
+								<!-- // -->
+								<div class="validation">법규위반을 선택해주세요.</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 전계약사 ### -->
+				<fieldset>
+					<legend class="tit">전계약사</legend>
+
+					<dl class="form">
+						<dt>전계약사 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<data class="selectbox disabled" value="03:롯데손해보험">03:롯데손해보험</data>
+							<data class="text disabled" value="@코드">@코드</data>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 배정번호 ### -->
+				<fieldset>
+					<legend class="tit">배정번호</legend>
+
+					<dl class="form">
+						<dt>배정번호</dt>
+						<dd>
+							<div class="input-wrap1">
+								<input type="tel" class="text" title="배정번호" value="123456" placeholder="배정번호를 입력해주세요.">
+								<button type="button" class="btn-sub1">배정번호 조회</button>
+							</div>
+
+							<!-- [CASE] 미입력시 -->
+							<div class="input-wrap1">
+								<input type="tel" class="text" title="배정번호" value="" placeholder="배정번호를 입력해주세요." aria-invalid="true"> <!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+								<button type="button" class="btn-sub1">배정번호 조회</button>
+							</div>
+							<div class="validation">배정번호를 입력해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 물적사고 할증기준금액 ### -->
+				<fieldset>
+					<legend class="tit">물적사고 할증기준금액</legend>
+
+					<dl class="form">
+						<dt>물적사고 할증기준금액 <i class="icon-required2">필수</i></dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">물적사고 할증기준금액</span>
+									<span data-select="text" data-value="1">200만원</span>
+								</button>
+								<div class="list">
+									<div data-label="물적사고 할증기준금액 선택">
+										<div class="option">
+											<label><input type="radio" name="bgw000" value="1"><span>200만원</span></label>
+											<label><input type="radio" name="bgw000" value="2"><span>150만원</span></label>
+											<label><input type="radio" name="bgw000" value="3"><span>100만원</span></label>
+											<label><input type="radio" name="bgw000" value="4"><span>50만원</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+				<!-- ### // ### -->
+			</div>
+
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" onclick="sectionOff();">적용</button>
+			</div>
+		</article>
+
+		<!-- ######################### -->
+		<!-- [정보수정] 특별요율 -->
+		<!-- ######################### -->
+		<article id="page5" class="none">
+			<h1 class="hide">특별요율 수정</h1>
+
+			<div class="tit-sub1">
+				<h2>특별요율</h2>
+				<div class="side"><button type="button" class="btn-sub2 c2">특별요율 조회</button></div>
+			</div>
+
+			<!-- // -->
+			<div class="list-data7 t1">
+				<ul>
+					<li>에어백</li>
+					<li>AUTO</li>
+				</ul>
+			</div>
+			<!-- // -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" onclick="sectionOff();">적용</button>
+			</div>
+		</article>
+
+		<!-- ######################### -->
+		<!-- [정보수정] 보장(담보)사항 -->
+		<!-- ######################### -->
+		<article id="page6" class="none">
+			<h1 class="hide">보장(담보)사항 수정</h1>
+
+			<fieldset class="form-wrap1 t1">
+				<legend class="tit">보장(담보)사항</legend>
+				<div class="side">
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>의무단독</span>
+						</label>
+					</div>
+				</div>
+
+				<dl class="form current">
+					<dt class="label-check1">
+						<label>
+							<input type="checkbox" disabled checked>
+							<span>대인1 <i class="icon-required2">필수</i></span>
+						</label>
+					</dt>
+					<dd><data class="text disabled" value="지배법에 정한 금액">지배법에 정한 금액</data></dd>
+					<dd class="side2">
+						<strong>5,800원</strong>
+						<a href="#" class="icon-com2 ic1">대인1 도움말</a>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>대인2</span>
+						</label>
+					</dt>
+					<dd>
+						<data class="text disabled" value="지배법에 정한 금액">지배법에 정한 금액</data>
+					</dd>
+					<dd class="side2">
+						<strong>5,800원</strong>
+						<a href="javascript:void(0);" class="icon-com2 ic1">대인2 도움말</a>
+					</dd>
+				</dl>
+				<dl class="form current">
+					<dt class="label-check1">
+						<label>
+							<input type="checkbox" checked disabled>
+							<span>대물 <i class="icon-required2">필수</i></span>
+						</label>
+					</dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">대물 선택</span>
+								<span data-select="text" data-value="dm2">10억원</span>
+							</button>
+							<div class="list">
+								<div data-label="대물 선택">
+									<div class="option">
+										<label><input type="radio" name="dm" value="dm1"><span>선택</span></label>
+										<label><input type="radio" name="dm" value="dm2"><span>10억원</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+					<dd class="side2">
+						<strong>10억원</strong>
+						<a href="javascript:void(0);" class="icon-com2 ic1">대물 도움말</a>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>자손&middot;자상특약</span>
+						</label>
+					</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="jjs1" checked>
+								<span>자손</span>
+							</label>
+							<label>
+								<input type="radio" name="jjs1">
+								<span>자상특약</span>
+							</label>
+						</div>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">특약 선택</span>
+								<span data-select="text" data-value="dm2">사망,장애 1천오백/부상 1천오백</span>
+							</button>
+							<div class="list">
+								<div data-label="대물 선택">
+									<div class="option">
+										<label><input type="radio" name="jss2" value="j1"><span>선택</span></label>
+										<label><input type="radio" name="jss2" value="j2"><span>사망,장애 1천오백/부상 1천오백</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+					<dd class="side2">
+						<a href="javascript:void(0);" class="icon-com2 ic1">자손/자상특약 도움말</a>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>무보험</span>
+						</label>
+					</dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">무보험 선택</span>
+								<span data-select="text" data-value="dm2">2억원</span>
+							</button>
+							<div class="list">
+								<div data-label="무보험 선택">
+									<div class="option">
+										<label><input type="radio" name="mb" value="mb1"><span>선택</span></label>
+										<label><input type="radio" name="mb" value="mb2"><span>2억원</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+					<dd class="side2">
+						<strong>2억원</strong>
+						<a href="javascript:void(0);" class="icon-com2 ic1">무보험 도움말</a>
+					</dd>
+				</dl>
+				<dl class="form">
+					<dt class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>자기차량손해</span>
+						</label>
+					</dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">자기차량손해 선택</span>
+								<span data-select="text" data-value="dm2">20%(20~50만원)</span>
+							</button>
+							<div class="list">
+								<div data-label="자기차량손해 선택">
+									<div class="option">
+										<label><input type="radio" name="jc" value="jc1"><span>선택</span></label>
+										<label><input type="radio" name="jc" value="jc2"><span>20%(20~50만원)</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrap1">
+							<div class="text num1">
+								<input type="tel" title="금액 입력">
+								<span class="util">원</span>
+							</div>
+						</div>
+
+						<!-- [CASE] 미입력시 -->
+						<div class="input-wrap1">
+							<div class="text num1">
+								<input type="tel" title="금액 입력" aria-invalid="true"> <!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+								<span class="util">원</span>
+							</div>
+						</div>
+						<div class="validation">차량가액을 입력해주세요.</div>
+						<!-- // -->
+					</dd>
+					<dd class="side2">
+						<strong>50만원</strong>
+						<a href="javascript:void(0);" class="icon-com2 ic1">무보험 도움말</a>
+					</dd>
+				</dl>
+			</fieldset>
+			<fieldset class="form-wrap1 line2">
+				<legend class="tit">납입 방법</legend>
+				<dl class="form">
+					<dt>분납 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">분납 선택</span>
+								<span data-select="text" data-value="bnn1">일시납</span>
+							</button>
+							<div class="list">
+								<div data-label="분납 선택">
+									<div class="option">
+										<label><input type="radio" name="bnn" value="bnn1"><span>일시납</span></label>
+										<label><input type="radio" name="bnn" value="bnn3"><span>2회납</span></label>
+										<label><input type="radio" name="bnn" value="bnn4"><span>4회납</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</fieldset>
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" onclick="sectionOff();">적용</button>
+			</div>
+		</article>
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+	// 체크박스 선택시 활성화 예시
+	$(document).on('change','.form-wrap1.t1 dt input[type="checkbox"]',function(){
+		if($(this).prop('checked')===true){
+			$(this).parents('.form').addClass('current');
+		}else{
+			$(this).parents('.form').removeClass('current');
+		}
+	});
+
+	/* 페이지 변경 호출 샘플*/
+	var originTop = 0; //scroll 위치 담아둘 변수
+	function sectionOn(el){
+		originTop = $(window).scrollTop();
+		$(el).removeClass('none').siblings('article').addClass('none');
+		if(el.indexOf('page')>0){
+			$('.container').removeAttr('data-page').parents('main, article').removeClass();
+			$('header .btn-t1').addClass('none');
+			$(window).scrollTop(0);
+			sectionTitle(el);
+		}else if(el === '#CCR0120'){
+			$(window).scrollTop(0);
+			$('header .btn-t1').removeClass('none');
+			$('.container').attr('data-page',1);
+			$('.info-step1').removeClass('active');
+			$('.info-step1 ol>li:first').attr('aria-current','step').siblings().removeAttr('aria-current')
+		}else if(el === '#CCR0270'){
+			$(window).scrollTop(0);
+			$('header .btn-t1').addClass('none');
+			$('.container').removeAttr('data-page').parents('main, article').removeClass();
+		}
+		ui.setPage();
+	};
+
+	/* 정보변경 적용버튼 클릭시 호출 샘플*/
+	function sectionOff(){
+		$('article:visible').addClass('none');
+		$('.container').attr('data-page',1);
+		$('#CCR0204').removeClass('none');
+		$(window).scrollTop(originTop);
+		sectionTitle('CCR0204');
+		ui.setPage();
+	};
+	sectionOn('#CCR0204');
+
+	/* 타이틀 변경 샘플 */
+	$('.icon-prev').addClass('none');
+	function sectionTitle(el){
+		var _tit;
+		if(el == 'CCR0204'){
+			_tit = '자동차설계';
+			$('.icon-prev').addClass('none');
+		}else{
+			_tit = $(el).find('h1').text();
+			$('.icon-prev').removeClass('none');
+		}
+		$('.header h1').text(_tit);
+	}
+</script>
+</body>
+</html>

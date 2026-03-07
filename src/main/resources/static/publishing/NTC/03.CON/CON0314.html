@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>일반부활 모바일 전자배서_납부요청서 | 부활청약 | 장기</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-05]	① 예금 불일치일 경우 입력폼 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- 2022-12-23 : 카톡브라우저 대응 수정 -->
+<main id="wrapper" style="overflow-y:auto;position:fixed;left:0;top:0;width:100%;height:100%;z-index:50;">
+<!-- // 2022-12-23 : 카톡브라우저 대응 수정 -->
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>롯데손해보험<br>계약변경 전자서명</h1>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1 top1">
+		<!-- ######################### -->
+		<!-- [진행상태] STEP 05 -->
+		<!-- ######################### -->
+		<div class="info-step1" data-autoset="toggle" data-sticky="top">
+			<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+			<ol data-toggle="content">
+				<li><button type="button">01. 부활상세내역</button></li>
+				<li><button type="button">02. 계약부활시 유의사항 확인</button></li>
+				<li><button type="button">03. 청약 및 주요사항 확인</button></li>
+				<li><button type="button">04. 부활청약서 및 확인사항</button></li>
+				<li aria-current="step"><button type="button">05. 납부요청서 작성</button></li>
+				<li><button type="button" disabled>06. 부가서류첨부</button></li>
+				<li><button type="button" disabled>07. 전자서명</button></li>
+			</ol>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [상단영역] -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>(선택) 납부정보를<br>확인해주세요.</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [납부정보] -->
+		<!-- ######################### -->
+		<h2 class="tit-sub1">계약사항 및 납입요청금액</h2>
+		<div class="info-con1">
+			<dl>
+				<dt>상품명</dt>
+				<dd>(무)롯데 더알찬 건강보험(1901)</dd>
+			</dl>
+			<dl>
+				<dt>증권번호</dt>
+				<dd>LA1111111111111</dd>
+			</dl>
+			<dl>
+				<dt>계약자</dt>
+				<dd>하다미</dd>
+			</dl>
+			<dl>
+				<dt>주피보험자</dt>
+				<dd>하다미</dd>
+			</dl>
+			<dl>
+				<dt>납입요청금액</dt>
+				<dd class="data-num1"><strong>595,724</strong><span>원</span></dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [납부방법] 즉시출금 -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<h3 class="tit-sub1">즉시출금 납부</h3>
+			<!-- # 납부금액 # -->
+			<div class="area-info2">
+				<dl>
+					<dt>납부금액</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+			</div>
+
+			<!-- # 은행/계좌번호 # -->
+			<fieldset class="form-wrap1">
+				<legend>은행/계좌번호 입력</legend>
+
+				<dl class="form">
+					<dt>은행/계좌번호 <em class="icon-required2">필수</em></dt>
+					<dd class="side"><button type="button" class="btn-sub3 c2">계좌조회</button></dd> <!-- [D] CON0000_P01.html 참조 -->
+					<dd>
+						<!-- [CASE1] 기본 -->
+						<div class="input-btn1">
+							<data class="selectbox" value="" data-label="은행 선택"></data>
+							<button type="button">은행 선택</button>
+						</div>
+						<div class="input-wrap1">
+							<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요">
+							<button type="button" class="btn-sub1">계좌확인</button>
+						</div>
+						<div class="validation"></div>
+
+						<!-- [CASE1] 예금주 불일치 -->
+						<div class="input-btn1">
+							<data class="selectbox" value="" data-label="은행 선택"></data>
+							<button type="button">은행 선택</button>
+						</div>
+						<input type="text" class="text" placeholder="예금주명을 입력해주세요.">  <!-- [M 2022-09-05] 예금주 불일치일 경우 입력 폼 추가 -->
+						<div class="input-wrap1">
+							<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요">
+							<button type="button" class="btn-sub1">계좌확인</button>
+						</div>
+						<div class="validation"></div>
+
+						<!-- [CASE1] 은행 오류 -->
+						<div class="input-btn1">
+							<data class="selectbox" value="" data-label="은행 선택" aria-invalid="true"></data>
+							<button type="button">은행 선택</button>
+						</div>
+						<div class="input-wrap1">
+							<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요">
+							<button type="button" class="btn-sub1">계좌확인</button>
+						</div>
+						<div class="validation">은행을 선택해주세요.</div>
+
+						<!-- [CASE1] 계좌 오류 -->
+						<div class="input-btn1">
+							<data class="selectbox" value="" data-label="은행 선택"></data>
+							<button type="button">은행 선택</button>
+						</div>
+						<div class="input-wrap1">
+							<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요" aria-invalid="true">
+							<button type="button" class="btn-sub1">계좌확인</button>
+						</div>
+						<div class="validation">계좌번호 입력 및 계좌확인을 해주세요.</div>
+						<!-- // -->
+					</dd>
+					<dd class="data1">
+						<div>예금주:</div>
+						<div class="info"><strong>홍두한</strong><span><span>1965.03.21</span><span>남</span></span></div>
+						<!-- [D] 계좌 확인 후 노출 -->
+						<div class="txt">
+							<strong class="txt-c1">불일치</strong> <!-- [D] 예금주 일치 -->
+							<strong class="txt-c2">확인완료</strong> <!-- [D] 예금주 불일치 -->
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+			</fieldset>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [납부방법] 확인 및 동의 -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<h4 class="tit-sub1">즉시출금 확인 및 동의</h4>
+			<p class="mes-t3">
+				본 계약변경의 추징보험료에 한해 입력하신 계좌에서 즉시출금됩니다.<br>
+				전자서명 완료 시 영업점에서 순차적으로 출금이 진행되며, 이후 출금실패 시 <strong>납부요청서</strong>를 재발송해 드립니다.
+			</p>
+			<div class="label-check1 t1">
+				<label>
+					<input type="checkbox" checked>
+					<strong>위의 내용을 확인하였으며, 이에 동의합니다.</strong>
+				</label>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action c3">건너뛰기</button>
+			<button type="button" class="btn-action c1">출금실행</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

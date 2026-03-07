@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] CDD/EDD(법인) | 일반사항 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>CDD/EDD(법인)</h1>
+			<button type="button" data-btn="pop-close">CDD/EDD(법인) 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단정보] -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="hide">설계정보</h2>
+				<div class="info-con1">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA22022108551-1</dd>
+					</dl>
+					<dl>
+						<dt>계약자</dt>
+						<dd class="data-info2"><strong>하다미</strong><span><span>1990.01.01</span><span>남</span></span></dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [바로가기] -->
+			<!-- #########################-->
+			<div class="area-btn4" data-sticky="top" data-scroll-tab="true">
+				<a href="#uiTabSection1" class="btn-t1 c2 active">기본정보 (CDD)</a>
+				<a href="#uiTabSection2" class="btn-t1 c2">대표자 정보</a>
+				<a href="#uiTabSection3" class="btn-t1 c2">실소유자 확인사항</a>
+				<a href="#uiTabSection4" class="btn-t1 c2">추가 정보(EDD)</a>
+				<a href="#uiTabSection5" class="btn-t1 c2">대리인 정보</a>
+				<a href="#uiTabSection6" class="btn-t1 c2">위험평가결과</a>
+			</div>
+
+			<div class="form-wrap1 line2">
+				<!-- ######################### -->
+				<!-- [기본정보] -->
+				<!-- ######################### -->
+				<fieldset id="uiTabSection1" data-scroll-con="1">
+					<legend class="tit">기본정보 (CDD)</legend>
+
+					<!-- # 정보 # -->
+					<div class="info-con1">
+						<dl class="form">
+							<dt>법인(단체) 구분</dt>
+							<dd>
+								<!-- // -->
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">법인(단체) 구분</span>
+										<span data-select="text" data-value="selectOpeion1-6">비영리(임의)단체</span>
+									</button>
+									<div class="list">
+										<div data-label="법인(단체) 구분">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion1" value="selectOpeion1-1"><span>개인</span></label>
+												<label><input type="radio" name="selectOpeion1" value="selectOpeion1-2"><span>영리법인</span></label>
+												<label><input type="radio" name="selectOpeion1" value="selectOpeion1-3"><span>비영리법인</span></label>
+												<label><input type="radio" name="selectOpeion1" value="selectOpeion1-4"><span>공공기관</span></label>
+												<label><input type="radio" name="selectOpeion1" value="selectOpeion1-5"><span>국가,지방자치단체</span></label>
+												<label><input type="radio" name="selectOpeion1" value="selectOpeion1-6"><span>비영리(임의)단체</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- // -->
+							</dd>
+						</dl>
+						<dl>
+							<dt>법인&middot;단체명(한글)</dt>
+							<dd>롯데가구</dd>
+						</dl>
+						<dl>
+							<dt>법인&middot;단체명(영문)</dt>
+							<dd>Lotte Furniture</dd>
+						</dl>
+						<dl>
+							<dt>사업자등록번호</dt>
+							<dd>123-45-67891</dd>
+						</dl>
+						<dl>
+							<dt>법인등록번호</dt>
+							<dd>1801111364403</dd>
+						</dl>
+						<dl>
+							<dt>설립국가</dt>
+							<dd>KR</dd>
+						</dl>
+						<dl>
+							<dt>설립일</dt>
+							<dd>2022.04.21</dd>
+						</dl>
+						<dl>
+							<dt>연락처</dt>
+							<dd>02-1234-5678</dd>
+						</dl>
+						<dl>
+							<dt>표준산업분류(업종)</dt>
+							<dd>금속 가구 제조업</dd>
+						</dl>
+						<dl>
+							<dt>설립목적(비영리법인)</dt>
+							<dd>사업</dd>
+						</dl>
+						<dl>
+							<dt>주소(소재지)</dt>
+							<dd>
+								<div>(04328)</div>
+								<div>서울 용산구 소월로 178 1번지 (용산동 2가)</div>
+							</dd>
+						</dl>
+					</div>
+
+					<!-- ### [실명확인증표] ### -->
+					<dl class="form line">
+						<dt>실명확인증표 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="label-btn1" data-autoset="form">
+								<label>
+									<input type="radio" name="uiRadio1">
+									<span>사업자등록증</span>
+								</label>
+								<label>
+									<input type="radio" name="uiRadio1" data-tabcon="uiFormCont1" checked>
+									<span>기타</span>
+								</label>
+							</div>
+
+							<!-- [CASE] 기타 선택시 -->
+							<div class="ui-tabcon active" data-id="uiFormCont1">
+								<input type="text" class="text" title="실명확인증표" placeholder="내용을 입력해주세요">
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ######################### -->
+				<!-- [정보영역] 대표자 정보 -->
+				<!-- ######################### -->
+				<fieldset id="uiTabSection2" data-scroll-con="2">
+					<legend class="tit">대표자 정보</legend>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>대표자명</dt>
+						<dd><input type="text" class="text" title="대표자명" placeholder="대표자명을 입력해주세요." value="하다미"></dd>
+					</dl>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>대표자 생년월일</dt>
+						<dd><input type="tel" class="text" title="대표자 생년월일" placeholder="대표자 생년월일을 입력해주세요." value="1988.05.01"></dd>
+					</dl>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>대표자 국적</dt>
+						<dd>
+							<!-- [CASE] 검색 전 -->
+							<div class="input-btn1">
+								<data class="text" data-label="국적을 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">검색하기</button>
+							</div>
+
+							<!-- [CASE] 검색 후 -->
+							<div class="input-btn1">
+								<data class="text" data-label="국적을 검색해주세요." value="">KR</data>
+								<button type="button" class="icon-com1 ic2">검색하기</button>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>요주의 인물</dt>
+						<dd>
+							<!-- [CASE1] 조회 전 -->
+							<div class="input-wrap1">
+								<data class="text disabled" value="" data-label="인물조회를 진행해주세요."></data>
+								<button type="button" class="btn-sub1">조회</button>
+							</div>
+
+							<!-- [CASE1] 조회 전_오류 -->
+							<div class="input-wrap1">
+								<data class="text disabled" value="" data-label="인물조회를 진행해주세요." aria-invalid="true"></data> <!-- [D] 오류시 aria-invalid="true" 추가 -->
+								<button type="button" class="btn-sub1">조회</button>
+							</div>
+							<div class="validation">[요주의 인물 여부]을/를 다시 확인해주세요.</div>
+
+							<!-- [CASE2] 승인 -->
+							<div class="input-wrap1">
+								<data class="text disabled" value="승인" data-label="인물조회를 진행해주세요.">승인</data>
+								<button type="button" class="btn-sub1">조회</button>
+							</div>
+
+							<!-- [CASE3] 심사중 -->
+							<div class="input-wrap1">
+								<data class="text disabled" value="심사중" data-label="인물조회를 진행해주세요.">심사중</data>
+								<button type="button" class="btn-sub1">조회</button>
+							</div>
+
+							<!-- [CASE4] 오류 -->
+							<div class="input-wrap1 invalid">
+								<data class="text disabled" value="불인" data-label="인물조회를 진행해주세요." aria-invalid="true">불인</data> <!-- [D] 오류시 aria-invalid="true" 추가 -->
+								<button type="button" class="btn-sub1">조회</button>
+							</div>
+							<div class="validation">요주의 인물 여부를 통과하지 못한 인물입니다.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ######################### -->
+				<!-- [정보영역] 실소유자 확인사항 -->
+				<!-- ######################### -->
+				<fieldset id="uiTabSection3" data-scroll-con="3">
+					<legend class="tit">실소유자 확인사항</legend>
+
+					<!-- # 등록버튼 # -->
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">실소유자 등록</button>
+					</div>
+
+					<!-- # 사업보고서 제출대상 법인 # -->
+					<dl class="form2">
+						<dt>법인/단체는 국가 지자체 &middot; 공공단체 &middot; 금융회사 및 사업보고서 제출대상 법인입니까?</dt>
+						<dd class="mes">"예"를 선택하신 경우 실제소유자 확인 생략</dd>
+						<dd>
+							<!-- 여부선택 -->
+							<div class="label-btn1" data-autoset="form">
+								<label>
+									<input type="radio" name="uiRadio2" data-tabcon="uiFormCont2">
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="uiRadio2" checked>
+									<span>아니오</span>
+								</label>
+							</div>
+
+							<!-- [CASE] 사업보고서 제출대상 법인 여부 : 예 -->
+							<div class="ui-tabcon" data-id="uiFormCont2">
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">선택</span>
+										<span data-select="text"></span>
+									</button>
+									<div class="list">
+										<div data-label="사업보고서 제출대상 법인 선택">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-1"><span>국가,지자체</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-2"><span>금융회사</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-3"><span>사업보고서 제출대상 법인</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-4"><span>공공단체</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- 툴팁 : 필수 제출 증빙자료 -->
+					<div><a href="#uiTOOLTIPINFO1" class="icon-com2 ic2 right" data-btn="tooltip">필수 제출 증빙자료</a></div>
+
+					<!-- # 실제 소유자 확인 # -->
+					<dl class="form line">
+						<dt>실제 소유자 확인</dt>
+						<dd>
+							<!-- [선택 전] -->
+							<div class="input-btn1">
+								<data class="selectbox" data-label="선택" value=""></data>
+								<button type="button">실제 소유자 확인</button>
+							</div>
+
+							<!-- [선택 후] -->
+							<div class="input-btn1">
+								<data class="selectbox" data-label="선택" value="">법인/단체의 25% 이상의 지분을 소유한 사람 중 최대 지분 소유자 1인</data>
+								<button type="button">실제 소유자 확인</button>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ######################### -->
+				<!-- [정보영역] 추가 정보(EDD) -->
+				<!-- ######################### -->
+				<fieldset id="uiTabSection4" data-scroll-con="4">
+					<legend class="tit">추가 정보(EDD)</legend>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>기업규모</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="기업규모">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion3" value="selectOpeion3-1"><span>선택1</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>상장정보</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="상장정보">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion4" value="selectOpeion4-1"><span>선택1</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>거래목적 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select" data-callback="uiSampleFunction">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="거래목적">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion5" value="1"><span>실손위험대비</span></label>
+											<label><input type="radio" name="selectOpeion5" value="2"><span>질병위험대비</span></label>
+											<label><input type="radio" name="selectOpeion5" value="3"><span>교통사고위험대비</span></label>
+											<label><input type="radio" name="selectOpeion5" value="4"><span>노후대비(연금)</span></label>
+											<label><input type="radio" name="selectOpeion5" value="5"><span>목돈마련(저축)</span></label>
+											<label><input type="radio" name="selectOpeion5" value="6"><span>영업위험대비</span></label>
+											<label><input type="radio" name="selectOpeion5" value="7"><span>재산위험대비</span></label>
+											<label><input type="radio" name="selectOpeion5" value="8"><span>시설위험대비</span></label>
+											<label><input type="radio" name="selectOpeion5" value="9"><span>의무보험</span></label>
+											<label><input type="radio" name="selectOpeion5" value="10"><span>종업원위험대비</span></label>
+											<label><input type="radio" name="selectOpeion5" value="11"><span>대출</span></label>
+											<label><input type="radio" name="selectOpeion5" value="12"><span>기타</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- [CASE] 기타 선택시 -->
+							<div class="ui-tabcon" data-select-con="12">
+								<input type="text" class="text" title="거래목적" placeholder="내용을 입력해주세요.">
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>거래자금원천 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select" data-callback="uiSampleFunction">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="거래자금원천">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion6" value="1"><span>근로(급여)소득</span></label>
+											<label><input type="radio" name="selectOpeion6" value="2"><span>사업소득</span></label>
+											<label><input type="radio" name="selectOpeion6" value="3"><span>부동산 등 임대소득</span></label>
+											<label><input type="radio" name="selectOpeion6" value="4"><span>금융소득(이자/연금/배당)</span></label>
+											<label><input type="radio" name="selectOpeion6" value="5"><span>대여금</span></label>
+											<label><input type="radio" name="selectOpeion6" value="6"><span>고용주 대납</span></label>
+											<label><input type="radio" name="selectOpeion6" value="7"><span>가족 또는 친인척 대납 </span></label>
+											<label><input type="radio" name="selectOpeion6" value="8"><span>기타</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- [CASE] 기타 선택시 -->
+							<div class="ui-tabcon" data-select-con="8">
+								<input type="text" class="text" title="거래자금원천" placeholder="내용을 입력해주세요.">
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ######################### -->
+				<!-- [정보영역] 대리인 정보 -->
+				<!-- ######################### -->
+				<fieldset id="uiTabSection5" data-scroll-con="5">
+					<legend class="tit">대리인 정보</legend>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>대리인 여부 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="label-btn1" data-autoset="form">
+								<label>
+									<input type="radio" name="uiRadio3" data-tabcon="uiFormCont3">
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="uiRadio3" checked>
+									<span>아니요</span>
+								</label>
+							</div>
+
+							<!-- [CASE] 대리인 여부 : 예 -->
+							<div class="ui-tabcon" data-id="uiFormCont3">
+								<!-- // -->
+								<dl class="form">
+									<dt>이름 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<!-- [CASE1] 검색전 -->
+										<div class="input-btn1">
+											<data class="text" data-label="고객을 검색해주세요." value=""></data>
+											<button type="button" class="icon-com1 ic2">검색하기</button>
+										</div>
+										<!-- [CASE2] 검색후 -->
+										<div class="info-data3 info">
+											<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+												<strong>하다미</strong>
+												<span>
+													<span>1997.01.01</span>
+													<span>남</span>
+												</span>
+											</div>
+											<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+										</div>
+										<!-- // -->
+									</dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>이름(영문) <em class="icon-required2">필수</em></dt>
+									<dd><data class="text disabled" value="Ha Dami" data-label="이름(영문)">Ha Dami</data></dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>실명번호 <em class="icon-required2">필수</em></dt>
+									<dd><data class="text" value="123456789" data-label="실명번호를 입력해주세요.">123456789</data></dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>국적</dt>
+									<dd>
+										<div class="input-btn1">
+											<data class="text disabled" data-label="국적" value="KR">KR</data>
+											<button type="button" class="icon-com1 ic2">검색하기</button>
+										</div>
+									</dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>계약자와의 관계 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<!-- // -->
+										<div class="select-wrap" data-autoset="select" data-callback="uiSampleFunction">
+											<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+												<span data-select="title">선택</span>
+												<span data-select="text" data-value="1">법정대리인</span>
+											</button>
+											<div class="list">
+												<div data-label="계약자와의 관계">
+													<div class="option">
+														<label><input type="radio" name="selectOpeion7" value="1"><span>법정대리인</span></label>
+														<label><input type="radio" name="selectOpeion7" value="2"><span>배우자</span></label>
+														<label><input type="radio" name="selectOpeion7" value="3"><span>부모</span></label>
+														<label><input type="radio" name="selectOpeion7" value="4"><span>자녀</span></label>
+														<label><input type="radio" name="selectOpeion7" value="5"><span>형제자매</span></label>
+														<label><input type="radio" name="selectOpeion7" value="6"><span>조부모</span></label>
+														<label><input type="radio" name="selectOpeion7" value="7"><span>손자녀</span></label>
+														<label><input type="radio" name="selectOpeion7" value="8"><span>기타</span></label>
+													</div>
+													<button type="button" data-toggle="closebtn">확인</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- [CASE] 기타 선택시 -->
+										<div class="ui-tabcon" data-select-con="8">
+											<input type="text" class="text" title="계약자와의 관계" placeholder="내용을 입력해주세요.">
+										</div>
+										<!-- // -->
+									</dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>대리인 권한 확인 방법 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<!-- // -->
+										<div class="select-wrap" data-autoset="select" data-callback="uiSampleFunction">
+											<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+												<span data-select="title">선택</span>
+												<span data-select="text" data-value="1">가족관계 확인서류</span>
+											</button>
+											<div class="list">
+												<div data-label="대리인 권한 확인 방법">
+													<div class="option">
+														<label><input type="radio" name="selectOpeion8" value="1"><span>가족관계 확인서류</span></label>
+														<label><input type="radio" name="selectOpeion8" value="2"><span>위임장 및 인감증명서</span></label>
+														<label><input type="radio" name="selectOpeion8" value="3"><span>기타</span></label>
+													</div>
+													<button type="button" data-toggle="closebtn">확인</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- [CASE] 기타 선택시 -->
+										<div class="ui-tabcon" data-select-con="3">
+											<input type="text" class="text" title="대리인 권한 확인 방법" placeholder="내용을 입력해주세요.">
+										</div>
+										<!-- // -->
+									</dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>대리인 실명확인 방법 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<!-- // -->
+										<div class="select-wrap" data-autoset="select" data-callback="uiSampleFunction">
+											<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+												<span data-select="title">선택</span>
+												<span data-select="text" data-value="4">기타</span>
+											</button>
+											<div class="list">
+												<div data-label="대리인 실명확인 방법">
+													<div class="option">
+														<label><input type="radio" name="selectOpeion9" value="1"><span>주민등록증</span></label>
+														<label><input type="radio" name="selectOpeion9" value="2"><span>운전면허증</span></label>
+														<label><input type="radio" name="selectOpeion9" value="3"><span>외국인등록증</span></label>
+														<label><input type="radio" name="selectOpeion9" value="4"><span>기타</span></label>
+													</div>
+													<button type="button" data-toggle="closebtn">확인</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- [CASE] 기타 선택시 -->
+										<div class="ui-tabcon active" data-select-con="4">
+											<input type="text" class="text" title="대리인 실명확인 방법" placeholder="내용을 입력해주세요.">
+										</div>
+										<!-- // -->
+									</dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>증표번호</dt>
+									<dd><input type="tel" class="text" title="증표번호" placeholder="증표번호를 입력해주세요."></dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>발급기관</dt>
+									<dd><input type="text" class="text" title="발급기관" placeholder="발급기관을 입력해주세요."></dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>발급일</dt>
+									<dd><input type="tel" class="text" title="발급(인증)일" placeholder="YYYY.MM.DD"></dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>연락처</dt>
+									<dd><data class="text" value="01012345678" data-label="연락처">01012345678</data></dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>주소</dt>
+									<dd>
+										<input type="tel" class="text" title="우편번호" placeholder="우편번호">
+										<input type="text" class="text" title="주소" placeholder="주소">
+										<input type="text" class="text" title="상세주소" placeholder="상세주소">
+									</dd>
+								</dl>
+								<!-- // -->
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ######################### -->
+				<!-- [정보영역] 위험평가결과 -->
+				<!-- ######################### -->
+				<div class="line3" id="uiTabSection6" data-scroll-con="6">
+					<dl class="form4">
+						<dt>위험평가결과</dt>
+						<dd class="info-con2">
+							<dl>
+								<dt>국가위험</dt>
+								<dd>1.75</dd>
+							</dl>
+							<dl>
+								<dt>직장위험</dt>
+								<dd>1.05</dd>
+							</dl>
+							<dl>
+								<dt>상품위험</dt>
+								<dd>0.15</dd>
+							</dl>
+						</dd>
+					</dl>
+				</div>
+				<!-- ######################### -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 필수 제출 증빙자료 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl class="txt-bul1">
+		<dt>필수 제출 증빙자료</dt>
+		<dd>
+			<em>영리법인</em>
+			<div class="txt-bul2">사업자등록 + 법인등기부등본 + 주주명부</div>
+		</dd>
+		<dd>
+			<em>비영리법인</em>
+			<div class="txt-bul2">사업자등록증(또는 고유번호증) + 정관</div>
+		</dd>
+		<dd>
+			<em>주주명부 또는 정관이 없는 경우 사원명부, 출자자명부 제출 필수</em>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">필수 제출 증빙자료 닫기</button></dd>
+	</dl>
+</div>
+<!-- ##################################### -->
+
+<script>
+//<!--
+	/* ************************************
+	* 샘플 : 셀렉트
+	************************************ */
+	function uiSampleFunction(e){
+		var _con = $(e).parents('.select-wrap').next();
+
+		_con.removeClass('active');
+		$('[data-select-con="'+ e.val() +'"].ui-tabcon').addClass('active');
+	}
+//-->
+</script>
+</body>
+</html>

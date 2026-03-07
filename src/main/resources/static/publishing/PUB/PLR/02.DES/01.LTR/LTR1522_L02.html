@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 고객정보없음 | 쉬운설계 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] ### -->
+<!-- ################################################### -->
+<div id="uiPOPLTR1522L02" class="pop-mes2" role="alertdialog" data-popmodal="true">
+	<dl>
+		<dt>설계사님!<br>현재 등록된 고객정보가 없어요!</dt>
+		<dd>보험 설계를 진행하기 위해서는 고객등록이 필요합니다.</dd>
+        <dd>보험을 보장 받으실 분과 보험료를 납부하실 분이 다를 경우, 두명의 고객정보가 모두 필요하기 때문에 두명의 고객 모두 고객등록 하셔야 합니다.</dd>
+		<dd class="area-action">
+			<button type="button" class="btn-action" data-btn="pop-close">닫기</button>
+			<button type="button" class="btn-action c1">고객등록</button>
+		</dd>
+	</dl>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPLTR1522L02',{
+		callback_after:function(){
+			ui.alert('닫기 이벤트');
+		}
+	});
+
+	//레이어팝업 강제오픈
+	$('#uiPOPLTR1522L02').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

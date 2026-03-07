@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>국내근재 수정요청 | 신규설계 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>신규 설계요청</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" id="uiInclude" data-page="1">
+		<article id="PAGE1" class="">
+			<h1 class="hide">설계요청사항</h1>
+
+			<!-- ### [입력정보요약] ### -->
+			<div class="wrap-step1" data-sticky="top">
+				<!-- [상품정보] -->
+				<div class="info-summary2">
+					<h2 class="tit">국내근재보험</h2>
+					<div class="info">
+						<dl>
+							<dt>접수번호</dt>
+							<dd>LA220304111127-1</dd>
+						</dl>
+					</div>
+				</div>
+
+				<!-- [단계이동] -->
+				<div class="info-step1" data-autoset="toggle">
+					<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+					<div data-toggle="content">
+						<ol>
+							<li>
+								<span>01. 상품 선택</span>
+								<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							</li>
+							<li>
+								<span>02. 고객 정보</span>
+								<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							</li>
+							<li aria-current="step">
+								<span>03. 설계요청사항</span>
+								<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ### [상단타이틀] ### -->
+			<div class="tit-section">
+				<p>설계 요청사항을<br>입력해주세요.</p>
+			</div>
+
+			<!-- ### [정보입력] ### -->
+			<div class="form-wrap1 line2">
+				<fieldset>
+					<legend class="tit">설계정보</legend>
+
+					<!-- # 보험기간 # -->
+					<dl class="form">
+						<dt>보험기간 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="input-date1 text">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+									<input type="text" title="시작날짜 선택" data-dateform="start" value="2022.06.24" placeholder="YYYY.MM.DD" readonly>
+								</span>
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+									<input type="text" title="종료날짜 선택" data-dateform="end" value="2023.06.23" placeholder="YYYY.MM.DD" readonly>
+								</span>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 업종 # -->
+					<dl class="form">
+						<dt>업종 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="input-btn1">
+								<data class="text" data-label="업종을 선택해주세요." value="화학제품 제조업">화학제품 제조업</data>
+								<button type="button" class="icon-com1 ic2">업종검색</button>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 가입형태 # -->
+					<dl class="form">
+						<dt>가입형태 <em class="icon-required2">필수</em>
+							<a href="#uiTOOLTIPINFO1" class="icon-com2 ic2" data-btn="tooltip" aria-haspopup="dialog">안내사항</a>
+						</dt>
+						<dd>
+							<div class="label-btn1" data-autoset="form">
+								<label>
+									<input type="radio" name="uiFormRadio1" data-tabcon="uiFormTxt1" checked>
+									<span>연간포괄계약</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio1" data-tabcon="uiFormTxt2">
+									<span>개별공사계약</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<div class="mes-t1 box">
+						<dl class="ui-tabcon active" data-id="uiFormTxt1">
+							<dt>연간포괄계약 필수서류</dt>
+							<dd>사업자등록증, 손익계산서(사무직)/공사원가명세서(건설직)/제조원가명세서(생산직)</dd>
+						</dl>
+						<dl class="ui-tabcon active" data-id="uiFormTxt2">
+							<dt>개별공사계약 필수서류</dt>
+							<dd>사업자등록증(하청자인경우 원청자 포함), 도급계약서</dd>
+						</dl>
+					</div>
+
+					<!-- # 산재 가입 여부 # -->
+					<dl class="form">
+						<dt>산재 가입 여부 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio2" checked>
+									<span>있음</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio2">
+									<span>없음</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 하도급인 담보 여부 # -->
+					<dl class="form">
+						<dt>하도급인 담보 여부 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio3" >
+									<span>있음</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio3" checked>
+									<span>없음</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- [CASE] 질문서 : 입력 완료 -->
+					<dl class="form">
+						<dt>질문서 <em class="icon-required2">필수</em></dt>
+						<dd class="area-btn1"><button class="btn-com1" disabled>질문서 입력 완료</button></dd>
+						<dd class="side"><button type="button" class="btn-sub3 c2">수정</button></dd>
+					</dl>
+					<!-- // -->
+				</fieldset>
+
+				<fieldset>
+					<legend class="tit">기타사항</legend>
+
+					<!-- # 사고이력 # -->
+					<dl class="form">
+						<dt>사고이력(최근3년) <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio4" checked>
+									<span>있음</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio4">
+									<span>없음</span>
+								</label>
+							</div>
+						</dd>
+						<dd>
+							<!-- // -->
+							<textarea class="textarea" title="사고이력 있음 경우 사고이력 기재" placeholder="사고 &ldquo;있음&rdquo; 경우, 최근 3개년 전 가입사 및 사고이력 (사고건수, 사고내용, 손해액)을 기재해주세요.">1건 / 가스누수 / 2,000,000원</textarea>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 기타 요청사항 # -->
+					<dl class="form">
+						<dt>기타 요청사항</dt>
+						<dd>
+							<div class="textarea">
+								<textarea cols="50" rows="3" title="기타 요청사항" placeholder="담보 및 가입금액은 상품에 따라 설계 매니저가 표준형으로 설계합니다. 변경을 원하시는 경우 기재해주세요.">
+전기위험 특별약관
+구내폭발위험 특별약관
+풍수재위험 특별약관(자기부담금: 50만원)
+지진위험 특별약관(자기부담금: 100만원)
+
+보험료 분납 특별약관 추가 계약 특약 관련 확인요청
+								</textarea>
+								<span class="util2"><strong>0</strong>/4,000자</span>
+							</div>
+						</dd>
+						<dd class="side">
+							<button type="button" class="btn-sub3 c2">특약확인</button>
+						</dd>
+					</dl>
+
+					<!-- # 파일첨부 # -->
+					<dl class="form">
+						<dt>파일첨부 <a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt>
+						<dd class="mes-t3">기존 첨부파일이 2건 있습니다.</dd>
+						<dd class="data-file1">
+							<ul>
+								<li>
+									<span>담보확인 첨부화면내용 캡쳐.png</span>
+									<span class="sub">46.3KB</span>
+									<button type="button" class="icon-com1 ic6">삭제</button>
+								</li>
+								<li>
+									<span>건물사진1.jpg</span>
+									<span class="sub">56KB</span>
+									<button type="button" class="icon-com1 ic6">삭제</button>
+								</li>
+							</ul>
+						</dd>
+						<dd class="area-btn1">
+							<button class="btn-com1 ic3">파일첨부</button>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+			</div>
+
+			<!-- ### [하단영역] 액션버튼 ###  -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">재요청</button>
+			</div>
+			<!-- ### // ###  -->
+		</article>
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ##################################### -->
+<!-- # [툴팁 영역] # -->
+<!-- ##################################### -->
+<!-- # 가입형태 안내 # -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>연간포괄계약</dt>
+		<dd>계약기간동안 모든 공사건에 대해 담보</dd>
+		<dt>개별공사계약</dt>
+		<dd>해당 공사건 기준 담보</dd>
+		<dd><button type="button" data-btn="pop-close">가입형태 안내사항 닫기</button></dd>
+	</dl>
+</div>
+
+<!-- # 파일첨부 안내 # -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">파일 첨부 안내사항</dt>
+		<dd>
+			<ul class="txt-bul3">
+				<li>첨부파일의 사이즈는 <strong>000px X 000px</strong> 사이즈를 준수해주세요.</li>
+				<li>첨부파일은 <strong>png, jpg, jpeg, bmp, gif</strong> 파일만 등록이 가능합니다.</li>
+				<li>첨부파일 용량은 <strong>5M</strong>를 넘을 수 없습니다.</li>
+				<li>첨부파일을 등록하면, 퀴즈 내용 하단에 자동으로 노출됩니다.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">파일 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+<!-- ##################################### -->
+
+<script>
+//<!--
+	/* ********************************
+	* 샘플 : 페이지 변경 호출
+	******************************** */
+	function sectionOn(el){
+		var _this = $(this).parents('article').attr('id');
+		$('article[id]:not(.none)').addClass('none');
+		if(el == 'GNI0220' || el == 'GNI0357' || el == 'PAGE1'){
+			$('.container').attr('data-page',1);
+		}
+		$('#'+el).removeClass('none');
+		ui.setPage();
+	};
+//-->
+</script>
+</body>
+</html>

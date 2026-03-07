@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 문자 발송 확인 | 동의URL발송 | 가입설계 동의 | 개인(내국인/외국인) | 고객등록</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1" aria-controls="uiPOPDPCUS0003L01">다음</button> <!-- [샘플 : 레이어팝업 호출 버튼] -->
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 문자 발송 확인 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCUS0003L01" class="pop-mes2 t1" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>문자 발송 확인</dt>
+		<dd><em>010-5154-5228</em>로<br>가입설계동의 문자를 보내시겠어요?</dd>
+		<!-- // -->
+		<dd class="area-action col">
+			<button type="button" class="btn-action" data-btn="pop-close">취소</button>
+			<button type="button" class="btn-action c1">확인</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- ##################################### -->
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPDPCUS0003L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPDPCUS0003L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

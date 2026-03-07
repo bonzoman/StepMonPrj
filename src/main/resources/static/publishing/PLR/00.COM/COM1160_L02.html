@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 쉐이킹설정 | [P] 설정</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<div class="container">
+	<div class="list-t1">
+		<ul>
+			<li>
+				<a href="#uiPOPDPCOM0021L02" class="link1"><!-- [레이어팝업 호출 버튼] -->
+					<div class="txt1">쉐이킹설정</div>
+					<div class="txt2">화면 1</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- ################################################### -->
+<!-- ### [레이어 팝업] 쉐이킹설정 팝업 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCOM0021L02" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>쉐이킹설정</h1>
+			<button type="button" data-btn="pop-close">쉐이킹설정 닫기</button>
+		</header>
+
+		<div class="content">
+			<!-- [M 2022-07-04] 내용 전체 변경 -->
+			<div class="label-check2">
+				<label>
+					<input type="radio" name="form-radio" checked>
+					<span>포인트 적립현황</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>내 강의실</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>모바일 명함</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>오류접수</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>AM코칭</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>설정안함</span>
+				</label>
+			</div>
+			<!-- // [M 2022-07-04] -->
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1">확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPDPCOM0021L02');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPDPCOM0021L02').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

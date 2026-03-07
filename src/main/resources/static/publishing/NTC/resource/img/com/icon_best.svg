@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <g data-name="그룹 32325">
+        <g data-name="그룹 32322">
+            <g data-name="타원 2743" transform="translate(2.672 .15)" style="stroke:#ffa700;stroke-width:1.65px;fill:none">
+                <circle cx="7" cy="7" r="7" style="stroke:none"/>
+                <circle cx="7" cy="7" r="6.175" style="fill:none"/>
+            </g>
+            <g data-name="타원 2744" transform="translate(5.672 3.15)" style="stroke:#ffa700;stroke-width:1.65px;fill:none">
+                <circle cx="4" cy="4" r="4" style="stroke:none"/>
+                <circle cx="4" cy="4" r="3.175" style="fill:none"/>
+            </g>
+        </g>
+        <path data-name="패스 26129" d="M4.406 6.488H0a.825.825 0 0 1-.825-.825V0a.825.825 0 0 1 .358-.68A.825.825 0 0 1 .3-.769l1.975.763 1.814-.755a.825.825 0 0 1 .775.076A.825.825 0 0 1 5.23 0v5.663a.825.825 0 0 1-.825.825zM.825 4.838h2.756v-3.6l-.981.407a.825.825 0 0 1-.614.008L.825 1.2z" transform="scale(-1) rotate(-29 -40.72 25.082)" style="fill:#ffa700"/>
+        <path data-name="패스 26130" d="M4.407-.825a.825.825 0 0 1 .583.242.825.825 0 0 1 .242.583v5.414a.825.825 0 0 1-1.13.767l-1.829-.727-1.987.734a.825.825 0 0 1-.758-.1.825.825 0 0 1-.353-.677V0A.825.825 0 0 1 0-.825zM3.581 4.2V.825H.826v3.4L2 3.8a.825.825 0 0 1 .591.007z" transform="rotate(29 -20.287 16.168)" style="fill:#ffa700"/>
+    </g>
+</svg>

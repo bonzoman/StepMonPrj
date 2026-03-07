@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 특수건물할인율검색 | 물건등록 | 재물보험 | 고객정보</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-16]	① search 버튼 인풋으로 변경
+	*					② 초기화 버튼 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>특수건물할인율검색</h1>
+			<button type="button" data-btn="pop-close">특수건물할인율검색 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container" data-page="2">
+			<!-- ######################### -->
+			<!-- [조회영역] 검색구분 -->
+			<!-- load : 검색구분 열림 -->
+			<!-- active : 검색구분 숨김 -->
+			<!-- 클래스없음 : 검색하세요 타이틀만 보임 -->
+			<!-- 토글호출 샘플은 하단을 참고해 주세요 -->
+			<!-- ######################### -->
+			<div id="uiFormSearch" class="form-search2 load" data-togglecon="true">
+				<!-- ### [상단영역] ### -->
+				<div class="tit-section2">
+					<p>특수건물을 검색해보세요.</p>
+					<button type="button" data-toggle="btn" aria-expanded="false">설계조회보기</button>
+				</div>
+
+				<!-- ### [조회영역] ### -->
+				<fieldset class="form-wrap1">
+					<legend>특수건물 검색 조건 입력</legend>
+
+					<!-- # 검색구분 # -->
+					<dl class="form">
+						<dt>검색구분 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1" data-autoset="form">
+								<label><input type="radio" name="uiFormRadio1" data-tabcon="uiFormTabCon1"><span>소재지</span></label>
+								<label><input type="radio" name="uiFormRadio1" data-tabcon="uiFormTabCon2"><span>물건명</span></label>
+								<label><input type="radio" name="uiFormRadio1" data-tabcon="uiFormTabCon3"><span>물건번호</span></label>
+							</div>
+							<!--[CASE1] 소재지 -->
+							<div class="ui-tabcon active" data-id="uiFormTabCon1">
+								<!-- <div class="input-btn1">
+									<data class="text" data-label="주소를 검색해 주세요" value="(02641) 서울특별시 성동구 독서당로 434">(02641) 서울특별시 성동구 독서당로 434</data>
+									<button type="button" class="icon-com1 ic2">주소찾기</button>
+								</div> -->
+								<!-- 2022-11-16 인풋으로 변경 -->
+								<div class="text">
+									<span class="area">
+										<input type="text" title="소재지 검색" value="(02641) 서울특별시 성동구 독서당로 434" placeholder="주소지를 검색해 주세요">
+										<button type="button" data-btn="delete">내용 삭제</button>
+									</span>
+									<!-- <button type="button" class="icon-com1 ic2 simple">검색</button> --> <!-- 2022-12-16 검색버튼 삭제 -->
+								</div>
+								<!-- // 2022-11-16 인풋으로 변경 -->
+							</div>
+							<!--[CASE2] 물건명 -->
+							<div class="ui-tabcon" data-id="uiFormTabCon2">
+								<input type="text" class="text" placeholder="물건명을 입력해주세요.">
+							</div>
+							<!--[CASE3] 물건번호 -->
+							<div class="ui-tabcon" data-id="uiFormTabCon3">
+								<input type="text" class="text" placeholder="물건번호를 입력해주세요.">
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 적용년도 # -->
+					<dl class="form">
+						<dt>적용년도 (1월 1일부터 12월 31일 까지) <em class="icon-required2">필수</em></dt>
+						<dd><input type="tel" class="text" value="2022" required></dd>
+					</dl>
+
+					<!-- # 검색버튼 # -->
+					<!-- 2022-11-16 초기화 버튼 추가 -->
+					<div class="area-btn1 col">
+						<button type="button" class="btn-com1 ic8 c3">초기화</button>
+						<button type="button" class="btn-com1 c1" id="btn_search">조회</button>
+					</div>
+					<!-- //2022-11-16 초기화 버튼 추가 -->
+					<!-- # // # -->
+				</fieldset>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [상단영역] 조회조건 -->
+			<!-- ######################### -->
+			<!-- [소재지] -->
+			<div class="info-summary1">
+				<dl class="info">
+					<dt>검색구분</dt>
+					<dd class="ic3"><strong>(02641) 서울특별시 성동구 독서당로 434 서울특별시 성동구 독서당로 434</strong></dd> 
+				</dl>
+				<dl class="data1">
+					<dt>적용년도</dt>
+					<dd>2022.03.14~2022.04.14</dd>
+				</dl>
+				<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+			</div>
+			<!-- [물건명] -->
+			<div class="info-summary1">
+				<dl class="info">
+					<dt>검색구분</dt>
+					<dd class="ic3"><strong>롯데손해보험빌딩</strong></dd> 
+				</dl>
+				<dl class="data1">
+					<dt>적용년도</dt>
+					<dd>2022.03.14~2022.04.14</dd>
+				</dl>
+				<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+			</div>
+			<!-- [물건번호] -->
+			<div class="info-summary1">
+				<dl class="info">
+					<dt>검색구분</dt>
+					<dd class="ic3"><strong>100060014</strong></dd> 
+				</dl>
+				<dl class="data1">
+					<dt>적용년도</dt>
+					<dd>2022.03.14~2022.04.14</dd>
+				</dl>
+				<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [조회결과] 결과없음 -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p>
+					<strong>선택하신 조건의 계약이 없습니다.</strong>
+					<span>조회조건을 바꾸어 조회해보세요</span>
+				</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [조회결과] 결과있음 -->
+			<!-- ######################### -->
+			<div class="info-data2">
+				<dl>
+					<!-- # [선택] # -->
+					<dt class="tit">
+						<label>
+							<input type="radio" name="mg1">
+							<span>@건물명</span>
+						</label>
+					</dt>
+					<!-- # [정보1] # -->
+					<dd class="info-con1 t2">
+						<dl>
+							<dt>물건번호</dt>
+							<dd>000000000</dd>
+						</dl>
+						<dl>
+							<dt>소재지</dt>
+							<dd>서울특별시 성동구 독서당로 465</dd>
+						</dl>
+						<dl>
+							<dt>특건업종</dt>
+							<dd>판매</dd>
+						</dl>
+						<dl>
+							<dt>신배책업종</dt>
+							<dd>대규모점포</dd>
+						</dl>
+						<dl>
+							<dt>연면적 </dt>
+							<dd>25545,477.29m²</dd>
+						</dl>
+						<dl>
+							<dt>점검일 </dt>
+							<dd>2022.03.09</dd>
+						</dl>
+						<dl>
+							<dt>안전등급</dt>
+							<dd>S</dd>
+						</dl>
+						<dl>
+							<dt>할인율</dt>
+							<dd>25.21%</dd>
+						</dl>
+						<dl>
+							<dt>비고</dt>
+							<dd>비고내용노출 내용이 길어지면 개행이 됩니다.</dd>
+						</dl>
+					</dd>
+				</dl>
+			</div>
+			
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<script>
+//<!--
+	/* ************************************
+	* 샘플
+	************************************ */
+	/* 1) 토글컨텐츠 호출 */
+	var _toggleSearch = $plugin.togglecon('#uiFormSearch', {
+		class_active : 'load',
+		selector_group : false,
+		callback_load :function(e){
+			//오픈시
+		},
+		callback_after : function(e){
+			//닫기시
+		}
+	});
+
+	/* 2) 조회버튼 클릭시 이벤트 */
+	$('#btn_search').on('click', function(){
+		//토글컨텐츠 닫기 샘플
+		_toggleSearch.outputClose();
+	});
+
+	/* 3) 조회조건 재검색 클릭 샘플 */
+	$('[href="#uiFormSearch"]').on('click',function(e){
+		e.preventDefault();
+		//토글컨텐츠 열기 샘플
+		_toggleSearch.outputOpen();
+	});
+//-->
+</script>
+</body>
+</html>

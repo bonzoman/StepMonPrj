@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 가상계좌 | 설계(개인/업무/영업) | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-22]	① 계좌번호 생성영역 전체 마크업 변경
+	*	[M 2022-11-08]	① 폼 버튼 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>가상계좌</h1>
+			<button type="button" data-btn="pop-close">가상계좌 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [계좌번호 생성] -->
+			<!-- [M 2022-08-22]	① 계좌번호 생성영역 전체 마크업 변경 -->
+			<!-- ######################### -->
+			<!-- 2022-11-08 버튼 추가 -->
+			<fieldset class="form-wrap1">
+				<dl class="form">
+					<!-- [타이틀명 정의]
+						1) CASE(고객별) : 가상계좌신규발급(고객별)
+						2) CASE(장기계약별) : 가상계좌신규발급(장기계약별)
+						3) CASE(수납번호별) : 가상계좌신규발급(수납번호별)
+					-->
+					<dt>가상계좌신규발급(고객별)</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="radio1" checked="">
+								<span>동의</span>
+							</label>
+							<label>
+								<input type="radio" name="radio1">
+								<span>동의안함</span>
+							</label>
+						</div>
+					</dd>
+					<dd>
+						<div class="area-btn1"><button type="button" class="btn-com1 ic3">계좌발급</button></div>
+					</dd>
+				</dl>
+			</fieldset>
+			<!-- //2022-11-08 버튼 추가 -->
+
+			<!-- ######################### -->
+			<!-- [계좌번호 목록] -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<!-- [총 건수] -->
+				<div class="area-info1">
+					<p>총 <strong>12건</strong></p>
+				</div>
+
+				<!-- [목록] -->
+				<!--
+					[은행클래스명 정의]
+					BKCD_003 : 기업은행
+					BKCD_004 : 국민은행
+					BKCD_005 : 외환은행
+					BKCD_007 : 수협중앙회
+					BKCD_011 : 농협중앙회
+					BKCD_020 : 우리은행
+					BKCD_023 : SC제일은행
+					BKCD_088 : 신한(통합)은행
+					BKCD_027 : 씨티은행
+					BKCD_031 : 대구은행
+					BKCD_032 : 부산은행
+					BKCD_034 : 광주은행
+					BKCD_035 : 제주은행
+					BKCD_037 : 전북은행
+					BKCD_039 : 경남은행
+					BKCD_045 : 새마을금고중앙회
+					BKCD_048 : 신협중앙회
+					BKCD_071 : 우체국
+					BKCD_081 : 하나은행
+					BKCD_089 : 케이뱅크
+					BKCD_090 : 한국카카오은행
+					BKCD_092 : 토스뱅크
+					BKCD_240 : 삼성증권
+				-->
+				<div class="con-t1">
+					<ul>
+						<!-- // -->
+						<li>
+							<label>
+								<input type="radio" name="form-radio-con3" checked>
+								<strong class="BKCD_007">수협중앙회</strong>
+							</label>
+							<div class="data2">
+								<dl>
+									<dt>가상계좌번호</dt>
+									<dd>7900-1234-1234567</dd>
+								</dl>
+								<dl>
+									<dt>고객 휴대폰</dt>
+									<dd>2022.03.01</dd>
+								</dl>
+								<dl>
+									<dt>발급일자</dt>
+									<dd>2022.03.01 <em class="txt-c1">(만료 2일전)</em></dd>
+								</dl>
+								<dl>
+									<dt>담당LP</dt>
+									<dd>123456/하다미</dd>
+								</dl>
+								<!-- [CASE] 수납번호별 일 경우 노출 -->
+								<dl>
+									<dt>수납번호</dt>
+									<dd>0123456789</dd>
+								</dl>
+								<!-- [CASE] 장기계약별 일 경우 노출 -->
+								<dl>
+									<dt>계약번호</dt>
+									<dd>LA1111111111</dd>
+								</dl>
+								<!-- // -->
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<label>
+								<input type="radio" name="form-radio-con3" checked>
+								<strong class="BKCD_090">한국카카오은행</strong>
+							</label>
+							<div class="data2">
+								<dl>
+									<dt>가상계좌번호</dt>
+									<dd>7900-1234-1234567</dd>
+								</dl>
+								<dl>
+									<dt>고객 휴대폰</dt>
+									<dd>2022.03.01</dd>
+								</dl>
+								<dl>
+									<dt>발급일자</dt>
+									<dd>하다미(123456)</dd>
+								</dl>
+								<dl>
+									<dt>담당LP</dt>
+									<dd>LA1111111111</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+					</ul>
+
+					<!-- [더보기] -->
+					<div class="area-btn2">
+						<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+					</div>
+				</div>
+
+				<!-- [검색결과] 결과없음 -->
+				<div class="mes-result1">
+					<p>
+						<strong>가상계좌번호가 없습니다.</strong>
+					</p>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">알림톡발송</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

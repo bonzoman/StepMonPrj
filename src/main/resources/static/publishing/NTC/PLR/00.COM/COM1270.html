@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>마이페이지</title>
+	<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+	<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/ui.plugin.js"></script>
+	<script src="../../resource/js/ui.common.js?20220913"></script>
+
+	<!-- 하이차트 라이브러리 -->
+	<script src="../../resource/js/chart/highcharts.js"></script>
+	<script src="../../resource/js/chart/data.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [바닥페이지] #wrapper ### -->
+<!-- ################################################### -->
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1><button class="icon-com1 ic3 right">하다미 LP님</button></h1>
+
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="4">
+
+		<!-- ######################### -->
+		<!-- [소득조회 현황] -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<h2 class="tit-sub1">소득조회 현황 <a href="#uiTOOLTIPINFO1" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">안내</a></h2>
+
+			<dl class="data-num1">
+				<dt class="hide">소득조회 현황</dt>
+				<dd><strong>-16.3</strong><span>%</span></dd>
+				<dt class="icon-state5 t1 ic5">전월대비</dt><!--[d] 감소 ic3, 증가 ic4,  변동없음 ic5 -->
+				<dd><strong>0</strong><span>원</span></dd>
+				<!-- [감소]
+					<dt class="icon-state5 t1 ic3">전월대비</dt>
+					<dd><strong>-3900</strong><span>원</span></dd>
+				 -->
+				<!-- [증가]
+					<dt class="icon-state5 t1 ic4">전월대비</dt>
+					<dd><strong>+3900</strong><span>원</span></dd>
+				 -->
+				<!-- [변동없음]
+					<dt class="icon-state5 t1 ic5">전월대비</dt>
+					<dd><strong>0</strong><span>원</span></dd>
+				 -->
+			</dl>
+
+			<div class="area-chart">
+				<div class="unit">(단위 원)</div>
+				<div id="Basic-Column2" class="nolegend" data-chart="Basic-Column2"></div>
+				<script>
+					// 소득조회 현황
+					Highcharts.chart("Basic-Column2",{
+						title:null,
+						chart:{
+							type:"column",
+							marginLeft:0,
+							marginRight:0
+						},
+						title:null,
+						legend:{
+							enabled:false,
+						},
+						xAxis:{
+							categories:["당월"]
+						},
+						plotOptions:{
+							column:{
+								dataLabels:{
+									enabled:true
+								}
+							}
+						},
+						series:[{
+							name:"소득",
+							data:[21031,]
+						}]
+					})
+
+				</script>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [예상소득] -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<h2 class="tit-sub1">예상소득 <a href="#uiTOOLTIPINFO3" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">안내</a></h2>
+			<div class="area-info2">
+				<dl>
+					<dt>합계</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+			</div>
+
+			<div class="info-con2 line2">
+				<dl>
+					<dt>장기</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>자동차</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>일반</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [월별 포인트 현황] -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<h2 class="tit-sub1">월별 포인트 현황 <a href="#uiTOOLTIPINFO6" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">안내</a></h2>
+			<dl class="data-num1">
+				<dt class="hide">월별 포인트 현황</dt>
+				<dd><strong>7,600</strong><span>P</span></dd>
+				<dd class="data1">당월 누적</dd>
+			</dl>
+			<div class="area-chart">
+				<div class="unit-t1">(단위 P)</div>
+				<div id="Basic-Column3-2" data-chart="Basic-Column3"></div>
+				<script>
+					// 월별 포인트 현황
+					Highcharts.chart("Basic-Column3-2",{
+						chart:{
+							type:"column",
+							marginLeft:0,
+							marginRight:0,
+						},
+						title:null,
+						legend:{
+							enabled:true,
+							verticalAlign:"top",
+							align:'left',
+							layout:"horizontal"
+						},
+						xAxis:{
+							categories:["당월"]
+						},
+						plotOptions:{
+							column:{
+								groupPadding : 0.35,//그래프 간격
+								dataLabels:{
+									enabled:true
+								}
+							}
+						},
+						series:[
+							{
+								name:"적립",
+								data:[40]
+							},{
+								name:"사용",
+								data:[90]
+							}
+						]
+					})
+
+				</script>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [사용 포인트] -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<h2 class="tit-sub1">사용 포인트 <a href="#uiTOOLTIPINFO8" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">안내</a></h2>
+			<dl class="data-num1">
+				<dt class="hide">소사용 포인트 현황</dt>
+				<dd><strong>1,483</strong><span>P</span></dd>
+				<dt class="icon-state5 t1 ic4">전월대비</dt>
+				<dd><strong>+13.3</strong><span>%</span></dd>
+			</dl>
+
+			<div class="area-chart">
+				<div class="unit">(단위 %)</div>
+				<div class="area-chart-donut">
+					<div class="chart">
+						<div id="Donut-Line3" data-chart="Donut-Line3"></div>
+						<script>
+							// 사용 포인트
+							Highcharts.chart("Donut-Line3", {
+								chart:{
+									type:"pie",
+									margin:[0,0,0,0],
+								},
+								title:{
+									text:"전체",
+									y:52,
+								},
+								subtitle:{
+									text:"48건",
+									y:75,
+								},
+								legend:{
+									enabled:false
+								},
+								plotOptions:{
+									pie:{
+										dataLabels:{
+											enabled:false
+										},
+										innerSize:"90%",
+									}
+								},
+								series:[{
+									name:'사용 포인트',
+									data:[{
+											y:6.1,
+											name:"기타"
+										},{
+											y:17.2,
+											name:"소멸"
+										},{
+											y:25.3,
+											name:"현금화"
+										}]
+								}]
+							});
+
+						</script>
+					</div>
+					<div class="legend dline3">
+						<dl>
+							<dt>현금화</dt>
+							<dd>25.3</dd>
+						</dl>
+						<dl>
+							<dt>소멸</dt>
+							<dd>17.2</dd>
+						</dl>
+						<dl>
+							<dt>기타</dt>
+							<dd>6.1</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [소멸예정 포인트] -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<h2 class="tit-sub1">소멸예정 포인트 <a href="#uiTOOLTIPINF14" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">안내</a></h2>
+			<dl class="data-num1">
+				<dt>D-5</dt>
+				<dd><strong>1,557</strong><span>P</span></dd>
+			</dl>
+
+			<div class="area-chart">
+				<div class="unit">(단위 %)</div>
+				<div class="area-chart-donut">
+					<div class="chart">
+						<div id="Donut-Line2-2" data-chart="Donut-Line2"></div>
+						<script>
+							// 소멸예정 포인트
+							Highcharts.chart("Donut-Line2-2", {
+								chart:{
+									type:"pie",
+									margin:[0,0,0,0],
+								},
+								title:{
+									text:"전체",
+									y:52,
+								},
+								subtitle:{
+									text:"48건",
+									y:75,
+								},
+								legend:{
+									enabled:false
+								},
+								plotOptions:{
+									pie:{
+										dataLabels:{
+											enabled:false,
+										},
+										innerSize:"90%",
+									},
+								},
+								series:[{
+									name:"포인트",
+									data:[
+										{
+											name:"소멸 포인트",
+											y:17
+										},
+										{
+											name:"사용 포인트",
+											y:25
+										}
+									]
+								}]
+							});
+
+						</script>
+					</div>
+					<div class="legend dline2">
+						<dl>
+							<dt>소멸 포인트</dt>
+							<dd>25</dd>
+						</dl>
+						<dl>
+							<dt>사용 포인트</dt>
+							<dd>17</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단 버튼] -->
+		<!-- ######################### -->
+		<div class="area-btn1 line">
+			<button type="button" class="btn-com1">리포트 자세히보기</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ######################### -->
+<!-- [툴팁영역] -->
+<!-- ######################### -->
+<!-- 소득조회 현황 -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">소득조회 현황</dt>
+		<dd>전월 소득액의 증감 비율</dd>
+		<dd><button type="button" data-btn="pop-close">소득조회 현황 닫기</button></dd>
+	</dl>
+</div>
+<!-- 예상소득 -->
+<div id="uiTOOLTIPINFO3" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">예상소득</dt>
+		<dd>세금, 환수 금액등이 반영되지 않은 금액으로<br> 실제 지급 시 예상 소득보다 적을 수 있습니다.</dd>
+		<dd><button type="button" data-btn="pop-close">예상소득 닫기</button></dd>
+	</dl>
+</div>
+<!-- 월별 포인트 현황 -->
+<div id="uiTOOLTIPINFO6" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl class="txt-bul1">
+		<dt>월별 포인트 현황</dt>
+		<dd>적립 : 당월 누적P - 사용P</dd>
+		<dd>사용 : 당월 사용P</dd>
+		<dd><button type="button" data-btn="pop-close">월별 포인트 현황 닫기</button></dd>
+	</dl>
+</div>
+<!-- 사용 포인트 -->
+<div id="uiTOOLTIPINFO8" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl class="txt-bul1">
+		<dt>사용 포인트</dt>
+		<dd>전월 총 사용한 포인트액​​</dd>
+		<dd>사용 구분에 따른 비율과 건수 표기​</dd>
+		<dd><button type="button" data-btn="pop-close">사용 포인트 닫기</button></dd>
+	</dl>
+</div>
+<!-- 소멸예정 포인트 -->
+<div id="uiTOOLTIPINF14" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl class="txt-bul1">
+		<dt>소멸예정 포인트</dt>
+		<dd>소멸 1달 전부터 노출됨​​</dd>
+		<dd>소멸예정일 익일 자정에 자동 소멸됨​</dd>
+		<dd><button type="button" data-btn="pop-close">소멸예정 포인트 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+</body>
+</html>

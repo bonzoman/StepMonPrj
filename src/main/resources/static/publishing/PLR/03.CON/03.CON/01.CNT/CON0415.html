@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>계약변경설계상세 | 계약변경(배서유형선택) | 자동차</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="#none" class="icon-prev">이전페이지</a>
+		<h1>설계상세조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [계약정보] -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<h2 class="tit">Let:way개인용자동차보험</h2>
+			<div class="info">
+				<dl>
+					<dt>설계번호</dt>
+					<dd>LA123456789</dd>
+				</dl>
+			</div>
+			<div class="data2">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>LA2222222222</dd>
+				</dl>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [계약변경상세] 정산금액 -->
+		<!-- ######################### -->
+		<!-- [CASE1] 환급 (내어줄 보험료) -->
+		<div class="area-info2">
+			<dl>
+				<dt>내어줄 보험료</dt>
+				<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+			</dl>
+		</div>
+		<!-- [CASE1-1] 인수심사 대상일 경우 -->
+		<p class="icon-invalid2">인수심사 대상입니다.</p>
+
+		<!-- [CASE2] 추징 (받을 보험료) -->
+		<div class="area-info2">
+			<dl>
+				<dt>받을 보험료</dt>
+				<dd class="data-num1 txt-c4"><strong>000,000,000</strong><span>원</span></dd>
+			</dl>
+		</div>
+
+		<!-- [CASE3] 추징 (받을 보험료) 0원일 경우 -->
+		<div class="area-info2">
+			<dl>
+				<dt>받을 보험료</dt>
+				<dd class="data-num1"><strong>0</strong><span>원</span></dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [계약변경상세] 변경내역 -->
+		<!-- ######################### -->
+		<div class="wrap-section1">
+			<div class="tit-sub1">
+				<h3>변경내역</h3>
+				<div class="side"><button type="button" class="btn-sub2 c2">청약서 및 안내사항</button></div>
+			</div>
+			<div class="tbl-data1">
+				<table>
+					<caption>계약변경설계 변경내역</caption>
+					<colgroup>
+						<col style="width:40%">
+						<col style="width:30%">
+						<col style="width:30%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">항목</th>
+							<th scope="col">변경 전</th>
+							<th scope="col">변경 후</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>단기운전자<br>확대특약</td>
+							<td>-</td>
+							<td>2020.12.28~2030.12.28</td>
+						</tr>
+						<tr>
+							<td>계약변경적용시작일</td>
+							<td>-</td>
+							<td>2022.03.22</td>
+						</tr>
+						<tr>
+							<td>계약변경적용종료일</td>
+							<td>-</td>
+							<td>2022.03.22</td>
+						</tr>
+						<tr>
+							<td>가입일수</td>
+							<td>-</td>
+							<td>6일</td>
+						</tr>
+						<tr>
+							<td>운전한정</td>
+							<td>1인한정특약</td>
+							<td>누구나</td>
+						</tr>
+						<tr>
+							<td>연령특약</td>
+							<td>만30세 이상</td>
+							<td>전연령</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<!-- [CASE] 심사대상인 경우 -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action ic4 simple">부가기능</button>
+			<button type="button" class="btn-action c1">심사요청</button>
+		</div>
+
+		<!-- [CASE] 심사대상인 경우 : 심사완료전 -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action ic4 simple">부가기능</button>
+			<button type="button" class="btn-action c3">심사중</button>
+		</div>
+
+		<!-- [CASE] 심사대상인 경우 : 심사결과 보완요청인 경우 -->
+		<div class="area-action t1 col" data-sticky="bottom">
+			<button type="button" class="btn-action ic4 simple">부가기능</button>
+			<button type="button" class="btn-action c1">심사결과</button>
+			<button type="button" class="btn-action c1">계약변경 다시하기</button>
+		</div>
+
+		<!-- [CASE] 심사완료 후 : 이륜차 차량번호변경인 경우만 -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action ic4 simple">부가기능</button>
+			<button type="button" class="btn-action c1">계약변경 완료</button>
+		</div>
+
+		<!-- [CASE] 심사완료 후 : 전자서명 대상 건인 경우 -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action ic4 simple">부가기능</button>
+			<button type="button" class="btn-action c1">전자서명</button>
+		</div>
+
+		<!-- [CASE] 심사완료 후 : 전자서명 완료 후 -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action ic4 simple">부가기능</button>
+			<button type="button" class="btn-action c1">계약변경 완료</button>
+		</div>
+
+		<!-- [CASE] 심사완료 후 : 단기운전자변경인 경우 -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action ic4 simple">부가기능</button>
+			<button type="button" class="btn-action c1">원수수납</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 수수료지급타입신청서 | 위촉계약서 작성 | 전자위촉</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-25]	① 공통사항 항목 삭제 밑 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업]: 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가: 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지: layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>수수료 지급 타입 신청서</h1>
+			<button type="button" data-btn="pop-close">수수료 지급 타입 신청서 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [타입선택] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend class="tit">수수료지급 타입선택</legend>
+
+				<div class="area-btn4">
+					<button type="button" class="btn-sub3 c2">선지급/분급 알아보기</button>
+				</div>
+
+				<div class="label-img1 img-set5">
+					<label class="ic1">
+						<input type="radio" name="form-radio-img1" aria-invalid="true"><!-- [D] 오류시: 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>분급 Type</span>
+					</label>
+					<label class="ic2">
+						<input type="radio" name="form-radio-img1">
+						<span>선지급 Type</span>
+					</label>
+				</div>
+				<div class="validation">필수 확인항목 입니다.</div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [약관영역] -->
+			<!-- ######################### -->
+			<div class="area-terms line">
+				<dl> <!-- 2022-10-25 클래스 제거 -->
+					<dt>공통사항</dt>
+					<dd>'전속그룹 수수료 관리기준 內 채권확보기준'상, 채권 미확보 시 자동으로 보류형 Type으로 변경되며 수수료 보류됨</dd>
+					<!-- <dd>수수료 지급 Type 미선택 시, 선지급 Type으로 자동 적용됨</dd> --> <!-- 2022-10-25 삭제 -->
+				</dl>
+
+				<dl>
+					<dt>관련규정</dt>
+					<dd><em>전속그룹 수수료 관리 기준 內 채권확보기준</em>
+						<ul class="mark3">
+							<li>채권확보 대상: 선지급 Type 수수료 적용 영업조직 & 간부(P1, P2, AM, PM)</li>
+							<li><em>보류금액: 발생수수료 전액</em>
+								<ul class="mark">
+									<li><i>1)</i>지급보류한도: 지급보류 누계금액이 기준 채권 확보금액 도달 시 까지</li>
+									<li><i>2)</i>보류수수료에 대한 별도의 이자지급 없음</li>
+									<li><i>3)</i>집계약에 대한 철회/취소/해지 등의 사유로 인해 환수금액이 발생한 경우, 해당월 수수료 지급시 차감하며 미환수 수수료가 발생한 경우 보류수수료에서 해당 금액 차감함</li>
+								</ul>
+							</li>
+							<li><em>채권확보 금액기준: 수수료 채권 + 간부채권</em>
+								<p class="bul2">기본채권 예시) 선지급 TYPE 적용 P2: 기본 2천만원 (수수료 채권 1천 + 간부채권 1천)</p>
+
+								<div class="area">
+									<div class="tbl-data1">
+										<table>
+											<caption class="tit t2">수수료 채권 확보금액</caption>
+											<colgroup>
+												<col style="width:24.4444%">
+												<col style="width:35.5555%">
+												<col style="width:auto">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">구분</th>
+													<th scope="col">장기성과수수료</th>
+													<th scope="col">기본 (최소 확보 채권)</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>15차월<br>이하</td>
+													<td>평가월 직전<br>7개월 합산 (교차: 8개월 합산)</td>
+													<td rowspan="3">1천만원<br>(교차: 3백만원)</td>
+												</tr>
+												<tr>
+													<td>16차월<br>이상</td>
+													<td>평가월 직전<br>5개월 합산</td>
+												</tr>
+												<tr>
+													<td>10년이상<br>또는<br>명예이사</td>
+													<td>평가월 직전<br>4개월 합산</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<div class="icon-com1 ic1 simple">더하기</div>
+
+									<div class="tbl-data1">
+										<table>
+											<caption class="tit t2">간부채권 확보금액</caption>
+											<colgroup>
+												<col style="width:24.4444%">
+												<col style="width:auto">
+												<col style="width:35.5555%">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">구분</th>
+													<th scope="col">Overriding<br>+간부 수수료</th>
+													<th scope="col">기본 (최소 확보 채권)</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>P1</td>
+													<td rowspan="3">평가월 직전<br>4개월 합산</td>
+													<td>5천만원</td>
+												</tr>
+												<tr>
+													<td>P2</td>
+													<td rowspan="2">1천만원</td>
+												</tr>
+												<tr>
+													<td>AM<br>PM</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</li>
+
+							<li><em>채권확보 평가 주기: 평가월 기준, 당월 수수료 지급분부터 결과 반영</em>
+								<ul class="mark">
+									<li><i>1)</i>15차월 이하: 매월 평가 (매월 수수료 지급 익일 평가)</li>
+									<li><i>2)</i>16차월 이상: 분기 평가 (매년 3월, 6월, 9월, 12월 평가)</li>
+								</ul>
+							</li>
+							<li><em>채권 증액</em>
+								<ul class="mark">
+									<li><i>1)</i>증액시기: 채권확보 평가 이후, 익월 5영업일 까지</li>
+									<li><i>2)</i>증액단위: 1천만 원 단위 증액 (교차의 경우 500만원 단위 증액)</li>
+								</ul>
+							</li>
+							<li><em>보류금 지급 (1, 2 중 하나이상 해당시)</em>
+								<ul class="mark">
+									<li><i>1)</i>해촉 후 15차월 초과시(16차월 도래 시 지급 가능)</li>
+									<li><i>2)</i>장기신규 무실적 15차월 초과 후(16차월 도래 시 지급가능) 분급형 성과수수료 타입 적용</li>
+								</ul>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보영역] -->
+			<!-- ######################### -->
+			<div class="wrap-section2 t2" data-scroll-bg="2">
+				<div class="con-t3">
+					<p class="txt"><strong>2022년 07 월 14일</strong></p>
+					<div class="info">
+						<dl>
+							<dt>성명</dt>
+							<dd>김롯데</dd>
+						</dl>
+						<dl>
+							<dt>생년월일</dt>
+							<dd><span data-masking="true">900101 - *******</span></dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [확인영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap3">
+				<legend>내용확인 필수체크</legend>
+
+				<div class="form t2">
+					<span>위 계약서 내용을</span>
+					<div class="label-btn1 t3 invalid"> <!-- 오류시 클래스명(invalid) 추가 -->
+						<label>
+							<input type="checkbox">
+							<span>숙지</span>
+						</label>
+					</div>
+					<span>하고</span>
+					<div class="label-btn1 t3">
+						<label>
+							<input type="checkbox">
+							<span>이해</span>
+						</label>
+					</div><span>했으며,</span><br>
+					<span>상기 내용에</span>
+					<div class="label-btn1 t3">
+						<label>
+							<input type="checkbox">
+							<span>동의</span>
+						</label>
+					</div><span>합니다.</span>
+				</div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

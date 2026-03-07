@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 고객수정확인 | 고객정보등록 | 사업자고객등록 | 고객등록</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" onclick="uiFunction(this)" class="btn-action c1">완료</button> <!-- [D] uiFunction은 레이어팝업 호출 샘플 -->
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 고객정보 수정 ### -->
+<!-- ################################################### -->
+<div id="uiPOPUPCUS0073L01" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>고객정보 수정</dt>
+		<dd>이미 등록된 고객입니다.<br>고객정보를 수정하시겠어요?</dd>
+		<!-- // -->
+		<dd class="area-action">
+			<button type="button" class="btn-action" data-btn="pop-close">이전</button>
+			<button type="button" class="btn-action c1">수정하기</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	//레이어팝업 선언
+	var _popup = $plugin.popmodal('#uiPOPUPCUS0073L01');
+
+	//샘플 : 레이어팝업 호출 방법
+	function uiFunction(el){
+		_popup.outputOpen();// 레이어팝업 오픈
+	}
+
+	//레이어팝업 강제 호출
+	_popup.outputOpen();
+//-->
+</script>
+</body>
+</html>

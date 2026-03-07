@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 자동로그아웃</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ##################################### -->
+<!-- ### [레이어팝업] 자동 로그아웃 ### -->
+<!-- ##################################### -->
+<div id="uiPOPDPCOM0030L01" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>자동 로그아웃</dt>
+		<dd>장시간 이용하지 않아 로그아웃 되었습니다.<br/>다시 로그인 해주세요.</dd>
+		<!-- // -->
+		<dd class="area-action">
+			<!-- [M 2022-06-30] 삭제
+			<button type="button" class="btn-action">취소</button>
+			-->
+			<button type="button" class="btn-action c1" data-btn="pop-close">확인</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- ##################################### -->
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPDPCOM0030L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPDPCOM0030L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

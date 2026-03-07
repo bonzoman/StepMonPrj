@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>포인트 상세내역 | 포인트적립/소진내역 | 포인트/소득관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>포인트 상세내역</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="tit-sub2">
+			<h2 class="">포인트 상세 정보 내역</h2>
+		</div>
+		<div class="tbl-view1">
+			<table>
+				<colgroup>
+					<col style="width:150px;">
+					<col>
+					<col style="width:150px;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">정정대상자</th>
+						<td colspan="3">
+							<button type="button" class="btn-sub1 c1">취급자 조회하기</button>
+							강남사업단/강남5지점/강남5-1팀/홍길동(1231231)
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">보유포인트</th>
+						<td>500P</td>
+						<th scope="row">현금화 신청여부</th>
+						<td>당월 신청 안함</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tbl-write1">
+			<table>
+				<colgroup>
+					<col style="width:150px;">
+					<col>
+				</colgroup>
+				<tbody>
+					<!--[M : 2022-09-21 수정] -->
+					<tr>
+						<th scope="row">정정 포인트(적립)<em class="imp"><span>필수</span></em></th>
+						<td>
+							<input type="text" name="" id="" class="text" style="width:250px;" placeholder="포인트 입력">
+						</td>
+					</tr>
+					<!--// [M : 2022-09-21 수정] -->
+					<tr>
+						<th scope="row">적요명<em class="imp"><span>필수</span></em></th>
+						<td>
+							<select name="" id=""style="width:400px;" class="selectbox">
+								<option value="">선택해주세요.</option>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--[M : 2022-09-21 수정] -->
+		<ul class="list-dot1">
+			<li>적립 시 즉시 포인트로 입금됩니다.</li>
+			<li>사용 시 포인트 내역에서 확인이 불가하며, 익월 수수료 지급일에 시상항목에서 차감됩니다.</li>
+		</ul>
+		<!-- // [M : 2022-09-21 수정] -->
+		<div class="area-action">
+			<button type="button" class="btn-action c1">정정하기</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

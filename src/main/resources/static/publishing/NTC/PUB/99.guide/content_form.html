@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>FORM | CONTENTS | PUBLISHING GUIDE</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<link rel="stylesheet" href="../../resource/css/publish.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<div class="guide-wrap">
+	<header>
+		<h1>
+			<i>롯데손해보험</i> CONTENTS <strong>FORM</strong>
+			<a href="../99.work/coding_list1.html" class="guide-btn1">작업목록</a>
+		</h1>
+		<nav>
+			<ul>
+				<li><a href="content_basic.html">INFO</a></li>
+				<li><a href="content_txt.html">TITLE/TXT</a></li>
+				<li><a href="content_btn.html">BUTTON</a></li>
+				<li><a href="content_icon.html">ICON</a></li>
+				<li class="active"><a href="content_form.html" aria-current="page">FORM ELEMENT</a></li>
+				<li><a href="content_formarea.html">FORM 약관/검색</a></li>
+				<li><a href="content_formarea2.html">FORM 입력</a></li>
+				<li><a href="content_tab.html">TAB/TOGGLE</a></li>
+				<li><a href="content_tbl.html">TABLE</a></li>
+				<li><a href="content_box.html">BOX/BANNER</a></li>
+				<li><a href="content_info.html">INFO/DATA</a></li>
+				<li><a href="content_list.html">LIST</a></li>
+				<li><a href="content_bbs.html">BOARD</a></li>
+			</ul>
+		</nav>
+	</header>
+	<article class="guide-container">
+		<h1 class="hide">폼 작업 가이드</h1>
+		<!-- ############################## -->
+		<!-- [공통사항] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">공통사항</h2>
+			<div class="guide-tbl">
+				<table>
+					<caption>공통사항</caption>
+					<colgroup><col style="width:12.0rem;"/><col style="width:20%;"/></colgroup>
+					<thead>
+						<tr>
+							<th scope="col">구분</th>
+							<th scope="col">속성</th>
+							<th scope="col">설명</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row" rowspan="2">대체텍스트</th>
+							<td>[title]<br/>[placeholder]</td>
+							<td>
+								<ul class="txt-bul1">
+									<li>폼객체에 대한 대체텍스트는 title 속성을 기본으로 한다.</li>
+									<li>명시적 label[for] 의 경우 개발/운영상 작업공수로 인하여 title로 대체한다.</li>
+								</ul>
+<pre><code class="html">&lt;input type="text" title="대체텍스트" placeholder="대체텍스트"/&gt;
+&lt;select title="대체텍스트"&gt;&lt;/select&gt;
+</code></pre>
+							</td>
+						</tr>
+						<tr>
+							<td>암묵적 label</td>
+							<td>
+								input[type="reaio"], input[type="checkbox"] 의 경우 UI 디자인 및 접근성을 위하여 예외적으로 암묵적 label 사용을 허용한다.
+<pre><code class="html">&lt;label&gt;
+&lt;input type="checkbox"/&gt;
+&lt;span&gt;항목명&lt;span&gt;
+&lt;/label&gt;
+</code></pre>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">오류안내</th>
+							<td>[aria-invalid="true"]</td>
+							<td>폼객체 입력항목에 오류가 있을 경우 클래스가 아닌 [aria-invalid="true"] 속성을 통해 시각/청각 정보를 제공한다.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [입력필드] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">입력필드</h2>
+
+			<!-- [유형1] -->
+			<h3 class="guide-tit2">input[class="text"]</h3>
+			<p class="guide-txt">BG색상에 따른 INPUT 외곽선 색상 구분</p>
+			<fieldset class="guide-form1 body">
+				<legend>BG : #F7F7F7</legend>
+				<input type="text" class="text" title="[@대체텍스트]" value="DEFAULT">
+				<hr class="guide-line1">
+				<input type="text" class="text" title="[@대체텍스트]" placeholder="PLACEHOLDER">
+				<hr class="guide-line1">
+				<input type="text" class="text focus" title="[@대체텍스트]" value="FOCUS">
+				<hr class="guide-line1">
+				<input type="text" class="text" title="[@대체텍스트]" value="ERROR" aria-invalid="true">
+				<hr class="guide-line1">
+				<input type="text" class="text" title="[@대체텍스트]" value="DISABLED" disabled>
+				<hr class="guide-line1">
+				<input type="text" class="text" title="[@대체텍스트]" value="READONLY" readonly>
+				<hr class="guide-line1">
+				<input type="text" class="text readonly" title="[@대체텍스트]" value="READONLY">
+				<hr class="guide-line1">
+				<data class="text" data-label="DATA TEG PLACEHOLDER"></data>
+				<hr class="guide-line1">
+				<data class="text" data-label="DATA TEG">DATA TEG DEFAULT</data>
+				<hr class="guide-line1">
+				<input type="search" class="text" title="[@대체텍스트]" value="SEARCH TYPE">
+			</fieldset>
+			<fieldset class="guide-form1 popup">
+				<legend>BG : #FFFFFF</legend>
+				<input type="text" class="text" title="[@대체텍스트]" value="DEFAULT">
+				<hr class="guide-line1">
+				<input type="text" class="text" title="[@대체텍스트]" placeholder="PLACEHOLDER">
+				<hr class="guide-line1">
+				<input type="text" class="text focus" title="[@대체텍스트]" value="FOCUS">
+				<hr class="guide-line1">
+				<input type="text" class="text" title="[@대체텍스트]" value="ERROR" aria-invalid="true">
+				<hr class="guide-line1">
+				<input type="text" class="text" title="[@대체텍스트]" value="DISABLED" disabled>
+				<hr class="guide-line1">
+				<input type="text" class="text" title="[@대체텍스트]" value="READONLY" readonly>
+			</fieldset>
+
+			<!-- [활용] -->
+			<fieldset class="guide-form1 body">
+				<legend>활용</legend>
+				<div class="text time">
+					<input type="time" title="[@대체텍스트]" placeholder="HH:MM" value="13:30">
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<input type="text" title="[@대체텍스트]" placeholder="PLACEHOLDER">
+					<button type="button" data-btn="delete">내용 삭제</button>
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<span class="area">
+						<input type="text" title="[@대체텍스트]" value="DEFAULT" placeholder="PLACEHOLDER">
+						<button type="button" data-btn="delete">내용 삭제</button>
+					</span>
+					<button type="button" class="icon-com1 ic2 simple">검색</button>
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<span class="area">
+						<input type="text" title="[@대체텍스트]" value="홍길동" placeholder="PLACEHOLDER" disabled>
+						<button type="button" data-btn="delete">내용 삭제</button>
+					</span>
+					<button type="button" class="icon-com1 ic2 simple">검색</button>
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<input type="tel" title="[@대체텍스트]" value="000,000" placeholder="PLACEHOLDER">
+					<span class="util">원</span>
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<input type="tel" title="[@대체텍스트]" value="123456" placeholder="PLACEHOLDER">
+					<span class="util2">03:00</span>
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<input type="text" title="[@대체텍스트]" value="DEFAULT" placeholder="PLACEHOLDER">
+					<span class="util">-</span>
+					<input type="text" title="[@대체텍스트]" value="DEFAULT" placeholder="PLACEHOLDER">
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<input type="tel" title="[@대체텍스트]" value="840101">
+					<span class="util">-</span>
+					<input type="tel" title="[@대체텍스트]" maxlength="1" value="1">
+					<span class="util">******</span>
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<input type="tel" title="[@대체텍스트]" value="840101">
+					<span class="util">-</span>
+					<input type="tel" title="[@대체텍스트]" maxlength="1" value="1" aria-invalid="true">
+					<span class="util">******</span>
+				</div>
+			</fieldset>
+			<fieldset class="guide-form1 popup">
+				<legend>활용</legend>
+				<div class="text">
+					<input type="text" title="[@대체텍스트]" placeholder="PLACEHOLDER">
+					<button type="button" data-btn="delete">내용 삭제</button>
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<span class="area">
+						<input type="text" title="[@대체텍스트]" value="DEFAULT" placeholder="PLACEHOLDER">
+						<button type="button" data-btn="delete">내용 삭제</button>
+					</span>
+					<button type="button" class="icon-com1 ic2 simple">검색</button>
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<span class="area">
+						<input type="text" title="[@대체텍스트]" value="홍길동" placeholder="PLACEHOLDER" disabled>
+						<button type="button" data-btn="delete">내용 삭제</button>
+					</span>
+					<button type="button" class="icon-com1 ic2 simple">검색</button>
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<input type="tel" title="[@대체텍스트]" value="000,000" placeholder="PLACEHOLDER">
+					<span class="util">원</span>
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<input type="tel" title="[@대체텍스트]" value="123456" placeholder="PLACEHOLDER">
+					<span class="util2">03:00</span>
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<input type="text" title="[@대체텍스트]" value="DEFAULT" placeholder="PLACEHOLDER">
+					<span class="util">-</span>
+					<input type="text" title="[@대체텍스트]" value="DEFAULT" placeholder="PLACEHOLDER">
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<input type="tel" title="[@대체텍스트]" value="840101">
+					<span class="util">-</span>
+					<input type="tel" title="[@대체텍스트]" maxlength="1" value="1">
+					<span class="util">******</span>
+				</div>
+				<hr class="guide-line1">
+				<div class="text">
+					<input type="tel" title="[@대체텍스트]" value="840101">
+					<span class="util">-</span>
+					<input type="tel" title="[@대체텍스트]" maxlength="1" value="1" aria-invalid="true">
+					<span class="util">******</span>
+				</div>
+			</fieldset>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [셀렉트박스] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">셀렉트박스</h2>
+
+			<!-- [유형1] -->
+			<h3 class="guide-tit2">select[class="selectbox"]</h3>
+			<p class="guide-txt">BG색상에 따른 SELECT 외곽선 색상 구분</p>
+			<fieldset class="guide-form1 body">
+				<legend>BG : #F7F7F7</legend>
+				<select class="selectbox" title="[@대체텍스트]">
+					<option value="">DEFAULT</option>
+					<option value="SElECT">SElECTED</option>
+				</select>
+				<hr class="guide-line1">
+				<select class="selectbox focus" title="[@대체텍스트]">
+					<option value="FOCUS">FOCUS</option>
+				</select>
+				<hr class="guide-line1">
+				<select class="selectbox" title="[@대체텍스트]" aria-invalid="true">
+					<option value="ERROR">ERROR</option>
+				</select>
+				<hr class="guide-line1">
+				<select class="selectbox" title="[@대체텍스트]" disabled >
+					<option value="DISABLED">DISABLED</option>
+				</select>
+				<hr class="guide-line1">
+				<a href="javascript:void(0);" role="button" class="selectbox">A</a>
+				<hr class="guide-line1">
+				<button type="button" class="selectbox">BUTTON</button>
+				<hr class="guide-line1">
+				<span class="selectbox">SPAN</span>
+			</fieldset>
+			<fieldset class="guide-form1 popup" >
+				<legend>BG : #FFFFFF</legend>
+				<select class="selectbox" title="[@대체텍스트]">
+					<option value="" selected disabled hidden>DEFAULT</option>
+					<option value="SElECT">SElECTED</option>
+				</select>
+				<hr class="guide-line1">
+				<select class="selectbox focus" title="[@대체텍스트]">
+					<option value="FOCUS">FOCUS</option>
+				</select>
+				<hr class="guide-line1">
+				<select class="selectbox" title="[@대체텍스트]" aria-invalid="true">
+					<option value="ERROR">ERROR</option>
+				</select>
+				<hr class="guide-line1">
+				<select class="selectbox" title="[@대체텍스트]" disabled>
+					<option value="DISABLED">DISABLED</option>
+				</select>
+				<hr class="guide-line1">
+				<a href="javascript:void(0);" role="button" class="selectbox">A</a>
+				<hr class="guide-line1">
+				<button type="button" class="selectbox">BUTTON</button>
+				<hr class="guide-line1">
+				<span class="selectbox">SPAN</span>
+				<hr class="guide-line1">
+				<!-- // -->
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">항목명</span>
+						<span data-select="text" data-value=""></span>
+					</button>
+					<div class="list">
+						<div data-label="항목명">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion" value="1"><span>OPTION1</span></label>
+								<label><input type="radio" name="selectOpeion" value="2"><span>OPTION2</span></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- // -->
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">항목명</span>
+						<span data-select="text" data-value=""></span>
+					</button>
+					<div class="list">
+						<div data-label="항목명">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion2" value="4"><span>OPTION1</span></label>
+								<label><input type="radio" name="selectOpeion2" value="5"><span>OPTION2</span></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- // -->
+			</fieldset>
+			<!-- -->
+			<h3 class="guide-tit2">토글형</h3>
+			<dl class="select-toggle1" data-autoset="select">
+				<dt>항목명</dt>
+				<dd>
+					<div class="basic">
+						<data data-label="항목명 선택" data-value=""></data>
+						<button type="button" data-toggle="selectbtn" aria-expanded="false">항목명 선택목록</button>
+					</div>
+					<div class="list">
+						<button type="button" title="선택" data-option="1"><span>OPTION1</span></button>
+						<button type="button" title="선택" data-option="2"><span>OPTION2</span></button>
+						<button type="button" title="선택" data-option="3"><span>OPTION3</span></button>
+						<button type="button" title="선택" data-option="4"><span>OPTION4</span></button>
+						<button type="button" title="선택" data-option="5"><span>OPTION5</span></button>
+					</div>
+				</dd>
+			</dl>
+
+		</section>
+
+		<!-- ############################## -->
+		<!-- [입력영역] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">입력영역</h2>
+			<!-- [유형1] -->
+			<h3 class="guide-tit2">textarea[class="textarea"]</h3>
+			<p class="guide-txt">BG색상에 따른 TEXTAREA 외곽선 색상 구분</p>
+			<fieldset class="guide-form1 body">
+				<legend>BG : #F7F7F7</legend>
+				<textarea cols="50" rows="3" title="[@대체텍스트]" class="textarea">DEFAULT</textarea>
+				<div class="textarea">
+					<textarea cols="50" rows="3" title="[@대체텍스트]">DEFAULT</textarea>
+					<span class="util2"><strong>0</strong>/4,000자</span>
+				</div>
+				<div class="textarea">
+					<textarea cols="50" rows="3" title="[@대체텍스트]">DEFAULT</textarea>
+					<div class="area">
+						<span class="util2"><strong>0</strong>/4,000자</span>
+						<button type="button" class="btn-sub2 c1">등록</button>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset class="guide-form1 popup" >
+				<legend>BG : #FFFFFF</legend>
+				<textarea cols="50" rows="3" title="[@대체텍스트]" class="textarea">DEFAULT</textarea>
+				<div class="textarea">
+					<textarea cols="50" rows="3" title="[@대체텍스트]">DEFAULT</textarea>
+					<span class="util2"><strong>0</strong>/4,000자</span>
+				</div>
+				<div class="textarea">
+					<textarea cols="50" rows="3" title="[@대체텍스트]">DEFAULT</textarea>
+					<div class="area">
+						<span class="util2"><strong>0</strong>/4,000자</span>
+						<button type="button" class="btn-sub2 c1">등록</button>
+					</div>
+				</div>
+			</fieldset>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [라디오버튼 / 체크박스] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">라디오버튼 / 체크박스</h2>
+
+			<h3 class="guide-tit2">기본</h3>
+			<!-- [유형1] -->
+			<fieldset class="guide-form1 body">
+				<legend>[class="label-check1"]</legend>
+				<div class="label-check1">
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio1">
+						<span>DEFAULT</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio1" checked>
+						<span>CHECKED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio1_1" disabled>
+						<span>DISABLED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio1_1" checked disabled>
+						<span>CHECKED + DISABLED</span>
+					</label>
+					<!-- // -->
+				</div>
+				<hr class="guide-line1">
+				<div class="label-check1">
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>DEFAULT</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked>
+						<span>CHECKED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" disabled>
+						<span>DISABLED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked disabled>
+						<span>CHECKED + DISABLED</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-check1"]</legend>
+				<div class="label-check1">
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio12">
+						<span>DEFAULT</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio12" checked>
+						<span>CHECKED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio12" disabled>
+						<span>DISABLED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio12_1" checked disabled>
+						<span>CHECKED + DISABLED</span>
+					</label>
+					<!-- // -->
+				</div>
+				<hr class="guide-line1">
+				<div class="label-check1">
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>DEFAULT</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked>
+						<span>CHECKED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" disabled>
+						<span>DISABLED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked disabled>
+						<span>CHECKED + DISABLED</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-check1 simple"]</legend>
+				<div class="label-check1 simple">
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio2">
+						<span>DEFAULT</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio2" checked>
+						<span>CHECKED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio2" disabled>
+						<span>DISABLED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio2" checked disabled>
+						<span>CHECKED + DISABLED</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-check1 block"]</legend>
+				<div class="label-check1 block">
+					<label>
+						<input type="radio" name="form-radio21" checked="">
+						<span>
+							<strong>하다미</strong>
+							<span>870123-2******</span>
+						</span>
+					</label>
+					<label>
+						<input type="radio" name="form-radio21">
+						<span>
+							<strong>하다미</strong>
+							<span>870123-2******</span>
+						</span>
+					</label>
+					<label>
+						<input type="radio" name="form-radio21">
+						<span>
+							<strong>하다미</strong>
+							<span>870123-2******</span>
+						</span>
+					</label>
+				</div>
+				<div class="label-check1 block">
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio" checked>
+						<span>
+							<strong>국가명(국문)</strong>
+							<span>국가명(영문)</span>
+							<span class="sub">
+								<i>CRS협정국가</i>
+								<i>FATF비협조국가</i>
+							</span>
+						</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio">
+						<span>
+							<strong>아랍에미리트</strong>
+							<span>The United Arab Emirates</span>
+							<span class="sub">
+								<i>CRS협정국가</i>
+								<i>FATF비협조국가</i>
+							</span>
+						</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio">
+						<span>
+							<strong>아프가니스탄</strong>
+							<span>Afghanistan</span>
+							<span class="sub">
+								<i>CRS협정국가</i>
+							</span>
+						</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-check1 box"]</legend>
+				<div class="label-check1 box">
+					<!-- // -->
+					<label>
+						<input type="checkbox" name="form-check-box">
+						<span>입원</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" name="form-check-box" >
+						<span>수술(제왕절개 포함)</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" name="form-check-box" >
+						<span>계속하여 7일 이상 치료</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" name="form-check-box">
+						<span>계속하여 30일 이상 투약</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+			<fieldset class="guide-form1 body">
+				<legend>[class="label-check1 t1 box"]</legend>
+				<div class="label-check1 t1 box">
+					<!-- // -->
+					<label>
+						<input type="checkbox" name="form-check-box">
+						<span>입원</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" name="form-check-box" >
+						<span>수술(제왕절개 포함)</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" name="form-check-box" >
+						<span>계속하여 7일 이상 치료</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" name="form-check-box">
+						<span>계속하여 30일 이상 투약</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-check1 box col2"]</legend>
+				<div class="label-check1 box col2">
+					<!-- // -->
+					<label>
+						<input type="checkbox" name="form-check-box">
+						<span>입원 필요소견</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" name="form-check-box" >
+						<span>수술 필요소견</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" name="form-check-box" >
+						<span>추가검사(재검사)</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-check1 box2"]</legend>
+				<div class="label-check1 box2">
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>항목명</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>항목명</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>항목명항목명항목명항목명항목명항목명항목명항목명 항목명</span>
+					</label>
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>항목명</span>
+						</label>
+						<p class="txt">부가설명</p>
+					</div>
+					<!-- // -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>항목명</span>
+						</label>
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">툴팁</button>
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl>
+								<dt class="hide">툴팁</dt>
+								<dd>내용</dd>
+								<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+							</dl>
+						</div>
+					</div>
+					<!-- // -->
+				</div>
+
+				<div class="label-check1 box2" data-autoset="form">
+					<!-- 항목하나 -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>선택시 입력 내용 노출</span>
+						</label>
+						<!-- [노출 컨텐츠 추가] -->
+						<div class="ui-tabcon">노출 컨텐츠 영역</div>
+						<!-- [사이드 버튼] -->
+						<div class="side"><button type="button" class="btn-sub3 c2 side">버튼</button></div>
+					</div>
+
+					<!-- 항목하나 -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>선택시 입력 내용 노출</span>
+						</label>
+						<!-- [노출 컨텐츠 추가] -->
+						<div class="ui-tabcon form-wrap1">
+							<dl class="form">
+								<dt>항목명</dt>
+								<dd><input type="text" class="text" placeholder="항목명"></dd>
+							</dl>
+						</div>
+					</div>
+
+					<!-- 항목하나 -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>항목명</span>
+							<a href="javascript:void(0);" class="icon-com2 ic2 side">안내</a>
+						</label>
+					</div>
+
+					<!-- 항목하나 -->
+					<div class="area">
+						<label>
+							<input type="checkbox">
+							<span>선택시 입력 내용 노출</span>
+						</label>
+						<!-- [노출 컨텐츠 추가] -->
+						<div class="ui-tabcon form-wrap1">
+							<div class="form">
+								<input type="text" class="text">
+								<input type="text" class="text">
+							</div>
+						</div>
+					</div>
+					<!-- // -->
+				</div>
+			</fieldset>
+
+			<!-- [유형2] -->
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-check2"]</legend>
+				<div class="label-check2">
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio6">
+						<span>DEFAULT</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio6" checked>
+						<span>CHECKED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio6_1" disabled>
+						<span>DISABLED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio6_1" checked disabled>
+						<span>CHECKED + DISABLED</span>
+					</label>
+					<!-- // -->
+				</div>
+				<hr class="guide-line1">
+				<div class="label-check2">
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>DEFAULT</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked>
+						<span>CHECKED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" disabled>
+						<span>DISABLED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked disabled>
+						<span>CHECKED + DISABLED</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+			<fieldset class="guide-form1 body">
+				<legend>[class="label-check2 box"]</legend>
+				<div class="label-check2 box">
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>DEFAULT</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked>
+						<span>CHECKED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" disabled>
+						<span>DISABLED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked disabled>
+						<span>CHECKED + DISABLED</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+			<fieldset class="guide-form1 body">
+				<legend>[class="label-check2 line"]</legend>
+				<div class="label-check2 line">
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>DEFAULT</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked>
+						<span>CHECKED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" disabled>
+						<span>DISABLED</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked disabled>
+						<span>CHECKED + DISABLED</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+
+			<h3 class="guide-tit2">버튼형</h3>
+			<!-- [유형1] -->
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-btn1"]</legend>
+				<div class="label-btn1">
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio3">
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio3" checked>
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio3" disabled>
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio3_1" checked disabled>
+						<span>선택</span>
+					</label>
+					<!-- // -->
+				</div>
+				<hr class="guide-line1">
+				<div class="label-btn1 col2">
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked>
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" disabled>
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked disabled>
+						<span>선택</span>
+					</label>
+					<!-- // -->
+				</div>
+				<hr class="guide-line1">
+				<div class="label-btn1 col3">
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked>
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" disabled>
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked disabled>
+						<span>선택</span>
+					</label>
+					<!-- // -->
+				</div>
+
+				<hr class="guide-line1">
+				<div class="label-btn1 img-set1">
+					<!-- // -->
+					<label class="ic1">
+						<input type="checkbox">
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label class="ic2">
+						<input type="checkbox">
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label class="ic3">
+						<input type="checkbox" checked>
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label class="ic4">
+						<input type="checkbox">
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label class="ic5">
+						<input type="checkbox">
+						<span>선택</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+
+			<!-- [유형2] -->
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-btn2"]</legend>
+				<div class="label-btn2">
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>항목명1</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked>
+						<span>항목명항목명2</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" disabled>
+						<span>항목명3</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox" checked disabled>
+						<span>항목명4</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+
+			<!-- [유형3] -->
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-btn3"]</legend>
+				<div class="label-btn3">
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio6">
+						<span>항목명1</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio6" checked>
+						<span>항목명항목명2</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+
+			<!-- [유형4] -->
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-btn4"]</legend>
+				<div class="label-btn4">
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio7">
+						<span>항목명1</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio7" checked>
+						<span>항목명2</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+
+			<h3 class="guide-tit2">토글형</h3>
+			<!-- [유형3] -->
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-toggle1"] input[type="checkbox"]</legend>
+				<div class="label-toggle1">
+					<!-- // -->
+					<label>
+						<input type="checkbox" name="form-radio5">
+						<span>텍스트가 있는 경우</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+			<!-- [유형2] -->
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-toggle1.simple] input[type="checkbox"]</legend>
+				<div class="label-toggle1 simple">
+					<!-- // -->
+					<label>
+						<input type="checkbox" name="form-radio5">
+						<span>선택</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+			<!-- [유형3] -->
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-toggle1.simple"] input[type="radio"]</legend>
+				<div class="label-toggle1 simple">
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio4">
+						<span>선택</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="radio" name="form-radio4" checked>
+						<span>선택</span>
+					</label>
+					<!-- // -->
+				</div>
+			</fieldset>
+
+			<h3 class="guide-tit2">이미지형</h3>
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-img1"]</legend>
+				<!-- // -->
+				<div class="label-img1">
+					<label class="ic1">
+						<input type="radio" name="form-radio-img1">
+						<span>설계단계</span>
+					</label>
+					<label class="ic2">
+						<input type="radio" name="form-radio-img1">
+						<span>청약단계</span>
+					</label>
+				</div>
+				<div class="label-img1">
+					<button type="button" class="ic1">설계단계</button>
+					<button type="button" class="ic2">청약단계</button>
+				</div>
+				<hr class="guide-line2">
+				<div class="label-img1">
+					<label class="ic3">
+						<input type="radio" name="form-radio-img2">
+						<span>내 관할지역<br>사업단</span>
+					</label>
+					<label class="ic4">
+						<input type="radio" name="form-radio-img2">
+						<span>MARS<br>사업단</span>
+					</label>
+				</div>
+				<div class="label-img1">
+					<button type="button" class="ic3">내 관할지역<br>사업단</button>
+					<button type="button" class="ic4">MARS<br>사업단</button>
+				</div>
+				<hr class="guide-line2">
+				<div class="label-img1">
+					<label class="ic5">
+						<input type="radio" name="form-radio-img3">
+						<span>직원 찾기</span>
+					</label>
+					<label class="ic6">
+						<input type="radio" name="form-radio-img3">
+						<span>기관 찾기</span>
+					</label>
+				</div>
+				<div class="label-img1">
+					<button type="button" class="ic5">직원 찾기</button>
+					<button type="button" class="ic6">기관 찾기</button>
+				</div>
+				<hr class="guide-line2">
+				<div class="label-img1">
+					<label class="ic7">
+						<input type="radio" name="form-radio-img3">
+						<span>단순설계</span>
+					</label>
+					<label class="ic1">
+						<input type="radio" name="form-radio-img3">
+						<span>상세설계</span>
+					</label>
+				</div>
+				<hr class="guide-line2">
+				<div class="label-img1 img-set1">
+					<label class="ic1">
+						<input type="radio" name="formRadioImg2">
+						<span>스마트폰 청약</span>
+					</label>
+					<label class="ic2">
+						<input type="radio" name="formRadioImg2">
+						<span>전자서명 URL 발송</span>
+					</label>
+				</div>
+				<div class="label-img1 img-set1">
+					<label class="ic1">
+						<input type="radio" name="formRadioImg22">
+						<span>스마트폰 청약</span>
+					</label>
+					<label class="ic2">
+						<input type="radio" name="formRadioImg22" disabled>
+						<span>전자서명 발송<br>시간이 아닙니다</span>
+					</label>
+				</div>
+				<hr class="guide-line2">
+				<div class="label-img1 img-set2">
+					<label class="ic1">
+						<input type="radio" name="formRadioImg3">
+						<span>개인고객</span>
+					</label>
+					<label class="ic2">
+						<input type="radio" name="formRadioImg3">
+						<span>법인고객</span>
+					</label>
+				</div>
+			</fieldset>
+
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-img2"]</legend>
+				<div class="label-img2 img-set1">
+					<label class="img1"><input type="checkbox" name="formLabelCheck" checked disabled><span>자동차 소유자</span></label>
+					<label class="img2"><input type="checkbox" name="formLabelCheck"><span>배우자(법정)</span></label>
+					<label class="img3"><input type="checkbox" name="formLabelCheck"><span>나의 부모</span></label>
+					<label class="img4"><input type="checkbox" name="formLabelCheck"><span>배우자의 부모</span></label>
+					<label class="img5"><input type="checkbox" name="formLabelCheck"><span>자녀 및 자녀의 배우자</span></label>
+					<label class="img6"><input type="checkbox" name="formLabelCheck"><span>나의형제자매</span></label>
+					<label class="img7"><input type="checkbox" name="formLabelCheck"><span>타인(지정1인)</span></label>
+					<label class="img8"><input type="checkbox" name="formLabelCheck"><span>임직원 지정</span></label>
+					<label class="img9"><input type="checkbox" name="formLabelCheck"><span>고용운전자</span></label>
+				</div>
+				<hr class="guide-line2">
+				<div class="label-img2 img-set1">
+					<label class="img1"><input type="checkbox" name="formLabelCheck" checked disabled><span>자동차 소유자</span></label>
+					<label class="img2"><input type="checkbox" name="formLabelCheck"><span>배우자(법정)</span></label>
+					<label class="img3"><input type="checkbox" name="formLabelCheck"><span>나의 부모</span></label>
+					<label class="img4"><input type="checkbox" name="formLabelCheck"><span>배우자의 부모</span></label>
+					<label class="img5"><input type="checkbox" name="formLabelCheck"><span>자녀 및 자녀의 배우자</span></label>
+					<label class="img7"><input type="checkbox" name="formLabelCheck"><span>타인(지정1인)</span></label>
+				</div>
+				<hr class="guide-line2">
+				<div class="label-img2 img-set1">
+					<label class="img1"><input type="checkbox" name="formLabelCheck" checked disabled><span>자동차 소유자</span></label>
+					<label class="img7"><input type="checkbox" name="formLabelCheck"><span>타인(지정1인)</span></label>
+				</div>
+				<hr class="guide-line2">
+				<div class="label-img2 img-set1">
+					<label class="img1"><input type="checkbox" name="formLabelCheck" checked disabled><span>자동차 소유자</span></label>
+					<label class="img7"><input type="checkbox" name="formLabelCheck"><span>타인(지정1인)</span></label>
+					<label class="img8"><input type="checkbox" name="formLabelCheck"><span>임직원 지정</span></label>
+				</div>
+			</fieldset>
+
+			<fieldset class="guide-form1 body">
+				<legend>[class="label-img3"]</legend>
+
+				<div class="label-img3">
+					<label class="ic1">
+						<input type="radio" name="form-radio-img1">
+						<em>예</em>
+						<span>동일한<br>사람이에요.</span>
+					</label>
+
+					<label class="ic2">
+						<input type="radio" name="form-radio-img1">
+						<em>아니오</em>
+						<span>다른 사람이<br>보장받아요.</span>
+					</label>
+				</div>
+			</fieldset>
+
+			<h3 class="guide-tit2">컨텐츠형</h3>
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-con1"]</legend>
+
+			</fieldset>
+
+			<h3 class="guide-tit2">기타</h3>
+			<fieldset class="guide-form1 popup">
+				<legend>[class="label-t1"]</legend>
+				<div class="label-t1">
+					<input type="radio" name="form-radio-star" title="별점 1점" required>
+					<span>별점 1점</span>
+					<input type="radio" name="form-radio-star" title="별점 2점">
+					<span>별점 2점</span>
+					<input type="radio" name="form-radio-star" title="별점 3점">
+					<span>별점 3점</span>
+					<input type="radio" name="form-radio-star" title="별점 4점">
+					<span>별점 4점</span>
+					<input type="radio" name="form-radio-star" title="별점 5점">
+					<span>별점 5점</span>
+				</div>
+			</fieldset>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [날짜선택] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">날짜선택</h2>
+			<fieldset class="guide-form1 body">
+				<legend>[class="input-date1"]</legend>
+
+				<div class="input-date1">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+						<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" readonly>
+					</span>
+				</div>
+				<div class="input-date1">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+						<input type="text" class="text" title="날짜 선택" value="2022.02.02" placeholder="YYYY.MM.DD" readonly>
+					</span>
+				</div>
+			</fieldset>
+
+			<fieldset class="guide-form1 popup">
+				<legend>활용 : 예약설정 : 시작일 기준</legend>
+				<div class="input-date1 text">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+						<input type="text" title="시작날짜 선택" data-dateform="start" value="2022.04.17" placeholder="YYYY.MM.DD" readonly>
+					</span>
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+						<input type="text" title="종료날짜 선택" data-dateform="end" placeholder="YYYY.MM.DD" readonly>
+					</span>
+				</div>
+			</fieldset>
+
+			<fieldset class="guide-form1 popup">
+				<legend>활용 : 조회기간 : 종료일 기준</legend>
+				<div class="input-date1 text">
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+						<input type="text" title="시작날짜 선택" data-dateform="start2" value="2022.04.10" placeholder="YYYY.MM.DD" readonly>
+					</span>
+					<span>
+						<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+						<input type="text" title="종료날짜 선택" data-dateform="end2" value="2022.04.17" placeholder="YYYY.MM.DD" readonly>
+					</span>
+				</div>
+			</fieldset>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [간편비밀번호] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">간편비밀번호</h2>
+			<fieldset class="guide-form1 popup">
+				<legend>[class="input-pass1"]</legend>
+				<div class="input-pass1">
+					<input type="password" maxlength="1" required>
+					<input type="password" maxlength="1" required>
+					<input type="password" maxlength="1" required>
+					<input type="password" maxlength="1" required>
+					<input type="password" maxlength="1" required>
+					<input type="password" maxlength="1" required>
+				</div>
+			</fieldset>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [범위설정] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">범위설정</h2>
+			<h3 class="guide-tit2">기본 : 입력없음</h3>
+			<fieldset class="guide-form1 popup">
+				<legend>[class="input-range1"]</legend>
+				<div class="input-range1">
+					<div class="text">
+						<span>
+							<data value="0" data-range="1"></data>
+							<span class="util1">세</span>
+						</span>
+						<span class="util">~</span>
+						<span>
+							<data value="80" data-range="2"></data>
+							<span class="util1">세</span>
+						</span>
+					</div>
+					<div class="range">
+						<span data-label="0"><input type="range" min="0" max="100" step="5" value="0" data-range="1"></span>
+						<span data-label="전체"><input type="range" min="0" max="100" step="5" value="80" data-range="2"></span>
+					</div>
+				</div>
+			</fieldset>
+
+			<h3 class="guide-tit2">금액입력</h3>
+			<fieldset class="guide-form1 body">
+				<legend>[class="input-range1"]</legend>
+				<div class="input-range1">
+					<!-- [금액입력] -->
+					<div class="input-wrap"></div>
+					<div class="text">
+						<span>
+							<input type="tel" value="0" data-range="1">
+							<span class="util1">원</span>
+						</span>
+						<span class="util">~</span>
+						<span>
+							<input type="tel" value="300000" data-range="2">
+							<span class="util1">원</span>
+						</span>
+					</div>
+					<!-- [적용버튼] : 금액을 직접 입력 후 금액 적용을 클릭 후 하단 범위설정이 재 설정됨 : 하단 스크립트 참고 -->
+					<div class="area-btn1"><button type="button" class="btn-com1 c1" onclick="uiFunction(this)">금액 적용</button></div>
+					<div class="mes">※ 300,000원 초과 입력가능 합니다.</div>
+
+					<!-- [범위설정] -->
+					<div class="range">
+						<span data-label1="0원" data-label2="10만원"><input type="range" min="0" max="300000" step="10000" value="0" data-range="1"></span>
+						<span data-label1="20만원" data-label2="30만원+"><input type="range" min="0" max="300000" step="10000" value="300000" data-range="2"></span>
+					</div>
+					<!-- // -->
+				</div>
+			</fieldset>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [폼객체유형] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">폼객체유형</h2>
+			<h3 class="guide-tit2">텍스트(폼객체대체) + 레이어호출버튼</h3>
+			<fieldset class="guide-form1 body">
+				<legend>.input-btn1 &gt; span/data + button</legend>
+
+				<div class="input-btn1">
+					<data class="text" data-label="PLACEHOLDER"></data>
+					<button type="button">팝업호출버튼</button>
+				</div>
+				<hr class="guide-line1">
+				<div class="input-btn1">
+					<data class="text" data-label="PLACEHOLDER">선택값</data>
+					<button type="button">팝업호출버튼</button>
+				</div>
+				<hr class="guide-line1">
+				<div class="input-btn1">
+					<data class="selectbox" data-label="PLACEHOLDER"></data>
+					<button type="button">팝업호출버튼</button>
+				</div>
+				<hr class="guide-line1">
+				<div class="input-btn1">
+					<data class="selectbox" data-label="PLACEHOLDER">선택값</data>
+					<button type="button">팝업호출버튼</button>
+				</div>
+			</fieldset>
+
+			<h3 class="guide-tit2">폼객체(가변) + 버튼/텍스트(고정)</h3>
+			<fieldset class="guide-form1 body">
+				<legend>유형1 | .input-wrap1</legend>
+				<div class="input-wrap1">
+					<input type="text" class="text" placeholder="PLACEHOLDER">
+					<button type="button" class="btn-sub1">버튼명</button>
+				</div>
+				<div class="input-wrap1">
+					<select class="selectbox">
+						<option>항목명</option>
+					</select>
+					<input type="text" class="text" placeholder="PLACEHOLDER">
+					<button type="button" class="btn-sub1 c1">버튼명</button>
+				</div>
+			</fieldset>
+		</section>
+		<!-- ############################## -->
+	</article>
+</div>
+<script src="../../resource/js/publish.plugin.js"></script>
+<script src="../../resource/js/publish.common.js"></script>
+
+<script>
+	//<!--
+		//샘플 : 금액적용 클릭 후 범위설정 하기
+		function uiFunction(el){
+			var _wrap = $(el).parents('.input-range1');
+			var _val1 = _wrap.find('.text [data-range="1"]').val();
+			var _val2 = _wrap.find('.text [data-range="2"]').val();
+
+			_wrap.find('.range [data-range="1"]').val(_val1);
+			_wrap.find('.range [data-range="2"]').val(_val2);
+			ui.formInput();
+		}
+	//-->
+	</script>
+</body>
+</html>

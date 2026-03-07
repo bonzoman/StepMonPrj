@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>내용확인 및 동의 | 스마트폰청약 | 표준설계 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>스마트폰 청약</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [입력영역] 내용확인 -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend class="tit">65세 이상 금융소비자보호를 위한 확인 및 안내사항</legend>
+
+			<!-- # 보험계약자 확인 # -->
+			<dl class="form">
+				<dt>보험가입목적</dt>
+				<dd>
+                    <div class="label-check1 col2">
+                        <!-- // -->
+                        <label>
+                            <input type="checkbox" name="form-radio1">
+                            <span>보장목적</span>
+                        </label>
+                        <!-- // -->
+                        <label>
+                            <input type="checkbox" name="form-radio1" checked="">
+                            <span>노후연금목적</span>
+                        </label>
+                        <!-- // -->
+                        <label>
+                            <input type="checkbox" name="form-radio1_1">
+                            <span>목돈마련목적</span>
+                        </label>
+                        <!-- // -->
+                        <label>
+                            <input type="checkbox" name="form-radio1_1" checked="">
+                            <span>상속/증여목적</span>
+                        </label>
+                        <!-- // -->
+                    </div>
+				</dd>
+			</dl>
+
+			<dl class="form">
+				<dt>보험료 수준</dt>
+				<dd>
+                    <div class="label-btn1 col2">
+                        <!-- // -->
+                        <label>
+                            <input type="radio" name="form-radio3">
+                            <span>적정하다</span>
+                        </label>
+                        <!-- // -->
+                        <label>
+                            <input type="radio" name="form-radio3" checked="">
+                            <span>보통이다</span>
+                        </label>
+                        <!-- // -->
+                        <label>
+                            <input type="radio" name="form-radio3">
+                            <span>다소부담</span>
+                        </label>
+                        <!-- // -->
+                        <label>
+                            <input type="radio" name="form-radio3">
+                            <span>매우부담</span>
+                        </label>
+                        <!-- // -->
+                    </div>
+				</dd>
+			</dl>
+
+            <dl class="form">
+				<dt>불이익 사항</dt>
+				<dd>
+                    <div class="label-btn1 col2">
+                        <!-- // -->
+                        <label>
+                            <input type="radio" name="form-radio4">
+                            <span>이해함</span>
+                        </label>
+                        <!-- // -->
+                        <label>
+                            <input type="radio" name="form-radio4" checked="">
+                            <span>이해하지못함</span>
+                        </label>
+                    </div>
+				</dd>
+			</dl>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">확인</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+//<!--
+	//[샘플] 덧쓰기
+	$('.text2').each(function(i, obj){
+		var _input = $(obj).find('> input');
+		var _text = $(obj).data('label');
+
+		_input.keyup(function(e) {
+			$(obj).removeClass('valid invalid');
+		}).blur(function(e){//덧쓰기 끝났을 때
+			if (_input.val() == _text) {
+				$(obj).addClass('valid');
+			}else if(_input.val() == _text || _input.val() != ''){
+				$(obj).addClass('invalid');
+			};
+		});
+	});
+//-->
+</script>
+</body>
+</html>

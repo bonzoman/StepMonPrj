@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>조직증감 | 목록 | 조직증감추이 | 조직관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>조직증감추이</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="4">
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li class="active"><a href="#" aria-current="page">조직증감추이</a></li>
+				<li><a href="#">생산성추이</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [필터영역] -->
+		<!-- ######################### -->
+		<div class="area-info1 line2">
+			<p>2022</p>
+			<div class="side"><button type="button" class="icon-com1 ic18 right">필터</button></div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [합계영역] -->
+		<!-- ######################### -->
+		<h2 class="tit-sub1">최근 3개월 전속지원팀 추이</h2>
+		<!-- # 그래프 # -->
+		<div class="area-chart"></div>
+		<!-- # 데이터 없음 # -->
+		<div class="mes-result1">
+			<p>
+				<strong>기간 내 자료가 없어요.</strong>
+				<!-- # [CASE] : 당년도 자료 없는 경우 # -->
+				<strong>과거 이맘때의 기간 내 자료가 없어요.</strong>
+				<!-- // -->
+			</p>
+		</div>
+		<!-- # 테이블 # -->
+		<div class="tbl-data1">
+			<table>
+				<caption>합계 테이블</caption>
+				<colgroup>
+					<col style="width:25%">
+					<col style="width:25%">
+					<col style="width:25%">
+					<col style="width:25%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col" class="left">구분</th>
+						<th scope="col">재적</th>
+						<th scope="col">위촉</th>
+						<th scope="col">해촉</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="active">
+						<th>4월</th>
+						<td>000명</td>
+						<td>000명</td>
+						<td>000명</td>
+					</tr>
+					<tr>
+						<th>3월</th>
+						<td>000명</td>
+						<td>000명</td>
+						<td>000명</td>
+					</tr>
+					<tr>
+						<th>2월</th>
+						<td>000명</td>
+						<td>000명</td>
+						<td>000명</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- # 상세이동 버튼 # -->
+		<div class="area-btn2"><a href="javascript:void(0);" class="btn-t1 icon-com1 right ic3">전속지원팀 상세보기</a></div>
+
+		<!-- ######################### -->
+		<!-- [목록] -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<!-- ### 항목하나 : 사업단 ### -->
+			<section>
+				<h3 class="tit-sub2">강남사업단<a href="javascript:void(0);" class="link">상세보기</a></h3>
+				<div class="tbl-data1 t1">
+					<table>
+						<caption>합계 테이블</caption>
+						<colgroup>
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" class="left">구분</th>
+								<th scope="col">재적</th>
+								<th scope="col">위촉</th>
+								<th scope="col">해촉</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="active"> <!-- [D] 당월데이터 : 최상단위치 : 클래스명(active) 추가 -->
+								<th>4월</th>
+								<td>000명</td>
+								<td>000명</td>
+								<td>000명</td>
+							</tr>
+							<tr>
+								<th>3월</th>
+								<td>000명</td>
+								<td>000명</td>
+								<td>000명</td>
+							</tr>
+							<tr>
+								<th>2월</th>
+								<td>000명</td>
+								<td>000명</td>
+								<td>000명</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- ### 항목하나 : 저점별 ### -->
+			<section>
+				<h3 class="tit-sub2">전속지원교차01팀<a href="javascript:void(0);" class="link">상세보기</a></h3>
+				<div class="tbl-data1 t1">
+					<table>
+						<caption>합계 테이블</caption>
+						<colgroup>
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" class="left">구분</th>
+								<th scope="col">재적</th>
+								<th scope="col">위촉</th>
+								<th scope="col">해촉</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="active">
+								<th>4월</th>
+								<td>000명</td>
+								<td>000명</td>
+								<td>000명</td>
+							</tr>
+							<tr>
+								<th>3월</th>
+								<td>000명</td>
+								<td>000명</td>
+								<td>000명</td>
+							</tr>
+							<tr>
+								<th>2월</th>
+								<td>000명</td>
+								<td>000명</td>
+								<td>000명</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- ### 항목하나 : 데이터없음 ### -->
+			<section>
+				<h3 class="tit-sub2">전속지원교차01팀<a href="javascript:void(0);" class="link">상세보기</a></h3>
+				<div class="tbl-data1 t1">
+					<table>
+						<caption>합계 테이블</caption>
+						<colgroup>
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" class="left">구분</th>
+								<th scope="col">재적</th>
+								<th scope="col">위촉</th>
+								<th scope="col">해촉</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="active">
+								<th>4월</th>
+								<td>0명</td>
+								<td>0명</td>
+								<td>0명</td>
+							</tr>
+							<tr>
+								<th>3월</th>
+								<td>0명</td>
+								<td>0명</td>
+								<td>0명</td>
+							</tr>
+							<tr>
+								<th>2월</th>
+								<td>0명</td>
+								<td>0명</td>
+								<td>0명</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- ### 더보기(현재페이지/총페이지) ### -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+			<!-- ### // ### -->
+		</div>
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

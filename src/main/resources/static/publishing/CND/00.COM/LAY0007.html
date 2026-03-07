@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 전체메뉴</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220725">
+<link rel="stylesheet" href="../../resource/css/content.css?20220725">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css?20220725">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220725"></script>
+</head>
+<body>
+<aside class="aside-menu" id="asideTotalMenu" data-popmodal="true">
+	<!-- ######################### -->
+	<!-- [상단영역] 고객정보 -->
+	<!-- ######################### -->
+	<header>
+		<!-- # 정보 # -->
+		<div class="area1">
+			<button type="button" data-btn="pop-close">전체메뉴 닫기</button>
+			<a href="javascript:void(0);" class="info" title="나의정보">
+				<strong>하다미님</strong>
+			</a>
+			<a href="javascript:void(0);" class="icon-com1 ic19">홈으로 가기</a>
+			<a href="javascript:void(0);" class="icon-com1 ic28">알림</a>
+			<a href="javascript:void(0);" class="icon-com1 ic17">설정</a>
+		</div>
+
+		<!-- # 즐겨찾기 메뉴 # -->
+		<div class="area2">
+			<a href="javascript:void(0);" class="ic5">출석체크</a>
+			<a href="javascript:void(0);" class="ic6">데일리퀴즈</a>
+			<a href="javascript:void(0);" class="ic7">친구초대</a>
+			<a href="javascript:void(0);" class="ic8">내 강의실</a>
+		</div>
+		<!-- # // # -->
+	</header>
+
+
+	<!-- ######################### -->
+	<!-- [메뉴영역] -->
+	<!-- ######################### -->
+	<nav class="menu">
+		<dl>
+			<dt>커뮤니티</dt>
+			<dd>
+				<a href="javascript:void(0);">렛플래너</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">보험꿀팁</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">스터디톡</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">Q&amp;A</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">공지사항</a>
+			</dd>
+		</dl>
+		<dl>
+			<dt>스터디</dt>
+			<dd>
+				<a href="javascript:void(0);">입문교육</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">모의고사</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">풀이영상 모아보기</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">시험신청</a>
+			</dd>
+		</dl>
+		<dl>
+			<dt>내 정보</dt>
+			<dd>
+				<a href="javascript:void(0);">내 진행단계</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">나의 추천인</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">내 정보수정</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">앱설정</a>
+			</dd>
+		</dl>
+		<dl>
+			<dt>혜택</dt>
+			<dd>
+				<a href="javascript:void(0);">포인트 혜택</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">포인트 현황</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">친구초대</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">출석체크</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">데일리퀴즈</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">이벤트</a>
+			</dd>
+		</dl>
+		<dl>
+			<dt>나의 보험</dt>
+			<dd>
+				<a href="javascript:void(0);">소득시뮬레이션</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">보장분석</a>
+			</dd>
+			<dd>
+				<a href="javascript:void(0);">LBTI</a>
+			</dd>
+		</dl>
+	</nav>
+</aside>
+
+<script>
+//<!--
+	//풀팝업 호출
+	$(document).ready(function(){
+		$('#asideTotalMenu').trigger('outputOpen');
+	});
+//-->
+</script>
+</body>
+</html>

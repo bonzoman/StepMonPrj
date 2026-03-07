@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 설정</title>
+<link rel="stylesheet" href="../../resource/css/common.css">
+<link rel="stylesheet" href="../../resource/css/content.css">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>설정</h1>
+			<button type="button" data-btn="pop-close">설정 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container"><!-- [M : 2022-08-25 data-page 삭제] -->
+			<div class="list-t1">
+				<ul>
+					<!-- # 간편로그인 설정 # -->
+					<li>
+						<a href="javascript:void(0);" class="link1">
+							<div class="txt1">간편로그인 설정</div>
+							<div class="txt2">지문</div>
+						</a>
+					</li>
+					<!-- [M : 2022-08-10 수정]
+						1. 리스트 순서변경
+						   앱 PUSH 알림 과 쉐이킹활성 순서 변경
+
+						2. 앱 PUSH 알림 상세 항목 추가
+					-->
+
+					<!-- # 쉐이킹활성 # -->
+					<!-- 2022-12-09 변경 -->
+					<li data-role="switchToggle">
+						<div class="label-toggle1">
+							<label>
+								<input type="checkbox" name="form-check2">
+								<span>쉐이킹활성</span>
+							</label>
+						</div>
+						<div class="data-con shake">
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">쉐이킹 민감도</span>
+									<span data-select="text" data-value="1">약</span>
+								</button>
+								<div class="list">
+									<div data-label="쉐이킹 민감도">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion3_1" value="1"><span>약</span></label>
+											<label><input type="radio" name="selectOpeion3_1" value="2"><span>중</span></label>
+											<label><input type="radio" name="selectOpeion3_1" value="3"><span>강</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">이동화면 설정</span>
+									<span data-select="text" data-value="1">HELP 접수</span>
+								</button>
+								<div class="list">
+									<div data-label="이동화면 설정">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion3_2" value="1"><span>HELP 접수</span></label>
+											<label><input type="radio" name="selectOpeion3_2" value="2"><span>설계하기(장기)</span></label>
+											<label><input type="radio" name="selectOpeion3_2" value="3"><span>포인트조회</span></label>
+											<label><input type="radio" name="selectOpeion3_2" value="4"><span>내강의실</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- //2022-12-09 변경 -->
+					<!-- # 앱 PUSH 알림 # -->
+					<li class="" data-role="switchToggle">
+						<div class="label-toggle1">
+							<label>
+								<input type="checkbox" name="form-check2">
+								<span>앱 PUSH 알림</span>
+							</label>
+						</div>
+						<div class="data-con" data-role="switchToggle">
+							<!-- 2022-12-06 삭제 -->
+							<!-- <div class="label-toggle1">
+								<label>
+									<input type="checkbox" name="fc22" checked="checked">
+									<span>커뮤니티 알림</span>
+								</label>
+							</div>
+							<div class="label-toggle1">
+								<label>
+									<input type="checkbox" name="fc22" checked="checked">
+									<span>이벤트 알림</span>
+								</label>
+							</div> -->
+							<!-- //2022-12-06 삭제 -->
+							<div class="label-toggle1">
+								<label>
+									<input type="checkbox" name="fc22" checked="checked">
+									<span>스터디 알림</span>
+								</label>
+							</div>
+
+							<div class="input-wrap1">
+								<div class="select-wrap w100" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">시간 선택</span>
+										<span data-select="text" data-value="10">10시</span>
+									</button>
+									<div class="list">
+										<div data-label="시간 선택">
+											<div class="option">
+												<label><input type="radio" name="hour1" value="1"><span>1시</span></label>
+												<label><input type="radio" name="hour1" value="2"><span>2시</span></label>
+												<label><input type="radio" name="hour1" value="3"><span>3시</span></label>
+												<label><input type="radio" name="hour1" value="4"><span>4시</span></label>
+												<label><input type="radio" name="hour1" value="5"><span>5시</span></label>
+												<label><input type="radio" name="hour1" value="6"><span>6시</span></label>
+												<label><input type="radio" name="hour1" value="7"><span>7시</span></label>
+												<label><input type="radio" name="hour1" value="8"><span>8시</span></label>
+												<label><input type="radio" name="hour1" value="9"><span>9시</span></label>
+												<label><input type="radio" name="hour1" value="10"><span>10시</span></label>
+												<label><input type="radio" name="hour1" value="11"><span>11시</span></label>
+												<label><input type="radio" name="hour1" value="12"><span>12시</span></label>
+												<label><input type="radio" name="hour1" value="13"><span>13시</span></label>
+												<label><input type="radio" name="hour1" value="14"><span>14시</span></label>
+												<label><input type="radio" name="hour1" value="15"><span>15시</span></label>
+												<label><input type="radio" name="hour1" value="16"><span>16시</span></label>
+												<label><input type="radio" name="hour1" value="17"><span>17시</span></label>
+												<label><input type="radio" name="hour1" value="18"><span>18시</span></label>
+												<label><input type="radio" name="hour1" value="19"><span>19시</span></label>
+												<label><input type="radio" name="hour1" value="20"><span>20시</span></label>
+												<label><input type="radio" name="hour1" value="21"><span>21시</span></label>
+												<label><input type="radio" name="hour1" value="22"><span>22시</span></label>
+												<label><input type="radio" name="hour1" value="23"><span>23시</span></label>
+												<label><input type="radio" name="hour1" value="24"><span>24시</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="select-wrap w100" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">분 선택</span>
+										<span data-select="text" data-value="0">00분</span>
+									</button>
+									<div class="list">
+										<div data-label="분 선택">
+											<div class="option">
+												<label><input type="radio" name="min1" value="0"><span>00분</span></label>
+												<label><input type="radio" name="min1" value="1"><span>01분</span></label>
+												<label><input type="radio" name="min1" value="2"><span>02분</span></label>
+												<label><input type="radio" name="min1" value="3"><span>03분</span></label>
+												<label><input type="radio" name="min1" value="4"><span>04분</span></label>
+												<label><input type="radio" name="min1" value="5"><span>05분</span></label>
+												<label><input type="radio" name="min1" value="6"><span>06분</span></label>
+												<label><input type="radio" name="min1" value="7"><span>07분</span></label>
+												<label><input type="radio" name="min1" value="8"><span>08분</span></label>
+												<label><input type="radio" name="min1" value="9"><span>09분</span></label>
+												<label><input type="radio" name="min1" value="10"><span>10분</span></label>
+												<label><input type="radio" name="min1" value="11"><span>11분</span></label>
+												<label><input type="radio" name="min1" value="12"><span>12분</span></label>
+												<label><input type="radio" name="min1" value="13"><span>13분</span></label>
+												<label><input type="radio" name="min1" value="14"><span>14분</span></label>
+												<label><input type="radio" name="min1" value="15"><span>15분</span></label>
+												<label><input type="radio" name="min1" value="16"><span>16분</span></label>
+												<label><input type="radio" name="min1" value="17"><span>17분</span></label>
+												<label><input type="radio" name="min1" value="18"><span>18분</span></label>
+												<label><input type="radio" name="min1" value="19"><span>19분</span></label>
+												<label><input type="radio" name="min1" value="20"><span>20분</span></label>
+												<label><input type="radio" name="min1" value="21"><span>21분</span></label>
+												<label><input type="radio" name="min1" value="22"><span>22분</span></label>
+												<label><input type="radio" name="min1" value="23"><span>23분</span></label>
+												<label><input type="radio" name="min1" value="24"><span>24분</span></label>
+												<label><input type="radio" name="min1" value="25"><span>25분</span></label>
+												<label><input type="radio" name="min1" value="26"><span>26분</span></label>
+												<label><input type="radio" name="min1" value="27"><span>27분</span></label>
+												<label><input type="radio" name="min1" value="28"><span>28분</span></label>
+												<label><input type="radio" name="min1" value="29"><span>29분</span></label>
+												<label><input type="radio" name="min1" value="30"><span>30분</span></label>
+												<label><input type="radio" name="min1" value="31"><span>31분</span></label>
+												<label><input type="radio" name="min1" value="32"><span>32분</span></label>
+												<label><input type="radio" name="min1" value="33"><span>33분</span></label>
+												<label><input type="radio" name="min1" value="34"><span>34분</span></label>
+												<label><input type="radio" name="min1" value="35"><span>35분</span></label>
+												<label><input type="radio" name="min1" value="36"><span>36분</span></label>
+												<label><input type="radio" name="min1" value="37"><span>37분</span></label>
+												<label><input type="radio" name="min1" value="38"><span>38분</span></label>
+												<label><input type="radio" name="min1" value="39"><span>39분</span></label>
+												<label><input type="radio" name="min1" value="40"><span>40분</span></label>
+												<label><input type="radio" name="min1" value="41"><span>41분</span></label>
+												<label><input type="radio" name="min1" value="42"><span>42분</span></label>
+												<label><input type="radio" name="min1" value="43"><span>43분</span></label>
+												<label><input type="radio" name="min1" value="44"><span>44분</span></label>
+												<label><input type="radio" name="min1" value="45"><span>45분</span></label>
+												<label><input type="radio" name="min1" value="46"><span>46분</span></label>
+												<label><input type="radio" name="min1" value="47"><span>47분</span></label>
+												<label><input type="radio" name="min1" value="48"><span>48분</span></label>
+												<label><input type="radio" name="min1" value="49"><span>49분</span></label>
+												<label><input type="radio" name="min1" value="50"><span>50분</span></label>
+												<label><input type="radio" name="min1" value="51"><span>51분</span></label>
+												<label><input type="radio" name="min1" value="52"><span>52분</span></label>
+												<label><input type="radio" name="min1" value="53"><span>53분</span></label>
+												<label><input type="radio" name="min1" value="54"><span>54분</span></label>
+												<label><input type="radio" name="min1" value="55"><span>55분</span></label>
+												<label><input type="radio" name="min1" value="56"><span>56분</span></label>
+												<label><input type="radio" name="min1" value="57"><span>57분</span></label>
+												<label><input type="radio" name="min1" value="58"><span>58분</span></label>
+												<label><input type="radio" name="min1" value="59"><span>59분</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!--// [M : 2022-08-10 수정] -->
+
+
+					<!-- # 버전정보 [CASE1] 최신버전 경우 문구 노출 # -->
+					<li>
+						<div class="txt1">버전정보</div>
+						<div class="txt2">
+							<span>4.1.0 </span>
+							<em>최신버전입니다</em>
+						</div>
+					</li>
+					<!-- # 버전정보 [CASE2] 최신버전 아닐 경우 버튼 노출 # -->
+					<li>
+						<a href="javascript:void(0);" class="link1">
+							<div class="txt1">버전정보</div>
+							<div class="txt2">업데이트</div>
+						</a>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

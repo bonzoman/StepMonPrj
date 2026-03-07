@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>퀘스트 달성률 | 활동 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">퀘스트 달성률</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1">
+
+				<div class="form-field">
+					<dl class="form w1">
+						<dt>조회기간</dt>
+						<dd>
+							<div class="form-row">
+								<span class="date-range2"> <!-- 2022-12-28 클래스 변경 -->
+									<input type="text" data-role="start" placeholder="시작월 선택">
+									<span class="util">~</span>
+									<input type="text" data-role="end" placeholder="종료월 선택">
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w3"> <!-- 숨길때 hide-->
+						<dt>조직구분</dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>취급자</option>
+								</select>
+								<input type="text" name="" id="" class="text" style="width:80px;">
+								<input type="text" name="" id="" class="text" style="width:120px;" disabled>
+								<button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+					<div>
+						<dl class="form w1"> <!-- 숨길때 hide-->
+							<dt>진행상태</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr1" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr1">
+										<span>진행중</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr1">
+										<span>종료</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w2">
+							<dt>달성률 옵션</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="checkbox" name="fr2" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="checkbox" name="fr2">
+										<span>0%</span>
+									</label>
+									<label class="label-check">
+										<input type="checkbox" name="fr2">
+										<span>30%미만</span>
+									</label>
+									<label class="label-check">
+										<input type="checkbox" name="fr2">
+										<span>50%미만</span>
+									</label>
+									<label class="label-check">
+										<input type="checkbox" name="fr2">
+										<span>100%미만</span>
+									</label>
+									<label class="label-check">
+										<input type="checkbox" name="fr2">
+										<span>100%</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+			<div class="tab-wrap">
+				<ul class="tab1">
+					<li><a href="#tab1-1" class="current">설계사별</a></li><!--[M : 2022-09-28 수정] 기간별 -> 설계사별 명칭 정정-->
+					<li><a href="#tab1-2" class="">SEG별</a></li>
+				</ul>
+				<div id="tab1-1" class="tab-cont">
+					<div class="data-table1">
+						<table>
+							<colgroup>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">기준기간</th>
+									<td>2022.04.01 <br> ~ 2022.04.22</td>
+									<th scope="row">대상건</th>
+									<td>132</td>
+									<th scope="row">진행중</th>
+									<td>22</td>
+									<th scope="row">종료</th>
+									<td>2,222</td>
+								</tr>
+								<tr>
+									<th scope="row">누적적립 포인트</th>
+									<td>100,000P</td>
+									<th scope="row">참여율</th>
+									<td>3.8%</td>
+									<th scope="row">달성률</th>
+									<td>5.5%</td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tit-sub2">
+						<h3 class="">전체<span>총 16건</span></h3>
+					</div>
+					<div class="tbl-list1">
+						<table>
+							<colgroup>
+								<col style="width:60px;">
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">No</th>
+									<th scope="col"><span class="sort">총 차수</span></th>
+									<th scope="col"><span class="sort asc">사업단</span></th>
+									<th scope="col"><span class="sort des">지점</span></th>
+									<th scope="col">설계사</th>
+									<th scope="col">설계사 사번</th> <!-- 2022-12-28 텍스트 변경 -->
+									<th scope="col"><span class="sort">사용구분</span></th>
+									<th scope="col">최대포인트</th>
+									<th scope="col"><span class="sort">누적포인트</span></th>
+									<th scope="col"><span class="sort">참여율</span></th>
+									<th scope="col"><span class="sort">달성률</span></th>
+									<th scope="col">상태(기간)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>22년 4월 2주차</td>
+									<td>강남사업단</td>
+									<td>강남1지점</td>
+									<td>김롯데</td>
+									<td>34543524</td>
+									<td>설계사</td>
+									<td>70,000</td>
+									<td>6,500</td>
+									<td>9.74%</td>
+									<td>4.4%</td>
+									<td>진행중</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>22년 4월 2주차</td>
+									<td>강남사업단</td>
+									<td>강남1지점</td>
+									<td>김롯데</td>
+									<td>34543524</td>
+									<td>설계사</td>
+									<td>70,000</td>
+									<td>6,500</td>
+									<td>9.74%</td>
+									<td>4.4%</td>
+									<td>진행중</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="nodata hide">
+							조회결과가 없습니다.
+						</div>
+					</div>
+
+					<div class="paging">
+						<a class="ic_first disabled"></a>
+						<a class="ic_prev disabled"></a>
+						<span class="num current">1</span>
+						<a href="#" class="num">2</a>
+						<a href="#" class="num">3</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="num">9</a>
+						<a href="#" class="num">10</a>
+						<a href="#" class="ic_next"></a>
+						<a href="#" class="ic_last"></a>
+					</div>
+				</div>
+				<div id="tab1-2" class="tab-cont">
+					<div class="data-table1">
+						<table>
+							<colgroup>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">기준기간</th>
+									<td>2022.04.01 <br> ~ 2022.04.22</td>
+									<th scope="row">대상건</th>
+									<td>132</td>
+									<th scope="row">달성률</th>
+									<td>5.5%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="tit-sub2">
+						<h3 class="">전체<span>총 16건</span></h3>
+					</div>
+					<div class="tbl-list1">
+						<table>
+							<colgroup>
+								<!-- 2022-12-28 테이블 사이즈 조정 -->
+								<col style="width:100px;">
+								<col style="width:120px;">
+								<col style="width:140px;">
+								<col>
+								<col style="width:150px;">
+								<col style="width:200px;">
+								<!-- //2022-12-28 테이블 사이즈 조정 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">No</th>
+									<th scope="col"><span class="sort">사용구분</span></th>
+									<th scope="col">SEG</th>
+									<th scope="col"><span class="sort">활동 제목</span></th>
+									<th scope="col">사용여부</th>
+									<th scope="col"><span class="sort">조회기준 달성률</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>설계사</td>
+									<td>2등급</td>
+									<td>퀘스트 줍줍</td>
+									<td>사용</td>
+									<td>22.2%</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="nodata hide">
+							조회결과가 없습니다.
+						</div>
+					</div>
+					<div class="paging">
+						<a class="ic_first disabled"></a>
+						<a class="ic_prev disabled"></a>
+						<span class="num current">1</span>
+						<a href="#" class="num">2</a>
+						<a href="#" class="num">3</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="num">9</a>
+						<a href="#" class="num">10</a>
+						<a href="#" class="ic_next"></a>
+						<a href="#" class="ic_last"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

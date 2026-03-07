@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 직업선택</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>직업선택</h1>
+			<button type="button" data-btn="pop-close">직업선택 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [탭영역] -->
+			<!-- ######################### -->
+			<div class="nav-tab1" data-sticky="top" data-autoset="tab">
+				<ul>
+					<li class="active"><a href="#uiTabSection1">직업명 조회</a></li>
+					<li><a href="#uiTabSection2">직업분류 선택</a></li>
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 직업명 조회 -->
+			<!-- ######################### -->
+			<section id="uiTabSection1" class="ui-tabcon active">
+				<h2 class="hide">직업명 조회</h2>
+
+				<div class="form-search1">
+					<div class="text">
+						<input type="search" title="직업명 검색" placeholder="검색어를 입력해주세요.">
+						<button type="button" class="icon-com1 ic2 simple">검색</button>
+					</div>
+
+					<div class="area-btn4" data-scroll="btn">
+						<button type="button" class="btn-t1 c2 active" title="선택됨">회사 사무원</button> <!-- 선택됨 -->
+						<button type="button" class="btn-t1 c2">공무원</button>
+						<button type="button" class="btn-t1 c2">관리자</button>
+						<button type="button" class="btn-t1 c2">전문직</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 직업분류 선택 -->
+			<!-- [D] name및 value값을 임의 설정임 -->
+			<!-- ######################### -->
+			<section id="uiTabSection2" class="ui-tabcon">
+				<h2 class="hide">직업분류 선택</h2>
+				<div class="form-search1">
+					<!-- # 대분류 # -->
+					<div class="select-wrap" data-autoset="select" data-callback="uiSampleCallback"> <!-- [D] uiSampleCallback : 항수명 샘플 -->
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">대분류</span>
+							<span data-select="text" data-value=""></span>
+						</button>
+						<div class="list">
+							<div data-label="직업 대분류">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion1" value="option1_1"><span>대분류1</span></label>
+									<label><input type="radio" name="selectOpeion1" value="option1_2"><span>대분류2</span></label>
+									<label><input type="radio" name="selectOpeion1" value="option1_3"><span>대분류3</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<!-- # 중분류 # -->
+					<div class="select-wrap" data-autoset="select" data-callback="uiSampleCallback">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" disabled>
+							<span data-select="title">중분류</span>
+							<span data-select="text" data-value=""></span>
+						</button>
+						<div class="list">
+							<div data-label="직업 중분류">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion2" value="option2_1"><span>중분류1</span></label>
+									<label><input type="radio" name="selectOpeion2" value="option2_2"><span>중분류2</span></label>
+									<label><input type="radio" name="selectOpeion2" value="option2_3"><span>중분류3</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<!-- # 소분류 # -->
+					<div class="select-wrap" data-autoset="select" data-callback="uiSampleCallback">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" disabled>
+							<span data-select="title">소분류</span>
+							<span data-select="text" data-value=""></span>
+						</button>
+						<div class="list">
+							<div data-label="직업 소분류">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion2" value="option3_1"><span>소분류1</span></label>
+									<label><input type="radio" name="selectOpeion2" value="option3_2"><span>소분류2</span></label>
+									<label><input type="radio" name="selectOpeion2" value="option3_3"><span>소분류3</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<!-- # // # -->
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [검색결과] -->
+			<!-- ######################### -->
+			<div class="area-info1"><p>검색결과 <strong>00건</strong></p></div>
+			<div class="info-data1">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<label>
+								<input type="radio" name="form-radio1">
+								<span>직업명</span>
+							</label>
+						</div>
+						<div class="txt">직업설명</div>
+						<div class="info-con1 t1">
+							<dl>
+								<dt>직업코드</dt> <!-- [M 2022-06-07] 항목명 수정 -->
+								<dd>A1120</dd>
+							</dl>
+							<dl>
+								<dt>상해급수/등급</dt>
+								<dd>2C</dd>
+							</dl>
+							<dl>
+								<dt>교통급수</dt>
+								<dd>1</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<label>
+								<input type="radio" name="form-radio1">
+								<span>초급군장교(대위~소위, 특수병과 군인 제외)</span>
+							</label>
+						</div>
+						<div class="txt">대위 &middot; 중위 &middot; 소위 / [제외] 의무복무중인 장교 육 &middot; 해 &middot; 공군의 소위, 중위 및 대위를 포함한다.</div>
+						<div class="info-con1 t1">
+							<dl>
+								<dt>직업코드</dt>
+								<dd>A1120</dd>
+							</dl>
+							<dl>
+								<dt>상해급수/등급</dt>
+								<dd>2C</dd>
+							</dl>
+							<dl>
+								<dt>교통급수</dt>
+								<dd>1</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- [CASE1] 검색결과없음 -->
+					<li class="nodata">
+						<strong>일치하는 내용이 없어요.</strong>
+						<span>내용이 필요합니다.</span>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+
+<script>
+//<!--
+//[샘플] 셀렉트박스 닫을 때 실행 : 비활성화 버튼 활성화로 바꿈
+function uiSampleCallback(e){
+	var _select_wrap = $(e).parents('[data-autoset="select"]');
+	if(e.val() != ''){
+		_select_wrap.next().find('[data-toggle="selectbtn"]').removeAttr('disabled');
+	}
+}
+//-->
+</script>
+</body>
+</html>

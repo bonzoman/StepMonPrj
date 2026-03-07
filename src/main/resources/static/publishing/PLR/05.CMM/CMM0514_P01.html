@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 도움요청 신청 | 상세 | 공동청약</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-16]	① textarea 스크롤 가능하게 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>도움요청 신청</h1>
+			<button type="button" data-btn="pop-close">도움요청 신청 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단문구] -->
+			<!-- ######################### -->
+			<div class="tit-section2 t1">
+				<p>도움이 필요한 내용을<br>작성해주세요.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>도움제공 신청 내용 입력</legend>
+
+				<dl class="form">
+					<dt>요청 내용 입력 <em class="icon-required2">필수</em></dt>
+					<dd><div class="textarea t2"><textarea cols="50" rows="3" title="등록내용" placeholder="내용을 입력해주세요.&#10;&#10;고객 개인정보와 관련된 내용&#10;(주민번호, 전화번호, 이메일 등)이&#10;글에 포함될 경우 관리자에 의해 통보없이&#10;삭제될 수 있습니다."></textarea></div></dd><!-- [M 2022-11-16] textarea 스크롤 가능하게 수정 -->
+				</dl>
+
+				<dl class="form">
+					<dt>기여율 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- 2022-12-26 버튼 삭제 -->
+						<!-- <div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio1" checked>
+								<span>작성</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>협의희망</span>
+							</label>
+						</div> -->
+						<!-- //2022-12-26 버튼 삭제 -->
+
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false"> <!-- [D] 기여율 협의희망 시 disable 추가 -->
+								<span data-select="title">도움받는 사람 (본인)</span> <!-- 2022-12-26 텍스트 변경 -->
+								<span data-select="text"></span>
+							</button>
+							<div class="list">
+								<div data-label="기여율">
+									<div class="option">
+										<label><input type="radio" name="select1" value="01"><span>10%</span></label>
+										<label><input type="radio" name="select1" value="02"><span>20%</span></label>
+										<label><input type="radio" name="select1" value="03"><span>30%</span></label>
+										<label><input type="radio" name="select1" value="04"><span>40%</span></label>
+										<label><input type="radio" name="select1" value="05"><span>50%</span></label>
+										<label><input type="radio" name="select1" value="06"><span>60%</span></label>
+										<label><input type="radio" name="select1" value="07"><span>70%</span></label>
+										<label><input type="radio" name="select1" value="08"><span>80%</span></label>
+										<label><input type="radio" name="select1" value="09"><span>90%</span></label>
+										<label><input type="radio" name="select1" value="10"><span>100%</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false"> <!-- [D] 기여율 협의희망 시 disable 추가 -->
+								<span data-select="title">도와주는 사람</span> <!-- 2022-12-26 텍스트 변경 -->
+								<span data-select="text"></span>
+							</button>
+							<div class="list">
+								<div data-label="기여율">
+									<div class="option">
+										<label><input type="radio" name="select2" value="01"><span>10%</span></label>
+										<label><input type="radio" name="select2" value="02"><span>20%</span></label>
+										<label><input type="radio" name="select2" value="03"><span>30%</span></label>
+										<label><input type="radio" name="select2" value="04"><span>40%</span></label>
+										<label><input type="radio" name="select2" value="05"><span>50%</span></label>
+										<label><input type="radio" name="select2" value="06"><span>60%</span></label>
+										<label><input type="radio" name="select2" value="07"><span>70%</span></label>
+										<label><input type="radio" name="select2" value="08"><span>80%</span></label>
+										<label><input type="radio" name="select2" value="09"><span>90%</span></label>
+										<label><input type="radio" name="select2" value="10"><span>100%</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>고객성별 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio2" checked>
+								<span>남자</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio2">
+								<span>여자</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>고객 연령대 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="label-btn1 col3">
+							<label>
+								<input type="radio" name="uiFormRadio3" checked>
+								<span>10대</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3">
+								<span>20대</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3">
+								<span>30대</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3">
+								<span>40대</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3">
+								<span>50대</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio3">
+								<span>60대 이상</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>고객과의 관계 <em class="icon-required2">필수</em></dt>
+					<dd><input type="text" class="text" title="고객과의 관계" placeholder="예) 가족, 친지, 지인, 친구 등"></dd>
+				</dl>
+
+				<dl class="form">
+					<dt>고객 접촉 유무 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="label-btn1 col3">
+							<label>
+								<input type="radio" name="uiFormRadio4" checked>
+								<span>없음</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio4">
+								<span>1회</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio4" disabled>
+								<span>2회 이상</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">신청</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

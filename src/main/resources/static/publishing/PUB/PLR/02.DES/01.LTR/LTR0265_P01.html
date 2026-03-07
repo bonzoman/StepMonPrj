@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 알릴사항 확인 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>알릴사항 확인</h1>
+			<button type="button" data-btn="pop-close">알릴사항 확인 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [고객정보] -->
+			<!-- ######################### -->
+			<header class="info-summary2" data-sticky="top">
+				<h2 class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+					<strong>고객명</strong>
+					<span>0000.00.00</span>
+					<span>성별</span>
+					<em>1급 사무직</em>
+				</h2>
+			</header>
+
+			<!-- ######################### -->
+			<!-- [알릴사항] -->
+			<!-- ######################### -->
+			<h3 class="tit-sub1">알릴사항</h3>
+			<div class="list-data7">
+				<!-- # 항목 하나 # -->
+				<dl>
+					<dt>최근1년 이내 추가검사여부</dt>
+					<dd>아니요</dd>
+				</dl>
+
+				<!-- # 항목 하나 # -->
+				<dl>
+					<dt>최근 5년 이내 과거상병</dt>
+					<dd>예</dd>
+				</dl>
+				<p class="mes-t1 box">암, 백혈병, 고혈압, 협심증, 심근경색</p>
+
+				<!-- # 항목 하나 # -->
+				<dl>
+					<dt>최근 3개월 이내 의료행위 받은 사실</dt>
+					<dd>아니오</dd>
+				</dl>
+
+				<!-- # 항목 하나 # -->
+				<dl>
+					<dt>최근 3개월 이내 약물복용 사실</dt>
+					<dd>아니오</dd>
+				</dl>
+
+				<!-- # 항목 하나 # -->
+				<dl>
+					<dt>최근 5년 이내 의료행위 받은 사실</dt>
+					<dd>예</dd>
+				</dl>
+				<!-- [질병상세알림] 반복/최대10개 -->
+				<div class="con-t7">
+					<strong class="tit">질병상세알림</strong>
+					<div class="info-con1">
+						<dl>
+							<dt>질병명</dt>
+							<dd>콜레라</dd>
+						</dl>
+						<dl>
+							<dt>치료기간</dt>
+							<dd>
+								<div>2022.01.25~2022.01.10</div>
+								<div>입원(3일)</div>
+								<div>통원(7일)</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>치료내용</dt>
+							<dd>약물 또는 물리치료</dd>
+						</dl>
+						<dl>
+							<dt>발생횟수</dt>
+							<dd>1회</dd>
+						</dl>
+						<dl>
+							<dt>서류첨부</dt>
+							<dd>있음</dd>
+						</dl>
+					</div>
+					<dl class="txt-mark">
+						<dt>추가질문</dt>
+						<dd><i>①</i> 흡연 또는 음주를 하십니까? 흡연</dd>
+						<dd><i>②</i> 원인은 무엇입니까? 이차성고혈압</dd>
+						<dd><i>③</i> 동반한 합병증이 있습니까? 합병증 없음</dd>
+					</dl>
+				</div>
+				<!-- // -->
+
+				<!-- # [D] 피보험자 여성일 경우에만 노출 # -->
+				<div>
+					<!-- // -->
+					<dl>
+						<dt>임신여부</dt>
+						<dd>예</dd>
+					</dl>
+					<!-- // -->
+					<dl>
+						<dt>태아 이상증상여부</dt>
+						<dd>예</dd>
+					</dl>
+					<p class="mes-t1 box">암, 백혈병, 고혈압, 협심증, 심근경색</p>
+					<!-- // -->
+				</div>
+
+				<!-- # 항목 하나 # -->
+				<dl>
+					<dt>운전여부</dt>
+					<dd>예</dd>
+				</dl>
+				<div class="info-con1 t2 box">
+					<dl>
+						<dt>승용차</dt>
+						<dd>자가용</dd>
+					</dl>
+					<dl>
+						<dt>승합차</dt>
+						<dd>영업용</dd>
+					</dl>
+					<dl>
+						<dt>기타</dt>
+						<dd>기타(입력한 내용 표출)</dd>
+					</dl>
+				</div>
+
+				<!-- # 항목 하나 # -->
+				<dl>
+					<dt>개인형 이동장치 사용</dt>
+					<dd>예</dd>
+				</dl>
+
+				<!-- # 항목 하나 # -->
+				<dl>
+					<dt>부업여부</dt>
+					<dd>예</dd>
+				</dl>
+
+				<!-- # 항목 하나 # -->
+				<dl>
+					<dt>3개월 이내 해외위험지역 출국 예정</dt>
+					<dd>예</dd>
+				</dl>
+				<div class="info-con1 t2 box">
+					<dl>
+						<dt>기간</dt>
+						<dd>2022.07.26~2022.09.26</dd>
+					</dl>
+					<dl>
+						<dt>지역</dt>
+						<dd>네팔</dd>
+					</dl>
+					<dl>
+						<dt>목적</dt>
+						<dd>히말라야 등반</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<a href="javascript:void(0);" class="btn-action">수정</a>
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

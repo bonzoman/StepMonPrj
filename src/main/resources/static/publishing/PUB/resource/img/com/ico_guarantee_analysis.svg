@@ -1,0 +1,12 @@
+<svg data-name="[Icon] ico_Guarantee_analysis_20px" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <path data-name="사각형 459585" style="fill:none" d="M0 0h20v20H0z"/>
+    <g data-name="그룹 625922" transform="translate(3 1.674)">
+        <rect data-name="사각형 459582" width="14" height="15" rx="2" transform="translate(0 1.5)" style="stroke-linejoin:round;stroke:#292929;stroke-linecap:round;stroke-width:1.5px;fill:none"/>
+        <path data-name="사각형 459583" transform="translate(4)" style="fill:#eee;stroke-linejoin:round;stroke:#292929;stroke-linecap:round;stroke-width:1.5px" d="M0 0h6v3H0z"/>
+        <g data-name="그룹 625922">
+            <path data-name="패스 1503891" d="M-13941.977-6040.906v3.117" transform="translate(13946 6050.459)" style="fill:#fff;stroke:#292929;stroke-linecap:round;stroke-width:1.5px"/>
+            <path data-name="패스 1503892" d="M-13941.977-6040.905v4.286" transform="translate(13949 6049.288)" style="fill:#fff;stroke:#292929;stroke-linecap:round;stroke-width:1.5px"/>
+            <path data-name="패스 1503893" d="M-13941.977-6040.906v2.568" transform="translate(13952 6051.007)" style="fill:#fff;stroke:#292929;stroke-linecap:round;stroke-width:1.5px"/>
+        </g>
+    </g>
+</svg>

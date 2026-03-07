@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 카드 | 취급자수납 | 수금관리 | 자급관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<!-- 2022-12-20 텍스트 변경 -->
+			<h1>카드수납</h1>
+			<button type="button" data-btn="pop-close">카드수납 닫기</button>
+			<!-- //2022-12-20 텍스트 변경 -->
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 기본정보 -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<!-- # 납부할대상 # -->
+				<h2 class="data-info2 t1" data-value="102702"> <!-- [D] 국적(1/9)나이(000)성별(01/02)조합 -->
+					<strong>하다미</strong>
+					<span>
+						<span>1996.01.01</span>
+						<span>여</span>
+					</span>
+				</h2>
+
+				<!-- # 수납대상계약 # -->
+				<div class="info-con2">
+					<dl>
+						<dt>수납대기 계약건</dt>
+						<dd data-autoset="toggle">
+							<div class="area1">
+								<div class="data-num1 txt-c1"><span>총</span><strong>3</strong><span>건</span></div>
+								<button type="button" data-toggle="btn" aria-expanded="false">수납대기 계약건 상세보기</button>
+							</div>
+							<div data-toggle="content" class="area2 t1">
+								<dl>
+									<dt>[연체]무배당치아보험</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>롯데건강보험 </dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>롯데어린이보험</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+								</dl>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- # 총 수납 보험료 # -->
+				<div class="area-info2">
+					<dl>
+						<dt>총 수납 보험료</dt>
+						<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+				</div>
+				<!-- # // # -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 카드정보 -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1 sub-con">
+				<legend class="tit">카드정보</legend>
+
+				<!-- # 할부무이자 정보 안내 : 팝업 호출 # -->
+				<div class="side"><button type="button" class="icon-com2 ic1 right">할부무이자 정보</button></div>
+
+				<!-- # 카드번호 # -->
+				<dl class="form">
+					<dt>카드번호 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- [CASE] 기본 -->
+						<div class="text num2">
+							<input type="tel" title="카드번호 첫번째" maxlength="4" value="1111">
+							<span class="util1">-</span>
+							<input type="tel" title="카드번호 두번째" maxlength="4" value="2222">
+							<span class="util1">-</span>
+							<input type="tel" title="카드번호 세번째" maxlength="4" value="3333">
+							<span class="util1">-</span>
+							<input type="tel" title="카드번호 네번째" maxlength="4" value="4444">
+						</div>
+						<div class="validation">카드번호 입력 및 카드확인을 해주세요.</div>
+
+						<!-- [CASE] 오류 -->
+						<div class="text num2">
+							<input type="tel" title="카드번호 첫번째" maxlength="4" value="1111" aria-invalid="true">
+							<span class="util1">-</span>
+							<input type="tel" title="카드번호 두번째" maxlength="4" value="2222">
+							<span class="util1">-</span>
+							<input type="tel" title="카드번호 세번째" maxlength="4" value="3333">
+							<span class="util1">-</span>
+							<input type="tel" title="카드번호 네번째" maxlength="4" value="4444">
+						</div>
+						<div class="validation">카드번호 입력 및 카드확인을 해주세요.</div>
+					</dd>
+				</dl>
+
+				<!-- # 유효기간 # -->
+				<dl class="form">
+					<dt>유효기간 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- 2022-12-01 변경 -->
+						<div class="input-wrap1">
+							<div class="text num2 focus"> <!-- 2022-12-13 클래스 추가 -->
+								<input type="tel" title="유효기간 년" maxlength="2" value="" placeholder="YY(월)">
+								<span class="util1">/</span>
+								<input type="tel" title="유효기간 월" maxlength="2" value="" placeholder="MM(년)">
+							</div>
+							<button type="button" class="btn-sub1">카드확인</button>
+							<div class="validation">유효기간을 입력해주세요.</div>
+						</div>
+						<!-- [CASE] 기본 -->
+						
+
+						<!-- [CASE] 오류 -->
+						<div class="input-wrap1">
+							<div class="text num2 focus" aria-invalid="true"> <!-- 2022-12-13 클래스 추가 -->
+								<input type="tel" title="유효기간 년" maxlength="2" value="" placeholder="YY(월)">
+								<span class="util1">/</span>
+								<input type="tel" title="유효기간 월" maxlength="2" value="" placeholder="MM(년)">
+							</div>
+							<button type="button" class="btn-sub1">카드확인</button>
+							<div class="validation">유효기간을 입력해주세요.</div>
+						</div>
+						<!-- //2022-12-01 변경 -->
+					</dd>
+					<dd class="data1">
+						<div>카드주:</div>
+						<div class="info"><strong>홍두한</strong><span><span>1965.03.21</span><span>남</span></span></div>
+						<div class="info"><strong>삼성카드(신용)</strong></div>
+						<!-- [D] 카드 확인 후 노출 -->
+						<div class="txt">
+							<strong class="txt-c1">불일치</strong> <!-- [D] 예금주 일치  -->
+							<strong class="txt-c2">확인완료</strong> <!-- [D] 예금주 불일치  -->
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 할부 # -->
+				<dl class="form">
+					<dt>할부 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">항목명</span>
+								<span data-select="text" data-value="1">일시불</span>
+							</button>
+							<div class="list">
+								<div data-label="항목명">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion" value="1"><span>일시불</span></label>
+										<label><input type="radio" name="selectOpeion" value="2"><span>1개월</span></label>
+										<label><input type="radio" name="selectOpeion" value="3"><span>2개월</span></label>
+										<label><input type="radio" name="selectOpeion" value="4"><span>3개월</span></label>
+										<label><input type="radio" name="selectOpeion" value="5"><span>4개월</span></label>
+										<label><input type="radio" name="selectOpeion" value="6"><span>5개월</span></label>
+										<label><input type="radio" name="selectOpeion" value="7"><span>6개월</span></label>
+										<label><input type="radio" name="selectOpeion" value="8"><span>7개월</span></label>
+										<label><input type="radio" name="selectOpeion" value="9"><span>8개월</span></label>
+										<label><input type="radio" name="selectOpeion" value="10"><span>9개월</span></label>
+										<label><input type="radio" name="selectOpeion" value="11"><span>10개월</span></label>
+										<label><input type="radio" name="selectOpeion" value="12"><span>11개월</span></label>
+										<label><input type="radio" name="selectOpeion" value="13"><span>12개월</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 출금금액 # -->
+				<dl class="form">
+					<dt>출금금액</dt>
+					<dd><data class="text num1 disabled" value="600,000">600,000원</data></dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [안내문구] -->
+			<!-- ######################### -->
+			<ul class="txt-bul1 line2">
+				<li>계약자 소유의 계좌 또는 카드 수납을 지원합니다.</li>
+				<li>계약자가 아닌 제 3자 소유의 계좌 또는 카드로 수납을 원하시는 경우 업무요청을 통해 별도로 진행하시기 바랍니다.</li>
+			</ul>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">수납</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

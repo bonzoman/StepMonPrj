@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>차량실사요청 | 계약변경 | 자동차 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>차량실사요청</h1>
+			<button type="button" data-btn="pop-close">차량실사요청 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [기본정보] 피보험자 정보 -->
+			<!-- ######################### -->
+			<section class="wrap-section">
+				<h2 class="tit-sub1">기본정보</h2>
+				<div class="info-con1">
+					<dl>
+						<dt>피보험자명</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>신규/계약변경구분</dt>
+						<dd>계약변경</dd>
+					</dl>
+					<dl>
+						<dt>설계번호</dt>
+						<dd>CA202224333333333</dd>
+					</dl>
+					<dl>
+						<dt>차량번호</dt>
+						<dd>24가2342</dd>
+					</dl>
+					<dl>
+						<dt>차명</dt>
+						<dd>YF쏘나타2.0</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [요청정보] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1 line2">
+				<legend class="tit">요청정보</legend>
+
+				<dl class="form">
+					<dt>피보험자와의 관계 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">피보험자 관계 구분</span>
+								<span data-select="text" data-value="null">선택</span>
+							</button>
+							<div class="list">
+								<div data-label="관계 선택">
+									<div class="option">
+										<label><input type="radio" name="select1" value=""><span>선택</span></label>
+										<label><input type="radio" name="select1" value="1"><span>본인</span></label>
+										<label><input type="radio" name="select1" value="2"><span>배우자</span></label>
+										<label><input type="radio" name="select1" value="3"><span>자녀</span></label>
+										<label><input type="radio" name="select1" value="4"><span>부모</span></label>
+										<label><input type="radio" name="select1" value="5"><span>형제자매</span></label>
+										<label><input type="radio" name="select1" value="6"><span>고용인</span></label>
+										<label><input type="radio" name="select1" value="7"><span>임직원</span></label>
+										<label><input type="radio" name="select1" value="8"><span>기타</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>요청자명 <em class="icon-required2">필수</em></dt>
+					<dd><input type="text" class="text" title="요청자명" placeholder="이름을 입력해주세요."></dd>
+				</dl>
+
+				<dl class="form">
+					<dt>연락처 1 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">연락처 구분</span>
+								<span data-select="text" data-value="null">선택</span>
+							</button>
+							<div class="list">
+								<div data-label="연락처 구분 선택">
+									<div class="option">
+										<label><input type="radio" name="select2" value=""><span>선택</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<div class="text">
+							<input type="tel" title="연락처(통신사 및 국번)" placeholder="010">
+							<span class="util1">-</span>
+							<input type="tel" title="연락처(가운데번호)" placeholder="1234">
+							<span class="util1">-</span>
+							<input type="tel" title="연락처(끝번호)" placeholder="1234">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>연락처 2</dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">연락처 구분</span>
+								<span data-select="text" data-value="null">선택</span>
+							</button>
+							<div class="list">
+								<div data-label="연락처 구분 선택">
+									<div class="option">
+										<label><input type="radio" name="select3" value=""><span>선택</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<div class="text">
+							<input type="tel" title="연락처(통신사 및 국번)" placeholder="010">
+							<span class="util1">-</span>
+							<input type="tel" title="연락처(가운데번호)" placeholder="1234">
+							<span class="util1">-</span>
+							<input type="tel" title="연락처(끝번호)" placeholder="1234">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>예약구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio1" checked>
+								<span>즉시</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>예약</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>주소검색 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="input-btn1">
+							<data class="text" value="" data-label="주소를 검색해 주세요."></data>
+							<button type="button" class="icon-com1 ic2">주소검색</button>
+						</div>
+						<input type="text" class="text" title="상세주소 입력" placeholder="상세 주소를 입력해주세요.">
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>예약일시 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="input-date1">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+								<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.03.09" readonly>
+							</span>
+						</div>
+						<div class="input-wrap1">
+							<!-- 시간 선택 -->
+							<div class="select-wrap w100" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">시간 선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="시간 선택">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion0" value="1"><span>01시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="2"><span>02시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="3"><span>03시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="4"><span>04시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="5"><span>05시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="6"><span>06시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="7"><span>07시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="8"><span>08시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="9"><span>09시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="10"><span>10시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="11"><span>11시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="12"><span>12시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="13"><span>13시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="14"><span>14시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="15"><span>15시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="16"><span>16시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="17"><span>17시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="18"><span>18시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="19"><span>19시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="20"><span>20시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="21"><span>21시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="22"><span>22시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="23"><span>23시</span></label>
+											<label><input type="radio" name="selectOpeion0" value="24"><span>24시</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- 분 선택 -->
+							<div class="select-wrap w100" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">분 선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="분 선택">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion1" value="0"><span>00분</span></label>
+											<label><input type="radio" name="selectOpeion1" value="1"><span>10분</span></label>
+											<label><input type="radio" name="selectOpeion1" value="2"><span>20분</span></label>
+											<label><input type="radio" name="selectOpeion1" value="3"><span>30분</span></label>
+											<label><input type="radio" name="selectOpeion1" value="4"><span>40분</span></label>
+											<label><input type="radio" name="selectOpeion1" value="5"><span>50분</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>요청사항</dt>
+					<dd><div class="textarea"><data value="1" data-disabled="true">요청사항은 비활성화</data></div></dd>
+				</dl>
+
+				<dl class="form">
+					<dt>특이사항</dt>
+					<dd>
+						<div class="textarea">
+							<textarea cols="50" rows="3" title="심사요청" placeholder="특이사항을 입력해주세요."></textarea>
+							<span class="util2"><strong>0</strong>/200자</span>
+						</div>
+					</dd>
+				</dl>
+
+				<div class="area-btn1"><button type="button" class="btn-com1 c1">접수요청</button></div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [D] 접수 요청 시 노출 영역: # 접수정보 # -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<h3 class="tit-sub1">접수정보</h3>
+				<div class="info-con1">
+					<dl>
+						<dt>SK접수번호</dt>
+						<dd>2022050111111</dd>
+					</dl>
+					<dl>
+						<dt>요청자</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>연락처1</dt>
+						<dd>010-0426-0818</dd>
+					</dl>
+					<dl>
+						<dt>연락처2</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>예약구분</dt>
+						<dd>즉시</dd>
+					</dl>
+					<dl>
+						<dt>예약장소</dt>
+						<dd>경기 고양시 덕양구 백양로 00 111</dd>
+					</dl>
+					<dl>
+						<dt>예약일시</dt>
+						<dd>2022.02.23 14:36</dd>
+					</dl>
+					<dl>
+						<dt>요청사항</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>특이사항</dt>
+						<dd>-</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

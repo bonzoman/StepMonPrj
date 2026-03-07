@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>일반화재보험 수정요청 | 신규설계 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>신규 설계요청</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" id="uiInclude" data-page="1">
+		<article id="PAGE1" class="">
+			<h1 class="hide">설계요청사항</h1>
+
+			<!-- ### [입력정보요약] ### -->
+			<div class="wrap-step1" data-sticky="top">
+				<!-- [상품정보] -->
+				<div class="info-summary2">
+					<h2 class="tit">일반화재보험</h2>
+					<div class="info">
+						<dl>
+							<dt>접수번호</dt>
+							<dd>LA220304111127-1</dd>
+						</dl>
+					</div>
+				</div>
+
+				<!-- [단계이동] -->
+				<div class="info-step1" data-autoset="toggle">
+					<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+					<div data-toggle="content">
+						<ol>
+							<li>
+								<span>01. 상품 선택</span>
+								<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							</li>
+							<li>
+								<span>02. 고객 정보</span>
+								<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							</li>
+							<li aria-current="step">
+								<span>03. 설계요청사항</span>
+								<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ### [상단타이틀] ### -->
+			<div class="tit-section">
+				<p>설계 요청사항을<br>입력해주세요.</p>
+			</div>
+
+			<!-- ### [정보입력] ### -->
+			<div class="form-wrap1 line2">
+				<fieldset>
+					<legend class="tit">설계정보</legend>
+
+					<!-- # 보험기간 # -->
+					<dl class="form">
+						<dt>보험기간 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="input-date1 text">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+									<input type="text" title="시작날짜 선택" data-dateform="start" value="2022.06.24" placeholder="YYYY.MM.DD" readonly>
+								</span>
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+									<input type="text" title="종료날짜 선택" data-dateform="end" value="2023.06.23" placeholder="YYYY.MM.DD" readonly>
+								</span>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 소재지 # -->
+					<dl class="form">
+						<dt>소재지 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" value="서울특별시 중구 소월로 3 136길" data-label="주소를 검색해주세요.">서울특별시 중구 소월로 3 136길</data>
+								<button type="button" class="icon-com1 ic2">주소검색</button>
+							</div>
+							<input type="text" class="text" placeholder="상세주소를 입력해주세요." value="201호">
+							<div class="validation">소재지를 입력해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<fieldset>
+					<legend class="tit">목적물 사항 <a href="javascript:void(0);" class="icon-com2 ic2">목적물 사항 도움말</a></legend>
+
+					<!-- // -->
+					<dl class="form">
+						<dt>건물</dt>
+						<dd>
+							<div class="text num1">
+								<input type="tel" title="목적물 건물" value="1,934,038">
+								<span class="util">원</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>시설</dt>
+						<dd>
+							<div class="text num1">
+								<input type="tel" title="목적물 시설" value="1,934,038">
+								<span class="util">원</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>구축물</dt>
+						<dd>
+							<div class="text num1">
+								<input type="tel" title="목적물 구축물" value="1,934,038">
+								<span class="util">원</span>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 추가버튼 # -->
+					<div class="area-btn1">
+						<button class="btn-com1 ic3">유형추가</button>
+					</div>
+					<!-- # // # -->
+				</fieldset>
+
+				<fieldset>
+					<legend class="tit">영위업종</legend>
+
+					<!-- # 가입업종선택 # -->
+					<dl class="form">
+						<dt>가입업종선택 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="업종을 선택해주세요" value="일반음식점">일반음식점</data>
+								<button type="button" class="icon-com1 ic2">업종검색</button>
+							</div>
+							<!-- // -->
+						</dd>
+						<dd class="mes2">실제 가입하는 업종을 선택해주세요.</dd>
+					</dl>
+
+					<!-- # 입주업종 # -->
+					<dl class="form">
+						<dt>입주업종</dt>
+						<dd>
+							<!-- // -->
+							<div class="area-btn1">
+								<button class="btn-com1 ic14">자주찾는업종</button>
+								<button class="btn-com1 ic2">업종찾기</button>
+							</div>
+							<!-- // -->
+						</dd>
+						<dd class="mes2">건물 내 입주한 업종을 모두 선택해주세요.</dd>
+					</dl>
+
+					<!-- # 선택 # -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>가입업종 이외에 건물 내 다른 업종 없음</span>
+						</label>
+					</div>
+
+					<!-- # [CASE] 자주찾는 업종 선택 결과값 노출 # -->
+					<div class="data-word2 t2 line">
+						<ul>
+							<li>
+								<span>시장</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>교회, 성당</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>예식장</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>다가구,다중이용업소의무가입대상조회</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>직물재단</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>사찰</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>예식장</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>금속기계기</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>오피스텔</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>다가구,다중이용업소의무가입대상조회</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+							<li>
+								<span>목욕장</span>
+								<button type="button" class="icon-com1 ic6 simple">삭제</button>
+							</li>
+						</ul>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend class="tit">건물구조</legend>
+
+					<!-- # 버튼영역 # -->
+					<div class="side">
+						<button type="button" class="btn-sub3 c2">건축물대장조회</button>
+						<button type="button" class="btn-sub3 c2">자주 찾는 건물구조</button>
+					</div>
+
+					<!-- # 기둥형태 # -->
+					<dl class="form">
+						<dt>기둥형태 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text" data-value="7">철골철근콘크리트조</span>
+								</button>
+								<div class="list">
+									<div data-label="기둥형태">
+										<div class="option">
+											<label><input type="radio" name="selectOption1" value="1"><span>조적조</span></label>
+											<label><input type="radio" name="selectOption1" value="2"><span>무근콘크리트조</span></label>
+											<label><input type="radio" name="selectOption1" value="3"><span>철골콘크리트조</span></label>
+											<label><input type="radio" name="selectOption1" value="4"><span>프리스트레스트콘크리트조</span></label>
+											<label><input type="radio" name="selectOption1" value="5"><span>프리스트레스트콘크리트조</span></label>
+											<label><input type="radio" name="selectOption1" value="6"><span>철근콘크리트조</span></label>
+											<label><input type="radio" name="selectOption1" value="7"><span>철골철근콘크리트조</span></label>
+											<label><input type="radio" name="selectOption1" value="8"><span>경량철골조</span></label>
+											<label><input type="radio" name="selectOption1" value="9"><span>벽돌조</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 지붕형태 # -->
+					<dl class="form">
+						<dt>지붕형태 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text" data-value="5">샌드위치판넬즙</span>
+								</button>
+								<div class="list">
+									<div data-label="지붕형태">
+										<div class="option">
+											<label><input type="radio" name="selectOption2" value="1"><span>슬래브즙</span></label>
+											<label><input type="radio" name="selectOption2" value="2"><span>철골철판즙</span></label>
+											<label><input type="radio" name="selectOption2" value="3"><span>슬레이트즙</span></label>
+											<label><input type="radio" name="selectOption2" value="4"><span>철골지붕틀천막잇기</span></label>
+											<label><input type="radio" name="selectOption2" value="5"><span>샌드위치판넬즙</span></label>
+											<label><input type="radio" name="selectOption2" value="6"><span>4급기타</span></label>
+											<label><input type="radio" name="selectOption2" value="7"><span>목조지붕틀슬레이트즙</span></label>
+											<label><input type="radio" name="selectOption2" value="8"><span>철골기붕틀칼라피복철판즙</span></label>
+											<label><input type="radio" name="selectOption2" value="9"><span>목조지붕틀기와즙</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 외벽형태 # -->
+					<dl class="form">
+						<dt>외벽형태 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text" data-value="1">치장벽돌</span>
+								</button>
+								<div class="list">
+									<div data-label="외벽형태">
+										<div class="option">
+											<label><input type="radio" name="selectOption3" value="1"><span>치장벽돌</span></label>
+											<label><input type="radio" name="selectOption3" value="2"><span>콘크리트벽</span></label>
+											<label><input type="radio" name="selectOption3" value="3"><span>시멘트몰탈</span></label>
+											<label><input type="radio" name="selectOption3" value="4"><span>프리캐스트판넬</span></label>
+											<label><input type="radio" name="selectOption3" value="5"><span>칼라피복철판</span></label>
+											<label><input type="radio" name="selectOption3" value="6"><span>블록벽</span></label>
+											<label><input type="radio" name="selectOption3" value="7"><span>샌드위치판넬</span></label>
+											<label><input type="radio" name="selectOption3" value="8"><span>천막구조</span></label>
+											<label><input type="radio" name="selectOption3" value="9"><span>금속판</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 건물급수/적용급수 # -->
+					<dl class="form">
+						<dt>건물급수/적용급수 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="input-wrap1">
+								<!-- [건물급수] -->
+								<data class="text disabled" value="1급" data-label="건물급수">1급</data>
+
+								<!-- [적용급수] -->
+								<div class="select-wrap w50" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">적용급수</span>
+										<span data-select="text" data-value="1">1급</span>
+									</button>
+									<div class="list">
+										<div data-label="적용급수">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion" value="1" checked><span>1급</span></label>
+												<label><input type="radio" name="selectOpeion" value="2"><span>2급</span></label>
+												<label><input type="radio" name="selectOpeion" value="3"><span>3급</span></label>
+												<label><input type="radio" name="selectOpeion" value="4"><span>4급</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- // -->
+							</div>
+						</dd>
+						<dd class="mes2">해당 건물에 천막, 비닐 등 가연성 구조물이 연결되어 있으면, 반드시 매니저와 건물급수를 협의해주시기 바랍니다.</dd>
+					</dl>
+				</fieldset>
+
+				<fieldset>
+					<legend class="tit">추가정보</legend>
+
+					<!-- # 지상/지하 # -->
+					<dl class="form">
+						<dt>지상/지하</dt>
+						<dd>
+							<div class="input-wrap1">
+								<!-- // -->
+								<div class="text num1">
+									<input type="tel" title="지상 층수" placeholder="지상 층수" value="5">
+									<span class="util1">층</span>
+								</div>
+								<!-- // -->
+								<div class="text num1">
+									<input type="tel" title="지하 층수" placeholder="지하 층수" value="2">
+									<span class="util1">층</span>
+								</div>
+								<!-- // -->
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 가입대상 # -->
+					<dl class="form">
+						<dt>가입대상</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio1" checked>
+									<span>전체</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio1">
+									<span>일부</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 가입면적 # -->
+					<dl class="form">
+						<dt>가입면적</dt>
+						<dd>
+							<div class="input-wrap1">
+								<div class="text num1">
+									<input type="tel" title="가입면적" value="5,457">
+									<span class="util1">m&sup2;</span>
+								</div>
+								<span class="util1">=</span>
+								<div class="text num1">
+									<input type="tel" title="가입면적(평)" value="40">
+									<span class="util1">평</span>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 특수건물 # -->
+					<dl class="form">
+						<dt>특수건물 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio2" aria-invalid="true"> <!-- 유효체크 : 오류표현 : aria-invalid="true" 추가 -->
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio2" checked>
+									<span>아니요</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio2">
+									<span>모름</span>
+								</label>
+							</div>
+							<div class="validation">특수건물 여부를 확인해주세요.</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<fieldset>
+					<legend class="tit">기타사항</legend>
+
+					<!-- # 사고이력 # -->
+					<dl class="form">
+						<dt>사고이력(최근3년) <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio3" checked>
+									<span>있음</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio3">
+									<span>없음</span>
+								</label>
+							</div>
+						</dd>
+						<dd>
+							<!-- // -->
+							<textarea class="textarea" title="사고이력 있음 경우 사고이력 기재" placeholder="사고 &ldquo;있음&rdquo; 경우, 최근 3개년 전 가입사 및 사고이력 (사고건수, 사고내용, 손해액)을 기재해주세요.">1건 / 가스누수 / 2,000,000원</textarea>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 기타 요청사항 # -->
+					<dl class="form">
+						<dt>기타요청사항</dt>
+						<dd>
+							<div class="textarea">
+								<textarea cols="50" rows="3" title="기타 요청사항" placeholder="담보 및 가입금액은 상품에 따라 설계 매니저가 표준형으로 설계합니다. 변경을 원하시는 경우 기재해주세요.">
+전기위험 특별약관
+구내폭발위험 특별약관
+풍수재위험 특별약관(자기부담금: 50만원)
+지진위험 특별약관(자기부담금: 100만원)
+
+보험료 분납 특별약관 추가 계약 특약 관련 확인요청
+								</textarea>
+								<span class="util2"><strong>0</strong>/4,000자</span>
+							</div>
+						</dd>
+						<dd class="side">
+							<button type="button" class="btn-sub3 c2">특약확인</button>
+						</dd>
+					</dl>
+
+					<!-- # 파일첨부 # -->
+					<dl class="form">
+						<dt>파일첨부 <a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt>
+						<dd class="mes-t3">기존 첨부파일이 2건 있습니다.</dd>
+						<dd class="data-file1">
+							<ul>
+								<li>
+									<span>담보확인 첨부화면내용 캡쳐.png</span>
+									<span class="sub">46.3KB</span>
+									<button type="button" class="icon-com1 ic6">삭제</button>
+								</li>
+								<li>
+									<span>건물사진1.jpg</span>
+									<span class="sub">56KB</span>
+									<button type="button" class="icon-com1 ic6">삭제</button>
+								</li>
+							</ul>
+						</dd>
+						<dd class="area-btn1">
+							<button class="btn-com1 ic3">파일첨부</button>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+			</div>
+
+			<!-- ### [하단영역] 액션버튼 ###  -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">재요청</button>
+			</div>
+			<!-- ### // ###  -->
+		</article>
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 파일 첨부 안내 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">파일 첨부 안내사항</dt>
+		<dd>
+			<ul class="txt-bul3">
+				<li>첨부파일의 사이즈는 <strong>000px X 000px</strong> 사이즈를 준수해주세요.</li>
+				<li>첨부파일은 <strong>png, jpg, jpeg, bmp, gif</strong> 파일만 등록이 가능합니다.</li>
+				<li>첨부파일 용량은 <strong>5M</strong>를 넘을 수 없습니다.</li>
+				<li>첨부파일을 등록하면, 퀴즈 내용 하단에 자동으로 노출됩니다.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">파일 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+<!-- ##################################### -->
+<script>
+//<!--
+	/* ********************************
+	* 샘플 : 페이지 변경 호출
+	******************************** */
+	function sectionOn(el){
+		var _this = $(this).parents('article').attr('id');
+		$('article[id]:not(.none)').addClass('none');
+		if(el == 'GNI0220' || el == 'GNI0357' || el == 'PAGE1'){
+			$('.container').attr('data-page',1);
+		}
+		$('#'+el).removeClass('none');
+		ui.setPage();
+	};
+
+	/* ************************************
+	* 샘플 : 단순설계/상세설계 버튼 이벤트
+	* data-mode : detailed/simple : 버튼
+	* data-section : detailed/simple : 컨텐츠
+	************************************ */
+	$(document).off('click.mode').on('click.mode','[data-mode]',function(){
+		var _el_mode = $(this).data('mode');
+		//컨텐츠 클래스 초기화
+		$('[data-section]').removeClass('active');
+		//해당 컨텐츠 노출
+		$('[data-section="'+_el_mode+'"]').addClass('active');
+	});
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] SMS 발송 | [P] 대출원리금 가상계좌 수납 | [T] 계약기본 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>SMS 발송</h1>
+			<button type="button" data-btn="pop-close">SMS 발송 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 안내문구 -->
+			<!-- ######################### -->
+			<div class="tit-section"><p>대출원리금 납부안내 SMS를<br>고객님께 발송하시겠습니까?</p></div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 발송정보 확인 -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>발송정보 확인</legend>
+
+				<!-- # 고객명 # -->
+				<dl class="form">
+					<dt>고객명</dt>
+					<dd><data class="text disabled" value="하다미">하다미</data></dd>
+				</dl>
+
+				<!-- # 연락처 입력 # -->
+				<dl class="form">
+					<dt>연락처</dt>
+					<dd><input type="tel" class="text" title="연락처 입력" placeholder="연락처를 입력해주세요." value="01012345678"></dd>
+				</dl>
+
+				<!-- # 내용 # -->
+				<dl class="form">
+					<dt>내용</dt>
+					<dd>
+						<div class="textarea disabled">
+							<data value="">[롯데손해보험 가상계좌안내]
+								기업은행[003]
+								03000000000000
+
+								김롯데
+								납부금액 1,014,900 원
+							</data>
+						</div>
+					</dd>
+				</dl>
+				<!-- # // # -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">발송</button>
+				<!-- 비활성화 시 -->
+				<!-- <button type="button" class="btn-action c1" disabled>발송</button> -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+
+</body>
+</html>

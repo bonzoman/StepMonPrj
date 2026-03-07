@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]담보내역-근재패턴 | 계약상세 | 일반 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-22]	① 공사기간 칼럼 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>공사/사업명 길어질 경우 개행 처리되는데 텍스트 길이의 제한은 없는것인지 이걸 타이틀로 가는게 맞는지</h1>
+			<button type="button" data-btn="pop-close">닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container" data-page="3">
+			<!-- ######################### -->
+			<!-- [기본정보]  -->
+			<!-- ######################### -->
+			<div class="info-con1">
+				<dl>
+					<dt>사업의 종류</dt>
+					<dd>사업서비스업</dd>
+				</dl>
+				<dl>
+					<dt>가입형태</dt>
+					<dd>연간포괄계약</dd>
+				</dl>
+				<!-- 2022-11-22 공사기간 추가 -->
+				<dl>
+					<dt>공사기간</dt>
+					<dd>2022.03.02 ~ 2023.05.31</dd>
+				</dl>
+				<!-- //2022-11-22 공사기간 추가 -->
+				<dl>
+					<dt>공사업체구분</dt>
+					<dd>하청자(하도급업자)</dd>
+				</dl>
+				<dl>
+					<dt>산재가입여부</dt>
+					<dd>무</dd>
+				</dl>
+				<dl>
+					<dt>하도급인<br>담보여부</dt>
+					<dd>무</dd>
+				</dl>
+				<dl>
+					<dt>임금총액</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>총도급액</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>손해율적용<br>업체(원청자)</dt>
+					<dd>두산중공업(주)</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [담보내역]  -->
+			<!-- ######################### -->
+			<div class="wrap-section line">
+				<h2 class="tit-sub1">담보내역</h2>
+				<!-- // -->
+				<section>
+					<h3 class="tit-sub2">담보명</h3>
+					<div class="info-con2">
+						<dl>
+							<dt>1인당 보상한도액</dt>
+							<dd class="data-num1"><strong>-</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>1사고당 보상한도액</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</section>
+				<!-- // -->
+				<section>
+					<h3 class="tit-sub2">전쟁위험 특별약관</h3>
+					<div class="info-con2">
+						<dl>
+							<dt>1인당 보상한도액</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>1사고당 보상한도액</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+				</section>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [기타조건]  -->
+			<!-- ######################### -->
+			<div class="wrap-section line">
+				<h3 class="tit-sub1">기타조건</h3>
+				<ul class="mes-t3">
+					<li>기타조건 내용 노출</li>
+					<li>[2022년사방댐사업 시공감리용역(하동권역) 통지기간연장담보:365일</li>
+					<li>소급일자:2022.02.07 / 2022.02.07~2022.06.16</li>
+					<li>배상기준:배상청구기준</li>
+				</ul>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

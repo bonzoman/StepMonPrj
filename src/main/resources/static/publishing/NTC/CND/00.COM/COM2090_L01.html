@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 타인증수단 선택 | [P] 휴대폰 본인인증 | 본인인증</title>
+<link rel="stylesheet" href="../../resource/css/common.css">
+<link rel="stylesheet" href="../../resource/css/content.css">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+</head>
+<body>
+<div class="popup-wrapper">
+	<article>
+		<div class="container">
+			<div></div>
+			<div class="area-btn1">
+				<a href="#uiPOPCOM1340L02" class="btn-com1">타인증 수단 선택</a> <!-- [레이어팝업 호출 버튼] -->
+			</div>
+		</div>
+	</article>
+</div>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 타인증수단 선택 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCOM1340L02" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>타인증수단 선택</h1>
+			<button type="button" data-btn="pop-close">타인증수단 선택 닫기</button>
+		</header>
+		<div class="content">
+			<div class="label-check2">
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>카카오페이 인증</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>금융인증서</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1">다음</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	//레이어팝업 선언
+	var _popmodal = $plugin.popmodal('#uiPOPCOM1340L02');
+
+	//레이어팝업 닫기 샘플
+	$('.btn-action.c1').on('click',function(){
+		_popmodal.outputClose();//팝업닫기함수
+	})
+
+	//레이어팝업 강제오픈
+	$('#uiPOPCOM1340L02').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

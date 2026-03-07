@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>개인정보등록 | 후보자등록</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-16]	1. 도입자, 초대코드 수정
+	*	[M 2022-11-17]	1. 생명보험 리스트 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- [M 2022-05-06] 타이틀명 변경 및 이전버튼 추가 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>추가정보 입력</h1>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] 안내문구 -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>후보자님에 대해<br>더 알려주세요!</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [정보영역] 후보자 기본정보 -->
+		<!-- ######################### -->
+		<div class="info-con1 line">
+			<dl>
+				<dt>고객명/성별</dt>
+				<dd>하다미(여)</dd>
+			</dl>
+			<dl>
+				<dt>생년월일</dt>
+				<dd>1977.06.10</dd>
+			</dl>
+			<dl>
+				<dt>휴대폰번호</dt>
+				<dd><span data-masking="true">010 - **** - 1111</span></dd>
+			</dl>
+			<!-- [M 2022-05-06] 내용 추가 -->
+			<dl>
+				<dt>주민등록번호</dt>
+				<dd><span data-masking="true">770610 - *******</span></dd>
+			</dl>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [정보입력] 정보입력 -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend>정보입력</legend>
+
+			<!-- # 주민등록번호 : [M 2022-05-06] 내용 삭제 # -->
+
+			<!-- # 주소입력 # -->
+			<dl class="form">
+				<dt>주소</dt>
+				<dd>
+					<!-- [CASE1] 기본 -->
+					<div class="input-btn1">
+						<data class="text" data-label="주소를 검색해 주세요" value=""></data>
+						<button type="button" class="icon-com1 ic2">주소찾기</button>
+					</div>
+					<input type="text" class="text" title="상세 주소 입력" placeholder="상세주소를 입력해주세요.">
+					<!-- [CASE2] 입력 후 -->
+					<div class="input-btn1">
+						<data class="text" data-label="주소를 검색해 주세요" value="서울특별시 중구 소월로 3">서울특별시 중구 소월로 3</data>
+						<button type="button" class="icon-com1 ic2">주소찾기</button>
+					</div>
+					<input type="text" class="text" title="상세 주소 입력" placeholder="상세주소를 입력해주세요." value="3층">
+					<!-- // -->
+				</dd>
+			</dl>
+
+			<!-- [M 2022-11-16] 도입자, 초대코드 수정 -->
+			<!-- # 도입자 # -->
+			<dl class="form">
+				<dt>도입자</dt>
+				<dd>
+					<div class="input-btn1">
+						<data class="text" data-label="소개해준 설계사 이름을 입력해주세요." value=""></data>
+						<!-- <data class="text" data-label="소개해준 설계사 이름을 입력해주세요." value="홍길동">홍길동</data> --><!-- [D] 검색 후-->
+						<button type="button" class="icon-com1 ic2">직원조회</button>
+					</div>
+					<input type="text"  class="text" title="소개자 소속" placeholder="도입자 소속 정보" value="강남제1사업단 강남01지점" disabled>
+				</dd>
+			</dl>
+			<!-- # 초대코드 # -->
+			<dl class="form">
+				<dt>초대코드</dt>
+				<dd>
+					<input type="text"  class="text" title="초대코드 입력" placeholder="초대코드를 입력해주세요." >
+				</dd>
+			</dl>
+			<!-- //[M 2022-11-16] 도입자, 초대코드 수정 -->
+
+			<!-- # 경력구분 # -->
+			<dl class="form">
+				<dt>경력구분</dt>
+				<dd>
+					<!-- [M 2022-07-20] B/S로 변경 -->
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">선택해주세요</span>
+							<span data-select="text"></span>
+						</button>
+						<div class="list">
+							<div data-label="경력구분">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion0" value=""><span>신인</span></label>
+									<label><input type="radio" name="selectOpeion0" value="1"><span>경력(3년이내 1년이상)</span></label>
+									<label><input type="radio" name="selectOpeion0" value="2"><span>교차</span></label>
+									<label><input type="radio" name="selectOpeion0" value="3"><span>기타</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<!-- // -->
+					<!-- [M 2022-11-17] [CASE] 교차 선택시 : 생명보험 리스트 추가 -->
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">생명보험사를 선택해주세요</span>
+							<span data-select="text"></span>
+						</button>
+						<div class="list">
+							<div data-label="생명보험사">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion1" value="1"><span>메트라이프</span></label>
+									<label><input type="radio" name="selectOpeion1" value="2"><span>메트라이프</span></label>
+									<label><input type="radio" name="selectOpeion1" value="3"><span>메트라이프</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<!-- // -->
+				</dd>
+			</dl>
+			<!-- // -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="content-bottom">
+			<button type="button" class="btn-action">이전</button>
+			<button type="button" class="btn-action c1">완료</button>
+			<!-- <button type="button" class="btn-action c1" disabled>완료</button> : 비활성화 -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

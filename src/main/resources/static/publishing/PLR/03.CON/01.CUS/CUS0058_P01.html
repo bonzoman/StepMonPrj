@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 추천타겟팅 조회 | 내고객 티켓팅 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>추천타겟팅</h1>
+			<button type="button" data-btn="pop-close">추천타겟팅 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 추천타켓팅 목록 -->
+			<!-- ######################### -->
+			<div class="form-search1" data-sticky="top">
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">추천타겟팅</span>
+						<span data-select="text" data-value="1">(0순위)실손 전환 캠페인</span>
+					</button>
+					<div class="list">
+						<div data-label="추천타겟팅">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion1" value="1" checked><span>(0순위)실손 전환 캠페인</span><i>72명</i></label>
+								<label><input type="radio" name="selectOpeion1" value="2"><span>(1순위)실손 전환 캠페인</span><i>18명</i></label>
+								<label><input type="radio" name="selectOpeion1" value="3"><span>(2순위)실손 전환 캠페인</span><i>23명</i></label>
+								<label><input type="radio" name="selectOpeion1" value="4"><span>질병수술비(1~8종) 및 40대질병 전환 캠페인(본사)</span><i>23명</i></label>
+								<label><input type="radio" name="selectOpeion1" value="5"><span>더끌림우수타겟(손해율 우량) 업셀링 캠페인(본사)</span><i>38명</i></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [캠페인 내 고객수] -->
+			<!-- ######################### -->
+			<div class="area-info2">
+				<dl>
+					<dt>타겟 고객 수</dt>
+					<dd class="data-num1 txt-c4"><strong>00</strong><span>명</span></dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [교육 컨텐츠] -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<h2 class="tit-sub1">교육 컨텐츠 보기</h2>
+				<div class="mes-info2 box">
+					<p>영업 활동 전, 아래 교육컨텐츠를 꼭 확인하시어 필수사항을 숙지해주세요!</p>
+				</div>
+
+				<div class="board-list3 t1">
+					<ul>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<!-- [이미지] -->
+								<div class="img"><img src="../../resource/img/temp/@img_img2.png" alt=""/></div>
+								<!-- [제목] -->
+								<strong class="tit">제목</strong>
+								<!-- [키워드/해시태그] -->
+								<div class="data-word2">
+									<em>#키워드</em>
+									<em>#해시태그</em>
+								</div>
+								<!-- [등록일시] -->
+								<dl class="data2">
+									<dt>등록일시</dt>
+									<dd>0000.00.00 00:00</dd>
+								</dl>
+							</a>
+						</li>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<div class="img"><img src="../../resource/img/temp/@img_img3.png" alt=""/></div>
+								<strong class="tit">고객들에게 좋은 보험이란 보험 상품이 아니라 보험설계사 입니다.</strong>
+								<div class="data-word2">
+									<em>#보험서비스 발송</em>
+									<em>#상품</em>
+								</div>
+								<dl class="data2">
+									<dt>등록일시</dt>
+									<dd>0000.00.00 00:00</dd>
+								</dl>
+							</a>
+						</li>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<div class="img"><img src="../../resource/img/temp/@img_banner5.png" alt=""/></div>
+								<strong class="tit">뇌혈관 진단비 분석</strong>
+								<div class="data-word2">
+									<em>#보험서비스 발송</em>
+									<em>#상품</em>
+								</div>
+								<dl class="data2">
+									<dt>등록일시</dt>
+									<dd>0000.00.00 00:00</dd>
+								</dl>
+							</a>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

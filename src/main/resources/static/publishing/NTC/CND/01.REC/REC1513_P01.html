@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]1:1 문의하기 등록 | Q&amp;A | 커뮤니티 | 도입</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>1:1 문의하기</h1>
+			<!-- <h1>1:1 문의하기 수정</h1> -->
+			<button type="button" data-btn="pop-close">MARS LP 과정 안내 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<h2 class="tit-sub1">자주 묻는 질문에 없는  <br>궁금한 점을 직접 남겨주세요.</h2> <!-- 수정으로 진입시 none class 추가-->
+			<div class="area-btn4"> <!-- 수정으로 진입시 none class 추가-->
+				<a href="javascript:void(0);" class="btn-sub3 c2">지난 문의글 보기</a>
+			</div>
+			<fieldset class="form-wrap1">
+				<legend>분류, 제목, 내용은 필수 입력</legend>
+
+				<!-- # 분류 # -->
+				<dl class="form">
+					<dt>분류<em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">구분</span>
+								<span data-select="text"></span>
+							</button>
+							<div class="list">
+								<div data-label="분류">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="2"><span>시험</span></label>
+										<label><input type="radio" name="selectOpeion1" value="3"><span>지원</span></label>
+										<label><input type="radio" name="selectOpeion1" value="4"><span>활동</span></label>
+										<label><input type="radio" name="selectOpeion1" value="5"><span>기타</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 제목 입력 # -->
+				<dl class="form">
+					<dt>제목<em class="icon-required2">필수</em></dt>
+					<dd><input type="text" class="text" title="제목" maxlength="30" placeholder="제목을 입력해주세요." required></dd>
+				</dl>
+
+				<!-- # 내용 입력 # -->
+				<dl class="form">
+					<dt>내용<em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="textarea">
+							<textarea cols="50" rows="3" title="등록내용" placeholder="내용을 입력해주세요." required></textarea>
+							<span class="util2"><strong>0</strong>/4,000자</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 이미지 첨부 # -->
+				<dl class="form">
+					<dt>이미지 첨부 <a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt>
+					<!-- [D] 등록후 노출 -->
+					<dd class="data-file1">
+						<ul>
+							<li>
+								<span class="img"><img src="../../resource/img/temp/@img_img2.png" alt=""></span>
+								<span>파일명.jpg</span>
+								<span class="sub">00KB</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+							<li>
+								<span class="img"><img src="../../resource/img/temp/@img_img3.png" alt=""></span>
+								<span>유용한 정보활용방법 정보활용방법 캡쳐.png</span>
+								<span class="sub">56KB</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+						</ul>
+					</dd>
+					<!-- // -->
+					<dd class="area-btn1">
+						<a href="javascript:void(0);" class="btn-com1 ic3">이미지 첨부</a>
+					</dd>
+				</dl>
+			</fieldset>
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">등록</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 이미지 첨부 안내 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">이미지 첨부 안내사항</dt>
+		<dd>
+			<ul class="txt-bul3">
+				<li>첨부파일의 사이즈는 <strong>000px X 000px</strong> 사이즈를 준수해주세요.</li>
+				<li>첨부파일은 <strong>png, jpg, jpeg, bmp, gif</strong> 파일만 등록이 가능합니다.</li>
+				<li>첨부파일 용량은 <strong>5M</strong>를 넘을 수 없습니다.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">이미지 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+</body>
+</html>

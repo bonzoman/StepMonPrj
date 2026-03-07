@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title> 커뮤니티 | 도입</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-28]	① 댓글 모두보기 버튼 추가, 댓글 입력 추가
+	*	[M 2022-10-11]	① 이미지 위치 변경
+						① 삭제 버튼 추가
+	*	[M 2022-11-16]	① 편집버튼 위치 이동
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>커뮤니티</h1>
+		<button type="button" class="btn-t1">FAQ</button>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li><a href="javascript:void(0);" aria-current="page">모든꿀팁</a></li>
+				<li class="active"><a href="javascript:void(0);">스터디톡</a></li>
+				<li><a href="javascript:void(0);">공지사항</a></li>
+			</ul>
+		</div>
+
+		<div class="tit-section">
+			<p>매일매일 공부한 흔적을 <br>
+				피드에 남기고 서로를 격려해요.</p>
+		</div>
+		<div class="board-list2 t2">
+			<ul>
+				<li>
+					<!-- // -->
+					<dl class="info">
+						<dt>작성자</dt>
+						<dd><strong>하다미</strong></dd>
+						<dt>작성일</dt>
+						<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+						<dd class="side"><button type="button" class="btn-sub3 c2">편집</button></dd><!-- [M 2022-11-16] 편집버튼 위치 이동 -->
+					</dl>
+					<div class="img"><img src="../../resource/img/temp/@img_banner10.png" alt=""/></div><!-- [M 2022-11-11] 이미지 위치 변경 -->
+					<!-- // -->
+					<div class="cont">
+						<p>Why so serious?</p>
+						<div class="data-word2">
+							<span>#태그</span>
+							<span>#태그</span>
+							<span>#태그</span>
+							<span>#태그</span>
+						</div>
+					</div>
+					<div class="info2">
+						<dl>
+							<dt>댓글작성자</dt>
+							<dd><em>하미미</em></dd>
+							<dt>댓글내용</dt>
+							<dd>ABCDEF</dd>
+						</dl>
+						<dl>
+							<dt>댓글작성자</dt>
+							<dd><em>김고객</em></dd>
+							<dt>댓글내용</dt>
+							<dd>아주 열심히 하시네요! <button type="button" class="icon-com1 ic6 simple">삭제</button></dd><!-- [M 2022-11-11] 삭제 버튼 추가 -->
+						</dl>
+						<button type="button" class="info-more">댓글 모두 보기</button>
+					</div>
+					<!-- // -->
+					<div class="util">
+						<button type="button" class="icon-com1 ic11">댓글 <i>12</i></button>
+						<!--  댓글 0 일때 case
+						<button type="button" class="icon-com1 ic11">댓글달기</button>
+						-->
+						<label class="icon-com1 ic8">
+							<input type="checkbox">
+							<span>좋아요 <i>11</i></span>
+						</label>
+						<!--  좋아요 0 일때 case
+						<label class="icon-com1 ic8">
+							<input type="checkbox">
+							<span>좋아요</span>
+						</label>
+						 -->
+					</div>
+					<!-- // -->
+					<!-- 2022-10-28 댓글 입력 추가 -->
+					<div class="board-input">
+						<div class="text">
+							<input type="text" placeholder="댓글을 입력해주세요.">
+							<button type="button" class="btn-sub3 c1" disabled="">등록</button>
+							<!-- <button type="button" class="btn-sub3 c1">등록</button> -->
+						</div>
+					</div>
+					<!-- //2022-10-28 댓글 입력 추가 -->
+				</li>
+				<li>
+					<!-- // -->
+					<dl class="info">
+						<dt>작성자</dt>
+						<dd><strong>하다미</strong></dd>
+						<dt>작성일</dt>
+						<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+						<dd class="side"><button type="button" class="btn-sub3 c2">편집</button></dd><!-- [M 2022-11-16] 편집버튼 위치 이동 -->
+					</dl>
+					<div class="img"><img src="../../resource/img/temp/@img_banner10.png" alt=""/></div>
+					<!-- // -->
+					<div class="cont fold">
+						<p>동해 물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 <br>
+							남산 위에 저 소나무 철갑을 두른 듯 바람 서리 불변함은 우리 기상일세 <br>
+							가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심일세 <br>
+							이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세
+						</p>
+						<div class="data-word2">
+							<span>#애국가</span>
+							<span>#애국가1절에서4절까지</span>
+							<span>#후렴은생략한다</span>
+							<span>#태그</span>
+						</div>
+						<!-- <button type="button" class="btn-sub3 c2">편집</button> --><!-- [M 2022-11-16] 편집버튼 위치 이동 -->
+						<button type="button" class="info-more">더보기</button>
+					</div>
+					<div class="info2">
+						<dl>
+							<dt>댓글작성자</dt>
+							<dd><em>하미미</em></dd>
+							<dt>댓글내용</dt>
+							<dd>가나다라마바사아자차카타파하가나다라마바사아자차카타파하 <button type="button" class="icon-com1 ic6 simple">삭제</button></dd><!-- [M 2022-11-11] 삭제 버튼 추가 -->
+						</dl>
+						<button type="button" class="info-more">댓글 모두 보기</button> <!-- 2022-10-28 댓글 모두보기 추가 -->
+					</div>
+					<!-- // -->
+					<div class="util">
+						<button type="button" class="icon-com1 ic11">댓글 <i>1</i></button>
+						<!--  댓글 0 일때 case
+						<button type="button" class="icon-com1 ic11">댓글달기</button>
+						-->
+						<label class="icon-com1 ic8">
+							<input type="checkbox">
+							<span>좋아요 <i>11</i></span>
+						</label>
+						<!--  좋아요 0 일때 case
+						<label class="icon-com1 ic8">
+							<input type="checkbox">
+							<span>좋아요</span>
+						</label>
+						 -->
+					</div>
+					<!-- // -->
+					<!-- 2022-10-28 댓글 입력 추가 -->
+					<div class="board-input">
+						<div class="text">
+							<input type="text" placeholder="댓글을 입력해주세요.">
+							<button type="button" class="btn-sub3 c1" disabled="">등록</button>
+							<!-- <button type="button" class="btn-sub3 c1">등록</button> -->
+						</div>
+					</div>
+					<!-- //2022-10-28 댓글 입력 추가 -->
+				</li>
+				<li>
+					<!-- // -->
+					<dl class="info">
+						<dt>작성자</dt>
+						<dd><strong>하다미</strong></dd>
+						<dt>작성일</dt>
+						<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+					</dl>
+					<div class="img"><img src="../../resource/img/temp/@img_banner10.png" alt=""/></div><!-- [M 2022-11-11] 이미지 위치 변경 -->
+					<!-- // -->
+					<div class="cont fold">
+						<p>날이 많이 덥지요 ?</p>
+						<button type="button" class="info-more">댓글 모두 보기</button>
+					</div>
+					<!-- <div class="info2">
+						<dl>
+							<dt>댓글작성자</dt>
+							<dd><em>하미미</em></dd>
+							<dt>댓글내용</dt>
+							<dd>가나다라마바사아자차카타파하가나다라마바사아자차카타파하</dd>
+						</dl>
+					</div> -->
+					<!-- // -->
+					<div class="util">
+						<button type="button" class="icon-com1 ic11">댓글달기</button>
+						<label class="icon-com1 ic8">
+							<input type="checkbox">
+							<span>좋아요</span>
+						</label>
+					</div>
+					<!-- // -->
+					<!-- 2022-10-28 댓글 입력 추가 -->
+					<div class="board-input">
+						<div class="text">
+							<input type="text" placeholder="댓글을 입력해주세요.">
+							<button type="button" class="btn-sub3 c1" disabled="">등록</button>
+							<!-- <button type="button" class="btn-sub3 c1">등록</button> -->
+						</div>
+					</div>
+					<!-- //2022-10-28 댓글 입력 추가 -->
+				</li>
+			</ul>
+			<!-- 더보기 버튼 -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+		</div>
+		<a href="javascript:void(0);" class="btn-util1 ic1" data-sticky="bottom">등록</a>
+	</div>
+	<footer class="footer"></footer>
+</main>
+<script>
+	$(document).on('click','.board-list2.t2 .cont.fold .info-more',function(){
+		$(this).parent('.cont').removeClass('fold')
+	});
+
+	// sample
+	$('.board-input input').keyup(function(){
+		if($.trim($(this).val())!=''){
+			$(this).siblings('button.btn-sub3').removeAttr('disabled');
+		}else{
+			$(this).siblings('button.btn-sub3').attr('disabled','disabled');
+		}
+	});
+</script>
+</body>
+</html>

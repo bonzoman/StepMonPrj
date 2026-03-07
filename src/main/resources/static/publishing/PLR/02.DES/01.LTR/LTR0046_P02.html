@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 서류전송 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>서류발송</h1>
+			<button type="button" data-btn="pop-close">서류발송 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 보험정보 -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+				<div class="info">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+				</div>
+				<div class="data2">
+					<dl>
+						<dt>계약자</dt>
+						<dd class="data-info2"><strong>공지철</strong><span><span>1978.12.28</span><span>남</span></span></dd>
+					</dl>
+					<dl>
+						<dt>피보험자</dt>
+						<dd class="data-info2"><strong>하다미</strong><span><span>1978.12.28</span><span>여</span></span></dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [진행상태] STEP 02 -->
+			<!-- ######################### -->
+			<div class="info-step1" data-autoset="toggle" data-sticky="top">
+				<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+				<ol data-toggle="content">
+					<li><span>01. 서류 및 발송방법 선택</span><button type="button" class="btn-sub3 c2">수정</button></li>
+					<li aria-current="step"><span>02. 정보입력 및 확인</span></li>
+				</ol>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [본문영역] 상단문구 -->
+			<!-- ######################### -->
+			<div class="tit-section2 t1">
+				<p>발송하실 방법에 따라<br>내용을 각각 입력해주세요.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭영역] -->
+			<!-- ######################### -->
+			<div class="tab-sub1" data-autoset="tab" data-sticky="top">
+				<ul>
+					<li class="active"><a href="#uiTab2Section1" aria-current="page">알림톡</a></li>
+					<li><a href="#uiTab2Section2">이메일</a></li>
+					<li><a href="#uiTab2Section3">팩스</a></li>
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭영역] 알림톡 -->
+			<!-- ######################### -->
+			<div id="uiTab2Section1" class="ui-tabcon active">
+				<fieldset class="form-wrap1">
+					<legend>알림톡 정보확인</legend>
+					<!-- // -->
+					<dl class="form">
+						<dt>수신대상 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="radio1" checked>
+									<span>고객</span>
+								</label>
+								<label>
+									<input type="radio" name="radio1">
+									<span>사용인</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>수신자 이름</dt>
+						<dd><data class="text disabled" data-label="성함을 입력해주세요." value="하다미">하다미</data></dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>수신자 전화번호</dt>
+						<dd><data class="text disabled" data-label="전화번호를 입력해주세요." value="010-1234-5678">010-1234-5678</data></dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>전송대상 인쇄물</dt>
+						<dd><data class="textarea disabled" data-rows="3" data-label="전송대상 인쇄물" value="청약서(계약자용),서비스(상품)설명서,서비스(상품)설명서 별지">청약서(계약자용)<br>서비스(상품)설명서<br>서비스(상품)설명서 별지</data></dd>
+					</dl>
+					<!-- // -->
+				</fieldset>
+
+				<!-- # 알림톡이 도착하지 않을 경우 # -->
+				<div class="box-t1">
+					<dl class="txt-mark2 t1">
+						<dt>알림톡이 도착하지 않을 경우</dt>
+						<dd>롯데손해보험 알림톡 친구 추가</dd>
+						<dd>롯데손해보험 알림톡 수신차단 해제</dd>
+						<dd>카카오톡 최신 버전으로 업데이트</dd>
+						<dd>영업고객정보의 휴대폰번호 확인</dd>
+						<dd>실제 휴대폰번호와 카카오톡에 등록된 휴대폰번호 일치 여부 확인</dd>
+					</dl>
+					<p class="txt-bul1">알림톡 발송 실패 시 문자메시지(LMS)로 전송됩니다.</p>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭영역] 이메일 -->
+			<!-- ######################### -->
+			<div id="uiTab2Section2" class="ui-tabcon">
+				<div class="form-wrap1">
+					<!-- ### [이메일 정보확인] ### -->
+					<fieldset>
+						<legend>이메일 정보확인</legend>
+						<!-- // -->
+						<dl class="form">
+							<dt>수신대상 <em class="icon-required2">필수</em></dt>
+							<dd>
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="radio2" checked>
+										<span>고객</span>
+									</label>
+									<label>
+										<input type="radio" name="radio2">
+										<span>사용인</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>수신자 이름</dt>
+							<dd><data class="text disabled" data-label="성함을 입력해주세요." value="하다미">하다미</data></dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>이메일 주소 <em class="icon-required2">필수</em></dt>
+							<dd><input type="text" class="text" title="이메일 주소" placeholder="이메일 주소를 입력해주세요."></dd>
+
+							<!-- [CASE] 이메일주소 형식이 다를 경우 -->
+							<dd>
+								<input type="text" class="text" title="이메일 주소" placeholder="이메일 주소를 입력해주세요." aria-invalid="true">
+								<div class="validation">이메일 주소를 입력해주세요.</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>전송대상 인쇄물</dt>
+							<dd><data class="textarea disabled" data-rows="3" data-label="전송대상 인쇄물" value="청약서(계약자용),서비스(상품)설명서,서비스(상품)설명서 별지">청약서(계약자용)<br>서비스(상품)설명서<br>서비스(상품)설명서 별지</data></dd>
+						</dl>
+						<!-- // -->
+					</fieldset>
+
+					<!-- ### [이메일 내용입력] ### -->
+					<fieldset>
+						<legend>이메일 내용입력</legend>
+
+						<div class="tit-sub2">
+							<p>내용 입력</p>
+							<div class="side">
+								<button type="button" class="btn-sub2 c2 ic8">초기화</button>
+							</div>
+						</div>
+						<!-- // -->
+						<dl class="form">
+							<dt>제목</dt>
+							<dd><input type="text" class="text" title="이메일제목" placeholder="[롯데손해보험]일반화재보험 가입서류 전달"></dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>내용</dt>
+							<dd>
+								<div class="textarea">
+									<textarea cols="50" rows="3" title="내용" placeholder="업무요청 시 사전 업무처리 및 확인사항이 있습니다. 페이지 아래를 확인해주세요.&#10;&#10;요청내역에는 개인정보 입력을 삼가해주세요."></textarea>
+									<span class="util2"><strong>0</strong>/1,000자</span>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+					</fieldset>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭영역] 팩스 -->
+			<!-- ######################### -->
+			<div id="uiTab2Section3" class="ui-tabcon">
+				<fieldset class="form-wrap1">
+					<legend>팩스 정보입력</legend>
+
+					<!-- # 표지 포함 선택 # -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox" checked>
+							<span>표지포함</span>
+						</label>
+					</div>
+
+					<!-- # 표지포함 체크 시 노출 영역 # -->
+					<dl class="form">
+						<dt>제목</dt>
+						<dd><input type="text" class="text" title="제목" placeholder="표지 제목을 입력해주세요."></dd>
+					</dl>
+					<dl class="form">
+						<dt>내용</dt>
+						<dd>
+							<div class="textarea">
+								<textarea cols="50" rows="3" title="내용" placeholder="표지 내용을 입력해주세요."></textarea>
+								<span class="util2"><strong>0</strong>/1,000자</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+					<dl class="form line">
+						<dt>팩스번호 <em class="icon-required2">필수</em></dt>
+						<dd><input type="tel" class="text" title="팩스번호" placeholder="팩스 번호를 입력해주세요."></dd>
+
+						<!-- [CASE] 팩스번호 미입력시 -->
+						<dd>
+							<input type="tel" class="text" title="팩스번호" placeholder="팩스 번호를 입력해주세요." aria-invalid="true">
+							<div class="validation">팩스 번호를 입력해주세요.</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>전송대상 인쇄물</dt>
+						<dd><data class="textarea disabled" data-rows="3" data-label="전송대상 인쇄물" value="청약서(계약자용),서비스(상품)설명서,서비스(상품)설명서 별지">청약서(계약자용)<br>서비스(상품)설명서<br>서비스(상품)설명서 별지</data></dd>
+					</dl>
+					<!-- // -->
+				</fieldset>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c3">미리보기</button>
+				<button type="button" class="btn-action c1">발송</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

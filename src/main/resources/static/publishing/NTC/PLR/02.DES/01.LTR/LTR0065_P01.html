@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 실손정액 담보조회 | 담보추가속성 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>실손정액담보(보장)조회 <a href="#uiTOOLTIPINFO1" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">실손정액담보(보장)조회 안내</a></h1>
+			<button type="button" data-btn="pop-close">실손정액담보(보장)조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] -->
+			<!-- ######################### -->
+			<!-- [CASE1] 메뉴에서 직접 접근했을 경우 -->
+			<fieldset class="form-search1 none">
+				<legend>고객검색</legend>
+
+				<!-- # 검색영역 # -->
+				<div class="input-btn1">
+					<data class="text" value="1" data-label="고객을 검색해주세요."></data>
+					<button type="button" class="icon-com1 ic2">검색하기</button>
+				</div>
+
+				<!-- # 검색 후 # -->
+				<dl class="info2">
+					<dt>개인</dt>
+					<dd class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+						<span><span>1990.01.01</span><span>남</span></span>
+					</dd>
+					<dd class="side"><button type="button" class="btn-sub3 c2">삭제</button></dd>
+				</dl>
+			</fieldset>
+
+			<!-- [CASE2] 고객정보 입력 후 자동 호출되는 경우 -->
+			<div class="info-summary2">
+				<h2 class="hide">고객정보</h2>
+				<dl class="info2">
+					<dt>개인</dt>
+					<dd class="data-info2" data-value="102701">
+						<strong>하다미</strong>
+						<span><span>1990.01.01</span><span>남</span></span>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭영역] -->
+			<!-- ######################### -->
+			<div class="nav-tab1" data-autoset="tab" data-sticky="top">
+				<ul>
+					<li class="active"><a href="#uiTabSection1">실손보장(담보)</a></li>
+					<li><a href="#uiTabSection2">정액보장(담보)</a></li>
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭영역] 실손보장(담보) -->
+			<!-- ######################### -->
+			<div id="uiTabSection1" class="ui-tabcon active">
+				<h3 class="hide">실손보장(담보)</h3>
+				<!-- # 총 00건 # -->
+				<div class="area-info1">
+					<p>총 <strong>00건</strong></p>
+				</div>
+				<!-- # 실손보장 내역 # -->
+				<div class="area-toggle1" data-autoset="toggle">
+					<ul>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>무배당 롯데 내마음속건강ll</strong>
+								<dl class="data2">
+									<dt>보험종목명</dt>
+									<dd>장기개인(손보)</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보험시작일</dt>
+									<dd>2018.03.11</dd>
+									<dt>가입금액</dt>
+									<dd class="data-num1"><strong>5</strong><span>억원</span></dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>회사명</dt>
+									<dd>흥국화재</dd>
+								</dl>
+								<dl>
+									<dt>보험종료일</dt>
+									<dd>2022.10.15</dd>
+								</dl>
+								<dl>
+									<dt>보장내용</dt>
+									<dd>상해(일반상해, 전체상해를 의미)</dd>
+								</dl>
+								<dl>
+									<dt>보장(담보)<br>특성</dt>
+									<dd>입원의료비</dd>
+								</dl>
+								<dl>
+									<dt>상태</dt>
+									<dd>정상</dd>
+								</dl>
+								<dl>
+									<dt>자기부담비용</dt>
+									<dd>급여 90%, 비급여</dd>
+								</dl>
+								<dl>
+									<dt>보상기간</dt>
+									<dd>해당사항없음</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>무배당 내마음심장건강ll (양한방) (1(보장(담보)명)</strong>
+								<dl class="data2">
+									<dt>보험종목명</dt>
+									<dd>장기개인(손보)</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보험시작일</dt>
+									<dd>2018.03.11</dd>
+									<dt>가입금액</dt>
+									<dd class="data-num1"><strong>5</strong><span>억원</span></dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>회사명</dt>
+									<dd>흥국화재</dd>
+								</dl>
+								<dl>
+									<dt>보험종료일</dt>
+									<dd>2022.10.15</dd>
+								</dl>
+								<dl>
+									<dt>보장내용</dt>
+									<dd>상해(일반상해, 전체상해를 의미)</dd>
+								</dl>
+								<dl>
+									<dt>보장(담보)<br>특성</dt>
+									<dd>입원의료비</dd>
+								</dl>
+								<dl>
+									<dt>상태</dt>
+									<dd>정상</dd>
+								</dl>
+								<dl>
+									<dt>자기부담비용</dt>
+									<dd>급여 90%, 비급여</dd>
+								</dl>
+								<dl>
+									<dt>보상기간</dt>
+									<dd>해당사항없음</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭영역] 정액보장(담보) -->
+			<!-- ######################### -->
+			<div id="uiTabSection2" class="ui-tabcon">
+				<h3 class="hide">정액보장(담보)</h3>
+				<!-- ### [탭영역] ### -->
+				<div class="tab-sub1" data-autoset="tab" data-sticky="top">
+					<ul>
+						<li class="active"><a href="#uiTab2Section1">사전조회</a></li>
+						<li><a href="#uiTab2Section2">상세조회(회사)</a></li>
+						<li><a href="#uiTab2Section3">상세조회(보장(담보))</a></li>
+					</ul>
+				</div>
+
+				<!-- ### [탭영역] 사전조회 ### -->
+				<div id="uiTab2Section1" class="ui-tabcon active">
+					<h4 class="hide">사전조회</h4>
+					<!-- # 총 00건 # -->
+					<div class="area-info1">
+						<p>총 <strong>00건</strong><span>(2022.01.01 기준)</span></p>
+					</div>
+					<!-- # 사전조회 내역 # -->
+					<div class="info-data2 line2">
+						<ul>
+							<!-- // -->
+							<li>
+								<strong class="tit">교통사고처리지원금</strong>
+								<dl class="txt3">
+									<dt>총가입금액</dt>
+									<dd>1억2,000만원</dd>
+								</dl>
+								<dl class="txt">
+									<dt>보장(담보)건수</dt>
+									<dd>4건</dd>
+								</dl>
+								<div class="info-con2">
+									<dl>
+										<dt>롯데손해보험</dt>
+										<dd class="data-num1"><strong>1</strong><span>억원</span></dd>
+									</dl>
+									<dl>
+										<dt>손해보험</dt>
+										<dd class="data-num1"><strong>2,000</strong><span>만원</span></dd>
+									</dl>
+									<dl>
+										<dt>생명보험</dt>
+										<dd class="data-num1"><strong>5,000</strong><span>만원</span></dd>
+									</dl>
+									<dl>
+										<dt>공제조합</dt>
+										<dd class="data-num1"><strong>3,000</strong><span>만원</span></dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">교통상해사망</strong>
+								<dl class="txt3">
+									<dt>총가입금액</dt>
+									<dd>1억2,000만원</dd>
+								</dl>
+								<dl class="txt">
+									<dt>보장(담보)건수</dt>
+									<dd>4건</dd>
+								</dl>
+								<div class="info-con2">
+									<dl>
+										<dt>롯데손해보험</dt>
+										<dd class="data-num1"><strong>1</strong><span>억원</span></dd>
+									</dl>
+									<dl>
+										<dt>손해보험</dt>
+										<dd class="data-num1"><strong>2,000</strong><span>만원</span></dd>
+									</dl>
+									<dl>
+										<dt>생명보험</dt>
+										<dd class="data-num1"><strong>5,000</strong><span>만원</span></dd>
+									</dl>
+									<dl>
+										<dt>공제조합</dt>
+										<dd class="data-num1"><strong>3,000</strong><span>만원</span></dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</div>
+
+				<!-- ### [탭영역] 상세조회(회사) ### -->
+				<div id="uiTab2Section2" class="ui-tabcon">
+					<h4 class="hide">상세조회(회사)</h4>
+					<!-- # 총 00건 # -->
+					<div class="area-info1">
+						<p>총 <strong>00건</strong><span>(2022.01.01 기준)</span></p>
+					</div>
+					<!-- # 상세조회(회사) # -->
+					<div class="area-toggle1" data-autoset="toggle">
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>롯데손해보험</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+								</div>
+								<div data-toggle="content" class="info-data1">
+									<!-- 상품 하나 -->
+									<section>
+										<h5 class="tit">무배당 let:drive 운전자보험(2109)</h5>
+										<!-- // -->
+										<dl>
+											<dt>특정상해진단</dt>
+											<dd>
+												<div>보험사 보장(담보)명</div>
+												<div>교통상해골절진단비 (치아파절포함) 교통 상해골절진단비 2줄 케이스</div>
+											</dd>
+											<dd>
+												<div>가입금액</div>
+												<div class="data-num1"><strong>40</strong><span>만원</span></div>
+											</dd>
+											<dd>
+												<div>보험기간</div>
+												<div>2018.03.06~2048.03.06</div>
+											</dd>
+										</dl>
+										<!-- // -->
+										<dl>
+											<dt>상해수술</dt>
+											<dd>
+												<div>보험사 보장(담보)명</div>
+												<div>상해수술비</div>
+											</dd>
+											<dd>
+												<div>가입금액</div>
+												<div class="data-num1"><strong>40</strong><span>만원</span></div>
+											</dd>
+											<dd>
+												<div>보험기간</div>
+												<div>2018.03.06~2048.03.06</div>
+											</dd>
+										</dl>
+										<!-- // -->
+									</section>
+
+									<!-- 상품 하나 -->
+									<section>
+										<h5 class="tit">무배당 롯데 3대성인병에 강한 건강보험(1604)</h5>
+										<!-- // -->
+										<dl>
+											<dt>특정상해진단</dt>
+											<dd>
+												<div>보험사 보장(담보)명</div>
+												<div>교통상해골절진단비 (치아파절포함) 교통 상해골절진단비 2줄 케이스</div>
+											</dd>
+											<dd>
+												<div>가입금액</div>
+												<div class="data-num1"><strong>40</strong><span>만원</span></div>
+											</dd>
+											<dd>
+												<div>보험기간</div>
+												<div>2018.03.06~2048.03.06</div>
+											</dd>
+										</dl>
+										<!-- // -->
+										<dl>
+											<dt>상해수술</dt>
+											<dd>
+												<div>보험사 보장(담보)명</div>
+												<div>상해수술비</div>
+											</dd>
+											<dd>
+												<div>가입금액</div>
+												<div class="data-num1"><strong>40</strong><span>만원</span></div>
+											</dd>
+											<dd>
+												<div>보험기간</div>
+												<div>2018.03.06~2048.03.06</div>
+											</dd>
+										</dl>
+										<!-- // -->
+									</section>
+									<!-- // -->
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>현대해상</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">현대해상 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									보험 상세조회 영역
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>흥국화재</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">현대해상 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									보험 상세조회 영역
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>DB손해보험</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">현대해상 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									보험 상세조회 영역
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>KB손해보험</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">현대해상 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									보험 상세조회 영역
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</div>
+
+				<!-- ### [탭영역] 상세조회(보장(담보))### -->
+				<div id="uiTab2Section3" class="ui-tabcon">
+					<h4 class="hide">상세조회(보장(담보))</h4>
+
+					<!-- # 총 00건 # -->
+					<div class="area-info1">
+						<p>총 <strong>00건</strong><span>(2022.01.01 기준)</span></p>
+					</div>
+
+					<!-- 상세조회(보장(담보)) -->
+					<div class="area-toggle1" data-autoset="toggle">
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>상해사망</strong>
+									<dl class="data2">
+										<dt>총 가입금액</dt>
+										<dd class="data-num1"><strong>10</strong><span>억원</span></dd>
+									</dl>
+									<dl class="data2">
+										<dt>보장(담보)건수</dt>
+										<dd>2건</dd>
+									</dl>
+									<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+								</div>
+								<div data-toggle="content" class="info-con1">
+									<!-- // -->
+									<ul>
+										<li>
+											<div>회사명</div>
+											<div>롯데손해보험</div>
+										</li>
+										<li>
+											<div>가입금액</div>
+											<div class="data-num1"><strong>5</strong><span>억원</span></div>
+										</li>
+										<li>
+											<div>보험사보장(담보)명</div>
+											<div>무배당 롯데 내마음속건강ll(양한방)(보장(담보)명 모두노출)</div>
+										</li>
+										<li>
+											<div>상품명</div>
+											<div>다이렉트 실손의료보험 (상품명 모두노출)</div>
+										</li>
+										<li>
+											<div>계약상태</div>
+											<div>정상</div>
+										</li>
+										<li>
+											<div>보험기간</div>
+											<div>2018.03.06~2048.03.06</div>
+										</li>
+									</ul>
+									<!-- // -->
+									<ul>
+										<li>
+											<div>회사명</div>
+											<div>한화손해보험</div>
+										</li>
+										<li>
+											<div>가입금액</div>
+											<div class="data-num1"><strong>5</strong><span>억원</span></div>
+										</li>
+										<li>
+											<div>보험사보장(담보)명</div>
+											<div>무배당 롯데 내마음속건강ll(양한방)(보장(담보)명 모두노출)</div>
+										</li>
+										<li>
+											<div>상품명</div>
+											<div>무배당 한아름플러스 종합보험</div>
+										</li>
+										<li>
+											<div>계약상태</div>
+											<div>정상</div>
+										</li>
+										<li>
+											<div>보험기간</div>
+											<div>2018.03.06~2048.03.06</div>
+										</li>
+									</ul>
+									<!-- // -->
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>급성심근경색</strong>
+									<dl class="data2">
+										<dt>총 가입금액</dt>
+										<dd class="data-num1"><strong>10</strong><span>억원</span></dd>
+									</dl>
+									<dl class="data2">
+										<dt>보장(담보)건수</dt>
+										<dd>2건</dd>
+									</dl>
+									<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+								</div>
+								<div data-toggle="content" class="info-con1">
+									<ul>
+										<li>
+											<div>회사명</div>
+											<div>롯데손해보험</div>
+										</li>
+										<li>
+											<div>가입금액</div>
+											<div class="data-num1"><strong>5</strong><span>억원</span></div>
+										</li>
+										<li>
+											<div>보험사보장(담보)명</div>
+											<div>무배당 롯데 내마음속건강ll(양한방)(보장(담보)명 모두노출)</div>
+										</li>
+										<li>
+											<div>상품명</div>
+											<div>다이렉트 실손의료보험 (상품명 모두노출)</div>
+										</li>
+										<li>
+											<div>계약상태</div>
+											<div>정상</div>
+										</li>
+										<li>
+											<div>보험기간</div>
+											<div>2018.03.06~2048.03.06</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [고객 검색 전] 조회 결과 없음 -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p>
+					<strong>고객을 검색하시어<br>담보를 조회해주세요</strong>
+				</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">가설동의 문자발송</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ######################### -->
+<!-- [툴팁영역] 실손정액담보(보장)조회 안내 -->
+<!-- ######################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl class="txt-bul1">
+		<dt>실손정액담보(보장)조회 안내</dt>
+		<dd>각 회사별 가입금액은 2006년 6월 이후 정상보장 합산으로 표기됩니다.</dd>
+		<dd>
+			정액보장 보험사 동시가입 제한으로 일당 등 정액보장은 일정한도 내에서 가입할 수 있습니다.
+			다른 보험사 가입 여부의 최종 확인은 최대 3영업일 이후에 확인할 수 있으므로,
+			현재 가입이 가능해도 나중에 가입 금액 감액이나 계약취소가 발생할 수 있습니다.
+		</dd>
+		<dd><button type="button" data-btn="pop-close">실손정액담보(보장)조회 안내 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+</body>
+</html>

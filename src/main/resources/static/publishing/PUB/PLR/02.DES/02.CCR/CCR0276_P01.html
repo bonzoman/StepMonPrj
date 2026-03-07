@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>업무용-법인 | 설계(개인/업무/영업) | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>임직원운전자한정 특약 확인</h1>
+			<button type="button" data-btn="pop-close">닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단 타이틀영역] -->
+			<!-- ######################### -->
+			<div class="tit-section2 t1">
+				<p>임직원운전자한정 특약은<br>피보험자동차가 법인소유의 승용<br>자동차인 경우에만<br>가입할 수 있습니다.</p>
+				<p>기명 피보험자가 피보험자동차에 대하여<br>운전할 대상을 기명 피보험자 소속 사업체의<br>임직원으로 한정하는 경우 보상하는 특약입니다.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 확인사항 -->
+			<!-- ######################### -->
+			<section class="wrap-section3">
+				<h2 class="tit-sub1">확인사항</h2>
+
+				<div class="mes-info2 box"><p>피보험자(계약자)에게 다음 사항을 설명한 후 해당되는 경우에만 특약에 가입할 수 있도록 안내해주세요.</p></div>
+
+				<!-- ### 확인사항 CASE1 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">법인세 과세 대상 법인은 임직원운전자한정 특약에 가입해야 비용처리를 할 수 있습니다.<em class="icon-required2">필수</em><br>(※ 보험기간 중 추가할 경우, 비용처리 불가)</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd1" required aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd1">
+							<span>아니요</span>
+						</label>
+					</div>
+
+					<div class="validation">필수 확인 항목입니다.</div>
+				</fieldset>
+
+				<!-- ### 확인사항 CASE2 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">임직원운전자한정 특약에 가입할 때,  임직원 이외의 운전자가 피보험자동차를 운전하던 중 발생한 사고에 대해서는 보험지급액을 받을 수 없습니다.<em class="icon-required2">필수</em></legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd" required aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd">
+							<span>아니요</span>
+						</label>
+					</div>
+
+					<div class="validation">필수 확인 항목입니다.</div>
+				</fieldset>
+
+				<!-- 하단 안내문구 -->
+				<p class="mes-t1 line">담당LP 본인은 위 사항에 대해 피보험자(보험계약자)에게 안내했음을 확인합니다.</p>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>항목순서변경 | 리포트</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>리포트 항목 순서변경</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content report">
+        <div class="tab-wrap">
+            <ul class="tab2">
+                <li><a href="#tab2-1" class="current">혜택</a></li>
+                <li><a href="#tab2-2">업적</a></li>
+                <li><a href="#tab2-3">조직</a></li>
+                <li><a href="#tab2-4">코칭</a></li>
+            </ul>
+            <div class="sortable-info">
+                콘텐츠 순서를 변경 할 수 있어요.
+                <button class="btn-sub1 c3">초기화</button>
+            </div>
+            <div class="tab-cont" id="tab2-1">
+                <ul class="sortable-list">
+                    <li>소득</li>
+                    <li>포인트 현황/적립</li>
+                    <li>포인트 사용/소멸</li>
+                </ul>
+            </div>
+            <div class="tab-cont" id="tab2-2">
+                <ul class="sortable-list">
+                    <li>매출현황 및 실적추이</li>
+                    <li>장기수금률 현황</li>
+                    <li>주요회차별 유지율 현황</li>
+                    <li>실가동 유실적 및 비가동 조직현황</li>
+                    <li>퀘스트 달성 현황 및 추이</li>
+                </ul>
+            </div>
+            <div class="tab-cont" id="tab2-3">
+                <ul class="sortable-list">
+                    <li>후보자 관리</li>
+                    <li>시험 및 위촉현황</li>
+                    <li>교육대상자 현황</li>
+                </ul>
+            </div>
+            <div class="tab-cont" id="tab2-4">
+
+                <ul class="sortable-list">
+                    <li>월별의뢰 현황</li>
+                    <li>의뢰현황</li>
+                </ul>
+            </div>
+        </div>
+		<div class="area-action">
+			<button type="button" class="btn-action c3">취소</button>
+			<button type="button" class="btn-action c1">확인</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

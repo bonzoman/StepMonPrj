@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 나의정보 | 나의정보</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script> <!-- [D] 이미지 저장 샘플 js -->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>나의 정보</h1>
+			<button type="button" data-btn="pop-close">나의 정보 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단 프로필 영역] -->
+			<!-- ######################### -->
+			<section class="info-summary3 t1"> <!-- [M 2022-09-27] 클래스명 삭제 -->
+				<h2 class="data-info1">
+					<span class="img">
+						<img src="../../resource/img/temp/@img_user1.png" alt="">
+						<a href="javascript:void(0);">프로필 사진 변경</a>
+					</span>
+					<strong>하다미 LP님</strong>
+				</h2>
+				<div class="data1">
+					<dl>
+						<dt>소속</dt>
+						<dd>강남사업단</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [사용자 상세 정보] -->
+			<!-- ######################### -->
+			<section class="wrap-section1">
+				<div class="tit-sub1">
+					<h2>상세정보</h2>
+					<div class="side">
+						<button type="button" class="btn-sub3 c2">수정</button>
+					</div>
+				</div>
+				<div class="info-con1">
+					<dl>
+						<dt>휴대폰 번호</dt>
+						<dd>010-1234-2345</dd>
+					</dl>
+					<dl>
+						<dt>이메일</dt>
+						<dd>abc@lotteins.co.kr</dd>
+					</dl>
+					<dl>
+						<dt>지점주소</dt>
+						<dd>서울시 강남구 테헤란로 1 롯데손해보험빌딩 5F</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [명함 영역] -->
+			<!-- ######################### -->
+			<section class="wrap-section3">
+				<div class="tit-sub1">
+					<h3>모바일 명함</h3>
+					<div class="side"><button type="button" class="icon-com1 ic7" id="btnDownload">저장하기</button></div>
+				</div>
+
+				<div class="con-t6" id="areaCard">
+					<dl class="tit">
+						<dt>하다미LP</dt>
+						<dd>강남사업단</dd>
+					</dl>
+					<dl>
+						<dt class="hide">전화번호</dt>
+						<dd>010-1234-2345</dd>
+						<dt class="hide">이메일</dt>
+						<dd>lotte@lotteins.co.kr</dd>
+						<dt class="hide">지점주소</dt>
+						<dd>인천 남동구 백범로 357 9층 롯데손해보험(간석동, 한국교직원공제회인천회관)</dd>
+					</dl>
+					<dl>
+						<dt>수상경력</dt>
+						<dd>
+							<span>2022.03</span>
+							<span>ROYAL LP 달성</span>
+						</dd>
+						<dd>
+							<span>2022.03</span>
+							<span>연도대상 수상</span>
+						</dd>
+						<dd>
+							<span>2022.03</span>
+							<span>PREMIER LP 달성</span>
+						</dd>
+					</dl>
+					<div class="sub">
+						<span class="img"><img src="../../resource/img/temp/@img_logo1.png" alt=""></span>
+						<span class="img"><img src="../../resource/img/temp/@img_logo2.png" alt=""></span>
+					</div>
+					<a href="javascript:void(0);">전체보기</a>
+				</div>
+			</section>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<script>
+//캔퍼스로 변환 샘플
+$("#btnDownload").on('click', function(e) {
+	html2canvas($('#areaCard')[0]).then(function(canvas) {
+		$('.container')[0].appendChild(canvas)
+	});
+});
+</script>
+</body>
+</html>

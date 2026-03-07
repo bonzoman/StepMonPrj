@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 언더라이팅 CS평가 | 설계(개인/업무/영업) | 가입설계 | 자동차보험 | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>언더라이팅 평가</h1>
+			<button type="button" data-btn="pop-close">언더라이팅 평가 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단문구] -->
+			<!-- ######################### -->
+			<div class="tit-section3">
+				<p>심의 받으신 해당 건에 대한<br>만족도 평가해주세요.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [입력영역] 만족도평가 -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>심의 받으신 해당 건에 대한 만족도 평가를 위해 아래 해당하는 항목에 체크해주세요.</legend>
+
+				<!-- ### 만족도 선택 ### -->
+				<div class="label-t1 t1">
+					<input type="radio" name="form-radio-star" title="매우 불만족">
+					<span><i>매우 불만족</i></span>
+					<input type="radio" name="form-radio-star" title="불만족">
+					<span>불만족</span>
+					<input type="radio" name="form-radio-star" title="보통" checked>
+					<span>보통</span>
+					<input type="radio" name="form-radio-star" title="만족">
+					<span>만족</span>
+					<input type="radio" name="form-radio-star" title="매우 만족">
+					<span><i>매우 만족</i></span>
+				</div>
+
+				<!-- ### 불만족 사유 선택 ### -->
+				<!-- [CASE] 만족도 평가에서 매우불만족/불만족 일 경우만 노출 -->
+				<dl class="form t1 line2 none" id="example1"> <!-- [D] 별점 노출 예시 하단 스크립트 참고 : 클래스명(none)로 제어 : ID값은 변경 필요 -->
+					<dt>불만족 사유를 체크해주세요.</dt>
+					<dd>
+						<div class="label-btn4">
+							<!-- // -->
+							<label>
+								<input type="radio" name="bm1">
+								<span>신속하지 못한 업무처리</span>
+							</label>
+							<!-- // -->
+							<label>
+								<input type="radio" name="bm1">
+								<span>업무관련 지식 부족</span>
+							</label>
+							<!-- // -->
+							<label>
+								<input type="radio" name="bm1">
+								<span>불친절한 응대</span>
+							</label>
+							<!-- // -->
+							<label>
+								<input type="radio" name="bm1">
+								<span>불필요한 자료 요구</span>
+							</label>
+							<!-- // -->
+							<label>
+								<input type="radio" name="bm1">
+								<span>기준 및 제도 등 업무지식 부족</span>
+							</label>
+							<!-- // -->
+						</div>
+					</dd>
+				</dl>
+
+				<!-- ### 사유작성 ### -->
+				<div class="form"><textarea class="textarea" rows="5" placeholder="자동차 인수심의에 대한 &#10;제안, 건의하실 사항이 있으면 기술해주세요."></textarea></div>
+				<!-- ### // ### -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<script>
+//<!--
+	/* 샘플 : 매우불만족/불만족 선택 시 사유 노출 */
+	$(document).on('change','.label-t1 input[type="radio"]',function(){
+		if($(this).index() < 4){
+			$('#example1').removeClass('none');
+		}else{
+			$('#example1').addClass('none');
+		}
+	});
+//-->
+</script>
+<!-- ################################################### -->
+</body>
+</html>

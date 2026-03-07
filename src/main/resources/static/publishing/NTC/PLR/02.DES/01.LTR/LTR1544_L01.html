@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 코칭의뢰 중단 | 장기 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] ### -->
+<!-- ################################################### -->
+<div id="uiPOPLTR0000L01" class="pop-mes2" role="alertdialog" data-popmodal="true">
+	<dl>
+		<dt>코칭의뢰 중단</dt>
+		<dd>작성 중 내용이 있어요.<br>코칭 의뢰를 중단할까요?</dd>
+		<dd class="area-action">
+			<button type="button" class="btn-action" data-btn="pop-close">아니오</button>
+			<button type="button" class="btn-action c1">예</button>
+		</dd>
+	</dl>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPLTR0000L01',{
+		callback_after:function(){
+			ui.alert('닫기 이벤트');
+		}
+	});
+
+	//레이어팝업 강제오픈
+	$('#uiPOPLTR0000L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

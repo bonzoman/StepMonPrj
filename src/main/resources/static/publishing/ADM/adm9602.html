@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>상세보기 | 리포트 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+
+
+<!-- 하이차트 라이브러리 -->
+<link rel="stylesheet" href="../resource/css/content_chart.css">
+<script src="../resource/js/chart/highcharts.js"></script>
+<script src="../resource/js/chart/data.js"></script>
+
+<!-- 차트 솔리드 게이지용 js 모듈 -->
+<script src="../resource/js/chart/highcharts-more.js"></script>
+<script src="../resource/js/chart/solid-gauge.js"></script>
+
+<!-- 차트 Heat Map 모듈 -->
+<script src="../resource/js/chart/heatmap.js"></script>
+
+<!-- 차트 Large tree map -->
+<script src="../resource/js/chart/treemap.js"></script>
+
+</head>
+<body>
+
+<div id="popup">
+	<div class="pop-header">
+		<h1>화면 조회수</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="report-wrap">
+
+			<div class="search-condition">
+				<span>강남사업단</span>
+				<span>강1지점</span>
+				<span>기준일자 2022.02.22 ~ 2022.02.28</span>
+			</div>
+			<div class="data">
+				<div id="activityChart1" data-chart="Basic-Line4"></div>
+				<script>
+					Highcharts.chart("activityChart1",{
+						chart:{
+							type:"line",
+							marginLeft:20,
+							height:'350'
+						},
+						title:null,
+						xAxis:{
+							categories:["2일","3일","4일","5일","6일","7일","8일","9일","10일","11일","12일"],
+						},
+						yAxis:{
+							title: null,
+							opposite: true,
+							labels: {
+								formatter: function() {
+									return this.value;
+								}
+							}
+						},
+						legend:{
+							enabled:false
+						},
+						series:[
+							{
+								name:'화면 조회 수',
+								data:[
+									5000,2600,1400,1800,6100,2500,1800,2600,3700,4000,4500
+								]
+							}
+						]
+					});
+
+
+				</script>
+			</div>
+			<div class="data-table1">
+				<table>
+					<colgroup>
+						<col style="width:20%;">
+						<col>
+						<col>
+						<col style="width:20%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">일자</th>
+							<th scope="col">화면 조회수</th>
+							<th scope="col">활용 화면수</th>
+							<th scope="col">화면당 평균 체류시간</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>05.02</td>
+							<td>10,111</td>
+							<td>10,111</td>
+							<td>22:22:22</td>
+						</tr>
+						<tr>
+							<td>05.02</td>
+							<td>10,111</td>
+							<td>10,111</td>
+							<td>22:22:22</td>
+						</tr>
+						<tr>
+							<td>05.02</td>
+							<td>10,111</td>
+							<td>10,111</td>
+							<td>22:22:22</td>
+						</tr>
+						<tr>
+							<td>05.02</td>
+							<td>10,111</td>
+							<td>10,111</td>
+							<td>22:22:22</td>
+						</tr>
+						<tr>
+							<td>05.02</td>
+							<td>10,111</td>
+							<td>10,111</td>
+							<td>22:22:22</td>
+						</tr>
+						<tr>
+							<td>05.02</td>
+							<td>10,111</td>
+							<td>10,111</td>
+							<td>22:22:22</td>
+						</tr>
+						<tr>
+							<td>05.02</td>
+							<td>10,111</td>
+							<td>10,111</td>
+							<td>22:22:22</td>
+						</tr>
+						<tr>
+							<td>05.02</td>
+							<td>10,111</td>
+							<td>10,111</td>
+							<td>22:22:22</td>
+						</tr>
+						<tr>
+							<td>05.02</td>
+							<td>10,111</td>
+							<td>10,111</td>
+							<td>22:22:22</td>
+						</tr>
+						<tr>
+							<td>05.02</td>
+							<td>10,111</td>
+							<td>10,111</td>
+							<td>22:22:22</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="paging">
+				<div class="btns1">
+					<button type="button" class="btn-action c3">엑셀 다운로드</button>
+				</div>
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c2">닫기</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]실손담보 중복조회 | 설계(개인/업무/영업) | 가입설계 | 자동차보험 | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>실손담보 중복조회</h1>
+			<button type="button" data-btn="pop-close">실손담보 중복조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [유의사항] -->
+			<!-- ######################### -->
+			<div class="mes-info2 box">
+				<p>기타 실손담보 다른 계약이 존재합니다.<br>고객에게 안내 및 동의서를 발송해주세요.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [가입계약 목록] -->
+			<!-- ######################### -->
+			<div class="info-data2 line">
+				<ul>
+					<!-- // -->
+					<li>
+						<!-- [가입회사] -->
+						<strong class="tit">가입회사</strong>
+						<!-- [계약번호] -->
+						<div class="info"><span>계약번호</span></div>
+						<!-- [정보] -->
+						<div class="info-con1 w1">
+							<dl>
+								<dt>무보험 자동차에 의한 상해</dt>
+								<dd>
+									<strong>가입</strong>
+									<strong>미가입</strong>
+									<strong class="txt-c1">중복</strong>
+								</dd>
+							</dl>
+							<dl>
+								<dt>다른자동차 운전</dt>
+								<dd><strong>미가입</strong></dd>
+							</dl>
+							<dl>
+								<dt>다른자동차 손해</dt>
+								<dd><strong>미가입</strong></dd>
+							</dl>
+							<dl>
+								<dt>변호사 선임비용</dt>
+								<dd><strong>미가입</strong></dd>
+							</dl>
+							<dl>
+								<dt>형사합의금</dt>
+								<dd><strong>가입</strong></dd>
+							</dl>
+							<dl>
+								<dt>벌금</dt>
+								<dd><strong>가입</strong></dd>
+							</dl>
+							<dl>
+								<dt>보험기간</dt>
+								<dd>2020.03.01~2023.03.01</dd>
+							</dl>
+						</div>
+						<!-- // -->
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">매리츠화재</strong>
+						<div class="info"><span>12345-123</span></div>
+						<div class="info-con1 w1">
+							<dl>
+								<dt>무보험 자동차에 의한 상해</dt>
+								<dd><strong class="txt-c1">중복</strong></dd>
+							</dl>
+							<dl>
+								<dt>다른자동차 운전</dt>
+								<dd><strong class="txt-c1">중복</strong></dd>
+							</dl>
+							<dl>
+								<dt>다른자동차 손해</dt>
+								<dd><strong class="txt-c1">중복</strong></dd>
+							</dl>
+							<dl>
+								<dt>변호사 선임비용</dt>
+								<dd><strong>미가입</strong></dd>
+							</dl>
+							<dl>
+								<dt>형사합의금</dt>
+								<dd><strong>미가입</strong></dd>
+							</dl>
+							<dl>
+								<dt>벌금</dt>
+								<dd><strong>미가입</strong></dd>
+							</dl>
+							<dl>
+								<dt>보험기간</dt>
+								<dd>2020.03.01~2023.03.01</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">롯데손해보험</strong>
+						<div class="info"><span>LA202103011493000</span></div>
+						<div class="info-con1 w1">
+							<dl>
+								<dt>무보험 자동차에 의한 상해</dt>
+								<dd><strong class="txt-c1">중복</strong></dd>
+							</dl>
+							<dl>
+								<dt>다른자동차 운전</dt>
+								<dd><strong class="txt-c1">중복</strong></dd>
+							</dl>
+							<dl>
+								<dt>다른자동차 손해</dt>
+								<dd><strong class="txt-c1">중복</strong></dd>
+							</dl>
+							<dl>
+								<dt>변호사 선임비용</dt>
+								<dd><strong>미가입</strong></dd>
+							</dl>
+							<dl>
+								<dt>형사합의금</dt>
+								<dd><strong>미가입</strong></dd>
+							</dl>
+							<dl>
+								<dt>벌금</dt>
+								<dd><strong>미가입</strong></dd>
+							</dl>
+							<dl>
+								<dt>보험기간</dt>
+								<dd>2020.03.01~2023.03.01</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- 더보기(현재페이지/총페이지) -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(1/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">모바일 실손중복동의</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

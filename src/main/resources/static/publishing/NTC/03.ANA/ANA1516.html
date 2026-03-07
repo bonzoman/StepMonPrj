@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>전문가 상담신청 | 셀프 보장분석</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- 2022-12-23 : 카톡브라우저 대응 수정 -->
+<main id="wrapper" style="overflow-y:auto;position:fixed;left:0;top:0;width:100%;height:100%;z-index:50;">
+<!-- // 2022-12-23 : 카톡브라우저 대응 수정 -->
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>롯데손해보험 보장분석</h1>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단 타이틀] -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<h2 class="tit">전문가 상담신청</h2>
+			<p class="mes-t1 t1">상담받고 싶은 내용을 남겨주세요.<br>보험전문가가 직접 전화나 이메일(요청 시)로 상담해드립니다.</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [상담신청] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend class="tit">상담신청</legend>
+
+			<dl class="form">
+				<dt>휴대폰번호 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="input-wrap1">
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">앞자리 선택</span>
+								<span data-select="text" data-value="1">010</span>
+							</button>
+							<div class="list">
+								<div data-label="앞자리 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="1"><span>010</span></label>
+										<label><input type="radio" name="selectOpeion1" value="2"><span>011</span></label>
+										<label><input type="radio" name="selectOpeion1" value="3"><span>016</span></label>
+										<label><input type="radio" name="selectOpeion1" value="4"><span>017</span></label>
+										<label><input type="radio" name="selectOpeion1" value="5"><span>019</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<input type="tel" class="text" title="휴대폰번호" placeholder="숫자만 입력해주세요.">
+					</div>
+				</dd>
+			</dl>
+
+			<dl class="form">
+				<dt>이메일</dt>
+				<dd>
+					<!-- // -->
+					<input type="text" class="text" title="아이디 입력" placeholder="아이디를 입력해주세요.">
+					<!-- // -->
+					<div class="select-wrap" data-autoset="select" data-callback="uiFunction2"> <!-- [D] 하단 uiFunction2(); 참고 : 함수명 변경 필요 -->
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">선택해주세요.</span>
+							<span data-select="text"></span>
+						</button>
+						<div class="list">
+							<div data-label="이메일 주소">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion2" value="1"><span>직접입력</span></label>
+									<label><input type="radio" name="selectOpeion2" value="2"><span>naver.com</span></label>
+									<label><input type="radio" name="selectOpeion2" value="3"><span>kakao.com</span></label>
+									<label><input type="radio" name="selectOpeion2" value="4"><span>gmail.com</span></label>
+									<label><input type="radio" name="selectOpeion2" value="5"><span>lotteins.co.kr</span></label>
+									<label><input type="radio" name="selectOpeion2" value="6"><span>hanmail.net</span></label>
+									<label><input type="radio" name="selectOpeion2" value="7"><span>daum.net</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<!-- // -->
+					<div class="ui-tabcon" data-select-con="3">
+						<input type="text" class="text" placeholder="도메인 주소를 입력해주세요.">
+					</div>
+					<!-- // -->
+				</dd>
+			</dl>
+
+			<dl class="form">
+				<dt>안내방법 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="label-check1 col2">
+						<label>
+							<input type="checkbox">
+							<span>휴대폰</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>이메일</span>
+						</label>
+					</div>
+				</dd>
+			</dl>
+
+			<dl class="form">
+				<dt>예약일시 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="input-date1 text">
+						<span>
+							<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+							<input type="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.02.18" readonly>
+						</span>
+					</div>
+					<div class="input-wrap1">
+						<div class="select-wrap w100" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">시간 선택</span>
+								<span data-select="text" data-value="1">09시</span>
+							</button>
+							<div class="list">
+								<div data-label="시간 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion3" value="1"><span>09시</span></label>
+										<label><input type="radio" name="selectOpeion3" value="2"><span>10시</span></label>
+										<label><input type="radio" name="selectOpeion3" value="3"><span>11시</span></label>
+										<label><input type="radio" name="selectOpeion3" value="4"><span>12시</span></label>
+										<label><input type="radio" name="selectOpeion3" value="5"><span>13시</span></label>
+										<label><input type="radio" name="selectOpeion3" value="6"><span>14시</span></label>
+										<label><input type="radio" name="selectOpeion3" value="7"><span>15시</span></label>
+										<label><input type="radio" name="selectOpeion3" value="8"><span>16시</span></label>
+										<label><input type="radio" name="selectOpeion3" value="9"><span>17시</span></label>
+										<label><input type="radio" name="selectOpeion3" value="10"><span>18시</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="select-wrap w100" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">분 선택</span>
+								<span data-select="text" data-value="1">00분</span>
+							</button>
+							<div class="list">
+								<div data-label="분 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion4" value="1"><span>00분</span></label>
+										<label><input type="radio" name="selectOpeion4" value="2"><span>10분</span></label>
+										<label><input type="radio" name="selectOpeion4" value="3"><span>20분</span></label>
+										<label><input type="radio" name="selectOpeion4" value="4"><span>30분</span></label>
+										<label><input type="radio" name="selectOpeion4" value="5"><span>40분</span></label>
+										<label><input type="radio" name="selectOpeion4" value="6"><span>50분</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</dd>
+			</dl>
+
+			<dl class="form">
+				<dt>내용 <em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="textarea">
+						<textarea cols="50" rows="3" title="등록내용" placeholder="1,000자 이내로 입력해주세요."></textarea>
+						<span class="util2"><strong>0</strong>/1,000자</span>
+					</div>
+				</dd>
+			</dl>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action">취소</button>
+			<button type="button" class="btn-action c1">신청</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	/* ******************************
+	* 샘플 : 이메일 선택 예시
+	* uiFunction2() 함수명 변경 필요
+	* data-select-con : 보여줄 컨텐츠
+	****************************** */
+	function uiFunction2(e){
+		if(e.val() == 1) $('[data-select-con="3"]').removeClass('ui-tabcon');
+		else $('[data-select-con="3"]').addClass('ui-tabcon');
+	}
+//-->
+</script>
+</body>
+</html>

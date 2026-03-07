@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 영업담당자 이행사항 확인 | 청약(개인/업무/영업) | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-18]	① 장기/자동차 한 페이지로 작업 : 장기 케이스 추가
+	*					② 문구변경 : 아니오 > 아니요
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>영업담당자 이행사항 확인</h1>
+			<button type="button" data-btn="pop-close">영업담당자 이행사항 확인 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [확인사항]  -->
+			<!-- ######################### -->
+			<div class="wrap-section">
+				<!-- # 안내문구 # -->
+				<div class="tit-section2 t1"><p>스마트폰청약 진행 전<br>아래 내용을 확인해주세요.</p></div>
+
+				<!-- # 필수 안내사항 확인여부 선택 # -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">고객에게 청약서, 상품설명서의 주요내용을 설명하셨습니까? <em class="icon-required2">필수</em></legend>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="radio1">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="radio1">
+							<span>아니요</span> <!-- [M 2022-08-18 ②] -->
+						</label>
+					</div>
+				</fieldset>
+
+				<!-- [M 2022-08-18 ①] 장기일 경우 노출 -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">고객에게 승환계약 여부에 따른 주요내용을 설명하셨습니까? <em class="icon-required2">필수</em></legend>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="radio1">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="radio1">
+							<span>아니요</span>
+						</label>
+					</div>
+				</fieldset>
+				<!-- // [M 22022-08-18 ①] -->
+
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">고객에게 계약 전 알릴의무에 대한 주요내용을 설명하셨습니까? <em class="icon-required2">필수</em></legend>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="radio2">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="radio2">
+							<span>아니요</span> <!-- [M 2022-08-18 ②] -->
+						</label>
+					</div>
+				</fieldset>
+
+				<!-- [M 2022-08-18 ①] 장기일 경우 노출 -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">고객에게 해지환급금 지급유형에 대한 주요내용을 설명하셨습니까? <em class="icon-required2">필수</em></legend>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="radio1">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="radio1">
+							<span>아니요</span>
+						</label>
+					</div>
+				</fieldset>
+				<!-- // [M 22022-08-18 ①] -->
+				<!-- # // # -->
+
+				<!-- # 안내사항 # -->
+				<div class="mes-info2 box">
+					<p>
+						담당LP 본인은 계약자에게 해당 보험상품의 주요내용에 대해 충분히 설명했음을 확인합니다.
+						또한 전자서명을 완료한 후 청약서 부본 및 약관을 계약자에게 전달할 것을 확인합니다.
+						이에 대한 모든 책임은 본인에게 있음을 확인합니다.
+					</p>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [대면설면 정보]  -->
+			<!-- ######################### -->
+			<div class="wrap-section3">
+				<!-- # 안내문구 # -->
+				<div class="tit-section2 t1"><p>고객에게 설명을 진행한 방법 및<br>대면일시, 장소 정보를 입력해주세요</p></div>
+
+				<!-- # 정보입력영역 # -->
+				<fieldset class="form-wrap1">
+					<legend>대면일시, 장소 정보 입력</legend>
+
+					<!-- # 설명방법 # -->
+					<dl class="form">
+						<dt>설명방법 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="설명방법">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion1" value="selectOpeion1-1"><span>출력물자료</span></label>
+											<label><input type="radio" name="selectOpeion1" value="selectOpeion1-2"><span>PC(노트북)자료</span></label>
+											<label><input type="radio" name="selectOpeion1" value="selectOpeion1-3"><span>모바일자료</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<div class="validation">설명방법을 선택해주세요.</div>
+
+							<!-- [CASE] 오류 -->
+							<div class="select-wrap invalid" data-autoset="select"><!-- [D] 오류시 : 클래스명 invalid 추가 -->
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="설명방법">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion10" value="selectOpeion1-1"><span>출력물자료</span></label>
+											<label><input type="radio" name="selectOpeion10" value="selectOpeion1-2"><span>PC(노트북)자료</span></label>
+											<label><input type="radio" name="selectOpeion10" value="selectOpeion1-3"><span>모바일자료</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<div class="validation">설명방법을 선택해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+					<!-- # 대면일시 # -->
+					<dl class="form">
+						<dt>대면일시 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="input-date1 text">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+									<input type="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.08.01" readonly>
+								</span>
+							</div>
+							<!-- // -->
+							<div class="input-wrap1">
+								<!-- [시간선택] -->
+								<div class="select-wrap w100" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="true">
+										<span data-select="title">시간 선택</span>
+										<span data-select="text"></span>
+									</button>
+									<div class="list">
+										<div data-label="대면일시 시간">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-1"><span>9시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-2"><span>10시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-3"><span>11시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-4"><span>12시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-5"><span>13시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-6"><span>14시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-7"><span>15시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-8"><span>16시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-9"><span>17시</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion2-10"><span>18시</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- [분선택] -->
+								<div class="select-wrap w100" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="true">
+										<span data-select="title">분 선택</span>
+										<span data-select="text"></span>
+									</button>
+									<div class="list">
+										<div data-label="대면일시 분">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion3" value="selectOpeion3-1"><span>00분</span></label>
+												<label><input type="radio" name="selectOpeion3" value="selectOpeion3-2"><span>10분</span></label>
+												<label><input type="radio" name="selectOpeion3" value="selectOpeion3-3"><span>20분</span></label>
+												<label><input type="radio" name="selectOpeion3" value="selectOpeion3-4"><span>30분</span></label>
+												<label><input type="radio" name="selectOpeion3" value="selectOpeion3-5"><span>40분</span></label>
+												<label><input type="radio" name="selectOpeion3" value="selectOpeion3-6"><span>50분</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<div class="validation">대면일시 시간을 선택해주세요.</div>
+								<!-- // -->
+							</div>
+
+							<!-- [CASE] 오류 -->
+							<div class="input-wrap1">
+								<!-- [시간선택] -->
+								<div class="select-wrap w100 invalid" data-autoset="select"> <!-- [D] 오류시 : 클래스명 invalid 추가 -->
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="true">
+										<span data-select="title">대면일시 시간</span>
+										<span data-select="text" data-value="1">시간 선택</span>
+									</button>
+									<div class="list">
+										<div data-label="대면일시 시간">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion20" value="selectOpeion2-1"><span>9시</span></label>
+												<label><input type="radio" name="selectOpeion20" value="selectOpeion2-2"><span>10시</span></label>
+												<label><input type="radio" name="selectOpeion20" value="selectOpeion2-3"><span>11시</span></label>
+												<label><input type="radio" name="selectOpeion20" value="selectOpeion2-4"><span>12시</span></label>
+												<label><input type="radio" name="selectOpeion20" value="selectOpeion2-5"><span>13시</span></label>
+												<label><input type="radio" name="selectOpeion20" value="selectOpeion2-6"><span>14시</span></label>
+												<label><input type="radio" name="selectOpeion20" value="selectOpeion2-7"><span>15시</span></label>
+												<label><input type="radio" name="selectOpeion20" value="selectOpeion2-8"><span>16시</span></label>
+												<label><input type="radio" name="selectOpeion20" value="selectOpeion2-9"><span>17시</span></label>
+												<label><input type="radio" name="selectOpeion20" value="selectOpeion2-10"><span>18시</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- [분선택] -->
+								<div class="select-wrap w100 invalid" data-autoset="select"> <!-- [D] 오류시 : 클래스명 invalid 추가 -->
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="true">
+										<span data-select="title">대면일시 분</span>
+										<span data-select="text" data-value="1">분 선택</span>
+									</button>
+									<div class="list">
+										<div data-label="대면일시 분">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion30" value="selectOpeion3-1"><span>00분</span></label>
+												<label><input type="radio" name="selectOpeion30" value="selectOpeion3-2"><span>10분</span></label>
+												<label><input type="radio" name="selectOpeion30" value="selectOpeion3-3"><span>20분</span></label>
+												<label><input type="radio" name="selectOpeion30" value="selectOpeion3-4"><span>30분</span></label>
+												<label><input type="radio" name="selectOpeion30" value="selectOpeion3-5"><span>40분</span></label>
+												<label><input type="radio" name="selectOpeion30" value="selectOpeion3-6"><span>50분</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- // -->
+								<div class="validation">대면일시 시간을 선택해주세요.</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- # 대면장소 # -->
+					<dl class="form">
+						<dt>대면장소 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="대면장소">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion4" value="selectOpeion4-1"><span>카페</span></label>
+											<label><input type="radio" name="selectOpeion4" value="selectOpeion4-2"><span>사무실</span></label>
+											<label><input type="radio" name="selectOpeion4" value="selectOpeion4-3"><span>자택</span></label>
+											<label><input type="radio" name="selectOpeion4" value="selectOpeion4-4"><span>음식점</span></label>
+											<label><input type="radio" name="selectOpeion4" value="selectOpeion4-5"><span>기타</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<div class="validation">대면장소를 선택해주세요.</div>
+
+							<!-- [CASE] 오류 -->
+							<div class="select-wrap invalid" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="대면장소">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion40" value="selectOpeion4-1"><span>카페</span></label>
+											<label><input type="radio" name="selectOpeion40" value="selectOpeion4-2"><span>사무실</span></label>
+											<label><input type="radio" name="selectOpeion40" value="selectOpeion4-3"><span>자택</span></label>
+											<label><input type="radio" name="selectOpeion40" value="selectOpeion4-4"><span>음식점</span></label>
+											<label><input type="radio" name="selectOpeion40" value="selectOpeion4-5"><span>기타</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<div class="validation">대면장소를 선택해주세요.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+					<!-- # 담당LP # -->
+					<dl class="form">
+						<dt>담당LP</dt>
+						<dd>
+							<div class="info-data3 info">
+								<div class="data-info1">
+									<span class="img"><img src="../../../resource/img/temp/@img_user3.png" alt=""></span>
+									<span><strong>하다미</strong><span>154674</span></span>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

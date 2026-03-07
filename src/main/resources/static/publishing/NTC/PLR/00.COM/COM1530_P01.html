@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 설문팝업 | 메인</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-25]	1. 설문조서 타이틀에 (익명) 추가 후 주석처리
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1><!-- (익명) --> 설문조사</h1><!-- [M 2022-10-25] 설문조서 타이틀에 (익명) 추가 후 주석처리 -->
+			<button type="button" data-btn="pop-close">설문조사 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단문구] -->
+			<!-- ######################### -->
+			<div class="tit-section2 t1">
+				<p>마스앱을 사용하시며 느끼신 부분을 체크해주세요!</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap4 t1">
+				<legend>설문조사 입력</legend>
+
+				<!-- ### 항목 하나 ### -->
+				<dl class="form">
+					<dt>객관식유형_단일선택</dt>
+					<dd>
+						<div class="label-btn1 block">
+							<label>
+								<input type="radio" name="uiFormRadio">
+								<span>관리자등록 선택지1</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio">
+								<span>관리자등록 선택지2</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio">
+								<span>기타</span>
+							</label>
+							<!-- [D] 기타 선택시 노출 -->
+							<input type="text" class="text" title="직접입력">
+							<label>
+								<input type="radio" name="uiFormRadio">
+								<span>관리자등록 선택지3</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- ### 항목 하나 ### -->
+				<dl class="form">
+					<dt>객관식유형_복수선택</dt>
+					<dd>
+						<div class="label-btn1 block">
+							<label>
+								<input type="checkbox">
+								<span>관리자등록 선택지1</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>관리자등록 선택지2</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>관리자등록 선택지3</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>기타</span>
+							</label>
+						</div>
+						<!-- [D] 기타 선택시 노출 -->
+						<input type="text" class="text" title="직접입력">
+					</dd>
+				</dl>
+
+				<!-- ### 항목 하나 ### -->
+				<dl class="form">
+					<dt>주관식</dt>
+					<dd>
+						<div class="textarea">
+							<textarea cols="50" rows="3" title="설문내용" placeholder="자유롭게 의견을 작성해주세요."></textarea>
+							<span class="util2"><strong>0</strong>/1,000자</span>
+						</div>
+					</dd>
+				</dl>
+				<!-- ### // ### -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">설문완료</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 도움제공 신청 | 상세 | 공동청약</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-16]	① textarea 스크롤 가능하게 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>도움제공 신청</h1>
+			<button type="button" data-btn="pop-close">도움제공 신청 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단문구] -->
+			<!-- ######################### -->
+			<div class="tit-section2 t1">
+				<p>도움을 제공할 수 있는 내용을<br>작성해주세요.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>도움제공 신청 내용 입력</legend>
+
+				<dl class="form">
+					<dt>본인 소개 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- 2022-12-13 validation -->
+						<div class="textarea t2"><textarea cols="50" rows="3" title="등록내용" placeholder="설계사님의 소개를 적어주세요" aria-invalid="true"></textarea></div>
+						<div class="validation">오류내용 입력</div>
+						<!-- //2022-12-13 validation -->
+					</dd><!-- [M 2022-11-16] textarea 스크롤 가능하게 수정 -->
+				</dl>
+
+				<dl class="form">
+					<dt>주력 상품군(최대 2개까지) <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- 전체 -->
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<span>상품 전체</span>
+							</label>
+						</div>
+
+						<!-- 항목 -->
+						<div class="label-check2 col2">
+							<label>
+								<input type="checkbox">
+								<span>질병/상해</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>자녀</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>운전자</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>재물</span>
+							</label>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- 2022-12-26 기여율 삭제 -->
+				<!-- <dl class="form">
+					<dt>기여율 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>작성</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1" checked>
+								<span>협의희망</span>
+							</label>
+						</div>
+
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" disable>
+								<span data-select="title">도와줄게요 (본인)</span>
+								<span data-select="text"></span>
+							</button>
+							<div class="list">
+								<div data-label="기여율">
+									<div class="option">
+										<label><input type="radio" name="select1" value="01"><span>10%</span></label>
+										<label><input type="radio" name="select1" value="02"><span>20%</span></label>
+										<label><input type="radio" name="select1" value="03"><span>30%</span></label>
+										<label><input type="radio" name="select1" value="04"><span>40%</span></label>
+										<label><input type="radio" name="select1" value="05"><span>50%</span></label>
+										<label><input type="radio" name="select1" value="06"><span>60%</span></label>
+										<label><input type="radio" name="select1" value="07"><span>70%</span></label>
+										<label><input type="radio" name="select1" value="08"><span>80%</span></label>
+										<label><input type="radio" name="select1" value="09"><span>90%</span></label>
+										<label><input type="radio" name="select1" value="10"><span>100%</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" disable>
+								<span data-select="title">도와주세요</span>
+								<span data-select="text"></span>
+							</button>
+							<div class="list">
+								<div data-label="기여율">
+									<div class="option">
+										<label><input type="radio" name="select2" value="01"><span>10%</span></label>
+										<label><input type="radio" name="select2" value="02"><span>20%</span></label>
+										<label><input type="radio" name="select2" value="03"><span>30%</span></label>
+										<label><input type="radio" name="select2" value="04"><span>40%</span></label>
+										<label><input type="radio" name="select2" value="05"><span>50%</span></label>
+										<label><input type="radio" name="select2" value="06"><span>60%</span></label>
+										<label><input type="radio" name="select2" value="07"><span>70%</span></label>
+										<label><input type="radio" name="select2" value="08"><span>80%</span></label>
+										<label><input type="radio" name="select2" value="09"><span>90%</span></label>
+										<label><input type="radio" name="select2" value="10"><span>100%</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl> -->
+				<!-- //2022-12-26 기여율 삭제 -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">신청</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

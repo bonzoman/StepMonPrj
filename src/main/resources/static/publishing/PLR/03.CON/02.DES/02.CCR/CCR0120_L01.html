@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title> [L] 가능한 업무 | 설계 | 가입설계 | 자동차보험 | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-31]	① 메뉴 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<div class="area-action t1" data-sticky="bottom">
+        <button type="button" aria-controls="uiPOPCCR0120L01" class="btn-action simple ic4">메뉴 더보기</button> <!-- [레이어팝업 호출 버튼] -->
+        <button type="button" class="btn-action c1">보험료계산</button>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 가능한 업무 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCCR0120L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>가능한 업무</h1>
+			<button type="button" data-btn="pop-close">가능한 업무 닫기</button>
+		</header>
+		<div class="content">
+			<div class="label-check2">
+				<!-- 2022-10-31 메뉴 변경 -->
+				<label>
+					<input type="radio" name="form-radio1" checked>
+					<span>청약서류발송</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>원수수납</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>전자청약</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>이미지등록</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>업무요청</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>가상계좌</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>메모관리</span>
+				</label>
+				<!-- //2022-10-31 메뉴 변경 -->
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1" >확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCCR0120L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPCCR0120L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

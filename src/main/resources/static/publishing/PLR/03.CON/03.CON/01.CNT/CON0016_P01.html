@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 부활여부 | [T] 계약기본 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>부활이력조회</h1>
+			<button type="button" data-btn="pop-close">부활이력조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 계약정보 -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+				<div class="info">
+					<dl>
+						<dt>증권번호</dt>
+						<dd>LA123456789</dd>
+					</dl>
+					<!-- [계약상태] -->
+					<i class="icon-state2 ic3">정상</i>
+					<i class="icon-state2 ic2">해지</i>
+					<i class="icon-state2 ic2">해약</i>
+					<i class="icon-state2 ic2">철회</i>
+					<i class="icon-state2 ic2">취소</i>
+					<i class="icon-state2 ic7">불능</i>
+					<i class="icon-state2 ic7">소멸</i>
+					<i class="icon-state2 ic1">만기</i>
+					<!-- // -->
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [부활이력목록] -->
+			<!-- ######################### -->
+			<div class="area-toggle1" data-autoset="toggle">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<strong>부활구분명</strong>
+							<dl class="data2">
+								<dt>기준일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<button type="button" data-toggle="btn" aria-expanded="true">부활구분명 상세보기</button>
+						</div>
+						<div data-toggle="content" class="info-con1 w1">
+							<dl>
+								<dt>부활입력일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<dl>
+								<dt>부활원인</dt>
+								<dd>-</dd>
+							</dl>
+							<dl>
+								<dt>부활회차</dt>
+								<dd>00회~00회</dd>
+							</dl>
+							<dl>
+								<dt>부활보험료</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>연체이자</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>부활 후 최종 월도</dt>
+								<dd>0000.00</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<strong>정상(임시)부활</strong>
+							<dl class="data2">
+								<dt>기준일</dt>
+								<dd>2011.03.02</dd>
+							</dl>
+							<button type="button" data-toggle="btn" aria-expanded="false">정상(임시)부활 상세보기</button>
+						</div>
+						<div data-toggle="content" class="info-con1 w1">
+							<dl>
+								<dt>부활입력일</dt>
+								<dd>2011.03.02</dd>
+							</dl>
+							<dl>
+								<dt>부활원인</dt>
+								<dd>-</dd>
+							</dl>
+							<dl>
+								<dt>부활회차</dt>
+								<dd>39회~41회</dd>
+							</dl>
+							<dl>
+								<dt>부활보험료</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>연체이자</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>부활 후 최종 월도</dt>
+								<dd>2011.03</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- 더보기 (현재페이지/총페이지) -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

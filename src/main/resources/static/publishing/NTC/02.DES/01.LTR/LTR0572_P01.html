@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 다중이용업소 | 담보추가속성 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>다중이용업소</h1>
+			<button type="button" data-btn="pop-close">다중이용업소 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- // -->
+			<div class="wrap-section1">
+				<section>
+					<h2 class="tit-sub1">다중이용업소란?</h2>
+					<p class="mes-t3">‘불특정 다수인이 이용하는 업종 중 화재 등 재난 발생 시 생명, 신체, 재산상의 피해가 발생할 우려가 높은 것으로 대통령령으로 정하는 영업(다중이용업)’을 하는 다음 중 어느 하나에 해당하는 업종을 말합니다.</p>
+				</section>
+
+				<section>
+					<h3 class="tit-sub2">관련법령</h3>
+					<ul class="txt-bul1 t3">
+						<li><em>「다중이용업소의 안전관리에 관한 특별법」제2조</em></li>
+					</ul>
+				</section>
+
+                <section>
+					<h3 class="tit-sub2">가입대상업종</h3>
+					<dl class="txt-bul1 t3">
+						<dt class="hide">가입대상업종</dt>
+						<dd><em>휴게음식점영업, 제과점영업, 일반음식점영업</em>
+                            <ul class="txt-mark2">
+                                <li>바닥면적의 합계가 100㎡ 이상인 것</li>
+                                <li>영업장이 지하층인 경우 바닥면적의 합계가 66㎡ 이상인 것</li>
+                            </ul>
+                            <ul class="txt-bul3">
+                                <li>단, 영업장이 지상 1층 이거나 지상과 직접 접할 때, 그 영업장의 주된 출입구가 외부 지면과 직접 연결될 경우 제외</li>
+                            </ul>
+                        </dd>
+						<dd><em>단란주점영업, 유흥주점영업</em>
+                            <ul>
+                                <li>층별, 면적 관계 없이 다중이용업소</li>
+                            </ul>
+                        </dd>
+                        <dd><em>영화상영관, 비디오물감상실업, 비디오물소극장업, 복합영상물제공업</em>
+                            <ul>
+                                <li>층별, 면적 관계 없이 다중이용업소</li>
+                            </ul>
+                        </dd>
+                        <dd><em>학원</em>
+                            <ul class="txt-mark2">
+                                <li>수용인원이 300인 이상인 것</li>
+                                <li>수용인원이 100인 이상 300인 미만이되 다음의 하나에 해당하는 것</li>
+                            </ul>
+                            <ul class="txt-bul2">
+                                <li>한 건축물에 학원과 기숙사가 함께 있는 학원</li>
+                                <li>한 건출물에 학원이 둘 이상 있는 경우로, 수용인원이 300인 이상인 학원</li>
+                                <li>한 건축물에 다른 다중이용업과 학원이 함께 있는 경우</li>
+                            </ul>
+                        </dd>
+                        <dd><em>목욕장업</em>
+                            <ul class="txt-mark2">
+                                <li>일반목욕장업에서 수용인원이 100인 이상이고 찜질방 형태의 시설 및 설비를 갖춘 것</li>
+                                <li>찜질방 형태의 목욕장업</li>
+                            </ul>
+                        </dd>
+                        <dd><em>게임제공업, 인터넷컴퓨터 게임시설제공업, 복합유통게임제공업</em>
+                            <ul>
+                                <li>층별, 면적 관계없이 다중이용업소 </li>
+                            </ul>
+                            <ul class="txt-bul3">
+                                <li>단, 영업장이 지상 1층이거나 지상과 직접 접할 때, 그 영업장의 주된 출입구가 외부 지면과 직접 연결될 경우 제외</li>
+                            </ul>
+                        </dd>
+                        <dd><em>노래연습장업</em>
+                            <ul>
+                                <li>층별, 면적 관계없이 다중이용업소</li>
+                            </ul>
+                        </dd>
+                        <dd><em>산후조리업</em>
+                            <ul>
+                                <li>층별, 면적 관계없이 다중이용업소</li>
+                            </ul>
+                        </dd>
+                        <dd><em>고시원업</em>
+                            <ul>
+                                <li>층별, 면적 관계없이 다중이용업소</li>
+                            </ul>
+                        </dd>
+                        <dd><em>권총사격장</em>
+                            <ul>
+                                <li>층별, 면적 관계없이 다중이용업소</li>
+                            </ul>
+                        </dd>
+                        <dd><em>골프연습장업</em>
+                            <ul>
+                                <li>층별, 면적 관계 없이 다중이용업소 </li>
+                            </ul>
+                            <ul class="txt-bul3">
+                                <li>단, 실내에 별도의 구획실을 만들어 스크린, 영사기 등의 시설을 갖춘 것에 한정함</li>
+                            </ul>
+                        </dd>
+                        <dd><em>안마시술소</em>
+                            <ul>
+                                <li>층별, 면적 관계없이 다중이용업소</li>
+                            </ul>
+                        </dd>
+                        <dd><em>전화방업, 화상대화방업, 수면방업, 콜라텍업</em>
+                            <ul>
+                                <li>층별, 면적 관계없이 다중이용업소</li>
+                            </ul>
+                        </dd>
+                        <dd><em>방탈출카페, 키즈카페, 만화카페</em>
+                            <ul>
+                                <li>층별, 면적 관계없이 다중이용업소</li>
+                            </ul>
+                        </dd>
+					</dl>
+				</section>
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

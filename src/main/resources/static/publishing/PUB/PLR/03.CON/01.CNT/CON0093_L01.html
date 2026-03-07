@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L]고객안내 선택 | [T] 계약일반 | 계약상세 | 자동차 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="area-action t1" data-sticky="bottom">
+        <a href="#uiPOPCON0093L01" class="btn-action ic10 simple">고객안내</a> <!-- [D 레이어팝업 호출] -->
+        <a href="javascript:void(0);" class="btn-action c1">갱신설계</a>
+        <a href="javascript:void(0);" class="btn-action c1">계약변경</a>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 고객안내 선택 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCON0093L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>고객안내 선택</h1>
+			<button type="button" data-btn="pop-close">고객안내 선택 닫기</button>
+		</header>
+		<div class="content">
+			<div class="label-check2">
+				<label>
+					<input type="radio" name="form-radio1" checked>
+					<span>셀프배서</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>사진검증특약</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>서류발송(이미지등록)</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>업무요청</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1" >확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCON0093L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPCON0093L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

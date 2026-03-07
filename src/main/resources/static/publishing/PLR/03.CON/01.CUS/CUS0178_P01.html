@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 법인사업자 실제소유자 추가 | 고객정보등록 | 사업자고객등록 | 고객등록</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>법인사업자 실제소유자 추가</h1>
+			<button type="button" data-btn="pop-close">법인사업자 실제소유자 추가 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [정보입력] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>실제소유자 추가정보 입력</legend>
+
+				<!-- ### 항목 하나 ### -->
+				<dl class="form">
+					<dt>
+						실제 소유자 유형 <i class="icon-required2">필수</i>
+						<a href="#uiTOOLTIPINFO1" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">실제 소유자 유형 안내</a>
+					</dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택해주세요.</span>
+								<span data-select="text"></span>
+							</button>
+							<div class="list">
+								<div data-label="실제 소유자 유형 구분">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion" value="1"><span>25%이상 지분 소유자</span></label>
+										<label><input type="radio" name="selectOpeion" value="2"><span>실질적인 지배자</span></label>
+										<label><input type="radio" name="selectOpeion" value="3"><span>대표자</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- ### 항목 하나 ### -->
+				<dl class="form">
+					<dt>고객이름 <i class="icon-required2">필수</i></dt>
+					<dd><input type="text" class="text" title="고객이름" placeholder="고객이름을 입력해주세요."></dd>
+				</dl>
+
+				<!-- ### 항목 하나 ### -->
+				<dl class="form">
+					<dt>생년월일 <i class="icon-required2">필수</i></dt>
+					<dd><input type="tel" class="text" title="생년월일" placeholder="예) 19881027"></dd>
+				</dl>
+
+				<!-- ### 항목 하나 ### -->
+				<dl class="form ui-tabcon active" data-id="uiFormTabCon1">
+					<dt>지분율(%) <i class="icon-required2">필수</i></dt>
+					<dd>
+						<!-- [D] 실제 소유자 유형이 25%일 경우 활성화 -->
+						<input type="tel" class="text" title="지분율" placeholder="지분율(%)을 입력해주세요.">
+
+						<!-- [D] 실제 소유자 유형이 25%이 아닐 경우 비활성화 -->
+						<input type="tel" class="text" title="지분율" placeholder="25%이상 지분소유자만 가능합니다." readonly>
+					</dd>
+				</dl>
+
+				<!-- ### 항목 하나 ### -->
+				<dl class="form">
+					<dt>국적정보 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<!-- [CASE1] 국적찾기 후 -->
+						<div class="input-btn1">
+							<data class="text" data-label="국적찾기" value=""></data>
+							<button type="button" class="icon-com1 ic2">국적찾기</button>
+						</div>
+						<!-- [CASE2] 국적찾기 후 -->
+						<div class="input-btn1">
+							<data class="text" data-label="국적찾기" value="캐나다">캐나다</data>
+							<button type="button" class="icon-com1 ic2">국적찾기</button>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- ### 항목 하나 ### -->
+				<dl class="form">
+					<dt>요주의 인물 여부 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<!-- [CASE1] 조회 전 -->
+						<div class="input-wrap1">
+							<data class="text disabled" value="" data-label="인물조회를 진행해주세요."></data>
+							<button type="button" class="btn-sub1">조회</button>
+						</div>
+
+						<!-- [CASE2] 승인 -->
+						<div class="input-wrap1">
+							<data class="text disabled" value="승인" data-label="인물조회를 진행해주세요.">승인</data>
+							<button type="button" class="btn-sub1">조회</button>
+						</div>
+
+						<!-- [CASE3] 심사중 -->
+						<div class="input-wrap1">
+							<data class="text disabled" value="심사중" data-label="인물조회를 진행해주세요.">심사중</data>
+							<button type="button" class="btn-sub1">조회</button>
+						</div>
+
+						<!-- [CASE4] 오류 -->
+						<div class="input-wrap1 invalid">
+							<data class="text disabled" value="불인" data-label="인물조회를 진행해주세요." aria-invalid="true">불인</data> <!-- [D] 오류시 aria-invalid="true" 추가 -->
+							<button type="button" class="btn-sub1">조회</button>
+						</div>
+						<div class="validation">요주의 인물 여부를 통과하지 못한 인물입니다.</div>
+						<!-- // -->
+					</dd>
+				</dl>
+				<!-- ### // ### -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">등록</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+<!-- [툴팁내용] 실제 소유자 유형 -->
+<!-- ################################################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl class="txt-bul2">
+		<dt>※ 실소유자 유형</dt>
+		<dd>25% 이상 지분 소유자: 법인/법인사업자의 25% 이상 지분을 소유하고 있는 경우</dd>
+		<dd>실질적 지배자: 25% 이상 지분 소유자가 없거나 25% 이상 지분 소유자가 실소유자가 아니라고 의심되는 경우</dd>
+		<dd>대표자: 25% 이상 지분소유자와 실질적 지배자를 확인불가한 경우</dd>
+		<dd><button type="button" data-btn="pop-close">실제 소유자 유형 닫기</button></dd>
+	</dl>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

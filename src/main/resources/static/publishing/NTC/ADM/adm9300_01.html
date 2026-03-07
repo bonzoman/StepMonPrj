@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>리포트 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+
+
+<!-- 하이차트 라이브러리 -->
+<link rel="stylesheet" href="../resource/css/content_chart.css">
+<script src="../resource/js/chart/highcharts.js"></script>
+<script src="../resource/js/chart/data.js"></script>
+
+<!-- 차트 솔리드 게이지용 js 모듈 -->
+<script src="../resource/js/chart/highcharts-more.js"></script>
+<script src="../resource/js/chart/solid-gauge.js"></script>
+
+<!-- 차트 Heat Map 모듈 -->
+<script src="../resource/js/chart/heatmap.js"></script>
+
+<!-- 차트 Large tree map -->
+<script src="../resource/js/chart/treemap.js"></script>
+
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-01]	1. 조직/소속 구분 추가
+	*	[M 2022-11-07]	1. No Data 안내문구가 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">리포트</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="sub">
+				<button type="button" class="btn-report1 ic-s">리포트 통합조회</button>
+				<button type="button" class="btn-report1">리포트 항목 순서 변경</button>
+			</div>
+			<ul class="tab2">
+				<li><a href="#" class="">혜택</a></li>
+				<li><a href="#" class="">업적</a></li>
+				<li><a href="#" class="current">조직</a></li>
+				<li><a href="#" class="">코칭</a></li>
+				<li><a href="#" class="">활동</a></li>
+			</ul>
+			<div class="report-wrap">
+				<fieldset class="form-search1">
+					<div class="form-field">
+						<!-- [M 2022-11-01] 조직/소속 구분 추가 -->
+						<dl class="form w3">
+							<dt>조직/소속 구분</dt>
+							<dd>
+								<select name="" id="" class="selectbox" style="min-width:120px;">
+									<option value="">강남사업단</option>
+								</select>
+								<select name="" id="" class="selectbox" style="min-width:160px;">
+									<option value="">지점명</option>
+									<option value="">리더스박진형RM2지점</option>
+								</select>
+							</dd>
+						</dl>
+						<!-- //[M 2022-11-01] 조직/소속 구분 추가 -->
+						<dl class="form w1">
+							<dt>기준월</dt>
+							<dd>
+								<div class="form-row">
+									<input type="text" class="date-m" value="" placeholder="월 선택" data-start-year="2022">
+								</div>
+							</dd>
+						</dl>
+
+					</div>
+
+					<div class="area-action">
+						<button type="button" class="btn-action c1">조회</button>
+					</div>
+				</fieldset>
+				<!--
+					class="row" 하나당 그룹핑
+				-->
+				<!--[후보자 - 후보자관리]-->
+				<div class="row">
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3>당월 후보자 진행 현황</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="report-summary t1">
+									<ul>
+										<li>
+											<a href="javascript:void(0);">
+												<i class="report-ic1"></i>
+												<em>후보자등록</em>
+												<div class="info01">
+													<strong>120</strong>
+													<span class="unit">명</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">
+												<i class="report-ic2"></i>
+												<em>시험신청</em>
+												<div class="info01">
+													<strong>11</strong>
+													<span class="unit">명</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">
+												<i class="report-ic3"></i>
+												<em>시험합격</em>
+												<div class="info01">
+													<strong>11</strong>
+													<span class="unit">명</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">
+												<i class="report-ic4"></i>
+												<em>시험불합격</em>
+												<span>(미응시 10명)</span>
+												<div class="info01">
+													<strong>11</strong>
+													<span class="unit">명</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">
+												<i class="report-ic5"></i>
+												<em>위촉대상자</em>
+												<div class="info01">
+													<strong>11</strong>
+													<span class="unit">명</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">
+												<i class="report-ic6"></i>
+												<em>위촉진행중</em>
+												<div class="info01">
+													<strong>11</strong>
+													<span class="unit">명</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">
+												<i class="report-ic7"></i>
+												<em>전자서명 완료</em>
+												<div class="info01">
+													<strong>11</strong>
+													<span class="unit">명</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">
+												<i class="report-ic8"></i>
+												<em>위촉완료</em>
+												<div class="info01">
+													<strong>11</strong>
+													<span class="unit">명</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="more">
+								<a href="#"><span>전체 현황 확인하기</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="report-tab">
+							<a href="#" class="current">전체</a>
+							<a href="#">전속</a>
+							<a href="#">교차</a>
+						</div>
+						<div class="row">
+							<div class="col-3">
+								<div class="inner">
+									<div class="head">
+										<div class="tit">
+											<h3>후보자 구성(신입/경력)</h3>
+										</div>
+									</div>
+									<div class="cont">
+										<div class="col-info1">
+											<div class="info1-data1">
+												<div class="info01">
+													<strong>-</strong><!-- [CASE] 자료가 없을 경우 -->
+													<!-- <strong>16</strong> --><!-- [CASE] 자료가 있을 경우 -->
+													<span class="unit">명</span>
+												</div>
+
+												<div class="info02">
+													<em class="r-hold"><span>변동없음</span>신입 -명</em>
+													<!-- <em class="r-inc"><span>증가</span>신입 3명</em> -->
+													<!-- <em class="r-des"><span>감소</span>신입 3명</em> -->
+													<!-- <em class="r-hold"><span>변동없음</span>신입 -명</em> -->
+												</div>
+											</div>
+											<div class="info1-data1">
+												<div class="info01">
+													<strong>-</strong><!-- [CASE] 자료가 없을 경우 -->
+													<!-- <strong>16</strong> --><!-- [CASE] 자료가 있을 경우 -->
+													<span class="unit">명</span>
+												</div>
+												<div class="info02">
+													<em class="r-hold"><span>변동없음</span>경력 -명</em>
+													<!-- <em class="r-inc"><span>증가</span>경력 3명</em> -->
+													<!-- <em class="r-des"><span>감소</span>경력 3명</em> -->
+													<!-- <em class="r-hold"><span>변동없음</span>경력 -명</em> -->
+												</div>
+											</div>
+											<div class="info1-data1">
+												<div class="info01">
+													<strong>-</strong><!-- [CASE] 자료가 없을 경우 -->
+													<!-- <strong>32</strong> --><!-- [CASE] 자료가 있을 경우 -->
+													<span class="unit">명</span>
+												</div>
+												<!-- [M : 2022-09-05 수정] -->
+												<div class="info02">
+													<em class="r-hold"><span>변동없음</span>전체 -명</em>
+													<!-- <em class="r-inc"><span>증가</span>전체 3명</em> -->
+													<!-- <em class="r-des"><span>감소</span>전체 3명</em> -->
+													<!-- <em class="r-hold"><span>변동없음</span>전체 -명</em> -->
+												</div>
+												<!-- // [M : 2022-09-05 수정] -->
+
+											</div>
+										</div>
+										<div class="col-info2">(단위 명)</div>
+										<div class="data" style="height:290px;">
+											<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+											<div class="nodata" style="display:block;">
+												기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+												조건을 변경해보세요.
+											</div>
+											<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+											<!-- [CASE] 자료가 있을 경우 -->
+											<!-- <div id="peopleChart1" data-chart="Basic-Line5"></div> -->
+
+											<!--
+												[M : 2022-09-05 수정]
+												chart : height 수정
+												legend  수정
+											-->
+											<!-- <script>
+
+												Highcharts.chart("peopleChart1",{
+													chart:{
+														type:"line",
+														marginLeft:0,
+														marginTop : 60,
+														height:260
+													},
+													title:null,
+													xAxis:{
+														categories:["전전월", "전월", "당월"]
+													},
+													legend:{
+														enabled:true,
+														verticalAlign:"bottom",
+														align:'center',
+														layout:"horizontal",
+													},
+													series:[
+														{
+															name:"신입",
+															data:[80,90, 130]
+														},
+														{
+															name:"경력",
+															data:[3,4,5]
+														},
+														{
+															name:"전체",
+															data:[120,150, 240]
+														}
+													]
+												});
+
+											</script> -->
+											<!-- //[CASE] 자료가 있을 경우 -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="inner">
+									<div class="head">
+										<div class="tit">
+											<h3>후보자 구성(성별)</h3>
+										</div>
+									</div>
+									<div class="cont">
+										<div class="col-info1">
+											<div class="info1-data1">
+												<div class="info01">
+													<strong>-</strong><!-- [CASE] 자료가 없을 경우 -->
+													<!-- <strong>16</strong> --><!-- [CASE] 자료가 있을 경우 -->
+													<span class="unit">명</span>
+												</div>
+												<div class="info02">
+													<em class="r-hold"><span>변동없음</span>여성 -명</em>
+													<!-- <em class="r-inc"><span>증가</span>여성 3명</em> -->
+													<!-- <em class="r-des"><span>감소</span>여성 3명</em> -->
+													<!-- <em class="r-hold"><span>변동없음</span>여성 -명</em> -->
+												</div>
+											</div>
+											<div class="info1-data1">
+												<div class="info01">
+													<strong>-</strong><!-- [CASE] 자료가 없을 경우 -->
+													<!-- <strong>16</strong> --><!-- [CASE] 자료가 있을 경우 -->
+													<span class="unit">명</span>
+												</div>
+												<div class="info02">
+													<em class="r-hold"><span>변동없음</span>남성 -명</em>
+													<!-- <em class="r-inc"><span>증가</span>남성 3명</em> -->
+													<!-- <em class="r-des"><span>감소</span>남성 3명</em> -->
+													<!-- <em class="r-hold"><span>변동없음</span>남성 -명</em> -->
+												</div>
+											</div>
+										</div>
+										<div class="col-info2">(단위 명)</div>
+										<!--
+											[M : 2022-09-05 수정]
+											chart : margin,height 수정
+										-->
+										<div class="data" style="height:290px;">
+											<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+											<div class="nodata" style="display:block;">
+												기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+												조건을 변경해보세요.
+											</div>
+											<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+											<!-- [CASE] 자료가 있을 경우 -->
+											<!-- <div id="peopleChart2" data-chart="Donut-Line1"></div>
+											<div class="chart-info1">
+												<div class="c1">여성 <span>49명</span></div>
+												<div class="c2">남성 <span>49명</span></div>
+											</div>
+
+											<script>
+												Highcharts.chart("peopleChart2",{
+													chart:{
+														type:"pie",
+														margin:[20,0,0,0],
+														height:200
+													},
+													title:{
+														text:"전체",
+														y:92,
+													},
+													subtitle:{
+														text:"48명",
+														y:115,
+													},
+													legend:{
+														enabled : false,
+													},
+													plotOptions:{
+														pie:{
+
+															dataLabels:{
+																enabled:false
+															},
+															innerSize:"90%",
+															showInLegend:true,
+														},
+													},
+													series:[{
+														name:'후보자',
+														data:[
+															{
+																name:"남성",
+																y:44
+															},{
+																name:"여성",
+																y:56
+															}
+														]
+													}]
+												});
+
+											</script> -->
+											<!-- //[CASE] 자료가 있을 경우 -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="inner">
+									<div class="head">
+										<div class="tit">
+											<h3>후보자 구성(나이별)</h3>
+										</div>
+									</div>
+									<div class="cont">
+										<div class="col-info2 t2">(단위 명)</div>
+										<div class="data" style="height:290px;">
+											<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+											<div class="nodata" style="display:block;">
+												기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+												조건을 변경해보세요.
+											</div>
+											<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+											<!-- [CASE] 자료가 있을 경우 -->
+											<!-- <div id="peopleChart3" data-chart="Basic-Column8"></div>
+											<script>
+
+												Highcharts.chart("peopleChart3",{
+
+													chart:{
+														type:"column",
+														marginLeft:20,
+														marginRight:40,
+														marginTop : 30,
+														height:260,
+													},
+													title:null,
+													legend:{
+														enabled:false,
+													},
+													xAxis:{
+														categories:["20대", "30대", "40대" ,"50대" , "60대 이상"]
+													},
+													plotOptions:{
+														column:{
+															dataLabels:{
+																enabled:true
+															},
+														}
+													},
+													series:[
+														{
+															name:"",
+															data:[100,50,70,20,120]
+														}
+													]
+													});
+
+											</script> -->
+											<!-- //[CASE] 자료가 있을 경우 -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--[후보자 - 시험 및 위촉현황]-->
+				<div class="row">
+					<div class="row-sub"><!-- [M 2022-11-07] 감싸는 태그 <div class="row-sub"> 추가  -->
+						<div class="col-3">
+							<div class="inner">
+
+								<div class="head">
+									<div class="tit">
+										<h3>시험 신청 현황</h3>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<dl>
+												<dt>총 신청자</dt>
+												<dd>
+													<strong>-</strong><!-- [CASE] 자료가 없을 경우 -->
+													<!-- <strong>11</strong> --><!-- [CASE] 자료가 있을 경우 -->
+													<span class="unit">명</span>
+
+													<div class="info02">
+														<em class="r-hold"><span>변동없음</span>전월대비 -명</em>
+														<!-- <em class="r-inc"><span>증가</span>전월대비 +10명</em> -->
+														<!-- <em class="r-des"><span>감소</span>전월대비 -10명</em> -->
+														<!-- <em class="r-hold"><span>변동없음</span>전월대비 -명</em> -->
+													</div>
+												</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="col-info2">(단위 명)</div>
+									<div class="data" style="height:324px;">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="peopleChart4" data-chart="Basic-Column2"></div>
+										<script>
+
+											Highcharts.chart("peopleChart4",{
+
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height:290
+												},
+												title:null,
+												legend:{
+													enabled:false,
+												},
+												yAxis : {
+													visible : false
+												},
+												xAxis:{
+													categories:["전전월", "전월", "당월"]
+												},
+												plotOptions:{
+													column:{
+														dataLabels:{
+															enabled:true
+														},
+													}
+												},
+												series:[
+													{
+														name:"신청현황",
+														data:[100,50,70],
+														colorByPoint:true
+													}
+												]
+												});
+
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 --><!-- [M 2022-11-07] class t1 삭제 -->
+								<!-- <div class="more">
+									<a href="#"><span>시험 신청 현황 확인하기</span></a>
+								</div> -->
+								<!-- [CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="inner">
+
+								<div class="head">
+									<div class="tit">
+										<h3>최근 시험결과 </h3>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<dl>
+												<dt>응시자 10명 중 7명 합격</dt>
+												<dd>
+													<em>합격률</em>
+													<strong>-</strong><!-- [CASE] 자료가 없을 경우 -->
+													<!-- <strong>11</strong> --><!-- [CASE] 자료가 있을 경우 -->
+													<span class="unit">%</span>
+
+													<div class="info02">
+														<em class="r-hold"><span>변동없음</span>전월대비 -%</em>
+														<!-- <em class="r-inc"><span>증가</span>전월대비 +10%</em> -->
+														<!-- <em class="r-des"><span>감소</span>전월대비 -10%</em> -->
+														<!-- <em class="r-hold"><span>변동없음</span>전월대비 -%</em> -->
+													</div>
+												</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="col-info2">(단위 명, %)</div>
+									<div class="data" style="height:324px;">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="peopleChart5" data-chart="Pareto-chart3"></div>
+										<script>
+											Highcharts.chart("peopleChart5",{
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height:290
+												},
+												title:null,
+												yAxis : {
+													visible : false
+												},
+												xAxis:{
+													categories:["전전월", "전월", "당월"],
+												},
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'center',
+													layout:"horizontal",
+													width : 280
+												},
+												plotOptions:{
+													column:{
+														dataLabels:{
+															enabled:true
+														},
+													},
+													line:{
+														dataLabels:{
+															enabled:true
+														},
+													}
+												},
+												series:[{
+													name:"응시인원",
+													data:[39,54,39]
+												},{
+													name:"합격인원",
+													data:[25,40,25]
+												},{
+													type:"line",
+													name:"합격률",
+													data:[90.5,100,80]
+												}]
+											});
+
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 --><!-- [M 2022-11-07] class t1 삭제 -->
+								<!-- <div class="more">
+									<a href="#"><span>최근 시험결과 확인하기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="inner">
+
+								<div class="head">
+									<div class="tit">
+										<h3>위촉현황</h3>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<dl>
+												<dt>위촉완료</dt>
+												<dd>
+													<strong>-</strong><!-- [CASE] 자료가 없을 경우 -->
+													<!-- <strong>11</strong> --><!-- [CASE] 자료가 있을 경우 -->
+													<span class="unit">명</span>
+													<div class="info02">
+														<em class="r-hold"><span>변동없음</span>전월대비 -명</em>
+														<!-- <em class="r-inc"><span>증가</span>전월대비 +10명</em> -->
+														<!-- <em class="r-des"><span>감소</span>전월대비 -10명</em> -->
+														<!-- <em class="r-hold"><span>변동없음</span>전월대비 -명</em> -->
+													</div>
+												</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="col-info2">(단위 명)</div>
+									<div class="data" style="height:324px;">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="peopleChart6" data-chart="Pareto-chart3"></div>
+										<script>
+											Highcharts.chart("peopleChart6",{
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height: 290
+												},
+												title:null,
+												xAxis:{
+													categories:["전전월", "전월", "당월"],
+												},
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'center',
+													layout:"horizontal",
+													width : 220
+												},
+												plotOptions:{
+													column:{
+														dataLabels:{
+															enabled:true
+														},
+													},
+													line:{
+														dataLabels:{
+															enabled:true
+														},
+													},
+												},
+												series:[{
+													name:"교차",
+													data:[25,40,25]
+												},{
+													name:"전속",
+													data:[39,54,39]
+												},{
+													type:"line",
+													name:"전체",
+													data:[90.5,100,80]
+												}]
+											});
+
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>전체 현황 확인하기</span></a> <br>
+									<a href="#"><span>전속그룹 전체 위촉현황 순위 확인하기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+					</div><!-- //[M 2022-11-07] 감싸는 태그 <div class="row-sub"> 추가  -->
+				</div>
+				<!--[교육수강 - 대상자현황]-->
+				<div class="row">
+					<div class="row-sub"><!-- [M 2022-11-07] 감싸는 태그 <div class="row-sub"> 추가  -->
+						<div class="col-3">
+							<div class="inner">
+
+								<div class="head">
+									<div class="tit">
+										<h3 class="">인큐베이팅 교육 대상자</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												입과 후 교육진행을 한번도 진행하지 않은 대상자가 미수강자에 포함됩니다.
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<dl>
+												<dt>총 대상자</dt>
+												<dd>
+													<strong>-</strong><!-- [CASE] 자료가 없을 경우 -->
+													<!-- <strong>11</strong> --><!-- [CASE] 자료가 있을 경우 -->
+													<span class="unit">명</span>
+													<div class="info02">
+														<em class="r-hold"><span>변동없음</span>전월대비 -명</em>
+														<!-- <em class="r-inc"><span>증가</span>전월대비 +10명</em> -->
+														<!-- <em class="r-des"><span>감소</span>전월대비 -10명</em> -->
+														<!-- <em class="r-hold"><span>변동없음</span>전월대비 -명</em> -->
+													</div>
+												</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="col-info2">(단위 명)</div>
+									<!--
+										[M : 2022-09-05 수정]
+										chart : height 수정
+										legend 수정
+									-->
+									<div class="data" style="height:246px;">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="peopleChart7" data-chart="Basic-Column3"></div>
+										<script>
+
+											Highcharts.chart("peopleChart7",{
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height:220
+												},
+												title:null,
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'center',
+													layout:"horizontal"
+												},
+												xAxis:{
+													categories:["전전월", "전월", "당월"]
+												},
+												yAxis : {
+													visible : false
+												},
+												plotOptions:{
+													column:{
+														dataLabels:{
+															enabled:true,
+
+														}
+													},
+													series : {
+														groupPadding : 0.4
+													}
+												},
+												series:[
+													{
+														name:"수강자",
+														data:[100,50,70]
+													},{
+														name:"미수강자",
+														data:[125,60,50]
+													}
+												]
+											});
+
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>대상자 확인하기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="inner">
+
+								<div class="head">
+									<div class="tit">
+										<h3 class="">어드밴스드 교육 대상자</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												입과 후 교육진행을 한번도 진행하지 않은 대상자가 미수강자에 포함됩니다.
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<dl>
+												<dt>총 대상자</dt>
+												<dd>
+													<strong>-</strong><!-- [CASE] 자료가 없을 경우 -->
+													<!-- <strong>11</strong> --><!-- [CASE] 자료가 있을 경우 -->
+													<span class="unit">명</span>
+													<div class="info02">
+														<em class="r-hold"><span>변동없음</span>전월대비 -명</em>
+														<!-- <em class="r-inc"><span>증가</span>전월대비 +10명</em> -->
+														<!-- <em class="r-des"><span>감소</span>전월대비 -10명</em> -->
+														<!-- <em class="r-hold"><span>변동없음</span>전월대비 -명</em> -->
+													</div>
+												</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="col-info2">(단위 명)</div>
+									<!--
+										[M : 2022-09-05 수정]
+										chart : height 수정
+										legend : align 수정
+									-->
+									<div class="data" style="height:246px;">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="peopleChart8" data-chart="Basic-Column3"></div>
+										<script>
+
+											Highcharts.chart("peopleChart8",{
+												chart:{
+													type:"column",
+													marginLeft:0,
+													marginRight:0,
+													height:220
+												},
+												title:null,
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'center',
+													layout:"horizontal"
+												},
+												xAxis:{
+													categories:["전전월", "전월", "당월"]
+												},
+												yAxis : {
+													visible : false
+												},
+												plotOptions:{
+													column:{
+														dataLabels:{
+															enabled:true,
+
+														}
+													},
+													series : {
+														groupPadding : 0.4
+													}
+												},
+												series:[
+													{
+														name:"수강자",
+														data:[100,50,70]
+													},{
+														name:"미수강자",
+														data:[125,60,50]
+													}
+												]
+											})
+
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>대상자 확인하기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="inner">
+
+								<div class="head">
+									<div class="tit">
+										<h3 class="">역량강화 대상자</h3>
+										<div class="tooltip">
+											<button type="button"></button>
+											<div class="tooltip-layer">
+												사업단장이 선정한 역량강화 인원 현황을 보여줍니다.
+											</div>
+											<button type="button" class="tooltip-close"></button>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="col-info1">
+										<div class="info01">
+											<dl>
+												<dt>어드밴스드 인원 중 </dt>
+												<dd>
+													<strong>-</strong><!-- [CASE] 자료가 없을 경우 -->
+													<!-- <strong>11</strong> --><!-- [CASE] 자료가 있을 경우 -->
+													<span class="unit">명</span>
+													<div class="info02">
+														<em class="r-hold"><span>변동없음</span>전월대비 -명</em>
+														<!-- <em class="r-inc"><span>증가</span>전월대비 +10명</em> -->
+														<!-- <em class="r-des"><span>감소</span>전월대비 -10명</em> -->
+														<!-- <em class="r-hold"><span>변동없음</span>전월대비 -명</em> -->
+													</div>
+												</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="col-info2">(단위 명)</div>
+									<!--
+										[M : 2022-09-05 수정]
+										chart : height 수정
+									-->
+									<div class="data" style="height:246px;">
+										<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+										<div class="nodata" style="display:block;">
+											기간 내 해당 항목에 대한 실적이 없어,<br> 표기할 사항이 없습니다. <br>
+											조건을 변경해보세요.
+										</div>
+										<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+										<!-- [CASE] 자료가 있을 경우 -->
+										<!-- <div id="peopleChart9" data-chart="Pareto-chart3"></div>
+										<script>
+
+											Highcharts.chart("peopleChart9",{
+												chart:{
+													type:"column",
+													marginTop : 20,
+													marginLeft:0,
+													marginRight:0,
+													height: 220
+												},
+												title:null,
+												xAxis:{
+													categories:["전전월", "전월", "당월"],
+												},
+												yAxis : {
+													visible : false,
+													max : 120   // 최대값보다 넉넉하게 주세요
+												},
+												legend:{
+													enabled:true,
+													verticalAlign:"bottom",
+													align:'center',
+													layout:"horizontal"
+												},
+												plotOptions:{
+													column:{
+														dataLabels:{
+															enabled:true
+														},
+													},
+													line:{
+														dataLabels:{
+															enabled:true
+														},
+													},
+												},
+												series:[{
+													name:"동일",
+													data:[39,54,39]
+												},{
+													name:"신규",
+													data:[25,40,25]
+												},{
+													type:"line",
+													name:"전체",
+													data:[64,94,64]
+												}]
+											})
+
+										</script> -->
+										<!-- //[CASE] 자료가 있을 경우 -->
+									</div>
+								</div>
+								<!-- [CASE] 자료가 있을 경우 -->
+								<!-- <div class="more">
+									<a href="#"><span>대상자 확인하기</span></a>
+								</div> -->
+								<!-- //[CASE] 자료가 있을 경우 -->
+							</div>
+						</div>
+					</div><!-- //[M 2022-11-07] 감싸는 태그 <div class="row-sub"> 추가  -->
+				</div>
+
+				<a href="#" class="report-top"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

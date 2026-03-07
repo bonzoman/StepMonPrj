@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>내고객타겟팅 | 내고객타겟팅 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>내고객타겟팅</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [검색영역] -->
+		<!-- ######################### -->
+		<fieldset class="form-search1">
+			<legend>내고객타겟팅</legend>
+
+			<div class="input-btn1">
+				<data class="text" value="" data-label="타겟팅 항목을 조회해주세요."></data>
+				<button type="button" class="icon-com1 ic2">타겟팅 항목 조회</button>
+			</div>
+
+			<div class="input-btn1">
+				<data class="text" value="" data-label="고객님을 검색해주세요."></data>
+				<button type="button" class="icon-com1 ic2">고객 검색</button>
+			</div>
+
+			<!-- # 조회 버튼 # -->
+			<div class="area-btn1">
+				<a href="javascript:void(0);" class="btn-com1 c1">조회하기</a>
+			</div>
+			<!-- # // # -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [CASE1] 조회전 : 추천타겟팅 -->
+		<!-- ######################### -->
+		<div class="list-data7 t2">
+			<dl>
+				<dt>최근 조회 추천타겟팅</dt>
+				<dd><a href="javascript:void(0);">(1순위)실손 전환 캠페인</a></dd>
+				<dd><a href="javascript:void(0);">더끌림우수타겟(손해율 우량) 업셀링 캠페인</a></dd>
+				<dd><a href="javascript:void(0);">질병수술비(1~8종) 및 140대 질병 전환 캠페인</a></dd>
+				<dd><a href="javascript:void(0);">(0순위)실손 전환 캠페인</a></dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [CASE2] 조회결과 -->
+		<!-- ######################### -->
+		<div class="area-info1">
+			<p>전체</p>
+			<div class="side"><button type="button" class="icon-com1 ic18 right">필터</button></div>
+		</div>
+
+		<!-- # 총 00명 (날짜) # -->
+		<div class="area-info1 line">
+			<p>총 <strong>00명</strong><span>(2022.01.01 기준)</span></p>
+			<div class="side"><button type="button" class="btn-sub3 c2" data-mode="open">전체펼침</button></div> <!-- [D] 하단스크립트 참고 -->
+		</div>
+
+		<!-- # 검색결과없음 #
+		<div class="area-info1 line">
+			<p>검색결과 <strong>0명</strong><span>(2022.01.01 기준)</span></p>
+			<div class="side"><button type="button" class="btn-sub3 c2" data-mode="open">전체펼침</button></div>
+		</div>
+		-->
+
+		<!-- # 고객정보 # -->
+		<div class="info-data3">
+			<ul>
+				<!-- [CASE1] 추천가입TIP 있는 고객 -->
+				<li>
+					<div class="area1">
+						<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong data-masking="true">고객명</strong>
+							<span>
+								<span>생년월일</span>
+								<span>성별</span>
+							</span>
+						</div>
+						<dl class="data1">
+							<dt>연락처</dt>
+							<dd><span data-masking="true">000 - **** - 0000</span></dd>
+						</dl>
+						<button type="button" data-toggle="btn" aria-expanded="false">정보 상세보기</button>
+					</div>
+					<div data-toggle="content" class="area2">
+						<div class="info-con2">
+							<dl>
+								<dt>주소</dt>
+								<dd>서울특별시 강남구 강남대로</dd>
+							</dl>
+							<dl>
+								<dt>직업</dt>
+								<dd>전기공학 개발자 및 연구원</dd>
+							</dl>
+							<dl>
+								<dt>계약자</dt>
+								<dd>N (장기)</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd>Y (장기)</dd>
+							</dl>
+							<dl>
+								<dt>가입설계동의</dt>
+								<dd>Y</dd>
+							</dl>
+							<dl>
+								<dt>상품설계동의</dt>
+								<dd>Y (전화/문자)</dd>
+							</dl>
+							<dl>
+								<dt>접촉이력</dt>
+								<dd>2022.04.21</dd>
+							</dl>
+						</div>
+						<div class="area-btn1">
+							<a href="javascript:void(0);" class="btn-com1 ic13">일정등록하기</a>
+							<a href="javascript:void(0);" class="btn-com1">추천가입 TIP</a>
+						</div>
+					</div>
+				</li>
+
+				<!-- [CASE2] 추천가입TIP 없는 고객 -->
+				<li>
+					<div class="area1">
+						<div class="data-info2" data-value="102702">
+							<strong data-masking="true">박다미</strong>
+							<span>
+								<span>1997.01.01</span>
+								<span>여</span>
+							</span>
+						</div>
+						<dl class="data1">
+							<dt>연락처</dt>
+							<dd><span data-masking="true">010 - **** - 1234</span></dd>
+						</dl>
+						<button type="button" data-toggle="btn" aria-expanded="false">정보 상세보기</button>
+					</div>
+					<div data-toggle="content" class="area2">
+						<div class="info-con2">
+							<dl>
+								<dt>주소</dt>
+								<dd>서울특별시 강남구 강남대로</dd>
+							</dl>
+							<dl>
+								<dt>직업</dt>
+								<dd>전기공학 개발자 및 연구원</dd>
+							</dl>
+							<dl>
+								<dt>계약자</dt>
+								<dd>N (장기)</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd>Y (장기)</dd>
+							</dl>
+							<dl>
+								<dt>가입설계동의</dt>
+								<dd>Y</dd>
+							</dl>
+							<dl>
+								<dt>상품설계동의</dt>
+								<dd>Y (전화/문자)</dd>
+							</dl>
+							<dl>
+								<dt>접촉이력</dt>
+								<dd>2022.04.21</dd>
+							</dl>
+						</div>
+						<div class="area-btn1">
+							<a href="javascript:void(0);" class="btn-com1 ic13">일정등록하기</a>
+						</div>
+					</div>
+				</li>
+
+				<!-- [CASE3] 조회결과 : 결과없음 -->
+				<li class="nodata">
+					<strong>일치하는 내용이 없어요.</strong>
+					<span>입력하신 정보를 확인하시고<br>다시 검색해 보세요.</span>
+				</li>
+				<!-- // -->
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 추가활동선택 버튼 -->
+		<!-- ######################### -->
+		<a href="javascript:void(0);" class="btn-util1 ic1" data-sticky="bottom">추가활동선택</a>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	/* ************************************
+	* 샘플 : 전체펼침/닫기 스크립트
+	************************************ */
+	/* 토글영역 */
+	var _toggle = $plugin.togglecon('.info-data3 > ul > li',{
+		selector_group : false,
+		callback_load : function(){
+			$('[data-mode]').attr('data-mode','close').text('전체닫힘');
+		},
+		callback_after :function(){
+			$('[data-mode]').attr('data-mode','open').text('전체펼침');
+		}
+	});
+
+	/* 펼침/닫기 버튼 클릭 이벤트 */
+	$(document).off('click.open').on('click.open','[data-mode]',function(){
+		var _el_value = $(this).attr('data-mode');
+		var _el_cont = $('.info-data3');
+
+		if(_el_value == 'open') {
+			$(this).attr('data-mode','close').text('전체닫힘');
+			_el_cont.find('[aria-expanded="false"]').trigger('click');
+		}else{
+			$(this).attr('data-mode','open').text('전체펼침');
+			_el_cont.find('[aria-expanded="true"]').trigger('click');
+		}
+	});
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>BOX / BANNER | CONTENTS | PUBLISHING GUIDE</title>
+	<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/publish.css?20220913">
+	<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/ui.plugin.js"></script>
+	<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+	<div class="guide-wrap">
+		<header>
+			<h1>
+				<i>롯데손해보험</i> CONTENTS <strong>BOX / BANNER</strong>
+				<a href="../99.work/coding_list1.html" class="guide-btn1">작업목록</a>
+			</h1>
+			<nav>
+				<ul>
+					<li><a href="content_basic.html">INFO</a></li>
+					<li><a href="content_txt.html">TITLE/TXT</a></li>
+					<li><a href="content_btn.html">BUTTON</a></li>
+					<li><a href="content_icon.html">ICON</a></li>
+					<li><a href="content_form.html">FORM ELEMENT</a></li>
+					<li><a href="content_formarea.html">FORM 약관/검색</a></li>
+					<li><a href="content_formarea2.html">FORM 입력</a></li>
+					<li><a href="content_tab.html">TAB/TOGGLE</a></li>
+					<li><a href="content_tbl.html">TABLE</a></li>
+					<li class="active"><a href="content_box.html" aria-current="page">BOX/BANNER</a></li>
+					<li><a href="content_info.html">INFO/DATA</a></li>
+					<li><a href="content_list.html">LIST</a></li>
+					<li><a href="content_bbs.html">BOARD</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<article class="guide-container">
+			<h1 class="hide">박스 작업 가이드</h1>
+
+			<!-- ############################## -->
+			<!-- [영역유형] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">영역유형</h2>
+				<h3 class="guide-tit2">유형1 : .wrap-section</h3>
+				<div class="guide-area body">
+					<div class="wrap-section">영역1</div>
+					<div class="wrap-section">영역2</div>
+					<div class="wrap-section">
+						<section>영역3-1</section>
+						<section>영역3-2</section>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형2 : .wrap-section2</h3>
+				<div class="guide-area body">
+					<div class="wrap-section2">영역1</div>
+					<div class="wrap-section2">영역2</div>
+				</div>
+				<div class="guide-area popup">
+					<div class="wrap-section2">영역1</div>
+					<div class="wrap-section2">영역2</div>
+				</div>
+
+				<h3 class="guide-tit2">유형2 : .wrap-section3</h3>
+				<div class="guide-area body">
+					<div class="wrap-section3">영역1</div>
+					<div class="wrap-section3">영역2</div>
+					<div class="wrap-section3 line">
+						<section>영역3-1</section>
+						<section>영역3-2</section>
+						<section>영역3-3</section>
+					</div>
+				</div>
+			</section>
+
+			<!-- ############################## -->
+			<!-- [배너유형] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">배너유형</h2>
+				<h3 class="guide-tit2">이미지 등록 유형 : .banner-t1</h3>
+				<div class="guide-area body">
+					<div class="banner-t1">
+						<a href="javascript:void(0);"><img src="../../resource/img/temp/@img_banner3.png" alt="@대체텍스트 배너 타이틀"></a>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">배너 : .banner-t2</h3>
+				<div class="guide-area body">
+					<div class="banner-t2">
+						<a class="ic1" href="javascript:void(0);">내 성장 뱃지 보기</a>
+					</div>
+
+					<div class="banner-t2">
+						<a href="#" class="ic2">인큐베이팅 <span>100일 여정</span> 보러가기</a>
+					</div>
+
+					<div class="banner-t2">
+						<a href="javascript:void(0);" class="ic3">
+							<strong>셀프보장분석 공유</strong>
+							<span>가입설계동의&middot;고객등록&middot;보장분석을 한번에</span>
+						</a>
+					</div>
+
+					<div class="banner-t2">
+						<p class="ic4">공동청약 게시글 등록 시 <strong>40,000P</strong> 지급</p>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">배너 컨텐츠1 : .banner-con1</h3>
+				<div class="guide-area body">
+					<div class="banner-con1">
+						<ul class="swiper-t1" data-slider="list1" data-slider-title="패키지 배너" data-pagination="bullet" data-autoplay="true">
+							<li class="banner1">
+								<a href="#">
+									<strong>OT 중심 패키지</strong>
+									<dl class="data1">
+										<dt>수강완료</dt>
+										<dd>3/10</dd>
+									</dl>
+									<dl class="data1">
+										<dt>받은 포인트</dt>
+										<dd>1,200P</dd>
+									</dl>
+								</a>
+							</li>
+							<li class="banner2 disabled">
+								<a href="#">
+									<strong>판매 중심 패키지</strong>
+									<p>2022.05.09 09:00에 열려요.</p>
+								</a>
+							</li>
+							<li class="banner3">
+								<a href="#">
+									<strong>패키지명</strong>
+									<dl class="data1">
+										<dt>수강완료</dt>
+										<dd>3/10</dd>
+									</dl>
+									<dl class="data1">
+										<dt>받은 포인트</dt>
+										<dd>1,200P</dd>
+									</dl>
+								</a>
+							</li>
+							<li class="banner4">
+								<a href="#">
+									<strong>패키지명</strong>
+									<dl class="data1">
+										<dt>수강완료</dt>
+										<dd>3/10</dd>
+									</dl>
+									<dl class="data1">
+										<dt>받은 포인트</dt>
+										<dd>1,200P</dd>
+									</dl>
+								</a>
+							</li>
+							<li class="banner5">
+								<a href="#">
+									<strong>패키지명</strong>
+									<dl class="data1">
+										<dt>수강완료</dt>
+										<dd>3/10</dd>
+									</dl>
+									<dl class="data1">
+										<dt>받은 포인트</dt>
+										<dd>1,200P</dd>
+									</dl>
+								</a>
+							</li>
+							<li class="banner6">
+								<a href="#">
+									<strong>패키지명</strong>
+									<dl class="data1">
+										<dt>수강완료</dt>
+										<dd>3/10</dd>
+									</dl>
+									<dl class="data1">
+										<dt>받은 포인트</dt>
+										<dd>1,200P</dd>
+									</dl>
+								</a>
+							</li>
+							<li class="banner7">
+								<a href="#">
+									<strong>패키지명</strong>
+									<dl class="data1">
+										<dt>수강완료</dt>
+										<dd>3/10</dd>
+									</dl>
+									<dl class="data1">
+										<dt>받은 포인트</dt>
+										<dd>1,200P</dd>
+									</dl>
+								</a>
+							</li>
+						</ul>
+
+						<ul class="slider-t1" data-slider="list1" data-slider-title="컨텐츠 랩" data-navigation="true" data-pagination="bullet" data-autoplay="true" data-effect="fade">
+							<li>
+								<div class="swiper-tit">
+									<span>01</span>
+									<p><strong>상품특징과 설계한 정보를 한눈에</strong><br>볼 수 있어요.</p>
+								</div>
+								<div class="case ani1">
+									<div class="img">
+										<img src="../../resource/img/plr/cmm/slide1.png" alt="">
+									</div>
+									<div class="pointer"></div>
+								</div>
+							</li>
+							<li>
+								<div class="swiper-tit">
+									<span>02</span>
+									<p>가장 많이 발송된 콘텐츠, 중요한 교육콘텐츠,<br>상담자료 <strong>순위를 확인</strong>해보세요.</p>
+								</div>
+								<div class="case ani2">
+									<div class="img">
+										<img src="../../resource/img/plr/cmm/slide2.png" alt="">
+									</div>
+									<div class="pointer"></div>
+								</div>
+							</li>
+							<li>
+								<div class="swiper-tit">
+									<span>03</span>
+									<p>꼭 필요한 <strong>정보를 고객님들께</strong><br>보내드릴 수 있어요.</p>
+								</div>
+								<div class="case ani3">
+									<div class="img">
+										<img src="../../resource/img/plr/cmm/slide3.png" alt="">
+									</div>
+									<div class="pointer"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</section>
+
+			<!-- ############################## -->
+			<!-- [Swiper Banner] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">Swiper Banner</h2>
+				<h3 class="guide-tit2">유형1 : [data-slider="list1"]</h3>
+				<div class="guide-area body">
+					<div style="transform:translate(0,0);height:300px">
+						<ul class="slider-t1" data-slider="list1" data-slider-title="이벤트배너" data-pagination="fraction" data-navigation="true">
+							<li><p class="area-temp">컨텐츠1</p></li>
+							<li><p class="area-temp">컨텐츠2</p></li>
+							<li><p class="area-temp">컨텐츠3</p></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="guide-area body">
+					<div style="transform:translate(0,0);height:300px">
+						<ul class="slider-t1" data-slider="list1" data-slider-title="이벤트배너" data-pagination="bullet">
+							<li><p class="area-temp">컨텐츠1</p></li>
+							<li><p class="area-temp">컨텐츠2</p></li>
+							<li><p class="area-temp">컨텐츠3</p></li>
+						</ul>
+					</div>
+				</div>
+
+
+				<h3 class="guide-tit2">유형2 : [data-slider="list2"]</h3>
+				<div class="guide-area body">
+					<ul class="swiper-t1" data-slider="list2" data-slider-title="이벤트배너" data-pagination="bullet" data-slides-view="auto">
+						<li><p class="area-temp">컨텐츠1</p></li>
+						<li><p class="area-temp">컨텐츠2</p></li>
+						<li><p class="area-temp">컨텐츠3</p></li>
+					</ul>
+				</div>
+
+				<div class="guide-area body">
+					<div class="board-list3">
+						<ul class="swiper-t1" data-slider="list2" data-slider-title="이벤트배너" data-pagination="bullet" data-slides-view="auto">
+							<li>
+								<strong class="tit">UL구조 : 타이틀</strong>
+								<div class="txt">부가설명</div>
+								<div class="data-num1">월 <strong>000,000,000</strong><span>원</span></div>
+								<div class="data-word2">
+									<span>#태그</span>
+									<span>#태그</span>
+									<span>#태그</span>
+									<span>#태그</span>
+								</div>
+								<div class="data1">
+									<dl class="icon-com1 ic9">
+										<dt>조회</dt>
+										<dd>000</dd>
+									</dl>
+									<dl class="icon-com1 ic15">
+										<dt>설계복사</dt>
+										<dd>000</dd>
+									</dl>
+								</div>
+							</li>
+							<li>
+								<strong class="tit">UL구조 : 타이틀</strong>
+								<div class="txt">부가설명</div>
+								<div class="data-num1">월 <strong>000,000,000</strong><span>원</span></div>
+								<div class="data-word2">
+									<span>#태그</span>
+									<span>#태그</span>
+									<span>#태그</span>
+									<span>#태그</span>
+								</div>
+								<div class="data1">
+									<dl class="icon-com1 ic9">
+										<dt>조회</dt>
+										<dd>000,000</dd>
+									</dl>
+									<dl class="icon-com1 ic15">
+										<dt>설계복사</dt>
+										<dd>000,000</dd>
+									</dl>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong class="tit">UL구조 : 타이틀</strong>
+									<div class="txt">부가설명</div>
+									<div class="data-num1">월 <strong>000,000,000</strong><span>원</span></div>
+									<div class="data-word2">
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+									</div>
+									<div class="data1">
+										<dl class="icon-com1 ic9">
+											<dt>조회</dt>
+											<dd>000</dd>
+										</dl>
+										<dl class="icon-com1 ic15">
+											<dt>설계복사</dt>
+											<dd>000</dd>
+										</dl>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--
+				<ul class="slider-t1" data-slider="list1" data-slider-title="이벤트배너">
+					<li><p class="area-temp">컨텐츠1</p></li>
+					<li><p class="area-temp">컨텐츠2</p></li>
+					<li><p class="area-temp">컨텐츠3</p></li>
+				</ul>
+
+				<h4 class="guide-tit3">Navigation : [data-navigation="true"]</h4>
+				<div style="transform:translate(0,0);height:300px">
+					<ul class="slider-t1" data-slider="list1" data-slider-title="이벤트배너" data-navigation="true">
+						<li><p class="area-temp">컨텐츠1</p></li>
+						<li><p class="area-temp">컨텐츠2</p></li>
+						<li><p class="area-temp">컨텐츠3</p></li>
+					</ul>
+				</div>
+
+				<h4 class="guide-tit3">Pagination : [data-pagination="bullet / fraction / progressbar"]</h4>
+				<div style="transform:translate(0,0);height:300px">
+					<ul class="slider-t1" data-slider="list1" data-slider-title="이벤트배너" data-pagination="bullet">
+						<li><p class="area-temp">컨텐츠1</p></li>
+						<li><p class="area-temp">컨텐츠2</p></li>
+						<li><p class="area-temp">컨텐츠3</p></li>
+					</ul>
+				</div>
+				<div style="transform:translate(0,0);height:300px">
+					<ul class="slider-t1" data-slider="list1" data-slider-title="이벤트배너" data-pagination="fraction">
+						<li><p class="area-temp">컨텐츠1</p></li>
+						<li><p class="area-temp">컨텐츠2</p></li>
+						<li><p class="area-temp">컨텐츠3</p></li>
+					</ul>
+				</div>
+				<div style="transform:translate(0,0);height:300px">
+					<ul class="slider-t1" data-slider="list1" data-slider-title="이벤트배너" data-pagination="progressbar">
+						<li><p class="area-temp">컨텐츠1</p></li>
+						<li><p class="area-temp">컨텐츠2</p></li>
+						<li><p class="area-temp">컨텐츠3</p></li>
+					</ul>
+				</div>
+
+				<h4 class="guide-tit3">Autoplay : [data-autoplay="true"] </h4>
+				<ul class="slider-t1" data-slider="list1" data-slider-title="이벤트배너" data-pagination="bullet" data-autoplay="true">
+					<li><p class="area-temp">컨텐츠1</p></li>
+					<li><p class="area-temp">컨텐츠2</p></li>
+					<li><p class="area-temp">컨텐츠3</p></li>
+				</ul>
+				-->
+
+				<h3 class="guide-tit2">유형3 : [data-slider="list3"]</h3>
+				<div style="padding:0 var(--space2)">
+					<div class="slider-view">
+						<ul class="slider-t1" data-slider="list3" data-slider-title="서류확인" data-pagination="fraction" data-navigation="true" data-auto-height="true" data-slider-toast="true">
+							<li title="문서명111"><p class="area-temp" style="height:45rem;">서류1</p></li>
+							<li title="문서명222"><p class="area-temp" style="height:45rem;">서류2</p></li>
+							<li title="문서명333"><p class="area-temp" style="height:45rem;">서류3</p></li>
+						</ul>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형4 : [data-slider="list4"]</h3>
+				<div style="padding:0 var(--space2)">
+					<ul class="data-word2 t2" data-slider="list4">
+						<li><a href="javascript:void(0);">텍스트1</a></li>
+						<li><a href="javascript:void(0);">텍스트2</a></li>
+						<li><a href="javascript:void(0);">텍스트3</a></li>
+						<li><a href="javascript:void(0);">텍스트4</a></li>
+						<li><a href="javascript:void(0);">텍스트5</a></li>
+						<li><a href="javascript:void(0);">텍스트6</a></li>
+						<li><a href="javascript:void(0);">텍스트7</a></li>
+						<li><a href="javascript:void(0);">텍스트8</a></li>
+						<li><a href="javascript:void(0);">텍스트9</a></li>
+						<li><a href="javascript:void(0);">텍스트10</a></li>
+						<li><a href="javascript:void(0);">텍스트11</a></li>
+					</ul>
+				</div>
+
+				<h3 class="guide-tit2">유형5 : [data-slider="list5"]</h3>
+				<div class="person-view">
+					<ul class="swiper-t1" data-slider="list5">
+						<li>
+							<span class="thumb"><img src="../../resource/img/temp/@img_person1.png"></span>
+							<strong>@제목제목 텍스트</strong>
+							<p>설명설명 텍스트 <br>설명설명 텍스트 <br>설명설명 텍스트 <br>설명설명 텍스트</p>
+							<dov class="area-btn1">
+								<a href="javascript:void(0);" class="btn-com1">버튼</a>
+							</dov>
+						</li>
+						<li>
+							<span class="thumb"><img src="../../resource/img/temp/@img_person2.png"></span>
+							<strong>@제목제목 텍스트</strong>
+							<p>설명설명 텍스트 <br>설명설명 텍스트 <br>설명설명 텍스트 <br>설명설명 텍스트</p>
+							<dov class="area-btn1">
+								<a href="javascript:void(0);" class="btn-com1">버튼</a>
+							</dov>
+						</li>
+						<li>
+							<span class="thumb"><img src="../../resource/img/temp/@img_person3.png"></span>
+							<strong>@제목제목 텍스트</strong>
+							<p>설명설명 텍스트 <br>설명설명 텍스트 <br>설명설명 텍스트 <br>설명설명 텍스트</p>
+							<dov class="area-btn1">
+								<a href="javascript:void(0);" class="btn-com1">버튼</a>
+							</dov>
+						</li>
+						<li>
+							<span class="thumb"><img src="../../resource/img/temp/@img_person4.png"></span>
+							<strong>@제목제목 텍스트</strong>
+							<p>설명설명 텍스트 <br>설명설명 텍스트 <br>설명설명 텍스트 <br>설명설명 텍스트</p>
+							<dov class="area-btn1">
+								<a href="javascript:void(0);" class="btn-com1">버튼</a>
+							</dov>
+						</li>
+						<li>
+							<span class="thumb"><img src="../../resource/img/temp/@img_person5.png"></span>
+							<strong>@제목제목 텍스트</strong>
+							<p>설명설명 텍스트 <br>설명설명 텍스트 <br>설명설명 텍스트 <br>설명설명 텍스트</p>
+							<dov class="area-btn1">
+								<a href="javascript:void(0);" class="btn-com1">버튼</a>
+							</dov>
+						</li>
+						<li>
+							<span class="thumb"><img src="../../resource/img/temp/@img_person6.png"></span>
+							<strong>@제목제목 텍스트</strong>
+							<p>설명설명 텍스트 <br>설명설명 텍스트 <br>설명설명 텍스트 <br>설명설명 텍스트</p>
+							<dov class="area-btn1">
+								<a href="javascript:void(0);" class="btn-com1">버튼</a>
+							</dov>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- ############################## -->
+		</article>
+	</div>
+	<script src="../../resource/js/publish.plugin.js"></script>
+	<script src="../../resource/js/publish.common.js"></script>
+	<script>
+	//<!--
+
+	//-->
+	</script>
+</body>
+</html>

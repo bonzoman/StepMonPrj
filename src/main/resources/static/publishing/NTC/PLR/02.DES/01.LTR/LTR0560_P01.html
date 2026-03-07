@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 계좌조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>계좌조회</h1>
+			<button type="button" data-btn="pop-close">계좌조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+            <!-- ######################### -->
+			<!-- 조회 결과 없음 -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p>
+					<strong>등록된 계좌가 없어요.</strong>
+                    <em>계좌등록 버튼을 눌러 계좌를 등록해보세요.</em>
+				</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [계좌조회] -->
+			<!-- ######################### -->
+			<!-- # 총 00건 # -->
+			<div class="area-info1">
+				<p>총 <strong>2건</strong></p>
+                <div class="side">
+                    <button type="button" class="btn-sub3 c2">수정</button>
+                </div>
+			</div>
+
+			<div class="con-t1">
+				<ul>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="form-radio" checked>
+							<strong class="BKCD_003">기업은행</strong>
+						</label>
+						<div class="data2">
+							<dl>
+								<dt>계좌번호</dt>
+								<dd data-masking="true">111111****00</dd>
+							</dl>
+							<dl>
+								<dt>예금주</dt>
+								<dd>하다미</dd>
+							</dl>
+							<dl>
+								<dt>확인여부</dt>
+								<dd>예</dd>
+							</dl>
+                            <dl>
+								<dt>계좌상태</dt>
+								<dd>정상</dd>
+							</dl>
+                            <dl>
+								<dt>사용여부</dt>
+								<dd>예</dd>
+							</dl>
+                            <dl>
+								<dt>등록일자</dt>
+								<dd>2019.10.27</dd>
+							</dl>
+                            <dl>
+								<dt>최종사용일자</dt>
+								<dd>2019.10.10</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="form-radio">
+							<strong class="BKCD_090">카카오뱅크</strong>
+						</label>
+						<div class="data2">
+							<dl>
+								<dt>계좌번호</dt>
+								<dd data-masking="true">111111****00</dd>
+							</dl>
+							<dl>
+								<dt>예금주</dt>
+								<dd>하다미</dd>
+							</dl>
+							<dl>
+								<dt>확인여부</dt>
+								<dd>예</dd>
+							</dl>
+                            <dl>
+								<dt>계좌상태</dt>
+								<dd>정상</dd>
+							</dl>
+                            <dl>
+								<dt>사용여부</dt>
+								<dd>예</dd>
+							</dl>
+                            <dl>
+								<dt>등록일자</dt>
+								<dd>2019.10.27</dd>
+							</dl>
+                            <dl>
+								<dt>최종사용일자</dt>
+								<dd>2019.10.10</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">계좌등록</button>
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

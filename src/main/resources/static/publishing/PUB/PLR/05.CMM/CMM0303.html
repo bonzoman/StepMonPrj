@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>등록 | Q&amp;A | 커뮤니티</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>등록하기</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] 안내문구 -->
+		<!-- ######################### -->
+		<div class="tit-section"><p>Q&amp;A에 등록하실 내용을<br />입력해주세요.</p></div>
+
+		<!-- ######################### -->
+		<!-- [입력영역] 내용입력 -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend>분류, 제목, 내용은 필수 입력</legend>
+
+			<!-- # 분류 # -->
+			<dl class="form">
+				<dt>분류<em class="icon-required2">필수</em></dt>
+				<dd>
+					<!-- // -->
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">구분</span>
+							<span data-select="text"></span>
+						</button>
+						<div class="list">
+							<div data-label="분류">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion1" value="2"><span>도입</span></label>
+									<label><input type="radio" name="selectOpeion1" value="3"><span>교육</span></label>
+									<label><input type="radio" name="selectOpeion1" value="4"><span>설계(장기)</span></label>
+									<label><input type="radio" name="selectOpeion1" value="5"><span>심사(장기)</span></label>
+									<label><input type="radio" name="selectOpeion1" value="6"><span>수수료</span></label>
+									<label><input type="radio" name="selectOpeion1" value="7"><span>고객관리</span></label>
+									<label><input type="radio" name="selectOpeion1" value="8"><span>계약변경</span></label>
+									<label><input type="radio" name="selectOpeion1" value="9"><span>일반</span></label>
+									<label><input type="radio" name="selectOpeion1" value="10"><span>자동차</span></label>
+									<label><input type="radio" name="selectOpeion1" value="11"><span>기타</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<!-- // -->
+				</dd>
+			</dl>
+
+			<!-- # 제목 입력 # -->
+			<dl class="form">
+				<dt>제목<em class="icon-required2">필수</em></dt>
+				<dd><input type="text" class="text" title="제목" maxlength="30" placeholder="제목을 입력해주세요." required></dd>
+			</dl>
+
+			<!-- # 내용 입력 # -->
+			<dl class="form">
+				<dt>내용<em class="icon-required2">필수</em></dt>
+				<dd>
+					<div class="textarea">
+						<textarea cols="50" rows="3" title="등록내용" placeholder="내용을 입력해주세요." required></textarea>
+						<span class="util2">4,000byte</span>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 이미지 첨부 # -->
+			<dl class="form">
+				<dt>이미지 첨부 <a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt>
+				<!-- [D] 등록후 노출 -->
+				<dd class="data-file1">
+					<ul>
+						<li>
+							<span class="img"><img src="../../resource/img/temp/@img_banner1.png" alt=""></span>
+							<span>파일명.jpg</span>
+							<span class="sub">00KB</span>
+							<button type="button" class="icon-com1 ic6">삭제</button>
+						</li>
+						<li>
+							<span class="img"><img src="../../resource/img/temp/@img_banner2.png" alt=""></span>
+							<span>유용한 정보활용방법 정보활용방법 캡쳐.png</span>
+							<span class="sub">56KB</span>
+							<button type="button" class="icon-com1 ic6">삭제</button>
+						</li>
+					</ul>
+				</dd>
+				<!-- // -->
+				<dd class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1 ic3">이미지 첨부</a>
+				</dd>
+			</dl>
+
+			<!-- # 관련 컨텐츠 첨부 # -->
+			<dl class="form">
+				<dt>관련 컨텐츠 첨부</dt>
+				<!-- [D] 등록후 노출 -->
+				<dd class="data-file1">
+					<ul>
+						<li>
+							<span class="img"><img src="../../resource/img/temp/@img_banner1.png" alt=""></span>
+							<span>[교육] 뇌혈관질환 진단비 분석</span>
+							<button type="button" class="icon-com1 ic6">삭제</button>
+						</li>
+						<li>
+							<span class="img"><img src="../../resource/img/temp/@img_banner2.png" alt=""></span>
+							<span>[활동] 지금 보험시장은 진단비 눈치싸움이 눈치싸움이</span>
+							<button type="button" class="icon-com1 ic6">삭제</button>
+						</li>
+					</ul>
+				</dd>
+				<!-- // -->
+				<dd class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1 ic3">관련 컨텐츠 첨부</a>
+				</dd>
+			</dl>
+			<!-- // -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">등록</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+</main>
+</body>
+</html>

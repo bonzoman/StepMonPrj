@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 알릴사항 | 장기보험 | 표준설계 | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>알릴사항</h1>
+			<button type="button" data-btn="pop-close">알릴사항 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 피보험자 정보영역 -->
+			<!-- ######################### -->
+			<div class="tit-section">
+				<!-- // -->
+				<p>하다미(35세/여/1급 사무직) <br> 고객님의 알릴사항을 입력해주세요.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 기본사항 -->
+			<!-- ######################### -->
+			<div class="wrap-area1" id="uiSTEPSECTION01" data-scroll-con>
+				<fieldset class="form-wrap4" id="uiSTEPCONT01">
+					<legend class="tit">1. 귀하의 직업은 무엇입니까?</legend>
+					<!-- 2022-12-22 -->
+					<p class="txt">고객으로부터 수령한 사항과 고객정보 등록 사항 일치 여부를 확인 후 체크하세요.</p>
+
+					<!-- # 직업정보 # -->
+					<div class="info-con1 box">
+						<dl>
+							<dt>직업정보</dt>
+							<dd>(42234) 보험설계사</dd>
+						</dl>
+						<dl>
+							<dt>직장명</dt>
+							<dd>롯데손해보험</dd>
+						</dl>
+						<dl>
+							<dt>업종</dt>
+							<dd>보험설계사</dd>
+						</dl>
+						<dl>
+							<dt>직무(하는 일)</dt>
+							<dd>보험설계사</dd>
+						</dl>
+					</div>
+
+					<!-- # 직업정보 동의 # -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd" required>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- # // # -->
+				</fieldset>
+
+				<fieldset class="form-wrap4" id="uiSTEPCONT02">
+					<legend class="tit">2. 다른 보험회사에 이 보험과 동일하거나 유사한 위험을 담보로하는 생명보험 또는 (장기)손해보험을 가입하고 있습니까?</legend>
+
+                    <div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="dd0-1" required="" data-tabcon="uiFormTabCon1">
+							<span>유</span>
+						</label>
+						<label>
+							<input type="radio" name="dd0-1">
+							<span>무</span>
+						</label>
+					</div>
+
+                    <div class="ui-tabcon" data-id="uiFormTabCon1">
+                        <h2 class="tit-sub">손해보험</h2>
+
+                        <!-- # 항목 : 회사수  # -->
+                        <dl class="form">
+                            <dt>회사수</dt>
+                            <dd>
+                                <div class="text">
+                                    <input type="tel" title="회사수" placeholder="가입하신 보험 회사 개수를 입력해주세요." required>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <!-- # 항목 : 건수  # -->
+                        <dl class="form">
+                            <dt>건수</dt>
+                            <dd>
+                                <div class="text">
+                                    <input type="tel" title="건수" placeholder="가입하신 보험 건수를 입력해주세요." required>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <!-- # 항목 : 월보험료  # -->
+                        <dl class="form">
+                            <dt>월보험료</dt>
+                            <dd>
+                                <div class="text">
+                                    <input type="tel" title="월보험료" placeholder="월보험료를 입력해주세요." required>
+                                    <span class="util">만원</span>
+                                </div>
+                            </dd>
+                        </dl>
+                        <!-- # //  # -->
+
+                        <h2 class="tit-sub">생명보험</h2>
+                        <!-- # 항목 : 회사수  # -->
+                        <dl class="form">
+                            <dt>회사수</dt>
+                            <dd>
+                                <div class="text">
+                                    <input type="tel" title="회사수" placeholder="가입하신 보험 회사 개수를 입력해주세요." required>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <!-- # 항목 : 건수  # -->
+                        <dl class="form">
+                            <dt>건수</dt>
+                            <dd>
+                                <div class="text">
+                                    <input type="tel" title="건수" placeholder="가입하신 보험 건수를 입력해주세요." required>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <!-- # 항목 : 월보험료  # -->
+                        <dl class="form">
+                            <dt>월보험료</dt>
+                            <dd>
+                                <div class="text">
+                                    <input type="tel" title="월보험료" placeholder="월보험료를 입력해주세요." required>
+                                    <span class="util">만원</span>
+                                </div>
+                            </dd>
+                        </dl>
+                        <!-- # //  # -->
+                    </div>
+				</fieldset>
+
+                <!-- ### [질문1] 직업확인 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT03">
+					<legend class="tit">3. 귀하는 현재 다음 어느 사항에 관하여 장애가 있습니까?</legend>
+					
+                    
+                    <div class="label-btn1">
+						<label>
+							<input type="radio" name="dd0-1-1">
+							<span>유</span>
+						</label>
+						<label>
+							<input type="radio" name="dd0-1-1">
+							<span>무</span>
+						</label>
+					</div>
+
+                    <div class="label-check1 box col2">
+                        <label>
+                            <input type="checkbox">
+                            <span>지체장애(디스크포함)</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>시각장애</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>청각장애</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>언어장애</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>후각장애</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>씹는기능장애</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>정신지체</span>
+                        </label>
+                    </div>
+				</fieldset>
+
+                <fieldset class="form-wrap4" id="uiSTEPCONT04">
+					<legend class="tit">4. 최근 5년이내 아래의 병명으로 의사로 부 5. 체격 및 소득터 진찰 또는 검사를 통하여 진단을 받았거나 치료, 투약, 입원, 수술, 정밀검사를 받은적이 있습니까?</legend>
+
+					<!-- # 여부선택 # -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd11" required>
+							<span>있음</span>
+						</label>
+						<label>
+							<input type="radio" name="dd11">
+							<span>없음</span>
+						</label>
+					</div>
+
+                    <div class="label-check1 box col2">
+                        <label>
+                            <input type="checkbox">
+                            <span>암</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>백혈병</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>고혈압</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>협심증</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>심근경색</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>심장판막증</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>간경화증</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>당뇨증</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>뇌졸증(뇌출혈, 뇌경색)</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>에이즈(AIDS) 및 JIV 보균</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>직장 또는 항문 관련질환</span>
+                        </label>
+                    </div>
+				</fieldset>
+
+				<fieldset class="form-wrap4" id="uiSTEPCONT05">
+					<legend class="tit">5. 체격 및 소득</legend>
+
+					<dl class="form">
+						<dt>키</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="키" placeholder="키를 입력해주세요." required>
+                                <span class="unit">cm</span>
+							</div>
+						</dd>
+					</dl>
+
+                    <dl class="form">
+						<dt>몸무게</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="몸무게" placeholder="몸무게를 입력해주세요." required>
+                                <span class="unit">kg</span>
+							</div>
+						</dd>
+					</dl>
+
+                    <dl class="form">
+						<dt>월 평균 소득 (계약자 기준)</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="월 평균 소득 (계약자 기준)" placeholder="계약자 월 평균 소득을 입력해주세요." required>
+                                <span class="unit">만원</span>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<fieldset class="form-wrap4" id="uiSTEPCONT06">
+					<legend class="tit">6. 귀하는 현재 다음 어느 차량을 운행하고 계십니까? (둘 이상의 차량을 운전할 경우 해당 사항을 모두 기재요망)</legend>
+
+					<!-- # 여부선택 # -->
+					<div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="dd0-2" required data-tabcon="uiFormTabCon3">
+							<span>운전함</span>
+						</label>
+						<label>
+							<input type="radio" name="dd0-2">
+							<span>운전안함</span>
+						</label>
+					</div>
+
+                    <div class="ui-tabcon" data-id="uiFormTabCon3">
+                        <dl class="form">
+                            <dt>승용차</dt>
+                            <dd>
+                                <div class="label-btn1">
+                                    <label>
+                                        <input type="radio" name="dd0-3" required>
+                                        <span>자가용</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="dd0-3">
+                                        <span>영업용</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="dd0-3">
+                                        <span>운전안함</span>
+                                    </label>
+                                </div>
+                            </dd>
+                        </dl>
+    
+                        <dl class="form">
+                            <dt>승합차</dt>
+                            <dd>
+                                <div class="label-btn1">
+                                    <label>
+                                        <input type="radio" name="dd0-4" required>
+                                        <span>자가용</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="dd0-4">
+                                        <span>영업용</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="dd0-4">
+                                        <span>운전안함</span>
+                                    </label>
+                                </div>
+                            </dd>
+                        </dl>
+    
+                        <dl class="form">
+                            <dt>화물차</dt>
+                            <dd>
+                                <div class="label-btn1">
+                                    <label>
+                                        <input type="radio" name="dd0-5" required>
+                                        <span>자가용</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="dd0-5">
+                                        <span>영업용</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="dd0-5">
+                                        <span>운전안함</span>
+                                    </label>
+                                </div>
+                            </dd>
+                        </dl>
+    
+                        <dl class="form">
+                            <dt>오토바이 (50cc미만 포함)</dt>
+                            <dd>
+                                <div class="label-btn1">
+                                    <label>
+                                        <input type="radio" name="dd0-5" required>
+                                        <span>자가용</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="dd0-5">
+                                        <span>영업용</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="dd0-5">
+                                        <span>운전안함</span>
+                                    </label>
+                                </div>
+                            </dd>
+                        </dl>
+    
+                        <dl class="form">
+                            <dt>기타</dt>
+                            <dd>
+                                <div class="label-check1 col3">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>건설기계</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>농기계</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>기타</span>
+                                    </label>
+                                    <input type="text" class="text" title="필요한 경우 입력" placeholder="입력이 꼭 필요한 경우에만 입력해주세요."> <!-- [D] 기타 선택시 노출 -->
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+				</fieldset>
+
+				<fieldset class="form-wrap4"  id="uiSTEPCONT07">
+					<legend class="tit">7. 현재 다음과 같은 위험도가 높은 취미를 자주 반복적으로 하고 있습니까? (해당되는 사항에 모두 체크)</legend>
+
+					<!-- # 여부선택 # -->
+					<div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="dd13" data-tabcon="uiFormTabCon4" required>
+							<span>유</span>
+						</label>
+						<label>
+							<input type="radio" name="dd13">
+							<span>무</span>
+						</label>
+					</div>
+
+                    <div class="ui-tabcon" data-id="uiFormTabCon4">
+                        <div class="label-check1 box col2">
+                            <label>
+                                <input type="checkbox">
+                                <span>빙벽, 암벽등반</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>제트스키</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>래프팅</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>스쿠버다이빙</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>스카이다이빙</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>수상스키</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>번지점프</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>자동차·오토바이 경주</span>
+                            </label>
+                            <label class="block">
+                                <input type="checkbox" checked="">
+                                <span>기타</span>
+                            </label>
+                            <input type="text" class="text" placeholder="기타 관련 자격증을 입력해주세요."> <!-- [D] 기타 선택 시 노출 -->
+                        </div>
+    
+                        <dl class="form">
+                            <dt>취미생활 횟수</dt>
+                            <dd>
+                                <div class="label-btn1">
+                                    <label>
+                                        <input type="radio" name="dd-06" required="">
+                                        <span>년간</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="dd-06">
+                                        <span>월간</span>
+                                    </label>
+                                </div>
+                                <div class="text">
+                                    <input type="tel" title="취미생활 횟수" placeholder="숫자만 입력해주세요." required>
+                                    <span class="unit">회</span>
+                                </div>
+                            </dd>
+                        </dl>
+    
+                        <dl class="form">
+                            <dt>자격증명</dt>
+                            <dd>
+                                <div class="text">
+                                    <input type="tel" title="자격증명" placeholder="자격증명을 입력해주세요." required>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+				</fieldset>
+
+				<fieldset class="form-wrap4" id="uiSTEPCONT08">
+					<legend class="tit">8. 최근 3개월 이내에 의사로부터 진찰, 검사를 통하여 진단을 받았거나 그 결과 치료, 입월, 수술, 투약을 받은 사실이 있습니까?</legend>
+
+					<!-- # 여부선택 # -->
+					<div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="dd14" data-tabcon="uiFormTabCon5" required>
+							<span>있음</span>
+						</label>
+						<label>
+							<input type="radio" name="dd14">
+							<span>없음</span>
+						</label>
+					</div>
+
+					<div class="ui-tabcon" data-id="uiFormTabCon5">
+						<!-- // -->
+						<dl class="form">
+							<dt>병명</dt>
+							<dd>
+								<div class="text">
+									<input type="text" title="병명" placeholder="병명을 입력해주세요." required>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>치료기간</dt>
+							<dd>
+								<div class="text">
+									<input type="tel" title="치료기간" placeholder="치료기간을 입력해주세요." required>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+                        <dl class="form">
+							<dt>치료병원</dt>
+							<dd>
+								<div class="text">
+									<input type="text" title="치료병원" placeholder="치료병원을 입력해주세요." required>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+                        <dl class="form">
+							<dt>치료내용</dt>
+							<dd>
+								<div class="text">
+									<input type="text" title="치료내용" placeholder="치료내용을 입력해주세요." required>
+								</div>
+                                <div class="label-check1 col2">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>재발</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>완치</span>
+                                    </label>
+                                </div>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+					<!-- # // # -->
+				</fieldset>
+
+				<fieldset class="form-wrap4" id="uiSTEPCONT09">
+					<legend class="tit">9. 최근 3개월 이내 마약을 사용하였거나 혈압강하제, 신경안정제, 수면제, 각성제(흥분제), 진통제 등 약물을 상시 복용한 사실이 있습니까?</legend>
+
+					<!-- # 여부선택 # -->
+					<div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="dd15" data-tabcon="uiFormTabCon6" required>
+							<span>있음</span>
+						</label>
+						<label>
+							<input type="radio" name="dd15">
+							<span>없음</span>
+						</label>
+					</div>
+
+					<div class="ui-tabcon" data-id="uiFormTabCon6">
+						<!-- // -->
+						<dl class="form">
+							<dt>병명</dt>
+							<dd>
+								<div class="text">
+									<input type="text" title="병명" placeholder="병명을 입력해주세요." required>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>치료기간</dt>
+							<dd>
+								<div class="text">
+									<input type="tel" title="치료기간" placeholder="치료기간을 입력해주세요." required>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+                        <dl class="form">
+							<dt>치료병원</dt>
+							<dd>
+								<div class="text">
+									<input type="text" title="치료병원" placeholder="치료병원을 입력해주세요." required>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+                        <dl class="form">
+							<dt>치료내용</dt>
+							<dd>
+								<div class="text">
+									<input type="text" title="치료내용" placeholder="치료내용을 입력해주세요." required>
+								</div>
+                                <div class="label-check1 col2">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>재발</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>완치</span>
+                                    </label>
+                                </div>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+					<!-- # // # -->
+				</fieldset>
+
+				<fieldset class="form-wrap4" id="uiSTEPCONT10">
+					<legend class="tit">10. 최근 5년 이내에 의사로부터 진찰, 검사를 받고 그 결과 입원, 수술, 정밀검사(심전도, 방사선, 건강진단 등)을 받았거나 계속 하여 7일 이상 치료 또는 30일 이상 투약을 받은 적이 있습니까?</legend>
+                    <p class="txt">여기서 ‘계속하여’란 같은 원인으로 치료 시작 후 완료일까지 실제치료, 투약받은 일 수를 말합니다.</p>
+
+					<!-- # 여부선택 # -->
+					<div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="dd16" data-tabcon="uiFormTabCon7" required>
+							<span>있음</span>
+						</label>
+						<label>
+							<input type="radio" name="dd16">
+							<span>없음</span>
+						</label>
+					</div>
+
+					<!-- # 회사수/건수/월보험료 : 예 선택시 노출 # -->
+					<div class="ui-tabcon" data-id="uiFormTabCon7">
+						<!-- // -->
+						<dl class="form">
+							<dt>병명</dt>
+							<dd>
+								<div class="text">
+									<input type="text" title="병명" placeholder="병명을 입력해주세요." required>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>치료기간</dt>
+							<dd>
+								<div class="text">
+									<input type="tel" title="치료기간" placeholder="치료기간을 입력해주세요." required>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+                        <dl class="form">
+							<dt>치료병원</dt>
+							<dd>
+								<div class="text">
+									<input type="text" title="치료병원" placeholder="치료병원을 입력해주세요." required>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+                        <dl class="form">
+							<dt>치료내용</dt>
+							<dd>
+								<div class="text">
+									<input type="text" title="치료내용" placeholder="치료내용을 입력해주세요." required>
+								</div>
+                                <div class="label-check1 col2">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>재발</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>완치</span>
+                                    </label>
+                                </div>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+					<!-- # // # -->
+				</fieldset>
+				<!-- ### // ### -->
+
+                <fieldset class="form-wrap4" id="uiSTEPCONT11">
+					<legend class="tit">11. 현재 임신 중입니까?</legend>
+
+					<!-- # 여부선택 # -->
+					<div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="dd8" data-tabcon="uiFormTabCon8" required>
+							<span>유</span>
+						</label>
+						<label>
+							<input type="radio" name="dd8">
+							<span>무</span>
+						</label>
+					</div>
+
+					<!-- # [CASE] 예 선택시 노출 # -->
+					<dl class="form ui-tabcon" data-id="uiFormTabCon8">
+						<dt>임신주수</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="임신주수" placeholder="임신주수를 입력해주세요." required>
+								<span class="util">회</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+				</fieldset>
+
+				<fieldset class="form-wrap4" id="uiSTEPCONT12">
+					<legend class="tit">12. 임신과정 또는 산전검사에서 아래와 같은 태아 이상 가능성이 발견되었거나 진단을 받은 적이 있습니까?</legend>
+
+					<!-- # 여부선택 # -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd9" required>
+							<span>유</span>
+						</label>
+						<label>
+							<input type="radio" name="dd9">
+							<span>무</span>
+						</label>
+					</div>
+
+                    <!-- # 태아 이상 가능성 선택 # -->
+                    <div class="label-check1 box col2">
+                        <label>
+                            <input type="checkbox">
+                            <span>선천성기형,장애</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>신경학적결손</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>염색체이상</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>태아감염</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>자궁경관무력</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>자궁내발육부전</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>양수과다(소)증</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>태아수종</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>용혈성질환</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>전치태반</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>태반조기박리</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>다태아임신</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>인공수정</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>큰몸증</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>과숙임신</span>
+                        </label>
+                        <label class="block">
+                            <input type="checkbox" checked>
+                            <span>기타</span>
+                        </label>
+                        <input type="text" class="text" title="기타 진단 사항" placeholder="기타 진단 사항을 입력해주세요."> <!-- [D] 기타 선택시 노출 -->
+                    </div>
+				</fieldset>
+
+				<!-- ### [질문3] 최근 1년 이내 추가검사 여부 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT13">
+					<legend class="tit">13. 부업 또는 겸업, 게절적으로 종사하는 업무가 있습니까?</legend>
+					<!-- // -->
+					<div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="dd3" data-tabcon="uiFormTabCon10" required>
+							<span>함</span>
+						</label>
+						<label>
+							<input type="radio" name="dd3">
+							<span>안함</span>
+						</label>
+					</div>
+					<!-- // -->
+
+                    <dl class="form ui-tabcon" data-id="uiFormTabCon10">
+						<dt>업무명</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="업무명" placeholder="종사하는 업무명을 입력해주세요." required>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<fieldset class="form-wrap4" id="uiSTEPCONT14">
+					<legend class="tit">14. 해외위험지역으로 출국할 예정이 있습니까?</legend>
+					<p class="txt">해외위험지역: 전쟁지역, 열대 · 한대 등 미개척지, 등반산악지대</p>
+
+					<!-- # 여부선택 # -->
+					<div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="dd4" data-tabcon="uiFormTabCon11" required>
+							<span>있음</span>
+						</label>
+						<label>
+							<input type="radio" name="dd4">
+							<span>없음</span>
+						</label>
+					</div>
+
+					<div class="ui-tabcon" data-id="uiFormTabCon11">
+                        <!-- // -->
+						<dl class="form">
+							<dt>기간</dt>
+							<dd>
+								<div class="input-date1 text">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+										<input type="text" title="시작날짜 선택" placeholder="YYYY.MM.DD" readonly="">
+									</span>
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+										<input type="text" title="종료날짜 선택" placeholder="YYYY.MM.DD" readonly="">
+									</span>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>지역명</dt>
+							<dd><input type="text" class="text" title="방문지역명" placeholder="방문하시는 지역명을 입력해주세요." required=""></dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>목적</dt>
+							<dd><input type="text" class="text" title="출국 목적" placeholder="출국 목적을 입력해주세요." required=""></dd>
+						</dl>
+						<!-- // -->
+                    </div>
+				</fieldset>
+
+				<fieldset class="form-wrap4" id="uiSTEPCONT15">
+					<legend class="tit">15. 현재 음주를 하십니까?</legend>
+
+					<!-- // -->
+					<div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="dd5" data-tabcon="uiFormTabCon12" required>
+							<span>함</span>
+						</label>
+						<label>
+							<input type="radio" name="dd5">
+							<span>안함</span>
+						</label>
+					</div>
+					<!-- // -->
+
+                    <div class="ui-tabcon" data-id="uiFormTabCon12">
+						<!-- // -->
+						<dl class="form">
+							<dt>음주횟수 (1주)</dt>
+							<dd>
+								<div class="text">
+									<input type="tel" title="한 주 간 음주횟수" placeholder="한 주 음주 횟수를 입력해주세요." required="">
+									<span class="util">회</span>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>음주량 (소주 1회 기준)</dt>
+							<dd>
+								<div class="text">
+									<input type="tel" title="1회 음주량(소주 기준)" placeholder="음주량을 입력해주세요." required="">
+									<span class="util">병</span>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+				</fieldset>
+
+				<fieldset class="form-wrap4" id="uiSTEPCONT16">
+					<legend class="tit">16. 현재 흡연을 하십니까?</legend>
+
+					<!-- // -->
+					<div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="dd6" data-tabcon="uiFormTabCon13" required>
+							<span>함</span>
+						</label>
+						<label>
+							<input type="radio" name="dd6">
+							<span>안함</span>
+						</label>
+					</div>
+					<!-- // -->
+
+                    <div class="ui-tabcon" data-id="uiFormTabCon13">
+						<dl class="form">
+							<dt>흡연량 (1일)</dt>
+							<dd>
+								<div class="text">
+									<input type="tel" title="하루 흡연량" placeholder="하루 흡연량을 입력해주세요." required="">
+									<span class="util">개비</span>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form">
+							<dt>흡연기간 (년)</dt>
+							<dd>
+								<div class="text">
+									<input type="tel" title="흡연기간" placeholder="흡연기간을 입력해주세요." required="">
+									<span class="util">년</span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</fieldset>
+
+				<!-- ######################### -->
+				<!-- [하단영역] 액션버튼 -->
+				<!-- ######################### -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action c1">완료</button>
+				</div>
+				<!-- ######################### -->
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

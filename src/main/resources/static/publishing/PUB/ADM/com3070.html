@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]팝업상세 | 팝업관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-19]	1. 노출 대상자 검색 항목 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>팝업상세</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="tit-sub2">
+			<h3 class="">팝업 정보</h3>
+			<div class="sub">
+				<button type="button" class="btn-sub1 c1">이전 팝업 조회</button>
+			</div>
+			<!--  팝업 상세로 접근 시 버튼노출
+			<div class="sub">
+				<button type="button" class="btn-sub1 c1">이전 팝업 조회</button>
+				<button type="button" class="btn-sub1 c3">삭제</button>
+			</div> -->
+		</div>
+
+		<div class="tbl-write1">
+			<table>
+				<colgroup>
+					<col style="width:120px;">
+					<col>
+					<col style="width:120px;">
+					<col style="width:25%">
+				</colgroup>
+				<tbody>
+                    <tr>
+                        <th scope="row">최초 등록자</th>
+                        <td>관리자(****00)</td>
+                        <th scope="row">최초 등록일</th>
+                        <td>2022.02.22</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">최종 수정자</th>
+                        <td>김길동(****00)</td>
+                        <th scope="row">최종 수정일</th>
+                        <td>2022.02.22</td>
+                    </tr>
+					<tr>
+						<th scope="row">팝업ID<em class="imp"><span>필수</span></em></th>
+						<td colspan="3"><input type="text" name="" id="" class="text" style="width:300px;"></td>
+					</tr>
+					<tr>
+						<th scope="row">위치<em class="imp"><span>필수</span></em></th>
+						<td>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="radio" name="f17" checked="checked">
+									<span>메인</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="f17">
+									<span>화면</span>
+								</label>
+								<input type="text" name="" id="" class="text" style="width:160px;" placeholder="화면ID를 설정해 주세요.">
+								<button type="button" class="btn-sub1 c3">화면ID 검색</button><!-- [M: 2022-07-22 버튼 수정] -->
+							</div>
+						</td>
+						<th scope="row">구분</th>
+						<td>
+							<select name="" id="" class="selectbox" style="width:120px;">
+								<option value="">전사공지</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">팝업명<em class="imp"><span>필수</span></em></th>
+						<td>
+							<input type="text" name="" id="" class="text" style="width:300px;" placeholder="팝업명을 입력해 주세요.">
+						</td>
+						<th scope="row">게시순서</th>
+						<td>
+							<select name="" id="" class="selectbox" style="width:120px;">
+								<option value="">1</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">노출 기간<em class="imp"><span>필수</span></em></th>
+						<td colspan="3">
+							<div class="form-row">
+								<input type="text" class="date" placeholder="시작일 선택">
+								<span class="input-clock">
+									<select name="" id="" class="selectbox">
+										<option value="" selected>01</option>
+										<option value="">02</option>
+										<option value="">03</option>
+										<option value="">04</option>
+										<option value="">05</option>
+										<option value="">06</option>
+										<option value="">07</option>
+										<option value="">08</option>
+										<option value="">09</option>
+										<option value="">10</option>
+										<option value="">11</option>
+										<option value="" >12</option>
+										<option value="">13</option>
+										<option value="">14</option>
+										<option value="">15</option>
+										<option value="">16</option>
+										<option value="">17</option>
+										<option value="">18</option>
+										<option value="">19</option>
+										<option value="">20</option>
+										<option value="">21</option>
+										<option value="">22</option>
+										<option value="">23</option>
+										<option value="">24</option>
+									</select>
+									<span class="util">:</span>
+									<select name="" id="" class="selectbox">
+										<option value="" selected>00</option>
+										<option value="">01</option>
+										<option value="">02</option>
+										<option value="">03</option>
+										<option value="">04</option>
+										<option value="">05</option>
+										<option value="">06</option>
+										<option value="">07</option>
+										<option value="">08</option>
+										<option value="">09</option>
+										<option value="">10</option>
+										<option value="">11</option>
+										<option value="">12</option>
+										<option value="">13</option>
+										<option value="">14</option>
+										<option value="">15</option>
+										<option value="">16</option>
+										<option value="">17</option>
+										<option value="">18</option>
+										<option value="">19</option>
+										<option value="">20</option>
+										<option value="">21</option>
+										<option value="">22</option>
+										<option value="">23</option>
+										<option value="">24</option>
+										<option value="">25</option>
+										<option value="">26</option>
+										<option value="">27</option>
+										<option value="">28</option>
+										<option value="">29</option>
+										<option value="">30</option>
+										<option value="">31</option>
+										<option value="">32</option>
+										<option value="">33</option>
+										<option value="">34</option>
+										<option value="">35</option>
+										<option value="">36</option>
+										<option value="">37</option>
+										<option value="">38</option>
+										<option value="">39</option>
+										<option value="">40</option>
+										<option value="">41</option>
+										<option value="">42</option>
+										<option value="">43</option>
+										<option value="">44</option>
+										<option value="">45</option>
+										<option value="">46</option>
+										<option value="">47</option>
+										<option value="">48</option>
+										<option value="">49</option>
+										<option value="">50</option>
+										<option value="">51</option>
+										<option value="">52</option>
+										<option value="">53</option>
+										<option value="">54</option>
+										<option value="">55</option>
+										<option value="">56</option>
+										<option value="">57</option>
+										<option value="">58</option>
+										<option value="">59</option>
+									</select>
+								</span>
+								~
+								<input type="text" class="date" placeholder="종료일 선택">
+								<span class="input-clock">
+									<select name="" id="" class="selectbox">
+										<option value="" selected>01</option>
+										<option value="">02</option>
+										<option value="">03</option>
+										<option value="">04</option>
+										<option value="">05</option>
+										<option value="">06</option>
+										<option value="">07</option>
+										<option value="">08</option>
+										<option value="">09</option>
+										<option value="">10</option>
+										<option value="">11</option>
+										<option value="">12</option>
+										<option value="">13</option>
+										<option value="">14</option>
+										<option value="">15</option>
+										<option value="">16</option>
+										<option value="">17</option>
+										<option value="">18</option>
+										<option value="">19</option>
+										<option value="">20</option>
+										<option value="">21</option>
+										<option value="">22</option>
+										<option value="">23</option>
+										<option value="">24</option>
+									</select>
+									<span class="util">:</span>
+									<select name="" id="" class="selectbox">
+										<option value="" selected>00</option>
+										<option value="">01</option>
+										<option value="">02</option>
+										<option value="">03</option>
+										<option value="">04</option>
+										<option value="">05</option>
+										<option value="">06</option>
+										<option value="">07</option>
+										<option value="">08</option>
+										<option value="">09</option>
+										<option value="">10</option>
+										<option value="">11</option>
+										<option value="">12</option>
+										<option value="">13</option>
+										<option value="">14</option>
+										<option value="">15</option>
+										<option value="">16</option>
+										<option value="">17</option>
+										<option value="">18</option>
+										<option value="">19</option>
+										<option value="">20</option>
+										<option value="">21</option>
+										<option value="">22</option>
+										<option value="">23</option>
+										<option value="">24</option>
+										<option value="">25</option>
+										<option value="">26</option>
+										<option value="">27</option>
+										<option value="">28</option>
+										<option value="">29</option>
+										<option value="">30</option>
+										<option value="">31</option>
+										<option value="">32</option>
+										<option value="">33</option>
+										<option value="">34</option>
+										<option value="">35</option>
+										<option value="">36</option>
+										<option value="">37</option>
+										<option value="">38</option>
+										<option value="">39</option>
+										<option value="">40</option>
+										<option value="">41</option>
+										<option value="">42</option>
+										<option value="">43</option>
+										<option value="">44</option>
+										<option value="">45</option>
+										<option value="">46</option>
+										<option value="">47</option>
+										<option value="">48</option>
+										<option value="">49</option>
+										<option value="">50</option>
+										<option value="">51</option>
+										<option value="">52</option>
+										<option value="">53</option>
+										<option value="">54</option>
+										<option value="">55</option>
+										<option value="">56</option>
+										<option value="">57</option>
+										<option value="">58</option>
+										<option value="">59</option>
+									</select>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">팝업이미지</th>
+						<td colspan="3"><!-- [M 2022-10-19] 노출 대상자 검색 항목 수정 : colspan 추가 -->
+							<div class="form-row">
+								<span class="wrap-file">
+									<input type="file" tabindex="-1">
+									<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic3">첨부하기</button>
+								</span>
+							</div>
+							<div class="file-div">
+								<span class="file-name">가나다라마바사.jpg <button type="button" class="btn-del1">삭제</button></span>
+							</div>
+							<div class="file-div">
+								<span class="file-name">가나다라마바사.jpg <button type="button" class="btn-del1">삭제</button></span>
+							</div>
+						</td>
+					</tr>
+					<!-- [M 2022-10-19] 노출 대상자 검색 항목 수정 -->
+					<tr>
+						<th scope="row">노출 대상자</th>
+						<td colspan="3">
+							<div class="form-row">
+								<label class="label-check">
+									<input type="checkbox" name="fc1">
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="fc1">
+									<span>내근직</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="fc1">
+									<span>사업단장</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="fc1">
+									<span>지점장</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="fc1" checked>
+									<span>설계사</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="fc1" checked>
+									<span>AM</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="fc1" checked>
+									<span>총무</span>
+								</label>
+							</div>
+						</td>
+					</tr>
+					<!-- // [M 2022-10-19] 노출 대상자 검색 항목 수정 -->
+					<tr>
+						<th scope="row">연결 화면 URL</th>
+						<td colspan="3">
+							<input type="text" name="" id="" style="width:400px;" class="text">
+							<label class="label-check">
+								<input type="radio" name="f2" checked="checked">
+								<span>내부</span>
+							</label>
+							<label class="label-check">
+								<input type="radio" name="f2">
+								<span>외부</span>
+							</label>
+							<label class="label-check">
+								<input type="radio" name="f2">
+								<span>사용 안함</span>
+							</label>
+							<!-- [M : 2022-08-18 수정] -->
+							<button type="button" class="btn-sub1 c3">연결URL</button>
+							<p class="list-dot1"><b>[연결URL] 클릭 후 연결하실 화면을 선택하여 [주소복사]를 해주세요.</b> <br>
+								해당기능은 Internet Explorer에서는 지원되지 않습니다. Internet Explorer에서 등록시 직접입력해주세요.<br>도입APP의 경우 가입 후 IT관리자에게 확인하여 발급된 RF사번으로 로그인이 필요합니다.</p>
+
+							<!--// [M : 2022-08-18 수정] -->
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">그만보기 설정</th>
+						<td>
+
+							<label class="label-check">
+								<input type="radio" name="f5" checked="checked">
+								<span>설정안함</span>
+							</label>
+							<label class="label-check">
+								<input type="radio" name="f5">
+								<span>1일</span>
+							</label>
+							<label class="label-check">
+								<input type="radio" name="f5">
+								<span>3일</span>
+							</label>
+							<label class="label-check">
+								<input type="radio" name="f5">
+								<span>7일</span>
+							</label>
+							<label class="label-check">
+								<input type="radio" name="f5">
+								<span>계속그만보기</span>
+							</label>
+						</td>
+						<th scope="row">노출여부<em class="imp"><span>필수</span></em></th>
+						<td>
+
+							<label class="label-check">
+								<input type="radio" name="f4" checked="checked">
+								<span>노출</span>
+							</label>
+							<label class="label-check">
+								<input type="radio" name="f4">
+								<span>비노출</span>
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">내용</th>
+						<td class="editor" colspan="3">
+							<div style="height:200px;">
+								에디터영역
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c3">취소</button>
+			<button type="button" class="btn-action c2">미리보기</button>
+			<button type="button" class="btn-action c1">저장</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

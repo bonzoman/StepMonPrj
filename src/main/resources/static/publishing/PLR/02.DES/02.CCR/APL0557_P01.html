@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 주요내용확인 | 내용확인 및 동의 | 스마트폰청약 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-15]	① 해당없음 버튼 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>주요내용확인</h1>
+			<button type="button" data-btn="pop-close">주요내용확인 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 주요내용확인 -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">금융소비자보호법 등 관련법령에 따른 상품의 중요사항을 설명하고, 고객이 충분히 이해하셨습니까? <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="rd0" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="rd0">
+						<span>아니요</span>
+					</label>
+				</div>
+				<div class="validation">모든 항목을 확인해야 청약이 가능합니다.</div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [내용확인] 자동차보험 상품특성 안내 -->
+			<!-- ######################### -->
+			<section class="wrap-section3">
+				<h2 class="tit-sub1">자동차보험 상품특성 안내</h2>
+
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">1. 사고발생 내용, 직전 3년 간 사고 유무 및 횟수 등에 따라 보험료가 할인/할증 될 수 있습니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd1" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd1">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd1" disabled> <!-- 비활성화 disabled -->
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">2. 운전자/연령한정 특약 가입 경우, 해당 연령 또는 범위에 포함되지 않는 사람이 운행 중 발생한 사고는 보상하지 않습니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd2" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd2">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd2">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">3. 음주, 무면허, 마약&middot;약물운전 중 사고(사고 후 뺑소니 포함)로 발생한 손해는 본인 부담금이 크며, 특히, 자기차량손해 담보는 보상 대상에서 제외됩니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd3" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd3">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd3">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">4. 자동차의 보유자는 법령에 따라 반드시 의무보험(대인Ⅰ 및 대물 담보)에 가입해야 하며, 미가입 시 과태료가 부과됩니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd4" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd4">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd4">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">5. 자동차손해배상보장법에 따른 의무보험은 원칙적으로 청약을 철회할 수 없지만, 계약자가 같은 종류의 다른 의무보험에 가입되어 있는 때에는 철회가 가능합니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd5" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd5">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd5">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">6. 제 2회 이후의 보험료를 약정한 납입기일까지 납입하지 않으면 보험회사에서 납입을 독촉하게 되며, 이 독촉이 끝나는 날의 24시부터 보험계약이 해지됩니다. 납입을 독촉하는 기간 중 발생한 사고는 보상하나, 계약이 해지된 이후에 발생한 사고는 보상하지 않습니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd6" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd6">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd6">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">7. 자동차의 종류&middot;배기량&middot;용도, 보험가입기간, 법규위반경력, 자동차의구조 또는 운행실태 등에 따라 보험료가 달라질 수 있습니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd7" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd7">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd7">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">8. 사고 발생 시, 과실비율 인정기준을 참고하여 과실비율을 산정하고, 이 기준에 없는 사고 유형의 경우 판결례를 참작하여 적용하며, 소송 제기 시에는 확정판결을 적용합니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd8" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd8">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd8">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">9. 피보험자의 양도, 등록말소, 중복계약의 존재, 폐차인수 증명서 발급 시 등에 한해 의무보험 (대인Ⅰ 및 대물 담보) 계약을 해지할 수 있습니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd9" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd9">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd9">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">10. 법령에 따른 자동차검사를 받지 않거나, 보험금 청구와 관련하여 계약자, 피보험자, 수익자 또는 이들의 법정 대리인의 사기행위로 판명 시에는 보험회사에서 계약을 해지할 수 있습니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd10" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd10">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd10">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">11. 의무보험 계약만 체결된 경우, 계약 전 피보험자 동차에 의무보험이 포함된 다른 유효한 계약이 존재할 때에는 계약을 해제할 수 있습니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd11" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd11">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd11">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">12. 계약자 또는 대리인의 사기로 맺어진 계약, 피보험자동차의 실질적 소유&middot;사용&middot;관리자가 아닌 자격이 없는 자를 기명피보험자로 지정한 계약은 무효입니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd12" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd12">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd12">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- [M 2022-09-30] -->
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">13. 보험기간 시작일과 종료일은 아래와 같습니다.</legend>
+
+					<!-- 시작일/종료일 -->
+					<div class="info-con4 t1">
+						<dl>
+							<dt>시작일</dt>
+							<dd>
+								<ul class="txt-bul1">
+									<li>
+										<div>최초가입/의무보험</div>
+										<div>보험료를 받은 때</div>
+									</li>
+									<li>
+										<div>기타</div>
+										<div>증권에 기재된 첫 날 24시</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt>종료일</dt>
+							<dd>증권에 기재된 마지막 날 24시</dd>
+						</dl>
+					</div>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd13" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd13">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd13">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">14. 자기차량손해 사고 시 보험금을 지급하는 기준이 되는 보험가액은 사고 발생 당시 보험개발원이 정한 최근의 차량기준가액을 말하며, 계약을 체결한 이후 사고가 발생한 시점까지 감가가 반영되어 보험증권에 기재된 자기차량손해의 보험가액보다 작을 수 있습니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd34" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd34">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd14">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">15. 긴급출동서비스는 보험회사에서 정한 한도 만큼 제공하며, 정해진 횟수 만큼 이용을 한 경우 자동으로 종료됩니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd35" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd35">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd35">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">16. 실손 담보 또는 특약(무보험차상해, 다른자동차 운전, 법률비용 담보 등) 발생한 손해액을 초과 하여 보험금을 지급하지 않으며, 다수보험에 중복가입한 경우 비례보상받게 됩니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd36" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd36">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd36">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">17. 개인사업자로서 소득세법에 따른 업무용승용자동차 관련 비용을 전부 인정받으려면 임직원운전 한정특약에 가입해야 하며, 임직원의 범위에 포함하지 않는 사람의 운전 중 발생한 손해는 보상 하지 않습니다.</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd37" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd37">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd37">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<!-- //[M 2022-09-30] -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [내용확인] 보험공통 안내 -->
+			<!-- ######################### -->
+			<section class="wrap-section3">
+				<h2 class="tit-sub1">보험공통 안내</h2>
+
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">1. 주계약&middot;특약 별 보험료, 보장범위, 면책사유 및 기간을 자세히 확인해야 합니다. 같은 보험상품 이더라도 특약의 가입개수에 따라 보험료가 달라질 수 있고, 보험기간도 주계약&middot;특약에 따라 차이가 있을 수 있음을 유의하셨습니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd14" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd14">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd14">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">2. 각 특약별 보장내용을 충분히 확인하고, 가입 필요가 없는 특약은 제외할 필요가 있다는 부분에 대하여 확인하고 이해하셨습니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd15" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd15">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd15">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">3. 청약서 상 질문사항에 사실대로 답하지 않거나, 추후 직업&middot;직무 변경 시 지체 없이 보험회사에 알리지 않을 경우 계약 해지 등 불이익이 발생할 수 있음을 확인하셨습니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd16" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd16">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd16">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">4. 경제적 사정 등으로 보험가입금액을 줄이는 경우, 줄이는 부분만큼 해지시 차감되는 금액이 있어 손실이 발생할 수 있음을 확인하셨습니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd17" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd17">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd17">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">5. 보험계약자는 보험금을 지급받는 사람(수익자)을 지정할 수 있습니다. 보험금을 지급받는 사람 (수익자) 지정 내용을 확인하셨습니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd18" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd18">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd18">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">6. 예금자보호법에 따라 해지환급금(또는 사고보험금)에 기타지급금을 합하여 1인당 최고 5천만원 까지만 보장하며 5천만원을 초과하는 금액은 보호하지 않는다는 사실을 확인하셨습니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd19" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd19">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd19">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">7. 보험계약자는 보험증권을 받은 날로부터 15일 이내(또는 청약을 한 날부터 30일 이내)에 청약을 철회할 수 있음을 확인하셨습니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd20" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd20">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd20">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">8. 계약 체결 과정에서 보험회사의 법 위반 사항이 있는 경우, 계약 체결일로부터 5년 이내의 범위에서 계약자가 위반사항을 안 날로부터 1년 이내에 위법계약 해지를 요구할 수 있음을 확인하셨습니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd21" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd21">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd21">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">9. 가입하신 특별약관(담보)별 보험금 지급 제한 사유 및 이와 관련하여 유의해야할 사항, 보험금 청구 및 지급 절차 등을 확인하셨습니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd22" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd22">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd22">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">10. 상담, 민원, 분쟁조정 등의 처리 및 절차에 관한 사항에 대해 확인하셨습니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd23" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd23">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd23">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">11. 보험사기는 범죄이며 보험사기방지특별법, 형법 등에 의거하여 처벌받을 수 있다는 사실을 확인하셨습니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd24" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd24">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd24">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">12. 보험모집자의 업무 범위(보험료, 고지의무 수령 가능 등)에 대해 확인 하고, 가입하고자 하는 상품이 해당 보험회사의 상품이 맞는지 또는 설명서에 기재된 보험설계사의 성명이 실제 모집한 보험설계사와 일치하는지 확인하셨습니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="rd25" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="rd25">
+							<span>아니요</span>
+						</label>
+						<!-- 2022-11-16 해당없음 버튼 추가 -->
+						<label>
+							<input type="radio" name="rd25">
+							<span>해당없음</span>
+						</label>
+						<!-- //2022-11-16 해당없음 버튼 추가 -->
+					</div>
+				</fieldset>
+				<!-- // -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [취급자정보] -->
+			<!-- ######################### -->
+			<section class="wrap-section3">
+				<h3 class="hide">취급자정보</h3>
+				<!-- # 취급자명(사용자코드) # -->
+				<div class="info-con1">
+					<dl>
+						<dt>취급자 정보</dt>
+						<dd>하다미(1098063)</dd>
+					</dl>
+				</div>
+
+				<!-- # 취급자 비밀번호 # -->
+				<div class="form-wrap1">
+					<dl class="form">
+						<dt>비밀번호</dt>
+						<dd>
+							<input type="password" class="text" title="비밀번호" placeholder="비밀번호를 입력해주세요.">
+
+							<!-- [CASE] 오류:미입력 또는 틀린경우 -->
+							<input type="password" class="text" title="비밀번호" placeholder="비밀번호를 입력해주세요." aria-invalid="true">
+							<div class="validation">비밀번호를 입력해주세요.</div>
+							<div class="validation">비밀번호가 틀렸습니다.<br>3회 오류 시 로그인이 제한되오니 주의바랍니다.</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c3">취소</button>
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+</body>
+</html>

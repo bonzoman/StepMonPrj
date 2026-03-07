@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 서류등록_알림톡발송 | 설계(개인/업무/영업) | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-01]	① 문구 추가
+	*					② legend 클래스명 삭제
+	*					③ 폼 영역 클래스명 삭제
+	*					③ 전체선택 유형의 체크박스 추가
+	*					④ 체크박스 클래스 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>서류등록</h1>
+			<button type="button" data-btn="pop-close">서류등록 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+					<strong>하다미</strong>
+					<span>
+						<span>1997.01.01</span>
+						<span>남</span>
+					</span>
+				</h2>
+				<dl class="data-word3">
+					<dt>차량번호</dt>
+					<dd>55도 1234</dd>
+				</dl>
+				<div class="data3">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+					<dl>
+						<dt>증권번호</dt>
+						<dd>11223369000000</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [안내문구] -->
+			<!-- ######################### -->
+			<div class="tit-section2 t1"><p>등록하실 서류를<br>선택해주세요.</p></div> <!-- [M 2022-09-01] 문구 추가 -->
+			<p class="mes-info2 box">특별약관 검증사진은 URL을 통해 고객이 직접 등록하도록 안내해주세요. 이 방법이 불가능하면 담당LP가 이미지를 전달받아 등록할 수 있어요.</p>
+
+			<!-- ######################### -->
+			<!-- [발송항목] -->
+			<!-- ######################### -->
+			<div class="form-wrap1"> <!-- [M 2022-09-01] 클래스명 삭제 line2 -->
+				<fieldset>
+					<legend>사진검증특약</legend> <!-- [M 2022-09-01] 클래스명 삭제 tit -->
+
+					<!-- [M 2022-09-01] 추가 -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>사진검증특약</span>
+						</label>
+					</div>
+					<!-- //[M 2022-09-01] -->
+
+					<div class="label-check2"> <!-- [M 2022-09-01] 클래스명 변경 label-check1 box2 > label-check2 -->
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>주행거리</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>자녀할인</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>차선이탈방지장치</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>전방추돌방지장치</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>자녀할인</span>
+						</label>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>계약체결 서류(신계약)</legend> <!-- [M 2022-09-01] 클래스명 삭제 tit -->
+
+					<!-- [M 2022-09-01] 추가 -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>계약체결 서류(신계약)</span>
+						</label>
+					</div>
+					<!-- // [M 2022-09-01] -->
+
+					<div class="label-check2"> <!-- [M 2022-09-01] 클래스명 변경 label-check1 box2 > label-check2 -->
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>청약서</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>체결이행동의서</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>마케팅동의서</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>실손중복가입동의서</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>첨부서류</span>
+						</label>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>계약체결 서류(용도확인서)</legend> <!-- [M 2022-09-01] 클래스명 삭제 tit -->
+
+					<!-- [M 2022-09-01] 추가 -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>계약체결 서류(용도확인서)</span>
+						</label>
+					</div>
+					<!-- //[M 2022-09-01] -->
+
+					<div class="label-check2"> <!-- [M 2022-09-01] 클래스명 변경 label-check1 box2 > label-check2 -->
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>신규/승합/운행용도확인서</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>신규/이륜/운행용도확인서</span>
+						</label>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>해지/취소 서류</legend> <!-- [M 2022-09-01] 클래스명 삭제 tit -->
+
+					<!-- [M 2022-09-01] 추가 -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>해지/취소 서류</span>
+						</label>
+					</div>
+					<!-- // [M 2022-09-01] -->
+
+					<div class="label-check2"> <!-- [M 2022-09-01] 클래스명 변경 label-check1 box2 > label-check2 -->
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>신규/희망나눔특약</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>신규/시니어특약</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>사실관계확인서류</span>
+						</label>
+					</div>
+				</fieldset>
+			</div>
+
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">사진등록</button>
+				<button type="button" class="btn-action c1">알림톡발송</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

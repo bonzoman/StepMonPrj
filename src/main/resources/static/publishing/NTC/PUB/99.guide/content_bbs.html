@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>BOARD | CONTENTS | PUBLISHING GUIDE</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<link rel="stylesheet" href="../../resource/css/publish.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<div class="guide-wrap">
+	<header>
+		<h1>
+			<i>롯데손해보험</i> CONTENTS <strong>BOARD</strong>
+			<a href="../99.work/coding_list1.html" class="guide-btn1">작업목록</a>
+		</h1>
+		<nav>
+			<ul>
+				<li><a href="content_basic.html">INFO</a></li>
+				<li><a href="content_txt.html">TITLE/TXT</a></li>
+				<li><a href="content_btn.html">BUTTON</a></li>
+				<li><a href="content_icon.html">ICON</a></li>
+				<li><a href="content_form.html">FORM ELEMENT</a></li>
+				<li><a href="content_formarea.html">FORM 약관/검색</a></li>
+				<li><a href="content_formarea2.html">FORM 입력</a></li>
+				<li><a href="content_tab.html">TAB/TOGGLE</a></li>
+				<li><a href="content_tbl.html">TABLE</a></li>
+				<li><a href="content_box.html">BOX/BANNER</a></li>
+				<li><a href="content_info.html">INFO/DATA</a></li>
+				<li><a href="content_list.html">LIST</a></li>
+				<li class="active"><a href="content_bbs.html" aria-current="page">BOARD</a></li>
+			</ul>
+		</nav>
+	</header>
+	<article class="guide-container">
+		<h1 class="hide">게시판 작업 가이드</h1>
+
+		<!-- ############################## -->
+		<!-- [목록] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">목록</h2>
+			<h3 class="guide-tit2">기본 : .board-list1</h3>
+			<div class="guide-area body">
+				<div class="board-list1">
+					<ul>
+						<!-- # 기본구조 # -->
+						<li>
+							<div class="tit">
+								<i class="cate">분류</i>
+								<strong>게시판제목</strong>
+							</div>
+							<dl class="info">
+								<dt>작성자(소속)</dt>
+								<dd>작성자(소속)</dd>
+								<dt>작성일</dt>
+								<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+							</dl>
+							<div class="data-word2">
+								<em>#키워드</em>
+								<em>#키워드</em>
+								<em>#키워드</em>
+								<em>#키워드</em>
+								<em>#키워드</em>
+								<em>#키워드</em>
+							</div>
+							<div class="data">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>000,000</dd>
+								</dl>
+								<dl class="icon-com1 ic10">
+									<dt>답변</dt>
+									<dd>000,000</dd>
+								</dl>
+								<dl class="icon-com1 ic11">
+									<dt>댓글</dt>
+									<dd>000,000</dd>
+								</dl>
+								<dl class="icon-com1 ic8">
+									<dt>좋아요</dt>
+									<dd>000,000</dd>
+								</dl>
+								<dl class="icon-com1 ic8 checked" title="게시물 좋아요 누름">
+									<dt>좋아요</dt>
+									<dd>000,000</dd>
+								</dl>
+								<dl class="icon-com1 ic13">
+									<dt>발송</dt>
+									<dd>000,000</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- # 링크 추가 # -->
+						<li>
+							<a href="javascript:void(0);">
+								<div class="tit">
+									<i class="cate">분류</i>
+									<strong >게시판제목 : 링크 추가</strong>
+								</div>
+								<dl class="info">
+									<dt>작성자(소속)</dt>
+									<dd>작성자(소속)</dd>
+									<dt>작성일</dt>
+									<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+								</dl>
+								<div class="data">
+									<dl class="icon-com1 ic9">
+										<dt>조회</dt>
+										<dd>000,000</dd>
+									</dl>
+									<dl class="icon-com1 ic10">
+										<dt>답변</dt>
+										<dd>000,000</dd>
+									</dl>
+									<dl class="icon-com1 ic11">
+										<dt>댓글</dt>
+										<dd>000,000</dd>
+									</dl>
+									<dl class="icon-com1 ic8">
+										<dt>좋아요</dt>
+										<dd>000,000</dd>
+									</dl>
+									<dl class="icon-com1 ic8 checked" title="게시물 좋아요 누름">
+										<dt>좋아요</dt>
+										<dd>000,000</dd>
+									</dl>
+									<dl class="icon-com1 ic13">
+										<dt>발송</dt>
+										<dd>000,000</dd>
+									</dl>
+								</div>
+							</a>
+						</li>
+						<!-- # 게시물상단고정 # -->
+						<li>
+							<a href="javascript:void(0);">
+								<i class="state1">중요 게시글</i>
+								<div class="tit">
+									<i class="cate">분류</i>
+									<strong >게시판제목 : 게시물상단고정</strong>
+								</div>
+								<dl class="info">
+									<dt>작성자(소속)</dt>
+									<dd>작성자(소속)</dd>
+									<dt>작성일</dt>
+									<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+								</dl>
+								<div class="data">
+									<dl class="icon-com1 ic9">
+										<dt>조회</dt>
+										<dd>000,000</dd>
+									</dl>
+									<dl class="icon-com1 ic10">
+										<dt>답변</dt>
+										<dd>000,000</dd>
+									</dl>
+								</div>
+							</a>
+						</li>
+						<!-- # 게시물상단고정 + 안읽음 # -->
+						<li>
+							<a href="javascript:void(0);">
+								<i class="state1">중요 게시글</i>
+								<div class="tit">
+									<i class="cate">분류</i>
+									<strong>게시판제목 : 게시물상단고정 + 안읽음</strong>
+									<i class="icon-com1 ic12">첨부파일존재</i>
+									<i class="state2">게시물안읽음</i>
+								</div>
+								<dl class="info">
+									<dt>작성자(소속)</dt>
+									<dd>작성자(소속)</dd>
+									<dt>작성일</dt>
+									<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+								</dl>
+								<div class="data">
+									<dl class="icon-com1 ic9">
+										<dt>조회</dt>
+										<dd>000,000</dd>
+									</dl>
+									<dl class="icon-com1 ic11">
+										<dt>댓글</dt>
+										<dd>000,000</dd>
+									</dl>
+									<dl class="icon-com1 ic8 checked" title="게시물 좋아요 누름">
+										<dt>좋아요</dt>
+										<dd>000,000</dd>
+									</dl>
+								</div>
+							</a>
+						</li>
+						<!-- # QNA # -->
+						<li>
+							<a href="javascript:void(0);">
+								<i class="icon-txt4 ic1">질문</i>
+								<i class="cate">분류</i>
+								<div class="tit">
+									<strong>게시판제목 : Q&amp;A</strong>
+								</div>
+								<dl class="info">
+									<dt>작성자(소속)</dt>
+									<dd>작성자(소속)</dd>
+									<dt>작성일</dt>
+									<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+								</dl>
+								<div class="data">
+									<dl class="icon-com1 ic9">
+										<dt>조회</dt>
+										<dd>000,000</dd>
+									</dl>
+									<dl class="icon-com1 ic10">
+										<dt>답변</dt>
+										<dd>000,000</dd>
+									</dl>
+								</div>
+							</a>
+						</li>
+						<!-- # 첨부파일 # -->
+						<li>
+							<a href="javascript:void(0);">
+								<div class="tit">
+									<strong>게시판제목 : 첨부파일</strong>
+									<i class="icon-com1 ic12">첨부파일존재</i>
+								</div>
+								<dl class="info">
+									<dt>작성일</dt>
+									<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+								</dl>
+								<div class="data">
+									<dl class="icon-com1 ic13">
+										<dt>발송</dt>
+										<dd>000,000</dd>
+									</dl>
+								</div>
+							</a>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">댓글 : .board-list2</h3>
+			<div class="guide-area body">
+				<div class="board-list2">
+					<ul>
+						<!-- 기본구성 -->
+						<li>
+							<!-- // -->
+							<dl class="info">
+								<dt>작성자(소속)</dt>
+								<dd class="data-info1"> <!-- [M 2022-05-12] 클래스명 변경 -->
+									<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+									<span><strong>작성자</strong><span>(소속단)</span></span> <!-- [M 2022-05-12] 마크업 변경 : 이름과 지점 구분 -->
+									<span><em class="icon-grade1">우수설계사</em></span>
+								</dd>
+								<dt>작성일</dt>
+								<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+							</dl>
+							<!-- // -->
+							<div class="cont">작성내용 노출 영역</div>
+							<!-- // -->
+							<label class="icon-com1 ic16">
+								<input type="checkbox">
+								<span>도움돼요 <i>11</i></span>
+							</label>
+							<!-- // -->
+							<div class="btn">
+								<button type="button" class="btn-sub3 c2">수정</button>
+								<button type="button" class="btn-sub3 c2">삭제</button>
+							</div>
+							<!-- // -->
+						</li>
+						<!-- 비공개 -->
+						<li>
+							<dl class="info">
+								<dt>작성자(소속)</dt>
+								<dd>
+									<span class="img"><!-- [@개발요청] 이미지태그 삭제 필수 --></span>
+									<span><strong>비공개</strong></span>
+								</dd>
+								<dt>작성일</dt>
+								<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+							</dl>
+							<div class="cont">비공개 답변입니다.</div>
+						</li>
+						<li>
+							<dl class="info">
+								<dt>작성자(소속)</dt>
+								<dd class="data-info1">
+									<span><strong>작성자</strong><span>(소속단)</span></span>
+									<span>내용</span>
+								</dd>
+								<dt>작성일</dt>
+								<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+							</dl>
+							<div class="cont">비공개 답변입니다.</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">노하우/컨텐츠랩 : .board-list3</h3>
+			<div class="guide-area body">
+				<div class="board-list3">
+					<ul>
+						<!-- // -->
+						<li>
+							<!-- [제목] -->
+							<strong class="tit">제목 <mark>검색어</mark></strong>
+							<!-- [상품명] -->
+							<div class="txt">상품명 <mark>검색어</mark></div>
+							<!-- [지급률] -->
+							<div class="data3 ic1">지급률 450%</div>
+							<!-- [월납입보험료] -->
+							<div class="data-num1">월 <strong>000,000,000</strong><span>원</span></div>
+							<!-- [해시태그] -->
+							<div class="data-word2">
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span><mark>#해시태그</mark></span>
+							</div>
+							<!-- [작성자] -->
+							<div class="data-info1">
+								<span class="img"><img src="../../resource/img/com/noimg.png" alt=""></span> <!-- [D] 이미지없음 : /resource/img/com/noimg.png -->
+								<span><strong>이름</strong></span>
+								<span><em class="icon-grade1">우수설계사</em></span> <!-- [D] 우수설계자일 경우 노출 -->
+							</div>
+							<!-- [작성일] -->
+							<dl class="data2">
+								<dt>작성일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<!-- [조회/설계복사] -->
+							<div class="data1">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>0000</dd>
+								</dl>
+								<dl class="icon-com1 ic15">
+									<dt>설계복사</dt>
+									<dd>000</dd>
+								</dl>
+							</div>
+							<!-- // -->
+						</li>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<!-- [상태] -->
+								<i class="icon-state2 ic1">승인대기중</i>
+								<i class="icon-state2 ic4">승인완료</i>
+								<i class="icon-state2 ic7">반려</i>
+
+								<!-- [NO.1] : NO.1일 경우 노출 -->
+								<div class="info">
+									<em>No.1</em>
+									<span>@연령대 대상 판매1등</span>
+								</div>
+
+								<!-- [제목] -->
+								<strong class="tit">제목</strong>
+
+								<!-- [상품명] -->
+								<div class="txt">상품명</div>
+
+								<!-- [월납입보험료] : NO.1일 경우 미노출 -->
+								<div class="data-num1">월 <strong>000,000,000</strong><span>원</span></div>
+
+								<!-- [해시태그] -->
+								<div class="data-word2">
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+								</div>
+
+								<!-- [승인요청일] : [D] 승인대기중/반려 일 경우 노출 -->
+								<dl class="data3">
+									<dt>승인요청일</dt>
+									<dd>0000.00.00 00:00</dd>
+								</dl>
+
+								<!-- [D] 승인완료 일 경우 노출 -->
+								<!-- [등록일] -->
+								<dl class="data2">
+									<dt>등록일</dt>
+									<dd>0000.00.00</dd>
+								</dl>
+								<!-- [조회/복사] -->
+								<div class="data1">
+									<dl class="icon-com1 ic9">
+										<dt>조회</dt>
+										<dd>000</dd>
+									</dl>
+									<dl class="icon-com1 ic15">
+										<dt>설계복사</dt>
+										<dd>0000</dd>
+									</dl>
+								</div>
+								<!-- [//] -->
+							</a>
+						</li>
+						<!-- // -->
+						<li>
+							<!-- [상태] -->
+							<i class="icon-state2 ic4">모집중</i>
+							<i class="icon-state2 ic4">신청중</i>
+							<i class="icon-state2 ic1">승인대기중</i>
+
+							<!-- [제목] -->
+							<strong class="tit">제목</strong>
+
+							<!-- [해시태그] -->
+							<div class="data-word2">
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+							</div>
+							<!-- [기여도] -->
+							<div class="area-progress4" style="--el-progress:50;">
+								<dl>
+									<dt>모집자 기여율</dt>
+									<dd><strong>50</strong><span>%</span></dd>
+								</dl>
+								<dl>
+									<dt>신청자 기여율</dt>
+									<dd><strong>50</strong><span>%</span></dd>
+								</dl>
+							</div>
+							<!-- [등록일] -->
+							<dl class="data2">
+								<dt>등록일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<!-- [조회/복사] -->
+							<div class="data1">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>000</dd>
+								</dl>
+								<dl class="icon-com1 ic15">
+									<dt>설계복사</dt>
+									<dd>0000</dd>
+								</dl>
+							</div>
+							<!-- [버튼] -->
+							<div class="area-btn1">
+								<button type="button" class="btn-com1">수정</button>
+								<button type="button" class="btn-com1">삭제</button>
+							</div>
+							<!-- [//] -->
+						</li>
+						<!-- // -->
+						<li>
+							<!-- [제목] -->
+							<strong class="tit">제목</strong>
+
+							<!-- [설계사] -->
+							<div class="data-info1">
+								<span class="img"><img src="../../resource/img/com/img_man2030.png" alt=""></span>
+								<span class="icon-star" data-value="3">평점 3점</span>
+								<span><strong>설계사명</strong></span>
+								<span><em class="icon-grade1">우수설계사</em></span> <!-- [D] 우수설계자일 경우 노출 -->
+							</div>
+
+							<!-- [해시태그] -->
+							<div class="data-word2">
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+							</div>
+							<!-- [기여도] -->
+							<div class="area-progress4" style="--el-progress:50;">
+								<dl>
+									<dt>모집자 기여율</dt>
+									<dd><strong>50</strong><span>%</span></dd>
+								</dl>
+								<dl>
+									<dt>신청자 기여율</dt>
+									<dd><strong>50</strong><span>%</span></dd>
+								</dl>
+							</div>
+							<!-- [등록일] -->
+							<dl class="data2">
+								<dt>등록일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<!-- [조회/복사] -->
+							<div class="data1">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>000</dd>
+								</dl>
+								<dl class="icon-com1 ic15">
+									<dt>설계복사</dt>
+									<dd>0000</dd>
+								</dl>
+							</div>
+							<!-- [//] -->
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+
+				<div class="board-list3">
+					<dl>
+						<dt class="tit">
+							<!-- [상태] -->
+							<span>
+								<i class="icon-state2 ic4">모집중</i>
+								<i class="icon-state2 ic4">신청중</i>
+								<i class="icon-state2 ic1">승인대기중</i>
+							</span>
+							<!-- [제목] -->
+							<strong>제목</strong>
+						</dt>
+						<!-- [해시태그] -->
+						<dd class="data-word2">
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+						</dd>
+						<!-- [기여도] -->
+						<dd class="area-progress4" style="--el-progress:50;">
+							<dl>
+								<dt>모집자 기여율</dt>
+								<dd><strong>50</strong><span>%</span></dd>
+							</dl>
+							<dl>
+								<dt>신청자 기여율</dt>
+								<dd><strong>50</strong><span>%</span></dd>
+							</dl>
+						</dd>
+						<!-- [기여도] -->
+						<dd class="area-progress4">
+							<dl>
+								<dt>기여율</dt>
+								<dd>협의희망</dd>
+							</dl>
+						</dd>
+						<!-- [등록일] -->
+						<dd class="data2">
+							<dl>
+								<dt>등록일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+						</dd>
+						<!-- [조회/복사] -->
+						<dd class="data1">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic15">
+								<dt>설계복사</dt>
+								<dd>0000</dd>
+							</dl>
+						</dd>
+						<!-- [버튼] -->
+						<dd class="area-btn1">
+							<button type="button" class="btn-com1">수정</button>
+							<button type="button" class="btn-com1">삭제</button>
+						</dd>
+						<!-- [//] -->
+					</dl>
+				</div>
+
+				<hr class="guide-line2">
+
+				<div class="board-list3 t1">
+					<ul>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<!-- [이미지] -->
+								<div class="img"><img src="../../resource/img/temp/@img_banner5.png" alt=""/></div>
+								<!-- [제목] -->
+								<strong class="tit">제목</strong>
+								<!-- [내용] -->
+								<div class="txt">내용</div>
+								<!-- [해시태그] -->
+								<div class="data-word2">
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+								</div>
+								<!-- [작성일] -->
+								<dl class="data2">
+									<dt>작성일</dt>
+									<dd>0000.00.00</dd>
+								</dl>
+								<!-- [조회/설계복사] -->
+								<div class="data1">
+									<dl class="icon-com1 ic9">
+										<dt>조회</dt>
+										<dd>0000</dd>
+									</dl>
+									<dl class="icon-com1 ic13">
+										<dt>발송</dt>
+										<dd>000</dd>
+									</dl>
+								</div>
+								<!-- // -->
+							</a>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+			</div>
+			<div class="guide-area popup">
+				<div class="board-list3">
+					<ul>
+						<!-- // -->
+						<li>
+							<!-- [제목] -->
+							<strong class="tit">제목 <mark>검색어</mark></strong>
+							<!-- [상품명] -->
+							<div class="txt">상품명 <mark>검색어</mark></div>
+							<!-- [지급률] -->
+							<div class="data3 ic1">지급률 450%</div>
+							<div class="data3 ic2">지급률 450%</div>
+							<div class="data3 ic3">지급률 450%</div>
+							<!-- [월납입보험료] -->
+							<div class="data-num1">월 <strong>000,000,000</strong><span>원</span></div>
+							<!-- [해시태그] -->
+							<div class="data-word2">
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span>#해시태그</span>
+								<span><mark>#해시태그</mark></span>
+							</div>
+							<!-- [작성자] -->
+							<div class="data-info1">
+								<span class="img"><img src="../../resource/img/com/noimg.png" alt=""></span> <!-- [D] 이미지없음 : /resource/img/com/noimg.png -->
+								<span><strong>이름</strong></span>
+								<span><em class="icon-grade1">우수설계사</em></span> <!-- [D] 우수설계자일 경우 노출 -->
+							</div>
+							<!-- [작성일] -->
+							<dl class="data2">
+								<dt>작성일</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<!-- [조회/설계복사] -->
+							<div class="data1">
+								<dl class="icon-com1 ic9">
+									<dt>조회</dt>
+									<dd>0000</dd>
+								</dl>
+								<dl class="icon-com1 ic15">
+									<dt>설계복사</dt>
+									<dd>000</dd>
+								</dl>
+							</div>
+							<!-- // -->
+						</li>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<!-- [상태] -->
+								<i class="icon-state2 ic1">승인대기중</i>
+								<i class="icon-state2 ic4">승인완료</i>
+								<i class="icon-state2 ic7">반려</i>
+
+								<!-- [NO.1] : NO.1일 경우 노출 -->
+								<div class="info">
+									<em>No.1</em>
+									<span>@연령대 대상 판매1등</span>
+								</div>
+
+								<!-- [제목] -->
+								<strong class="tit">제목</strong>
+
+								<!-- [상품명] -->
+								<div class="txt">상품명</div>
+
+								<!-- [월납입보험료] : NO.1일 경우 미노출 -->
+								<div class="data-num1">월 <strong>000,000,000</strong><span>원</span></div>
+
+								<!-- [해시태그] -->
+								<div class="data-word2">
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+									<span>#해시태그</span>
+								</div>
+
+								<!-- [승인요청일] : [D] 승인대기중/반려 일 경우 노출 -->
+								<dl class="data3">
+									<dt>승인요청일</dt>
+									<dd>0000.00.00 00:00</dd>
+								</dl>
+
+								<!-- [D] 승인완료 일 경우 노출 -->
+								<!-- [등록일] -->
+								<dl class="data2">
+									<dt>등록일</dt>
+									<dd>0000.00.00</dd>
+								</dl>
+								<!-- [조회/복사] -->
+								<div class="data1">
+									<dl class="icon-com1 ic9">
+										<dt>조회</dt>
+										<dd>000</dd>
+									</dl>
+									<dl class="icon-com1 ic15">
+										<dt>설계복사</dt>
+										<dd>0000</dd>
+									</dl>
+								</div>
+								<!-- [//] -->
+							</a>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">BEST : .board-list4</h3>
+			<div class="guide-area body">
+				<div class="board-list4">
+					<ul>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<div class="data-info1">
+									<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+									<span><strong>타이틀</strong></span>
+									<span><em class="icon-grade1">우수설계사</em></span>
+								</div>
+								<span class="txt">부가설명</span>
+								<em class="icon-txt1 ic1">연령대 대상 판매1등</em>
+							</a>
+						</li>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<div class="data-info1">
+									<span class="img"><img src="../../resource/img/temp/@img_user2.png" alt=""></span>
+									<span><strong>남궁가나다라마</strong></span>
+								</div>
+								<span class="txt">간편325건강보험(라이프)</span>
+								<em class="icon-txt1 ic1">20대 대상 판매1등</em>
+							</a>
+						</li>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<div class="data-info1">
+									<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+									<span><strong>김롯데</strong></span>
+								</div>
+								<span class="txt">더끌림 건강보험</span>
+								<em class="icon-txt1 ic1">40대 대상 판매1등</em>
+							</a>
+						</li>
+						<!-- // -->
+					</ul>
+					<a href="javascript:void(0);" class="btn-util1 t1 ic2">더보기</a>
+				</div>
+
+				<hr class="guide-line2">
+
+				<div class="board-list4 t1">
+					<ol>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<div class="img"><img src="../../resource/img/temp/@img_banner5.png" alt=""/></div>
+								<strong class="tit">제목</strong>
+							</a>
+						</li>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<div class="img"><img src="../../resource/img/temp/@img_banner4.png" alt=""/></div>
+								<strong class="tit">컨텐츠 제목이 노출됩니다.</strong>
+							</a>
+						</li>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<div class="img"><img src="../../resource/img/temp/@img_banner5.png" alt=""/></div>
+								<strong class="tit">컨텐츠 제목이 길 경우 두 줄 말줄임 표시가 됩니다.</strong>
+							</a>
+						</li>
+						<!-- // -->
+					</ol>
+				</div>
+			</div>
+		</section>
+
+		<!-- ############################## -->
+		<!-- [상세] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">상세</h2>
+			<h3 class="guide-tit2">기본 : .board-view1</h3>
+			<div class="guide-area body" style="padding-bottom:14.8rem;transform:translateZ(0)">
+				<article class="board-view1">
+					<!-- # 게시물 정보 # -->
+					<header>
+						<div class="tit">
+							<i class="icon-txt4 ic1">질문</i>
+							<i class="cate">분류</i>
+							<i class="icon-state2 ic1">승인 대기중</i>
+							<i class="icon-state2 ic2">승인 완료</i>
+							<i class="icon-state2 ic3">반려</i>
+							<i class="state1">중요 게시글</i>
+							<i class="cate">분류</i>
+							<h1>게시판제목<i class="icon-com1 ic12">첨부파일존재</i></h1>
+						</div>
+						<dl class="info">
+							<dt>작성자(소속)</dt>
+							<dd>작성자(소속)</dd>
+							<dt>작성일</dt>
+							<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+						</dl>
+						<dl class="info img">
+							<dt>작성자(소속)</dt>
+							<dd>
+								<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+								작성자(소속단/소속지점)
+							</dd>
+						</dl>
+						<dl class="info2">
+							<dt>승인 요청일시</dt>
+							<dd>0000.00.00 00:00</dd>
+						</dl>
+						<div class="data-word2">
+							<em>#키워드</em>
+							<em>#키워드</em>
+							<em>#키워드</em>
+							<em>#키워드</em>
+							<em>#키워드</em>
+							<em>#키워드</em>
+						</div>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000,000</dd>
+							</dl>
+							<dl class="icon-com1 ic10">
+								<dt>답변</dt>
+								<dd>000,000</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>000,000</dd>
+							</dl>
+							<label class="icon-com1 ic8">
+								<input type="checkbox">
+								<span>좋아요 700</span>
+							</label>
+							<label class="icon-com1 ic8">
+								<input type="checkbox" checked>
+								<span>좋아요 700</span>
+							</label>
+							<dl class="icon-com1 ic13">
+								<dt>발송</dt>
+								<dd>000,000</dd>
+							</dl>
+							<dl class="icon-com1 ic15">
+								<dt>설계복사</dt>
+								<dd>000,000</dd>
+							</dl>
+							<button type="button" class="icon-com1 ic15">설계복사 00</button>
+						</div>
+					</header>
+
+					<!-- # 게시물 작성 내용 # -->
+					<div class="cont">
+						게시물 내용이 노출 됩니다.
+					</div>
+
+					<!-- # 게시물 첨부파일 # -->
+					<aside>
+						<!-- [CASE1] 이미지 파일 -->
+						<dl class="tit-sub3">
+							<dt class="icon-com1 ic23">이미지 첨부 00건</dt>
+							<dd class="data-file2">
+								<ul>
+									<li><a href="javascript:void(0);" class="img"><img src="../../resource/img/temp/@img_banner1.png" alt="첨부이미지1"></a></li>
+									<li><a href="javascript:void(0);" class="img"><img src="../../resource/img/temp/@img_banner2.png" alt="첨부이미지2"></a></li>
+									<li><a href="javascript:void(0);" class="img"><img src="../../resource/img/temp/@img_banner1.png" alt="첨부이미지3"></a></li>
+									<li><a href="javascript:void(0);" class="img"><img src="../../resource/img/temp/@img_banner2.png" alt="첨부이미지4"></a></li>
+								</ul>
+							</dd>
+						</dl>
+						<!-- [CASE2] 첨부파일 / 관련컨텐츠 -->
+						<div class="area-toggle1" data-autoset="toggle">
+							<!-- 관련 컨텐츠 -->
+							<dl>
+								<dt class="tit">
+									<strong class="icon-com1 ic14">관련 컨텐츠 00건</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">관련 컨텐츠 상세보기</button>
+								</dt>
+								<dd data-toggle="content" class="info-data1 t1 bg">
+									<ul>
+										<!-- // -->
+										<li>
+											<a href="javascript:void(0);">
+												<strong class="tit">뇌혈관질환 진단비 분석</strong>
+												<span class="img"><img src="../../resource/img/com/noimg.png" alt=""></span>
+												<div class="data-word2">
+													<span>#보험서비스 발송</span>
+													<span>#상품</span>
+												</div>
+											</a>
+										</li>
+										<!-- // -->
+										<li>
+											<a href="javascript:void(0);">
+												<strong class="tit">뇌혈관질환 진단비 분석</strong>
+												<span class="img"><img src="../../resource/img/temp/@img_banner1.png" alt=""></span>
+												<div class="data-word2">
+													<span>#보험서비스 발송</span>
+													<span>#상품</span>
+												</div>
+											</a>
+										</li>
+										<!-- // -->
+									</ul>
+								</dd>
+							</dl>
+							<!-- 첨부파일 -->
+							<dl>
+								<dt class="tit">
+									<strong class="icon-com1 ic12">첨부파일 00건</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">첨부파일 상세보기</button>
+								</dt>
+								<dd data-toggle="content" class="data-file1">
+									<ul>
+										<li>
+											<span>파일명.psd</span>
+											<button type="button" class="icon-com1 ic7 simple">파일명.psd 다운로드</button>
+										</li>
+										<li>
+											<span>파일명.psd</span>
+											<button type="button" class="icon-com1 ic6 simple">파일명.psd 삭제</button>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+							<!-- // -->
+						</div>
+						<!-- // -->
+					</aside>
+
+					<!-- # 댓글 영역 # -->
+					<footer>
+						<!-- A 답변 영역 -->
+						<div class="tit-section">
+							<i class="icon-txt4 ic2">답변</i>
+							<p>답변을 달아 도움을 주세요</p>
+						</div>
+
+						<!-- 댓글 입력 -->
+						<fieldset class="textarea">
+							<legend>댓글입력</legend>
+							<textarea cols="50" rows="3" title="[@대체텍스트]">DEFAULT</textarea>
+							<div class="area">
+								<span class="util2"><strong>0</strong>/4,000자</span>
+								<button type="button" class="btn-sub3 c1">등록</button>
+							</div>
+						</fieldset>
+
+						<!-- 댓글 총 건수 -->
+						<div class="area-info1">
+							<p>총 <strong>171건</strong></p>
+							<div class="side btn-util3">
+								<button type="button" class="active" title="선택됨">최신순</button>
+								<button type="button">도움순</button>
+							</div>
+						</div>
+
+						<!-- 댓글 목록 -->
+						<div class="board-list2">
+							<ul>
+								<!-- 기본구성 -->
+								<li>
+									<!-- # 작성자 # -->
+									<dl class="info">
+										<dt>작성자(소속)</dt>
+										<dd class="data-info1">
+											<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+											<span><strong>작성자</strong><span>(소속단/소속지점)</span></span>
+											<span><em class="icon-grade1">우수설계사</em></span>
+										</dd>
+										<dt>작성일</dt>
+										<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+									</dl>
+									<!-- # 작성내용 # -->
+									<div class="cont">작성내용 노출 영역</div>
+									<!-- # 도움돼요 # -->
+									<label class="icon-com1 ic16">
+										<input type="checkbox">
+										<span>도움돼요 <i>11</i></span>
+									</label>
+									<!-- # 버튼 # -->
+									<div class="btn">
+										<button type="button" class="btn-sub3 c2">수정</button>
+										<button type="button" class="btn-sub3 c2">삭제</button>
+									</div>
+									<!-- # // # -->
+								</li>
+								<!-- 비공개 -->
+								<li>
+									<!-- # 작성자 : 비공개 # -->
+									<dl class="info">
+										<dt>작성자(소속)</dt>
+										<dd class="data-info1">
+											<span class="img"><!-- [@개발요청] 이미지태그 삭제 필수 --></span>
+											<strong>비공개</strong>
+										</dd>
+										<dt>작성일</dt>
+										<dd><time datetime="2022-01-01">2022.01.01 00:00</time></dd>
+									</dl>
+									<!-- # 작성내용 # -->
+									<div class="cont">비공개 답변입니다.</div>
+									<!-- # 버튼 # -->
+									<div class="btn">
+										<button type="button" class="btn-sub3 c2">수정</button>
+										<button type="button" class="btn-sub3 c2">삭제</button>
+									</div>
+									<!-- # // # -->
+								</li>
+							</ul>
+
+							<div class="area-btn2"><button type="button" class="btn-util2">더보기 <span>(2/10)</span></button></div>
+						</div>
+					</footer>
+					<!-- # // # -->
+				</article>
+			</div>
+			<hr class="guide-line2">
+			<div class="guide-area body">
+				<article class="board-view1 t1">
+					<!-- # 게시물 정보 # -->
+					<header>
+						<div class="tit">
+							<h1>게시판제목</h1>
+						</div>
+						<a href="javascript:void(0);" class="area-img1" title="10개 이미지 더보기">
+							<img src="../../resource/img/temp/@img_banner4.png" alt="">
+							<span class="side"><b>1</b>/10</span>
+						</a>
+						<div class="data-word2">
+							<em>#키워드</em>
+							<em>#키워드</em>
+							<em>#키워드</em>
+							<em>#키워드</em>
+							<em>#키워드</em>
+							<em>#키워드</em>
+						</div>
+						<dl class="data2">
+							<dt>승인 요청일시</dt>
+							<dd>0000.00.00 00:00</dd>
+						</dl>
+						<div class="data">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000,000</dd>
+							</dl>
+							<dl class="icon-com1 ic13">
+								<dt>발송</dt>
+								<dd>000,000</dd>
+							</dl>
+						</div>
+					</header>
+
+					<!-- # 게시물 작성 내용 # -->
+					<div class="cont">
+						게시물 내용이 노출 됩니다.
+					</div>
+					<!-- # // # -->
+				</article>
+			</div>
+		</section>
+		<!-- ############################## -->
+	</article>
+</div>
+<script src="../../resource/js/publish.plugin.js"></script>
+<script src="../../resource/js/publish.common.js"></script>
+<script>
+//<!--
+
+//-->
+</script>
+</body>
+</html>

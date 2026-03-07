@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 케어상세 | 케어신청관리 | 케어프로그램</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>케어상세</h1>
+			<button type="button" data-btn="pop-close">케어상세 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [목록] -->
+			<!-- ######################### -->
+			<div class="info-step1 t2">
+				<ol>
+					<!-- ### 케어요청 ### -->
+					<li>
+						<span>케어요청</span>
+						<div class="data1">
+							<ul>
+								<li>
+									<div class="tit">
+										<strong>신청완료</strong>
+										<p>2022.01.24</p>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<strong>승인대기</strong>
+										<p>2022.01.25</p>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<strong>승인완료</strong>
+										<p>2022.01.28</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- ### 접수 ### -->
+					<li>
+						<span>접수</span>
+						<div class="data1">
+							<ul>
+								<li>
+									<div class="tit">
+										<strong>접수</strong>
+										<p>2022.01.28</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- ### 관리(유선) ### -->
+					<li>
+						<span>관리(유선)</span>
+						<div class="data1" data-autoset="toggle">
+							<ul>
+								<li>
+									<div class="tit">
+										<strong>고객접촉</strong>
+										<p>유선연락</p>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</div>
+									<div class="area-toggle" data-toggle="content">
+										<p class="date">2022.01.20</p>
+										<div>‘빨리 준비할수록 돈 버는 건강 상식’ 컨텐츠 발송</div>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<strong>고객접촉</strong>
+										<p>유선연락</p>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</div>
+									<div class="area-toggle" data-toggle="content">
+										<p class="date">2022.01.20</p>
+										<div>‘빨리 준비할수록 돈 버는 건강 상식’ 컨텐츠 발송</div>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<strong>고객접촉</strong>
+										<p>유선연락</p>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</div>
+									<div class="area-toggle" data-toggle="content">
+										<p class="date">2022.01.20</p>
+										<div>‘빨리 준비할수록 돈 버는 건강 상식’ 컨텐츠 발송</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- ### 관리(컨텐츠 발송) ### -->
+					<li>
+						<span>관리(컨텐츠 발송)</span>
+						<div class="data1" data-autoset="toggle">
+							<ul>
+								<li>
+									<div class="tit">
+										<strong>고객접촉</strong>
+										<p>컨텐츠발송</p>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</div>
+									<div class="area-toggle" data-toggle="content">
+										<p class="date">2022.01.30</p>
+										<div>‘빨리 준비할수록 돈 버는 건강 상식’ 컨텐츠 발송</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- ### 계약변경내역 ### -->
+					<li>
+						<span>계약변경내역</span>
+						<div class="data1" data-autoset="toggle">
+							<ul>
+								<li>
+									<div class="tit">
+										<strong>일반배서</strong>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</div>
+									<div class="area-toggle" data-toggle="content">
+										<p class="date">2022.01.30</p>
+										<div>상해사망(갱신형)<br>자동갱신<br>전기납<br>03년만기<br>50,000,000원<br>보험료 600원</div>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<strong>상해사망(갱신형)</strong>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</div>
+									<div class="area-toggle" data-toggle="content">
+										<p class="date">2022.01.30</p>
+										<div>상해사망(갱신형)<br>자동갱신<br>전기납<br>03년만기<br>50,000,000원<br>보험료 600원</div>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<strong>목적물 건물구조 수용장소</strong>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</div>
+									<div class="area-toggle" data-toggle="content">
+										<p class="date">2022.01.30</p>
+										<div>제1건물 : 기둥 - 철근콘크리트조 지붕=-슬래브즙  벽-콘크리트벽 지상1층 지하0층 1급 79.0m2  부호1내 부호2 분산수용함 79.0m2 </div>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<strong>세부내용</strong>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</div>
+									<div class="area-toggle" data-toggle="content">
+										<p class="date">2022.01.30</p>
+										<div>경기 의정부시 평화로202번길 20 101동 1012호 (호원동, 신일유토빌플러스 아파트) 내 일반가재일체</div>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<strong>목적물(부호1): 건물(실손전… </strong>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</div>
+									<div class="area-toggle" data-toggle="content">
+										<p class="date">2022.01.30</p>
+										<div>15년납 15년만기 10,000만원 2,000원 급수:1급 정상</div>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<strong>수용장소</strong>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</div>
+									<div class="area-toggle" data-toggle="content">
+										<p class="date">2022.01.30</p>
+										<div>건물내</div>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<strong>피보험자</strong>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</div>
+									<div class="area-toggle" data-toggle="content">
+										<p class="date">2022.01.30</p>
+										<div>김정국 200101-33333333<br>계약자와의 관계 : 자녀</div>
+									</div>
+								</li>
+								<li>
+									<div class="tit">
+										<strong>태아) 상해수술비(1~5종)…</strong>
+										<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+									</div>
+									<div class="area-toggle" data-toggle="content">
+										<p class="date">2022.01.30</p>
+										<div>전기납 10개월 만기 200만원 20원 만기</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- ### 완료 ### -->
+					<li aria-current="step">
+						<span>완료</span>
+						<div class="data1">
+							<ul>
+								<li>
+									<div class="tit">
+										<strong>케어 완료</strong>
+										<p>2022.01.28 / 김일이LP</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- // -->
+				</ol>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

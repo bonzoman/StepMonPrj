@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 업종검색_[P] 중분류 | 신규설계 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>중분류</h1>
+			<button type="button" data-btn="pop-close">중분류 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<div class="label-btn1 block">
+				<ul>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1" checked>
+							<span>휴게음식점</span>
+						</label>
+						<!-- [D] 업종설명이 있을 경우 노출 -->
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">도움말</button>
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl class="txt-bul1">
+								<dt>도움말</dt>
+								<dd>도움말 내용</dd>
+								<dd><button type="button" data-btn="pop-close">도움말 닫기</button></dd>
+							</dl>
+						</div>
+						<!-- // -->
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>일반음식점</span>
+						</label>
+						<!-- [D] 업종설명이 있을 경우 노출 -->
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">도움말</button>
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl class="txt-bul1">
+								<dt>도움말</dt>
+								<dd>일반음식점은 음식류를 조리판매하는 곳으로서 식사와 함께 부수적으로 음주행위가 허용되는 것(대중음식점, 전문음식점, 간이주점 등)을 말한다. </dd>
+								<dd>다만, 회사,학교, 공공기관, 일반단체 등의 후생시설용으로 부설된 경우에는 해당 직업종별요율울 적용할 수 있다.</dd>
+								<dd>간이주점은 접객시설을 갖추고 대중에게 술과 이에 따른 요리를 판매하는 소주방, 호프집, 막걸리집, 토속주저 등으로서 단란주점, 일반 및 무도유흥주점이 아닌것을 말한다.</dd>
+								<dd><button type="button" data-btn="pop-close">도움말 닫기</button></dd>
+							</dl>
+						</div>
+						<!-- // -->
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>이미용관련 서비스업</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>세탁소</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>의원(치과의원, 한의원, 방사선진단)</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>수리점(자동차수리점 제외)</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>사진관, 표구점</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>장의사</span>
+						</label>
+					</li>
+				</ul>
+			</div>
+
+			<!-- // -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">이전</button>
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- // -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

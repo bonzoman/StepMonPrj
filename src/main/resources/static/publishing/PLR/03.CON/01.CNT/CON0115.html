@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>분납내역 | 계약일반 | 계약상세 | 자동차 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>분납내역</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] 증권번호 -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<dl class="info2">
+				<dt>증권번호</dt>
+				<dd class="ic1"><strong>LA11111111111111</strong></dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-autoset="tab" data-sticky="top">
+			<ul>
+				<li class="active"><a href="#uiTabSection1">미납</a></li>
+				<li><a href="#uiTabSection2">납입</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [안내 메세지] -->
+		<!-- ######################### -->
+		<p class="mes-info2 box">약정된 분납보험료를 초과하여 납입한 경우 업무요청으로 처리하세요.</p>
+
+		<!-- ######################### -->
+		<!-- [내역 리스트] 미납 -->
+		<!-- ######################### -->
+		<div id="uiTabSection1" class="ui-tabcon active">
+			<div class="info-data1">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox">
+								<span>분납보험료</span>
+							</label>
+						</div>
+						<div class="side">
+							<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+						</div>
+						<div class="info-con2 t2">
+							<dl>
+								<dt>분납횟수</dt>
+								<dd>6회중 5회차</dd>
+							</dl>
+							<dl>
+								<dt>분할기간</dt>
+								<dd>2022.03.09~2022.04.02</dd>
+							</dl>
+							<dl>
+								<dt>납입약정일</dt>
+								<dd>2022.03.25</dd>
+							</dl>
+							<dl>
+								<dt>납입유예기간</dt>
+								<dd>2022.04.26</dd>
+							</dl>
+							<dl>
+								<dt>납입일</dt>
+								<dd>-</dd>
+							</dl>
+							<dl>
+								<dt>입금상태</dt>
+								<dd>미납</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox">
+								<span>분납보험료</span>
+							</label>
+						</div>
+						<div class="side">
+							<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+						</div>
+						<div class="info-con2 t2">
+							<dl>
+								<dt>분납횟수</dt>
+								<dd>6회중 5회차</dd>
+							</dl>
+							<dl>
+								<dt>분할기간</dt>
+								<dd>2022.03.09~2022.04.02</dd>
+							</dl>
+							<dl>
+								<dt>납입약정일</dt>
+								<dd>2022.03.25</dd>
+							</dl>
+							<dl>
+								<dt>납입유예기간</dt>
+								<dd>2022.04.26</dd>
+							</dl>
+							<dl>
+								<dt>납입일</dt>
+								<dd>-</dd>
+							</dl>
+							<dl>
+								<dt>입금상태</dt>
+								<dd>미납</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- [CASE] 수납대기경우 : 비활성화 -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" disabled>
+								<span>분납보험료</span>
+							</label>
+						</div>
+						<div class="side">
+							<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+						</div>
+						<div class="info-con2 t2">
+							<dl>
+								<dt>분납횟수</dt>
+								<dd>6회중 5회차</dd>
+							</dl>
+							<dl>
+								<dt>분할기간</dt>
+								<dd>2022.03.09~2022.04.02</dd>
+							</dl>
+							<dl>
+								<dt>납입약정일</dt>
+								<dd>2022.03.25</dd>
+							</dl>
+							<dl>
+								<dt>납입유예기간</dt>
+								<dd>2022.04.26</dd>
+							</dl>
+							<dl>
+								<dt>납입일</dt>
+								<dd>-</dd>
+							</dl>
+							<dl>
+								<dt>입금상태</dt>
+								<dd>
+									<div>수납대기</div>
+									<div class="area-btn3"><button type="button" class="btn-sub3 c2">신청취소</button></div>
+								</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<!-- 더보기(현재페이지/총페이지) -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [내역 리스트] 납입 : 전체 비활성화 -->
+		<!-- ######################### -->
+		<div id="uiTabSection2" class="ui-tabcon">
+			<div class="info-data1">
+				<ul>
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" disabled>
+								<span>분납보험료</span>
+							</label>
+						</div>
+						<div class="side">
+							<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+						</div>
+						<div class="info-con2 t2">
+							<dl>
+								<dt>분납횟수</dt>
+								<dd>6회중 5회차</dd>
+							</dl>
+							<dl>
+								<dt>분할기간</dt>
+								<dd>2022.03.09~2022.04.02</dd>
+							</dl>
+							<dl>
+								<dt>납입약정일</dt>
+								<dd>2022.03.25</dd>
+							</dl>
+							<dl>
+								<dt>납입유예기간</dt>
+								<dd>2022.04.26</dd>
+							</dl>
+							<dl>
+								<dt>납입일</dt>
+								<dd>-</dd>
+							</dl>
+							<dl>
+								<dt>입금상태</dt>
+								<dd>납입</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit label-check1">
+							<label>
+								<input type="checkbox" disabled>
+								<span>분납보험료</span>
+							</label>
+						</div>
+						<div class="side">
+							<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+						</div>
+						<div class="info-con2 t2">
+							<dl>
+								<dt>분납횟수</dt>
+								<dd>6회중 5회차</dd>
+							</dl>
+							<dl>
+								<dt>분할기간</dt>
+								<dd>2022.03.09~2022.04.02</dd>
+							</dl>
+							<dl>
+								<dt>납입약정일</dt>
+								<dd>2022.03.25</dd>
+							</dl>
+							<dl>
+								<dt>납입유예기간</dt>
+								<dd>2022.04.26</dd>
+							</dl>
+							<dl>
+								<dt>납입일</dt>
+								<dd>-</dd>
+							</dl>
+							<dl>
+								<dt>입금상태</dt>
+								<dd>납입</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 더보기(현재페이지/총페이지) -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">분납신청</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

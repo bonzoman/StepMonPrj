@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 질병상세고지 질문서 | 알릴사항 | 장기보험 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-05]	1. 라디오 형태 변경(클래스 추가 제거)
+	*	[M 2022-10-18]	1. 평가방법 라디오 버튼 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>질병상세알림 질문서</h1>
+			<button type="button" data-btn="pop-close">질병상세알림 질문서 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [안내문구] -->
+			<!-- ######################### -->
+			<div class="tit-section">
+				<p>@질병명@에 대한 <br>질문에 답변해 주세요.</p>
+				<div class="info-con1">
+					<dl>
+						<dt>알림번호</dt>
+						<dd>LA22022108551-1</dd>
+					</dl>
+					<dl>
+						<dt>심사방법 <a href="#심사TIP" class="icon-com2 ic1">심사방법 내용보기</a></dt>
+						<dd>서류심사</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 공통질문 -->
+			<!-- ######################### -->
+			<section class="wrap-section">
+				<h2 class="tit-sub1">공통질문</h2>
+
+				<!-- ### [질문1] 완치여부 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">1. 완치(치료종결)여부</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd" checked>
+							<span>아니요</span>
+						</label>
+					</div>
+				</fieldset>
+
+				<!-- ### [질문2] 치료기간 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">2. 치료기간</legend>
+
+					<!-- [M 2022-09-28] 치료기간 마크업 수정 -->
+					<dl class="form">
+						<dt>최초 내원일 ~ 치료 종료일 </dt>
+						<dd>
+							<div class="input-date1 text">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">최초 내원일 선택</button>
+									<input type="text" title="최초 내원일 선택" value="2022.08.28" placeholder="YYYY.MM.DD">
+								</span>
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">치료 종료일 선택</button>
+									<input type="text" title="치료 종료일 선택" value="2022.09.28" placeholder="YYYY.MM.DD">
+								</span>
+							</div>
+						</dd>
+						<dd>
+							<div class="input-date1 text t2">
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">최초 내원일 선택</button>
+									<input type="text" title="최초 내원일 선택" value="2022.08.28" placeholder="YYYY.MM.DD">
+								</span>
+								<span>
+									<button type="button" data-btn="picker" class="icon-com1 ic4">치료 종료일 선택</button>
+									<input type="text" title="치료 종료일 선택" value="2022.09.28" placeholder="YYYY.MM.DD">
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문3] 입원 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">3. 입원</legend>
+
+					<dl class="form">
+						<dt>총 합산 입원일수 (재발포함)</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="총 합산 입원일수" placeholder="총 합산 입원일수를 입력해주세요.">
+								<span class="util">일</span>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### [질문4] 통원 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">4. 통원</legend>
+
+					<dl class="form">
+						<dt>총 합산 통원일수 (재발포함)</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" title="총 합산 통원일수" placeholder="총 합산 통원일수를 입력해주세요.">
+								<span class="util">일</span>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### [질문5] 치료내용 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">5. 치료내용</legend>
+
+					<div class="label-btn1 col2"> <!-- [M 2022-09-28] 클래스명 변경 -->
+						<label>
+							<input type="radio" name="dd5" checked>
+							<span>약물/물리치료</span>
+						</label>
+						<label>
+							<input type="radio" name="dd5">
+							<span>수술 (시술포함)</span>
+						</label>
+						<label>
+							<input type="radio" name="dd5">
+							<span>치료내용 없음</span>
+						</label>
+					</div>
+				</fieldset>
+
+				<!-- ### [질문6] 발생횟수 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">6. 발생횟수</legend>
+
+					<div class="label-btn1 col2"> <!-- [M 2022-09-28] 클래스명 변경 -->
+						<label>
+							<input type="radio" name="dd6" checked>
+							<span>1회</span>
+						</label>
+						<label>
+							<input type="radio" name="dd6">
+							<span>2회</span>
+						</label>
+						<label>
+							<input type="radio" name="dd6">
+							<span>3회</span>
+						</label>
+						<label>
+							<input type="radio" name="dd6">
+							<span>4회</span>
+						</label>
+						<label>
+							<input type="radio" name="dd6">
+							<span>5회이상</span> <!-- [M 2022-09-28] 문구변경 -->
+						</label>
+					</div>
+				</fieldset>
+
+				<!-- ### [질문7] 서류첨부 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">7. 서류첨부</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd7">
+							<span>있음</span>
+						</label>
+						<label>
+							<input type="radio" name="dd7" checked>
+							<span>없음</span>
+						</label>
+					</div>
+				</fieldset>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 추가질문 -->
+			<!-- ######################### -->
+			<section class="wrap-section">
+				<h2 class="tit-sub1">추가질문</h2>
+
+				<!-- ### [질문1] 흡연/음주 유무 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">1. 흡연 또는 음주를 하십니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd11">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd11" checked>
+							<span>아니요</span>
+						</label>
+					</div>
+				</fieldset>
+
+				<!-- ### [질문2] 원인 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">2. 원인이 무엇입니까?</legend>
+
+					<div class="label-btn1"> <!-- [M 2022-09-28] 클래스명 변경 -->
+						<label>
+							<input type="radio" name="dd12" checked>
+							<span>이차성고혈압</span>
+						</label>
+						<label>
+							<input type="radio" name="dd12">
+							<span>원인불명, 본태성고혈압</span>
+						</label>
+					</div>
+				</fieldset>
+
+				<!-- ### [질문3] 동반 합병증 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">3. 동반한 합병증이 있습니까?</legend>
+
+					<div class="label-btn1 block"> <!-- 2022-10-07 클래스 추가 -->
+						<label>
+							<input type="radio" name="dd13">
+							<span>치료력 없음</span>
+						</label>
+						<label>
+							<input type="radio" name="dd13" checked>
+							<span>기저질환/합병증/후유증 동반있음</span>
+						</label>
+					</div>
+				</fieldset>
+
+				<!-- ### [질문4] 동반 질환 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">4. 동반한 질환이 있습니까?</legend>
+
+					<div class="label-btn1 block"> <!-- 2022-10-07 클래스 추가 -->
+						<label>
+							<input type="radio" name="dd14">
+							<span>증상 없음</span>
+						</label>
+						<label>
+							<input type="radio" name="dd14" checked>
+							<span>증상있음(체중감소, 전신쇠약감, 심장박동이상, 안구돌출, 손떨림, 신경 과민, 수면장애)</span>
+						</label>
+					</div>
+				</fieldset>
+
+				<!-- ### [질문5] 수축기혈압 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">5. 수축기혈압(높은혈압)은?</legend>
+
+					<div class="text">
+						<input type="tel" title="수축기혈압" placeholder="혈압 수치를 입력해주세요.">
+						<span class="util">mmHg</span>
+					</div>
+				</fieldset>
+
+				<!-- ### [질문6] 이완기혈압 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">6. 이완기혈압(낮은혈압)은?</legend>
+
+					<div class="text">
+						<input type="tel" title="이완기혈압" placeholder="혈압 수치를 입력해주세요.">
+						<span class="util">mmHg</span>
+					</div>
+				</fieldset>
+
+				<!-- ### [질문7] 최초진단시점 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">7. 최초 진단시점은 언제 입니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd17" checked>
+							<span>30세 이상</span>
+						</label>
+						<label>
+							<input type="radio" name="dd17">
+							<span>30세 미만</span>
+						</label>
+					</div>
+				</fieldset>
+
+				<!-- ### [질문8] 평가방법 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">8. 평가방법은 무엇입니까?</legend>
+
+					<!-- 2022-10-18 마크업 변경 -->
+					<div class="label-btn1 block" data-autoset="form"> <!-- 2022-10-07 클래스 추가 -->
+						<label>
+							<input type="radio" name="dd18" data-tabcon="uiFormCont1" checked>
+							<span>치료력 없음</span>
+						</label>
+						<!-- [D] 치료이력 없음 클릭시 노출 -->
+						<input type="text" class="text ui-tabcon active" title="직접입력" data-id="uiFormCont1">
+						<label>
+							<input type="radio" name="dd18" data-tabcon="uiFormCont2">
+							<span>약물치료(경구투약) - 유별기간 5년 미만</span>
+						</label>
+						<!-- [D] 약물치료(경구투약) - 유별기간 5년 미만 클릭시 노출 -->
+						<input type="text" class="text ui-tabcon" title="직접입력" data-id="uiFormCont2">
+						<label>
+							<input type="radio" name="dd18" data-tabcon="uiFormCont3">
+							<span>약물치료(경구투약) - 유병기간 6~10년</span>
+						</label>
+						<!-- [D] 약물치료(경구투약) - 유병기간 6~10년 -->
+						<input type="text" class="text ui-tabcon" title="직접입력" data-id="uiFormCont3">
+						<label>
+							<input type="radio" name="dd18" data-tabcon="uiFormCont4">
+							<span>약물치료(경구, 인슐린 포함)</span>
+						</label>
+						<!-- [D] 약물치료(경구, 인슐린 포함) 클릭시 노출 -->
+						<input type="text" class="text ui-tabcon" title="직접입력" data-id="uiFormCont4">
+					</div>
+					<!-- //2022-10-18 마크업 변경 -->
+				</fieldset>
+				<!-- ### // ### -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

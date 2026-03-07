@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>FORMWRAP | CONTENTS | PUBLISHING GUIDE</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<link rel="stylesheet" href="../../resource/css/publish.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<div class="guide-wrap">
+	<header>
+		<h1>
+			<i>롯데손해보험</i> CONTENTS <strong>FORMWRAP</strong>
+			<a href="../99.work/coding_list1.html" class="guide-btn1">작업목록</a>
+		</h1>
+		<nav>
+			<ul>
+				<li><a href="content_basic.html">INFO</a></li>
+				<li><a href="content_txt.html">TITLE/TXT</a></li>
+				<li><a href="content_btn.html">BUTTON</a></li>
+				<li><a href="content_icon.html">ICON</a></li>
+				<li><a href="content_form.html">FORM ELEMENT</a></li>
+				<li><a href="content_formarea.html">FORM 약관/검색</a></li>
+				<li class="active"><a href="content_formarea2.html" aria-current="page">FORM 입력</a></li>
+				<li><a href="content_tab.html">TAB/TOGGLE</a></li>
+				<li><a href="content_tbl.html">TABLE</a></li>
+				<li><a href="content_box.html">BOX/BANNER</a></li>
+				<li><a href="content_info.html">INFO/DATA</a></li>
+				<li><a href="content_list.html">LIST</a></li>
+				<li><a href="content_bbs.html">BOARD</a></li>
+			</ul>
+		</nav>
+	</header>
+	<article class="guide-container">
+		<h1 class="hide">폼영역 작업 가이드</h1>
+		<form action="">
+			<!-- ############################## -->
+			<!-- [유형1] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">유형1 : .form-wrap1</h2>
+				<!-- ### 기본사항 ### -->
+				<h3 class="guide-tit2">기본사항</h3>
+				<div class="guide-area body">
+					<fieldset class="form-wrap1">
+						<legend>폼영역타이틀</legend>
+
+						<!-- # 항목명 # -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio11" checked>
+								<span >항목명</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio11">
+								<span >항목명</span>
+							</label>
+						</div>
+
+						<!-- # 항목명 # -->
+						<dl class="form">
+							<dt>텍스트2</dt>
+							<dd>
+								<input type="text" class="text" maxlength="4" title="@대체텍스트" placeholder="텍스트입력">
+								<input type="text" class="text" maxlength="4" title="@대체텍스트" placeholder="텍스트입력" value="텍스트" aria-invalid="true">
+								<div class="validation">오류문구노출</div>
+							</dd>
+						</dl>
+
+						<!-- # 항목명 # -->
+						<dl class="form">
+							<dt>텍스트 + 메세지</dt>
+							<dd><input type="tel" class="text" maxlength="4" title="@대체텍스트" placeholder="텍스트입력"></dd>
+							<dd class="mes">문구영역입니다.</dd>
+						</dl>
+
+						<!-- # 항목명 # -->
+						<dl class="form">
+							<dt>텍스트 + 삭제버튼</dt>
+							<dd>
+								<!-- [CASE1] 입력전 -->
+								<div class="text">
+									<input type="text" title="@대체텍스트" placeholder="텍스트입력">
+									<button type="button" data-btn="delete">입력내용삭제</button>
+								</div>
+								<!-- [CASE2] 입력후 -->
+								<div class="text">
+									<input type="text" title="@대체텍스트" placeholder="텍스트입력" value="텍스트입력">
+									<button type="button" data-btn="delete">입력내용삭제</button>
+								</div>
+								<!-- // -->
+							</dd>
+						</dl>
+
+						<!-- # 항목명 # -->
+						<dl class="form">
+							<dt>텍스트 + 검색버튼</dt>
+							<dd>
+								<!-- [CASE1] 입력형 : 입력후 검색하기 버튼 클릭시 이벤트 실행 -->
+								<div class="text">
+									<input type="search" title="@대체텍스트" id="exInputVal" placeholder="텍스트입력">
+									<button type="button" class="icon-com1 ic2">검색하기</button>
+								</div>
+								<!-- [CASE2] 팝업형 : 검색팝업에서 검색 완료 후 데이터값만 노출 -->
+								<div class="input-btn1">
+									<data class="text" data-label="텍스트입력" ></data>
+									<button type="button" class="icon-com1 ic2">검색하기</button>
+								</div>
+								<div class="input-btn1">
+									<data class="text" data-label="텍스트입력" value="검색어노출">검색어노출</data>
+									<button type="button" class="icon-com1 ic2">검색하기</button>
+								</div>
+								<!-- // -->
+								<div class="input-btn1">
+									<data class="text" data-label="텍스트입력" value="검색어노출" aria-invalid="true">검색어노출</data>
+									<button type="button" class="icon-com1 ic2">검색하기</button>
+								</div>
+								<div class="validation">오류문구노출</div>
+							</dd>
+						</dl>
+
+						<!-- # 항목명 # -->
+						<dl class="form">
+							<dt>텍스트 + 단위</dt>
+							<dd>
+								<div class="text">
+									<input type="text" title="@대체텍스트" placeholder="텍스트입력">
+									<span class="util">단위</span>
+								</div>
+								<div class="text">
+									<input type="text" title="@대체텍스트" placeholder="텍스트입력" value="텍스트" aria-invalid="true">
+									<span class="util">단위</span>
+								</div>
+								<div class="validation">오류문구노출</div>
+							</dd>
+						</dl>
+
+						<!-- # 항목명 # -->
+						<dl class="form">
+							<dt>셀렉트박스 : BS유형</dt>
+							<dd>
+								<!-- [CASE1] 선택 전 -->
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" id="exSelectVal" aria-expanded="false">
+										<span data-select="title">항목명</span>
+										<span data-select="text"></span>
+									</button>
+									<div class="list">
+										<div data-label="항목명">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion" value="selectOpeion1"><span>OPTION1</span></label>
+												<label><input type="radio" name="selectOpeion" value="selectOpeion2"><span>OPTION2</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+
+								<!-- [CASE2] 선택 후 -->
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">항목명</span>
+										<span data-select="text" data-value="selectOpeion2">OPTION2</span>
+									</button>
+									<div class="list">
+										<div data-label="항목명">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion1" value="selectOpeion1"><span>OPTION1</span></label>
+												<label><input type="radio" name="selectOpeion1" value="selectOpeion2" checked><span>OPTION2</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+
+								<!-- [CASE3] 콜백함수 -->
+								<div class="select-wrap" data-autoset="select" data-callback="uiCallback">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">항목명</span>
+										<span data-select="text" data-value="selectOpeion4">OPTION4</span>
+									</button>
+									<div class="list">
+										<div data-label="항목명">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion3"><span>OPTION3</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion4" checked><span>OPTION4</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+
+								<!-- [CASE2] 유효성체크 -->
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" aria-invalid="true">
+										<span data-select="title">항목명</span>
+										<span data-select="text" data-value="selectOpeion2">OPTION2</span>
+									</button>
+									<div class="list">
+										<div data-label="항목명">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion13" value="selectOpeion1"><span>OPTION1</span></label>
+												<label><input type="radio" name="selectOpeion13" value="selectOpeion2" checked><span>OPTION2</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<div class="validation">오류문구노출</div>
+								<!-- // -->
+							</dd>
+						</dl>
+
+						<!-- # 항목명 # -->
+						<dl class="form">
+							<dt>체크박스 : 기본유형</dt>
+							<dd>
+								<div class="label-check1">
+									<label>
+										<input type="checkbox">
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span >항목명</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 항목명 # -->
+						<dl class="form">
+							<dt>체크박스 : 기본유형(2단)</dt>
+							<dd>
+								<div class="label-check1 col2">
+									<label>
+										<input type="checkbox">
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span >항목명</span>
+									</label>
+								</div>
+								<div class="label-check1 col2">
+									<label>
+										<input type="radio" name="uiFormRadio2" checked>
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio2">
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio2">
+										<span >항목명</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 항목명 # -->
+						<dl class="form">
+							<dt>라디오버튼 : 버튼유형</dt>
+							<dd>
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormRadio3" checked>
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio3">
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio3">
+										<span >항목명</span>
+									</label>
+								</div>
+
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormRadio3_invalid" aria-invalid="true">
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio3_invalid">
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio3_invalid">
+										<span >항목명</span>
+									</label>
+								</div>
+								<div class="validation">오류문구노출</div>
+							</dd>
+						</dl>
+
+						<!-- # 항목명 # -->
+						<dl class="form">
+							<dt>라디오버튼 : 버튼유형(2단)</dt>
+							<dd>
+								<div class="label-btn1 col2">
+									<label>
+										<input type="radio" name="uiFormRadio4" checked>
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio4">
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio4">
+										<span >항목명</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 항목명 # -->
+						<dl class="form">
+							<dt>라디오버튼 : 버튼유형(3단)</dt>
+							<dd>
+								<div class="label-btn1 col3">
+									<label>
+										<input type="radio" name="uiFormRadio8" checked>
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio8">
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio8">
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio8">
+										<span >항목명</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio8">
+										<span >항목명</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+
+
+						<!-- # 항목명 # -->
+						<dl class="form">
+							<dt>내용입력</dt>
+							<dd>
+								<!-- [CASE1] 기본 -->
+								<textarea class="textarea" title="@대체텍스트" placeholder="내용을 입력해주세요."></textarea>
+								<!-- [CASE2] 입력글자수노출 -->
+								<div class="textarea">
+									<textarea cols="50" rows="3" title="@대체텍스트" placeholder="내용을 입력해주세요."></textarea>
+									<span class="util2"><strong>24</strong>/4,000자</span>
+								</div>
+								<!-- [CASE3] 댓글유형 -->
+								<div class="textarea">
+									<textarea cols="50" rows="3" title="@대체텍스트" placeholder="내용을 입력해주세요."></textarea>
+									<div class="area">
+										<span class="util2"><strong>0</strong>/4,000자</span>
+										<button type="button" class="btn-sub3 c1">등록</button>
+									</div>
+								</div>
+								<!-- // -->
+								<div class="textarea">
+									<textarea cols="50" rows="3" title="@대체텍스트" placeholder="내용을 입력해주세요." aria-invalid="true"></textarea>
+									<div class="area">
+										<span class="util2"><strong>0</strong>/4,000자</span>
+										<button type="button" class="btn-sub3 c1">등록</button>
+									</div>
+								</div>
+								<div class="validation">오류문구노출</div>
+							</dd>
+						</dl>
+
+						<!-- # 항목명 # -->
+						<dl class="form">
+							<dt>서명</dt>
+							<dd><data class="text3" data-label="하다미" value="하다미"></data></dd>
+							<dd class="side">
+								<button type="button" class="icon-com1 ic21">초기화</button>
+							</dd>
+						</dl>
+						<!-- # // # -->
+					</fieldset>
+				</div>
+
+				<!-- ### 오류/정상 ### -->
+				<h3 class="guide-tit2">오류/정상</h3>
+				<div class="guide-area body">
+					<fieldset class="form-wrap1">
+						<legend>오류/정상</legend>
+
+						<!-- # 오류케이스 # -->
+						<dl class="form">
+							<dt>오류 : aria-invalid="true"</dt>
+							<dd>
+								<!-- [CASE1] 입력폼 -->
+								<input type="text" class="text" title="@대체텍스트" value="오류텍스트" aria-invalid="true">
+								<div class="validation">오류문구노출</div>
+
+								<!-- [CASE2] 입력폼 + 버튼 -->
+								<div class="input-wrap1">
+									<input type="text" class="text" title="@대체텍스트" value="오류텍스트" aria-invalid="true">
+									<button type="button" class="btn-sub1">버튼명</button>
+								</div>
+								<div class="validation">오류문구노출</div>
+
+								<!-- [CASE3] 입력폼 + 버튼 -->
+								<div class="input-wrap1">
+									<div class="text" >
+										<input type="text" title="@대체텍스트" value="오류텍스트" aria-invalid="true">
+										<span class="util2">00:00</span>
+									</div>
+									<button type="button" class="btn-sub1">버튼명</button>
+								</div>
+								<div class="validation">오류문구노출</div>
+								<!-- // -->
+							</dd>
+						</dl>
+
+						<!-- # 정상케이스 # -->
+						<dl class="form">
+							<dt>정상 : aria-invalid="false"</dt>
+							<dd>
+								<!-- [CASE1] 입력폼 -->
+								<input type="text" class="text" title="@대체텍스트" value="정상텍스트" aria-invalid="false">
+								<div class="validation">정상문구노출</div>
+
+								<!-- [CASE2] 입력폼 + 버튼 -->
+								<div class="input-wrap1">
+									<input type="text" class="text" title="@대체텍스트" value="정상텍스트" aria-invalid="false">
+									<button type="button" class="btn-sub1">버튼명</button>
+								</div>
+								<div class="validation">정상문구노출</div>
+
+								<!-- [CASE3] 입력폼 + 버튼 -->
+								<div class="input-wrap1">
+									<div class="text" >
+										<input type="text" title="@대체텍스트" value="정상텍스트" aria-invalid="false">
+										<span class="util2">00:00</span>
+									</div>
+									<button type="button" class="btn-sub1">버튼명</button>
+								</div>
+								<div class="validation">정상문구노출</div>
+								<!-- // -->
+							</dd>
+						</dl>
+
+						<p class="txt-bul1">validation 체크 후 ui.formInput() 함수 호출 필요</p>
+					</fieldset>
+				</div>
+
+				<!-- ### 활용 : 인증유형 ### -->
+				<h3 class="guide-tit2">활용 : 인증유형</h3>
+				<div class="guide-area popup">
+					<fieldset class="form-wrap1">
+						<legend>실명인증 케이스</legend>
+
+						<!-- # 주민등록번호 # -->
+						<dl class="form">
+							<dt>주민등록번호 <em class="icon-required2">필수</em></dt>
+							<!-- [CASE1] 기본 -->
+							<dd>
+								<div class="input-wrap1">
+									<div class="text">
+										<data value="770610">770610</data>
+										<span class="util">-</span>
+										<input type="password" title="주민등록번호뒷7자리" maxlength="7" >
+									</div>
+									<button type="button" class="btn-sub1">실명 인증</button>
+								</div>
+								<div class="validation"></div>
+							</dd>
+							<!-- [CASE2] 정상 -->
+							<dd>
+								<div class="input-wrap1">
+									<div class="text">
+										<data value="770610">770610</data>
+										<span class="util">-</span>
+										<input type="password" title="주민등록번호뒷7자리" maxlength="7" value="1234567" aria-invalid="false"> <!-- [D] 속성(aria-invalid="false") 추가 -->
+									</div>
+									<button type="button" class="btn-sub1">실명 인증</button>
+								</div>
+								<div class="validation">실명인증이 완료되었습니다.</div>
+							</dd>
+							<!-- [CASE3] 오류 -->
+							<dd>
+								<div class="input-wrap1">
+									<div class="text">
+										<data value="770610">770610</data>
+										<span class="util">-</span>
+										<input type="password" title="주민등록번호뒷7자리" maxlength="7" value="1234567" aria-invalid="true">  <!-- [D] 속성(aria-invalid="true") 추가 -->
+									</div>
+									<button type="button" class="btn-sub1">실명 인증</button>
+								</div>
+								<div class="validation">실명인증에 실패했습니다.</div>
+								<div class="txt-bul4">
+									해당 고객님은 실명인증 실패고객으로「실명인증 확인요청」버튼을 통해 증명서 접수 후 고객등록을 진행해야 합니다.
+									<div class="area-btn4">
+										<a href="javascript:void(0);" class="btn-sub3 c2">실명인증 확인요청</a>
+									</div>
+								</div>
+							</dd>
+							<!-- // -->
+						</dl>
+
+						<!-- # 휴대폰번호 # -->
+						<dl class="form">
+							<dt>휴대폰번호 <em class="icon-required2">필수</em></dt>
+							<!-- [CASE1] 기본 -->
+							<dd>
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">통신사 선택</span>
+										<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+									</button>
+									<div class="list">
+										<div data-label="통신사 선택">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion1" value="selectOpeion1_1"><span>SKT</span></label>
+												<label><input type="radio" name="selectOpeion1" value="selectOpeion1_2"><span>KT</span></label>
+												<label><input type="radio" name="selectOpeion1" value="selectOpeion1_3"><span>LG U+</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<div class="input-wrap1">
+									<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요.">
+									<button type="button" class="btn-sub1">발송하기</button>
+								</div>
+								<div class="input-wrap1">
+									<div class="text">
+										<input type="tel" title="인증번호" placeholder="인증번호" disabled>
+										<span class="util2">03:00</span>
+									</div>
+									<button type="button" class="btn-sub1" disabled>인증확인</button>
+								</div>
+								<div class="validation"></div>
+							</dd>
+							<!-- [CASE3] 오류 -->
+							<dd>
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">통신사 선택</span>
+										<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+									</button>
+									<div class="list">
+										<div data-label="통신사 선택">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion3" value="selectOpeion1_1"><span>SKT</span></label>
+												<label><input type="radio" name="selectOpeion3" value="selectOpeion1_2"><span>KT</span></label>
+												<label><input type="radio" name="selectOpeion3" value="selectOpeion1_3"><span>LG U+</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<div class="input-wrap1">
+									<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요." value="01012345678"  aria-invalid="true"><!-- [D] 속성: aria-invalid="true" 추가 -->
+									<button type="button" class="btn-sub1">재발송</button>
+								</div>
+								<div class="input-wrap1">
+									<div class="text">
+										<input type="tel" title="인증번호" placeholder="인증번호" disabled>
+										<span class="util2">03:00</span>
+									</div>
+									<button type="button" class="btn-sub1" disabled>인증확인</button>
+								</div>
+								<div class="validation">전화번호와 생년월일/성별이 불일치합니다.</div>
+								<div class="txt-bul4">고객님 본인 명의의 휴대폰번호만 입력해주세요.</div>
+							</dd>
+							<!-- [CASE2] 완료 -->
+							<dd>
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">통신사 선택</span>
+										<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+									</button>
+									<div class="list">
+										<div data-label="통신사 선택">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion1_1"><span>SKT</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion1_2"><span>KT</span></label>
+												<label><input type="radio" name="selectOpeion2" value="selectOpeion1_3"><span>LG U+</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<div class="input-wrap1">
+									<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요." value="01012345678" >
+									<button type="button" class="btn-sub1">발송하기</button>
+								</div>
+								<div class="input-wrap1">
+									<div class="text">
+										<input type="tel" title="인증번호" placeholder="인증번호" value="123456" aria-invalid="false"> <!-- [D] 속성: aria-invalid="false" 추가 -->
+										<span class="util2">03:00</span>
+									</div>
+									<button type="button" class="btn-sub1">인증확인</button>
+								</div>
+								<div class="validation">인증이 완료되었습니다.</div>
+							</dd>
+							<!-- [CASE3] 오류 -->
+							<dd>
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">통신사 선택</span>
+										<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+									</button>
+									<div class="list">
+										<div data-label="통신사 선택">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion3" value="selectOpeion1_1"><span>SKT</span></label>
+												<label><input type="radio" name="selectOpeion3" value="selectOpeion1_2"><span>KT</span></label>
+												<label><input type="radio" name="selectOpeion3" value="selectOpeion1_3"><span>LG U+</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<div class="input-wrap1">
+									<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요." value="01012345678" >
+									<button type="button" class="btn-sub1">발송하기</button>
+								</div>
+								<div class="input-wrap1">
+									<div class="text">
+										<input type="tel" title="인증번호 입력" value="46365" placeholder="인증번호" aria-invalid="true"> <!-- [D] 속성: aria-invalid="true" 추가 -->
+										<span class="util2">01:00</span>
+									</div>
+									<button type="button" class="btn-sub1 w1">인증확인</button>
+								</div>
+								<div class="validation">인증번호를 정확하게 입력해주세요.</div>
+							</dd>
+							<!-- // -->
+						</dl>
+					</fieldset>
+				</div>
+
+				<!-- ### 활용 : 날짜선택 ### -->
+				<h3 class="guide-tit2">활용 : 날짜선택</h3>
+				<div class="guide-area popup">
+					<fieldset class="form-wrap1">
+						<legend>날짜선택 케이스</legend>
+
+						<!-- # 기본 # -->
+						<dl class="form">
+							<dt>기본선택</dt>
+							<dd>
+								<!-- [선택가능] -->
+								<div class="input-date1 text">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+										<input type="text" title="날짜 선택" placeholder="YYYY.MM.DD" readonly>
+									</span>
+								</div>
+
+								<!-- [날짜선택] -->
+								<div class="input-date1 text">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+										<input type="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.04.25" readonly>
+									</span>
+								</div>
+
+								<!-- [선택불가능] -->
+								<div class="input-date1 text">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>날짜 선택</button>
+										<input type="text" title="날짜 선택" placeholder="YYYY.MM.DD" readonly>
+									</span>
+								</div>
+
+								<!-- [오류] -->
+								<div class="input-date1">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+										<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" readonly aria-invalid="true">
+									</span>
+								</div>
+								<div class="validation">오류내용노출</div>
+								<!-- // -->
+							</dd>
+						</dl>
+
+						<!-- # 기간선택 : 예약기간 # -->
+						<dl class="form">
+							<dt>기간선택 : 예약기간</dt>
+							<dd>
+								<div class="input-date1 text">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+										<input type="text" title="시작날짜 선택" data-dateform="start" value="2022.04.17" placeholder="YYYY.MM.DD" readonly>
+									</span>
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+										<input type="text" title="종료날짜 선택" data-dateform="end" placeholder="YYYY.MM.DD" readonly>
+									</span>
+								</div>
+
+								<div class="input-date1 text">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+										<input type="text" title="시작날짜 선택" data-dateform="start" value="2022.04.17" placeholder="YYYY.MM.DD" readonly aria-invalid="true">
+									</span>
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+										<input type="text" title="종료날짜 선택" data-dateform="end" placeholder="YYYY.MM.DD" readonly>
+									</span>
+								</div>
+								<div class="validation">오류내용노출</div>
+							</dd>
+						</dl>
+
+						<!-- # 기간선택 : 조회기간 # -->
+						<dl class="form">
+							<dt>기간선택 : 조회기간1</dt>
+							<dd>
+								<!-- [CASE1] 일선택 -->
+								<div class="input-date1 text">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+										<input type="text" title="시작날짜 선택" data-dateform="start2" value="2022.04.18" placeholder="YYYY.MM.DD" readonly>
+									</span>
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+										<input type="text" title="종료날짜 선택" data-dateform="end2" value="2022.04.25" placeholder="YYYY.MM.DD" readonly>
+									</span>
+								</div>
+
+								<!-- [CASE2] 월선택 -->
+								<div class="input-date1 text">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">시작월 선택</button>
+										<input type="text" title="시작월 선택" data-dateform="month" value="2022.02" placeholder="YYYY.MM" readonly>
+									</span>
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">종료월  선택</button>
+										<input type="text" title="종료월 선택" data-dateform="month" value="2022.03" placeholder="YYYY.MM" readonly>
+									</span>
+								</div>
+
+								<!-- [CASE3] 연도선택 -->
+								<div class="input-wrap2">
+									<div class="select-wrap w100" data-autoset="select">
+										<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="true">
+											<span data-select="title">2022년</span>
+											<span data-select="text" data-value=""></span>
+										</button>
+										<div class="list">
+											<div data-label="연도선택">
+												<div class="option">
+													<label><input type="radio" name="selectOpeion" value="1"><span>2021년</span></label>
+												</div>
+												<button type="button" data-toggle="closebtn">확인</button>
+											</div>
+										</div>
+									</div>
+									<span class="util1">-</span>
+									<div class="select-wrap w100" data-autoset="select">
+										<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="true">
+											<span data-select="title">2022년</span>
+											<span data-select="text" data-value=""></span>
+										</button>
+										<div class="list">
+											<div data-label="연도선택">
+												<div class="option">
+													<label><input type="radio" name="selectOpeion" value="1"><span>2021년</span></label>
+												</div>
+												<button type="button" data-toggle="closebtn">확인</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 기간선택 : 조회기간2 # -->
+						<dl class="form">
+							<dt>기간선택 : 조회기간2</dt>
+							<dd>
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormRadio5">
+										<span >당일</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio5">
+										<span >1주일</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio5">
+										<span >1개월</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio5">
+										<span >당월</span>
+									</label>
+								</div>
+								<div class="input-date1 text">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+										<input type="text" title="시작날짜 선택" data-dateform="start2" value="2022.04.18" placeholder="YYYY.MM.DD" readonly>
+									</span>
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+										<input type="text" title="종료날짜 선택" data-dateform="end2" value="2022.04.25" placeholder="YYYY.MM.DD" readonly>
+									</span>
+								</div>
+							</dd>
+							<dd class="side">
+								<div class="label-check1">
+									<label>
+										<input type="checkbox" title="조회조건(보험시기포함)">
+										<span aria-hidden>보험시기 포함</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 기간선택 : 조회기간3 # -->
+						<dl class="form">
+							<dt>기간선택 : 조회기간3</dt>
+							<dd>
+								<!-- [셀렉트뱍스] -->
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">항목명</span>
+										<span data-select="text" data-></span>
+									</button>
+									<div class="list">
+										<div data-label="항목명">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion2" value="option2_1"><span>옵션명1</span></label>
+												<label><input type="radio" name="selectOpeion2" value="option2_2"><span>옵션명2</span></label>
+												<label><input type="radio" name="selectOpeion2" value="option2_3"><span>옵션명3</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- [기간선택] -->
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormRadio6">
+										<span >당일</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio6">
+										<span >1주일</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio6">
+										<span >1개월</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio6">
+										<span >당월</span>
+									</label>
+								</div>
+								<!-- [날짜선택] -->
+								<div class="input-date1 text">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+										<input type="text" title="시작날짜 선택" data-dateform="start2" value="2022.04.18" placeholder="YYYY.MM.DD" readonly>
+									</span>
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+										<input type="text" title="종료날짜 선택" data-dateform="end2" value="2022.04.25" placeholder="YYYY.MM.DD" readonly>
+									</span>
+								</div>
+								<!-- // -->
+							</dd>
+						</dl>
+
+						<!-- # 시간선택 # -->
+						<dl class="form">
+							<dt>시간선택</dt>
+							<dd>
+								<div class="input-col1">
+									<select class="selectbox">
+										<option>00</option>
+										<option>01</option>
+										<option>02</option>
+										<option>03</option>
+										<option>04</option>
+										<option>05</option>
+										<option>06</option>
+										<option>07</option>
+										<option>08</option>
+										<option>09</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+										<option>13</option>
+										<option>14</option>
+										<option>15</option>
+										<option>16</option>
+										<option>17</option>
+										<option>18</option>
+										<option>19</option>
+										<option>20</option>
+										<option>21</option>
+										<option>22</option>
+										<option>23</option>
+										<option>24</option>
+									</select>
+									<span class="txt">:</span>
+									<select class="selectbox">
+										<option>00</option>
+										<option>01</option>
+										<option>02</option>
+										<option>03</option>
+										<option>04</option>
+										<option>05</option>
+										<option>06</option>
+										<option>07</option>
+										<option>08</option>
+										<option>09</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+										<option>13</option>
+										<option>14</option>
+										<option>15</option>
+										<option>16</option>
+										<option>17</option>
+										<option>18</option>
+										<option>19</option>
+										<option>20</option>
+										<option>21</option>
+										<option>22</option>
+										<option>23</option>
+										<option>24</option>
+									</select>
+								</div>
+							</dd>
+							<dd class="mes2">시간선택은 B/S에서 열리는 부분도 있기 때문에 기본 셀렉트 박스로 적용</dd>
+						</dl>
+						<!-- # // # -->
+					</fieldset>
+				</div>
+
+				<!-- ### 활용 : 요주의 인물 ### -->
+				<h3 class="guide-tit2">활용 : 요주의 인물</h3>
+				<div class="guide-area body">
+					<fieldset class="form-wrap1">
+						<legend>요주의 인물 케이스</legend>
+
+						<dl class="form">
+							<dt>요주의 인물 여부 <em class="icon-required2">필수</em></dt>
+							<dd>
+								<!-- [CASE1] 조회 전 -->
+								<div class="input-btn1">
+									<data class="text"  data-label="인물조회를 진행해 주세요."></data>
+									<button type="button" class="icon-com1 ic2">조회</button>
+								</div>
+
+								<!-- [CASE2] 승인 -->
+								<div class="input-wrap1">
+									<data class="text info" value="승인" data-label="인물조회를 진행해 주세요.">승인</data>
+								</div>
+
+								<!-- [CASE3] 심사중 -->
+								<div class="input-wrap1">
+									<data class="text info" value="심사중" data-label="인물조회를 진행해 주세요.">심사중</data>
+									<button type="button" class="btn-sub1">재 조회</button>
+								</div>
+
+								<!-- [CASE4] 오류 -->
+								<div class="input-wrap1">
+									<data class="text info" value="불인" data-label="인물조회를 진행해 주세요." aria-invalid="true">불인</data> <!-- [D] 오류시 aria-invalid="true" 추가 -->
+									<button type="button" class="btn-sub1">재 조회</button>
+								</div>
+								<div class="validation">요주의 인물 여부를 통과하지 못한 인물입니다.</div>
+								<!-- // -->
+							</dd>
+						</dl>
+					</fieldset>
+				</div>
+
+				<!-- ### 활용 : 납부방법 ### -->
+				<h3 class="guide-tit2">활용 : 납부방법</h3>
+				<div class="guide-area popup">
+					<fieldset class="form-wrap1">
+						<legend>납부방법 선택</legend>
+
+						<!-- # 납부방법 # -->
+						<dl class="form">
+							<dt>납부방법</dt>
+							<dd>
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="radio1">
+										<span>즉시출금</span>
+									</label>
+									<label>
+										<input type="radio" name="radio1" checked="">
+										<span>카드결제</span>
+									</label>
+									<label>
+										<input type="radio" name="radio1">
+										<span>가상계좌</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 카드번호 # -->
+						<dl class="form">
+							<dt>카드번호 <em class="icon-required2">필수</em></dt>
+							<dd>
+								<!-- [CASE] 기본 -->
+								<div class="text num2">
+									<input type="tel" title="카드번호 첫번째" maxlength="4" value="1111">
+									<span class="util1">-</span>
+									<input type="tel" title="카드번호 두번째" maxlength="4" value="2222">
+									<span class="util1">-</span>
+									<input type="tel" title="카드번호 세번째" maxlength="4" value="3333">
+									<span class="util1">-</span>
+									<input type="tel" title="카드번호 네번째" maxlength="4" value="4444">
+								</div>
+								<div class="validation">카드번호 입력 및 카드확인을 해주세요.</div>
+
+								<!-- [CASE] 오류 -->
+								<div class="text num2 invalid">
+									<input type="tel" title="카드번호 첫번째" maxlength="4" value="1111" aria-invalid="true">
+									<span class="util1">-</span>
+									<input type="tel" title="카드번호 두번째" maxlength="4" value="2222">
+									<span class="util1">-</span>
+									<input type="tel" title="카드번호 세번째" maxlength="4" value="3333">
+									<span class="util1">-</span>
+									<input type="tel" title="카드번호 네번째" maxlength="4" value="4444">
+								</div>
+								<div class="validation">카드번호 입력 및 카드확인을 해주세요.</div>
+							</dd>
+						</dl>
+
+						<!-- # 유효기간 # -->
+						<dl class="form">
+							<dt>유효기간 <em class="icon-required2">필수</em></dt>
+							<dd>
+								<!-- [CASE] 기본 -->
+								<div class="input-wrap1">
+									<input type="tel" class="text" title="유효기간(월/년)" placeholder="MMYY(월/년)">
+									<button type="button" class="btn-sub1">카드확인</button>
+								</div>
+								<div class="validation">유효기간을 입력해주세요.</div>
+
+								<!-- [CASE] 오류 -->
+								<div class="input-wrap1 invalid">
+									<input type="tel" class="text" title="유효기간(월/년)" placeholder="MMYY(월/년)" aria-invalid="true">
+									<button type="button" class="btn-sub1">카드확인</button>
+								</div>
+								<div class="validation">유효기간을 입력해주세요.</div>
+							</dd>
+							<dd>
+								<div class="data1">
+									<div>카드주:</div>
+									<div class="info"><strong>홍두한</strong><span><span>1965.03.21</span><span>남</span></span></div>
+									<div class="info"><strong>삼성카드(신용)</strong></div>
+									<!-- [D] 카드 확인 후 노출 -->
+									<div class="txt">
+										<strong class="txt-c1">불일치</strong> <!-- [D] 예금주 일치  -->
+										<strong class="txt-c2">확인완료</strong> <!-- [D] 예금주 불일치  -->
+									</div>
+									<!-- // -->
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 할부 # -->
+						<dl class="form">
+							<dt>할부 <em class="icon-required2">필수</em></dt>
+							<dd>
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">할부</span>
+										<span data-select="text" data-value="1">일시불</span>
+									</button>
+									<div class="list">
+										<div data-label="할부">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion" value="1"><span>일시불</span></label>
+												<label><input type="radio" name="selectOpeion" value="2"><span>1개월</span></label>
+												<label><input type="radio" name="selectOpeion" value="3"><span>2개월</span></label>
+												<label><input type="radio" name="selectOpeion" value="4"><span>3개월</span></label>
+												<label><input type="radio" name="selectOpeion" value="5"><span>4개월</span></label>
+												<label><input type="radio" name="selectOpeion" value="6"><span>5개월</span></label>
+												<label><input type="radio" name="selectOpeion" value="7"><span>6개월</span></label>
+												<label><input type="radio" name="selectOpeion" value="8"><span>7개월</span></label>
+												<label><input type="radio" name="selectOpeion" value="9"><span>8개월</span></label>
+												<label><input type="radio" name="selectOpeion" value="10"><span>9개월</span></label>
+												<label><input type="radio" name="selectOpeion" value="11"><span>10개월</span></label>
+												<label><input type="radio" name="selectOpeion" value="12"><span>11개월</span></label>
+												<label><input type="radio" name="selectOpeion" value="13"><span>12개월</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</fieldset>
+				</div>
+
+				<!-- ### 활용 : 기타 항목 ### -->
+				<h3 class="guide-tit2">활용 : 기타 항목</h3>
+				<div class="guide-area popup">
+					<fieldset class="form-wrap1">
+						<legend>기타 항목 케이스</legend>
+
+						<!-- # 생년월일/성별 # -->
+						<dl class="form">
+							<dt>생년월일/성별</dt>
+							<dd>
+								<!-- [CASE1] 입력가능 -->
+								<div class="text">
+									<input type="tel" title="주민등록번호앞6자리" maxlength="6" placeholder="생년월일">
+									<span class="util">-</span>
+									<input type="tel" title="주민등록번호뒷첫자리" maxlength="1" placeholder="성별">
+									<span class="util" data-masking="true">******</span>
+								</div>
+
+								<!-- [CASE2] 입력불가능 -->
+								<div class="text">
+									<data value="900101">900101</data>
+									<span class="util">-</span>
+									<input type="tel" title="주민등록번호뒷첫자리" maxlength="1" placeholder="성별">
+									<span class="util" data-masking="true">******</span>
+								</div>
+								<!-- // -->
+							</dd>
+						</dl>
+
+						<!-- # 주소 # -->
+						<dl class="form">
+							<dt>주소<i class="icon-required2">필수</i></dt>
+							<dd>
+								<!-- [주소지분류] -->
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormRadio01" checked/>
+										<span >자택</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio01" />
+										<span >직장</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormRadio01" />
+										<span >기타</span>
+									</label>
+								</div>
+
+								<!-- [시/군/구] 검색 : 전 -->
+								<div class="input-btn1">
+									<data class="text"  data-label="주소검색"></data>
+									<button type="button" class="icon-com1 ic2">주소검색</button>
+								</div>
+								<!-- [시/군/구] 검색 : 후 -->
+								<div class="input-btn1">
+									<data class="text"  data-label="주소검색">서울특별시 화양구 125-3</data>
+									<button type="button" class="icon-com1 ic2">주소검색</button>
+								</div>
+
+								<!-- [상세주소] -->
+								<input type="text" class="text" placeholder="상세주소" value="3층">
+							</dd>
+						</dl>
+
+						<!-- # 사업자등록번호 # -->
+						<dl class="form">
+							<dt>사업자등록번호 <i class="icon-required2">필수</i></dt>
+							<dd>
+								<div class="text">
+									<input type="tel" title="사업자등록번호 앞자리" maxlength="6" value="101">
+									<span class="util">-</span>
+									<input type="tel" title="사업자등록번호 중간자리" maxlength="6" value="01">
+									<span class="util">-</span>
+									<input type="tel" title="사업자등록번호 뒷자리" maxlength="6" value="00011">
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 소재지 연락처 # -->
+						<dl class="form">
+							<dt>소재지 연락처</dt>
+							<dd>
+								<input type="tel" class="text" title="소재지 연락처(첫반째)" placeholder="(첫반째) 전화번호를 끝까지 입력해주세요.">
+								<div class="input-wrap1">
+									<span class="util1">~</span>
+									<input type="tel" class="text" title="소재지 연락처(뒷4자리)" placeholder="마지막 뒷 4자리">
+									<span class="util1">(</span>
+									<input type="tel" class="text" title="소재지 연락처(내선번호)" placeholder="내선번호">
+									<span class="util1">)</span>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 예금주 확인 # -->
+						<dl class="form">
+							<dt>예금주 확인</dt>
+							<dd>
+								<!-- [CASE] 은행선택 : 전 -->
+								<div class="input-btn1">
+									<data class="selectbox"  data-label="은행선택"></data>
+									<button type="button">은행선택</button>
+								</div>
+								<!-- [CASE] 은행선택 : 후 -->
+								<div class="input-btn1">
+									<data class="selectbox" value="1" data-label="은행선택">국민은행</data>
+									<button type="button">은행선택</button>
+								</div>
+								<!-- [계좌번호입력] -->
+								<input type="tel" class="text" title="계좌번호" placeholder="계좌번호를 '-'없이 입력해주세요.">
+								<!-- // -->
+							</dd>
+						</dl>
+
+						<!-- # 취미생활 횟수 # -->
+						<dl class="form">
+							<dt>취미생활 횟수</dt>
+							<dd>
+								<div class="input-wrap1">
+									<!-- // -->
+									<div class="text">
+										<input type="tel" title="취미생활 횟수(년간)">
+										<span class="util1">년간</span>
+									</div>
+									<!-- // -->
+									<div class="text">
+										<input type="tel" title="취미생활 횟수(회)">
+										<span class="util1">회</span>
+									</div>
+									<!-- // -->
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 주피보험자 # -->
+						<dl class="form">
+							<dt>주피보험자</dt>
+							<dd>
+								<input type="text" class="text" placeholder="고객명을 입력해주세요.">
+								<div class="input-wrap1">
+									<input type="tel" class="text" placeholder="생년월일을 입력해주세요.">
+									<div class="text w1">
+										<input type="tel" placeholder="나이">
+										<span class="util1">세</span>
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 툴팁추가 # -->
+						<dl class="form">
+							<dt>툴팁추가 <a href="#none" class="icon-com2 ic1">안내</a></dt>
+							<dd>
+								<select class="selectbox" title="@대체텍스트">
+									<option>항목 1</option>
+								</select>
+							</dd>
+						</dl>
+
+						<!-- # 체크박스 # -->
+						<dl class="form">
+							<dt class="label-check1">
+								<label>
+									<input type="checkbox" checked>
+									<span>항목명</span>
+								</label>
+							</dt>
+							<dd>
+								<div class="input-date1 text">
+									<span>
+										<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+										<input type="text" title="날짜 선택" placeholder="YYYY.MM.DD" readonly>
+									</span>
+								</div>
+							</dd>
+						</dl>
+					</fieldset>
+				</div>
+
+				<!-- ### 활용 : 폼 영역 타이틀 ### -->
+				<h3 class="guide-tit2">활용 : 폼 영역 타이틀</h3>
+				<div class="guide-area popup">
+					<!-- # [예제1] 가입예정상품 # -->
+					<fieldset class="form-wrap1">
+						<legend class="tit">가입예정상품</legend>
+						<div class="form">
+							<div class="label-check1 col2">
+								<label>
+									<input type="checkbox">
+									<span>장기 보장성</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>장기저축성</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>자동차보험</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>일반화재</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>연금보험</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>기타</span>
+								</label>
+							</div>
+							<input type="text" class="text" placeholder="기타 가입예정 상품을 입력해주세요.">
+						</div>
+					</fieldset>
+
+					<!-- # [예제2] 상환원금 # -->
+					<fieldset class="form-wrap1">
+						<legend class="tit">상환원금</legend>
+						<div class="form">
+							<!-- 구분 -->
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio7" checked>
+									<span>일부 상환</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio7">
+									<span>전액 상환</span>
+								</label>
+							</div>
+							<!-- 금액 -->
+							<div class="text">
+								<input type="tel" title="상환금액(숫자만입력)" placeholder="숫자만입력">
+								<span class="util1">원</span>
+							</div>
+							<!-- 금액 : 오류 -->
+							<div class="text">
+								<input type="tel" title="상환금액(숫자만입력)" placeholder="숫자만입력" value="135,500,000" aria-invalid="true">
+								<span class="util1">원</span>
+							</div>
+							<div class="validation">대출잔액보다 작게 입력해주세요.</div>
+						</div>
+					</fieldset>
+					<!-- # // # -->
+				</div>
+
+				<!-- ### 활용 : 영역구분 ### -->
+				<h3 class="guide-tit2">활용 : 영역구분 : .form-wrap1 &gt; fieldset + fieldset</h3>
+				<div class="guide-area body">
+					<div class="form-wrap1">
+						<!-- # 영역1 # -->
+						<fieldset>
+							<legend>영역1</legend>
+
+							<div class="label-btn2">
+								<label>
+									<input type="radio" name="dd1" checked>
+									<span>항목명</span>
+								</label>
+								<label>
+									<input type="radio" name="dd1">
+									<span>항목명</span>
+								</label>
+								<label>
+									<input type="radio" name="dd1">
+									<span>항목명</span>
+								</label>
+								<label>
+									<input type="radio" name="dd1">
+									<span>항목명</span>
+								</label>
+							</div>
+
+							<dl class="form">
+								<dt>영역1의 항목</dt>
+								<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+							</dl>
+						</fieldset>
+
+						<!-- # 영역2 # -->
+						<fieldset>
+							<legend>영역2</legend>
+
+							<dl class="form">
+								<dt>영역2의 항목</dt>
+								<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+							</dl>
+						</fieldset>
+
+						<!-- # 영역3 # -->
+						<fieldset>
+							<legend class="tit">영역3 : 타이틀 노출</legend>
+
+							<dl class="form">
+								<dt>영역2의 항목</dt>
+								<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+							</dl>
+						</fieldset>
+
+						<!-- # 영역4 # -->
+						<fieldset>
+							<legend class="tit">영역4 : 타이틀 + 버튼1</legend>
+
+							<dl class="form">
+								<dt>영역2의 항목</dt>
+								<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+							</dl>
+
+							<div class="side">
+								<button type="button" class="btn-sub3 c2">삭제</button>
+							</div>
+						</fieldset>
+
+						<!-- # 영역4 # -->
+						<fieldset>
+							<legend class="tit">영역5 : 타이틀 + 버튼2</legend>
+
+							<dl class="form">
+								<dt>영역2의 항목</dt>
+								<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+							</dl>
+
+							<div class="side">
+								<button type="button" class="btn-sub2 ic8">초기화</button>
+							</div>
+						</fieldset>
+						<!-- # // # -->
+					</div>
+				</div>
+
+				<div class="guide-area popup">
+					<div class="form-wrap1 line2">
+						<!-- # 영역1 # -->
+						<fieldset>
+							<legend>영역1</legend>
+
+							<dl class="form">
+								<dt>영역1의 항목</dt>
+								<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+							</dl>
+						</fieldset>
+
+						<!-- # 영역2 # -->
+						<fieldset>
+							<legend>영역2</legend>
+
+							<dl class="form">
+								<dt>영역2의 항목</dt>
+								<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+							</dl>
+						</fieldset>
+
+						<!-- # 영역3 # -->
+						<fieldset>
+							<legend class="tit">영역3 : 타이틀 노출</legend>
+
+							<dl class="form">
+								<dt>영역2의 항목</dt>
+								<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+							</dl>
+						</fieldset>
+
+						<!-- # 영역4 # -->
+						<fieldset>
+							<legend class="tit">영역4 : 타이틀 + 버튼1</legend>
+
+							<dl class="form">
+								<dt>영역2의 항목</dt>
+								<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+							</dl>
+
+							<div class="side">
+								<button type="button" class="btn-sub3 c2">삭제</button>
+							</div>
+						</fieldset>
+
+						<!-- # 영역4 # -->
+						<fieldset>
+							<legend class="tit">영역5 : 타이틀 + 버튼2</legend>
+
+							<dl class="form">
+								<dt>영역2의 항목</dt>
+								<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+							</dl>
+
+							<div class="side">
+								<button type="button" class="btn-sub2 ic8">초기화</button>
+							</div>
+						</fieldset>
+						<!-- # // # -->
+					</div>
+				</div>
+
+				<div class="guide-area body">
+					<div class="form-wrap1">
+						<!-- # 영역1 # -->
+						<fieldset>
+							<legend class="tit">영역1</legend>
+
+							<dl class="form">
+								<dt>영역1의 항목</dt>
+								<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+							</dl>
+						</fieldset>
+
+						<!-- # 영역2 # -->
+						<fieldset>
+							<legend>영역1에 대한 묶음</legend>
+
+							<div>
+								<h4 class="tit-sub2">영역2</h4>
+								<dl class="form">
+									<dt>영역2의 항목</dt>
+									<dd class="side data-num1 txt-c1"><span>잔여</span><strong>000,000,000</strong><span>만원</span></dd>
+									<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+									<dd class="mes2">
+										<div>가입단위: 100만원</div>
+										<div>가입금액: 100만원~50,000만원</div>
+									</dd>
+								</dl>
+							</div>
+							<div>
+								<h4 class="tit-sub2">영역3</h4>
+								<dl class="form">
+									<dt>영역3의 항목</dt>
+									<dd class="side data-num1 txt-c1"><span>잔여</span><strong>000,000,000</strong><span>만원</span></dd>
+									<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+									<dd class="mes2">
+										<div>가입단위: 100만원</div>
+										<div>가입금액: 100만원~50,000만원</div>
+									</dd>
+								</dl>
+							</div>
+						</fieldset>
+						<!-- # // # -->
+					</div>
+				</div>
+
+				<!-- ### 활용 : 라인 ### -->
+				<h3 class="guide-tit2">활용 : 라인 : .line</h3>
+				<div class="guide-area body">
+					<fieldset class="form-wrap1 line">
+						<legend>라인</legend>
+
+						<dl class="form">
+							<dt>항목명</dt>
+							<dd><input type="text" class="text" title="@대체텍스트" placeholder="PLACEHOLDER"></dd>
+						</dl>
+					</fieldset>
+				</div>
+				<!-- ### // ### -->
+			</section>
+
+			<!-- ############################## -->
+			<!-- [유형3] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">유형3 : .form-wrap3</h2>
+
+				<div class="guide-area body">
+					<fieldset class="form-wrap3">
+						<legend>약관타이틀</legend>
+
+						<!-- // -->
+						<dl class="form">
+							<dt>타이틀</dt>
+							<dd>
+								<!-- [CASE1] 기본 -->
+								<div class="text2" data-label="입력예시"> <!-- [D] data-label="덧쓰기 텍스트" -->
+									<input type="text" maxlength="4" required>
+								</div>
+								<!-- [CASE2] 오류 : 클래스명(invalid) 추가  -->
+								<div class="text2 invalid" data-label="입력예시">
+									<input type="text" maxlength="4" value="입력예시" required>
+								</div>
+								<!-- [CASE3] 정상 : 클래스명(valid) 추가 -->
+								<div class="text2 valid" data-label="입력예시">
+									<input type="text" maxlength="4" value="입력예시" required>
+								</div>
+
+								<span>텍스트 </span>
+								<div class="text2" data-label="예적금">
+									<input type="text" maxlength="3" required>
+								</div><span>텍스트가 길어질 경우에는 개행처리됩니다.</span>
+								<div class="text2" data-label="상품">
+									<input type="text" maxlength="2" required>
+								</div><span>텍스트가 길어질 경우에는 개행처리됩니다.</span>
+							</dd>
+						</dl>
+
+						<!-- // -->
+						<div class="form">
+							<span>텍스트</span>
+							<div class="text2" data-label="입력예시">
+								<input type="text" maxlength="4" required>
+							</div><span>텍스트</span>
+							<div class="text2 invalid" data-label="입력예시">
+								<input type="text" maxlength="4" value="입력요시" required>
+							</div><span>텍스트</span>
+							<div class="text2 valid" data-label="입력예시">
+								<input type="text" maxlength="4" value="입력예시" required>
+							</div><span>텍스트가 길어질 경우는 개행처리 됩니다. </span>
+						</div>
+						<!-- // -->
+						<div class="form t1">
+							<span>텍스트강조</span>
+							<div class="text2" data-label="입력예시">
+								<input type="text" maxlength="4" required>
+							</div><span>텍스트</span>
+							<div class="text2" data-label="입력예시">
+								<input type="text" maxlength="4" required>
+							</div><span>텍스트</span>
+						</div>
+						<!-- // -->
+						<div class="form t2">
+							<span>텍스트</span>
+							<div class="label-btn1 t3 invalid"> <!-- 오류시 클래스명(invalid) 추가 -->
+								<label>
+									<input type="checkbox">
+									<span>숙지</span>
+								</label>
+							</div>
+							<span>하고</span>
+							<div class="label-btn1 t3">
+								<label>
+									<input type="checkbox">
+									<span>이해</span>
+								</label>
+							</div><span>했으며,</span><br>
+							<span>상기 내용에</span>
+							<div class="label-btn1 t3">
+								<label>
+									<input type="checkbox">
+									<span>동의</span>
+								</label>
+							</div><span>합니다.</span>
+						</div>
+						<!-- // -->
+					</fieldset>
+				</div>
+			</section>
+			<!-- ############################## -->
+		</form>
+	</article>
+
+	<!-- ##################################### -->
+	<!-- # 샘플툴팁 -->
+	<!-- ##################################### -->
+	<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+		<dl>
+			<dt>샘플툴팁1</dt>
+			<dd>컨텐츠 출력 영역1</dd>
+			<dd><button type="button" data-btn="pop-close">샘플툴팁 닫기</button></dd>
+		</dl>
+	</div>
+	<!-- ##################################### -->
+</div>
+
+
+
+<script src="../../resource/js/publish.plugin.js"></script>
+<script src="../../resource/js/publish.common.js"></script>
+<script>
+//<!--
+	//샘플 : 간편비밀번호 autofocus : 불필요시 삭제
+	$(".input-pass1 > input").keydown(function(e) {
+		if (e.which == 8 && this.value.length == 0) {
+			$(this).prev('input').focus();
+		}
+	}).keyup(function(e) {
+		if (this.value.length == this.maxLength) {
+			$(this).next('input').focus();
+			return false;
+		}
+	});
+
+	//샘플 : .form-wrap3 입력필드 오류 확인
+	$('.form-wrap3 .text2').each(function(){
+		var _this = $(this);
+		var _orgTxt = $(this).attr('data-label');
+		$(this).find('input').focusout(function(){
+			if($.trim($(this).val()) != _orgTxt && $.trim($(this).val())!=''){
+				_this.addClass('invalid')
+			}
+		}).focusin(function(){
+			_this.removeClass('invalid')
+		});
+	});
+
+	//샘플 : 셀렉트 박스 콜백함수 호출
+	function uiCallback(){
+		ui.alert('콜백함수호출');
+	}
+
+	//샘플 : 인증번호
+	$('[title="주민등록번호뒷7자리"]').on('blur',function(){
+		if($(this).val() == '1234567') $(this).attr('aria-invalid',false);
+		else $(this).attr('aria-invalid',true);
+		ui.formInput();
+	});
+
+	$('#exInput').on('click', function(){
+		ui.alert('확인해주세요', function(){
+			$('#exInputVal').attr('aria-invalid',true).focus();
+			ui.initReload();
+		});
+	});
+
+	$('#exSelect').on('click', function(){
+		ui.alert('확인해주세요', function(){
+			$('#exSelectVal').focus().parent('.select-wrap').addClass('invalid');
+		});
+	});
+//-->
+</script>
+</body>
+</html>

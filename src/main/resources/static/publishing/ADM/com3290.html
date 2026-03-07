@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>도입 메인 관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220418">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">도입 메인 관리</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<ul class="tab2">
+				<li><a href="#">메인A 친숙단계</a></li>
+				<li><a href="#" class="current">메인B 설계사모드</a></li>
+			</ul>
+			<div class="main-select">
+				<div class="select-list">
+					<a href="#" class="item current">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">1. 인사말/포인트</div>
+					</a>
+
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">2. 출석체크</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">2. 렛보험가이드</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">4. 보장물가계산기</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">5. 보험꿀팁</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">6. LBTI테스트</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">7. 소득시뮬레이션</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">8. 건강꿀팁</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">이미지영역</span>
+						<div class="name-txt1">9. 데일리퀴즈</div>
+					</a>
+				</div>
+				<div class="select-info1">
+					<p class="list-dot1">하단의 시간대별 이미지를 선택하세요.</p>
+					<button type="button" class="btn-sub1 c3" disabled>선택영역삭제</button><!-- 인사말/포인트 는 삭제 불가여서 선택시 비활성화-->
+					<button type="button" class="btn-sub1 c3">영역추가</button>
+				</div>
+			</div>
+			<h3 class="tit-sub2">1.인사말/포인트 영역에 등록된 이미지</h3>
+			<div class="main-select">
+				<div class="select-list">
+					<a href="#" class="item">
+						<span class="img">
+							<img src="../resource/img/admin/tmp/img1_1.png" alt=""><!--임시 사용 이미지-->
+							<img src="../resource/img/admin/tmp/img1_1.png" alt=""><!--임시 사용 이미지-->
+						</span>
+						<div class="name-txt1">01. 밤부터 새벽</div>
+					</a>
+					<a href="#" class="item current">
+						<span class="img">
+							<img src="../resource/img/admin/tmp/img1_1.png" alt=""><!--임시 사용 이미지-->
+						</span>
+						<div class="name-txt1">02. 아침시작</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">
+							<img src="../resource/img/admin/tmp/img1_1.png" alt=""><!--임시 사용 이미지-->
+						</span>
+						<div class="name-txt1">03. 오전시간</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">
+							<img src="../resource/img/admin/tmp/img1_1.png" alt=""><!--임시 사용 이미지-->
+						</span>
+						<div class="name-txt1">04. 점심시간</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">
+							<img src="../resource/img/admin/tmp/img1_1.png" alt=""><!--임시 사용 이미지-->
+						</span>
+						<div class="name-txt1">05. 오후시간</div>
+					</a>
+					<a href="#" class="item">
+						<span class="img">
+							<img src="../resource/img/admin/tmp/img1_1.png" alt=""><!--임시 사용 이미지-->
+						</span>
+						<div class="name-txt1">06. 저녁시간</div>
+					</a>
+				</div>
+			</div>
+			<div class="tbl-write1">
+				<table>
+					<colgroup>
+						<col style="width:120px;">
+						<col>
+						<col style="width:120px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr class="row2">
+							<th scope="row">배경 이미지 등록</th>
+							<td>
+								<div class="img-area">
+									<img src="">
+									[임시]이미지 view 영역
+								</div>
+								<button type="button" class="btn-sub1 c3">추천 배경</button>
+								<span class="wrap-file">
+									<input type="file" tabindex="-1" accept="image/*">
+									<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic3">첨부하기</button>
+								</span>
+								<p class="list-dot1">App 디자인 스타일과 해상도 유지를 위하여 가로 해상도 최소 1400px로 업로드 부탁드립니다.</p>
+							</td>
+							<th scope="row">문구 입력</th>
+							<td>
+								<div class="intro-box1">
+									<!-- <span class="intro-label">01. 밤부터 새벽</span>
+									<dl class="intro-info1">
+										<dt>이미지 노출시간</dt>
+										<dd>22:00:00 ~ 05:59:59 <span>까지</span></dd>
+									</dl> -->
+									<span class="intro-label">02. 아침시작</span>
+									<dl class="intro-info1">
+										<dt>이미지 노출시간</dt>
+										<dd>06:00:00 ~ 08:59:59 <span>까지</span></dd>
+									</dl>
+									<!-- <span class="intro-label">03. 오전시간</span>
+									<dl class="intro-info1">
+										<dt>이미지 노출시간</dt>
+										<dd>09:00:00 ~ 10:59:59 <span>까지</span></dd>
+									</dl>
+									<span class="intro-label">04. 점심시간</span>
+									<dl class="intro-info1">
+										<dt>이미지 노출시간</dt>
+										<dd>11:00:00 ~ 13:59:59 <span>까지</span></dd>
+									</dl>
+									<span class="intro-label">05. 오후시간</span>
+									<dl class="intro-info1">
+										<dt>이미지 노출시간</dt>
+										<dd>14:00:00 ~ 17:59:59 <span>까지</span></dd>
+									</dl>
+									<span class="intro-label">06. 저녁시간</span>
+									<dl class="intro-info1">
+										<dt>이미지 노출시간</dt>
+										<dd>18:00:00 ~ 21:59:59 <span>까지</span></dd>
+									</dl> -->
+								</div>
+								<div class="form-box1">
+									<strong class="form-tit1">[사용자명]님,</strong>
+									<div class="form-row">
+										<span class="form-tit">인사말 첫째줄<em class="imp"><span>필수</span></em></span>
+										<input type="text" name="" id="" class="text" style="width:280px;" placeholder="띄어쓰기 포함 14글자 이하만 입력가능">
+									</div>
+									<div class="form-row">
+										<span class="form-tit">인사말 둘째줄<em class="imp"><span>필수</span></em></span>
+										<input type="text" name="" id="" class="text" style="width:280px;" placeholder="띄어쓰기 포함 14글자 이하만 입력가능">
+									</div>
+									<p class="list-dot1">필수항목, 각 입력필드 띄어쓰기 포함 14글자 이하만 입력가능</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">최종 수정일시</th>
+							<td colspan="3">2022.06.10 22:22:22 </td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="wrap-btn">
+				<div class="btns">
+					<button type="button" class="btn-action c3">초기화</button>
+				</div>
+				<div class="btns">
+					<button type="button" class="btn-action c3">미리보기</button>
+					<button type="button" class="btn-action c1">적용하기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

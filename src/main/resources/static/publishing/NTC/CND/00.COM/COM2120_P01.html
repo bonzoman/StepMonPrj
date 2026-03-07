@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 나의정보 | 나의정보</title>
+<link rel="stylesheet" href="../../resource/css/common.css">
+<link rel="stylesheet" href="../../resource/css/content.css">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>나의 정보</h1>
+			<button type="button" data-btn="pop-close">나의 정보 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단 프로필 영역] -->
+			<!-- ######################### -->
+			<section class="info-summary3 t1"> <!-- [M 2022-09-27] 클래스명 삭제 -->
+				<h2 class="data-info1">
+					<span class="img">
+						<img src="../../resource/img/com/img_man2030.png" alt="">
+						<!-- 
+						연령대별 기본이미지 : man/woman 연령대구분
+						<img src="../../resource/img/com/img_man2030.png" alt=""> 남 : 20~30대
+						<img src="../../resource/img/com/img_man4050.png" alt=""> 남 : 40~50대
+						<img src="../../resource/img/com/img_man60.png" alt="">   남 : 60대
+						<img src="../../resource/img/com/img_woman2030.png" alt=""> 여 : 20~30대
+						<img src="../../resource/img/com/img_woman4050.png" alt=""> 여 : 40~50대
+						<img src="../../resource/img/com/img_woman60.png" alt="">   여 : 60대
+						-->
+					</span>
+					<strong>하다미</strong>
+				</h2>
+				<div class="data1">
+					<span>후보자님</span>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [후보자 기본정보] -->
+			<!-- ######################### -->
+			<section class="wrap-section1">
+				<div class="tit-sub1">
+					<h2>기본정보</h2>
+					<div class="side">
+						<button type="button" class="btn-sub3 c2">수정</button>
+					</div>
+				</div>
+				<div class="info-con1">
+					<dl>
+						<dt>휴대폰 번호</dt>
+						<dd>010-1234-2345</dd>
+					</dl>
+					<dl>
+						<dt>주소</dt>
+						<dd>서울시 강남구 테헤란로 1 ABC아파트 501호</dd>
+					</dl>
+					<dl>
+						<dt>경력구분</dt>
+						<dd>신인</dd>
+					</dl>
+					<dl>
+						<dt>관심분야</dt>
+						<dd>보험이랑 친해지기</dd>
+					</dl>
+				</div>
+			</section>
+			<div class="info-util1">
+				<p>탈퇴하려면 <a href="javascript:void(0);">여기</a>를 눌러주세요.</p>
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]푸시상세 | 푸시관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-19]	1. 업무구분 수정
+						2. 테스트 발솔 버튼 추가
+						3. 발송 조건 삭제
+						4. 저장 버튼 추가
+	*	[M 2022-10-24]	1. selectbox 추가
+	*	[M 2022-11-28]	1. 전체적으로 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>푸시 상세</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="tit-sub2">
+			<h3 class="">푸시 정보</h3>
+			<!--  푸시 상세로 접근 시 버튼노출
+			<div class="sub">
+				<button type="button" class="btn-sub1 c3">푸시 복사</button>
+			</div> -->
+		</div>
+
+		<!-- [M 2022-11-28] 수정 -->
+		<div class="tbl-write1">
+			<table>
+				<colgroup>
+					<col style="width:140px;">
+					<col>
+					<col style="width:120px;">
+					<col>
+					<col style="width:120px;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">플랫폼구분</th>
+						<td>
+							<select name="" id="" class="selectbox">
+								<option selected hidden value="">플랫폼 구분 선택</option>
+								<option value="">도입APP</option>
+								<option value="">설계사APP</option>
+							</select>
+						</td>
+						<th scope="row">등록자</th>
+						<td>시스템</td>
+						<th scope="row">등록일자</th>
+						<td>2022.02.22</td>
+					</tr>
+					<tr>
+						<th scope="row">업무구분</th>
+						<td colspan="5">
+							<div class="form-row">
+								<select name="" id="" class="selectbox" style="width:150px;">
+									<option selected hidden value="">1차 업무 구분 선택</option>
+									<option  value="">전체</option>
+								</select>
+								<select name="" id="" class="selectbox" style="width:150px;">
+									<option selected hidden value="">2차 업무 구분 선택</option>
+									<option  value="">전체</option>
+								</select>
+								<input type="text" class="text" style="width:180px;" name="" id="">
+								<button type="button" class="btn-sub1 c3">문구변경</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">발송목적</th>
+						<td colspan="5">
+							<div class="form-row">
+								<input type="text" class="text" style="width:100%;" name="" id="">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">발송시점</th>
+						<td>
+							<div class="form-row">
+								<select name="" id="" class="selectbox">
+									<option  value="">즉시</option>
+								</select>
+							</div>
+						</td>
+						<th scope="row">전송시스템</th>
+						<td>
+							<div class="form-row">
+								<select name="" id="" class="selectbox">
+									<option  value="">설계사</option>
+								</select>
+							</div>
+						</td>
+						<th scope="row">사용여부</th>
+						<td>
+							<div class="form-row">
+								<select name="" id="" class="selectbox">
+									<option  value="">사용</option>
+									<option  value="">미사용</option>
+								</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">메시지<em class="imp"><span>필수</span></em></th>
+						<td colspan="5">
+							<textarea name="" id="" style="width:100%;height:80px;" class="textarea"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+							<label class="label-check">
+								<input type="checkbox" name="f4">
+								<span>첨부링크</span>
+							</label>
+						</th>
+						<td colspan="5">
+							<input type="text" class="text" style="width:400px;" name="" id="">
+							<button type="button" class="btn-sub1 c3">연결URL</button>
+							<!-- 2022-12-26 추가 -->
+							<p class="list-dot1"><b>[연결URL] 클릭 후 연결하실 화면을 선택하여 [주소복사]를 해주세요.</b> <br>
+								해당기능은 Internet Explorer에서는 지원되지 않습니다. Internet Explorer에서 등록시 직접입력해주세요.<br>도입APP의 경우 가입 후 IT관리자에게 확인하여 발급된 RF사번으로 로그인이 필요합니다.</p>
+							<!-- 2022-12-26 추가 -->
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+
+							<label class="label-check ">
+								<input type="checkbox" name="f1">
+								<span>첨부이미지</span>
+							</label>
+
+							<div class="tooltip ">
+								<button type="button"></button>
+								<div class="tooltip-layer">
+									<ul class="list-dot1">
+										<!-- 2022-12-05 텍스트 변경 -->
+										<li>첨부이미지의 사이즈는 ( 1024px x 512px) 를 권장합니다.</li>
+										<li>첨부이미지는 각 항목당 png, jpg, jpeg, bmp, gif 형식의 파일 1건만 등록이 가능합니다.</li>
+										<li>첨부이미지 용량은 2MB를 넘을 수 없습니다.</li>
+										<!-- //2022-12-05 텍스트 변경 -->
+									</ul>
+								</div>
+							</div>
+						</th>
+						<td colspan="5">
+							<div class="form-row">
+								<span class="wrap-file">
+									<input type="file" tabindex="-1">
+									<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic3">첨부하기</button>
+								</span>
+							</div>
+							<div class="file-div">
+								<span class="file-name">가나다라마바사.jpg <button type="button" class="btn-del1">삭제</button></span>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="area-btn2">
+			<input type="text" class="text" style="width:150px;" placeholder="사번을 입력해주세요.">
+			<button type="button" class="btn-sub1 c3">테스트발송</button>
+		</div>
+
+		<div class="tbl-write1">
+			<table>
+				<colgroup>
+					<col style="width:140px;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">종료일</th>
+						<td>
+							<div class="form-row">
+								<input type="text" class="date" value="" placeholder="날짜 선택">
+								<span class="list-dot1"><strong class="point1">주의!</strong> 종료일이 입력되지 않으면, 무기한으로 설정됩니다.</span>
+							</div>
+						</td>
+					</tr>
+					<!-- <tr>
+						<th scope="row">발송조건</th>
+						<td>
+							<div class="form-row">
+								<input type="text" class="text" style="width:100px;" placeholder="CODE명">
+								<input type="text" class="text" style="width:300px;" placeholder="설명 문구">
+							</div>
+						</td>
+					</tr> --><!-- [M 2022-10-19] 발송조건 삭제 -->
+				</tbody>
+			</table>
+		</div>
+		<!-- //[M 2022-11-28] 수정 -->
+
+		<div class="area-action">
+			<button type="button" class="btn-action c3">취소</button>
+			<button type="button" class="btn-action c1">저장</button><!-- [M 2022-10-19] 저장 버튼 추가 -->
+		</div>
+		<!-- <div class="area-action">
+			<button type="button" class="btn-action c3">취소</button>
+			<button type="button" class="btn-action c1">저장</button>
+			<button type="button" class="btn-action c2">발송</button>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c3">취소</button>
+			<button type="button" class="btn-action c1">중단</button>
+			<button type="button" class="btn-action c2" disabled>발송</button>
+		</div> -->
+	</div>
+</div>
+</body>
+</html>

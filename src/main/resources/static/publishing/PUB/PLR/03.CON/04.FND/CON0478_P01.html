@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 즉시출금 | 취급자수납 | 수금관리 | 자급관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-04]	1. 텍스트 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<!-- 2022-12-20 텍스트 변경 -->
+			<h1>즉시출금</h1>
+			<button type="button" data-btn="pop-close">즉시출금 닫기</button>
+			<!-- //2022-12-20 텍스트 변경 -->
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 기본정보 -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<!-- # 납부할대상 # -->
+				<h2 class="data-info2 t1" data-value="102702"> <!-- [D] 국적(1/9)나이(000)성별(01/02)조합 -->
+					<strong>하다미</strong>
+					<span>
+						<span>1996.01.01</span>
+						<span>여</span>
+					</span>
+				</h2>
+
+				<!-- # 수납대상계약 # -->
+				<div class="info-con2">
+					<dl>
+						<dt>수납대기 계약건</dt>
+						<dd data-autoset="toggle">
+							<div class="area1">
+								<div class="data-num1 txt-c1"><span>총</span><strong>3</strong><span>건</span></div>
+								<button type="button" data-toggle="btn" aria-expanded="false">수납대기 계약건 상세보기</button>
+							</div>
+							<div data-toggle="content" class="area2 t1">
+								<dl>
+									<dt>[연체]무배당치아보험</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>롯데건강보험 </dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>롯데어린이보험</dt>
+									<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+								</dl>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- # 총 수납 보험료 # -->
+				<div class="area-info2">
+					<dl>
+						<dt>총 수납 보험료</dt>
+						<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+				</div>
+				<!-- # // # -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [출금계좌 정보] -->
+			<!-- ######################### -->
+			<p class="mes-info2 box">출금 가능 시간은 09~22시 입니다.</p>
+			<fieldset class="form-wrap1">
+				<legend class="tit">출금계좌 정보</legend>
+
+				<dl class="form">
+					<dt>은행/계좌번호 <em class="icon-required2">필수</em></dt>
+					<dd class="side"><button type="button" class="btn-sub3 c2">계좌이력</button></dd> <!-- 2022-11-04 텍스트 변경 -->
+					<dd>
+						<!-- [CASE1] 기본 -->
+						<div class="input-btn1">
+							<data class="selectbox" value="" data-label="은행 선택"></data>
+							<button type="button">은행 선택</button>
+						</div>
+						<div class="input-wrap1">
+							<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요">
+							<button type="button" class="btn-sub1">계좌확인</button>
+						</div>
+						<div class="validation"></div>
+
+						<!-- [CASE1] 은행 오류 -->
+						<div class="input-btn1">
+							<data class="selectbox" value="" data-label="은행 선택" aria-invalid="true"></data>
+							<button type="button">은행 선택</button>
+						</div>
+						<div class="input-wrap1">
+							<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요">
+							<button type="button" class="btn-sub1">계좌확인</button>
+						</div>
+						<div class="validation">은행을 선택해주세요.</div>
+
+						<!-- [CASE1] 계좌 오류 -->
+						<div class="input-btn1">
+							<data class="selectbox" value="" data-label="은행 선택"></data>
+							<button type="button">은행 선택</button>
+						</div>
+						<div class="input-wrap1">
+							<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요" aria-invalid="true">
+							<button type="button" class="btn-sub1">계좌확인</button>
+						</div>
+						<div class="validation">계좌번호 입력 및 계좌확인을 해주세요.</div>
+						<!-- // -->
+					</dd>
+					<dd class="data1">
+						<div>예금주:</div>
+						<div class="info"><strong>홍두한</strong><span><span>1965.03.21</span><span>남</span></span></div>
+						<!-- [D] 계좌 확인 후 노출 -->
+						<div class="txt">
+							<strong class="txt-c1">불일치</strong> <!-- [D] 예금주 일치  -->
+							<strong class="txt-c2">확인완료</strong> <!-- [D] 예금주 불일치  -->
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>출금금액</dt>
+					<dd><data class="text num1 disabled" value="600,000">600,000원</data></dd>
+				</dl>
+
+				<dl class="form">
+					<dt>출금동의 <em class="icon-required2">필수</em></dt>
+					<!-- [CASE1] 기본 -->
+					<dd class="area-btn1"><button type="button" class="btn-com1">동의 요청</button></dd>
+					<!-- [CASE2] 정상확인 + 출금동의 완료 -->
+					<dd class="area-btn1"><button type="button" class="btn-com1" disabled>동의 완료</button></dd>
+					<!-- [CASE3] 불일치 + 출금동의 실패 -->
+					<dd class="area-btn1">
+						<button type="button" class="btn-com1">동의 요청</button>
+						<div class="icon-invalid">실패(주민번호 또는 사업자번호가 상이)</div>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [안내문구] -->
+			<!-- ######################### -->
+			<ul class="txt-bul1 line2">
+				<li>계약자 소유의 계좌 또는 카드 수납을 지원합니다.</li>
+				<li>계약자가 아닌 제 3자 소유의 계좌 또는 카드로 수납을 원하시는 경우 업무요청을 통해 별도로 진행하시기 바랍니다.</li>
+			</ul>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">수납</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

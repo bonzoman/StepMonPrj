@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 고객찾기결과 | [T] 기타 | 장기 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>고객 찾기</h1>
+			<button type="button" data-btn="pop-close">고객 찾기 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- [총건수] -->
+			<div class="area-info1">
+				<p>총 <strong>00건</strong></p>
+			</div>
+
+			<!-- [고객목록] -->
+			<div class="info-data3">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong>고객명</strong>
+							<span>
+								<span>생년월일</span>
+								<span>성별</span>
+							</span>
+						</div>
+						<dl class="data1">
+							<dt>휴대폰번호</dt>
+							<dd><span data-masking="true">000 - **** - 0000</span></dd>
+							<dt>주소</dt>
+							<dd><span data-masking="true">서울 강남구 논현동 ****</span></dd>
+						</dl>
+						<button type="button" data-btn="selection" class="selected">선택</button> <!-- [D] 선택되었을 경우 : 클래스명(.selected) 추가 -->
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info2" data-value="102701">
+							<strong>하다미</strong>
+							<span>
+								<span>1976.03.15</span>
+								<span>여</span>
+							</span>
+						</div>
+						<dl class="data1">
+							<dt>휴대폰번호</dt>
+							<dd><span data-masking="true">000 - **** - 1234</span></dd>
+							<dt>주소</dt>
+							<dd><span data-masking="true">서울 중구 신당동 ****</span></dd>
+						</dl>
+						<button type="button" data-btn="selection">선택</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info2" data-value="102701">
+							<strong>하다미</strong>
+							<span>
+								<span>1994.12.12</span>
+								<span>여</span>
+							</span>
+						</div>
+						<dl class="data1">
+							<dt>휴대폰번호</dt>
+							<dd><span data-masking="true">000 - **** - 1234</span></dd>
+							<dt>주소</dt>
+							<dd><span data-masking="true">서울 영등포구 여의대로 ****</span></dd>
+						</dl>
+						<button type="button" data-btn="selection">선택</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info2" data-value="102701">
+							<strong>하다미</strong>
+							<span>
+								<span>1994.12.12</span>
+								<span>여</span>
+							</span>
+						</div>
+						<dl class="data1">
+							<dt>휴대폰번호</dt>
+							<dd><span data-masking="true">000 - **** - 1234</span></dd>
+							<dt>주소</dt>
+							<dd><span data-masking="true">서울 영등포구 여의대로 ****</span></dd>
+						</dl>
+						<button type="button" data-btn="selection">선택</button>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- 더보기 (현재페이지/총페이지) -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+			<!-- // -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

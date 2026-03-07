@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>갱신추가납대상조회 | 갱신대상계약조회 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>갱신추가납대상조회 <button type="button" class="icon-com2 ic1">갱신추가납대상이란?</button></h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [검색영역] 조회검색 -->
+		<!-- ######################### -->
+		<div id="uiFormSearch" class="form-search2" data-scroll-bg="1" data-togglecon="true">
+			<!-- ### [상단문구] ### -->
+			<div class="tit-section2">
+				<p>대상을 조회해보세요.</p>
+				<button type="button" data-toggle="btn" aria-expanded="false">조회정보보기</button>
+			</div>
+
+			<!-- ### [조회영역] ### -->
+			<fieldset class="form-wrap1">
+				<legend>조회정보 입력</legend>
+
+				<!-- # 조직구분 # -->
+				<dl class="form">
+					<dt>조직구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="label-btn1" data-autoset="form">
+							<label>
+								<input type="radio" name="uiFormRadio1" data-tabcon="uiFormCont1">
+								<span>조직</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1" data-tabcon="uiFormCont2" checked>
+								<span>취급자</span>
+							</label>
+						</div>
+						<!-- [CASE] 조직 -->
+						<div class="ui-tabcon" data-id="uiFormCont1">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="조직을 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">조직찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 조직 -->
+							<div class="info-data3 info">
+								<div class="info2 ic1">
+									<strong>장기지원팀</strong>
+									<span>A1234566</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+						</div>
+
+						<!-- [CASE] 취급자 -->
+						<div class="ui-tabcon active" data-id="uiFormCont2">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="취급자를 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">취급자찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 취급자 -->
+							<div class="info-data3 info">
+								<div class="data-info1">
+									<span class="img"><img src="../../../resource/img/temp/@img_user3.png" alt=""></span>
+									<span><strong>공지철</strong><span>658602</span></span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+							<!-- // -->
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 조회구분 # -->
+				<dl class="form">
+					<dt>조회구분 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select" data-callback="uiSampleFunction"> <!-- [D] uiSampleFunction : 샘플함수명 : 하단 스크립트 참고 -->
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">조회구분</span>
+								<span data-select="text" data-value="null">전체</span>
+							</button>
+							<div class="list">
+								<div data-label="조회구분 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value=""><span>전체</span></label>
+										<label><input type="radio" name="selectOpeion2" value="1"><span>계약자</span></label>
+										<label><input type="radio" name="selectOpeion2" value="2"><span>증권번호</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- [CASE1] 계약자 -->
+						<div class="ui-tabcon" data-select-con="1">
+							<div class="input-btn1">
+								<data class="text" data-label="고객을 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">고객검색</button>
+							</div>
+						</div>
+						<!-- [CASE3] 증권번호 -->
+						<div class="ui-tabcon" data-select-con="2">
+							<input type="tel" class="text" title="증권번호 입력" placeholder="증권번호를 입력해주세요.">
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 추가납입월 # -->
+				<dl class="form">
+					<dt>추가납입월 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">시작월 선택</button>
+								<input type="text" title="시작월 선택" data-dateform="month" value="2022.03" placeholder="YYYY.MM" readonly>
+							</span>
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">종료월 선택</button>
+								<input type="text" title="종료월 선택" data-dateform="month" value="2022.03" placeholder="YYYY.MM" readonly>
+							</span>
+						</div>
+					</dd>
+					<dd class="mes-info2">취급자 기준 시작월로부터 최대 6개월까지 조회 가능합니다.</dd>
+				</dl>
+
+				<!-- # 검색버튼 # -->
+				<div class="area-btn1 col">
+					<button type="button" class="btn-com1 ic8 c3">초기화</button>
+					<button type="button" class="btn-com1 c1" data-btn="search">조회</button>
+				</div>
+				<!-- # // # -->
+			</fieldset>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색전] 안내문구 -->
+		<!-- ######################### -->
+		<div class="mes-result1 ic1">
+			<p>
+				<strong>조회조건을 선택하시어<br>설계를 조회해주세요</strong>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 결과없음 -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>선택하신 조건의 계약이 없습니다.</strong>
+				<span>조회조건을 바꾸어 조회해보세요.</span>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [요약정보] -->
+		<!-- ######################### -->
+		<!-- # 전체 # -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조회구분</dt>
+				<dd class="ic1"><strong>전체</strong></dd>
+			</dl>
+			<dl class="data2">
+				<dt>추가납입월</dt>
+				<dd>2022.02~2022.04</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+		<!-- // -->
+
+		<!-- # 계약자 # -->
+		<div class="info-summary1">
+			<dl class="info2">
+				<dt>계약자</dt>
+				<dd class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+					<strong>하다미</strong>
+					<span>
+						<span>1997.01.01</span>
+						<span>남</span>
+					</span>
+				</dd>
+			</dl>
+			<dl class="data1">
+				<dt>추가납입월</dt>
+				<dd>2022.02~2022.04</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+		<!-- // -->
+
+		<!-- # 증권번호 # -->
+		<div class="info-summary1">
+			<dl class="info2">
+				<dt>증권번호</dt>
+				<dd class="ic1"><strong>LA11111111111111</strong></dd>
+			</dl>
+			<dl class="data1">
+				<dt>추가납입월</dt>
+				<dd>2022.02~2022.04</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+		<!-- // -->
+
+		<!-- ######################### -->
+		<!-- [탭버튼] -->
+		<!-- ######################### -->
+		<div class="tab-sub1" data-sticky="top">
+			<ul>
+				<li class="active"><a href="javascript:void(0)">정상</a></li>
+				<li><a href="javascript:void(0)">혜지</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색목록] -->
+		<!-- ######################### -->
+		<!-- # 총 건수 # -->
+		<div class="area-info1">
+			<p>총 <strong>00건</strong></p>
+		</div>
+
+		<!-- # [목록] # -->
+		<div class="info-data2">
+			<ul>
+				<!-- // -->
+				<li>
+					<div class="info">253220000000000</div>
+					<strong class="tit">상품명</strong>
+					<!-- # 정보1 # -->
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">피보험자명</strong>
+								<span>생년월일</span>
+								<span>성별</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>추가납입월</dt>
+							<dd>0000.00</dd>
+						</dl>
+						<dl>
+							<dt>추가납입전</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>추가납입후</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+					<button type="button" class="link">상세보기</button>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="info">253220000000000</div>
+					<strong class="tit">롯데힐링케어 건강보험</strong>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>1990.01.10</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>추가납입월</dt>
+							<dd>2020.03</dd>
+						</dl>
+						<dl>
+							<dt>추가납입전</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>추가납입후</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+					<button type="button" class="link">상세보기</button>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="info">253220000000000</div>
+					<strong class="tit">롯데힐링케어 건강보험</strong>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>1990.01.10</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>추가납입월</dt>
+							<dd>2020.03</dd>
+						</dl>
+						<dl>
+							<dt>추가납입전</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>추가납입후</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+					<button type="button" class="link">상세보기</button>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="info">253220000000000</div>
+					<strong class="tit">롯데힐링케어 건강보험</strong>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>1990.01.10</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>추가납입월</dt>
+							<dd>2020.03</dd>
+						</dl>
+						<dl>
+							<dt>추가납입전</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>추가납입후</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+					<button type="button" class="link">상세보기</button>
+				</li>
+				<!-- // -->
+			</ul>
+
+			<!-- # 더보기(현재페이지/총페이지) # -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+			<!-- // -->
+		</div>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer"></footer>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	/* ************************************
+	* 토글컨텐츠 호출
+	************************************ */
+	var _toggleSearch = $plugin.togglecon('#uiFormSearch', {
+		class_active : 'load',
+		selector_group : false,
+		callback_load :function(e){
+			//조회조건 오픈 이벤트
+		},
+		callback_after : function(e){
+			//조회조건 닫기 이벤트
+		}
+	});
+
+	//토글컨텐츠 강제 오픈
+	_toggleSearch.outputOpen();
+
+	/* ************************************
+	* 샘플 : 조회구분 셀렉트
+	************************************ */
+	function uiSampleFunction(e){
+		var _select_val = e.val();
+
+		$('[data-select-con].ui-tabcon').removeClass('active');
+		$('[data-select-con="'+ _select_val +'"].ui-tabcon').addClass('active');
+	}
+//-->
+</script>
+</body>
+</html>

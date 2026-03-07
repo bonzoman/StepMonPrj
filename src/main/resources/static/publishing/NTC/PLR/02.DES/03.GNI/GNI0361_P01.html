@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 심사결과내역 | 가입설계조회 | 일반보험</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>심사결과내역</h1>
+			<button type="button" data-btn="pop-close">심사결과내역 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [심사결과] -->
+			<!-- ######################### -->
+			<section class="wrap-section1">
+				<h2 class="tit-sub1">심사결과정보</h2>
+				<div class="info-con1">
+					<dl>
+						<dt>심사결과</dt>
+						<dd>보완요청</dd>
+					</dl>
+					<dl>
+						<dt>승인일자</dt>
+						<dd>2021.02.23 09:00</dd>
+					</dl>
+					<dl>
+						<dt>승인조건</dt>
+						<dd>가입설계수정 불필요</dd>
+					</dl>
+					<dl>
+						<dt>심사자</dt>
+						<dd>하다미</dd>
+					</dl>
+				</div>
+				<div class="area-btn1">
+					<button type="button" class="btn-com1">설계수정요청</button>
+					<button type="button" class="btn-com1">심사이력조회</button>
+				</div>
+			</section>
+
+			<!-- # 심사의견 # -->
+			<section class="wrap-section line">
+				<h3 class="tit-sub1">심사의견</h3>
+				<p class="mes-t3">
+					공제(자기부담금)은 보험약관에 따라 적용됩니다.(상세내용 약관참조)<br>
+					피보험자가 15세 미만인 경우, 상해 또는 질병 사망을 보험사고로 하는 보험계약은 보험약관에 의거(계약의 무효)담보되지 않습니다.
+				</p>
+			</section>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

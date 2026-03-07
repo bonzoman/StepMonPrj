@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>상세 | 실가동 유실적 조회 | 조직관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-05]	1. 라벨 케이스 추가​
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>실가동 유실적 조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li><a href="javascript:void(0)">주요통계</a></li>
+				<li class="active"><a href="javascript:void(0)" aria-current="page">실가동 및 유실적</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [기준설정] -->
+		<!-- ######################### -->
+		<div class="area-info1 line2">
+			<p>2022.04</p>
+			<div class="side"><button type="button" class="icon-com1 ic18 right">필터</button></div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [합계영역] -->
+		<!-- ######################### -->
+		<h2 class="tit-sub1">전속지원팀</h2>
+
+		<div class="area-toggle3 line" data-autoset="toggle">
+			<ul>
+				<!-- // -->
+				<li>
+					<div class="sub">
+						<span class="icon-txt2 ic5">실가동</span>
+						<span class="icon-txt2 t1 ic4">유실적</span>
+						<span class="icon-txt2 t1 ic4">Core</span>
+					</div>
+					<div class="info-data3 t3">
+						<dl>
+							<dt class="data-info1">
+								<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+								<span><strong>하다미</strong><span>658602</span></span>
+								<i class="icon-txt2 t1 ic6">전속</i>
+								<!-- [D] 교차인 경우 <i class="icon-txt2 t1 ic1">교차</i> -->
+							</dt>
+							<dd class="data-word3">
+								<span>강남사업단</span>
+								<span>강남7지점</span>
+								<span>대리</span>
+								<span>18차월</span>
+							</dd>
+							<dd class="data2 data-word3">
+								<strong>남자</strong>
+								<strong>35세</strong>
+								<strong>P2</strong>
+								<strong>37차월</strong>
+							</dd>
+						</dl>
+					</div>
+					<div class="tit">
+						<strong>실적상세</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</div>
+					<div data-toggle="content">
+						<div class="tbl-data1">
+							<table>
+								<caption class="tit">장기신규</caption>
+								<colgroup>
+									<col style="width:20%">
+									<col style="width:26.6%">
+									<col style="width:26.6%">
+									<col style="width:26.6%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="left">구분</th>
+										<th scope="col" class="right">원수(천원)</th>
+										<th scope="col" class="right">판매건수(건)</th>
+										<th scope="col" class="right">수수료환산(천원)</th>
+									</tr>
+								</thead>
+								<tbody class="right">
+									<tr>
+										<th>월납</th>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+									</tr>
+									<tr>
+										<th>보장성</th>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+									</tr>
+									<tr>
+										<th>재물</th>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="info-data1 bg">
+							<ul>
+								<!-- // -->
+								<li>
+									<h3 class="tit">일반</h3>
+									<div class="info-con2 t2">
+										<dl>
+											<dt>일반</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+									</div>
+								</li>
+								<!-- // -->
+								<li>
+									<h3 class="tit">자동차</h3>
+									<div class="info-con2 t2">
+										<dl>
+											<dt>당사갱신</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>신규타사</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>계</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+									</div>
+								</li>
+								<!-- // -->
+								<li>
+									<h3 class="tit">장기계속</h3>
+									<div class="info-con2 t2">
+										<dl>
+											<dt>전전월</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>전원</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>당월</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+									</div>
+								</li>
+								<!-- // -->
+							</ul>
+						</div>
+
+						<div class="area-info2">
+							<dl>
+								<dt>총량</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="sub">
+						<span class="icon-txt2 ic5">실가동</span>
+						<span class="icon-txt2 t1 ic4">유실적</span>
+						<span class="icon-txt2 t1 ic4">Core</span>
+						<span class="icon-txt2 ic5">2개월 연속가동</span><!-- [M 2022-10-05] 라벨 케이스 추가 : 실가동이면서, 2개월 연속가동한 경우​ -->
+						<span class="icon-txt2 ic5">3개월 연속가동</span><!-- [M 2022-10-05] 라벨 케이스 추가 : 실가동이면서, 3개월 연속가동한 경우​ -->
+					</div>
+					<div class="info-data3 t3">
+						<dl>
+							<dt class="data-info1">
+								<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+								<span><strong>하다미</strong><span>658602</span></span>
+								<i class="icon-txt2 t1 ic1">교차</i>
+							</dt>
+							<dd class="data-word3">
+								<span>강남사업단</span>
+								<span>강남7지점</span>
+								<span>대리</span>
+								<span>18차월</span>
+							</dd>
+							<dd class="data2 data-word3">
+								<strong>남자</strong>
+								<strong>35세</strong>
+								<strong>P2</strong>
+								<strong>37차월</strong>
+							</dd>
+						</dl>
+					</div>
+					<div class="tit">
+						<strong>실적상세</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</div>
+					<div data-toggle="content">
+						<div class="tbl-data1">
+							<table>
+								<caption class="tit">장기신규</caption>
+								<colgroup>
+									<col style="width:20%">
+									<col style="width:26.6%">
+									<col style="width:26.6%">
+									<col style="width:26.6%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="left">구분</th>
+										<th scope="col" class="right">원수(천원)</th>
+										<th scope="col" class="right">판매건수(건)</th>
+										<th scope="col" class="right">수수료환산(천원)</th>
+									</tr>
+								</thead>
+								<tbody class="right">
+									<tr>
+										<th>월납</th>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+									</tr>
+									<tr>
+										<th>보장성</th>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+									</tr>
+									<tr>
+										<th>재물</th>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="info-data1 bg">
+							<ul>
+								<!-- // -->
+								<li>
+									<h3 class="tit">일반</h3>
+									<div class="info-con2 t2">
+										<dl>
+											<dt>일반</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+									</div>
+								</li>
+								<!-- // -->
+								<li>
+									<h3 class="tit">자동차</h3>
+									<div class="info-con2 t2">
+										<dl>
+											<dt>당사갱신</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>신규타사</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>계</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+									</div>
+								</li>
+								<!-- // -->
+								<li>
+									<h3 class="tit">장기계속</h3>
+									<div class="info-con2 t2">
+										<dl>
+											<dt>전전월</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>전원</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>당월</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+									</div>
+								</li>
+								<!-- // -->
+							</ul>
+						</div>
+
+						<div class="area-info2">
+							<dl>
+								<dt>총량</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="sub">
+						<span class="icon-txt2 t1 ic4">실가동</span>
+						<span class="icon-txt2 t1 ic4">유실적</span>
+						<span class="icon-txt2 t1 ic4">Core</span>
+						<span class="icon-txt2 ic5">비가동전환</span><!-- [M 2022-10-05] 라벨 케이스 추가 : 전월엔 실적이 있는데, 해당월에 실적 없는 경우​ -->
+					</div>
+					<div class="info-data3 t3">
+						<dl>
+							<dt class="data-info1">
+								<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+								<span><strong>하다미</strong><span>658602</span></span>
+								<i class="icon-txt2 t1 ic6">전속</i>
+							</dt>
+							<dd class="data-word3">
+								<span>강남사업단</span>
+								<span>강남7지점</span>
+								<span>대리</span>
+								<span>18차월</span>
+							</dd>
+							<dd class="data2 data-word3">
+								<strong>남자</strong>
+								<strong>35세</strong>
+								<strong>P2</strong>
+								<strong>37차월</strong>
+							</dd>
+						</dl>
+					</div>
+					<div class="tit">
+						<strong>실적상세</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</div>
+					<div data-toggle="content">
+						<div class="tbl-data1">
+							<table>
+								<caption class="tit">장기신규</caption>
+								<colgroup>
+									<col style="width:20%">
+									<col style="width:26.6%">
+									<col style="width:26.6%">
+									<col style="width:26.6%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="left">구분</th>
+										<th scope="col" class="right">원수(천원)</th>
+										<th scope="col" class="right">판매건수(건)</th>
+										<th scope="col" class="right">수수료환산(천원)</th>
+									</tr>
+								</thead>
+								<tbody class="right">
+									<tr>
+										<th>월납</th>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+									</tr>
+									<tr>
+										<th>보장성</th>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+									</tr>
+									<tr>
+										<th>재물</th>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+										<td class="data-num1"><strong>000,000</strong></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="info-data1 bg">
+							<ul>
+								<!-- // -->
+								<li>
+									<h3 class="tit">일반</h3>
+									<div class="info-con2 t2">
+										<dl>
+											<dt>일반</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+									</div>
+								</li>
+								<!-- // -->
+								<li>
+									<h3 class="tit">자동차</h3>
+									<div class="info-con2 t2">
+										<dl>
+											<dt>당사갱신</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>신규타사</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>계</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+									</div>
+								</li>
+								<!-- // -->
+								<li>
+									<h3 class="tit">장기계속</h3>
+									<div class="info-con2 t2">
+										<dl>
+											<dt>전전월</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>전원</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+										<dl>
+											<dt>당월</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+										</dl>
+									</div>
+								</li>
+								<!-- // -->
+							</ul>
+						</div>
+
+						<div class="area-info2">
+							<dl>
+								<dt>총량</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+				<!-- // -->
+			</ul>
+
+			<!-- # [더보기] (현재페이지/총페이지) # -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+		</div>
+
+		<!-- ### 자료없음 ###  -->
+		<div class="mes-result1">
+			<p>
+				<!-- # [CASE1] : 최초접근 자료 없을 시 # -->
+				<strong>아직 실적이 없어요.</strong>
+				<!-- # [CASE2] : 필터 후 자료 없을 시 # -->
+				<strong>해당하는 자료가 없어요.</strong>
+				<!-- // -->
+				<p>조건을 변경해보세요.</p>
+				<!-- // -->
+			</p>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

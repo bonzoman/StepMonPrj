@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 설계복사 | 쉬운설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>설계복사</h1>
+			<button type="button" data-btn="pop-close">설계복사 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">let:smile 종합검강보험 종합건강보험(더채움 베이직)(2201)</h2>
+				<div class="info">
+					<dl>
+						<dt>설계번호(증권번호)</dt>
+						<dd>LA123456789 </dd>
+					</dl>
+				</div>
+				<div class="data1">
+					<dl>
+						<dt>종 구분 및 보험기간</dt>
+						<dd>1종 100세만기</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [정보입력] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>정보 입력</legend>
+
+				<!-- # // # -->
+				<dl class="form">
+					<dt>보험기간</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="bh1" checked>
+								<span>100세만기</span>
+							</label>
+							<label>
+								<input type="radio" name="bh1">
+								<span>90세만기</span>
+							</label>
+							<label>
+								<input type="radio" name="bh1">
+								<span>80세만기</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+				<!-- 2022-12-07 케이스 추가 -->
+				<dl class="form">
+					<dt>간편여부</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="bh2" checked>
+								<span>간편</span>
+							</label>
+							<label>
+								<input type="radio" name="bh2">
+								<span>일반</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+				<dl class="form">
+					<dt>보험기간</dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="true">
+								<span data-select="title">보험기간</span>
+								<span data-select="text" data-value="0">100세</span>
+							</button>
+							<div class="list">
+								<div data-label="보험기간">
+									<div class="option">
+										<label><input type="radio" name="select1" value="0"><span>100세</span></label>
+										<label><input type="radio" name="select1" value="1"><span>90세</span></label>
+										<label><input type="radio" name="select1" value="2"><span>80세</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<dl class="form">
+					<dt>갱신적용여부</dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="true">
+								<span data-select="title">갱신적용여부</span>
+								<span data-select="text" data-value="0">갱신</span>
+							</button>
+							<div class="list">
+								<div data-label="갱신적용여부">
+									<div class="option">
+										<label><input type="radio" name="select1" value="0"><span>갱신</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<!-- //2022-12-07 케이스 추가 -->
+				<!-- # // # -->
+				<dl class="form line">
+					<dt>납입면제구분</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="mj1" checked>
+								<span>적용형</span>
+							</label>
+							<label>
+								<input type="radio" name="mj1">
+								<span>미적용형</span>
+							</label>
+						</div>
+					</dd>
+					<dd class="info t1 ic1">
+						<dl>
+							<dt>적용형과 미적용의 차이 무엇인가요?</dt>
+							<dd>보험계약자의 보험료 납입의무를 면제하는 것으로, 약관에서 정한 납입면제 사유가 발생한 경우 보험료를 납입하지 않더라도 보장을 계속 받을 수 있는 제도입니다.</dd>
+						</dl>
+					</dd>
+				</dl>
+				<!-- # // # -->
+				<dl class="form line">
+					<dt>해지환급유형</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="hj1" checked>
+								<span>일반형</span>
+							</label>
+							<label>
+								<input type="radio" name="hj1">
+								<span>무해지형</span>
+							</label>
+						</div>
+					</dd>
+					<dd class="info t1 ic2">
+						<dl>
+							<dt>일반형과 무해지형의 차이는 무엇인가요?</dt>
+							<dd>보험계약이 해지되었을 때 보험회사가 보험계약자에게 돌려주는 금액을 말합니다. 보험상품은 은행의 저축상품과는 달라 납입한 보험료의 원금이 그대로 적립되는 것이 아니므로 해지환급금은 납입한 보험료보다 적거나 아예 없을 수도 있습니다.</dd>
+						</dl>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">적용</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

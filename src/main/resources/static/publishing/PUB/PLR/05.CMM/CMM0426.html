@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>let 설정 No.1 설계사 노하우 | 게시판 | 노하우 | 커뮤니티</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>이달의 Let선정</h1> <!-- [M 2022-07-19] 문구 변경 -->
+		<!-- [M 2022-07-19] 영역 삭제 <button type="button" class="btn-t1 icon-com1 ic2">검색</button> -->
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] 안내문구 -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>Let 선정 No.1 설계사분들의<br>노하우를 확인해보세요!</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [목록영역] No.1 노하우 -->
+		<!-- ######################### -->
+		<!-- # 총 건수 / 정렬 / 필터 # -->
+		<div class="area-info1">
+			<p>총 <strong>000건</strong></p>
+			<div class="side">
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">정렬</span>
+						<span data-select="text" data-value="1">최신순</span>
+					</button>
+					<div class="list">
+						<div data-label="정렬">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion" value="1"><span>최신순</span></label>
+								<label><input type="radio" name="selectOpeion" value="2"><span>조회순</span></label>
+								<label><input type="radio" name="selectOpeion" value="3"><span>설계복사순</span></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="icon-com1 ic18 right">필터</button>
+			</div>
+		</div>
+
+		<!-- # 목록 # -->
+		<div class="board-list3">
+			<ul>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<!-- [제목] -->
+						<strong class="tit">제목</strong>
+						<!-- [상품명] -->
+						<div class="txt">상품명</div>
+						<!-- [지급률]
+							ic1 : 0~400%
+							ic2 : 400%초과~800%미안
+							ic3 : 800%초과
+						-->
+						<div class="data3 icon-t1 ic1">지급률 000%</div>
+						<!-- [월납입보험료] -->
+						<div class="data-num1">월 <strong>000,000,000</strong><span>원</span></div>
+						<!-- [남/여 월보험료] -->
+						<div class="data5">
+							<dl>
+								<dt>남자</dt>
+								<dd class="data-num1">월 <strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>여자</dt>
+								<dd class="data-num1">월 <strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+						</div>
+						<!-- [해시태그] -->
+						<div class="data-word2">
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+						</div>
+						<!-- [작성자] -->
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/com/img_man60.png" alt=""></span>
+							<span class="txt1"><em>No.1</em></span>
+							<span><strong>이름</strong></span>
+							<span><em class="icon-grade1">우수설계사</em></span> <!-- [D] 우수설계자일 경우 노출 -->
+							<span>연령대 대상 판매1등</span><!-- [M 2022-07-19] 문구추가 : 대상 -->
+						</div>
+						<!-- [작성일] -->
+						<dl class="data2">
+							<dt>작성일</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<!-- [조회/댓글/설계복사] -->
+						<div class="data1">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>0000</dd>
+							</dl>
+
+							<!-- [M 2022-07-19] 댓글 추가 -->
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>0000</dd>
+							</dl>
+							<!-- // -->
+
+							<dl class="icon-com1 ic15">
+								<dt>설계복사</dt>
+								<dd>000</dd>
+							</dl>
+						</div>
+						<!-- // -->
+					</a>
+				</li>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<strong class="tit">신혼 부부 맞춤형 설계 노하우</strong>
+						<div class="txt">실손의료보험</div>
+						<div class="data3 icon-t1 ic1">지급률 750%</div>
+						<div class="data5">
+							<dl>
+								<dt>남자</dt>
+								<dd class="data-num1">월 <strong>10,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>여자</dt>
+								<dd class="data-num1">월 <strong>10,000</strong><span>원</span></dd>
+							</dl>
+						</div>
+						<div class="data-word2">
+							<span>#60대이상</span>
+							<span>#기혼</span>
+							<span>#10만원이하</span>
+							<span>#실손</span>
+						</div>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+							<span class="txt1"><em>No.1</em></span>
+							<span><strong>하다미</strong></span>
+							<span><em class="icon-grade2">블루리본</em></span> <!-- 블루리본추가 2022-12-29 추가 -->
+							<span>20대 대상 판매1등</span>
+						</div>
+						<dl class="data2">
+							<dt>작성일</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<div class="data1">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic15">
+								<dt>설계복사</dt>
+								<dd>0000</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<strong class="tit">사회초년생을 위한 저렴한 보험</strong>
+						<div class="txt">let: smile 종합건강보험</div>
+						<div class="data3 icon-t1 ic1">지급률 650%</div>
+						<div class="data5">
+							<dl>
+								<dt>남자</dt>
+								<dd class="data-num1">월 <strong>100,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>여자</dt>
+								<dd class="data-num1">월 <strong>90,000</strong><span>원</span></dd>
+							</dl>
+						</div>
+						<div class="data-word2">
+							<span>#60대이상</span>
+							<span>#기혼</span>
+							<span>#10만원이하</span>
+							<span>#실손</span>
+							<span>#저렴한 보험</span>
+							<span>#쉬운설계</span>
+						</div>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+							<span class="txt1"><em>No.1</em></span>
+							<span><strong>공자철</strong></span>
+							<span>30대 대상 판매1등</span>
+						</div>
+						<dl class="data2">
+							<dt>작성일</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<div class="data1">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic11">
+								<dt>댓글</dt>
+								<dd>000</dd>
+							</dl>
+							<dl class="icon-com1 ic15">
+								<dt>설계복사</dt>
+								<dd>0000</dd>
+							</dl>
+						</div>
+					</a>
+				</li>
+				<!-- // -->
+			</ul>
+
+			<!-- 더보기 버튼 -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<a href="javascript:void(0);" class="btn-action c1">노하우 작성</a>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

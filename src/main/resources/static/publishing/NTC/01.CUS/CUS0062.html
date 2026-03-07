@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>가입설계동의현황 | 개인고객등록 | 고객등록</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>고객등록</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- // -->
+		<div class="tit-section"><p>고객등록 및 정보활용을 위해서는<br>먼저 가입설계동의 진행이 필요합니다.</p></div>
+
+		<!-- // -->
+		<fieldset class="form-wrap1">
+			<legend>고객 정보 입력</legend>
+
+			<!-- # 고객명 # -->
+			<dl class="form">
+				<dt>고객명</dt>
+				<dd>
+					<input type="text" class="text" title="성함" placeholder="고객명을 입력해주세요.">
+				</dd>
+			</dl>
+
+			<!-- # 생년월일/성별 # -->
+			<dl class="form">
+				<dt>생년월일/성별</dt>
+				<dd>
+					<div class="text">
+						<input type="tel" title="주민등록번호앞6자리" maxlength="6" placeholder="생년월일">
+						<span class="util">-</span>
+						<input type="tel" title="주민등록번호뒷첫자리" maxlength="1" placeholder="성별">
+						<span class="util" data-masking="true">******</span>
+					</div>
+				</dd>
+			</dl>
+			<!-- # // # -->
+		</fieldset>
+
+		<!-- // -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1" disabled>다음</button>
+			<!-- <button type="button" class="btn-action c1">다음</button> : 활성화 -->
+		</div>
+		<!-- // -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

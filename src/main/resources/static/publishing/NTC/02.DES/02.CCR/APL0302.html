@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>청약서류 확인 | 스마트폰청약 | 자동차설계 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>스마트폰 청약</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [진행상태] STEP 01 -->
+		<!-- ######################### -->
+		<div class="info-step1" data-autoset="toggle" data-sticky="top">
+			<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+			<ol data-toggle="content">
+				<li><button type="button">01. 보험계약자 확인</button><button type="button" class="btn-sub3 c2">수정</button></li> <!-- [D] 페이지 이동 : 보험계약자 확인 -->
+				<li aria-current="step"><button type="button">02. 청약서류 확인</button></li>
+				<li><button type="button" disabled>03. 내용확인 및 동의</button></li>
+				<li><button type="button" disabled>04. 기타정보 동의</button></li>
+				<li><button type="button" disabled>05. 전자서명</button></li>
+			</ol>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [상단문구] -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>모든 문서를 끝까지 <br> 확인해주세요.</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [문서확인] -->
+		<!-- ######################### -->
+		<div class="slider-view">
+			<ul class="slider-t1" data-slider="list3" data-slider-title="서류확인" data-pagination="fraction" data-navigation="true" data-auto-height="true" data-slider-toast="true" data-callback="uiFunctionName"><!-- [D] 이전/다음 토스트팝업설정 : data-slider-toast="true" | data-callback="함수명" : 체인징 될때 함수 호출 -->
+				<li title="청약서" data-title="확인함">
+					<!-- [D] 문서 영역 : .area-temp영역은 임시로 넣어둠 -->
+					<p class="area-temp" style="height:45rem;">서류1</p>
+					<!-- // -->
+				</li>
+				<li title="">
+					<!-- [D] 문서 영역 : .area-temp영역은 임시로 넣어둠 -->
+					<p class="area-temp" style="height:45rem;">서류2</p>
+					<!-- // -->
+				</li>
+				<li title="">
+					<!-- [D] 문서 영역 : .area-temp영역은 임시로 넣어둠 -->
+					<p class="area-temp" style="height:45rem;">서류3</p>
+					<!-- // -->
+				</li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action">이전</button>
+			<button type="button" class="btn-action c1" disabled>다음</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<!-- ##################################### -->
+<script>
+//<!--
+	/* ****************************************
+	* [샘플] 슬라이드 체인징 이벤트
+	* uiFunctionName() : 함수명 임시 적용
+	* slide 가 Change 될때마다 함수 호출
+	* data-title="확인함"으로 문서 확인함 표시
+	* 마지막 문서를 확인 했을때 다음 버튼 활성화
+	**************************************** */
+	function uiFunctionName(e){
+		var _slider = e.slides[e.activeIndex]; //현재 슬라이드
+		var _last_slider = e.slides[e.slides.length-1]; //마지막 슬라이드
+
+		//현재 문서를 봤음을 표시
+		$(_slider).attr('data-title','확인함');
+
+		//마지막 문서까지 봤을 때 다음버튼 활성화
+		if($(_last_slider).attr('data-title')){
+			$('.btn-action.c1').removeAttr('disabled');
+		};
+	};
+	/* *************************************** */
+//-->
+</script>
+</body>
+</html>

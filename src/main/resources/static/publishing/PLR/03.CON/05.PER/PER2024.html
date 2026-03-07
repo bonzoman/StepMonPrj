@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>검색 | 조직증감추이 | 조직관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>필터</h1>
+			<button type="button" data-btn="pop-close">필터 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<fieldset class="form-wrap1">
+				<legend>필터입력</legend>
+
+				<dl class="form">
+					<dt>조회형태 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="formRadio01" checked>
+								<span>사업단별</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio01">
+								<span>지점별</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 설계사 권한 영역 # -->
+				<dl class="form">
+					<dt>조회방법 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">조회항목 선택</span>
+								<span data-select="text" data-value="1">관리점포</span>
+							</button>
+							<div class="list">
+								<div data-label="조회항목">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion" value="1"><span>관리점포</span></label>
+										<label><input type="radio" name="selectOpeion" value="2"><span>취급자</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<div class="input-btn1">
+							<data class="text" value="" data-label="관리점포를 검색해 주세요."></data>
+							<button type="button" class="icon-com1 ic2">관리점포 검색</button>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+
+				<dl class="form">
+					<dt>조회기간 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+								<input type="text" title="날짜 선택" data-dateform="start" value="2022.03.01" placeholder="YYYY.MM.DD" readonly>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<a href="javascript:void(0);" class="btn-action">초기화</a>
+				<a href="javascript:void(0);" class="btn-action c1">적용</a>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

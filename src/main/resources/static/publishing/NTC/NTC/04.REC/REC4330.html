@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>위촉서류확인 시 유의사항 | 위촉계약서 작성 | 전자위촉</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 위촉서류 확인시 유의사항 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPDES0168L01" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<!-- [M 2022-05-26] 0.8v UX Writing 적용 -->
+		<dt>위촉서류 확인시 유의사항</dt>
+		<dd>모든 위촉 서류를 검토하신 후 화면 하단의 <em>확인</em>을 터치해주세요.</dd>
+		<dd>상하 스크롤을 통해 위촉서류를 이동하실 수 있습니다.</dd>
+		<dd>위촉 서류를 최종 확인하는 단계 이므로, 꼼꼼히 위촉 서류를 최종 검토해주세요.</dd>
+		<!-- [M 2022-05-26] // -->
+
+		<!-- // -->
+		<dd class="area-action">
+			<!-- button type="button" class="btn-action" data-btn="pop-close">닫기</button -->
+			<button type="button" class="btn-action c1" data-btn="pop-close">확인</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- ##################################### -->
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPDPDES0168L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPDPDES0168L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

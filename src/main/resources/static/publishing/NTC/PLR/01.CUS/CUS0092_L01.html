@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 상품소개동의인증수단 | 마케팅정보활용동의 | 고객동의</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 인증수단 선택 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCUS1007L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>상품소개동의 인증수단 선택</h1>
+			<button type="button" data-btn="pop-close">상품소개동의 인증수단 선택 닫기</button>
+		</header>
+		<div class="content">
+			<div class="label-check2">
+				<label>
+					<input type="radio" name="form-radio" checked>
+					<span>고객 동의 URL 보내기</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>고객 동의 인증번호 보내기</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>대면동의 진행하기</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1" >확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+	//<!--
+		//레이어팝업 선언
+		$plugin.popmodal('#uiPOPDPCUS1007L01');
+
+		//레이어팝업 강제오픈
+		$('#uiPOPDPCUS1007L01').trigger('outputOpen');
+	//-->
+</script>
+</body>
+</html>

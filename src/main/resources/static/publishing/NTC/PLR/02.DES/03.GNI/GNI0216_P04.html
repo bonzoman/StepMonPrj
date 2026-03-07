@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 업종검색_[P] 소분류 | 신규설계 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>소분류</h1>
+			<button type="button" data-btn="pop-close">소분류 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<div class="label-btn1 block">
+				<ul>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>육제품 또는 란제품 제조업</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1" checked>
+							<span>야채 및 과실의 통조림과 기타 저림식료..</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>수산식료품 제조업</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>빵 및 과자 제조업</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>제당 및 정당업</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>도정 및 제분업</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>조미료(장류포함)제조업</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio1">
+							<span>제빙업</span>
+						</label>
+						<!-- [D] 업종설명이 있을 경우 노출 -->
+						<button type="button" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">도움말</button>
+						<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+							<dl class="txt-bul1">
+								<dt>도움말</dt>
+								<dd>도움말 내용</dd>
+								<dd><button type="button" data-btn="pop-close">도움말 닫기</button></dd>
+							</dl>
+						</div>
+						<!-- // -->
+					</li>
+				</ul>
+			</div>
+
+			<!-- // -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">이전</button>
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- // -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

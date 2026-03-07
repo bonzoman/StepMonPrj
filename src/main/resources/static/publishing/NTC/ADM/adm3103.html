@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>모의고사 기본정보 상세/등록 | 모의고사 관리 | 모의고사 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">모의고사 상세 - n형</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="sub">
+				<button type="button" class="btn-action c3">문항 별 통계</button>
+			</div>
+			<div class="tbl-view1 t1">
+				<table>
+					<colgroup>
+						<col style="width:150px;">
+						<col>
+						<col style="width:150px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">등록일시</th>
+							<td>2022.01.22 00:00</td>
+							<th scope="row">최종 수정 일시</th>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">등록자</th>
+							<td>본사담당자</td>
+							<th scope="row">수정자</th>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">소속</th>
+							<td>본사</td>
+							<th scope="row">소속</th>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">종류</th>
+							<td>모의고사</td>
+							<th scope="row">노출 여부</th>
+							<td>비노출</td>
+						</tr>
+						<tr>
+							<th scope="row">그룹명</th>
+							<td>2022년</td>
+							<th scope="row">형</th>
+							<td>3형</td>
+						</tr>
+						<tr>
+							<th scope="row">평균점수(점)<br>[손보/3보]</th>
+							<td>-</td>
+							<th scope="row">합격률(%)<br>[손보/3보]</th>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">응시수</th>
+							<td>50,000</td>
+							<th scope="row">문제</th>
+							<td>
+								<select name="" id="" class="selectbox" style="width:80px;">
+									<option value="">50</option>
+								</select>
+								<button type="button" class="btn-sub1">수정</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!--[M:2022-07-29 영역 삭제 ]-->
+			<!-- <div class="question-top">
+				<button type="button" class="prev">이전문제</button>
+				<span class="num">13번</span>
+				<button type="button" class="next">다음문제</button>
+			</div> -->
+			<!--// [M:2022-07-29 영역 삭제 ]-->
+			<div class="question-label">
+				<a href="#" class="complete">01</a>
+				<a href="#" class="error">02</a><!-- 항목입력 오류 Case -->
+				<a href="#" class="complete">03</a><!-- 항목입력 정상/완료 Case -->
+				<a href="#" class="complete">04</a>
+				<a href="#" class="complete">05</a>
+				<a href="#" class="complete">06</a>
+				<a href="#" class="complete">07</a>
+				<a href="#" class="complete">08</a>
+				<a href="#" class="complete">09</a>
+				<a href="#" class="complete">10</a>
+				<a href="#" class="complete">11</a>
+				<a href="#" class="complete">12</a>
+				<a href="#" class="complete">13</a>
+				<a href="#" class="complete">14</a>
+				<a href="#" class="complete">15</a>
+				<a href="#" class="current">16</a><!-- 현재 선택 문제 Case -->
+				<a href="#">17</a>
+				<a href="#">18</a>
+				<a href="#">19</a>
+				<a href="#">20</a>
+				<a href="#">21</a>
+				<a href="#">22</a>
+				<a href="#">23</a>
+				<a href="#">24</a>
+				<a href="#">25</a>
+				<a href="#">26</a>
+				<a href="#">27</a>
+				<a href="#">28</a>
+				<a href="#">29</a>
+				<a href="#">30</a>
+				<a href="#">31</a>
+				<a href="#">32</a>
+				<a href="#">33</a>
+				<a href="#">34</a>
+				<a href="#">35</a>
+				<a href="#">36</a>
+				<a href="#">37</a>
+				<a href="#">38</a>
+				<a href="#">39</a>
+				<a href="#">40</a>
+				<a href="#">41</a>
+				<a href="#">42</a>
+				<a href="#">43</a>
+				<a href="#">44</a>
+				<a href="#">45</a>
+				<a href="#">46</a>
+				<a href="#">47</a>
+				<a href="#">48</a>
+				<a href="#">49</a>
+				<a href="#">50</a>
+			</div>
+			<div class="tbl-write1">
+				<table>
+					<colgroup>
+						<col style="width:150px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">유형 선택</th>
+							<td>
+								<div class="form-row">
+									<label class="label-check2">
+										<input type="radio" name="formRa" checked="checked">
+										<span>일반</span>
+									</label>
+									<label class="label-check2">
+										<input type="radio" name="formRa">
+										<span>유형1</span>
+									</label>
+									<label class="label-check2">
+										<input type="radio" name="formRa">
+										<span>유형2</span>
+									</label>
+
+									<div class="tooltip">
+										<button type="button"></button>
+										<div class="tooltip-layer">
+											<ul class="list-dot1">
+												<li>기본: 4지선다</li>
+												<li>유형1: 줄글 예시가 포함 된 4지선다</li>
+												<li>유형2: 다수의 예시가 포함 된 4지선다</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<colgroup>
+						<col style="width:150px;">
+						<col>
+						<col style="width:150px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">출제빈도<em class="imp"></em></th>
+							<td>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="form1232" checked>
+										<span>일반</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="form1232">
+										<span>자주 출제되는 문제</span>
+									</label>
+								</div>
+
+							</td>
+							<th scope="row">과목<em class="imp"></em></th>
+							<td>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="form1223" checked>
+										<span>손해보험</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="form1223">
+										<span>공통</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="form1223">
+										<span>3보험</span>
+									</label>
+								</div>
+
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">질문<em class="imp"></em></th>
+							<td colspan="3">
+								<div class="form-row">
+									<input type="text" name="" id="" class="text" style="width:100%;" placeholder="질문을 입력해 주세요.">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								문항<em class="imp"></em>
+								<button type="button" id="testBtn3" class="btn-sub1 c3">추가</button>
+							</th>
+							<td colspan="3">
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="form24" onchange="$('#testBtn3,#testDiv3').show();$('#testRow2').hide()" checked>
+										<span>객관식</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="form24" onchange="$('#testBtn3,#testDiv3').hide();$('#testRow2').show()">
+										<span>주관식</span>
+									</label>
+								</div>
+								<div class="form-row q-list" id="testDiv3">
+									<div class="input-wrap1">
+										<span class="dot"></span>
+										<input type="text" class="text" placeholder="입력하세요">
+										<label class="label-check3">
+											<input type="radio" name="formAs">
+											<span>정답</span>
+										</label>
+									</div>
+									<div class="input-wrap1">
+										<span class="dot"></span>
+										<input type="text" class="text" placeholder="입력하세요">
+										<label class="label-check3">
+											<input type="radio" name="formAs" checked>
+											<span>정답</span>
+										</label>
+										<button type="button" class="btn-sub1 c3">삭제</button>
+									</div>
+									<div class="input-wrap1">
+										<span class="dot"></span>
+										<input type="text" class="text" placeholder="입력하세요">
+										<label class="label-check3">
+											<input type="radio" name="formAs">
+											<span>정답</span>
+										</label>
+										<button type="button" class="btn-sub1 c3">삭제</button>
+									</div>
+									<div class="input-wrap1">
+										<span class="dot"></span>
+										<input type="text" class="text" placeholder="입력하세요">
+										<label class="label-check3">
+											<input type="radio" name="formAs">
+											<span>정답</span>
+										</label>
+										<button type="button" class="btn-sub1 c3">삭제</button>
+									</div>
+									<div class="input-wrap1">
+										<span class="dot"></span>
+										<input type="text" class="text" placeholder="입력하세요">
+										<label class="label-check3">
+											<input type="radio" name="formAs">
+											<span>정답</span>
+										</label>
+										<button type="button" class="btn-sub1 c3">삭제</button>
+									</div>
+									<div class="input-wrap1">
+										<span class="dot"></span>
+										<input type="text" class="text" placeholder="입력하세요">
+										<label class="label-check3">
+											<input type="radio" name="formAs">
+											<span>정답</span>
+										</label>
+										<button type="button" class="btn-sub1 c3">삭제</button>
+									</div>
+									<div class="input-wrap1">
+										<span class="dot"></span>
+										<input type="text" class="text" placeholder="입력하세요">
+										<label class="label-check3">
+											<input type="radio" name="formAs">
+											<span>정답</span>
+										</label>
+										<button type="button" class="btn-sub1 c3">삭제</button>
+									</div>
+									<div class="input-wrap1">
+										<span class="dot"></span>
+										<input type="text" class="text" placeholder="입력하세요">
+										<label class="label-check3">
+											<input type="radio" name="formAs">
+											<span>정답</span>
+										</label>
+										<button type="button" class="btn-sub1 c3">삭제</button>
+									</div>
+									<div class="input-wrap1">
+										<span class="dot"></span>
+										<input type="text" class="text" placeholder="입력하세요">
+										<label class="label-check3">
+											<input type="radio" name="formAs">
+											<span>정답</span>
+										</label>
+										<button type="button" class="btn-sub1 c3">삭제</button>
+									</div>
+									<div class="input-wrap1">
+										<span class="dot"></span>
+										<input type="text" class="text" placeholder="입력하세요">
+										<label class="label-check3">
+											<input type="radio" name="formAs">
+											<span>정답</span>
+										</label>
+										<button type="button" class="btn-sub1 c3">삭제</button>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<!-- 220419 주관식 정답영역 추가 -->
+						<tr id="testRow2" style="display:none">
+							<th scope="row">정답<em class="imp"></em> </th>
+							<td colspan="3">
+								<div class="form-row">
+									<input type="text" class="text" style="width:100%;" placeholder="입력하세요">
+								</div>
+							</td>
+						</tr>
+						<!--// 220419 주관식 정답영역 추가 -->
+					</tbody>
+				</table>
+
+			</div>
+
+			<div class="tit-sub2">
+				<h3 class="">풀이</h3>
+			</div>
+			<div class="tbl-write1">
+				<table>
+					<colgroup>
+						<col style="width:150px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">풀이</th>
+							<td>
+								<textarea name="" id="" class="textarea" style="width:100%;height:50px;" placeholder="풀이를 입력해 주세요."></textarea>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">풀이 동영상</th>
+							<td>
+								<span class="wrap-file">
+									<button type="button" class="btn-sub1 ic1">찾아보기</button>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">힌트</th>
+							<td>
+								<input type="text" name="" id="" class="text" style="width:100%;" placeholder="힌트를 입력해 주세요.">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="wrap-btn">
+				<div class="btns">
+					<button type="button" class="btn-action c3">목록</button>
+					<button type="button" class="btn-action c3">초기화</button>
+				</div>
+				<div class="btns">
+					<button type="button" class="btn-action c3">미리보기</button>
+					<button type="button" class="btn-action c2">등록</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

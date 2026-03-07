@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 가족정보추가 | 가족정보 관리 | 개인 | 고객정보상세 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>가족정보 추가</h1>
+			<button type="button" data-btn="pop-close">가족정보 추가 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [정보입력] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>가족정보 추가 입력</legend>
+
+				<!-- # 고객이름 # -->
+				<dl class="form">
+					<dt>고객이름</dt>
+					<dd>
+						<div class="input-btn1">
+							<data class="text" value="" data-label="고객님을 검색해주세요."></data>
+							<button type="button" class="icon-com1 ic2">고객검색</button>
+						</div>
+
+						<!-- [CASE] 고객검색후 -->
+						<div class="info-data3 t1">
+							<dl>
+								<dt class="data-info2" data-value="102702"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+									<strong>고객이름</strong>
+									<span>
+										<span>0000.00.00</span>
+										<span>성별</span>
+									</span>
+								</dt>
+								<dd class="data2">
+									<span>직업</span>
+									<strong>기획 및 마케팅 사무원</strong>
+									<strong>1급</strong>
+								</dd>
+								<dd class="side"><button type="button" class="btn-sub3 c2">삭제</button></dd>
+							</dl>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 고객과의 관계 # -->
+				<dl class="form">
+					<dt>@고객님@ 님과의 관계</dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택해주세요.</span>
+								<span data-select="text"></span>
+							</button>
+							<div class="list">
+								<div data-label="관계 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion" value="1"><span>배우자</span></label>
+										<label><input type="radio" name="selectOpeion" value="2"><span>부모</span></label>
+										<label><input type="radio" name="selectOpeion" value="3"><span>자녀</span></label>
+										<label><input type="radio" name="selectOpeion" value="4"><span>형제자매</span></label>
+										<label><input type="radio" name="selectOpeion" value="5"><span>조부모</span></label>
+										<label><input type="radio" name="selectOpeion" value="6"><span>시부모</span></label>
+										<label><input type="radio" name="selectOpeion" value="6"><span>기타</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" disabled>저장</button>
+				<!-- <button type="button" class="btn-action c1">저장</button> : 활성화 -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

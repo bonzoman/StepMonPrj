@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>모아보기</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-22]	만보기 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>모아보기</h1>
+		<button type="button" class="btn-t1 editing">편집</button>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [이벤트 영역] 관리자 등록 영역 -->
+		<!-- ######################### -->
+		<div class="banner-t1 section">
+			<a href="javascript:void(0);"><img src="../../resource/img/temp/@img_banner8.png" alt="@대체텍스트 배너 타이틀"></a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [영역1] 고객관리 -->
+		<!-- ######################### -->
+		<div class="con-t3 ic1 section">
+			<h2 class="tit">80명의 고객관리중</h2>
+			<div class="info">
+				<ul>
+					<li>
+						<em>37</em>
+						<span>신규등록</span>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<li>
+						<em>10</em>
+						<span>만기도래</span>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<li>
+						<i>새로운 알림</i> <!-- [D] 새로운 알림이 있을 경우 -->
+						<em>8</em>
+						<span>이슈고객</span>
+						<button type="button" class="link">상세보기</button>
+					</li>
+				</ul>
+			</div>
+			<div class="side"><button type="button" class="btn">고객등록</button></div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [영역2] 가입설계 : 장기 -->
+		<!-- ######################### -->
+		<div class="con-t3 ic2 section">
+			<h2 class="tit">장기신규 설계현황</h2>
+			<div class="info">
+				<ol>
+					<li>
+						<i>새로운 알림</i> <!-- [D] 새로운 알림이 있을 경우 -->
+						<em>337</em>
+						<span class="txt">설계중</span>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<li>
+						<em>12</em>
+						<span class="txt">설계완료</span>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<li>
+						<em>10</em>
+						<span class="txt">심사완료</span>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<li>
+						<i>새로운 알림</i> <!-- [D] 새로운 알림이 있을 경우 -->
+						<em>9</em>
+						<span class="txt">청약완료</span>
+						<button type="button" class="link">상세보기</button>
+					</li>
+				</ol>
+			</div>
+			<div class="side"><button type="button" class="btn">장기설계</button></div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [영역3] 가입설계 : 자동차 -->
+		<!-- ######################### -->
+		<div class="con-t3 ic3 section">
+			<h2 class="tit">자동차신규 설계현황</h2>
+			<div class="info">
+				<ol>
+					<li>
+						<i>새로운 알림</i> <!-- [D] 새로운 알림이 있을 경우 -->
+						<em>337</em>
+						<span class="txt">설계중</span>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<li>
+						<em>12</em>
+						<span class="txt">설계완료</span>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<li>
+						<em>10</em>
+						<span class="txt">심사완료</span>
+						<button type="button" class="link">상세보기</button>
+					</li>
+					<li>
+						<i>새로운 알림</i> <!-- [D] 새로운 알림이 있을 경우 -->
+						<em>9</em>
+						<span class="txt">청약완료</span>
+						<button type="button" class="link">상세보기</button>
+					</li>
+				</ol>
+			</div>
+			<div class="side"><button type="button" class="btn">자동차설계</button></div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [영역4] 보장분석 -->
+		<!-- ######################### -->
+		<div class="banner-t3 section">
+			<p class="ic1">
+				<strong>보장분석 내용 비교 확인하고<br>결과 확인하기</strong>
+				<button type="button" class="icon-com1 ic3 right">보장분석 하러가기</button>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [영역5] 계약관리 -->
+		<!-- ######################### -->
+		<div class="btn-util6 section">
+			<button type="button" class="ic1">계약조회</button>
+			<button type="button" class="ic2">수금관리</button>
+			<button type="button" class="ic3">갱신관리</button>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [영역5] 노하우관리 -->
+		<!-- ######################### -->
+		<div class="banner-t3 section">
+			<p class="ic2">
+				<em>노하우공유</em>
+				<strong>초보자를 위한 우수설계사 되는<br>나만의 꿀팁 전수</strong>
+				<button type="button" class="link">노하우 공유 바로가기</button>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [영역6] 일정관리 -->
+		<!-- ######################### -->
+		<div class="banner-t2 section">
+			<a href="javascript:void(0)" class="ic6">
+				<strong>설계사 본사 단체 세미나</strong>
+				<p>09:30 AM - 10:30 AM, 본사 4층 회의실</p>
+			</a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [영역] 만보기 -->
+		<!-- ######################### -->
+		<!-- 2022-11-22 만보기 추가 -->
+		<div class="banner-t3 section">
+			<p class="ic3">
+				<em>만보기</em>
+				<strong>이용 동의 후 만보기 사용과<br>포인트 적립까지</strong>
+				<button type="button" class="link">만보기 바로가기</button>
+			</p>
+		</div>
+
+		<div class="con-t3 pedometer section">
+			<p class="tit">
+				<em>오늘 걸음 수</em>
+				<strong>17,360</strong>
+			</p>
+			<dd class="area-progress4" style="--el-progress:50;"> <!-- 그래프 게이지 --el-progress -->
+				<dl>
+					<dt class="hide">최소 포인트</dt>
+					<dd>0P 적립</dd>
+				</dl>
+				<dl>
+					<dt class="hide">최대 포인트</dt>
+					<dd>최대 1,000P</dd>
+				</dl>
+			</dd>
+			<div class="area-terms">
+				<p class="bul2 line">걸음 수 1,000보 당 100P 적립되며, 최대10,000보 1,000P까지 적립 가능합니다.</p>
+			</div>
+			<div class="side">
+				<button type="button" class="btn-sub3 c2">1,000P 적립</button>
+			</div>
+		</div>
+
+		<div class="con-t3 pedometer section">
+			<p class="tit">
+				<em>오늘 걸음 수</em>
+				<strong>17,360</strong>
+			</p>
+			<dd class="area-progress4" style="--el-progress:0;"> <!-- 그래프 게이지 --el-progress -->
+				<dl>
+					<dt class="hide">최소 포인트</dt>
+					<dd>0P 적립</dd>
+				</dl>
+				<dl>
+					<dt class="hide">최대 포인트</dt>
+					<dd>최대 1,000P</dd>
+				</dl>
+			</dd>
+			<div class="area-terms">
+				<p class="bul2 line">걸음 수 1,000보 당 100P 적립되며, 최대10,000보 1,000P까지 적립 가능합니다.</p>
+			</div>
+			<div class="side">
+				<button type="button" class="btn-sub3 c2" disabled>1,000P 적립</button>
+			</div>
+		</div>
+		<!-- //2022-11-22 만보기 추가 -->
+
+		<!-- ######################### -->
+		<!-- [영역7] 일정관리 -->
+		<!-- ######################### -->
+		<div class="area-info5 section">
+			<dl>
+				<dt>렛 포인트</dt>
+				<dd>61,000</dd>
+				<dd class="link"><button type="button">상세보기</button></dd>
+			</dl>
+			<dl class="on">
+				<dt>4월 예상 수수료</dt>
+				<dd class="value">457,835,650</dd>
+				<dd class="txt">금액보기 ON 해보세요.</dd>
+				<dd class="link"><button type="button">상세보기</button></dd>
+			</dl>
+			<div class="side">
+				<div class="label-btn2">
+					<label>
+						<input type="checkbox" checked>
+						<span>금액보기</span>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [영역8] 목표 달성 -->
+		<!-- ######################### -->
+		<!-- 2022-11-28 모아보기 변경 -->
+		<div class="con-t3 progress section">
+			<h2 class="tit">보장성 실적 추이</h2>
+
+			<!-- [당월] -->
+			<div class="area-progress5 c1" style="--el-progress:100%;">
+				<span>당월</span>
+				<strong>538건</strong>
+			</div>
+
+			<!-- [전월] -->
+			<div class="area-progress5" style="--el-progress:40%;">
+				<span>전월</span>
+				<strong>38건</strong>
+			</div>
+
+			<!-- [전전월] -->
+			<div class="area-progress5" style="--el-progress:40%;">
+				<span>전전월</span>
+				<strong>38건</strong>
+			</div>
+			<!-- // -->
+
+			<div class="side">
+				<em>(단위: 천원)</em>
+			</div>
+		</div>
+		<!-- //2022-11-28 모아보기 변경 -->
+
+		<!-- ######################### -->
+		<!-- [영역9] 추천강의 -->
+		<!-- ######################### -->
+		<div class="banner-t2 section">
+			<a href="javascript:void(0)" class="ic7">
+				<span>추천강의</span>
+				<strong>2022년 실손보험 안내 및 가이드 2022년 실손보험 안내 및 가이드 2022년 실손보험 안내 및 가이드</strong>
+			</a>
+		</div>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer">
+		<dl class="select-toggle1" data-autoset="select">
+			<dt>홈화면 선택</dt>
+			<dd>
+				<div class="basic">
+					<button type="button" class="icon-home" data-value="1">모아보기</button>
+					<button type="button" data-toggle="selectbtn" aria-expanded="false">홈 화면 선택목록</button>
+				</div>
+				<div class="list">
+					<button type="button" title="선택" data-option="1" aria-selected="true"><span>모아보기</span></button>
+					<button type="button" title="선택" data-option="2"><span>고객조회</span></button>
+					<button type="button" title="선택" data-option="3"><span>렛:톡</span></button>
+					<button type="button" title="선택" data-option="4"><span>보장분석</span></button>
+					<button type="button" title="선택" data-option="5"><span>내강의실</span></button>
+					<button type="button" class="icon-settiong"><span>홈 설정</span></button>
+				</div>
+			</dd>
+		</dl>
+		<a href="javascript:void(0);" class="ic1">모아보기</a>
+		<a href="javascript:void(0);" class="ic2">알림<em class="icon-noti1 ic1">미확인 알림 있음</em></a>
+		<a href="javascript:void(0);" class="info"><img src="../../resource/img/temp/@img_user1.png" alt="">나의정보</a>
+	</footer>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	//샘플 : 금액보기
+	$(".label-btn2 input").change(function(){
+		var _cont = $(this).parents('.area-info5').find('dl:nth-child(2)');
+		if(_cont.hasClass('on')) _cont.removeClass('on');
+		else _cont.addClass('on');
+	});
+//-->
+</script>
+</body>
+</html>

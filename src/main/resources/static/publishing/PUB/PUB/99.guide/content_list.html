@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LIST | CONTENTS | PUBLISHING GUIDE</title>
+	<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/publish.css?20220913">
+	<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/ui.plugin.js"></script>
+	<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+	<div class="guide-wrap">
+		<header>
+			<h1>
+				<i>롯데손해보험</i> CONTENTS <strong>LIST</strong>
+				<a href="../99.work/coding_list1.html" class="guide-btn1">작업목록</a>
+			</h1>
+			<nav>
+				<ul>
+					<li><a href="content_basic.html">INFO</a></li>
+					<li><a href="content_txt.html">TITLE/TXT</a></li>
+					<li><a href="content_btn.html">BUTTON</a></li>
+					<li><a href="content_icon.html">ICON</a></li>
+					<li><a href="content_form.html">FORM ELEMENT</a></li>
+					<li><a href="content_formarea.html">FORM 약관/검색</a></li>
+					<li><a href="content_formarea2.html">FORM 입력</a></li>
+					<li><a href="content_tab.html">TAB/TOGGLE</a></li>
+					<li><a href="content_tbl.html">TABLE</a></li>
+					<li><a href="content_box.html">BOX/BANNER</a></li>
+					<li><a href="content_info.html">INFO/DATA</a></li>
+					<li class="active"><a href="content_list.html" aria-current="page">LIST</a></li>
+					<li><a href="content_bbs.html">BOARD</a></li>
+				</ul>
+			</nav>
+		</header>
+		<article class="guide-container">
+			<h1 class="hide">리스트 작업 가이드</h1>
+
+			<!-- ############################## -->
+			<!-- [목록유형] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">목록유형</h2>
+				<h3 class="guide-tit2">유형1 : .list-t1 </h3>
+				<div class="guide-area popup">
+					<div class="list-t1">
+						<ul>
+							<!-- # 앱 홈화명 설정 # -->
+							<li>
+								<a href="javascript:void(0);" class="link1">
+									<div class="txt1">앱 홈화면 설정</div>
+									<div class="txt2">고객조회</div>
+								</a>
+							</li>
+							<!-- # 간편로그인 설정 # -->
+							<li>
+								<a href="javascript:void(0);" class="link1">
+									<div class="txt1">간편로그인 설정</div>
+									<div class="txt2">지문</div>
+								</a>
+							</li>
+							<!-- # 앱 PUSH 알림 # -->
+							<li class="label-toggle1">
+								<label>
+									<input type="checkbox" name="form-check2">
+									<span>앱 PUSH 알림</span>
+								</label>
+							</li>
+							<!-- # 쉐이킹활성 # -->
+							<li>
+								<a href="javascript:void(0);" class="link1">
+									<div class="txt1">쉐이킹활성</div>
+									<div class="txt2">화면 1</div>
+								</a>
+							</li>
+							<!-- # 버전정보 [CASE1] 최신버전 경우 문구 노출 # -->
+							<li>
+								<div class="txt1">버전정보</div>
+								<div class="txt2">
+									<span>4.1.0 </span>
+									<em>최신버전입니다</em>
+								</div>
+							</li>
+							<!-- # 버전정보 [CASE2] 최신버전 아닐 경우 버튼 노출 # -->
+							<li>
+								<a href="javascript:void(0);" class="link1">
+									<div class="txt1">버전정보</div>
+									<div class="txt2">업데이트</div>
+								</a>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</div>
+				<div class="guide-area popup">
+					<div class="list-t1">
+						<ul>
+							<!-- // -->
+							<li>
+								<strong class="tit">[코드] 질병명</strong>
+								<button type="button" class="icon-com2 ic1">조건 내용 보기</button> <!-- [M 2022-08-05] 버튼 클래스 명 변경 및 data/aria 속성 삭제 -->
+								<!-- [M 2022-08-05] 내용 삭제
+								<div class="pop-mes4" data-popmodal="true" role="alertdialog">
+									<dl class="txt-bul1">
+										<dt>조건/조건초과 시 가능</dt>
+										<dd>조건: 내용</dd>
+										<dd>조건초과 시 가능: 내용</dd>
+										<dd><button type="button" data-btn="pop-close">닫기</button></dd>
+									</dl>
+								</div>
+								-->
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">[B30.0] 바이러스 결막염(단, B30.1 아데노바이러스 결막염 별도기준적용)</strong>
+								<button type="button" class="icon-com2 ic1">조건 내용 보기</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">[A01.3] 장티푸스(보균자 제외)</strong>
+								<button type="button" class="icon-com2 ic1">조건 내용 보기</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">[A00] 콜레라</strong>
+								<button type="button" class="icon-com2 ic1">조건 내용 보기</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">[A01.3] 장티푸스 (장티푸스 보균자)</strong>
+								<button type="button" class="icon-com2 ic1">조건 내용 보기</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">[A01.3] 장티푸스(장티푸스 보균자 제외)</strong>
+								<button type="button" class="icon-com2 ic1">조건 내용 보기</button>
+							</li>
+							<!-- // -->
+							<li class="nodata">
+								<strong>일치하는 내용이 없어요.</strong>
+								<span>입력하신 정보를 확인하시고<br>다시 검색해 보세요.</span>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</div>
+				<div class="guide-area popup">
+					<div class="list-t1">
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="txt1">주행거리<em>(2장)</em></div>
+								<div class="txt2"><button type="button" class="btn-sub3 c2">사진등록</button></div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="txt1">자녀할인<em>(1장)</em></div>
+								<div class="txt2"><button type="button" class="btn-sub3 c2">사진등록</button></div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="txt1">실손중복가입동의서<em>(최소 1장~최대 4장)</em></div>
+								<div class="txt2"><button type="button" class="btn-sub3 c2">사진등록</button></div>
+
+								<!-- [D] 사진 등록 후 -->
+								<div class="data-file2">
+									<ul>
+										<li>
+											<span class="img"><img src="../../resource/img/temp/@img_sample1.png" alt=""></span>
+											<button type="button" class="icon-com1 ic6">삭제</button>
+										</li>
+										<li>
+											<span class="img"><img src="../../resource/img/temp/@img_sample2.png" alt=""></span>
+											<button type="button" class="icon-com1 ic6">삭제</button>
+										</li>
+										<li>
+										<span class="img"><img src="../../resource/img/temp/@img_sample1.png" alt=""></span>
+											<button type="button" class="icon-com1 ic6">삭제</button>
+										</li>
+										<li>
+											<span class="img"><img src="../../resource/img/temp/@img_sample2.png" alt=""></span>
+											<button type="button" class="icon-com1 ic6">삭제</button>
+										</li>
+									</ul>
+								</div>
+								<!-- // -->
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="guide-area popup">
+					<div class="list-t1 t1">
+						<ul>
+							<li><a href="javascript:void(0);" class="link1">자동발송 신청이력보기</a></li>
+							<li><a href="javascript:void(0);" class="link1">자동발송 내역보기</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="guide-area popup">
+					<div class="list-t1 t2">
+						<ul>
+							<!-- ### [자동발송 내역 푸시 알림 받기] ### -->
+							<li>
+								<div class="txt1">자동발송 내역 푸시 알림 받기</div>
+								<div class="txt2 label-toggle1 simple">
+									<label>
+										<input type="checkbox" name="form-check1">
+										<span>선택</span>
+									</label>
+								</div>
+							</li>
+
+							<!-- ### [자동발송 설정 알림 받기] ### -->
+							<li>
+								<div class="txt1">자동발송 내역 푸시 알림 받기</div>
+								<div class="txt2 label-toggle1 simple">
+									<label>
+										<input type="checkbox" name="form-check1">
+										<span>선택</span>
+									</label>
+								</div>
+								<div class="txt-bul1">3개월 동안 컨텐츠 발송을 하지 않으실 경우 자동발송신청 권유 알림을 드립니다.</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형2 : .list-t2</h3>
+				<div class="guide-area popup">
+					<h4 class="guide-tit3">버튼형</h4>
+					<div class="list-t2">
+						<ul>
+							<!-- // -->
+							<li>
+								<button tpye="button" class="active"><span class="BKCD_011">농협중앙회</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_088">신한(통합)은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_004">국민은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_020">우리은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_081">하나은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_003">기업은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_005">외환은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_007">수협중앙회</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_023">SC제일은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_027">씨티은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_031">대구은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_032">부산은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_034">광주은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_035">제주은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_037">전북은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_039">경남은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_045">새마을금고중앙회</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_048">신협중앙회</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_071">우체국</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_090">한국카카오은행</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_092">토스뱅크</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_240">삼성증권</span></button>
+							</li>
+							<!-- // -->
+							<li>
+								<button tpye="button"><span class="BKCD_089">케이뱅크</span></button>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+					<hr class="guide-line2">
+					<h4 class="guide-tit3">라디오형</h4>
+					<div class="list-t2">
+						<ul>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1" checked>
+									<span class="BKCD_011">농협중앙회</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_088">신한(통합)은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_004">국민은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_020">우리은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_081">하나은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_003">기업은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_005">외환은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_007">수협중앙회</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_023">SC제일은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_027">씨티은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_031">대구은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_032">부산은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_034">광주은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_035">제주은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_037">전북은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_039">경남은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_045">새마을금고중앙회</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_048">신협중앙회</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_071">우체국</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_090">한국카카오은행</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_092">토스뱅크</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_240">삼성증권</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<label>
+									<input type="radio" name="btnRadio1">
+									<span class="BKCD_089">케이뱅크</span>
+								</label>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+					<hr class="guide-line2">
+					<h4 class="guide-tit3">컨텐츠형</h4>
+					<div class="list-t2 info">
+						<ul>
+							<li>
+								<dl class="area">
+									<dt>항목명</dt>
+									<dd>내용</dd>
+								</dl>
+								<dl class="area">
+									<dt>항목명</dt>
+									<dd>내용</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="area">
+									<dt>항목명</dt>
+									<dd>내용</dd>
+								</dl>
+								<dl class="area">
+									<dt>항목명</dt>
+									<dd>내용</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="area">
+									<dt>항목명</dt>
+									<dd>내용</dd>
+								</dl>
+								<dl class="area">
+									<dt>항목명</dt>
+									<dd>내용</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+
+					<hr class="guide-line2">
+					<div class="list-t2">
+						<dl class="on"> <!-- [득표수가 많을 경우] -->
+							<dt>
+								<span>항목명</span>
+								<span>내용</span>
+							</dt>
+							<dd>
+								<span class="img2"><img src="../../resource/img/temp/@img_user1.png" alt="" /></span>
+								<div class="data">
+									<span>홍길동</span>
+									<span>(소속지점)</span>
+								</div>
+							</dd>
+							<dd>
+								<span class="img2"><img src="../../resource/img/temp/@img_user2.png" alt="" /></span>
+								<div class="data">
+									<span>공지철</span>
+									<span>(강남01지점)</span>
+								</div>
+							</dd>
+							<dd>
+								<span class="img2"><img src="../../resource/img/temp/@img_user1.png" alt="" /></span>
+								<div class="data">
+									<span>김보름</span>
+									<span>(강남01지점)</span>
+								</div>
+							</dd>
+							<dd>
+								<span class="img2"><img src="../../resource/img/temp/@img_user2.png" alt="" /></span>
+								<div class="data">
+									<span>김수지</span>
+									<span>(소속지점)</span>
+								</div>
+							</dd>
+							<dd>
+								<span class="img2"><img src="../../resource/img/temp/@img_user1.png" alt="" /></span>
+								<div class="data">
+									<span>김창욱</span>
+									<span>(소속지점)</span>
+								</div>
+							</dd>
+							<dd>
+								<span class="img2"><img src="../../resource/img/temp/@img_user2.png" alt="" /></span>
+								<div class="data">
+									<span>나혜미</span>
+									<span>(소속지점)</span>
+								</div>
+							</dd>
+							<dd>
+								<span class="img2"><img src="../../resource/img/temp/@img_user2.png" alt="" /></span>
+								<div class="data">
+									<span>박강희</span>
+									<span>(소속지점)</span>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>항목명</span>
+								<span>내용</span>
+							</dt>
+							<dd class="nodata">투표한 멤버가 없습니다.</dd>
+						</dl>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형3 : .list-t3</h3>
+				<div class="guide-area body">
+					<h4 class="guide-tit3">기본</h4>
+					<div class="list-t3">
+						<ul>
+							<li>
+								<div class="data-info2 ico-w1">
+									<strong>고객명</strong>
+								</div>
+							</li>
+							<li>
+								<div class="data-info1">
+									<span class="img"><img src="../../resource/img/temp/@img_user1.png" alt=""></span>
+									<span><strong>설계사명</strong></span>
+								</div>
+							</li>
+							<li>
+								<div class="data-info2 ico-m1">
+									<strong>남궁가나다라마</strong>
+								</div>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+							<li>
+								<div class="data-info1">
+									<span class="img"><img src="../../resource/img/temp/@img_user2.png" alt=""></span>
+									<span><strong>남궁가나다라마</strong></span>
+								</div>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+						</ul>
+					</div>
+
+					<h4 class="guide-tit3">출석 : +t1</h4>
+					<div class="list-t3 t1" data-scroll="true">
+						<ol>
+							<li>
+								<strong class="icon-state3 ic1">출석</strong>
+								<span class="txt">1회차</span>
+								<span class="time">00.00</span>
+							</li>
+							<li>
+								<strong class="icon-state3 ic2">결석</strong>
+								<span class="txt">2회차</span>
+								<span class="time">00.00</span>
+							</li>
+							<li>
+								<span class="txt">3회차</span>
+								<span class="time">00.00</span>
+							</li>
+							<li class="active"> <!-- [D] 오늘날짜 -->
+								<span class="txt">4회차</span>
+								<span class="time">00.00</span>
+							</li>
+							<li>
+								<span class="txt">5회차</span>
+								<span class="time">00.00</span>
+							</li>
+						</ol>
+					</div>
+
+					<h4 class="guide-tit3">강의완료 : +t2</h4>
+					<div class="list-t3 t2">
+						<ol>
+							<li>
+								<strong class="icon-state3 ic3">강의완료</strong>
+								<span class="txt">1회</span>
+							</li>
+							<li>
+								<span class="txt">2회</span>
+							</li>
+							<li>
+								<span class="txt">3회</span>
+							</li>
+						</ol>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형4 : .list-t4</h3>
+				<div class="guide-area body">
+					<div class="list-t4">
+						<ul>
+							<!-- [CASE1] 획득뱃지 -->
+							<li><button type="button" class="badge1">프로 N잡러</button></li>
+							<!-- [CASE2] 달성완료뱃지 : <em class="icon-point1 c1">리워드</em> 추가 -->
+							<li><button type="button" class="badge2"><em class="icon-point1 c1">리워드</em>렛 전문가</button></li>
+							<!-- [CASE3] 미획득 뱃지 : disabled 추가 -->
+							<li><button type="button" class="badge3" disabled>신뢰있는 설계사</button></li>
+							<li><button type="button" class="badge4" disabled>이 구역의 인싸</button></li>
+							<li><button type="button" class="badge5" disabled>건강이 최고</button></li>
+							<li><button type="button" class="badge6" disabled>열정적인 중재자</button></li>
+							<li><button type="button" class="badge7" disabled>첫 수강</button></li>
+							<li><button type="button" class="badge8" disabled>연속 5회 수강</button></li>
+							<li><button type="button" class="badge9" disabled>연속 10회 수강</button></li>
+						</ul>
+					</div>
+
+					<div class="list-t4 t1">
+						<ul>
+							<!-- // -->
+							<li>
+								<span class="img"><img src="../../resource/img/com/noimg3.png"></span>
+								<label>
+									<input type="radio" name="radio1">
+									<span>내용이 길어지면 개행됩니다.</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="img"><img src="../../resource/img/com/noimg3.png"></span>
+								<label>
+									<input type="radio" name="radio1">
+									<span>내용이 길어지면 개행됩니다.</span>
+								</label>
+							</li>
+							<!-- // -->
+							<li>
+								<span class="img"><img src="../../resource/img/com/noimg3.png"></span>
+								<label>
+									<input type="radio" name="radio1">
+									<span>내용이 길어지면 개행됩니다.</span>
+								</label>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형5 : .list-t5</h3>
+				<div class="guide-area body">
+					<div class="list-t5">
+						<ul>
+							<li>
+								<strong class="tit">타이틀</strong>
+								<div class="data-num1">
+									<strong>0000</strong>
+									<span>P</span>
+								</div>
+								<div class="data1">
+									<span>0000.00.00 00:00:00</span>
+									<span>퀘스트</span>
+								</div>
+							</li>
+							<li>
+								<strong class="tit">타이틀</strong>
+								<div class="data-num1">
+									<strong>0000</strong>
+									<span>P</span>
+								</div>
+								<div class="data1">
+									<span>0000.00.00 00:00:00</span>
+									<span>퀘스트</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="list-t5 ic1">
+						<ul>
+							<li>
+								<strong class="tit">타이틀</strong>
+								<div class="data-num1">
+									<strong>0000</strong>
+									<span>P</span>
+								</div>
+								<div class="data1">
+									<span>0000.00.00 00:00:00</span>
+									<span>퀘스트</span>
+								</div>
+							</li>
+							<li>
+								<strong class="tit">타이틀</strong>
+								<div class="data-num1">
+									<strong>0000</strong>
+									<span>P</span>
+								</div>
+								<div class="data1">
+									<span>0000.00.00 00:00:00</span>
+									<span>퀘스트</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형6 : .list-t6</h3>
+				<div class="guide-area body">
+					<h4 class="guide-tit3">기본</h4>
+					<div class="list-t6">
+						<h5 class="tit">타이틀</h5>
+						<ul class="sortlist">
+							<li>
+								<button type="button" class="btn1">삭제</button>
+								<strong>내용</strong>
+							</li>
+							<li>
+								<button type="button" class="btn2">추가</button>
+								<strong>내용</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="guide-area popup">
+					<h4 class="guide-tit3">순서변경</h4>
+					<div class="list-t6">
+						<h5 class="tit">타이틀</h5>
+						<ul class="sortlist sortable">
+							<li>
+								<button type="button" class="btn1">삭제</button>
+								<strong>내용</strong>
+								<em class="list-btn">순서변경</em>
+							</li>
+							<li>
+								<button type="button" class="btn1">삭제</button>
+								<strong>내용</strong>
+								<em class="list-btn">순서변경</em>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- ############################## -->
+			<!-- [데이터유형] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">데이터유형</h2>
+				<h3 class="guide-tit2">유형1 : .list-data1</h3>
+				<div class="guide-area body">
+					<div class="list-data1">
+						<ul>
+							<li>
+								<div class="data1">
+									<strong>타이틀</strong>
+								</div>
+								<div class="data-info3">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png"></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox" checked>
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="btn">상세보기</a>
+							</li>
+							<li>
+								<div class="data1">
+									<strong>강의제목이 길어질 경우 두줄 말줄임 처리 됩니다.</strong>
+								</div>
+								<div class="data-info3">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png"></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox">
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="btn">상세보기</a>
+							</li>
+							<li>
+								<div class="data1">
+									<strong>타이틀</strong>
+								</div>
+								<div class="data-info3">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png"></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox">
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="btn">상세보기</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="list-data1 t1">
+						<ul>
+							<li>
+								<div class="data1">
+									<strong>타이틀</strong>
+									<div class="data-word2">
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+									</div>
+								</div>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png"></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox" checked>
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="btn">상세보기</a>
+							</li>
+							<li>
+								<div class="data1">
+									<strong>강의제목이 길어질 경우 두줄 말줄임 처리 됩니다.</strong>
+									<div class="data-word2">
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+									</div>
+								</div>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png"></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox">
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="btn">상세보기</a>
+							</li>
+							<li>
+								<div class="data1">
+									<strong>타이틀</strong>
+									<div class="data-word2">
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+									</div>
+								</div>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png"></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox">
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="btn">상세보기</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="guide-area body">
+					<div class="list-data1 t1">
+						<ul class="swiper-t1" data-slider="list1" data-slider-title="배너타이틀" data-pagination="bullet">
+							<li>
+								<div class="data1">
+									<strong>강의제목이 길어질 경우 두줄 말줄임 처리 됩니다.</strong>
+									<div class="data-word2">
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+									</div>
+								</div>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png"></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox" checked>
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="btn">상세보기</a>
+							</li>
+							<li>
+								<div class="data1">
+									<strong>타이틀</strong>
+									<div class="data-word2">
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+									</div>
+								</div>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png"></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox">
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="btn">상세보기</a>
+							</li>
+							<li>
+								<div class="data1">
+									<strong>타이틀</strong>
+									<div class="data-word2">
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+									</div>
+								</div>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png"></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox">
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="btn">상세보기</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형2 : .list-data2</h3>
+				<div class="guide-area popup">
+					<div class="list-data2">
+						<ul>
+							<li>
+								<strong class="data1">강의명</strong>
+								<span class="data2">수강완료</span>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong class="data1">강의명</strong>
+									<span class="data2">수강완료</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong class="data1">강의명이 길어질 경우 말줄임이 됩니다.</strong>
+									<span class="data2">수강완료</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong class="data1">강의명</strong>
+									<span class="data2"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="ic1"> <!-- 동영상 아이콘 -->
+									<strong class="data1">강의명</strong>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<hr class="guide-line2">
+					<div class="list-data2 t1">
+						<ul>
+							<li>
+								<strong class="data1">필수교육명</strong>
+								<span class="data3">
+									<span class="txt-c1">수료</span>
+									<span>0000.00.00</span>
+								</span>
+								<span class="data4">
+									<strong>5</strong>
+									<span>5강 수강</span>
+								</span>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong class="data1">필수교육명</strong>
+									<span class="data3">
+										<span>미수료</span>
+										<span>0000.00.00</span>
+									</span>
+									<span class="data4">
+										<strong>1</strong>
+										<span>3강 수강</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="guide-area body">
+					<div class="list-data2">
+						<ul>
+							<li>
+								<strong class="data1">강의명</strong>
+								<span class="data2">수강완료</span>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong class="data1">강의명</strong>
+									<span class="data2">수강완료</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong class="data1">강의명이 길어질 경우 말줄임이 됩니다.</strong>
+									<span class="data2">수강완료</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong class="data1">강의명</strong>
+									<span class="data2"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="ic1"> <!-- 동영상 아이콘 -->
+									<strong class="data1">강의명</strong>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<hr class="guide-line2">
+					<div class="list-data2 t1">
+						<ul>
+							<li>
+								<strong class="data1">필수교육명</strong>
+								<span class="data3">
+									<span class="txt-c1">수료</span>
+									<span>0000.00.00</span>
+								</span>
+								<span class="data4">
+									<strong>5</strong>
+									<span>5강 수강</span>
+								</span>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong class="data1">필수교육명</strong>
+									<span class="data3">
+										<span>미수료</span>
+										<span>0000.00.00</span>
+									</span>
+									<span class="data4">
+										<strong>5</strong>
+										<span>5강 수강</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형3 : .list-data3</h3>
+				<div class="guide-area body">
+					<div class="list-data3">
+						<ul>
+							<li>
+								<div class="data1">
+									<strong>타이틀</strong>
+								</div>
+								<div class="data-info3">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png"></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox" checked>
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="btn">상세보기</a>
+							</li>
+							<li>
+								<div class="data1">
+									<strong>누구나 꼭 가입하는 실손의료보험</strong>
+								</div>
+								<div class="data-info3">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png"></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox" checked>
+									<span>찜하기</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+
+					<div class="list-data3">
+						<h4 class="tit">제목 <a href="javascript:void(0);">상세보기</a></h4>
+						<p class="data-word2">
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+						</p>
+						<ul>
+							<li>
+								<div class="data1">
+									<strong>타이틀</strong>
+								</div>
+								<div class="data-info3">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png"></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox" checked>
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="btn">상세보기</a>
+							</li>
+							<li>
+								<div class="data1">
+									<strong>누구나 꼭 가입하는 실손의료보험</strong>
+								</div>
+								<div class="data-info3">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png"></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox" checked>
+									<span>찜하기</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형4 : .list-data4</h3>
+				<div class="guide-area body">
+					<div class="list-data4">
+						<!-- // -->
+						<dl>
+							<dt>0000.00.00</dt>
+							<!-- // -->
+							<dd>
+								<em class="icon-noti1 ic1">읽지않음</em>
+								<i>시간</i>
+								<strong>타이틀</strong>
+								<span>내용</span>
+								<div class="area-btn4">
+									<a href="javascript:void(0);" class="btn-sub4 ic11">버튼</a>
+								</div>
+							</dd>
+							<!-- // -->
+							<dd>
+								<em class="icon-noti1 ic1">읽지않음</em>
+								<i>시간</i>
+								<strong>타이틀</strong>
+								<span>내용</span>
+							</dd>
+							<dd>
+								<i>시간</i>
+								<strong>타이틀</strong>
+								<span>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</span>
+								<div class="area-btn4">
+									<a href="javascript:void(0);" class="btn-sub4 ic11">버튼</a>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl>
+							<dt>0000.00.00</dt>
+							<dd>
+								<em class="icon-noti1 ic1">읽지않음</em>
+								<i>시간</i>
+								<strong>타이틀</strong>
+								<span>내용</span>
+								<div class="area-btn4">
+									<a href="javascript:void(0);" class="btn-sub4 ic11">버튼</a>
+								</div>
+							</dd>
+							<dd>
+								<em class="icon-noti1 ic1">읽지않음</em>
+								<i>시간</i>
+								<strong>타이틀</strong>
+								<span>내용</span>
+							</dd>
+							<dd>
+								<i>시간</i>
+								<strong>타이틀</strong>
+								<span>내용</span>
+								<div class="area-btn4">
+									<a href="javascript:void(0);" class="btn-sub4 ic11">버튼</a>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+				</div>
+				<h3 class="guide-tit2">유형5 : .list-data5</h3>
+				<div class="guide-area body">
+					<div class="list-data5">
+						<!-- 날짜 하나 -->
+						<dl class="active"> <!-- [D] 오늘일 경우 -->
+							<dt>오늘</dt>
+							<dd>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png" alt=""></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<div class="data1">
+									<strong>강의 제목이 들어갑니다.</strong>
+									<div class="data-word2">
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+									</div>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox" checked>
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="link">상세보기</a>
+							</dd>
+							<dd>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu2.jpg" alt=""></span>
+									<span class="time" title="재생시간 00:00">00:00</span>
+								</div>
+								<div class="data1">
+									<strong>강의제목이 길어질 경우 두줄 말줄임 처리 됩니다.</strong>
+									<div class="data-word2">
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+										<span>#태그</span>
+									</div>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox">
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="link">상세보기</a>
+							</dd>
+						</dl>
+
+						<!-- 날짜 하나 -->
+						<dl>
+							<dt>어제</dt>
+							<dd>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png" alt=""></span>
+									<span class="time" title="재생시간 04:20">04:20</span>
+								</div>
+								<div class="data1">
+									<strong>누리끼리 (일상 유머 모음집)</strong>
+									<div class="data-word2">
+										<span>#일상 유머</span>
+									</div>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox" checked>
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="link">상세보기</a>
+							</dd>
+							<dd>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu2.jpg" alt=""></span>
+									<span class="time" title="재생시간 04:20">04:20</span>
+								</div>
+								<div class="data1">
+									<strong>뜯어보면 돈이 되는 보험설계사 심층면접 프로젝트</strong>
+									<div class="data-word2">
+										<span>#보험</span>
+										<span>#상품</span>
+										<span>#암</span>
+										<span>#상해</span>
+										<span>#생활</span>
+									</div>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox">
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="link">상세보기</a>
+							</dd>
+						</dl>
+
+						<!-- 날짜 하나 -->
+						<dl>
+							<dt>27일</dt>
+							<dd>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png" alt=""></span>
+									<span class="time" title="재생시간 04:20">04:20</span>
+								</div>
+								<div class="data1">
+									<strong>누리끼리 (일상 유머 모음집)</strong>
+									<div class="data-word2">
+										<span>#일상 유머</span>
+									</div>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox" checked>
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="link">상세보기</a>
+							</dd>
+							<dd>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu2.jpg" alt=""></span>
+									<span class="time" title="재생시간 04:20">04:20</span>
+								</div>
+								<div class="data1">
+									<strong>뜯어보면 돈이 되는 보험설계사 심층면접 프로젝트</strong>
+									<div class="data-word2">
+										<span>#보험</span>
+										<span>#상품</span>
+										<span>#암</span>
+										<span>#상해</span>
+										<span>#생활</span>
+									</div>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox">
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="link">상세보기</a>
+							</dd>
+						</dl>
+
+						<!-- 날짜 하나 -->
+						<dl>
+							<dt>06월<br>27일</dt>
+							<dd>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png" alt=""></span>
+									<span class="time" title="재생시간 04:20">04:20</span>
+								</div>
+								<div class="data1">
+									<strong>누리끼리 (일상 유머 모음집)</strong>
+									<div class="data-word2">
+										<span>#일상 유머</span>
+									</div>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox" checked>
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="link">상세보기</a>
+							</dd>
+							<dd>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu2.jpg" alt=""></span>
+									<span class="time" title="재생시간 04:20">04:20</span>
+								</div>
+								<div class="data1">
+									<strong>뜯어보면 돈이 되는 보험설계사 심층면접 프로젝트</strong>
+									<div class="data-word2">
+										<span>#보험</span>
+										<span>#상품</span>
+										<span>#암</span>
+										<span>#상해</span>
+										<span>#생활</span>
+									</div>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox">
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="link">상세보기</a>
+							</dd>
+						</dl>
+
+						<!-- 날짜 하나 -->
+						<dl>
+							<dt>21년<br>06월<br>27일</dt>
+							<dd>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu1.png" alt=""></span>
+									<span class="time" title="재생시간 04:20">04:20</span>
+								</div>
+								<div class="data1">
+									<strong>누리끼리 (일상 유머 모음집)</strong>
+									<div class="data-word2">
+										<span>#일상 유머</span>
+									</div>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox" checked>
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="link">상세보기</a>
+							</dd>
+							<dd>
+								<div class="data-info3 t1">
+									<span class="img"><img src="../../resource/img/temp/@img_edu2.jpg" alt=""></span>
+									<span class="time" title="재생시간 04:20">04:20</span>
+								</div>
+								<div class="data1">
+									<strong>뜯어보면 돈이 되는 보험설계사 심층면접 프로젝트</strong>
+									<div class="data-word2">
+										<span>#보험</span>
+										<span>#상품</span>
+										<span>#암</span>
+										<span>#상해</span>
+										<span>#생활</span>
+									</div>
+								</div>
+								<label class="icon-com1 ic22">
+									<input type="checkbox">
+									<span>찜하기</span>
+								</label>
+								<a href="javascript:void(0);" class="link">상세보기</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형6 : .list-data6</h3>
+				<div class="guide-area body">
+					<div class="list-data6">
+						<ul>
+							<li class="active">
+								<div class="area1">
+									<div class="side">
+										<span class="txt">동의만료</span>
+										<i class="icon-txt2 ic6">D-00</i>
+										<i class="icon-txt2 ic5">D-00</i>
+									</div>
+									<div class="data-info2" data-value="102701">
+										<strong>고객명</strong>
+										<span>
+											<span>나이</span>
+											<span>성별</span>
+										</span>
+									</div>
+									<div class="txt">
+										<span>0000.00.00</span>
+										<span>보험생일 00.00</span>
+									</div>
+									<div class="data1">
+										<dl>
+											<dt>보장분석일</dt>
+											<dd>0000.00.00</dd>
+										</dl>
+										<dl>
+											<dt>리포트발송일</dt>
+											<dd>0000.00.00</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="area2">
+									<a href="javascript:void(0);" class="ic1">전화</a>
+									<a href="javascript:void(0);" class="ic2">문자</a>
+									<a href="javascript:void(0);" class="ic3">보장분석&middot;설계</a>
+									<a href="javascript:void(0);" class="ic4">고객발송</a>
+								</div>
+							</li>
+							<li>
+								<div class="area1">
+									<div class="side">
+										<i class="icon-txt2 ic6">D-00</i>
+									</div>
+									<div class="data-info2" data-value="102702">
+										<strong>고객명</strong>
+										<span>
+											<span>나이</span>
+											<span>성별</span>
+										</span>
+									</div>
+									<div class="txt">
+										<span>0000.00.00</span>
+										<span>보험생일 00.00</span>
+									</div>
+									<div class="data1">
+										<dl>
+											<dt>보장분석일</dt>
+											<dd>0000.00.00</dd>
+										</dl>
+										<dl>
+											<dt>리포트발송일</dt>
+											<dd>0000.00.00</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="area2">
+									<a href="javascript:void(0);" class="ic1">전화</a>
+									<a href="javascript:void(0);" class="ic2">문자</a>
+									<a href="javascript:void(0);" class="ic3">보장분석&middot;설계</a>
+									<a href="javascript:void(0);" class="ic4">고객발송</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="guide-area body">
+					<div class="list-data6 t1">
+						<ul data-slider="list2" data-slider-title="고객목록" data-slides-view="auto">
+							<li>
+								<div class="side">
+									<i class="icon-txt2 ic6">D-00</i>
+								</div>
+								<div class="data-info2" data-value="102701">
+									<strong>고객명</strong>
+									<span>나이</span>
+								</div>
+								<a href="javascript:void(0);" class="link">상세보기</a>
+							</li>
+							<li>
+								<div class="side">
+									<i class="icon-txt2 ic5">D-00</i>
+								</div>
+								<div class="data-info2" data-value="102702">
+									<strong>고객명</strong>
+									<span>나이</span>
+								</div>
+								<a href="javascript:void(0);" class="link">상세보기</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형7 : .list-data7</h3>
+				<div class="guide-area body">
+					<div class="list-data7">
+						<ul>
+							<li>내용</li>
+							<li>내용</li>
+							<li>내용</li>
+							<li>내용</li>
+						</ul>
+					</div>
+					<hr class="guide-line2">
+					<div class="list-data7">
+						<dl>
+							<dt>타이틀</dt>
+							<dd>내용</dd>
+						</dl>
+						<dl>
+							<dt>타이틀</dt>
+							<dd>내용</dd>
+						</dl>
+					</div>
+					<hr class="guide-line2">
+					<div class="list-data7 col2">
+						<ul>
+							<li>내용</li>
+							<li>내용</li>
+							<li>내용</li>
+							<li>내용</li>
+						</ul>
+					</div>
+					<hr class="guide-line2">
+					<div class="list-data7 t1">
+						<ul>
+							<li>내용</li>
+							<li>내용</li>
+						</ul>
+					</div>
+					<div class="list-data7 t2">
+						<ul>
+							<li><a href="javascript:void(0);">내용이 들어갑니다.</a></li>
+							<li><a href="javascript:void(0);">(1순위)실손 전환 캠페인</a></li>
+						</ul>
+					</div>
+					<div class="list-data7 t2">
+						<dl>
+							<dt>타이틀</dt>
+							<dd><a href="javascript:void(0);">(1순위)실손 전환 캠페인</a></dd>
+							<dd><a href="javascript:void(0);">(1순위)실손 전환 캠페인</a></dd>
+							<dd><a href="javascript:void(0);">(1순위)실손 전환 캠페인</a></dd>
+							<dd><a href="javascript:void(0);">(1순위)실손 전환 캠페인</a></dd>
+						</dl>
+					</div>
+				</div>
+			</section>
+
+			<!-- ############################## -->
+			<!-- [컨텐츠유형] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">컨텐츠유형</h2>
+				<h3 class="guide-tit2">유형1 : .list-con1</h3>
+				<div class="guide-area body">
+					<div class="list-con1">
+						<ul>
+							<li>
+								<a href="javascript:void(0);">
+									<strong>모성사망(부양자)</strong>
+									<span>담보가입금액 3,500만원</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong>암진단비</strong>
+									<span>담보가입금액 3,500만원</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong>고액치료비암진단비</strong>
+									<span>담보가입금액 3,500만원</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong>성장장애및생애질환(아토피,중이염,축농증)입원비(4일)</strong>
+									<span>담보가입금액 3,500만원</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong>심장합병증을 동반한 가와사키병진단비</strong>
+									<span>담보가입금액 3,500만원</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong>항암방사선·약물치료비</strong>
+									<span>담보가입금액 3,500만원</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong>상해후유장해</strong>
+									<span>담보가입금액 3,500만원</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<h4 class="guide-tit3">스타일변경 : t1</h4>
+					<div class="list-con1 t1">
+						<ul>
+							<li>
+								<strong>타이틀</strong>
+								<div class="txt">내용</div>
+							</li>
+							<li>
+								<strong>타이틀</strong>
+								<div class="data-word3">
+									<dl>
+										<dt>등록자</dt>
+										<dd>하다미</dd>
+									</dl>
+									<dl>
+										<dt class="hide">등록일</dt>
+										<dd>0000.00.00 00:00</dd>
+									</dl>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<h3 class="guide-tit2">유형1 : .list-con1.box</h3>
+				<div class="guide-area body">
+					<div class="list-con1 box">
+						<ul>
+							<li>
+								<a href="javascript:void(0);">
+									<strong>(무)베스트변액유니버셜종신보험(월납)</strong>
+									<span class="sub">KDB생명</span>
+									<span>질병사망</span>
+									<span>보장금액 300만원</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong>(무)베스트변액유니버셜종신보험(월납)</strong>
+									<span class="sub">KDB생명</span>
+									<span>질병사망</span>
+									<span>보장금액 300만원</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="guide-area popup">
+					<div class="list-con1 box">
+						<ul>
+							<li>
+								<a href="javascript:void(0);">
+									<strong>(무)베스트변액유니버셜종신보험(월납)</strong>
+									<span class="sub">KDB생명</span>
+									<span>질병사망</span>
+									<span>보장금액 300만원</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<strong>(무)베스트변액유니버셜종신보험(월납)</strong>
+									<span class="sub">KDB생명</span>
+									<span>질병사망</span>
+									<span>보장금액 300만원</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<h3 class="guide-tit2">유형2 : .list-con2</h3>
+				<div class="guide-area popup">
+					<div class="list-con2 img-set1">
+						<ul>
+							<li>
+								<em>7개의 패키지 별 순서를 내 맘대로!  <br>관심있는 주제별로 들어보세요.</em>
+								<!--
+								<div class="guide-img1">
+									<img src="../../resource/img/plr/edu/img_journey_guide1.png" alt="">
+								</div>
+								-->
+							</li>
+							<li>
+								<em>1개의 패키지는 2주 동안 진행되며, <br>하루에 1강 씩 열려요. </em>
+								<span>열린 강의를 D+1까지 수강하면 포인트 지급!</span>
+								<!--
+								<div class="guide-img2">
+									<img src="../../resource/img/plr/edu/img_journey_guide2.png" alt="">
+								</div>
+								-->
+							</li>
+							<li>
+								<em>이미 수강한 강의도 <br>언제든지 다시 수강할 수 있어요.</em>
+								<!--
+								<div class="guide-img2">
+									<img src="../../resource/img/plr/edu/img_journey_guide3.png" alt="">
+								</div>
+								-->
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- ############################## -->
+		</article>
+	</div>
+	<script src="../../resource/js/publish.plugin.js"></script>
+	<script src="../../resource/js/publish.common.js"></script>
+	<script>
+	//<!--
+		function switchToggleMenu(){
+		}
+		switchToggleMenu();
+	//-->
+	</script>
+</body>
+</html>

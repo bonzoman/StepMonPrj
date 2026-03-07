@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 국적찾기 | 정보입력 | 고객등록 | 고객</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>국적찾기 <a href="#uiTOOLTIPINFO1" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">국적찾기 안내</a></h1>
+			<button type="button" data-btn="pop-close">국적찾기 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [검색영역] 국가명 검색 -->
+			<!-- ######################### -->
+			<fieldset class="form-search1" data-sticky="top">
+				<legend>국가명 검색</legend>
+				<div class="text">
+					<input type="search" title="국가명(한글자이상입력필수)" placeholder="국가명을 한 글자 이상 입력해주세요.">
+					<button type="button" class="icon-com1 ic2">검색</button>
+				</div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [검색필터] -->
+			<!-- ######################### -->
+			<div class="area-info1">
+				<div class="select-wrap side" data-autoset="select">
+					<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">정렬</span>
+						<span data-select="text" data-value="1">국가명 오름차순</span>
+					</button>
+					<div class="list">
+						<div data-label="정렬">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion1" value="1"><span>국가명 오름차순</span></label>
+								<label><input type="radio" name="selectOpeion1" value="2"><span>국가명 내림차순</span></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [검색목록] -->
+			<!-- ######################### -->
+			<div class="con-t1">
+				<!-- // -->
+				<label>
+					<input type="radio" name="form-radio" checked>
+					<strong class="tit">국가명(국문)</strong>
+					<span class="txt2">국가명(영문)</span>
+					<span class="data1">
+						<i>CRS협정국가</i>
+						<i>FATF비협조국가</i>
+					</span>
+				</label>
+				<!-- // -->
+				<label>
+					<input type="radio" name="form-radio">
+					<strong class="tit">아랍에미리트</strong>
+					<span class="txt2">The United Arab Emirates</span>
+				</label>
+				<!-- // -->
+				<label>
+					<input type="radio" name="form-radio">
+					<strong class="tit">아프가니스탄</strong>
+					<span class="txt2">Afghanistan</span>
+					<span class="data1">
+						<i>CRS협정국가</i>
+					</span>
+				</label>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [결과없음] -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p>
+					<strong>일치하는 내용이 없어요.</strong>
+					<span>입력한 정보를 확인하고 다시 검색해보세요.</span>
+				</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<!-- ######################### -->
+<!-- [툴팁영역] 국적찾기 안내 -->
+<!-- ######################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl class="txt-bul1">
+		<dt>국적찾기 안내</dt>
+		<dd>자금세탁방지국제기구(FATF: Financial Action Task Force): 자금세탁방지를 위한 모니터링 및 국제 간 협력체제 지원을 위해 설립된 자금세탁방지 금융대책기구.</dd>
+		<dd>FATF비협조국가: FATF에서 발표하는 자금세탁 방지노력이 부족한 국가.</dd>
+		<dd>CRS협정국가: CRS(Common Reporting Standard)는 국가 간 조세정보 자동교환 표준 모델을 의미하며, 협정한 나라는 조세관련 금융 정보를 매년 자동으로 교환해야 함.</dd>
+		<dd><button type="button" data-btn="pop-close">국적찾기 안내 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 고객셀프수납 알림톡 발송 | 취급자수납 | 자금관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-22]	① 마크업 알럿컴펌창으로 전체변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 가능한업무 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCON0121L01" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>발송 확인</dt>
+		<dd>계약자 <em>[하*미, 010-****-1234]</em>님에게
+			선택한 계약 <em>[2건]</em>에 대한 금액<br> 
+			<em>[470,000원]</em>으로 고객셀프수납 알림톡을 
+			발송하시겠습니까?</dd>
+		<!-- // -->
+		<dd class="area-action">
+			<button type="button" class="btn-action" data-btn="pop-close">취소</button>
+			<button type="button" class="btn-action c1">확인</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCON0121L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPCON0121L01').trigger('outputOpen');
+
+	//토스트팝업 호출
+	ui.toast('알림톡이 발송되었습니다.');
+//-->
+</script>
+</body>
+</html>

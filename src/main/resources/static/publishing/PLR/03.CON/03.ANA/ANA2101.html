@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>목록 | 상담신청 | 보장분석</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-14]	① wrap-section 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>상담신청 내역 </h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [검색영역] -->
+		<!-- ######################### -->
+		<fieldset class="form-search1 line">
+			<legend>고객조회 및 상세 검색</legend>
+
+			<!-- 기준일자 -->
+			<div class="input-date1 text">
+				<span>
+					<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+					<input type="text" title="시작날짜 선택" data-dateform="start2" value="2022.04.18" placeholder="YYYY.MM.DD" readonly>
+				</span>
+				<span>
+					<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+					<input type="text" title="종료날짜 선택" data-dateform="end2" value="2022.04.25" placeholder="YYYY.MM.DD" readonly>
+				</span>
+			</div>
+
+			<!-- 고객이름 검색 -->
+			<div class="text">
+				<input type="search" title="고객이름" placeholder="고객이름을 검색해주세요.">
+				<button type="button" class="icon-com1 ic2">검색하기</button>
+			</div>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 목록영역 -->
+		<!-- ######################### -->
+		<!-- [총 인원수] -->
+		<!-- 2022-11-14 마크업 변경 -->
+		<div class="wrap-section">
+			<div class="area-info1">
+				<p>총 <strong>00</strong>명</p>
+			</div>
+	
+			<!-- [목록] -->
+			<div class="info-data3">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong>고객이름</strong>
+						</div>
+						<dl class="data2">
+							<dt>상담신청일</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<div class="side">
+							<span class="icon-state2 ic4">상담신청</span>
+							<!-- <span class="icon-state2 ic2">상담완료</span> -->
+						</div>
+						<button type="button" class="link">상담신청 상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="data-info2" data-value="102702"><strong>하다미</strong></div>
+						<dl class="data2">
+							<dt>상담신청일</dt>
+							<dd>2021.12.13</dd>
+						</dl>
+						<div class="side"><span class="icon-state2 ic2">상담완료</span></div>
+						<button type="button" class="link">상담신청 상세보기</button>
+					</li>
+					<!-- // -->
+				</ul>
+	
+				<!-- [더보기버튼] -->
+				<div class="area-btn2"><button type="button" class="btn-util2">더보기 <span>(2/10)</span></button></div>
+			</div>
+		</div>
+		<!-- //2022-11-14 마크업 변경 -->
+
+		<!-- ######################### -->
+		<!-- [검색결과] 결과없음 -->
+		<!-- ######################### -->
+		<!-- [CASE] 상담신청고객없음 -->
+		<div class="mes-result1">
+			<p>
+				<strong>상담신청한 고객이 없습니다.</strong>
+			</p>
+		</div>
+
+		<!-- [CASE] 조회결과없음 -->
+		<div class="mes-result1">
+			<p>
+				<strong>선택하신 조건의 결과가 없습니다.</strong>
+				<span>조회 조건을 바꾸어 조회해보세요.</span>
+			</p>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

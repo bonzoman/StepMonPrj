@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>노하우 확인 | 쉬운설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+
+<!-- 샘플 : 하이차트 적용 시 필요한 스크립트 파일 -->
+<script src="../../../resource/js/chart/highcharts.js"></script>
+<script src="../../../resource/js/chart/data.js"></script>
+<script src="../../../resource/js/chart/highcharts-more.js"></script>
+<script src="../../../resource/js/chart/solid-gauge.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>노하우 확인</h1>
+			<button type="button" data-btn="pop-close">노하우 확인 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<article class="board-view1">
+				<header>
+					<div class="tit">
+						<h1>사회 초년생을 위한 저렴한<br>보험 이렇게 설계해보세요.</h1>
+					</div>
+					<dl class="info">
+						<dt>작성일</dt>
+						<dd><span>2022.05.19</span></dd>
+					</dl>
+				</header>
+
+				<div class="wrap-section1">
+					<section>
+						<h2 class="hide">플랜소개</h2>
+						<div class="tit-sub2">
+							<!-- 2022-12-12 변경 -->
+							<em class="data3 ic3">지급률 450%</em>
+							<h3>Let:smile 종합건강보험(프리미엄)</h3>
+							<h3 class="data-num1">월 <strong>34,700</strong><span>원</span></h3>
+							<!-- //2022-12-12 변경 -->
+						</div>
+						<div class="tbl-data1 t1">
+							<table>
+								<caption>플랜 정보</caption>
+								<colgroup>
+									<col style="width:33%">
+									<col style="width:33%">
+									<col style="width:33%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">납입면제</th>
+										<th scope="col">보험기간</th>
+										<th scope="col">납입주기</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><strong>있음</strong></td>
+										<td><strong>100세만기</strong></td>
+										<td><strong>20년납</strong></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="area-btn1 col2">
+							<a href="javascript:void(0);" class="btn-com1">특약확인</a>
+							<!-- <a href="javascript:void(0);" class="btn-com1">교육자료 확인</a> --> <!-- 2022-12-06 삭제 -->
+						</div>
+					</section>
+
+					<section>
+						<div class="tit-sub1">
+							<h3>상품 특징</h3>
+							<p>
+								<span class="icon-txt2 t1 ic3">갱신형</span>
+								<span class="icon-txt2 t1 ic2">세만기</span>
+							</p>
+						</div>
+
+						<!-- 차트영역 : /PUB/99.work/script_chart.html : Spider Web -->
+						<div id="SpiderWeb" data-chart="Spider-Web" class="area-chart"></div>
+					</section>
+				</div>
+
+				<div class="wrap-section3">
+					<!-- # 설계사소개 # -->
+					<section>
+						<h4 class="hide">설계사소개</h4>
+						<dl class="data-info1">
+							<dt>
+								<span class="img"><img src="../../../resource/img/temp/@img_user3.png" alt=""></span>
+								<span><strong>공지철</strong><span>20대</span><span>남</span></span>
+								<span>강남사업단</span>
+								<span>17차월</span>
+								<span class="txt2"><em class="icon-grade1">우수설계사</em></span> <!-- [D] 우수설계사일 경우 추가 -->
+							</dt>
+							<dd>60대 이상 고객님들의 마음을 잘 아는 20대 설계사 이지영입니다. 걱정되는 담보만 집중하지 않고 다양한 위험상황에 대비해야 합니다.</dd>
+						</dl>
+					</section>
+
+					<!-- # 해시태그 # -->
+					<section>
+						<h5 class="hide">해시태그</h5>
+						<p class="data-word2">
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+							<span>#해시태그</span>
+						</p>
+					</section>
+
+					<!-- # 판매 TIP3 # -->
+					<section>
+						<h6 class="tit-sub1">설계사님이 공유하는 유용한 TIP도 함께 확인해보세요.</h6>
+						<dl class="mes-t3 t2">
+							<dt class="ic1">TIP 1</dt>
+							<dd>고객님은 사회초년생이기에 보험 뿐만 아니라 저축, 생활비들 지출을 하고 있습니다.</dd>
+						</dl>
+						<dl class="mes-t3 t2">
+							<dt class="ic1">TIP 2</dt>
+							<dd>고객님은 사회초년생이기에 보험 뿐만 아니라 저축, 생활비들 지출을 하고 있습니다. 많은 보장은 비싼 보험료를 의미하고 이는 부담으로 다가 올수 있다 생각했습니다. 이점을 고객님들이 쉽게 공감할 수 있도록 설명드렸습니다.</dd>
+						</dl>
+					</section>
+					<!-- # // # -->
+				</div>
+			</article>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">설계복사</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<script>
+	//<!--
+		// 샘플
+		Highcharts.chart("SpiderWeb", {
+			chart:{
+				polar:true, //극선
+			},
+			xAxis:{
+				tickmarkPlacement:'on',
+				categories:["보험료","수수료","인기도","납입기간","보장기간"],
+			},
+			yAxis:{
+				gridLineInterpolation:"polygon", //다각형 모양 지정
+				tickInterval:16, //다각형 라인 간격
+			},
+			series:[{
+				name:"해당상품",
+				data:[43, 19, 60, 35, 17],
+				zIndex:1, //제일위에 위치
+				pointPlacement:"on"
+			}, {
+				name:"상품평균",
+				data:[50, 39, 42, 31, 26],
+				pointPlacement:"on",
+			}],
+			responsive:{
+				rules: [{
+					condition:{maxWidth: 720}, //차트 최대사이즈
+					chartOptions:{
+						pane:{size:'70%'} //차트영역 사이즈 : label이 짤림을 막기 위해 적용
+					}
+				}]
+			}
+		})
+	//-->
+	</script>
+</body>
+</html>
+

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>부활대상계약 | 계약변경 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-22]	① 해지월도 월별 조회로 변경
+						② 부활 보험료 삭제
+						③ 버튼 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>부활대상계약</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [검색영역] 조회검색 -->
+		<!-- ######################### -->
+		<div id="uiFormSearch" class="form-search2" data-scroll-bg="1" data-togglecon="true">
+			<!-- ### [상단문구] ### -->
+			<div class="tit-section2">
+				<p>계약을 조회해보세요.</p>
+				<button type="button" data-toggle="btn" aria-expanded="false">조회정보보기</button>
+			</div>
+
+			<!-- ### [조회영역] ### -->
+			<fieldset class="form-wrap1">
+				<legend>조회정보 입력</legend>
+
+				<!-- # 조직구분 : [D] 취급자 로그인시 미노출 # -->
+				<dl class="form">
+					<dt>조직구분 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<!-- 2022-11-29 변경 -->						
+						<div class="label-btn1" data-autoset="form">
+							<label>
+								<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont1" checked>
+								<span>조직</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont2" >
+								<span>취급자</span>
+							</label>
+						</div>
+						<!-- [CASE] 조직 -->
+						<div class="ui-tabcon active" data-id="uiFormCont1">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="조직을 검색해주세요." value="" aria-invalid="true"></data><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+								<button type="button" class="icon-com1 ic2">조직찾기</button>
+							</div>
+							<div class="validation">조직구분을 선택해주세요.</div>
+							<!-- [D] 검색결과 : 조직 -->
+							<div class="info-data3 info">
+								<div class="info2 ic1">
+									<strong>장기지원팀</strong>
+									<span>A1234566</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+						</div>
+
+						<!-- [CASE] 취급자 -->
+						<div class="ui-tabcon" data-id="uiFormCont2">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="취급자를 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">취급자찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 취급자 -->
+							<div class="info-data3 info">
+								<div class="data-info1">
+									<span class="img"><img src="../../../resource/img/temp/@img_user3.png" alt=""></span>
+									<span><strong>공지철</strong><span>111111</span></span> <!-- 2022-10-14 사번으로 변경 -->
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+							<!-- // -->
+						</div>
+						<!-- //2022-11-29 변경 -->
+					</dd>
+				</dl>
+				<!-- # // # -->
+
+				<!-- # 부활대상 # -->
+				<dl class="form">
+					<dt>부활대상 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" disabled><!-- [M 2022-11-22] 비활성화 일때 disabled 추가 -->
+								<span data-select="title">부활대상</span>
+								<span data-select="text" data-value="1">전체</span>
+							</button>
+							<div class="list">
+								<div data-label="부활대상 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value="1"><span>전체</span></label>
+										<label><input type="radio" name="selectOpeion2" value="2"><span>임의부활</span></label>
+										<label><input type="radio" name="selectOpeion2" value="3"><span>일반부활</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 해지월도 : [D] 월 선택 datepicker는 data-dateform="month"로 제어 가능하게 스크립트 적용 예정입니다. # -->
+				<dl class="form">
+					<dt>해지월도 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<!-- // -->
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">시작월 선택</button>
+								<input type="text" title="시작월 선택" data-dateform="month" value="2022.02" placeholder="YYYY.MM" readonly>
+							</span>
+							<!-- <span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">종료월  선택</button>
+								<input type="text" title="종료월 선택" data-dateform="month" value="2022.02" placeholder="YYYY.MM" readonly>
+							</span> --><!-- [M 2022-11-22] 해지월도 월별 조회로 변경 -->
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 검색버튼 # -->
+				<div class="area-btn1 col">
+					<button type="button" class="btn-com1 ic8 c3">초기화</button>
+					<button type="button" class="btn-com1 c1" data-btn="search">조회</button>
+				</div>
+				<!-- # // # -->
+			</fieldset>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색 전] 안내문구 -->
+		<!-- ######################### -->
+		<div class="mes-result1 ic1">
+			<p>
+				<strong>조회조건을 선택하시어<br>계약을 조회해주세요</strong>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 결과없음 -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>선택하신 조건의 계약이 없습니다.</strong>
+				<span>조회조건을 바꾸어 조회해보세요</span>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 조회조건 -->
+		<!-- ######################### -->
+		<!-- # 전체 # -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>부활대상</dt>
+				<dd class="ic1"><strong>전체</strong></dd>
+			</dl>
+			<dl class="data2">
+				<dt>해지월도</dt>
+				<dd>2022.02~2022.03</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- # 임의부활 # -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>부활대상</dt>
+				<dd class="ic1"><strong>임의부활</strong></dd>
+			</dl>
+			<dl class="data2">
+				<dt>해지월도</dt>
+				<dd>2022.02~2022.03</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- # 일반부활 # -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>부활대상</dt>
+				<dd class="ic1"><strong>일반부활</strong></dd>
+			</dl>
+			<dl class="data2">
+				<dt>해지월도</dt>
+				<dd>2022.02~2022.03</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+		<!-- // -->
+
+		<!-- ######################### -->
+		<!-- [검색결과] 계약상태 -->
+		<!-- ######################### -->
+		<div class="label-btn2" data-sticky="top">
+			<label>
+				<input type="radio" name="uiFormRadio">
+				<span>전체</span>
+			</label>
+			<label>
+				<input type="radio" name="uiFormRadio" checked>
+				<span>해지계약</span> <!-- [D] 해지 -->
+			</label>
+			<label>
+				<input type="radio" name="uiFormRadio">
+				<span>부활완료</span> <!-- [D] 정상 -->
+			</label>
+			<label>
+				<input type="radio" name="uiFormRadio">
+				<span>해약계약</span> <!-- [D] 해약 -->
+			</label>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] 검색 목록 -->
+		<!-- ######################### -->
+		<!-- # [총 건수] # -->
+		<div class="area-info1">
+			<p>총 <strong>00건</strong></p>
+		</div>
+
+		<!-- # [요약보기] # -->
+		<label class="btn-util1 ic4" data-fixed="bottom" data-btn="display">
+			<input type="checkbox">
+			<span>요약보기</span>
+		</label>
+
+		<!-- # [목록] #
+			data-display : 요약보기 컨텐츠
+			data-display="block" : 노출
+			data-display="none" : 비노출
+		-->
+		<div class="info-data2" data-display="list">
+			<ul>
+				<!-- // -->
+				<li>
+					<!-- [상품명] -->
+					<strong class="tit">상품명</strong>
+					<!-- [상태 / 증권번호] -->
+					<div class="info">
+						<i class="icon-state2 ic7">해지</i>
+						<i class="icon-state2 ic3">정상</i>
+						<i class="icon-state2 ic2">해약</i>
+						<span class="hide">증권번호</span>
+						<span>LA123456789</span>
+					</div>
+					<!-- [고객정보] -->
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">계약자명</strong>
+								<span>생년월일</span>
+								<span>성별</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>피보험자</dt>
+							<dd class="info2">
+								<strong data-masking="true">피보험자명</strong>
+								<span>생년월일</span>
+								<span>성별</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+					<!-- [부활 험료 / 납입사항] -->
+					<div class="data2" data-display="block">
+						<!-- <dl>
+							<dt>부활보험료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span><span>(납입할 횟수 2회)</span></dd>
+						</dl> --><!-- [M 2022-11-22] 삭제 -->
+						<dl>
+							<dt>납입사항</dt>
+							<dd>000회(0000.00)</dd>
+						</dl>
+						<!-- 2022-12-23 -->
+						<dl>
+							<dt>부활일자</dt>
+							<dd>YYYY-MM-DD</dd>
+						</dl>
+						<!-- // 2022-12-23 -->
+					</div>
+					<!-- # 계약상태 해지 경우 노출 # -->
+					<!-- [CASE1] 임의부활 된 지 1개월 미만인 경우  -->
+					<div class="area-btn1" data-display="block">
+						<button type="button" class="btn-com1">임의부활</button><!-- [M 2022-11-22] 텍스트 수정 -->
+					</div>
+					<!-- [CASE2] 임의부활 된 지 1개월 이상인 경우 -->
+					<div class="area-btn1" data-display="block">
+						<button type="button" class="btn-com1">임의부활</button>
+						<button type="button" class="btn-com1">일반부활</button><!-- [M 2022-11-22] 텍스트 수정 -->
+					</div>
+					<!-- // -->
+					<a href="javascript:void(0);" class="link">상세보기</a>
+					<!-- // -->
+				</li>
+				<!-- // -->
+				<li>
+					<strong class="tit">롯데힐링케어 건강보험</strong>
+					<div class="info">
+						<i class="icon-state2 ic7">해지</i>
+						<span class="hide">증권번호</span>
+						<span>LA123456789</span>
+					</div>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>1990.01.10</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>피보험자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>1990.01.10</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+					<div class="data2" data-display="block">
+						<!-- <dl>
+							<dt>부활보험료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span><span>(납입할 횟수 2회)</span></dd>
+						</dl> --><!-- [M 2022-11-22] 삭제 -->
+						<dl>
+							<dt>납입사항</dt>
+							<dd>000회(0000.00)</dd>
+						</dl>
+					</div>
+					<div class="area-btn1" data-display="block">
+						<button type="button" class="btn-com1">임의부활</button><!-- [M 2022-11-22] 텍스트 수정 -->
+					</div>
+					<a href="javascript:void(0);" class="link">상세보기</a>
+				</li>
+				<!-- [해약] -->
+				<li>
+					<strong class="tit">롯데힐링케어 건강보험</strong>
+					<div class="info">
+						<i class="icon-state2 ic2">해약</i>
+						<span class="hide">증권번호</span>
+						<span>LA123456789</span>
+					</div>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>1990.01.10</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>피보험자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>1990.01.10</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+					<div class="data2" data-display="block">
+						<dl>
+							<dt>납입사항</dt>
+							<dd>000회(0000.00)</dd>
+						</dl>
+					</div>
+					<a href="javascript:void(0);" class="link">상세보기</a>
+				</li>
+				<!-- [정상] -->
+				<li>
+					<strong class="tit">롯데힐링케어 건강보험</strong>
+					<div class="info">
+						<i class="icon-state2 ic3">정상</i>
+						<span class="hide">증권번호</span>
+						<span>LA123456789</span>
+					</div>
+					<div class="data1">
+						<dl>
+							<dt>계약자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>1990.01.10</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>피보험자</dt>
+							<dd class="info2">
+								<strong data-masking="true">하*미</strong>
+								<span>1990.01.10</span>
+								<span>여</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>보험료</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>원</span>(월납)</dd>
+						</dl>
+					</div>
+					<div class="data2" data-display="block">
+						<dl>
+							<dt>납입사항</dt>
+							<dd>000회(0000.00)</dd>
+						</dl>
+					</div>
+					<a href="javascript:void(0);" class="link">상세보기</a>
+				</li>
+				<!-- // -->
+			</ul>
+
+			<!-- 더보기(현재페이지/총페이지) -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+			<!-- // -->
+		</div>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer"></footer>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+//<!--
+	/* ************************************
+	* 샘플 : 검색 토글컨텐츠 호출 및 닫기
+	* 1) 토글컨텐츠 호출
+	* 2) 조회버튼 클릭 이벤트
+	* 3) 조회조건 재검색 클릭 샘플
+	************************************ */
+	var _el_cont = $('.info-data2, .tab-sub1, .area-info1, .label-btn2, [data-btn="display"]'); //검색 제외 컨텐츠
+	var _el_result = $('.mes-result1:not(.ic1)'); //검색결과 : 결과없음 문구
+	var _el_result2 = $('.mes-result1.ic1'); //검색전 : 안내문구
+	var _el_headline = $('.info-summary1') //검색결과 : 상단영역
+
+	//초기화 : 내용 모두 비노출
+	_el_cont.addClass('none');
+	_el_result.addClass('none');
+
+	/* 1) 토글컨텐츠 호출 */
+	var _toggleSearch = $plugin.togglecon('#uiFormSearch', {
+		class_active : 'load',
+		selector_group : false,
+		callback_load :function(e){
+			if(_el_cont.hasClass('none')) {
+				_el_result.addClass('none');
+			}
+			_el_headline.addClass('none');
+			$(e.this_con).removeClass('active');
+		},
+		callback_after : function(e){
+			if(_el_cont.hasClass('none')) {
+				_el_result2.removeClass('none');
+				$(e.this_con).removeClass('active');
+			}else{
+				_el_headline.removeClass('none');
+				$(e.this_con).addClass('active');
+			}
+		}
+	});
+
+	//토글컨텐츠 강제 오픈
+	_toggleSearch.outputOpen();
+
+	/* 2) 조회버튼 클릭시 이벤트
+	*  토글컨텐츠 닫기 샘플
+	*  스크롤 상단으로 이동 샘플
+	*/
+	$('[data-btn="search"]').on('click', function(){
+		var _invalid = $(_toggleSearch).find('input:invalid');
+
+		//토글컨텐츠 닫기
+		_toggleSearch.outputClose();
+
+		if(_invalid.length > 0){
+			$(_toggleSearch).removeClass('active');
+			_el_result.removeClass('none'); // 검색결과없음 노출
+			_el_result2.addClass('none');
+			_el_cont.addClass('none');
+			_el_headline.addClass('none');
+		}else{
+			$(_toggleSearch).addClass('active'); //조회팝업 숨김
+			_el_result.addClass('none'); //검색전 문구 숨김
+			_el_result2.addClass('none'); //검색결과없음 숨김
+			_el_cont.removeClass('none');
+			_el_headline.removeClass('none');
+		}
+		$(window).scrollTop(0);
+	});
+
+	/* 3) 조회조건 재검색 클릭 샘플 */
+	$('[href="#uiFormSearch"]').on('click',function(e){
+		e.preventDefault();
+		_toggleSearch.outputOpen();
+	});
+//-->
+</script>
+</body>
+</html>

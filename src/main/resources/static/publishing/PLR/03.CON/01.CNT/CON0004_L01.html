@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 두낫콜 고객안내 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 두낫콜 고객안내 화면 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCON0004L01" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">두낫콜 고객안내</dt>
+		<dd>
+			<strong>
+				해당고객은 연락중지청구권(Do-not-Call) 신청고객입니다.<br>
+				고객님께 마케팅목적으로 연락(전화 또는 SMS)를 삼가해주십시오.<br>
+				(계약관리 등 업무목적 전화만 가능)
+			</strong>
+			<span>
+				연락중지청구권(Do-not-Call) : 고객의 요청으로
+				상품가입 권유 등 마케팅목적의 연락을 거절하는 권리
+			</span>
+		</dd>
+		<!-- // -->
+		<dd class="area-action">
+			<button type="button" class="btn-action c1" data-btn="pop-close">확인</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 호출
+	$plugin.popmodal('#uiPOPCON0004L01').outputOpen();
+//-->
+</script>
+<!-- ################################################### -->
+</body>
+</html>

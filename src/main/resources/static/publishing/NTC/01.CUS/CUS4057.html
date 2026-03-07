@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>가입설계동의를 위한 추가정보 입력 | 마케팅동의 | 전자동의 진행을 위한 약관 동의 | 가입설계동의</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- 2022-12-23 : 카톡브라우저 대응 수정 -->
+<main id="wrapper" style="overflow-y:auto;position:fixed;left:0;top:0;width:100%;height:100%;z-index:50;">
+<!-- // 2022-12-23 : 카톡브라우저 대응 수정 -->
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>가입설계 동의를 위한<br>추가정보 입력</h1>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1 top1">
+		<!-- ######################### -->
+		<!-- [상단영역] 안내문구 -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>고객님의 추가정보를 입력하신 후<br>보장분석 서비스를 이용해 보세요!</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [고객정보] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend>고객 정보</legend>
+
+			<!-- # 고객이름 # -->
+			<dl class="form">
+				<dt>고객이름</dt>
+				<dd><data class="text disabled" value="">하다미</data></dd>
+			</dl>
+
+			<!-- # 주민등록번호 또는 외국인등록번호 # -->
+			<dl class="form">
+				<dt>주민등록번호 또는 외국인등록번호</dt>
+				<dd>
+					<div class="text">
+						<data value="" data-disabled="true">910101</data>
+						<span class="util1">-</span>
+						<data value="" data-masking="true">*******</data>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 추가정보입력 선택 # -->
+			<div class="label-check1" data-autoset="form">
+				<label>
+					<input type="checkbox" data-tabcon="uiFormTab1" checked>
+					<span><strong>가입설계를 위한 추가정보 입력하기</strong></span> <!-- [M 2022-08-02]  (선택) 텍스트 삭제 -->
+				</label>
+			</div>
+
+			<!-- # 주소 입력 : 위 내용 선택시 노출 # -->
+			<div class="ui-tabcon" data-id="uiFormTab1">
+				<dl class="form">
+					<dt>주소</dt>
+					<dd>
+						<!-- [주소지분류] -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio01" checked/>
+								<span>자택</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio01" />
+								<span>직장</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio01" />
+								<span>기타</span>
+							</label>
+						</div>
+						<!-- [시/군/구] 검색 : 전 -->
+						<div class="input-btn1">
+							<data class="text" value="" data-label="주소를 검색해주세요."></data>
+							<button type="button" class="icon-com1 ic2">주소검색</button> <!-- [D] COM2010_P01 : 주소검색 -->
+						</div>
+						<input type="text" class="text" placeholder="상세주소를 입력해주세요." value="">
+
+						<!-- [시/군/구] 검색 : 후 -->
+						<div class="input-btn1">
+							<data class="text disabled" value="" data-label="주소검색">서울특별시 화양구 125-3</data>
+							<button type="button" class="icon-com1 ic2">주소검색</button>
+						</div>
+						<input type="text" class="text" placeholder="상세주소를 입력해주세요." value="3층">
+					</dd>
+				</dl>
+
+				<!-- # [CASE2] 외국인 # -->
+				<dl class="form">
+					<dt>국적정보</dt>
+					<dd>
+						<div class="input-btn1">
+							<data class="text" value="" data-label="국적찾기"></data>
+							<button type="button" class="icon-com1 ic2">국적찾기</button> <!-- [D] COM2011_P01 : 국적찾기 -->
+						</div>
+					</dd>
+				</dl>
+				<!-- # // # -->
+			</div>
+
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">확인</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

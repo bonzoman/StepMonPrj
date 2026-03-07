@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>사번/PW | 로그인</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-11]	① 로그인 페이지 전체 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<!-- <header class="header">
+		<h1 class="hide">로그인</h1>
+	</header> -->
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="3">
+		<!-- ######################### -->
+		<!-- [정보입력] -->
+		<!-- ######################### -->
+		<fieldset class="login-form">
+			<h1 class="tit">LOGIN</h1>
+
+			<!-- 사번 비밀번호 로그인 -->
+			<input type="text" class="text" title="사번번호" placeholder="사번을 입력해주세요.">
+			<input type="password" class="text" title="비밀번호" placeholder="비밀번호를 입력해주세요.">
+			<div class="area-btn1"><a href="javascript:void(0);" class="btn-com1 c1">로그인</a></div>
+			<div class="area-link">
+				<div class="label-check1">
+					<label>
+						<input type="checkbox">
+						<span>사번 저장</span>
+					</label>
+				</div>
+				<div class="link">
+					<a href="javascript:void(0);" class="link-t1" title="사번찾기 바로가기">사번찾기</a>
+					<a href="javascript:void(0);" class="link-t1" title="비밀번호 변경 바로가기">비밀번호 변경</a>
+				</div>
+			</div>
+			
+			<!-- 기획 삭제 -->
+			<!-- <div class="area-btn1">
+				<button type="button" class="btn-com1 c2 ic18">지문 로그인</button>
+				<button type="button" class="btn-com1 c2 ic19">간편비밀번호</button>
+			</div> -->
+			<!-- //기획 삭제 -->
+		</fieldset>
+
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

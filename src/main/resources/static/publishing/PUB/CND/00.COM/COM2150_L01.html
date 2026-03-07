@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 쉐이킹설정 | [P] 설정</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<div class="container">
+	<div class="list-t1">
+		<ul>
+			<li>
+				<a href="#uiPOPDPCOM2150L01" class="link1"><!-- [레이어팝업 호출 버튼] -->
+					<div class="txt1">쉐이킹설정</div>
+					<div class="txt2">화면 1</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- ################################################### -->
+<!-- ### [레이어 팝업] 쉐이킹설정 팝업 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCOM2150L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>쉐이킹설정</h1>
+			<button type="button" data-btn="pop-close">쉐이킹설정 닫기</button>
+		</header>
+		<div class="content">
+			<div class="label-check2">
+				<label>
+					<input type="radio" name="form-radio" checked>
+					<span>화면 1</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>화면 2</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>화면 3</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>화면 4</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>화면 5</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>설정안함</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1">확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPDPCOM2150L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPDPCOM2150L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

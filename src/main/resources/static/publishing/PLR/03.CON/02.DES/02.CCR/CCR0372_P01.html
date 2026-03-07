@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 영수보험료 | 설계(이륜차) | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-04]	① 영수보험료 팝업 전체 변경
+	*	[M 2022-10-07]	① 피보험자 ui 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>영수보험료</h1>
+			<button type="button" data-btn="pop-close">영수보험료 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- 2022-10-04 컨텐츠 변경 -->
+			<!-- ######################### -->
+			<!-- [탭영역] -->
+			<!-- ######################### -->
+			<div class="nav-tab1" data-autoset="tab" data-sticky="top"> <!-- [M 2022-10-20] data-sticky 추가 -->
+				<ul>
+					<li class="active"><a href="#uiTabSection1" aria-current="page"><i class="icon-invalid"></i>기본사항</a></li>
+					<li><a href="#uiTabSection2">담보사항</a></li>
+					<li><a href="#uiTabSection3"><i class="icon-invalid"></i>추가사항</a></li>
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭영역] 기본사항 -->
+			<!-- ######################### -->
+			<div id="uiTabSection1" class="ui-tabcon active">
+				<!-- 2022-10-07 마크업 변경 -->
+				<div class="info-data3 t3"> <!-- [M 2022-10-20] 클래스명 변경 -->
+					<dl>
+						<dt>피보험자</dt>
+						<dd class="data-info2" data-value="102701">
+							<strong>하다미</strong>
+							<span>
+								<span>1997.01.01</span>
+								<span>남</span>
+							</span>
+						</dd>
+					</dl>
+				</div>
+				<!-- 2022-10-07 마크업 변경 -->
+
+				<!-- 2022-10-07 마크업 변경 -->
+				<div class="wrap-section line">
+					<!-- ######################### -->
+					<!-- [정보] -->
+					<!-- ######################### -->
+					<div class="info-con1">
+						<dl>
+							<dt>차량번호</dt>
+							<dd>서울123가1234</dd>
+						</dl>
+						<dl>
+							<dt>운전/연령한정</dt>
+							<dd>부부한정특약/만35세이상</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- //2022-10-07 마크업 변경 -->
+
+				<div class="wrap-section3">
+					<!-- ######################### -->
+					<!-- [영수보험료] -->
+					<!-- ######################### -->
+					<div class="area-info2">
+						<dl>
+							<dt>영수보험료</dt>
+							<dd class="data-num1"><strong>1,026,420</strong><span>원</span></dd>
+						</dl>
+					</div>
+					<p class="icon-invalid">정산대체 및 인수심사대상입니다. 안내에 주의하세요.</p>
+					<!-- <p class="icon-invalid">정산대체 대상입니다. 안내에 주의하세요.</p>
+					<p class="icon-invalid">인수심사대상입니다. 안내에 주의하세요.</p> -->
+
+					<!-- ######################### -->
+					<!-- [정보] -->
+					<!-- ######################### -->
+					<div class="info-con2">
+						<dl>
+							<dt>합계보험료(A)</dt>
+							<dd class="data-num1"><strong>1,391,630</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>분납방법</dt>
+							<dd>연속 6회납</dd>
+						</dl>
+						<dl>
+							<dt>예상손해율</dt>
+							<dd>55.3%</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭영역] 담보사항 -->
+			<!-- ######################### -->
+			<div id="uiTabSection2" class="ui-tabcon">
+				<div class="info-con1">
+					<dl>
+						<dt>대인1</dt>
+						<dd>지배법에 정한 금액</dd>
+						<dd class="data-num1 txt-c2"><strong>10,020,000</strong><span>원</span></dd>
+					</dl>
+					<dl>
+						<dt>대물</dt>
+						<dd class="data-num1"><strong>10억7,000만</strong><span>원</span></dd>
+						<dd class="data-num1 txt-c2"><strong>20,000</strong><span>원</span></dd>
+					</dl>
+					<dl>
+						<dt>자상특약</dt>
+						<dd>사망·장애 5천 / 부상 5천</dd>
+						<dd class="data-num1 txt-c2"><strong>10,000,000</strong><span>원</span></dd>
+					</dl>
+					<dl>
+						<dt>자차</dt>
+						<dd>20%(20~50만원)/771</dd>
+						<dd class="data-num1 txt-c2"><strong>20,000</strong><span>원</span></dd>
+					</dl>
+					<dl>
+						<dt>분납</dt>
+						<dd>2회납</dd>
+						<dd class="data-num1 txt-c2"><strong>20,000</strong><span>원</span></dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭영역] 추가사항 -->
+			<!-- ######################### -->
+			<div id="uiTabSection3" class="ui-tabcon">
+				<!-- ######################### -->
+				<!-- [버튼영역]-->
+				<!-- ######################### -->
+				<div class="area-btn1 col2">
+					<button type="button" class="btn-com1">기타특약 가입특약</button>
+					<button type="button" class="btn-com1">할인형 특약 가입현황</button>
+					<button type="button" class="btn-com1 ic16">이미지복사</button>
+					<button type="button" class="btn-com1">분납</button>
+					<p class="icon-invalid">이미지 복사 및 사진촬영 대상입니다. 확인해주세요.</p>
+					<!-- <p class="icon-invalid">이미지 복사 대상입니다. 확인해주세요.</p>
+					<p class="icon-invalid">사진촬영 대상입니다. 확인해주세요.</p> -->
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">심사 요청</button>
+			</div>
+
+			<!-- [CASE0] 보험료 계산 후 (설계번호 있는 상태) : 촬영요청대상 - 요청전 -->
+			<!-- <div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" disabled>심사중</button>
+			</div> -->
+
+			<!-- [CASE1] 보험료 계산 후(설계번호 있는 상태/일반인수(승인) - 심사비대상포함 -->
+			<!-- <div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1" disabled>청약이동</button>
+			</div> -->
+
+			<!-- [CASE2] 보험료 계산 전 (설정정보 변경 포함) -->
+			<!-- <div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action ic4 simple">부가기능</button>
+				<button type="button" class="btn-action c1">보험료계산</button>
+			</div> -->
+
+			<!-- [CASE3] 보험료 계산 후(설계번호 있는 상태/인수심사대상 - 요청 전) -->
+			<!-- <div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action ic4 simple">부가기능</button>
+				<button type="button" class="btn-action c1">보험료계산</button>
+				<button type="button" class="btn-action c1">심사요청</button>
+			</div> -->
+
+			<!-- [CASE4] 보험료 계산 후(설계번호 있는 상태/심사대상-심사의뢰) -->
+			<!-- <div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action ic4 simple">부가기능</button>
+				<button type="button" class="btn-action c1">보험료계산</button>
+				<button type="button" class="btn-action c1" disabled>심사중</button>
+			</div> -->
+
+			<!-- [CASE5] 보험료 계산 후(설계번호 있는 상태/심사대상-일반인수 외) -->
+			<!-- <div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action ic4 simple">부가기능</button>
+				<button type="button" class="btn-action c1">보험료계산</button>
+				<button type="button" class="btn-action c1">심사완료</button>
+			</div> -->
+
+			<!-- [CASE6] 보험료 계산 후(설계번호 있는 상태/일반인수(승인) - 심사비대상포함 -->
+			<!-- <div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action ic4 simple">부가기능</button>
+				<button type="button" class="btn-action c1">청약이동</button>
+				<button type="button" class="btn-action c1">보험료계산</button>
+			</div> -->
+			<!-- ######################### -->
+			<!-- //2022-10-04 컨텐츠 변경 -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

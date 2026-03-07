@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 공동청약 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-10]	① 공동청약 기여율 버튼 추가
+	*	[M 2022-11-14]	① 공동청약 기여율 버튼 위치 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>공동청약</h1>
+			<button type="button" data-btn="pop-close">공동청약 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단문구]  -->
+			<!-- ######################### -->
+			<div class="tit-section2 t1">
+				<p>보험설계사정보 및 기여율을<br>입력해주세요.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보영역]  -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>보험설계사 정보 및 기여율</legend>
+
+				<!-- # 메인설계사 # -->
+				<dl class="form">
+					<dt>메인설계사</dt>
+					<dd>
+						<div class="info-data3">
+							<dl>
+								<dt class="data-info1">
+									<span class="img"><img src="../../../resource/img/temp/@img_user3.png" alt=""></span>
+									<span><strong>공지철</strong><span>154674</span></span>
+								</dt>
+								<dd class="data-word3">
+									<span>강남사업단</span>
+								</dd>
+							</dl>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 서브설계사 # -->
+				<dl class="form">
+					<dt>서브설계사</dt>
+					<dd>
+						<div class="info-data3">
+							<dl>
+								<dt class="data-info1">
+									<span class="img"><img src="../../../resource/img/temp/@img_user2.png" alt=""></span>
+									<span><strong>한예슬</strong><span>915574</span></span>
+								</dt>
+								<dd class="data-word3">
+									<span>광화문사업단</span>
+								</dd>
+							</dl>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 기여율 # -->
+				<dl class="form">
+					<dt>기여율 (메인설계사:서브설계사)</dt>
+					<dd>
+						<div class="label-btn1 col3">
+							<label>
+								<input type="radio" name="uiForm" checked>
+								<span>10:90</span>
+							</label>
+							<label>
+								<input type="radio" name="uiForm">
+								<span>20:80</span>
+							</label>
+							<label>
+								<input type="radio" name="uiForm">
+								<span>30:70</span>
+							</label>
+							<label>
+								<input type="radio" name="uiForm">
+								<span>40:60</span>
+							</label>
+							<label>
+								<input type="radio" name="uiForm">
+								<span>50:50</span>
+							</label>
+							<label>
+								<input type="radio" name="uiForm">
+								<span>60:40</span>
+							</label>
+							<label>
+								<input type="radio" name="uiForm">
+								<span>70:30</span>
+							</label>
+							<label>
+								<input type="radio" name="uiForm">
+								<span>80:20</span>
+							</label>
+							<label>
+								<input type="radio" name="uiForm">
+								<span>90:10</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- 2022-12-05 버튼 추가 -->
+			<div class="area-btn1">
+				<button type="button" class="btn-com1">기여율저장</button>
+				<button type="button" class="btn-com1 c1">공동청약 취소</button>
+			</div>
+			<!-- //2022-12-05 버튼 추가 -->
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<!-- 2022-12-05 삭제 -->
+			<!-- <div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">취소</button>
+				<button type="button" class="btn-action c1">확인</button>
+			</div> -->
+			<!-- //2022-12-05 삭제 -->
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

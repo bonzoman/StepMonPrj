@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 서류등록 | 계약변경 | 자동차 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>서류등록</h1>
+			<button type="button" data-btn="pop-close">서류등록 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [기본정보] -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+					<strong>하다미</strong>
+					<span>
+						<span>1997.01.01</span>
+						<span>남</span>
+					</span>
+				</h2>
+				<dl class="data-word3">
+					<dt>차량번호</dt>
+					<dd>55도 1234</dd> 
+				</dl>
+				<div class="data3">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+					<dl>
+						<dt>증권번호</dt>
+						<dd>11223369000000</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [안내문구] -->
+			<!-- ######################### -->
+			<p class="mes-info2 box">특별약관 검증사진을 URL통해 고객이 직접 등록하게 하거나 이미지를 전달받아 설계사가 직접 등록할 수 있습니다</p>
+
+			<!-- ######################### -->
+			<!-- [발송항목] -->
+			<!-- ######################### -->
+			<div class="form-wrap1 line2">
+				<fieldset>
+					<legend class="tit">사진검증특약</legend>
+
+					<div class="label-check1 box2">
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>주행거리(추가)</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>주행거리(대체)전</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>주행거래(대체)후</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>차선이탈방지장치</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>전방추돌방지장치</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>자녀할인</span>
+						</label>
+						<!-- // -->
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend class="tit">간편계약변경 서류</legend>
+
+					<div class="label-check1 box2">
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>질권설정</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>질권해지</span>
+						</label>
+						<!-- // -->
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend class="tit">계약변경서류</legend>
+					
+					<div class="label-check1 box2">
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>희망나눔 특약</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>시니어교통이수특약</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>수익자변경</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>질권설정/해지</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>계약변경/이륜차</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>계약변경/부속추가</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>계약변경/자기차량보장(담보)추가(사진촬영)</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>첨부서류</span>
+						</label>
+						<!-- // -->
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend class="tit">용도확인서 서류 (이미지등록)</legend>
+					
+					<div class="label-check1 box2">
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>계약변경/승합/운행용도확인서</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>계약변경/이륜/운행용도확인서</span>
+						</label>
+						<!-- // -->
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend class="tit">해지/취소 서류</legend>
+					
+					<div class="label-check1 box2">
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>양도해지</span>
+						</label>
+						<!-- // -->
+						<label>
+							<input type="checkbox">
+							<span>말소해지</span>
+						</label>
+						<!-- // -->
+					</div>
+				</fieldset>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">사진등록</button>
+				<button type="button" class="btn-action c1">알림톡 발송</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

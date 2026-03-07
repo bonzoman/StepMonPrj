@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 알릴사항(실손의료보험_계약전환용) | 장기보험 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>알릴사항</h1>
+			<button type="button" data-btn="pop-close">알릴사항 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 정보영역 -->
+			<!-- ######################### -->
+			<div class="tit-section">
+				<p>하다미(35세/여/1급 사무직) <br> 고객님의 알릴사항을 입력해주세요.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!--[정보입력] -->
+			<!-- ######################### -->
+			<section class="wrap-section">
+				<h2 class="hide">확인사항</h2>
+
+				<!-- ### [질문1] 의료행위 유무 ### -->
+				<fieldset class="form-wrap4">
+					<legend class="tit">1. 최근 1년 이내에 의사로부터 정신질환 관련 진찰 또는 검사를 통하여 다음과 같은 의료행위를 받은 사실이 있습니까? (예, 아니오)</legend>
+
+					<!-- // -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd">
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd" checked>
+							<span>아니요</span>
+						</label>
+					</div>
+
+					<!-- // -->
+					<div class="label-check1 box">
+						<label>
+							<input type="checkbox" name="ff2">
+							<span>입원</span>
+						</label>
+						<label>
+							<input type="checkbox" name="ff2">
+							<span>수술(제왕절개 포함)</span>
+						</label>
+						<label>
+							<input type="checkbox" name="ff2">
+							<span>계속하여 7일 이상 치료</span>
+						</label>
+						<label>
+							<input type="checkbox" name="ff2">
+							<span>계속하여 30일 이상 투약</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c3">임시저장</button>
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

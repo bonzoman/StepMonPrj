@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]필터 | 게시판 | 노하우</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-04]	① 문구 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>필터</h1>
+			<button type="button" data-btn="pop-close">필터 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [조회영역]  -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>게시글 노출 선택</legend>
+
+				<!-- // -->
+				<div class="label-toggle1">
+					<!-- [D] let 선정 No.1 설계사 노하우 리스트 페이지에서 이동한 경우 미노출 -->
+					<label>
+						<input type="checkbox">
+						<span>우수인증설계사</span> <!-- [M 2022-10-04] 문구 수정 -->
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>내가 작성한 글</span>
+					</label>
+				</div>
+
+				<!-- // -->
+				<dl class="form line">
+					<dt>상품군</dt>
+					<dd>
+						<div class="label-check1 col2">
+							<label>
+								<input type="checkbox">
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>질병/상해</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>자녀</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>연금</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>저축</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>운전자</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>단체</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>재물</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">초기화</button>
+				<button type="button" class="btn-action c1">적용</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

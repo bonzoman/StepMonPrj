@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>선택담보구성 | 쉬운설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-19]	① 띄어쓰기 추가
+	*	[M 2022-11-17]	① 할인대상 2번으로 옮김
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>쉬운 설계</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [입력정보요약] DP-설계-0521 -->
+		<!-- ######################### -->
+        <div class="wrap-step1" data-sticky="top">
+			<!-- ### [단계이동 및 입력정보요약] ###
+				현재단계표시 : <li aria-current="step">
+			-->
+			<div class="info-step1" data-autoset="toggle">
+				<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+				<div data-toggle="content">
+					<ol>
+						<!-- // -->
+						<li>
+							<span>01.고객정보</span>
+							<!-- <a href="javascript:void(0);" class="btn-sub3 c2">이동</a> -->
+							<div class="data1">
+								<dl>
+									<dt>계/피 유형</dt>
+									<dd>상이</dd>
+								</dl>
+								<dl>
+									<dt>피보험자 정보</dt>
+									<dd>공지철/30세/여/1급 (사무직)</dd> <!-- 2022-10-19 띄어쓰기 추가 -->
+								</dl>
+								<dl>
+									<dt>계약자 정보</dt>
+									<dd>하다미</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<span>02.상품선택</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							<div class="data1">
+								<dl>
+									<dt>보험종류</dt>
+									<dd>let:simple 간편345 건강보험(2207)</dd>
+								</dl>
+								<dl>
+									<dt>보험시기</dt>
+									<dd>2020.03.01</dd>
+								</dl>
+								<dl>
+									<dt>보험유형</dt>
+									<dd>1종/20년납/100세만기/납입면제/해지환급금/미지급형</dd>
+								</dl>
+								<!-- 2022-11-17 마크업 변경 -->
+								<dl>
+									<dt>할인대상</dt>
+									<dd>건강정보 할인대상 Y<br>유공자 할인대상 N</dd>
+								</dl>
+								<!-- //2022-11-17 마크업 변경 -->
+							</div>
+						</li>
+						<!-- // -->
+						<li aria-current="step">
+							<span>03.보장(담보)설정</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							<div class="data1 none">
+								<!-- 2022-11-17 마크업 변경 -->
+								<dl>
+									<dt>보장(담보)</dt>
+									<dd>상해후유장해3%이상 외 7건</dd>
+								</dl>
+								<!-- //2022-11-17 마크업 변경 -->
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<span>04.보험료 및 기타</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							<div class="data1 none">
+								<dl>
+									<dt>월 보험료</dt>
+									<dd class="data-num1"><strong>253,000</strong><span>원</span></dd>
+								</dl>
+								<dl>
+									<dt>알릴사항</dt>
+									<dd>유</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<span>05.일반사항</span>
+							<a href="javascript:void(0);" class="btn-sub3 c2">이동</a>
+							<div class="data1 none">
+								<dl>
+									<dt>증권발송유형</dt>
+									<dd>알림톡</dd>
+								</dl>
+								<dl>
+									<dt>첫회보험료</dt>
+									<dd>카드납부</dd>
+									<dd class="side">
+										<span class="CACD_000">삼성카드(1212121212121212)</span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>계속 보험료</dt>
+									<dd class="side">
+										<span class="BKCD_020">우리은행(12345678912345)</span>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+					</ol>
+
+					<!-- # 바로가기 # -->
+					<div class="btn-set1 img-set1">
+						<a href="#" class="ic1">실손정액조회</a>
+						<a href="#" class="ic2">승환여부</a>
+						<a href="#" class="ic3">가입제안서</a>
+						<a href="#" class="ic4">모바일 전자서명</a>
+					</div>
+
+					<!-- # 보험모집인 # -->
+					<div class="data1">
+						<dl>
+							<dt>모집인</dt>
+							<dd>하다미(111455)</dd>
+						</dl>
+					</div>
+					<!-- # // # -->
+				</div>
+			</div>
+        </div>
+
+		<!-- ######################### -->
+		<!-- [선택담보구성확인] DP-설계-0538 -->
+		<!-- ######################### -->
+		<div class="wrap-area1">
+			<h2 class="hide">보장(담보)설정</h2>
+
+			<div class="info-summary2">
+				<dl class="data-num1">
+					<dt>예상 보험료</dt>
+					<dd><strong>263,950</strong><span>원</span></dd>
+				</dl>
+
+				<dl class="form">
+					<dt>보험시기</dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">보험시기 선택</button>
+								<input type="text" title="보험시기 선택" value="2022.06.06" placeholder="YYYY.MM.DD" readonly>
+							</span>
+						</div>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="wrap-section line2">
+				<!-- // -->
+				<section class="none">
+					<h3 class="tit-sub1">뇌혈관질환 진단비</h3>
+
+					<!-- [CASE] 보장금액 : 충분 -->
+					<div class="mes-t1 box2">
+						<p>동일연령대비 <strong class="icon-state5 ic2">준비가 잘 되어있어요.</strong></p>
+					</div>
+					<!-- [CASE] 보장금액 : 부족 -->
+					<div class="mes-t1 box2">
+						<p>동일연령대비 <strong class="icon-state5 ic1">4,000만원이 부족해요.</strong></p>
+					</div>
+					<!-- // -->
+
+					<div class="info-data6 t2">
+						<ul>
+							<!-- // -->
+							<li>
+								<strong class="tit">딤보명</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</section>
+				<!-- // -->
+				<section class="none">
+					<h3 class="tit-sub1">뇌졸중 진단비</h3>
+					<div class="mes-t1 box2">
+						<p>동일연령대비 <strong class="icon-state5 ic1">4,000만원이 부족해요.</strong></p>
+					</div>
+					<div class="info-data6 t2">
+						<ul>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</section>
+				<!-- // -->
+				<section class="none">
+					<h3 class="tit-sub1">뇌혈관질환 진단비</h3>
+
+					<!-- [CASE] 보장금액 : 충분 -->
+					<div class="mes-t1 box2">
+						<p>동일연령대비 <strong class="icon-state5 ic2">준비가 잘 되어있어요.</strong></p>
+					</div>
+					<!-- [CASE] 보장금액 : 부족 -->
+					<div class="mes-t1 box2">
+						<p>동일연령대비 <strong class="icon-state5 ic1">4,000만원이 부족해요.</strong></p>
+					</div>
+					<!-- // -->
+
+					<div class="info-data6 t2">
+						<ul>
+							<!-- // -->
+							<li>
+								<strong class="tit">딤보명</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</section>
+				<!-- // -->
+				<section class="none">
+					<h3 class="tit-sub1">뇌졸중 진단비</h3>
+					<div class="mes-t1 box2">
+						<p>동일연령대비 <strong class="icon-state5 ic1">4,000만원이 부족해요.</strong></p>
+					</div>
+					<div class="info-data6 t2">
+						<ul>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</section>
+				<!-- // -->
+				<section>
+					<h3 class="tit-sub1">뇌졸중 진단비</h3>
+					<div class="mes-t1 box2">
+						<p>동일연령대비 <strong class="icon-state5 ic1">4,000만원이 부족해요.</strong></p>
+					</div>
+					<div class="info-data6 t2">
+						<ul>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</section>
+				<!-- // -->
+				<section class="none">
+					<h3 class="tit-sub1">뇌졸중 진단비</h3>
+					<div class="mes-t1 box2">
+						<p>동일연령대비 <strong class="icon-state5 ic1">4,000만원이 부족해요.</strong></p>
+					</div>
+					<div class="info-data6 t2">
+						<ul>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</section>
+				<!-- // -->
+
+				<section>
+					<h3 class="tit-sub1">뇌졸중 진단비</h3>
+					<div class="mes-t1 box2">
+						<p>동일연령대비 <strong class="icon-state5 ic1">4,000만원이 부족해요.</strong></p>
+					</div>
+					<div class="info-data6 t2">
+						<ul>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+							<li>
+								<strong class="tit">항암방사선약물치료(갱)</strong>
+								<dl class="data1">
+									<dt>보험기간</dt>
+									<dd>000세만기</dd>
+									<dt>납입기간</dt>
+									<dd>00년납</dd>
+								</dl>
+								<dl class="data2">
+									<dt>보장금액</dt>
+									<dd class="data-num1"><strong>00억 0,000</strong><span>만원</span></dd>
+								</dl>
+								<button type="button" class="link">담보수정</button>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</section>
+				<!-- // -->
+			</div>
+
+			<div class="area-action t1" data-sticky="bottom">
+				<button type="button" class="btn-action ic16 simple">설계 복사</button> <!-- 2022-12-06 추가 -->
+				<button type="button" class="btn-action">담보설정</button>
+				<button type="button" class="btn-action c1">다음</button>
+			</div>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+	/*
+	$(document).ready(function(){
+		$('.wrap-section.line2').find('section.none').next('section:not(.none):eq(0)').attr('style', 'padding-top: 0 !important; margin-top: 0 !important;').addClass('first');
+	});
+	*/
+
+</script>
+</body>
+</html>

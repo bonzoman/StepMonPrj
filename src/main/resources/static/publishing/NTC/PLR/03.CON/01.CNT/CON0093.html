@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[T] 계약일반 | 계약상세 | 자동차 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-14]	① 문구수정 : 기준일자 > 기준일 | 우편물수령지 > 우편물받는곳 | 배서 > 계약변경 | 취급자 > LP
+	*					② 버튼추가 : 긴급출동 > [사용이력]
+	*	[M 2022-11-21]	① 납입현황 문구추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>계약상세조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [검색영역] 기준일 -->
+		<!-- ######################### -->
+		<fieldset class="form-search1">
+			<legend>조회검색</legend>
+			<dl class="form">
+				<dt>기준일</dt> <!-- [M 2022-09-14] 문구수정 -->
+				<dd>
+					<div class="input-date1">
+						<span>
+							<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+							<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.05.20" readonly>
+						</span>
+					</div>
+				</dd>
+			</dl>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">계약일반</a></li>
+				<li><a href="javascript:void(0);">보장내역</a></li>
+				<li><a href="javascript:void(0);">특약정보</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [기본정보] -->
+		<!-- ######################### -->
+		<section class="wrap-section2">
+			<h2 class="hide">계약일반</h2>
+			<h3 class="tit-sub1">기본정보</h3>
+			<div class="info-con1">
+				<dl>
+					<dt>상품명</dt>
+					<dd>Let:way개인용자동차보험</dd>
+				</dl>
+				<dl>
+					<dt>증권번호</dt>
+					<dd>LA12345678901/정상</dd>
+				</dl>
+				<dl>
+					<dt>보험기간</dt>
+					<dd>2021.01.10~2022.01.09</dd>
+				</dl>
+				<dl>
+					<dt>차량번호</dt>
+					<dd>
+						<div>35너1234</div>
+						<div class="area-btn4"><button type="button" class="btn-sub3 c2">차명조회</button></div>
+					</dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- ######################### -->
+		<!-- [계약정보] -->
+		<!-- ######################### -->
+		<div class="area-toggle1" data-autoset="toggle">
+			<!-- # [계약사항] # -->
+			<section class="active">
+				<header class="tit">
+					<h3>계약사항</h3>
+					<button type="button" data-toggle="btn" aria-expanded="true">계약사항 상세보기</button>
+				</header>
+				<div data-toggle="content" class="info-con4">
+					<dl>
+						<dt>피보험자</dt>
+						<dd>
+							<div>피보험자명(0000.00.00)</div>
+							<div class="area-btn4">
+								<a href="javascript:void(0);" class="btn-sub3 c2">정보변경</a>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>계약자</dt>
+						<dd>
+							<div>계약자명(0000.00.00)</div>
+							<div class="area-btn4">
+								<a href="javascript:void(0);" class="btn-sub3 c2">정보변경</a>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>우편물받는곳</dt> <!-- [M 2022-09-14] 문구수정 -->
+						<dd>자택</dd>
+					</dl>
+					<dl>
+						<dt>우편물주소</dt>
+						<dd>
+							<div>(04406)</div>
+							<div>서울특별시 중구 소월로 3 롯데손해보험빌딩</div>
+							<div class="area-btn4">
+								<a href="javascript:void(0);" class="btn-sub3 c2">우편발송이력</a>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>연락처</dt>
+						<dd>010-1234-1234</dd>
+					</dl>
+					<dl>
+						<dt>계약변경횟수</dt> <!-- [M 2022-09-14] 문구수정 -->
+						<dd>
+							<div>최종회차 0003</div>
+							<div>계약변경회차 0003</div> <!-- [M 2022-09-14] 문구수정 -->
+							<div class="area-btn4">
+								<a href="javascript:void(0);" class="btn-sub3 c2">계약변경이력조회</a> <!-- [M 2022-09-14] 문구수정 -->
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>납입현황</dt>
+						<dd>
+							<div>1회 중 1회/일시납/책임분납</div> <!-- 2022-11-21 텍스트 추가 -->
+							<div class="area-btn4">
+								<a href="javascript:void(0);" class="btn-sub3 c2">분납내역조회</a>
+								<a href="javascript:void(0);" class="btn-sub3 c2">자동이체이력</a>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>서명</dt>
+						<dd>자필서명</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- # [주요사항] # -->
+			<section class="active">
+				<header class="tit">
+					<h3>주요사항</h3>
+					<button type="button" data-toggle="btn" aria-expanded="true">주요사항 상세보기</button>
+				</header>
+				<div data-toggle="content" class="info-con4">
+					<dl>
+						<dt>차명(연식)</dt>
+						<dd>GT(20B)</dd>
+					</dl>
+					<dl>
+						<dt>차량합계<br>(부속품)</dt>
+						<dd>1600만원(50만원)</dd>
+					</dl>
+					<dl>
+						<dt>용도</dt>
+						<dd>출퇴근 및 가정용</dd>
+					</dl>
+					<dl>
+						<dt>사고유무</dt>
+						<dd>
+							<div>있음</div>
+							<div class="area-btn4">
+								<button type="button" class="btn-sub3 c2">사고이력조회</button>
+								<button type="button" class="btn-sub3 c2" disabled>사고이력조회</button>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>질권여부</dt>
+						<dd>
+							<div>-</div>
+							<div class="area-btn4">
+								<button type="button" class="btn-sub3 c2">질권설정조회</button>
+								<button type="button" class="btn-sub3 c2" disabled>질권설정조회</button>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>채권여부</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>긴급출동</dt>
+						<dd>
+							<div>전체 5회/잔여 4회</div> <!-- [M 2022-09-14] 버튼추가로 인해 div 추가 -->
+							<div class="area-btn4"><button type="button" class="btn-sub3 c2">사용이력</button></div> <!-- [M 2022-09-14] 버튼추가 -->
+						</dd>
+					</dl>
+					<dl>
+						<dt>주행거리정보</dt>
+						<dd>
+							<div>정산완료</div>
+							<div class="area-btn4">
+								<a href="javascript:void(0);" class="btn-sub3 c2">주행거리정보</a>
+								<a href="javascript:void(0);" class="btn-sub3 c2">예상환급계산</a>
+							</div>
+						</dd>
+					</dl>
+					<dl class="data1">
+						<dt>총 보험료</dt>
+						<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- # [LP정보] # -->
+			<section class="active">
+				<header class="tit">
+					<h3>LP정보</h3> <!-- [M 2022-09-14] 문구수정 -->
+					<button type="button" data-toggle="btn" aria-expanded="true">LP정보 상세보기</button> <!-- [M 2022-09-14] 문구수정 -->
+				</header>
+				<div data-toggle="content" class="info-con1">
+					<dl>
+						<dt>지역단</dt>
+						<dd>전속지원팀(1588-3344)</dd>
+					</dl>
+					<dl>
+						<dt>취급점포</dt>
+						<dd>전남사업단(061-900-2433)</dd>
+					</dl>
+					<dl>
+						<dt>출장소</dt>
+						<dd>장흥출장소(061-863-5775)</dd>
+					</dl>
+					<dl>
+						<dt>LP</dt><!-- [M 2022-09-14] 문구수정 -->
+						<dd>장흥출장소(061-863-5775)</dd>
+					</dl>
+					<dl>
+						<dt>사용인</dt>
+						<dd>-</dd>
+					</dl>
+				</div>
+			</section>
+			<!-- # // # -->
+		</div>
+
+		<!-- [이동버튼] -->
+		<div class="area-btn1">
+			<a href="javascript:void(0);" class="btn-com1">계약메모관리</a>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1" data-sticky="bottom">
+			<a href="javascript:void(0);" class="btn-action ic10 simple">고객안내</a>
+			<a href="javascript:void(0);" class="btn-action c1">갱신설계</a>
+			<a href="javascript:void(0);" class="btn-action c1">계약변경</a>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

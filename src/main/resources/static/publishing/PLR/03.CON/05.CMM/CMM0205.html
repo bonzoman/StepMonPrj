@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>공지/일반 | 수정	| 사업단 | 렛:크루 | 커뮤니티</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-23]	① 분류 : 투표 항목 삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>수정</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [STEP1] 내용입력 -->
+		<!-- ######################### -->
+		<section class="wrap-section">
+			<!-- ### [상단영역] 안내문구 ### -->
+			<h2 class="tit-section">사업단에 등록하신 내용을<br>수정해 주세요.</h2>
+
+			<!-- ### [정보입력] ### -->
+			<fieldset class="form-wrap1">
+				<legend>등록 내용 입력</legend>
+
+				<!-- # 분류 # -->
+				<dl class="form">
+					<dt>분류<em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- [M 2022-07-20] B/S로 변경 -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택해주세요</span>
+								<span data-select="text"></span>
+							</button>
+							<div class="list">
+								<div data-label="분류">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion0" value="0"><span>공지</span></label>
+										<label><input type="radio" name="selectOpeion0" value="1"><span>일반</span></label>
+										<!-- <label><input type="radio" name="selectOpeion0" value="2"><span>투표</span></label> [M 2022-08-23] 삭제 -->
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 제목 : [CASE1] 일반 # -->
+				<dl class="form">
+					<dt>제목<em class="icon-required2">필수</em></dt>
+					<dd><input type="text" class="text" title="제목" value="이달의 사업단 우수설계사님을 소개합니다." placeholder="제목을 입력해주세요."></dd>
+				</dl>
+
+				<!-- # 제목 : [CASE2] 공지/투표 # -->
+				<dl class="form mes-t1">
+					<dt>제목<em class="icon-required2">필수</em></dt>
+					<dd>
+						<input type="text" class="text" title="제목" value="이달의 사업단 우수설계사님을 소개합니다." placeholder="제목을 입력해주세요.">
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">상단고정날짜선택</button>
+								<input type="text" title="상단고정날짜선택" placeholder="날짜 선택" readonly>
+							</span>
+						</div>
+					</dd>
+					<dd class="side">
+						<div class="label-check1">
+							<label>
+								<input type="checkbox">
+								<span>페이지 상단에 고정</span>
+							</label>
+						</div>
+					</dd>
+					<dd class="mes">선택한 날짜까지 페이지 상단에 고정될 예정입니다.</dd>
+				</dl>
+
+				<!-- # 내용 # -->
+				<dl class="form">
+					<dt>내용 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="textarea">
+							<textarea cols="50" rows="3" title="등록내용" placeholder="내용을 입력해주세요.">현재 바른사업단 나주 출장소 통신 장애로 인해 전화 및 전산 업무가 어렵습니다. 급한 용무 있으신 분들은 아래 비상 연락처로 연락 부탁 드리겠습니다.</textarea>
+							<span class="util2"><strong>24</strong>/4,000자</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- [M 2022-05-12] 마크업 변경 -->
+				<!-- # 이미지 첨부 # -->
+				<dl class="form">
+					<dt>이미지 첨부 <a href="#uiTOOLTIPINFO2" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt>  <!-- [M 2022-05-31] (선택) 텍스트 삭제 -->
+					<!-- [D] 등록후 노출 -->
+					<dd class="data-file1">
+						<ul>
+							<li>
+								<span class="img"><img src="../../resource/img/temp/@img_banner1.png" alt=""></span>
+								<span>파일명</span>
+								<span class="sub">00KB</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+							<li>
+								<span class="img"><img src="../../resource/img/temp/@img_banner2.png" alt=""></span>
+								<span>유용한 정보활용방법 캡쳐</span>
+								<span class="sub">56KB</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+						</ul>
+					</dd>
+					<!-- // -->
+					<dd class="area-btn1">
+						<a href="javascript:void(0);" class="btn-com1 ic3">이미지 첨부</a>
+					</dd>
+				</dl>
+
+				<!-- [M 2022-05-12] 마크업 변경 -->
+				<!-- # 관련 컨텐츠 첨부 # -->
+				<dl class="form">
+					<dt>관련 컨텐츠 첨부</dt>   <!-- [M 2022-05-31] (선택) 텍스트 삭제 -->
+					<!-- [D] 등록후 노출 -->
+					<dd class="data-file1">
+						<ul>
+							<li>
+								<span class="img"><img src="../../resource/img/temp/@img_banner1.png" alt=""></span>
+								<span>[교육] 뇌혈관질환 진단비 분석</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+							<li>
+								<span class="img"><img src="../../resource/img/temp/@img_banner2.png" alt=""></span>
+								<span>[활동] 지금 보험시장은 진단비 눈치싸움이 눈치싸움이</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+						</ul>
+					</dd>
+					<!-- // -->
+					<dd class="area-btn1">
+						<a href="javascript:void(0);" class="btn-com1 ic3">관련 컨텐츠 첨부</a>
+					</dd>
+				</dl>
+				<!-- // -->
+			</fieldset>
+			<!-- ### // ### -->
+		</section>
+
+		<!-- ######################### -->
+		<!-- [STEP2] 게시 설정 -->
+		<!-- ######################### -->
+		<section class="wrap-section">
+			<!-- ### [상단영역] 안내문구 ### -->
+			<h2 class="tit-section">예약게시 설정 및 게시 기한 설정을<br />희망하시면 설정해 주세요.</h2>
+
+			<!-- ### [정보입력] ### -->
+			<fieldset class="form-wrap1">
+				<legend>예약게시 설정 입력</legend>
+
+				<!-- # 예약게시 # -->
+				<dl class="form">
+					<dt class="label-check1">
+						<label>
+							<input type="checkbox" checked>
+							<span>예약게시</span>
+						</label>
+					</dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">예약게시 날짜 선택</button>
+								<input type="text" title="예약게시 날짜 선택" placeholder="날짜 선택" value="2022.03.26" readonly>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 게시기한 # -->
+				<dl class="form">
+					<dt class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span>게시기한</span>
+						</label>
+					</dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">게시기한 날짜 선택</button>
+								<input type="text" title="게시기한 날짜 선택" placeholder="날짜 선택" value="2022.03.26" readonly>
+							</span>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+			</fieldset>
+		</section>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">수정</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- [M 2022-05-12] 툴팁 영역 추가 -->
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 이미지 첨부 안내 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">이미지 첨부 안내사항</dt>
+		<dd>
+			<ul class="txt-bul3">
+				<li>첨부파일의 사이즈는 <strong>000px X 000px</strong> 사이즈를 준수해주세요.</li>
+				<li>첨부파일은 <strong>png, jpg, jpeg, bmp, gif</strong> 파일만 등록이 가능합니다.</li>
+				<li>첨부파일 용량은 <strong>5M</strong>를 넘을 수 없습니다.</li>
+				<li>첨부파일을 등록하면, 퀴즈 내용 하단에 자동으로 노출됩니다.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">이미지 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 지급내역상세 | [T] 지급내역 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>지급내역상세</h1>
+			<button type="button" data-btn="pop-close">지급내역상세 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 계약정보 -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+				<div class="info">
+					<dl>
+						<dt>증권번호</dt>
+						<dd>LA123456789</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [변경항목] -->
+			<!-- ######################### -->
+			<div class="wrap-section">
+				<h3 class="tit-sub2"><i class="icon-state2 ic3">정상</i>계속보험료취소</h3>
+				<div class="info-con2">
+					<ul>
+						<li>
+							<div>지급금액</div>
+							<div>000,000,000원</div>
+						</li>
+						<li>
+							<div>접수일자</div>
+							<div>2022.03.20</div>
+						</li>
+						<li>
+							<div>수령방법</div>
+							<div>즉시이체</div>
+						</li>
+						<li>
+							<div>실지급일</div>
+							<div>2022.04.13</div>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<div>은행명</div>
+							<div>신한(통합)[088]</div>
+						</li>
+						<li>
+							<div>예금주</div>
+							<div>김화림</div>
+						</li>
+						<li>
+							<div>계좌번호</div>
+							<div>10022031037289</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 2022-12-01 없음 케이스 추가 -->
+				<div class="mes-result1">
+					<p>
+						<strong>지급내역이 없어요.</strong>
+					</p>
+				</div>
+				<!-- //2022-12-01 없음 케이스 추가 -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

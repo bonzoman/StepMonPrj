@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>모의고사 관리 | 모의고사 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">모의고사 관리</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<dl class="form">
+						<dt>그룹명 검색</dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:300px;">
+									<option>전체</option>
+									<option>2022년</option>
+								</select>
+								<button type="button" class="btn-sub1 c1">검색</button><!--[M:2022-07-29 수정]-->
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</fieldset>
+
+			<div class="tit-sub2">
+				<h3 class="">2022년 <span>전체 4</span></h3>
+				<!--[M:2022-07-29 수정]-->
+			</div>
+
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<col style="width:60px;">
+						<col style="width:100px;">
+						<col style="width:120px;">
+						<col style="width:100px;">
+						<col style="width:60px;">
+						<col style="width:100px;">
+						<col style="width:60px;">
+						<col style="width:100px;">
+						<col style="width:100px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"><span class="sort">번호</span></th>
+							<th scope="col"><span class="sort asc">등록 일시</span></th>
+							<th scope="col"><span class="sort des">최종 수정 일시</span></th>
+							<th scope="col">종류</th>
+							<th scope="col">형</th>
+							<th scope="col">등록자</th>
+							<th scope="col">소속</th>
+							<th scope="col">작성완료문항/<br>총 문항</th>
+							<th scope="col">작성완료 여부</th>
+							<th scope="col">노출 여부</th>
+							<th scope="col">평균점수(점)<br>[손보/3보]</th>
+							<th scope="col">합격률(%)<br>[손보/3보]</th>
+							<th scope="col"><span class="sort">응시수</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<label class="label-check">
+									<input type="radio" name="ddd1" checked="checked">
+									<span>1</span>
+								</label>
+							</td>
+							<td>2022.02.22 <br> 00:00</td>
+							<td>2022.02.22 <br> 00:00</td>
+							<td>
+								<select class="selectbox" name="" id="" style="width:100%;">
+									<option value="">기출문제</option>
+									<option value="">모의고사</option>
+								</select>
+							</td>
+							<td>4형</td>
+							<td>교육담당자</td>
+							<td>본사</td>
+							<td>10/50</td>
+							<td>미완료</td>
+							<td>
+								<select class="selectbox" name="" id="" style="width:100%;">
+									<option value="">비노출</option>
+									<option value="">노출</option>
+								</select>
+							</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="label-check">
+									<input type="radio" name="ddd1">
+									<span>2</span>
+								</label>
+							</td>
+							<td>2022.02.22 <br> 00:00</td>
+							<td>2022.02.22 <br> 00:00</td>
+							<td>
+								<select class="selectbox" name="" id="" style="width:100%;">
+									<option value="">기출문제</option>
+									<option value="" selected>모의고사</option>
+								</select>
+							</td>
+							<td>3형</td>
+							<td>교육담당자</td>
+							<td>본사</td>
+							<td>10/50</td>
+							<td>미완료</td>
+							<td>
+								<select class="selectbox" name="" id="" style="width:100%;">
+									<option value="">비노출</option>
+									<option value="" selected>노출</option>
+								</select>
+							</td>
+							<td>60/50</td>
+							<td>60/50</td>
+							<td>21,000</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="label-check">
+									<input type="radio" name="ddd1">
+									<span>3</span>
+								</label>
+							</td>
+							<td>2022.02.22 <br> 00:00</td>
+							<td>2022.02.22 <br> 00:00</td>
+							<td>
+								<select class="selectbox" name="" id="" style="width:100%;">
+									<option value="">기출문제</option>
+									<option value=""selected>모의고사</option>
+								</select>
+							</td>
+							<td>2형</td>
+							<td>교육담당자</td>
+							<td>본사</td>
+							<td>10/50</td>
+							<td>미완료</td>
+							<td>
+								<select class="selectbox" name="" id="" style="width:100%;">
+									<option value="">비노출</option>
+									<option value="">노출</option>
+								</select>
+							</td>
+							<td>60/50</td>
+							<td>60/50</td>
+							<td>2,000,000</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="label-check">
+									<input type="radio" name="ddd1">
+									<span>4</span>
+								</label>
+							</td>
+							<td>2022.02.22 <br> 00:00</td>
+							<td>2022.02.22 <br> 00:00</td>
+							<td>
+								<select class="selectbox" name="" id="" style="width:100%;">
+									<option value="">기출문제</option>
+									<option value="">모의고사</option>
+								</select>
+							</td>
+							<td>1형</td>
+							<td>교육담당자</td>
+							<td>본사</td>
+							<td>10/50</td>
+							<td>미완료</td>
+							<td>
+								<select class="selectbox" name="" id="" style="width:100%;">
+									<option value="">비노출</option>
+									<option value="">노출</option>
+								</select>
+							</td>
+							<td>60/50</td>
+							<td>60/50</td>
+							<td>2,000</td>
+						</tr>
+						<tr>
+							<td colspan="13">
+								<div class="nodata">
+									등록된 모의고사가 없습니다.
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="paging">
+				<div class="btns2">
+					<button type="button" class="btn-action c3">형 추가</button><!--[M:2022-07-29 수정]-->
+					<button type="button" class="btn-action c3" disabled>형 복사</button>
+					<button type="button" class="btn-action c3" disabled>문항 별 통계</button>
+				</div>
+				<div class="btns1">	<!--[M:2022-07-29 수정]-->
+					<button type="button" class="btn-action c2">변경사항 저장</button>
+				</div>
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+			<ul class="list-dot1 t1"><!--[M:2022-07-29 수정]-->
+				<li><strong>[형 복사]</strong> 버튼 클릭 시, 선택된 형이 다음 형으로 등록됩니다.</li>
+				<li><strong>[문항 별 통계]</strong> 버튼 클릭 시, 선택한 형의 문항 별 정답률을 확인할 수 있습니다.</li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+</body>
+</html>

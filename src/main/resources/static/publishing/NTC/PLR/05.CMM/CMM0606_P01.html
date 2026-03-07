@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 필터 | 컨텐츠 리스트 | 컨텐츠랩</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-15]	① 조회구분 발송인 삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>필터</h1>
+			<button type="button" data-btn="pop-close">필터 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- // -->
+			<fieldset class="form-wrap1">
+				<legend>필터 입력</legend>
+
+				<!-- # [조회기간] # -->
+				<dl class="form">
+					<dt>조회기간</dt>
+					<dd>
+						<!-- [날짜선택] -->
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">시작날짜 선택</button>
+								<input type="text" title="시작날짜 선택" value="2022.03.30" placeholder="YYYY.MM.DD" readonly>
+							</span>
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">종료날짜 선택</button>
+								<input type="text" title="종료날짜 선택" value="2022.06.30" placeholder="YYYY.MM.DD" readonly>
+							</span>
+						</div>
+						<!-- [기간선택] -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span >1개월</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1" checked>
+								<span >3개월</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span >6개월</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span >9개월</span>
+							</label>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # [조회구분] # -->
+				<dl class="form">
+					<dt>조회구분</dt>
+					<dd>
+						<!-- // -->
+						<div class="label-btn1">
+							<label><input type="radio" name="selectOpeion1" value="option1_1" checked><span>수신인</span></label>
+							<!-- <label><input type="radio" name="selectOpeion1" value="option1_2"><span>발송인</span></label> --><!-- 사업단장, 지점장만 노출 --><!-- [M 2022-11-15] 삭제 -->
+							<label><input type="radio" name="selectOpeion1" value="option1_3"><span>제목</span></label>
+						</div>
+						<!-- // -->
+						<input type="text" class="text" placeholder="입력해주세요.">
+						<!-- // -->
+					</dd>
+				</dl>
+				<!-- # // # -->
+			</fieldset>
+
+			<!-- // -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">초기화</button>
+				<button type="button" class="btn-action c1">적용</button>
+			</div>
+			<!-- // -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

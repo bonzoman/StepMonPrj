@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>STEP8 | 04.기타동의 | 스마트폰청약 | 표준설계 | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>스마트폰청약</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [진행상태] STEP 04 -->
+		<!-- ######################### -->
+		<div class="info-step1" data-autoset="toggle" data-sticky="top">
+			<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+			<ol data-toggle="content">
+				<li><button type="button">01. 보험계약자 확인</button></li>
+				<li><button type="button">02. 청약서류 확인</button></li>
+				<li><button type="button">03. 내용확인 및 동의</button></li>
+				<li aria-current="step"><button type="button">04. 기타동의</button></li>
+				<li><button type="button" disabled>05. 결제수단</button></li>
+				<li><button type="button" disabled>06. 전자서명</button></li>
+			</ol>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [상단영역] 안내문구 -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<div class="info-step3">
+				<p><strong>9</strong>개의 내용 중 <strong>8</strong>번째 내용</p>
+			</div>
+			<p>기타 정보 동의사항에 대해 <br>선택해주세요.</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [동의영역] -->
+		<!-- ######################### -->
+		<fieldset class="form-agree2">
+			<legend>전체항목 필수동의</legend>
+			<!-- // -->
+			<div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<span><strong>화재배상책임보험 상품설명에 대한 다중이용업 계약자 확인</strong></span>
+				</label>
+			</div>
+			<!-- //	-->
+			<div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<span>화재배상책임보험은 단독으로 가입할 수 있으며 화재배상책임 이외의 다른 보장은 계약자가 자유롭게 선택할 수 있다는 내용을 설명 받으셨습니까?</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>화재배상책임보험은 장기손해보험상품이 아닌 일반손해 보험상으로도 가입할 수 있다는 내용을 설명 받으셨습니까?</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>계약자의 선택으로 화재배상책임 이외의 보장을 추가할 경우에는 보장에 대한 추가적인 보험료 부담이 발생한다는 내용을 설명 받으셨습니까?</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>장기손해보험상품을 선택할 경우 일반손해보험 상품과의 보험기간, 보장내용, 보험료 등 중요내용에서 차이가 있다는 내용을 비교, 설명 받으셨습니까?</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>일반손해보험 및 장기손해보험 단독형 상품의 가입설계서를 통해 각 상품의 보험료에 대해 설명 받으셨습니까?</span>
+				</label>
+			</div>
+			<!-- //	-->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [정보입력] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap3">
+			<legend>중도부가서비스 특별약관에 대한 계약자 확인 정보 입력</legend>
+			<div class="form t1">
+				<span>본인(계약자)</span>
+				<div class="text2" data-label="하다미"> <!-- [D] data-label="덧쓰기 텍스트" -->
+					<input type="text" required>
+				</div><span>은(는) 화재배상책임보험 가입시 안내사항에 대하여 모집인</span>
+				<div class="text2" data-label="공지철"> <!-- [D] data-label="덧쓰기 텍스트" -->
+					<input type="text" required>
+				</div><span>(으)로 부터 상기와 같이 충분히 비교설명을 듣고 동의 계약을 청약합니다.</span>
+			</div>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action ">이전</button>
+			<button type="button" class="btn-action c1" disabled>다음</button>
+			<!-- <button type="button" class="btn-action c1">다음</button> -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

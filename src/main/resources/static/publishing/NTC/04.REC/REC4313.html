@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>등록신청 및 고지사항 | 위촉계약서 작성 | 전자위촉</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-25]	① 텍스트 변경 점포명 > 소속사업단
+	*	[M 2022-11-14]	① 문구 수정
+						② 교차케이스 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- 2022-12-23 : 카톡브라우저 대응 수정 -->
+<main id="wrapper" style="overflow-y:auto;position:fixed;left:0;top:0;width:100%;height:100%;z-index:50;">
+<!-- // 2022-12-23 : 카톡브라우저 대응 수정 -->
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>전자위촉</h1>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1">
+		<!-- ######################### -->
+		<!-- [진행상태] STEP 01 -->
+		<!-- ######################### -->
+		<div class="info-step1" data-autoset="toggle" data-sticky="top">
+			<button type="button" data-toggle="btn" aria-expanded="false" onclick="statusCheck()">진행상태 상세보기</button>
+			<ol data-toggle="content">
+				<li aria-current="step"><button type="button">01. 등록신청 및 고지사항</button></li>
+				<li><button type="button" disabled>02. 위촉계약서</button></li>
+				<li><button type="button" disabled>03. 동의서 및 준수사항</button></li>
+				<li><button type="button" disabled>04. 전자서명</button></li>
+				<li><button type="button" disabled>05. 위촉서류 확인</button></li>
+				<li><button type="button" disabled>06. 급여계좌 등록</button></li>
+			</ol>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [상단문구] -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>보험설계사 등록 신청서 및<br>고지사항을 확인해주세요.</p><!-- [M 2022-11-14] 문구 수정 -->
+		</div>
+
+		<!-- # 구분선택 # -->
+		<div class="label-check1 col2">
+			<button type="button" class="checked">손해보험</button>
+			<button type="button" class="checked">제3보험</button>
+		</div>
+
+		<!-- # 기존정보 # -->
+		<div class="info-con1 line">
+			<dl>
+				<dt>회사명</dt>
+				<dd>롯데손해보험</dd>
+			</dl>
+			<dl>
+				<dt>소속사업단</dt> <!-- 2022-10-25 텍스트 변경 -->
+				<dd>강남사업단</dd>
+			</dl>
+			<dl>
+				<dt>주민등록번호</dt>
+				<dd><span data-masking="true">900101 - *******</span></dd>
+			</dl>
+			<dl>
+				<dt>주소</dt>
+				<dd>서울시 강남구 테헤란로 1 롯데손해보험빌딩 5F</dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [정보입력] -->
+		<!-- ######################### -->
+		<div class="form-wrap1">
+			<!-- [M 2022-11-14] 교차케이스 수정 -->
+			<div class="info-con1">
+				<dl>
+					<dt>생명보험사명</dt>
+					<dd>롯데손해보험</dd>
+				</dl>
+				<dl>
+					<dt>등록조건</dt>
+					<dd>교차</dd>
+				</dl>
+			</div>
+			<!-- //[M 2022-11-14] 교차케이스 수정 -->
+
+			<!-- // -->
+			<fieldset class="line4"><!-- [M 2022-11-14] 교차케이스 수정 :  class 추가 -->
+				<legend>보험설계사 등록신청인 고지사항</legend>
+
+				<div class="label-check1 box">
+					<button type="button"><span>보험설계사 등록신청인 고지사항</span></button>
+				</div>
+			</fieldset>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1" data-sticky="bottom">
+			<button type="button" class="btn-action ">이전</button>
+			<button type="button" class="btn-action c1">다음</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+	<script>
+		function statusCheck(){
+			let parentElem = event.target.parentNode;
+			let scrollArea = document.querySelectorAll('body , #wrapper');
+			Object.values(scrollArea).map((obj) => {
+				if (parentElem.classList.contains('active')) {
+					obj.style.overflowY = "auto";
+				}else{
+					obj.style.overflowY = "hidden";
+				}
+			});
+
+			// let parentElem = $(event.currentTarget).parent('.info-step1');
+			// if(parentElem.hasClass('active')){
+			// 	$('body , #wrapper').css({'overflow-y':'auto'});
+			// }else{
+			// 	$('body , #wrapper').css({'overflow-y':'hidden'});
+			// }
+		}
+	</script>
+</main>
+</body>
+</html>

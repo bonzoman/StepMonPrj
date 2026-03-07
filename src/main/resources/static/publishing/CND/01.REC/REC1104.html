@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>소득 시뮬레이션 | 도입</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="income">
+		<div class="income-simulation">
+			<div class="title">
+				<h1>소득 시뮬레이션</h1>
+				<p>
+					내 보험계약으로<br>
+					컨설턴트는<br>
+					<strong>얼마나</strong> 벌었을까?
+				</p>
+			</div>
+			<!-- 계산하기 버튼 눌렀을때 active 추가 -->
+			<!-- <div class="decoration_img active"> -->
+			<div class="decoration_img">
+				<p><img src="../../resource/img/com/solution/solution_bg_01.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_02.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_03.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_04.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_05.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_06.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_07.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_08.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_09.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_10.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_11.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_12.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_13.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_14.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_15.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_16.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_17.png" alt=""></p>
+				<p><img src="../../resource/img/com/solution/solution_bg_18.png" alt=""></p>
+			</div>
+			<!-- 계산하기 버튼 눌렀을때 active 추가 -->
+			<!-- <div class="text active"> -->
+			<div class="text">
+				<input type="text" value="123,000" disabled>
+				<span class="util">원</span>
+				<p>계산중</p>
+			</div>
+		</div>
+
+		<!-- // -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">계산하기</button>
+		</div>
+		<!-- // -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+	// decoration_img 랜덤배치
+	$(function(){
+		var items = $(".decoration_img p");
+		for(var i = 0; i < items.length; i++){
+			var idx = Math.floor(Math.random() * items.length -1) + 1;
+			var idx2 = Math.floor(Math.random() * items.length -1) + 1;
+			items.eq(idx).before(items.eq(idx2));
+		};
+	});
+	$('.btn-action').click(function(){
+		$('.income-simulation > div:not(.title)').addClass('active')
+	});
+</script>
+</body>
+</html>

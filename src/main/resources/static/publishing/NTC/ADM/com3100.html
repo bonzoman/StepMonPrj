@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>푸시 관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220418">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-19]	1. 발송 실패, 발송률 삭제
+	*	[M 2022-11-28]	1. 탭을 플롯폼구분으로 변경, 텝페이지 합침 (전체수정)
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">푸시 관리</h2><!-- [M 2022-11-28] 문구 수정 -->
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<!-- [M 2022-11-28] 수정 -->
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<dl class="form w1">
+						<dt>플랫폼구분</dt>
+						<dd>
+							<select name="" id="" class="selectbox">
+								<option selected hidden value="">플랫폼 구분 선택</option>
+								<option value="">도입APP</option>
+								<option value="">설계사APP</option>
+							</select>
+						</dd>
+					</dl>
+					<dl class="form w2">
+						<dt>업무구분</dt>
+						<dd>
+							<div class="form-row">
+								<select name="" id="" class="selectbox" style="width:150px;">
+									<option selected hidden value="">1차 업무 구분 선택</option>
+									<option  value="">전체</option>
+								</select>
+								<select name="" id="" class="selectbox" style="width:150px;">
+									<option selected hidden value="">2차 업무 구분 선택</option>
+									<option  value="">전체</option>
+								</select>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+			<div class="tit-sub2">
+				<h3 class="">전체 1200개</h3>
+				<div class="sub">
+					<button type="button" class="btn-sub1 c3">추가</button>
+				</div>
+			</div>
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<col style="width:60px;">
+						<col style="width:80px;">
+						<col style="width:180px;">
+						<col style="width:200px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"><span class="sort">번호</span></th>
+							<th scope="col">플랫폼구분</th>
+							<th scope="col">업무구분</th>
+							<th scope="col">문구</th>
+							<th scope="col">발송시점</th>
+							<th scope="col">전송시스템</th>
+							<th scope="col">사용여부</th>
+							<th scope="col">등록자</th>
+							<th scope="col">등록일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>도입APP</td>
+							<td>{1차 업무 구분} &gt; {2차 업무 구분}</td>
+							<td>안녕하세요 감사해요</td>
+							<td>즉시</td>
+							<td>-</td>
+							<td>Y</td>
+							<td>김크림(****45)</td>
+							<td>2022.02.22</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>설계사APP</td>
+							<td>{1차 업무 구분} &gt; {2차 업무 구분}</td>
+							<td>안녕하세요 감사해요</td>
+							<td>-</td>
+							<td>-</td>
+							<td>Y</td>
+							<td>김크림(****45)</td>
+							<td>2022.02.22</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="paging">
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+			<!-- //[M 2022-11-28] 수정 -->
+		</div>
+	</div>
+</div>
+<script>
+</script>
+</body>
+</html>

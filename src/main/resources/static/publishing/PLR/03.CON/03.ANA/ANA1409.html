@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 컨설팅제안_리포트발송 | 보장분석 결과 | 고객목록 | 보장분석</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-18]	1. 오즈뷰어 영역 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<!-- 2022-11-18 오즈뷰어 영역 변경 -->
+<div class="popup-wrapper view t1"> <!-- 2022-11-24 t1 클래스 추가 -->
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<button type="button" data-btn="pop-close">팝업 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			뷰어 영역
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- //2022-11-18 오즈뷰어 영역 변경 -->
+<!-- ################################################### -->
+<script>
+//<!--
+	/* ****************************************
+	* [샘플] 슬라이드 체인징 이벤트
+	* uiFunctionName() : 함수명 임시 적용
+	* slide 가 Change 될때마다 함수 호출
+	* data-title="확인함"으로 문서 확인함 표시
+	* 마지막 문서를 확인 했을때 다음 버튼 활성화
+	**************************************** */
+	function uiFunctionName(e){
+		var _slider = e.slides[e.activeIndex]; //현재 슬라이드
+		var _last_slider = e.slides[e.slides.length-1]; //마지막 슬라이드
+
+		//현재 문서를 봤음을 표시
+		$(_slider).attr('data-title','확인함');
+
+		//마지막 문서까지 봤을 때 다음버튼 활성화
+		if($(_last_slider).attr('data-title')){
+			$('.btn-action.c1').removeAttr('disabled');
+		};
+	};
+	/* *************************************** */
+//-->
+</script>
+</body>
+</html>

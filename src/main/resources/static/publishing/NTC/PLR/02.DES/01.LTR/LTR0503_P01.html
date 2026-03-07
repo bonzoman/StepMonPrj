@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 실제소유자 선택 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>실제 소유자 선택</h1>
+			<button type="button" data-btn="pop-close">실제 소유자 선택 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- # [실제 소유자 선택] # -->
+			<div class="list-con3">
+				<ul>
+					<li>
+						<label>
+							<input type="radio" name="form-radio" checked>
+							<strong><i>1.</i>법인/단체의 25% 이상의 지분을 소유한 사람 중 최대 지분 소유자 1인</strong>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio" checked>
+							<strong><i>2.</i>1번 문항 대상이 아닌 경우</strong>
+						</label>
+						<ul class="txt-mark1">
+							<li><i>①</i>대표자 &middot; 임원 &middot; 업무집행사원의 과반수를 선임한 주주</li>
+							<li><i>②</i>최대 지분 소유자 1인</li>
+							<li><i>③</i>위 ①, ② 외에 법인/단체를 사실상 지배하는 사람</li>
+						</ul>
+						<div class="txt-bul3">단, 최대지분 소유자가 법인 또는 단체인 경우 4번 문항으로 바로 가지 않고 최종적으로 지배하는 사람을 추적하는 사람을 선택 할 수 있음.</div>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="form-radio">
+							<strong><i>3.</i>2번 문항을 확인 할 수 없는 경우 법인 또는 단체의 대표자</strong>
+						</label>
+					</li>
+				</ul>
+			</div>
+
+			<!-- # [하단영역] # -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- # // # -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

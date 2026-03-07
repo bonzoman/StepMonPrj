@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[T] 활동 | 컨텐츠 리스트 | 컨텐츠랩 | 커뮤니티</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-15]	① '발송'을 '공유'로 수정
+						② '최신순'을 '공유순'로 수정
+						③ 공유정보 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>컨텐츠랩</h1>
+		<button type="button" class="btn-t1 icon-com1 ic2">자료검색</button> <!-- [M 2022-07-14] 버튼명 변경 -->
+		<a href="#asideTotalMenu" class="icon-menu" aria-haspopup="dialog">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [M 2022-07-14] 메뉴영역 추가 -->
+		<!-- ######################### -->
+		<nav class="area-nav" data-autoset="toggle">
+			<button type="button" data-toggle="btn" aria-expanded="false">메뉴더보기</button>
+			<div data-toggle="content">
+				<strong class="tit">컨텐츠랩</strong>
+				<ul>
+					<li class="active"><button type="button">컨텐츠랩</button></li> <!-- [D] 현재페이지 class="active" 추가 -->
+					<li><button type="button">노하우공유</button></li>
+					<li><button type="button">공동청약</button></li>
+					<li><button type="button">일정관리</button></li>
+				</ul>
+				<div class="sub"><button type="button" class="ic1">렛:워크란?</button></div>
+			</div>
+		</nav>
+
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li><a href="javascript:void(0);">교육</a></li>
+				<li><a href="javascript:void(0);">테마</a></li> <!-- [M 2022-07-14] 테마 추가 -->
+				<li class="active"><a href="javascript:void(0);" aria-current="page">활동</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [소팅영역] 컨텐츠주제 -->
+		<!-- ######################### -->
+		<div class="label-btn2" data-scroll="form">
+			<label>
+				<input type="radio" name="uiFormRadio1" checked>
+				<span>전체</span>
+			</label>
+			<label>
+				<input type="radio" name="uiFormRadio1">
+				<span>상담자료</span>
+			</label>
+			<label>
+				<input type="radio" name="uiFormRadio1">
+				<span>친숙자료</span>
+			</label>
+			<label>
+				<input type="radio" name="uiFormRadio1">
+				<span>리쿠르팅</span>
+			</label>
+			<label>
+				<input type="radio" name="uiFormRadio1">
+				<span>Cheer-up(LP독려)</span>
+			</label>
+			<label>
+				<input type="radio" name="uiFormRadio1">
+				<span>기타</span>
+			</label>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [안내문구] -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>업무에 도움이 되는<br>유용한 정보를 확인해 보세요!</p>
+			<div class="area-btn4">
+				<a href="javascript:void(0);" class="btn-sub3 c2">컨텐츠순위</a>
+				<a href="javascript:void(0);" class="btn-sub3 c2">컨텐츠공유내역</a><!-- [M 2022-11-15] 공유로 수정 -->
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [목록] -->
+		<!-- ######################### -->
+		<!-- [총 갯수 / 정렬 / 필터] -->
+		<div class="area-info1 line">
+			<p>총 <strong>12,340건</strong></p>
+			<div class="side">
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">정렬</span>
+						<span data-select="text" data-value="1">최신순</span>
+					</button>
+					<div class="list">
+						<div data-label="정렬">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion0" value="1"><span>최신순</span></label>
+								<label><input type="radio" name="selectOpeion0" value="2"><span>조회수</span></label>
+								<label><input type="radio" name="selectOpeion0" value="3"><span>공유순</span></label><!-- [M 2022-11-15] 공유로 수정 -->
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="icon-com1 ic18 right">필터</button>
+			</div>
+		</div>
+
+		<!-- [목록] -->
+		<div class="board-list3 t1">
+			<ul>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<!-- [이미지] -->
+						<div class="img"><img src="../../resource/img/temp/@img_banner5.png" alt=""/></div>
+						<!-- [제목] -->
+						<strong class="tit">제목</strong>
+						<!-- [해시태그] -->
+						<div class="data-word2">
+							<em>#키워드</em>
+							<em>#해시태그</em>
+						</div>
+						<!-- [등록일시] -->
+						<dl class="data2">
+							<dt>등록일시</dt>
+							<dd>0000.00.00 00:00</dd>
+						</dl>
+						<!-- [조회수/발송수] -->
+						<div class="data1">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>0,000</dd>
+							</dl>
+							<!-- [M 2022-11-15] 공유 추가 -->
+							<dl class="icon-com1 ic25">
+								<dt>공유</dt>
+								<dd>0,000</dd>
+							</dl>
+							<!-- //[M 2022-11-15] 공유 추가 -->
+						</div>
+						<!-- // -->
+					</a>
+				</li>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<div class="img"><img src="../../resource/img/temp/@img_banner4.png" alt=""/></div>
+						<strong class="tit">아이 키우며 자유롭게 돈벌기</strong>
+						<div class="data-word2">
+							<em>#보험서비스 발송</em>
+							<em>#상품</em>
+						</div>
+						<dl class="data2">
+							<dt>등록일시</dt>
+							<dd>0000.00.00 00:00</dd>
+						</dl>
+						<div class="data1">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>0,000</dd>
+							</dl>
+							<!-- [M 2022-11-15] 공유 추가 -->
+							<dl class="icon-com1 ic25">
+								<dt>공유</dt>
+								<dd>0,000</dd>
+							</dl>
+							<!-- //[M 2022-11-15] 공유 추가 -->
+						</div>
+					</a>
+				</li>
+				<!-- // -->
+				<li>
+					<a href="javascript:void(0);">
+						<div class="img"><img src="../../resource/img/temp/@img_banner5.png" alt=""/></div>
+						<strong class="tit">뇌혈관 진단비 분석</strong>
+						<div class="data-word2">
+							<em>#보험서비스 발송</em>
+							<em>#상품</em>
+						</div>
+						<dl class="data2">
+							<dt>등록일시</dt>
+							<dd>0000.00.00 00:00</dd>
+						</dl>
+						<div class="data1">
+							<dl class="icon-com1 ic9">
+								<dt>조회</dt>
+								<dd>0,000</dd>
+							</dl>
+							<!-- [M 2022-11-15] 공유 추가 -->
+							<dl class="icon-com1 ic25">
+								<dt>공유</dt>
+								<dd>0,000</dd>
+							</dl>
+							<!-- //[M 2022-11-15] 공유 추가 -->
+						</div>
+					</a>
+				</li>
+				<!-- [CASE1] 검색결과없음 -->
+				<li class="nodata">
+					<strong>등록된 컨텐츠가 없습니다.</strong>
+				</li>
+				<!-- // -->
+			</ul>
+
+			<!-- 더보기 버튼 : (현재페이지/총페이지) -->
+			<div class="area-btn2">
+				<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 등록버튼 -->
+		<!-- ######################### -->
+		<a href="javascript:void(0);" class="btn-util1 ic3" data-sticky="bottom">컨텐츠 발송</a>
+		<!-- ######################### -->
+	</div>
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer"></footer>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

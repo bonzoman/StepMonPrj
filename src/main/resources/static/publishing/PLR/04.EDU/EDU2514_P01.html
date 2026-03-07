@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 상세팝업 | 성장뱃지 | 내강의실 | 교육</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>성장뱃지 안내</h1>
+			<button type="button" data-btn="pop-close">성장뱃지 안내 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container" data-page="4">
+			<!-- ######################### -->
+			<!-- [안내영역] 뱃지정보 -->
+			<!-- [D] 뱃지 클래스명 정의
+					badge1 : 프로 N잡러
+					badge2 : 렛 전문가
+					badge3 : 신뢰있는 설계사
+					badge4 : 이 구역의 인싸
+					badge5 : 건강이 최고
+					badge6 : 열정적인 중재자
+					badge7 : 첫 수강
+					badge8 : 연속 5회 수강
+					badge9 : 연속 10회 수강
+			-->
+			<!-- ######################### -->
+			<div class="mes-info3 badge1">
+				<p>
+					<strong>프로 N잡러</strong>
+					<span>보험은 여러 개 가입하면서, <br>왜 일은 하나만 해야 하죠? <br>넘치는 재능을 가지고 있는 당신, <br>훌륭한 설계사의 자질을 가지셨네요!</span> <!-- [M 2022-08-10] 공백 제거 및 br태그 추가 -->
+				</p>
+			</div>
+			<div class="mes-info3 badge2">
+				<p>
+					<strong>렛 전문가</strong>
+					<span>척하면 척!<br>고객이 필요한 걸 눈 감고도 알겠다고요?<br>눈치 100단 당신, 보험 전문가로 인증합니다!</span><!-- [M 2022-08-11] 문구수정 -->
+				</p>
+			</div>
+			<div class="mes-info3 badge3">
+				<p>
+					<strong>신뢰있는 설계사</strong>
+					<span>보험이 필요한 고객의 목소리가 들리시나요?<br>고객 탐지 레이더망을 탑재한 당신,<br>고객에게 자신있게 다가가 보세요!</span><!-- [M 2022-08-11] 문구수정 -->
+				</p>
+			</div>
+			<div class="mes-info3 badge4">
+				<p>
+					<strong>이 구역의 인싸</strong>
+					<span>두서없는 대화는 이제 그만! <br>고객을 설득하기 위한 커뮤니케이션 스킬을 <br>모두 탑재한 당신! 이제 대화 실력을 뽐내보세요!</span><!-- [M 2022-08-10] 공백 제거 및 br태그 추가 -->
+				</p>
+			</div>
+			<div class="mes-info3 badge5">
+				<p>
+					<strong>건강 수호자</strong><!-- [M 2022-08-11] 문구수정 -->
+					<span>이 구역의 건강지킴이는 나야 나! <br>건강 지식을 마스터한 당신, <br>고객들의 건강 수호자로 임명합니다!</span><!-- [M 2022-08-10] 공백 제거 및 br태그 추가 -->
+				</p>
+			</div>
+			<div class="mes-info3 badge6">
+				<p>
+					<strong>열정적인 중재자</strong>
+					<span>지금은 100세 인생! <br>챙겨야 할 이벤트가 많아도 너무 많죠? <br>이젠 당신이 누군가의 인생에 <br>길잡이가 될 수 있어요!</span><!-- [M 2022-08-10] 공백 제거 및 br태그 추가 -->
+				</p>
+			</div>
+			<!-- 삭제
+			<div class="mes-info3 badge7">
+				<p>
+					<strong>첫 수강</strong>
+					<span>말 한마디로 천 냥 빚 갚는 건 옛말이죠! <br>말 한마디로 보험왕이 되는 시대, <br>당신의 대화 스킬을 뽐내보세요!</span>
+				</p>
+			</div>
+			<div class="mes-info3 badge8">
+				<p>
+					<strong>연속 5회 수강</strong>
+					<span>이 구역의 건강지킴이는 나야 나! <br>건강 지식을 마스터한 당신, <br>고객들의 건강 수호자로 임명합니다!</span>
+				</p>
+			</div>
+			<div class="mes-info3 badge9">
+				<p>
+					<strong>연속 10회 수강</strong>
+					<span>지금은 100세 인생! <br>챙겨야 할 이벤트가 많아도 너무 많죠? <br>이젠 당신이 누군가의 인생에 <br>길잡이가 될 수 있어요!</span>
+				</p>
+			</div>
+			 -->
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

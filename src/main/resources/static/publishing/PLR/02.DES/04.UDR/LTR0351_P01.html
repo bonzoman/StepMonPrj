@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 셀프고지 알림톡 발송 | 인수심사요청및결과</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-22]	① 수신고객 변경으로 내용 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>셀프고지 알림톡 발송</h1>
+			<button type="button" data-btn="pop-close">셀프고지 알림톡 발송 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역]  -->
+			<!-- ######################### -->
+			<div class="tit-section">
+				<p>고객님께 셀프고지를 위한<br>알림톡을 보내주세요.</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [본문영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>정보확인</legend>
+
+				<!-- [M 2022-11-22] 수신고객 변경으로 내용 변경 -->
+				<!-- # 수신고객 # -->
+				<dl class="form">
+					<dt>수신고객</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>피보험자</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>미성년 자녀</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- ### [CASE1] 피보험자 ### -->
+				<div>
+					<dl class="form">
+						<dt>피보험자명</dt>
+						<dd><data class="text" value="하다미">하다미</data></dd>
+					</dl>
+					<dl class="form">
+						<dt>연락쳐</dt>
+						<dd><data class="text disabled" value="01022222222">01012346666</data></dd>
+					</dl>
+				</div>
+
+				<!-- ### [CASE2] 미성년자녀 ### -->
+				<div>
+					<dl class="form">
+						<dt>고객명</dt>
+						<dd><data class="text disabled" value="하다미">하다미</data></dd>
+					</dl>
+					<dl class="form">
+						<dt>친권자/법정대리인(명)</dt>
+						<dd>
+							<div class="input-btn1">
+								<data class="text" value="" data-label="고객을 검색해주세요."></data>
+								<button type="button" class="icon-com1 ic2">검색</button>
+							</div>
+						</dd>
+						<dd>
+							<div class="info-data3 info">
+								<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+									<strong>하다미</strong>
+									<span>
+										<span>1990.01.01</span>
+										<span>남</span>
+									</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>친권자 연락쳐</dt>
+						<dd><data class="text disabled" value="01012346666">01012346666</data></dd>
+					</dl>
+					
+				</div>
+
+				<!-- # 내용 # -->
+				<dl class="form">
+					<dt>내용</dt>
+					<dd>
+						<div class="textarea">
+							<!-- 2023-01-03 변경 -->
+							<data value="">[롯데손해보험] 셀프고지를 위한 알림톡 전송 안내
+
+								안녕하세요! [고객명] 고객님!
+								아래 셀프고지 시작하기 버튼을 통해 보완이 필요한 질병고지내용을 추가하실 수 있습니다.
+
+								· 상품명: [보험상품명]
+								· 청약번호: [설계번호]
+								· 고객명: [피보험자명]
+
+								· 답변이후에는 알릴사항 내용이 변경 될 수 있으며, 최종 청약서의 계약전 알릴의무사항에 사실대로 기재되어 있는지 꼭 확인하시기 바랍니다.
+								· 문의사항이 있으실 경우 담당설계사 [취급자명] [취급자 휴대폰 번호]로 문의하시기 바랍니다.
+
+								감사합니다. 롯데손해보험
+							</data>
+							<!-- //2023-01-03 변경 -->
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 안내문구 # -->
+				<p class="txt-bul1">
+					미성년자녀의 경우에는 법정대리인(친권자, 후견인)의 휴대폰으로 인증할 수 있습니다. 단, 만 14세 미만 아동의 경우에는 법정대리인(친권자, 후견인) 의 휴대폰인증은 필수입니다.
+				</p>
+				<!-- // -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [안내문구] -->
+			<!-- ######################### -->
+			<div class="mes-info2 box">
+				<p>알림톡을 받은 고객님께서 URL에 접속하여 직접 동의내용을 확인한 후, 휴대폰 본인확인을 통해 동의합니다. <br> 발송되는 URL에서는 해당 고객만 동의할 수 있으므로 다른 사람의 동의는 불가능합니다. (URL 복사, 전달 시 사용 불가)</p>
+			</div>
+			<!-- //[M 2022-11-22] 수신고객 변경으로 내용 변경 -->
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">알림톡 발송</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 사진촬영SMS | 인수심사요청및결과</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>사진촬영 SMS</h1>
+			<button type="button" data-btn="pop-close">사진촬영 SMS 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [수신고객 선택] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>수신고객 선택</legend>
+
+				<!-- 수신고객 -->
+				<dl class="form">
+					<dt>수신고객</dt>
+					<dd>
+						<!-- // -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio" checked>
+								<span>계약자</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio">
+								<span>피보험자</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio">
+								<span>직접입력</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- 고객이름 -->
+				<dl class="form">
+					<dt>고객이름</dt>
+					<dd><input type="text" class="text" title="고객이름" value="하다미" readonly></dd> <!-- [D] 직접입력시 readonly 삭제 -->
+				</dl>
+
+				<!-- 연락처 -->
+				<dl class="form">
+					<dt>연락처</dt>
+					<dd><input type="tel" class="text" title="연락처" value="010-0000-0000" readonly></dd> <!-- [D] 직접입력시 readonly 삭제 -->
+				</dl>
+
+				<!-- # 심사첨부서류(알림톡) 첨부방법 # -->
+				<div class="mes-info2 box">
+					<strong>심사첨부서류(알림톡) 첨부방법</strong>
+					<ol class="mark">
+						<li><i>1단계:</i>고객에게 알림톡 발송</li>
+						<li><i>2단계:</i>고객이 알림톡 받은 후 URL 링크 접속</li>
+						<li><i>3단계:</i>심사관련 서류(이미지) 첨부<br>예) 경과기록지, 조직검사결과지, 소견서 등</li>
+						<li><i>4단계:</i>전송</li>
+					</ol>
+				</div>
+				<!-- # // # -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [유의사항] -->
+			<!-- ######################### -->
+			<ul class="txt-bul1 line2">
+				<li>심사서류 등록 시 반드시 <strong>발송된 알림톡 URL 링크에 접속하여 서류 등록</strong>을 해주셔야합니다.</li>
+				<li>등록된 서류가 <strong>식별이 어려울 경우</strong> 서류를 <strong>재등록 할 수 있음</strong>을 안내하여 주시기 바랍니다.</li>
+				<li>1회 최대 20매까지 등록 가능하며, 환경에 따라 <strong>데이터 사용료가 부가</strong>될 수 있습니다</li>
+				<li>심사보완 서류는 고객 민감정보에 해당하니, <strong>반드시 본인(계약자)이 등록</strong>바라며, 부득이 본인이 아닌 경우 <strong>개인정보보호에 주의</strong>바랍니다.</li>
+				<li>핸드폰 사용환경에 따라 사진첨부가 안될 수 있습니다.<div class="txt-bul2">사용불가 단말기: HTC넥서스원, 디자이어, 아이폰계열</div></li>
+			</ul>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">알림톡 발송</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

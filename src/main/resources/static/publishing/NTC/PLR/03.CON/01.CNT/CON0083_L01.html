@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 미지급합계 내역 | 예상환급금조회 | 계약상세 | 장기 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="area-btn4"><a href="#uiPOPCONCON0083L01" class="btn-sub3 c2">내역</a></div> <!-- [레이어팝업 호출 샘플] -->
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 미지급합계 내역 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCONCON0083L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>미지급합계 내역</h1>
+			<button type="button" data-btn="pop-close">미지급합계 내역 닫기</button>
+		</header>
+		<div class="content">
+            <!-- // -->
+			<div class="info-con2"> <!-- [M 2022-09-02] class line2 삭제 -->
+				<dl>
+					<dt>해약환급금</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>미지급중도금</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>미지급배당금</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>미지급감액</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>추진/환급금액</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+			</div>
+            <!-- // -->
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1" >확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCONCON0083L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPCONCON0083L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

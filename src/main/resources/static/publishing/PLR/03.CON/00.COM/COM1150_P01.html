@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 전체메뉴</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<aside class="aside-menu" id="asideTotalMenu" data-popmodal="true">
+	<!-- ######################### -->
+	<!-- [상단영역] 고객정보 -->
+	<!-- ######################### -->
+	<header>
+		<!-- # 정보 # -->
+		<div class="area1">
+			<button type="button" data-btn="pop-close">전체메뉴 닫기</button>
+			<a href="javascript:void(0);" class="info" title="나의정보">
+				<em class="icon-grade1">우수설계사</em> <!-- [D] 우수설계사일 경우 노출 -->
+				<strong>하다미님</strong>
+			</a>
+			<a href="javascript:void(0);" class="icon-com1 ic19">홈으로 가기</a>
+			<a href="javascript:void(0);" class="icon-com1 ic17">설정</a>
+		</div>
+		<!-- # 검색 # -->
+		<div class="text">
+			<input type="search" title="검색" placeholder="검색어를 입력해주세요.">
+			<button type="button" class="icon-com1 ic2">검색</button>
+		</div>
+		<!-- # 즐겨찾기 메뉴 # -->
+		<div class="area2">
+			<a href="javascript:void(0);" class="ic1">가입설계</a>
+			<a href="javascript:void(0);" class="ic2">보장분석</a>
+			<a href="javascript:void(0);" class="ic3">고객조회</a>
+			<a href="javascript:void(0);" class="ic4">HELP 접수</a>
+		</div>
+		<!-- # // # -->
+	</header>
+
+	<!-- ######################### -->
+	<!-- [바로가기] -->
+	<!-- ######################### -->
+	<div class="btn-util5" data-sticky="top" data-autoset="toggle">
+		<button type="button" data-toggle="btn" aria-expanded="false">메뉴목록 전체보기</button>
+		<div data-toggle="content">
+			<a href="#uiMenu1">소득/혜택</a>
+			<a href="#uiMenu2">교육</a>
+			<a href="#uiMenu3">커뮤니티</a>
+			<a href="#uiMenu4">고객</a>
+			<a href="#uiMenu5">보험케어</a>
+			<a href="#uiMenu6">설계청약</a>
+			<a href="#uiMenu7">계약관리</a>
+			<a href="#uiMenu8">자금관리</a>
+			<a href="#uiMenu9">영업리포트</a>
+			<a href="#uiMenu10">업무지원요청</a>
+			<a href="#uiFooterMenu">패밀리사이트</a>
+		</div>
+	</div>
+
+	<!-- ######################### -->
+	<!-- [메뉴영역] -->
+	<!-- ######################### -->
+	<nav class="menu" data-autoset="menu" data-stuck="wrap">
+		<!-- # 소득/혜택 # -->
+		<dl id="uiMenu1">
+			<dt>소득/혜택</dt><!-- [D] 1Depth -->
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">소득혜택</button> <!-- [D] 2Depth -->
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">소득조회</a></li> <!-- [D] 3Depth -->
+					<li><a href="javascript:void(0);">계약건별 수수료 조회</a></li>
+					<li><a href="javascript:void(0);">예상소득 조회</a></li>
+				</ul>
+			</dd>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">혜택</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">포인트 조회</a></li>
+					<li><a href="javascript:void(0);">퀘스트 현황</a></li>
+					<li><a href="javascript:void(0);">데일리 퀴즈</a></li>
+					<li><a href="javascript:void(0);">포인트 게임</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<!-- # 교육 # -->
+		<dl id="uiMenu2">
+			<dt>교육</dt>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">내 강의실</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">찜한 컨텐츠</a></li>
+					<li><a href="javascript:void(0);">시청이력</a></li>
+					<li><a href="javascript:void(0);">태그검색</a></li>
+				</ul>
+			</dd>
+			<dd><a href="javascript:void(0);">온라인, 오프라인 교육 신청</a></dd>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">교육관리</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">교육 모니터링</a></li>
+					<li><a href="javascript:void(0);">교육신청현황</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<!-- # 커뮤니티 # -->
+		<dl id="uiMenu3">
+			<dt>커뮤니티</dt>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">렛톡</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">모두의톡</a></li>
+					<li><a href="javascript:void(0);">렛:크루</a></li>
+				</ul>
+			</dd>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">렛워크</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">컨텐츠랩</a></li>
+					<li><a href="javascript:void(0);">노하우 공유</a></li>
+					<li><a href="javascript:void(0);">조인트 워크</a></li>
+					<li><a href="javascript:void(0);">일정관리</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<!-- # 고객 # -->
+		<dl id="uiMenu4">
+			<dt>고객</dt>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">고객동의</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">가입설계동의</a></li>
+					<li><a href="javascript:void(0);">상품소개동의(마케팅동의)</a></li>
+					<li><a href="javascript:void(0);">동의 현황 조회</a></li>
+					<li><a href="javascript:void(0);">문자인증대기현황</a></li>
+				</ul>
+			</dd>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">고객등록</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">개인고객</a></li>
+					<li><a href="javascript:void(0);">사업자고객</a></li>
+					<li><a href="javascript:void(0);">단체고객</a></li>
+					<li><a href="javascript:void(0);">미성년자 법정대리인등록</a></li>
+				</ul>
+			</dd>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">고객조회</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">고객조회</a></li>
+					<li><a href="javascript:void(0);">내고객타겟팅</a></li>
+				</ul>
+			</dd>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">컨텐츠 발송 관리</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">자동 발송 신청관리</a></li>
+					<li><a href="javascript:void(0);">자동 발송 현황</a></li>
+				</ul>
+			</dd>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">보장분석</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">보장분석</a></li>
+					<li><a href="javascript:void(0);">보장분석 상담요청내역</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<!-- # 보험케어 # -->
+		<dl id="uiMenu5">
+			<dt>보험케어</dt>
+			<dd><a href="javascript:void(0);">케어 프로그램</a></dd>
+		</dl>
+		<!-- # 설계청약 # -->
+		<dl id="uiMenu6">
+			<dt>설계청약</dt>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">가입설계</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">장기 표준설계</a></li>
+					<li><a href="javascript:void(0);">장기 쉬운설계</a></li>
+					<li><a href="javascript:void(0);">자동차 설계</a></li>
+					<li><a href="javascript:void(0);">일반 설계</a></li>
+					<li><a href="javascript:void(0);">설계조회</a></li>
+					<li><a href="javascript:void(0);">인수심사 조회</a></li>
+					<li><a href="javascript:void(0);">완전판매모니터링</a></li>
+					<li><a href="javascript:void(0);">개발원계약조회_자동차</a></li>
+					<li><a href="javascript:void(0);">청약서류 등록현황_자동차</a></li>
+					<li><a href="javascript:void(0);">특별약관사진검증_자동차</a></li>
+				</ul>
+			</dd>
+			<dd><a href="javascript:void(0);">전자서명 진행관리</a></dd>
+		</dl>
+		<!-- # 계약관리 # -->
+		<dl id="uiMenu7">
+			<dt>계약관리</dt>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">가입설계</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">통합계약조회</a></li>
+					<li><a href="javascript:void(0);">만기대상관리</a></li> <!-- [M 2022-09-20] 문구수정 -->
+					<li><a href="javascript:void(0);">부활대상계약</a></li>
+					<li><a href="javascript:void(0);">태아등재대상계약</a></li>
+					<li><a href="javascript:void(0);">갱신계약 관리</a></li>
+					<li><a href="javascript:void(0);">갱신추가납대상조회</a></li>
+					<li><a href="javascript:void(0);">건강등급할인관리</a></li>
+				</ul>
+			</dd>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">계약안내장관리(반송물)</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">납입최고 관리</a></li>
+					<li><a href="javascript:void(0);">반송우편물 관리</a></li>
+				</ul>
+			</dd>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">보상이력조회</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">통합사고 조회</a></li>
+					<li><a href="javascript:void(0);">사고접수 안내</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<!-- # 자금관리 # -->
+		<dl id="uiMenu8">
+			<dt>자금관리</dt>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">수납관리</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">금권통합조회</a></li>
+					<li><a href="javascript:void(0);">수금관리</a></li>
+					<li><a href="javascript:void(0);">계속보험료 영수증 입력/취소</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<!-- # 영업리포트 # -->
+		<dl id="uiMenu9">
+			<dt>영업리포트</dt>
+			<dd><a href="javascript:void(0);">MY 리포트</a></dd>
+			<dd><a href="javascript:void(0);">후보자관리</a></dd>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">실적관리</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">실적 조회</a></li>
+					<li><a href="javascript:void(0);">영업목표 조회</a></li>
+					<li><a href="javascript:void(0);">건별실적조회</a></li>
+				</ul>
+			</dd>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">지표관리</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">수금율 조회</a></li>
+					<li><a href="javascript:void(0);">유지율 조회</a></li>
+					<li><a href="javascript:void(0);">갱신율 조회</a></li>
+					<li><a href="javascript:void(0);">장기계속분미수납 조회</a></li>
+				</ul>
+			</dd>
+			<dd class="active">
+				<button type="button" data-toggle="btn" aria-expanded="true">조직관리</button>
+				<ul class="submenu">
+					<li><a href="javascript:void(0);">실가동 유실적 조회</a></li>
+					<li><a href="javascript:void(0);">조직증감추이</a></li>
+					<li><a href="javascript:void(0);">영업가족리스트</a></li>
+					<li><a href="javascript:void(0);">이탈방지 대상 설계사 리스트</a></li>
+					<li><a href="javascript:void(0);">시체설계사 리스트</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<!-- # 업무지원요청 # -->
+		<dl id="uiMenu10">
+			<dt>업무지원요청</dt>
+			<dd><a href="javascript:void(0);">업무지원요청 관리</a></dd>
+		</dl>
+		<!-- # // # -->
+	</nav>
+
+	<!-- ######################### -->
+	<!-- [하단메뉴] -->
+	<!-- ######################### -->
+	<footer id="uiFooterMenu">
+		<dl class="area1">
+			<dt>롯데손해보험의 또다른 나,<br>패밀리서비스를 함께 경험해보세요!</dt>
+			<dd><a href="javascript:void(0);" class="ic1" target="_blank" title="공식홈페이지 이동">공식홈페이지</a></dd>
+			<dd><a href="javascript:void(0);" class="ic2" target="_blank" title="렛클릭 이동">렛클릭</a></dd>
+			<dd><a href="javascript:void(0);" class="ic3" target="_blank" title="엘모바일 이동">엘모바일</a></dd>
+		</dl>
+	</footer>
+	<!-- ######################### -->
+</aside>
+
+<script>
+//<!--
+	//풀팝업 호출
+	$(document).ready(function(){
+		$('#asideTotalMenu').trigger('outputOpen');
+	});
+//-->
+</script>
+</body>
+</html>

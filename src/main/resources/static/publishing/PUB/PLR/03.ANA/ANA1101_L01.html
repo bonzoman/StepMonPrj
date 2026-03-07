@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 고객별 이력 정렬	| 목록 | 고객목록 | 보장분석</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="area-info1">
+			<p>총 <strong>000명</strong></p>
+			<div class="side">
+				<a href="#uiPOPANA1101L01" class="icon-com1 ic simple">고객별 이력 정렬</a>	<!-- [레이어팝업 호출 버튼] -->
+			</div>
+		</div>
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 고객별 이력 정렬 ### -->
+<!-- ################################################### -->
+<div id="uiPOPANA1101L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>고객별 이력 정렬</h1>
+			<button type="button" data-btn="pop-close">고객별 이력 정렬 닫기</button>
+		</header>
+		<div class="content">
+			<div class="label-check2">
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>최근 동의순</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>최근 분석순</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>최근 고객등록순</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>가입설계동의 만료일순</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>리포트발송순</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio1">
+					<span>보험생일도래순</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1" >확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPANA1101L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPANA1101L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

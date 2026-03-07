@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 검진결과조회 | 인수심사요청및결과</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>검진결과조회</h1>
+			<button type="button" data-btn="pop-close">검진결과조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 상품 및 진단정보 -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">Let:smile 종합건강보험(더끌림 플러스) (22 01)_납입면제적용형</h2>
+				<div class="info">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+				</div>
+
+				<!-- # 진단정보 # -->
+				<fieldset class="form-wrap1">
+					<legend>정보입력</legend>
+					<dl class="form">
+						<dt>진단정보</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">진단종류</span>
+									<span data-select="text" data-value="1">특별검진(40세이상)</span>
+								</button>
+								<div class="list">
+									<div data-label="진단종류">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion1" value="1"><span>특별검진(40세이상)</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<data class="text disabled" value="하다미">하다미</data>
+						</dd>
+					</dl>
+				</fieldset>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [검진정보] -->
+			<!-- ######################### -->
+			<section class="wrap-section1">
+				<h3 class="tit-sub1">검진정보</h3>
+				<!-- // -->
+				<div class="info-con1">
+					<dl>
+						<dt>검진병원</dt>
+						<dd>
+							<div>의료법인성광의료재</div>
+							<div>(XXX214820)</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>검진지역</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">검진지역</span>
+									<span data-select="text" data-value="1">4군</span>
+								</button>
+								<div class="list">
+									<div data-label="검진지역">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion1" value="1"><span>4군</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+					<dl>
+						<dt>검진일자</dt>
+						<dd>2022.04.12</dd>
+					</dl>
+					<dl>
+						<dt>등록일자</dt>
+						<dd>2022.04.12</dd>
+					</dl>
+					<dl>
+						<dt>등록직원</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>등록자의견</dt>
+						<dd>담보삭제(또는 감액)후 재요청 바랍니다.<br>(조정담보-가입설계화면에서 확인)</dd>
+					</dl>
+				</div>
+				<!-- [CASE] 취소 시 -->
+				<div class="info-con1">
+					<dl>
+						<dt>협력업체</dt>
+						<dd>의료법인성광의료재(XXX214820)</dd>
+					</dl>
+					<dl>
+						<dt>검진지역</dt>
+						<dd>4군</dd>
+					</dl>
+					<dl>
+						<dt>검진비용</dt>
+						<dd class="data-num1"><strong>57,000</strong><span>원</span></dd>
+					</dl>
+					<dl>
+						<dt>송신일자</dt>
+						<dd>2022.04.12</dd>
+					</dl>
+					<dl>
+						<dt>수신일자</dt>
+						<dd>2022.04.12</dd>
+					</dl>
+
+					<dl>
+						<dt>취소일자</dt>
+						<dd>2022.04.12</dd>
+					</dl>
+					<dl>
+						<dt>부재횟수</dt>
+						<dd>0</dd>
+					</dl>
+					<dl>
+						<dt>검진일자</dt>
+						<dd>2022.04.12</dd>
+					</dl>
+					<dl>
+						<dt>완료일자</dt>
+						<dd>2022.04.12</dd>
+					</dl>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- # [검진결과항목] # -->
+			<section class="wrap-section3 line">
+				<h4 class="tit-sub1">검진결과항목</h4>
+				<!-- # 비만검사 # -->
+				<section>
+					<h5 class="tit-sub2">비만검사</h5>
+					<div class="info-con1">
+						<!-- // -->
+						<dl>
+							<dt>신장/체중</dt>
+							<dd>158cm/47.6kg</dd>
+						</dl>
+						<dl>
+							<dt>가슴둘레</dt>
+							<dd>90cm</dd>
+						</dl>
+						<dl>
+							<dt>허리둘레</dt>
+							<dd>72cm</dd>
+						</dl>
+						<dl>
+							<dt>BMI</dt>
+							<dd>21.63kg/m&sup2;</dd>
+						</dl>
+						<!-- // -->
+					</div>
+				</section>
+
+				<!-- # 혈압검사 # -->
+				<section>
+					<h5 class="tit-sub2">혈압검사</h5>
+					<div class="info-con1">
+						<dl>
+							<dt>1차(수축기/이완기)</dt>
+							<dd>
+								<div>좌 110/80mmHg</div>
+								<div>우 120/75mmHg</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>2차(수축기/이완기)</dt>
+							<dd>
+								<div>좌 0/0mmHg</div>
+								<div>우 0/0mmHg</div>
+							</dd>
+						</dl>
+					</div>
+				</section>
+
+				<!-- # 맥박검사 # -->
+				<section>
+					<h5 class="tit-sub2">맥박검사</h5>
+					<div class="info-con1">
+						<dl>
+							<dt>맥박</dt>
+							<dd>62회/분</dd>
+						</dl>
+					</div>
+				</section>
+
+				<!-- # 요검사 # -->
+				<section>
+					<h5 class="tit-sub2">요검사</h5>
+					<div class="info-con1">
+						<dl>
+							<dt>뇨잠혈</dt>
+							<dd class="txt-c1">-</dd>
+						</dl>
+						<dl>
+							<dt>뇨당</dt>
+							<dd class="txt-c1">-</dd>
+						</dl>
+						<dl>
+							<dt>뇨단백</dt>
+							<dd>음성</dd>
+						</dl>
+						<dl>
+							<dt>니코틴 뇨검사</dt>
+							<dd>음성</dd>
+						</dl>
+					</div>
+				</section>
+
+				<!-- # 혈액검사 # -->
+				<section>
+					<h5 class="tit-sub2">혈액검사</h5>
+					<div class="tbl-data1">
+						<table>
+							<caption>혈액검사</caption>
+							<colgroup>
+								<col style="width:40%">
+								<col style="width:30%">
+								<col style="width:40%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">항목명</th>
+									<th scope="col">참조범위</th>
+									<th scope="col">검진결과</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="left">T.Protein</td>
+									<td>5.8~8.3</td>
+									<td class="right">-</td>
+								</tr>
+								<tr>
+									<td class="left">SGOT(AST)</td>
+									<td>5~40</td>
+									<td class="right">25U/L</td>
+								</tr>
+								<tr>
+									<td class="left">SGPT(ALT)</td>
+									<td>5~40</td>
+									<td class="right">25U/L</td>
+								</tr>
+								<tr>
+									<td class="left">r-GTP</td>
+									<td>0~50</td>
+									<td class="right">-</td>
+								</tr>
+								<tr>
+									<td class="left">Cholesterol</td>
+									<td>130~220</td>
+									<td class="right"><strong class="txt-c1">238㎎/dℓ</strong></td>
+								</tr>
+								<tr>
+									<td class="left">Glucose</td>
+									<td>70~110</td>
+									<td class="right">-</td>
+								</tr>
+								<tr>
+									<td class="left">Hb</td>
+									<td>12~16</td>
+									<td class="right">14.4g/dℓ</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+				<!-- # // # -->
+			</section>
+
+			<!-- # [종합 문진내용] # -->
+			<section class="wrap-section3">
+				<h4 class="tit-sub1">종합 문진내용</h4>
+				<div class="mes-t3">
+					1)직업(근무처, 근무지역, 취금업무): 롯데손해보험/서울/설계사
+					2)운전(차종, 용도, 자가소유): 승용차/출퇴근용/본인 3)오토바이: 없음
+					4)타사보험가입: 없음 5)타사보험지급수령여부: 없음 6)음주: 없음 7)흡연: 없음
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

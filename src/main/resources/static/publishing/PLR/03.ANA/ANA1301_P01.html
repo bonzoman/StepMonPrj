@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 권장가입금액 | 고객목록 | 보장분석</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>권장가입금액</h1>
+			<button type="button" data-btn="pop-close">권장가입금액 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [목록] -->
+			<!-- ######################### -->
+			<div class="area-info1">
+				<div class="side"><button type="button" class="btn-sub3 c2"  data-mode="open">전체펼침</button></div> <!-- [D] 하단스크립트 참고 -->
+			</div>
+
+			<div class="area-toggle1">
+				<!-- # 사망 # -->
+				<dl>
+					<dt class="tit">
+						<strong>사망</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</dt>
+					<dd data-toggle="content">
+						<!-- 질병사망 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">질병사망</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>10,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">3,000</button>
+										<button type="button" class="btn-sub2 c2">5,000</button>
+										<button type="button" class="btn-sub2 c2">10,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 상해사망 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">상해사망</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>20,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">5,000</button>
+										<button type="button" class="btn-sub2 c2">10,000</button>
+										<button type="button" class="btn-sub2 c2">15,000</button>
+										<button type="button" class="btn-sub2 c2">20,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 후유장해 # -->
+				<dl>
+					<dt class="tit">
+						<strong>후유장해</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</dt>
+					<dd data-toggle="content">
+						<!-- 질병후유장해 3% 이상 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">질병후유장해 3% 이상</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>3,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">2,000</button>
+										<button type="button" class="btn-sub2 c2">3,000</button>
+										<button type="button" class="btn-sub2 c2">5,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 질병후유장해 50% 이상 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">질병후유장해 50% 이상</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>3,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">1,000</button>
+										<button type="button" class="btn-sub2 c2">2,000</button>
+										<button type="button" class="btn-sub2 c2">3,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 질병후유장해 80% 이상 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">질병후유장해 80% 이상</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>10,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">3,000</button>
+										<button type="button" class="btn-sub2 c2">5,000</button>
+										<button type="button" class="btn-sub2 c2">10,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 상해후유장해 3% 이상 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">상해후유장해 3% 이상</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>5,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">3,000</button>
+										<button type="button" class="btn-sub2 c2">5,000</button>
+										<button type="button" class="btn-sub2 c2">10,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 상해후유장해 50% 이상 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">상해후유장해 50% 이상</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>5,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">2,000</button>
+										<button type="button" class="btn-sub2 c2">3,000</button>
+										<button type="button" class="btn-sub2 c2">5,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 상해후유장해 80% 이상 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">상해후유장해 80% 이상</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>10,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">3,000</button>
+										<button type="button" class="btn-sub2 c2">5,000</button>
+										<button type="button" class="btn-sub2 c2">10,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 암 # -->
+				<dl>
+					<dt class="tit">
+						<strong>암</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</dt>
+					<dd data-toggle="content">
+						<!-- 일반암 진단비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">일반암 진단비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>5,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">2,000</button>
+										<button type="button" class="btn-sub2 c2">3,000</button>
+										<button type="button" class="btn-sub2 c2">5,000</button>
+										<button type="button" class="btn-sub2 c2">7,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 고액암 진단비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">고액암 진단비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>2,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">2,000</button>
+										<button type="button" class="btn-sub2 c2">3,000</button>
+										<button type="button" class="btn-sub2 c2">5,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 암수술비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">암수술비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>300</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">200</button>
+										<button type="button" class="btn-sub2 c2">300</button>
+										<button type="button" class="btn-sub2 c2">500</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 고액항암치료비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">고액항암치료비</legend>
+							<p class="mes">표적항암약물허가, 항암양성자/세기조절방사선 포함</p>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>7,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">3,000</button>
+										<button type="button" class="btn-sub2 c2">5,000</button>
+										<button type="button" class="btn-sub2 c2">7,000</button>
+										<button type="button" class="btn-sub2 c2">10,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 뇌혈관 질환 # -->
+				<dl>
+					<dt class="tit">
+						<strong>뇌혈관 질환</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</dt>
+					<dd data-toggle="content">
+						<!-- 뇌혈관 진단비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">뇌혈관 진단비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>1,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">500</button>
+										<button type="button" class="btn-sub2 c2">1,000</button>
+										<button type="button" class="btn-sub2 c2">1,500</button>
+										<button type="button" class="btn-sub2 c2">2,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 뇌졸중 진단비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">뇌졸중 진단비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>2,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">1,000</button>
+										<button type="button" class="btn-sub2 c2">2,000</button>
+										<button type="button" class="btn-sub2 c2">3,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 뇌출혈 진단비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">뇌출혈 진단비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>2,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">1,000</button>
+										<button type="button" class="btn-sub2 c2">2,000</button>
+										<button type="button" class="btn-sub2 c2">3,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 뇌혈관 수술비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">뇌혈관 수술비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>1,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">500</button>
+										<button type="button" class="btn-sub2 c2">1,000</button>
+										<button type="button" class="btn-sub2 c2">1,500</button>
+										<button type="button" class="btn-sub2 c2">2,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 심장 질환 # -->
+				<dl>
+					<dt class="tit">
+						<strong>심장 질환</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</dt>
+					<dd data-toggle="content">
+						<!-- 허혈성심장질환 진단비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">허혈성심장질환 진단비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>1,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">500</button>
+										<button type="button" class="btn-sub2 c2">1,000</button>
+										<button type="button" class="btn-sub2 c2">1,500</button>
+										<button type="button" class="btn-sub2 c2">2,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 급성심근경색 진단비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">급성심근경색 진단비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>2,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">1,000</button>
+										<button type="button" class="btn-sub2 c2">2,000</button>
+										<button type="button" class="btn-sub2 c2">3,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 심장질환 수술비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">심장질환 수술비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>1,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">500</button>
+										<button type="button" class="btn-sub2 c2">1,000</button>
+										<button type="button" class="btn-sub2 c2">1,500</button>
+										<button type="button" class="btn-sub2 c2">2,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 요양/치매 # -->
+				<dl>
+					<dt class="tit">
+						<strong>요양/치매</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</dt>
+					<dd data-toggle="content">
+						<!-- 장기요양자금 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">장기요양자금(1급)</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>5,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">1,000</button>
+										<button type="button" class="btn-sub2 c2">2,000</button>
+										<button type="button" class="btn-sub2 c2">3,000</button>
+										<button type="button" class="btn-sub2 c2">5,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 장기요양자금 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">장기요양자금(1,2급)</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>3,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">500</button>
+										<button type="button" class="btn-sub2 c2">1,000</button>
+										<button type="button" class="btn-sub2 c2">2,000</button>
+										<button type="button" class="btn-sub2 c2">3,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 장기요양자금 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">장기요양자금(1,2,3,4급)</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>2,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">500</button>
+										<button type="button" class="btn-sub2 c2">1,000</button>
+										<button type="button" class="btn-sub2 c2">1,500</button>
+										<button type="button" class="btn-sub2 c2">2,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 경증이상치매 진단비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">경증이상치매 진단비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>1,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">500</button>
+										<button type="button" class="btn-sub2 c2">1,000</button>
+										<button type="button" class="btn-sub2 c2">1,500</button>
+										<button type="button" class="btn-sub2 c2">2,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 실손 의료비 # -->
+				<dl>
+					<dt class="tit">
+						<strong>실손 의료비</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</dt>
+					<dd data-toggle="content">
+						<!-- 상해입원의료비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">상해입원의료비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<div class="text num1">
+									<input type="tel" title="설정금액(만원)">
+									<span class="util1">만원</span>
+								</div>
+								<dd class="side data-num1"><span>표준금액</span><strong>5,000</strong><span>만원</span></dd>
+							</dl>
+						</fieldset>
+
+						<!-- 상해통원의료비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">상해통원의료비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<div class="text num1">
+									<input type="tel" title="설정금액(만원)">
+									<span class="util1">만원</span>
+								</div>
+								<dd class="side data-num1"><span>표준금액</span><strong>30</strong><span>만원</span></dd>
+							</dl>
+						</fieldset>
+
+						<!-- 질병입원의료비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">질병입원의료비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<div class="text num1">
+									<input type="tel" title="설정금액(만원)">
+									<span class="util1">만원</span>
+								</div>
+								<dd class="side data-num1"><span>표준금액</span><strong>5,000</strong><span>만원</span></dd>
+							</dl>
+						</fieldset>
+
+						<!-- 질병통원의료비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">질병통원의료비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<div class="text num1">
+									<input type="tel" title="설정금액(만원)">
+									<span class="util1">만원</span>
+								</div>
+								<dd class="side data-num1"><span>표준금액</span><strong>30</strong><span>만원</span></dd>
+							</dl>
+						</fieldset>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 수술비 # -->
+				<dl>
+					<dt class="tit">
+						<strong>수술비</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</dt>
+					<dd data-toggle="content">
+						<!-- 상해 수술비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">상해 수술비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>100</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">50</button>
+										<button type="button" class="btn-sub2 c2">100</button>
+										<button type="button" class="btn-sub2 c2">150</button>
+										<button type="button" class="btn-sub2 c2">200</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 질병 수술비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">질병 수술비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>30</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">10</button>
+										<button type="button" class="btn-sub2 c2">20</button>
+										<button type="button" class="btn-sub2 c2">30</button>
+										<button type="button" class="btn-sub2 c2">50</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 입원비 # -->
+				<dl>
+					<dt class="tit">
+						<strong>입원비</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</dt>
+					<dd data-toggle="content">
+						<!-- 질병입원비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">질병입원비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>3</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">1</button>
+										<button type="button" class="btn-sub2 c2">2</button>
+										<button type="button" class="btn-sub2 c2">3</button>
+										<button type="button" class="btn-sub2 c2">5</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 질병중환자실입원비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">질병중환자실입원비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>10</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">10</button>
+										<button type="button" class="btn-sub2 c2">20</button>
+										<button type="button" class="btn-sub2 c2">30</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 간병인사용/지원 질병입원비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">간병인사용/지원 질병입원비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>12</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">5</button>
+										<button type="button" class="btn-sub2 c2">8</button>
+										<button type="button" class="btn-sub2 c2">10</button>
+										<button type="button" class="btn-sub2 c2">12</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 상해입원비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">상해입원비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>3</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">1</button>
+										<button type="button" class="btn-sub2 c2">2</button>
+										<button type="button" class="btn-sub2 c2">3</button>
+										<button type="button" class="btn-sub2 c2">5</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 상해중환자실입원비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">상해중환자실입원비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>10</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">10</button>
+										<button type="button" class="btn-sub2 c2">20</button>
+										<button type="button" class="btn-sub2 c2">30</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 간병인사용/지원 상해입원비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">간병인사용/지원 상해입원비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>12</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">5</button>
+										<button type="button" class="btn-sub2 c2">8</button>
+										<button type="button" class="btn-sub2 c2">10</button>
+										<button type="button" class="btn-sub2 c2">12</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 운전자 # -->
+				<dl>
+					<dt class="tit">
+						<strong>운전자</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</dt>
+					<dd data-toggle="content">
+						<!-- 교통사고처리지원금 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">교통사고처리지원금</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>10,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">10,000</button>
+										<button type="button" class="btn-sub2 c2">15,000</button>
+										<button type="button" class="btn-sub2 c2">20,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 교통사고 벌금(대인) -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">교통사고 벌금(대인)</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>3,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">2,000</button>
+										<button type="button" class="btn-sub2 c2">3,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 교통사고 벌금(대물) -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">교통사고 벌금(대물)</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>500</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">500</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 자동차사고 변호사 선임비용 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">자동차사고 변호사 선임비용</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>2,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">2,000</button>
+										<button type="button" class="btn-sub2 c2">3,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 자동차사고부상위로금(14급) -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">자동차사고부상위로금(14급)</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>50</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">10</button>
+										<button type="button" class="btn-sub2 c2">20</button>
+										<button type="button" class="btn-sub2 c2">30</button>
+										<button type="button" class="btn-sub2 c2">50</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # 기타 # -->
+				<dl>
+					<dt class="tit">
+						<strong>기타</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</dt>
+					<dd data-toggle="content">
+						<!-- 응급실내원비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">응급실내원비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>5</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">2</button>
+										<button type="button" class="btn-sub2 c2">3</button>
+										<button type="button" class="btn-sub2 c2">5</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 화상진단비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">화상진단비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>20</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">10</button>
+										<button type="button" class="btn-sub2 c2">20</button>
+										<button type="button" class="btn-sub2 c2">30</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 골절진단비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">골절진단비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>30</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">10</button>
+										<button type="button" class="btn-sub2 c2">20</button>
+										<button type="button" class="btn-sub2 c2">30</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 깁스치료비 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">깁스치료비</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>30</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">10</button>
+										<button type="button" class="btn-sub2 c2">20</button>
+										<button type="button" class="btn-sub2 c2">30</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 화재 벌금 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">화재 벌금</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>2,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">2,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+
+						<!-- 일상생활 배상책임 -->
+						<fieldset class="form-wrap1">
+							<legend class="tit2">일상생활 배상책임</legend>
+							<dl class="form">
+								<dt>설정금액</dt>
+								<dd class="side data-num1"><span>표준금액</span><strong>10,000</strong><span>만원</span></dd>
+								<dd>
+									<div class="text num1">
+										<input type="tel" title="설정금액(만원)">
+										<span class="util1">만원</span>
+									</div>
+									<div class="area-btn1">
+										<button type="button" class="btn-sub2 c2">10,000</button>
+									</div>
+								</dd>
+							</dl>
+						</fieldset>
+						<!-- // -->
+					</dd>
+				</dl>
+				<!-- # // # -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">초기화</button>
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	/* ************************************
+	* 샘플 : 전체펼침/닫기 스크립트
+	************************************ */
+	/* 토글영역 */
+	var _toggle = $plugin.togglecon('.area-toggle1 > dl',{
+		selector_group : false,
+		callback_load : function(){
+			$('[data-mode]').attr('data-mode','close').text('전체닫힘');
+		},
+		callback_after :function(){
+			$('[data-mode]').attr('data-mode','open').text('전체펼침');
+		}
+	});
+
+	/* 펼침/닫기 버튼 클릭 이벤트 */
+	$(document).off('click.open').on('click.open','[data-mode]',function(){
+		var _el_value = $(this).attr('data-mode');
+		var _el_cont = $('.area-toggle1');
+
+		if(_el_value == 'open') {
+			$(this).attr('data-mode','close').text('전체닫힘');
+			_el_cont.find('[aria-expanded="false"]').trigger('click');
+		}else{
+			$(this).attr('data-mode','open').text('전체펼침');
+			_el_cont.find('[aria-expanded="true"]').trigger('click');
+		}
+	});
+//-->
+</script>
+</body>
+</html>

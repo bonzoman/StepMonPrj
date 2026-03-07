@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>푸시 관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220418">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-28]	① 문구 수정
+						② 검색, 목록에 구분 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">푸시 통계</h2><!-- [M 2022-11-28] 문구 수정 -->
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="sub">
+				<a href="#none" class="btn-action c3">푸시 관리</a>
+			</div>
+			<div class="tab-wrap">
+				<ul class="tab2">
+					<li><a href="#tab2-1" class="current">설계사 APP</a></li>
+					<li><a href="#tab2-2">도입 APP</a></li>
+				</ul>
+				<div id="tab2-1" class="tab-cont">
+					
+					<fieldset class="form-search1">
+						<div class="form-field">
+							<!-- [M 2022-11-28] 구분 추가 -->
+							<dl class="form">
+								<dt>구분</dt>
+								<dd>
+									<div class="form-row">
+										<select name="" id="" class="selectbox" style="width:80px;">
+											<option value="">전체</option>
+											<option value="">일반</option>
+											<option value="">시스템</option>
+										</select>
+									</div>
+								</dd>
+							</dl>
+							<!-- //[M 2022-11-28] 구분 추가 -->
+							<dl class="form">
+								<dt>푸시명</dt>
+								<dd>
+									<div class="form-row">
+										<input type="text" class="text" style="width:300px;" name="" id="" placeholder="푸사명을 입력해주세요.">
+										<label class="label-check">
+											<input type="checkbox" name="f11">
+											<span>광고</span>
+										</label>
+									</div>
+								</dd>
+							</dl>
+							
+							<dl class="form w2">
+								<dt>날짜</dt>
+								<dd>
+									<div class="form-row">
+										<select name="" id="" class="selectbox" style="width:80px;">
+											<option value="">전체</option>
+											<option value="">등록일</option>
+											<option value="">발송일</option>
+										</select>
+										<span class="date-range">
+											<input type="text" data-role="start" placeholder="시작일 선택">
+											<span class="util">~</span>
+											<input type="text" data-role="end" placeholder="종료일 선택">
+										</span>
+										<span class="list-dot1">기간은 <strong class="point1">최대 1달까지</strong> 설정 가능합니다.</span><!-- [M 2022-11-28] 문구 수정 -->
+									</div>
+								</dd>
+							</dl>
+						</div>
+
+						<div class="area-action">
+							<button type="button" class="btn-action c1">검색</button>
+						</div>
+					</fieldset>
+					
+					<div class="tit-sub2">
+						<h3 class="">전체 1200개</h3>
+                        <div class="sub">
+                            <button type="button" class="btn-sub1 c3">푸시 통계 다운로드</button>
+                        </div>
+					</div>
+					<div class="tbl-list1">
+						<table>
+							<colgroup>
+								<col style="width:60px;">
+								<col style="width:100px;"><!-- [M 2022-11-28] 구분 추가 -->
+								<col>
+								<col style="width:100px;">
+								<col style="width:120px;">
+								<col style="width:120px;">
+								<col style="width:60px;">
+								<col style="width:80px;">
+								<col style="width:80px;">
+								<col style="width:80px;">
+								<col style="width:60px;">
+								<col style="width:60px;">
+								<col style="width:80px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"><span class="sort">번호</span></th>
+									<th scope="col">구분</th><!-- [M 2022-11-28] 구분 추가 -->
+									<th scope="col"><span class="sort">푸시명</span></th>
+									<th scope="col"><span class="sort">등록자</span></th>
+									<th scope="col"><span class="sort">등록일</span></th>
+									<th scope="col"><span class="sort">발송일</span></th>
+									<th scope="col">광고</th>
+									<th scope="col">등록자수</th>
+									<th scope="col">발신수</th>
+									<th scope="col">수신자수</th>
+									<th scope="col">차단</th>
+									<th scope="col">기타</th>
+									<th scope="col"><span class="sort">수신률</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>일반</td><!-- [M 2022-11-28] 구분 추가 -->
+									<td>푸시 이름1</td>
+									<td>김크림(****123)</td>
+									<td>2022.02.22</td>
+									<td>2022.02.22(22:22)</td>
+									<td>N</td>
+									<td>100</td>
+									<td>98</td>
+									<td>90</td>
+									<td>8</td>
+									<td>2</td>
+									<td>90.0%</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>시스템</td><!-- [M 2022-11-28] 구분 추가 -->
+									<td>푸시 이름1</td>
+									<td>김크림(****123)</td>
+									<td>2022.02.22</td>
+									<td>2022.02.22(22:22)</td>
+									<td>N</td>
+									<td>100</td>
+									<td>98</td>
+									<td>90</td>
+									<td>8</td>
+									<td>2</td>
+									<td>90.0%</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>시스템</td>
+									<td>푸시 이름1</td>
+									<td>김크림(****123)</td>
+									<td>2022.02.22</td>
+									<td>2022.02.22(22:22)</td>
+									<td>Y</td>
+									<td>100</td>
+									<td>98</td>
+									<td>90</td>
+									<td>8</td>
+									<td>2</td>
+									<td>90.0%</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>일반</td>
+									<td>푸시 이름1</td>
+									<td>김크림(****123)</td>
+									<td>2022.02.22</td>
+									<td>2022.02.22(22:22)</td>
+									<td>Y</td>
+									<td>100</td>
+									<td>98</td>
+									<td>90</td>
+									<td>8</td>
+									<td>2</td>
+									<td>90.0%</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>일반</td>
+									<td>푸시 이름1</td>
+									<td>김크림(****123)</td>
+									<td>2022.02.22</td>
+									<td>2022.02.22(22:22)</td>
+									<td>Y</td>
+									<td>100</td>
+									<td>98</td>
+									<td>90</td>
+									<td>8</td>
+									<td>2</td>
+									<td>90.0%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+
+					<div class="paging">
+						<a class="ic_first disabled"></a>
+						<a class="ic_prev disabled"></a>
+						<span class="num current">1</span>
+						<a href="#" class="num">2</a>
+						<a href="#" class="num">3</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="num">9</a>
+						<a href="#" class="num">10</a>
+						<a href="#" class="ic_next"></a>
+						<a href="#" class="ic_last"></a>
+					</div>
+				</div>
+				<div id="tab2-2" class="tab-cont">
+					
+					<fieldset class="form-search1">
+						<div class="form-field">
+							<!-- [M 2022-11-28] 구분 추가 -->
+							<dl class="form">
+								<dt>구분</dt>
+								<dd>
+									<div class="form-row">
+										<select name="" id="" class="selectbox" style="width:80px;">
+											<option value="">전체</option>
+											<option value="">일반</option>
+											<option value="">시스템</option>
+										</select>
+									</div>
+								</dd>
+							</dl>
+							<!-- //[M 2022-11-28] 구분 추가 -->
+							<dl class="form">
+								<dt>푸시명</dt>
+								<dd>
+									<div class="form-row">
+										<input type="text" class="text" style="width:300px;" name="" id="" placeholder="푸사명을 입력해주세요.">
+										<label class="label-check">
+											<input type="checkbox" name="f11">
+											<span>광고</span>
+										</label>
+									</div>
+								</dd>
+							</dl>
+							
+							<dl class="form w2">
+								<dt>날짜</dt>
+								<dd>
+									<div class="form-row">
+										<select name="" id="" class="selectbox" style="width:80px;">
+											<option value="">전체</option>
+											<option value="">등록일</option>
+											<option value="">발송일</option>
+										</select>
+										<span class="date-range">
+											<input type="text" data-role="start" placeholder="시작일 선택">
+											<span class="util">~</span>
+											<input type="text" data-role="end" placeholder="종료일 선택">
+										</span>
+										<span class="list-dot1">기간은 <strong class="point1">최대 1년까지</strong> 설정 가능합니다.</span>
+									</div>
+								</dd>
+							</dl>
+						</div>
+
+						<div class="area-action">
+							<button type="button" class="btn-action c1">검색</button>
+						</div>
+					</fieldset>
+					
+					<div class="tit-sub2">
+						<h3 class="">전체 1200개</h3>
+                        <div class="sub">
+                            <button type="button" class="btn-sub1 c3">푸시 통계 다운로드</button>
+                        </div>
+					</div>
+					<div class="tbl-list1">
+						<table>
+							<colgroup>
+								<col style="width:60px;">
+								<col style="width:100px;"><!-- [M 2022-11-28] 구분 추가 -->
+								<col>
+								<col style="width:100px;">
+								<col style="width:120px;">
+								<col style="width:120px;">
+								<col style="width:60px;">
+								<col style="width:80px;">
+								<col style="width:80px;">
+								<col style="width:80px;">
+								<col style="width:60px;">
+								<col style="width:60px;">
+								<col style="width:80px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"><span class="sort">번호</span></th>
+									<th scope="col">구분</th><!-- [M 2022-11-28] 구분 추가 -->
+									<th scope="col"><span class="sort">푸시명</span></th>
+									<th scope="col"><span class="sort">등록자</span></th>
+									<th scope="col"><span class="sort">등록일</span></th>
+									<th scope="col"><span class="sort">발송일</span></th>
+									<th scope="col">광고</th>
+									<th scope="col">등록자수</th>
+									<th scope="col">발신수</th>
+									<th scope="col">수신자수</th>
+									<th scope="col">차단</th>
+									<th scope="col">기타</th>
+									<th scope="col"><span class="sort">수신률</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>일반</td><!-- [M 2022-11-28] 구분 추가 -->
+									<td>푸시 이름1</td>
+									<td>김크림(****123)</td>
+									<td>2022.02.22</td>
+									<td>2022.02.22(22:22)</td>
+									<td>N</td>
+									<td>100</td>
+									<td>98</td>
+									<td>90</td>
+									<td>8</td>
+									<td>2</td>
+									<td>90.0%</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>시스템</td><!-- [M 2022-11-28] 구분 추가 -->
+									<td>푸시 이름1</td>
+									<td>김크림(****123)</td>
+									<td>2022.02.22</td>
+									<td>2022.02.22(22:22)</td>
+									<td>N</td>
+									<td>100</td>
+									<td>98</td>
+									<td>90</td>
+									<td>8</td>
+									<td>2</td>
+									<td>90.0%</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>시스템</td><!-- [M 2022-11-28] 구분 추가 -->
+									<td>푸시 이름1</td>
+									<td>김크림(****123)</td>
+									<td>2022.02.22</td>
+									<td>2022.02.22(22:22)</td>
+									<td>Y</td>
+									<td>100</td>
+									<td>98</td>
+									<td>90</td>
+									<td>8</td>
+									<td>2</td>
+									<td>90.0%</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>일반</td><!-- [M 2022-11-28] 구분 추가 -->
+									<td>푸시 이름1</td>
+									<td>김크림(****123)</td>
+									<td>2022.02.22</td>
+									<td>2022.02.22(22:22)</td>
+									<td>Y</td>
+									<td>100</td>
+									<td>98</td>
+									<td>90</td>
+									<td>8</td>
+									<td>2</td>
+									<td>90.0%</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>일반</td><!-- [M 2022-11-28] 구분 추가 -->
+									<td>푸시 이름1</td>
+									<td>김크림(****123)</td>
+									<td>2022.02.22</td>
+									<td>2022.02.22(22:22)</td>
+									<td>Y</td>
+									<td>100</td>
+									<td>98</td>
+									<td>90</td>
+									<td>8</td>
+									<td>2</td>
+									<td>90.0%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+
+					<div class="paging">
+						<a class="ic_first disabled"></a>
+						<a class="ic_prev disabled"></a>
+						<span class="num current">1</span>
+						<a href="#" class="num">2</a>
+						<a href="#" class="num">3</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="num">9</a>
+						<a href="#" class="num">10</a>
+						<a href="#" class="ic_next"></a>
+						<a href="#" class="ic_last"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+</script>
+</body>
+</html>

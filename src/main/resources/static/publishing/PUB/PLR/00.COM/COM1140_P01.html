@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>편집 | 모아보기</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-25]	① sortable 버튼 추가
+	*					② 스크립트 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>편집</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [추가된 항목] -->
+		<!-- ######################### -->
+		<div class="list-t6">
+			<h2 class="tit">추가된 항목</h2>
+			<ul class="sortlist sortable">
+				<li>
+					<button type="button" class="btn1" onclick="ui.alert('삭제')">삭제</button>
+					<strong class="ic1">고객관리</strong>
+					<em class="list-btn">순서변경</em> <!-- 2022-10-25 마크업 추가 -->
+				</li>
+				<li>
+					<button type="button" class="btn1">삭제</button>
+					<strong class="ic2">장기신규 설계현황</strong>
+					<em class="list-btn">순서변경</em> <!-- 2022-10-25 마크업 추가 -->
+				</li>
+				<li>
+					<button type="button" class="btn1">삭제</button>
+					<strong class="ic3">자동차신규 설계현황</strong>
+					<em class="list-btn">순서변경</em> <!-- 2022-10-25 마크업 추가 -->
+				</li>
+				<li>
+					<button type="button" class="btn1">삭제</button>
+					<strong class="ic4">보장분석</strong>
+					<em class="list-btn">순서변경</em> <!-- 2022-10-25 마크업 추가 -->
+				</li>
+				<li>
+					<button type="button" class="btn1">삭제</button>
+					<strong class="ic5">계약관리</strong>
+					<em class="list-btn">순서변경</em> <!-- 2022-10-25 마크업 추가 -->
+				</li>
+				<li>
+					<button type="button" class="btn1">삭제</button>
+					<strong class="ic6">커뮤니티</strong>
+					<em class="list-btn">순서변경</em> <!-- 2022-10-25 마크업 추가 -->
+				</li>
+				<li>
+					<button type="button" class="btn1">삭제</button>
+					<strong class="ic7">일정관리</strong>
+					<em class="list-btn">순서변경</em> <!-- 2022-10-25 마크업 추가 -->
+				</li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [추가 가능 항목] -->
+		<!-- ######################### -->
+		<div class="list-t6">
+			<h3 class="tit">추가 가능 항목</h3>
+			<ul class="sortlist">
+				<li>
+					<button type="button" class="btn2">추가</button>
+					<strong class="ic8">포인트&수수료</strong>
+				</li>
+				<li>
+					<button type="button" class="btn2">추가</button>
+					<strong class="ic9">실적현황</strong>
+				</li>
+				<li>
+					<button type="button" class="btn2">추가</button>
+					<strong class="ic10">추천강의</strong>
+				</li>
+				<li>
+					<button type="button" class="btn2">추가</button>
+					<strong class="ic11">만보기</strong>
+				</li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">완료</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+</main>
+
+<script>
+//<!--
+	//<!-- 2022-10-25 스크립트 추가 및 변경
+	// 스크롤감지
+	var isScrolling;
+
+	//Listen for scroll events
+	window.addEventListener('scroll', function ( event ) {
+		$('.list-btn').css("pointer-events","none");
+		// Clear our timeout throughout the scroll
+		window.clearTimeout( isScrolling );
+		// Set a timeout to run after scrolling ends
+		isScrolling = setTimeout(function() {
+			// Run the callback
+			$('.list-btn').css("pointer-events","all");
+		}, 66);
+	}, false);
+
+	//위치이동
+	$(".sortable").sortable({
+		axis:"y",
+		containment:"parent",
+		handle: ".list-btn",
+	});
+	//-->
+//-->
+</script>
+</body>
+</html>

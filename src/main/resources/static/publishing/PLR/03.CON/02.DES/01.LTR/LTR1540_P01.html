@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 담보설정 | 쉬운설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!-- 하이차트 라이브러리 -->
+<script src="../../../resource/js/chart/highcharts.js"></script>
+<script src="../../../resource/js/chart/data.js"></script>
+<!-- 차트 솔리드 게이지용 js 모듈 -->
+<script src="../../../resource/js/chart/highcharts-more.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-20]	① 만기설정영역 변경안될경우 추가
+	*	[M 2022-10-27]	① 툴팁 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>담보 설정</h1>
+			<button type="button" data-btn="pop-close">담보 설정 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- 2022-12-06 마크업 변경 -->
+			<div class="area-btn4 noti" data-scroll="btn" data-sticky="top">
+				<button type="button" class="btn-t1 c2 active" title="선택됨">암</button> <!-- [선택됨] -->
+				<button type="button" class="btn-t1 c2">뇌질환 <span class="icon-noti1 ic2">99</span></button>
+				<button type="button" class="btn-t1 c2">심장질환</button>
+				<button type="button" class="btn-t1 c2">사망.후유장애</button>
+				<button type="button" class="btn-t1 c2">암관련</button>
+				<button type="button" class="btn-t1 c2">심장질환</button>
+				<button type="button" class="btn-t1 c2">수술비</button>
+				<button type="button" class="btn-t1 c2">기타질병진단비</button>
+				<button type="button" class="btn-t1 c2">상해질병기타</button>
+				<button type="button" class="btn-t1 c2">운전자</button>
+				<button type="button" class="btn-t1 c2">골절/화상</button>
+				<button type="button" class="btn-t1 c2">요양</button>
+				<button type="button" class="btn-t1 c2">기타</button>
+			</div>
+			<!-- //2022-12-06 마크업 변경 -->
+
+			<!-- <div class="mes-info2 box t1"><p>아직 확인하지 않은 추가담보가 있어요.<br>상단 메뉴를 움직여 뱃지를 확인하세요.</p></div> 2022-12-09 삭제 -->
+			<div class="area-info1">
+				<div class="label-check1">
+					<label>
+						<input type="checkbox" class="chk-spider">
+						<span>컨설팅 적용</span>
+					</label>
+				</div>
+				<div class="side">
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">선택</span>
+						<span data-select="text" data-value="selectOpeion1">상위 30%</span>
+						</button>
+						<div class="list">
+							<div data-label="선택">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1"><span>상위 30%</span></label>
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion2"><span>상위 10%</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap-chart2">
+				<div id="Spider-Web2" data-chart="Spider-Web2" class="area-chart"></div>
+				<!-- guide script_chart.html 참조 -->
+				<p class="txt-bul4"><strong>충분 가입금액</strong>은 동일연령, 성별 직전 1년간 통계 자료입니다.</p>
+			</div>
+
+			<div>
+				<div class="wrap-section3">
+					<h2 class="tit-sub1">뇌졸중 진단비</h2>
+					<div class="mes-t1 box3">
+						<p>동일연령대비 <strong class="icon-state5 ic1">4,000만원이 부족해요.</strong></p>
+					</div>
+
+					<p class="mes-info2">보장분석 결과에 따라 아래 담보의 가입금액을 변경하세요.</p>
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">담보 추가</button>
+					</div>
+				</div>
+
+				<div class="wrap-section3">
+					<h2 class="tit-sub1">뇌혈관 질환 진단비</h2>
+					<div class="mes-t1 box3">
+						<p>동일연령대비 <strong class="icon-state5 ic2">준비가 잘 되어있어요.</strong></p>
+					</div>
+					<p class="mes-info2">보장분석 결과에 따라 아래 담보의 가입금액을 변경하세요.</p>
+
+					<fieldset class="form-wrap1">
+						<legend>가입금액변경</legend>
+
+						<dl class="form2 has-unit">
+							<dt>일반암진단비<a href="#uiTOOLTIPINFO1" class="icon-com2 ic1" data-btn="tooltip">일반암진단비 안내사항</a></dt> <!-- 2022-10-27 툴팁 변경 -->
+							<dd>
+								<div class="input-range1">
+									<!-- <div class="text num1">
+										<input type="tel" title="일반암진단비" data-range="1" placeholder="일반암진단비를 입력해주세요." value="1,500">
+										<span class="util">만원</span>
+									</div> -->
+									<div class="select-wrap t1" data-autoset="select">
+										<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false" onchange="myFunction(event)">
+											<span data-select="title">일반암진단비</span>
+											<span data-select="text" data-value="1200">0 만원</span>
+										</button>
+										<div class="list">
+											<div data-label="일반암진단비" data-autoset="form">
+												<div class="option">
+													<label><input type="radio" name="selectOpeion" value="200"><span>200만원</span></label>
+													<label><input type="radio" name="selectOpeion" value="1200"><span>1,200만원</span></label>
+													<label><input type="radio" name="selectOpeion" value="1500"><span>1,500만원</span></label>
+													<label><input type="radio" name="selectOpeion" value="2100"><span>2,100만원</span></label>
+													<label><input type="radio" name="selectOpeion" value="2700"><span>2,700만원</span></label>
+													<label><input type="radio" name="selectOpeion" value="3000"><span>3,000만원</span></label>
+												</div>
+												<button type="button" data-toggle="closebtn">확인</button>
+											</div>
+										</div>
+									</div>
+									<dl class="info2">
+										<dt>보험료</dt>
+										<dd><data value="0">0</data><span>원</span></dd>
+									</dl>
+									<div class="select-wrap" data-autoset="select">
+										<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false" disabled>
+											<span data-select="title">선택</span>
+											<span data-select="text" data-value="selectOpeion1-1">80세 만기</span>
+										</button>
+										<div class="list">
+											<div data-label="만기선택">
+												<div class="option">
+													<label><input type="radio" name="selectOpeion1" value="selectOpeion1-1"><span>100세 만기</span></label>
+													<label><input type="radio" name="selectOpeion1" value="selectOpeion1-2"><span>90세 만기</span></label>
+													<label><input type="radio" name="selectOpeion1" value="selectOpeion1-3"><span>80세 만기</span></label>
+												</div>
+												<button type="button" data-toggle="closebtn">확인</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- [범위설정]
+										min:최소금액
+										max:최대금액
+										step:설정단위
+									-->
+									<div class="range unit">
+										<span>
+											<input type="range" min="0" max="6" step="1" value="0" data-range="1" list="input_range1" data-rangeslider>
+										</span> <!-- [D] 샘플스크립트 하단 참고 -->
+									</div>
+									<div class="txt" aria-hidden="true"><span>0원</span><span>3,000만원</span></div>
+								</div>
+							</dd>
+							<dd class="side"><button type="button" class="btn-sub3 c2">삭제</button></dd>
+						</dl>
+
+						<dl class="form2">
+							<dt>고액암진단비<a href="#uiTOOLTIPINFO2" class="icon-com2 ic1" data-btn="tooltip">고액암진단비 안내사항</a><span class="icon-noti1 ic2">N</span></dt> <!-- 2022-12-06 변경 -->
+							<dd>
+								<div class="input-range1">
+									<div class="text num1">
+										<input type="tel" title="고액암진단비" data-range="1" placeholder="고액암진단비를 입력해주세요." value="1,500">
+										<span class="util">만원</span>
+									</div>
+									<dl class="info2">
+										<dt>보험료</dt>
+										<dd><data value="0">0</data><span>원</span></dd>
+									</dl>
+									<div class="select-wrap" data-autoset="select">
+										<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+											<span data-select="title">선택</span>
+											<span data-select="text" data-value="selectOpeion2-1">80세 만기</span>
+										</button>
+										<div class="list">
+											<div data-label="만기 선택">
+												<div class="option">
+													<label><input type="radio" name="selectOpeion2" value="selectOpeion2-1"><span>100세 만기</span></label>
+													<label><input type="radio" name="selectOpeion2" value="selectOpeion2-2"><span>90세 만기</span></label>
+													<label><input type="radio" name="selectOpeion2" value="selectOpeion2-3"><span>80세 만기</span></label>
+												</div>
+												<button type="button" data-toggle="closebtn">확인</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="range">
+										<span><input type="range" min="0" max="10000" step="1" value="0" data-range="1"></span>
+									</div>
+									<div class="txt" aria-hidden="true"><span>0원</span><span>1억</span></div>
+								</div>
+							</dd>
+							<dd class="side"><button type="button" class="btn-sub3 c2">삭제</button></dd>
+						</dl>
+					</fieldset>
+
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">담보 추가</button>
+					</div>
+				</div>
+
+				<div class="wrap-section3">
+					<h2 class="tit-sub1">뇌졸중 진단비</h2>
+					<div class="mes-t1 box3">
+						<p>동일연령대비 <strong class="icon-state5 ic1">4,000만원이 부족해요</strong></p>
+					</div>
+					<p class="mes-info2">보장분석 결과에 따라 아래 담보의 가입금액을 변경하세요.</p>
+
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">담보 추가</button>
+					</div>
+				</div>
+
+				<div class="wrap-section3">
+					<h2 class="tit-sub1">암 입원비</h2>
+					<div class="mes-t1 box3">
+						<p>동일연령대비 <strong class="icon-state5 ic1">4,000만원이 부족해요</strong></p>
+					</div>
+					<p class="mes-info2">보장분석 결과에 따라 아래 담보의 가입금액을 변경하세요.</p>
+
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">담보 추가</button>
+					</div>
+				</div>
+
+				<div class="wrap-section3">
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">변경한 담보 적용</button>
+					</div>
+				</div>
+
+				<div class="wrap-section3">
+					<div class="tit-sub2">
+						<h3>추가 속성 필요</h3>
+						<div class="side">
+							<strong>1건</strong>
+							<span class="txt-c2">입력완료</span>
+						</div>
+					</div>
+					<div class="area-btn1">
+						<button type="button" class="btn-com1">추가속성 입력</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<!-- [CASE1] -->
+			<div class="area-action col" data-sticky="bottom">
+				<button type="button" class="btn-action ic17 simple">지침체크</button>
+				<button type="button" class="btn-action c3">담보추가</button>
+				<button type="button" class="btn-action c1">담보 설정완료</button>
+			</div>
+			<!-- [CASE2]
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c3">담보추가</button>
+				<button type="button" class="btn-action c1">담보 설정완료</button>
+			</div>
+			-->
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- 2022-10-27 툴팁 추가 -->
+<!-- ######################### -->
+<!-- [툴팁영역] CASE 타이틀 텍스트 있는경우 -->
+<!-- ######################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>제목제목제목</dt>
+		<dd>내용내용내용내용내용내용내용</dd>
+		<dd><button type="button" data-btn="pop-close">보험생일(상령일) 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+
+<!-- [툴팁영역] 툴팀 샘플 -->
+<!-- ######################### -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>제목제목제목</dt>
+		<dd>내용내용내용내용내용내용내용</dd>
+		<dd><button type="button" data-btn="pop-close">보험생일(상령일) 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+
+<!-- //2022-10-27 툴팁 추가 -->
+<script>
+	$(function(){
+		/* **********************
+			샘플 : range
+		************************ */
+		//입력 후 변경
+		$(document).on('blur','.input-range1 .text input[data-range="1"]',function(){
+			var _val = $(this).val().replace(',','');
+			$(this).parents('.input-range1').find('.range input').val(_val).change();
+			ui.formInput();
+		});		
+
+		//이벤트
+		$(document).on('change','.input-range1 .range:not(.unit) input',function(){
+			exFunction(this);
+		});
+		$(document).on('input','.input-range1 .range:not(.unit) input', function(){
+			exFunction(this);
+		});
+
+		//보험료 텍스트 변경
+		function exFunction(el){
+			var _val = $(el).val() + '0000';
+			_val = _val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+			if(_val == '00,000') _val = 0;
+			$(el).parents('.input-range1').find('.info2 data').val(_val).text(_val);
+		}
+
+		function unitRangeInit() {
+			var arrUnitWonVal = [];
+	
+			$(document).off('click.hasunit').on('click.hasunit', '.form2.has-unit button[data-toggle="closebtn"]', function() {
+				var self = $(this);
+				var formWrap = self.closest('.form2.has-unit');
+				var formList = formWrap.find('.list');
+				var inputRadio = formList.find(':radio[name="selectOpeion"]:checked');
+				var rangeEl = formWrap.find('.input-range1 .range.unit input');
+				var idx = arrUnitWonVal.indexOf(inputRadio.val());
+				if(idx === -1) {
+					rangeEl.val(0);
+					$('.input-range1 .range.unit input').trigger('change');
+					MARS.common.formInput()
+				} else {
+					rangeEl.val(idx + 1);
+					$('.input-range1 .range.unit input').trigger('change');
+					MARS.common.formInput()
+				}
+			});
+			function moneyCommaExchange(won) {
+				var _val = String(won * 10000);
+				_val = _val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+				if(_val == '00,000') _val = 0;
+				return _val
+			}
+			$(document).on('input change','.input-range1 .range.unit input',function(e){
+				var self = $(this);
+				var numberWon = 0;
+				var formWrap = self.closest('.form2.has-unit');
+				var selectBtn = formWrap.find('button[data-toggle="selectbtn"]');
+				var selectBtnData = selectBtn && selectBtn.find('span[data-value]') ? selectBtn.find('span[data-value]').data('value') : null;
+				var selectWrap = formWrap.find('.select-wrap.t1');
+				var infoData = formWrap.find('.info2 data');
+				var selectTextEl = selectWrap.find('.selectbox span[data-select="text"]');
+				var formList = formWrap.find('.list');
+				var inputRadio = formList.find(':radio[name="selectOpeion"]');
+				if(arrUnitWonVal.length === 0) {
+					arrUnitWonVal = $.map(inputRadio, function(el, i) {
+						return $(el).val()
+					})	
+				} 
+				if(selectTextEl) {
+					var idxof = arrUnitWonVal.indexOf(String(selectBtnData));
+					if(idxof !== -1 && self.data('init-unit-select') !== 'loaded') {
+						self.val(idxof + 1);
+						MARS.common.formInput()
+					}
+					if(self.val() == 0) {
+						inputRadio.prop('checked', false);
+						numberWon = 0
+						selectTextEl.text(numberWon + " 만원")
+						infoData.val(numberWon).text(numberWon );
+					} else {
+						numberWon = arrUnitWonVal[self.val() - 1];
+						inputRadio.prop('checked', false);
+						inputRadio.eq(self.val() - 1).prop('checked', true);
+						selectTextEl.text(inputRadio.eq(self.val() - 1).next().text().slice(0,-2) + " 만원")
+						infoData.val(numberWon).text(moneyCommaExchange(numberWon));
+					}
+					selectTextEl.attr('data-value', numberWon);
+					if(self.data('init-unit-select') !== 'loaded') {
+						self.data('init-unit-select','loaded');
+					} 
+				}
+			});
+			$('.input-range1 .range.unit input').trigger('change');
+		}
+		unitRangeInit();
+
+		/* **********************
+			샘플 : 컨설팅 적용
+		************************ */
+		var series = chartSpider.series[2];
+		function chkSeries(){
+			if($(".chk-spider").prop('checked')){ //체크되었을때
+				$('[data-chart="Spider-Web2"]').addClass('active');
+				series.show();
+			}else{ //체크안되었을때
+				$('[data-chart="Spider-Web2"]').removeClass('active');
+				series.hide();
+			};
+		}
+		chkSeries();
+		$('.chk-spider').on('click',function(){
+			chkSeries();
+		});
+		
+		function myFunction(e) {
+			$('[type="range"]').value() = e.target.value;
+		}
+
+		$("#theSelect").change(function() {
+			$("#someInput").val($(this).val());
+		}).change();
+	});
+
+	const chartSpider = Highcharts.chart("Spider-Web2", {
+		chart:{
+			polar:true, //극선
+		},
+		xAxis:{
+			tickmarkPlacement:'on',
+			categories:["뇌출혈진단비","뇌졸중<br>진단비","뇌혈관질환진단비","뇌졸중진단비","암<br>입원비"],
+		},
+		yAxis:{
+			gridLineInterpolation:"polygon", //다각형 모양 지정
+			tickInterval:10, //다각형 라인 간격
+		},
+		legend:{
+			verticalAlign:"top",
+			align:'left',
+			layout:"horizontal"
+		}, //범례 상단 왼쪽 정렬
+		series:[{
+			name:"충분가입금액",
+			data:[60, 59, 52, 51, 66],
+			pointPlacement:"on"
+		}, {
+			name:"기존가입금액",
+			data:[50, 39, 42, 51, 46],
+			zIndex:1, //제일위에 위치
+			pointPlacement:"on",
+		}, {
+			name:"컨설팅 금액",
+			data:[30, 29, 32, 41, 36],
+			zIndex:2, //zIndex 위치
+			pointPlacement:"on",
+		}],
+		responsive:{
+			rules: [{
+				condition:{maxWidth: 720}, //차트 최대사이즈
+				chartOptions:{
+					pane:{size:'70%'} //차트영역 사이즈 : label이 짤림을 막기 위해 적용
+				}
+			}]
+		}
+	});
+</script>
+</body>
+</html>

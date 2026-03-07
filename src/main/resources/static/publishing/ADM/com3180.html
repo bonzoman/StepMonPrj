@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>설문 관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220418">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-23]	추가버튼 위치 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">설문 관리</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="tab-wrap">
+				<ul class="tab2">
+					<li><a href="#tab2-1" class="current">설계사 APP</a></li>
+					<li><a href="#tab2-2">도입 APP</a></li>
+				</ul>
+				<div id="tab2-1" class="tab-cont">
+					
+					<fieldset class="form-search1">
+						<div class="form-field">
+							<dl class="form w1">
+								<dt>설문 ID</dt>
+								<dd>
+									<div class="form-row">
+										<input type="text" class="text" style="width:200px;" name="" id="" placeholder="설문 ID를 입력해주세요.">
+									</div>
+								</dd>
+							</dl>
+							<dl class="form w1">
+								<dt>등록자</dt>
+								<dd>
+									<div class="form-row">
+										<input type="text" class="text" style="width:200px;" name="" id="" placeholder="등록자명을 입력해주세요.">
+									</div>
+								</dd>
+							</dl>
+							<dl class="form w1">
+								<dt>노출여부</dt>
+								<dd>
+									<div class="form-row">
+                                        <label class="label-check">
+                                            <input type="radio" name="fr1" checked>
+                                            <span>Y</span>
+                                        </label>
+                                        <label class="label-check">
+                                            <input type="radio" name="fr1">
+                                            <span>N</span>
+                                        </label>
+                                    </div>
+								</dd>
+							</dl>
+							<dl class="form w1">
+								<dt>설문 형태</dt>
+								<dd>
+									<div class="form-row">
+										<select name="" id="" class="selectbox" style="width:200px;">
+                                            <option hidden selected value="">형태를 선택해주세요.</option>
+                                            <option value="">실명</option>
+                                            <option value="">익명</option>
+                                        </select>
+									</div>
+								</dd>
+							</dl>
+							<dl class="form w2">
+								<dt>설문명</dt>
+								<dd>
+									<div class="form-row">
+										<input type="text" class="text" style="width:400px;" name="" id="" placeholder="설문명을 입력해주세요.">
+									</div>
+								</dd>
+							</dl>
+						</div>
+
+						<div class="area-action">
+							<button type="button" class="btn-action c1">검색</button>
+						</div>
+					</fieldset>
+
+
+					
+					<div class="tit-sub2">
+						<h3 class="">전체 1200개</h3>
+						<!-- 2022-11-23 추가버튼 위치변경 -->
+						<div class="sub">
+							<button type="button" class="btn-action c1">추가</button>
+						</div>
+						<!-- //2022-11-23 추가버튼 위치변경 -->
+					</div>
+					<div class="tbl-list1">
+						<table>
+							<colgroup>
+                                <col style="width:80px;">
+                                <col style="width:100px;">
+                                <col>
+                                <col style="width:120px;">
+                                <col>
+                                <col style="width:100px;"> <!-- 2022-12-19 추가 -->
+								<col style="width:200px;">
+                                <col style="width:100px;">
+                                <col style="width:80px;">
+                                <col style="width:100px;">
+							</colgroup>
+							<thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">설문 ID</th>
+                                    <th scope="col">설문명(설문형태)</th>
+                                    <th scope="col">등록자</th>
+                                    <th scope="col">노출기간</th>
+                                    <th scope="col">등록날짜</th>
+									<th scope="col">참여인원/총원수</th> <!-- 2022-12-19 추가 -->
+                                    <th scope="col">참여율</th>
+                                    <th scope="col">노출</th>
+                                    <th scope="col">결과</th>
+                                </tr>
+							</thead>
+							<tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>POP00011</td>
+                                    <td>교육 안내 설문(익명)</td>
+                                    <td>관리자(******57)</td>
+                                    <td>2022.02.22~9999.99.99</td>
+                                    <td>2022.02.22</td>
+									<td>55/100</td> <!-- 2022-12-19 추가 -->
+                                    <td>55%</td>
+                                    <td>Y</td>
+                                    <td><button type="button" class="btn-sub1 c3">보기</button></td>
+                                </tr>
+                                <!--/ 대기 상태 /-->
+                                <tr class="row-point1">
+                                    <td>1</td>
+                                    <td>POP00011</td>
+                                    <td>교육 안내 설문(익명)</td>
+                                    <td>관리자(******57)</td>
+                                    <td>2022.02.22~9999.99.99</td>
+                                    <td>2022.02.22</td>
+									<td>55/100</td> <!-- 2022-12-19 추가 -->
+                                    <td>55%</td>
+                                    <td>Y</td>
+                                    <td><button type="button" class="btn-sub1 c3">보기</button></td>
+                                </tr>
+                                <!--/ 중단 상태 /-->
+                                <tr class="row-point2">
+                                    <td>1</td>
+                                    <td>POP00011</td>
+                                    <td>교육 안내 설문(익명)</td>
+                                    <td>관리자(******57)</td>
+                                    <td>2022.02.22~9999.99.99</td>
+                                    <td>2022.02.22</td>
+									<td>55/100</td> <!-- 2022-12-19 추가 -->
+                                    <td>55%</td>
+                                    <td>Y</td>
+                                    <td><button type="button" class="btn-sub1 c3">보기</button></td>
+                                </tr>
+                                <!--/ 종료 상태 /-->
+                                <tr class="row-point3">
+                                    <td>1</td>
+                                    <td>POP00011</td>
+                                    <td>교육 안내 설문(익명)</td>
+                                    <td>관리자(******57)</td>
+                                    <td>2022.02.22~9999.99.99</td>
+                                    <td>2022.02.22</td>
+									<td>55/100</td> <!-- 2022-12-19 추가 -->
+                                    <td>55%</td>
+                                    <td>Y</td>
+                                    <td><button type="button" class="btn-sub1 c3">보기</button></td>
+                                </tr>
+							</tbody>
+						</table>
+					</div>
+					
+
+					<div class="paging">
+						<a class="ic_first disabled"></a>
+						<a class="ic_prev disabled"></a>
+						<span class="num current">1</span>
+						<a href="#" class="num">2</a>
+						<a href="#" class="num">3</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="num">9</a>
+						<a href="#" class="num">10</a>
+						<a href="#" class="ic_next"></a>
+						<a href="#" class="ic_last"></a>
+					</div>
+				</div>
+				<div id="tab2-2" class="tab-cont">
+					
+					<fieldset class="form-search1">
+						<div class="form-field">
+							<dl class="form w1">
+								<dt>설문 ID</dt>
+								<dd>
+									<div class="form-row">
+										<input type="text" class="text" style="width:200px;" name="" id="" placeholder="설문 ID를 입력해주세요.">
+									</div>
+								</dd>
+							</dl>
+							<dl class="form w1">
+								<dt>등록자</dt>
+								<dd>
+									<div class="form-row">
+										<input type="text" class="text" style="width:200px;" name="" id="" placeholder="등록자명을 입력해주세요.">
+									</div>
+								</dd>
+							</dl>
+							<dl class="form w1">
+								<dt>노출여부</dt>
+								<dd>
+									<div class="form-row">
+                                        <label class="label-check">
+                                            <input type="radio" name="fr1" checked>
+                                            <span>Y</span>
+                                        </label>
+                                        <label class="label-check">
+                                            <input type="radio" name="fr1">
+                                            <span>N</span>
+                                        </label>
+                                    </div>
+								</dd>
+							</dl>
+							<dl class="form w1">
+								<dt>설문 형태</dt>
+								<dd>
+									<div class="form-row">
+										<select name="" id="" class="selectbox" style="width:200px;">
+                                            <option hidden selected value="">형태를 선택해주세요.</option>
+                                            <option value="">실명</option>
+                                            <option value="">익명</option>
+                                        </select>
+									</div>
+								</dd>
+							</dl>
+							<dl class="form w2">
+								<dt>설문명</dt>
+								<dd>
+									<div class="form-row">
+										<input type="text" class="text" style="width:400px;" name="" id="" placeholder="설문명을 입력해주세요.">
+									</div>
+								</dd>
+							</dl>
+						</div>
+
+						<div class="area-action">
+							<button type="button" class="btn-action c1">검색</button>
+						</div>
+					</fieldset>
+
+
+					
+					<div class="tit-sub2">
+						<h3 class="">전체 1200개</h3>
+						<!-- 2022-11-23 추가버튼 위치변경 -->
+						<div class="sub">
+							<button type="button" class="btn-action c1">추가</button>
+						</div>
+						<!-- //2022-11-23 추가버튼 위치변경 -->
+					</div>
+					<div class="tbl-list1">
+						<table>
+							<colgroup>
+                                <col style="width:80px;">
+                                <col style="width:100px;">
+                                <col>
+                                <col style="width:120px;">
+                                <col>
+                                <col style="width:100px;">
+                                <col style="width:80px;">
+                                <col style="width:60px;">
+                                <col style="width:80px;">
+							</colgroup>
+							<thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">설문 ID</th>
+                                    <th scope="col">설문명(설문형태)</th>
+                                    <th scope="col">등록자</th>
+                                    <th scope="col">노출기간</th>
+                                    <th scope="col">등록날짜</th>
+                                    <th scope="col">참여율</th>
+                                    <th scope="col">노출</th>
+                                    <th scope="col">결과</th>
+                                </tr>
+							</thead>
+							<tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>POP00011</td>
+                                    <td>교육 안내 설문(익명)</td>
+                                    <td>관리자(******57)</td>
+                                    <td>2022.02.22~9999.99.99</td>
+                                    <td>2022.02.22</td>
+                                    <td>55%</td>
+                                    <td>Y</td>
+                                    <td><button type="button" class="btn-sub1 c3">보기</button></td>
+                                </tr>
+                                <!--/ 대기 상태 /-->
+                                <tr class="row-point1">
+                                    <td>1</td>
+                                    <td>POP00011</td>
+                                    <td>교육 안내 설문(익명)</td>
+                                    <td>관리자(******57)</td>
+                                    <td>2022.02.22~9999.99.99</td>
+                                    <td>2022.02.22</td>
+                                    <td>55%</td>
+                                    <td>Y</td>
+                                    <td><button type="button" class="btn-sub1 c3">보기</button></td>
+                                </tr>
+                                <!--/ 중단 상태 /-->
+                                <tr class="row-point2">
+                                    <td>1</td>
+                                    <td>POP00011</td>
+                                    <td>교육 안내 설문(익명)</td>
+                                    <td>관리자(******57)</td>
+                                    <td>2022.02.22~9999.99.99</td>
+                                    <td>2022.02.22</td>
+                                    <td>55%</td>
+                                    <td>Y</td>
+                                    <td><button type="button" class="btn-sub1 c3">보기</button></td>
+                                </tr>
+                                <!--/ 종료 상태 /-->
+                                <tr class="row-point3">
+                                    <td>1</td>
+                                    <td>POP00011</td>
+                                    <td>교육 안내 설문(익명)</td>
+                                    <td>관리자(******57)</td>
+                                    <td>2022.02.22~9999.99.99</td>
+                                    <td>2022.02.22</td>
+                                    <td>55%</td>
+                                    <td>Y</td>
+                                    <td><button type="button" class="btn-sub1 c3">보기</button></td>
+                                </tr>
+							</tbody>
+						</table>
+					</div>
+					
+
+					<div class="paging">
+						<a class="ic_first disabled"></a>
+						<a class="ic_prev disabled"></a>
+						<span class="num current">1</span>
+						<a href="#" class="num">2</a>
+						<a href="#" class="num">3</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="num">9</a>
+						<a href="#" class="num">10</a>
+						<a href="#" class="ic_next"></a>
+						<a href="#" class="ic_last"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+</script>
+</body>
+</html>

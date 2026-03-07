@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>데일리퀴즈 | 도입</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-11]	1. '맞히면' 위치변경
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1 class="hide">데일리퀴즈</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="cnd1">
+		<div class="banner-box1 quiz">
+			<img src="../../resource/img/temp/@quiz_banner.png" alt="">
+			<div class="txt1">
+				<h2>데일리 퀴즈</h2>
+				<p>
+					<span>찬물로 머리를 감으면</span> <!-- 첫번째 줄 -->
+					<span>두피에 좋다?!</span> <!-- 두번째 줄 -->
+				</p>
+				<!--
+				관리자에서 등록한 문구를 줄 단위로 span 처리함 최대 3줄
+				<p>
+					<span>특정 암세포만 골라 </span>
+					<span>치료하는 최신 방식의</span>
+					<span>비급여 항목은?</span>
+				</p> -->
+			</div>
+		</div>
+		<div class="wrap-section1">
+			<h3 class="hide">문제 답변영역</h3>
+			<!--퀴즈유형 1 O/X -->
+			<div class="quiz1">
+				<input type="radio" name="qa" id="qa1" class="answer1"> <!-- label 과 input id 값 matching 필요-->
+				<label for="qa1">아니다</label>
+				<input type="radio" name="qa" id="qa2" class="answer2"> <!-- label 과 input id 값 matching 필요-->
+				<label for="qa2">그렇다</label>
+				<div class="quiz1-noti">
+					정답쪽으로 클릭 해보세요!
+				</div>
+				<div class="quiz1-noti a1"> <!--[아니다] 선택시 노출할 힌트영역 -->
+					확신 100%
+				</div>
+				<div class="quiz1-noti a2"> <!--[그렇다] 선택시 노출할 힌트영역 -->
+					다시 생각해보세요
+				</div>
+				<div class="quiz1-info">
+					<i></i>
+				</div>
+			</div>
+			<!--퀴즈유형 2 다지선다 -->
+			<div class="quiz2">
+				<label>
+					<input type="checkbox" checked>
+					<span>관리자에서 등록시 최대 15자래요!</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>문항 앞 숫자는 CSS로 처리되있어요</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>정답3</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>정답4</span>
+				</label>
+			</div>
+			<!--퀴즈유형 2 초성(주관식) -->
+			<div class="quiz3">
+				<div class="quiz3-q">
+					<em class="hide">주관식 초성 힌트</em>
+					<p>ㄷ ㅁ ㄴ ㅇ ㄱ</p>
+				</div>
+				<input type="text" class="text" placeholder="띄어쓰기 없이 정답을 입력해주세요.">
+			</div>
+		</div>
+		<!-- [M 2022-11-11] '맞히면' 위치변경 -->
+		<div class="quiz-info">
+			맞히면 +500
+		</div>
+		<!-- // -->
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1" disabled>정답제출 하기</button>
+			<!-- <button type="button" class="btn-action c1">정답제출 하기</button> -->
+		</div>
+	</div>
+</main>
+</body>
+</html>

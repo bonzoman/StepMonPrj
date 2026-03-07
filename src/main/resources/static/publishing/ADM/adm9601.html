@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>리포트 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+
+
+<!-- 하이차트 라이브러리 -->
+<link rel="stylesheet" href="../resource/css/content_chart.css">
+<script src="../resource/js/chart/highcharts.js"></script>
+<script src="../resource/js/chart/data.js"></script>
+
+<!-- 차트 솔리드 게이지용 js 모듈 -->
+<script src="../resource/js/chart/highcharts-more.js"></script>
+<script src="../resource/js/chart/solid-gauge.js"></script>
+
+<!-- 차트 Heat Map 모듈 -->
+<script src="../resource/js/chart/heatmap.js"></script>
+
+<!-- 차트 Large tree map -->
+<script src="../resource/js/chart/treemap.js"></script>
+
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-06]	1. 설계사 구분 검색 수정 
+	*	[M 2022-10-20]	1. 텍스트 수정 
+	*	[M 2022-10-26]	1. 툴팁 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">리포트</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="sub">
+				<button type="button" class="btn-report1 ic-s">리포트 통합조회</button>
+				<button type="button" class="btn-report1">리포트 항목 순서 변경</button>
+			</div>
+			<ul class="tab2">
+				<li><a href="#" class="">혜택</a></li>
+				<li><a href="#" class="">업적</a></li>
+				<li><a href="#" class="">조직</a></li>
+				<li><a href="#" class="">코칭</a></li>
+				<li><a href="#" class="current">활동</a></li>
+			</ul>
+			<div class="report-wrap">
+				<!-- [M : 2022-08-31 수정]-->
+				<div class="report-info">
+					<div class="inner">
+						<div class="search-condition">
+							<span>2022.07.30 기준</span>
+							<span>강남사업단</span>
+							<span>직전일자 대비량</span>
+						</div>
+						<ul class="report-summary2">
+							<li>
+								<span>화면 조회수</span>
+								<strong class="r-hold"><span>변동없음</span>전일대비 <span class="num">0</span></strong>
+								<!-- <strong class="r-inc"><span>증가</span>전일대비 <span class="num">+10</span></strong> -->
+								<!-- <strong class="r-des"><span>감소</span>전일대비 <span class="num">-10</span></strong> -->
+								<!-- <strong class="r-hold"><span>변동없음</span>전일대비 <span class="num">0</span></strong> -->
+								<em>76,255</em>
+							</li>
+							<li>
+								<span>활용 화면 수</span>
+
+								<strong class="r-inc"><span>증가</span>전일대비 <span class="num">+10</span></strong>
+								<!-- <strong class="r-inc"><span>증가</span>전일대비 <span class="num">+10</span></strong> -->
+								<!-- <strong class="r-des"><span>감소</span>전일대비 <span class="num">-10</span></strong> -->
+								<!-- <strong class="r-hold"><span>변동없음</span>전일대비 <span class="num">0</span></strong> -->
+								<em>76,255</em>
+							</li>
+							<li>
+								<span>로그인 수</span>
+
+								<strong class="r-des"><span>감소</span>전일대비 <span class="num">-10</span></strong>
+								<!-- <strong class="r-inc"><span>증가</span>전일대비 <span class="num">+10</span></strong> -->
+								<!-- <strong class="r-des"><span>감소</span>전일대비 <span class="num">-10</span></strong> -->
+								<!-- <strong class="r-hold"><span>변동없음</span>전일대비 <span class="num">0</span></strong> -->
+								<em>76,255</em>
+							</li>
+							<li>
+								<span>방문자 수</span>
+
+								<strong class="r-inc"><span>증가</span>전일대비 <span class="num">+10</span></strong>
+								<!-- <strong class="r-inc"><span>증가</span>전일대비 <span class="num">+10</span></strong> -->
+								<!-- <strong class="r-des"><span>감소</span>전일대비 <span class="num">-10</span></strong> -->
+								<!-- <strong class="r-hold"><span>변동없음</span>전일대비 <span class="num">0</span></strong> -->
+								<em>76,255</em>
+							</li>
+							<li>
+								<span>방문자당 화면 조회수</span>
+								<strong class="r-des"><span>감소</span>전일대비 <span class="num">-10</span></strong>
+								<!-- <strong class="r-inc"><span>증가</span>전일대비 <span class="num">10</span></strong> -->
+								<!-- <strong class="r-des"><span>감소</span>전일대비 <span class="num">10</span></strong> -->
+								<!-- <strong class="r-hold"><span>변동없음</span>전일대비 <span class="num">0</span></strong> -->
+
+								<em>76,255</em>
+							</li>
+						</ul>
+						<p class="noti1">※아래 데이터는 누계가 아닌 일단위 데이터 입니다.</p>
+					</div>
+				</div>
+				<!--
+					[M : 2022-09-05 수정]
+					검색조건 영역 수정
+				-->
+				<fieldset class="form-search1 activity">
+					<div class="form-field">
+						<dl class="form w3">
+							<dt>조직/소속</dt><!-- [M 2022-10-20] 텍스트 수정 -->
+							<dd>
+								<select name="" id="" class="selectbox" style="min-width:120px;">
+									<option value="">강남사업단</option>
+								</select>
+								<select name="" id="" class="selectbox" style="min-width:170px;">
+									<option value="">지점명</option>
+									<option value="">리더스박진형RM2지점</option>
+								</select>
+							</dd>
+						</dl>
+						<dl class="form w3">
+							<dt>설계사</dt><!-- [M 2022-10-20] 텍스트 수정 -->
+							<!-- [M 2022-10-06] 설계사 구분 검색 수정 -->
+							<dd>
+								<!-- [CASE 검색 후] -->
+								<span class="search-name">김롯데 <button type="button" class="btn-del1">삭제</button></span>
+								<!-- // -->
+								<button type="button" class="btn-search">검색</button>
+							</dd>
+							<!-- // -->
+						</dl>
+						<dl class="form w3">
+							<dt>기준일
+								<!-- [M 2022-10-26] 툴팁 추가 -->
+								<div class="tooltip ">
+									<button type="button"></button>
+									<div class="tooltip-layer">
+										<ul class="list-dot1">
+											<li>1주: 조회 기준일이 속한 주의 데이터를 조회해요.</li>
+											<li>2주: 조회 기준일이 속한 주와 1주 전의 데이터를 조회해요.</li>
+											<li>1달: 조회 기준일이 속한 달의 데이터를 조회해요.</li>
+											<li>1년: 조회 기준일이 속한 연도의 데이터를 조회해요.</li>
+										</ul>
+									</div>
+								</div>
+								<!-- //[M 2022-10-26] 툴팁 추가 -->
+							</dt>
+							<dd>
+								<div class="form-row">
+									<input type="text" class="date" placeholder="날짜선택">
+									<label class="label-check2">
+										<input type="radio" name="formRa" checked="checked">
+										<span>1주</span>
+									</label>
+									<label class="label-check2">
+										<input type="radio" name="formRa">
+										<span>2주</span>
+									</label>
+									<label class="label-check2">
+										<input type="radio" name="formRa" checked="checked">
+										<span>1개월</span>
+									</label>
+									<label class="label-check2">
+										<input type="radio" name="formRa">
+										<span>1년</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w3">
+							<dt>차월수</dt><!-- [M 2022-10-20] 텍스트 수정 -->
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr7" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr7">
+										<span>13차월 미만</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr7">
+										<span>13차월 이상</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+					</div>
+
+					<div class="area-action">
+						<button type="button" class="btn-action c1">조회</button>
+					</div>
+				</fieldset>
+				<div class="area-btn2 t1">
+					<button type="button" class="btn-action c3">엑셀다운로드</button>
+				</div>
+				<!--// [M : 2022-08-31 수정]-->
+
+				<div class="row">
+					<div class="col">
+						<div class="inner">
+							<div class="cont t1">
+								<ul class="report-summary3">
+									<li>
+										<em>
+											<i class="report-ic7"></i>
+											<span>페이지</span>
+										</em>
+										<div>
+											<a href="#" class="current">
+												<span>화면 조회 수</span>
+												<strong>65,955</strong>
+											</a>
+											<div class="tooltip">
+												<button type="button"></button>
+												<div class="tooltip-layer">
+													화면을 호출한 횟수를 나타내요.
+												</div>
+												<button type="button" class="tooltip-close"></button>
+											</div>
+										</div>
+										<div>
+											<a href="#">
+												<span>활용 화면 수</span>
+												<strong>65,955</strong>
+											</a>
+											<div class="tooltip">
+												<button type="button"></button>
+												<div class="tooltip-layer">
+													중복 건을 제외한 호출 횟수(중복 제외)를 나타내요.
+												</div>
+												<button type="button" class="tooltip-close"></button>
+											</div>
+										</div>
+										<div>
+											<a href="#">
+												<span>화면당 <br> 평균 체류시간</span>
+												<strong>02:02:00</strong>
+											</a>
+											<div class="tooltip">
+												<button type="button"></button>
+												<div class="tooltip-layer">
+													화면에 머무는 평균 시간이에요.
+												</div>
+												<button type="button" class="tooltip-close"></button>
+											</div>
+										</div>
+									</li>
+									<li>
+										<em>
+											<i class="report-ic1"></i>
+											<span>로그인</span>
+										</em>
+										<div>
+											<a href="#">
+												<span>로그인 수</span>
+												<strong>65,955</strong>
+											</a>
+											<div class="tooltip">
+												<button type="button"></button>
+												<div class="tooltip-layer">
+													기기를 접속 한 전체 수치예요. <!-- 2022-12-20 텍스트 변경 -->
+												</div>
+												<button type="button" class="tooltip-close"></button>
+											</div>
+										</div>
+										<div>
+											<a href="#">
+												<span>로그인당 <br> 화면 조회 수</span>
+												<strong>65,955</strong>
+											</a>
+											<div class="tooltip">
+												<button type="button"></button>
+												<div class="tooltip-layer">
+													로그인 후 호출한 페이지 횟수로 <br> 전체화면 조회수에서 로그인수로 나눈 수치예요. <!-- 2022-12-20 텍스트 변경 -->
+												</div>
+												<button type="button" class="tooltip-close"></button>
+											</div>
+										</div>
+										<div>
+											<a href="#">
+												<span>로그인당 <br> 평균 체류시간</span>
+												<strong>22:22:22</strong>
+											</a>
+											<div class="tooltip">
+												<button type="button"></button>
+												<div class="tooltip-layer">
+													로그인 후 머무는 평균시간이예요. <!-- 2022-12-20 텍스트 변경 -->
+												</div>
+												<button type="button" class="tooltip-close"></button>
+											</div>
+										</div>
+									</li>
+									<li>
+										<em>
+											<i class="report-ic10"></i>
+											<span>방문자</span>
+										</em>
+										<div>
+											<a href="#">
+												<span>방문자 수</span>
+												<strong>65,955</strong>
+											</a>
+											<div class="tooltip">
+												<button type="button"></button>
+												<div class="tooltip-layer">
+													로그인 한 사람의 수예요. <!-- 2022-12-20 텍스트 변경 -->
+												</div>
+												<button type="button" class="tooltip-close"></button>
+											</div>
+										</div>
+										<div>
+											<a href="#">
+												<span>방문자당 <br> 화면 조회 수</span>
+												<strong>65,955</strong>
+											</a>
+											<div class="tooltip">
+												<button type="button"></button>
+												<div class="tooltip-layer">
+													방문자가 접속하여 호출한 페이지 횟수로 <br> 전체화면 조회수에서 방문자 수를 나눈 수치예요. <!-- 2022-12-20 텍스트 변경 -->
+												</div>
+												<button type="button" class="tooltip-close"></button>
+											</div>
+										</div>
+										<div>
+											<a href="#">
+												<span>인당 <br> 평균 체류시간</span>
+												<strong>22:22:22</strong>
+											</a>
+											<div class="tooltip">
+												<button type="button"></button>
+												<div class="tooltip-layer">
+													설계사님 한 분이 접속 후 머무는 평균시간이예요. <!-- 2022-12-20 텍스트 변경 -->
+												</div>
+												<button type="button" class="tooltip-close"></button>
+											</div>
+										</div>
+									</li>
+									<li>
+										<em>
+											<i class="report-ic9"></i>
+											<span>기타</span>
+										</em>
+										<div>
+											<a href="#">
+												<span>접속 후 <br>비활동자 비율</span>
+												<strong>24<span>%</span></strong>
+											</a>
+											<div class="tooltip">
+												<button type="button"></button>
+												<!-- 2022-12-20 텍스트 변경 -->
+												<div class="tooltip-layer">
+													접속 후 이동없이 바로 앱을 종료한 설계사님의 비율이에요. <!-- 2022-12-20 텍스트 변경 -->
+												</div>
+												<!-- //2022-12-20 텍스트 변경 -->
+												<button type="button" class="tooltip-close"></button>
+											</div>
+										</div>
+										<div>
+											<a href="#">
+												<span>1개월 이상 <br> 미접속 사용자</span>
+												<strong>65,955</strong>
+											</a>
+											<div class="tooltip">
+												<button type="button"></button>
+												<div class="tooltip-layer">
+													1개월 이상 접속하지 않은 사용자 수를 나타내요.
+												</div>
+												<button type="button" class="tooltip-close"></button>
+											</div>
+										</div>
+										<div>
+											<a href="#">
+												<span>다시 돌아온 <br> 사용자</span>
+												<strong>65,955</strong>
+											</a>
+											<div class="tooltip">
+												<button type="button"></button>
+												<div class="tooltip-layer">
+													1개월 동안 미 접속 후 다시 접속한 사용자 수를 나타내요.
+												</div>
+												<button type="button" class="tooltip-close"></button>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="data" style="height:520px;">
+									<!--[M : 2022-09-23 수정]
+										차트 축 data 표기 추가      
+									-->
+									<div id="activityChart1" data-chart="Basic-Line4"></div>
+									<script>
+
+										Highcharts.chart("activityChart1",{
+											chart:{
+												type:"line",
+												marginLeft:20,
+												height:'450'
+											},
+											title:null,
+											xAxis:{
+												categories:["2일","3일","4일","5일","6일","7일","8일","9일","10일","11일","12일"],
+											},
+											yAxis:{
+												title: null,
+												opposite: true,
+												labels: {
+													formatter: function() {
+														return this.value +'건'
+														/*
+															화면 조회 수 return this.value +'건'; 
+															활용 화면 수 return this.value +'건'; 
+															화면당 평균 체류시간 return this.value +'초'; 
+															로그인 수 return this.value +'건'; 
+															로그인당 화면 조회 수 return this.value +'건'; 
+															로그인당 평균 체류시간 return this.value +'초'; 
+															방문자 수 return this.value +'명'; 
+															방문자당 화면 조회수 return this.value +'건'; 
+															인당 평균 체류시간 return this.value +'초'; 
+															접속 후 활동자 비율return this.value +'%'; 
+															1개월이상 미접속 사용자 수 return this.value +'명'; 
+															다시돌아온사용자수 return this.value +'명'; 
+														*/
+													}
+												}
+											},
+											legend:{
+												enabled:false
+											},
+											series:[
+												{
+													name:'화면 조회 수',
+													data:[
+														5000,2600,1400,1800,
+														{y:6100, dataLabels:{enabled:true},}//제일 높은 수치 보임
+														,2500,1800,2600,3700,4000,4500
+													]
+												}
+											]
+										});
+
+
+									</script>
+								</div>
+							</div>
+
+							<div class="more">
+								<a href="#"><span>자세히보기</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3>메뉴별 페이지 조회수 / 마지막으로 본 메뉴 페이지 조회 수</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="report-tab">
+									<a href="#" class="current">화면 조회 수</a>
+									<a href="#">마지막으로 본 메뉴 페이지 조회 수</a>
+								</div>
+								<div class="data" style="height:456px;">
+									<div id="activityChart2" data-chart="Basic-Column1"></div>
+									<script>
+
+										Highcharts.chart("activityChart2",{
+											chart:{
+												type:"column",
+												marginLeft:0,
+												height:'440'
+											},
+											title:null,
+											legend:{
+												enabled:false
+											},
+											xAxis:{
+												categories:["활동지원","커뮤니티","자금관리","업적","업무지원요청","설계청약","보험케어","보장분석","보상","도입관리","교육","고객관리","계약관리","가입/설계"]
+											},
+											yAxis:{
+												title: null,
+												opposite: true,
+												min:0,
+												labels: {
+													formatter: function() {
+														return this.value;
+													}
+												}
+											},
+											plotOptions:{
+												column:{
+													pointWidth:4,
+													dataLabels:{
+														enabled:false,
+													}
+												}
+											},
+											series:[
+												{
+													name:"화면 조회 수",
+													data:[320,420,100,80,1900,320,420,100,80,900,320,420,100,80],
+												}
+											]
+										})
+
+									</script>
+								</div>
+							</div>
+							<div class="more">
+								<a href="#"><span>자세히보기</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3>조직 별 방문자수</h3>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="report-tab">
+									<a href="#" class="current">로그인 수</a>
+									<a href="#">방문자 수</a>
+								</div>
+								<div class="data" style="height:516px;">
+									<div class="chart-info4">
+										<em>전체</em>
+										<strong>20,222</strong>
+										<span> 명</span>
+									</div>
+									<div id="activityChart3" data-chart="Large-tree-Map"></div>
+									<script>
+										Highcharts.chart("activityChart3", {
+											chart:{
+												type:"column",
+												height:400,
+											},
+											title: null,
+											series: [{
+												title:null,
+												name: '사업단장',
+												type: "treemap",
+												layoutAlgorithm: 'squarified',
+												allowDrillToNode: true,
+												animationLimit: 1000,
+												levelIsConstant: false,
+												borderWidth:2,
+												borderColor:"#000",
+												levels: [{
+													level: 1,
+													dataLabels: {
+														enabled: true
+													}
+												}, {
+													level: 2,
+													borderWidth: 0,
+													dataLabels: {
+														enabled: false
+													}
+												}],
+												data: [{
+													id: 'area1',
+													name: '강남사업단',
+													color: "#006e7f"
+												}, {
+													id: 'area2',
+													name: '경기사업단',
+													color: "#117e88"
+												}, {
+													id: 'area3',
+													name: '경남사업단',
+													color: '#148888'
+												}, {
+													id: 'area4',
+													name: '드림사업단',
+													color: '#21947c'
+												}, {
+													id: 'area5',
+													name: '리더스사업단',
+													color: '#29a77b'
+												}, {
+													id: 'area6',
+													name: '미라클사업단',
+													color: '#51bb65'
+												}, {
+													id: 'area7',
+													name: '미래사업단',
+													color: '#6fbe53'
+												}, {
+													id: 'area8',
+													name: '바른사업단',
+													color: '#9bc33b'
+												}, {
+													id: 'area9',
+													name: '베스트사업단',
+													color: '#c4c823'
+												}, {
+													id: 'area10',
+													name: '부산사업단',
+													color: '#e3e310'
+												}, {
+													id: 'area11',
+													name: '서울사업단',
+													color: '#ffdd03'
+												}, {
+													id: 'area12',
+													name: '센트럴사업단',
+													color: '#fdcd03'
+												}, {
+													id: 'area13',
+													name: '스마트사업단',
+													color: '#fdba03'
+												}, {
+													id: 'area14',
+													name: '스타사업단',
+													color: '#fd9d03'
+												}, {
+													id: 'area15',
+													name: '영남사업단',
+													color: '#fc8903'
+												}, {
+													id: 'area16',
+													name: '전남사업단',
+													color: '#fc7603'
+												}, {
+													id: 'area17',
+													name: '전속지원팀',
+													color: '#ed611f'
+												}, {
+													id: 'area18',
+													name: '중부사업단',
+													color: '#f17f16'
+												}, {
+													id: 'area19',
+													name: '퍼스트사업단',
+													color: '#ed561f'
+												}, {
+													id: 'area20',
+													name: '한결사업단',
+													color: '#e84427'
+												}, {
+													id: 'area21',
+													name: '사업단21',
+													color: '#d5361a'
+												}, {
+													id: 'area22',
+													name: '사업단22',
+													color: '#c43117'
+												}, {
+													id: 'area23',
+													name: '사업단23',
+													color: '#ac2811'
+												}, {
+													id: 'area24',
+													name: '사업단24',
+													color: '#9b200a'
+												}, {
+													id: 'area25',
+													name: '사업단25',
+													color: '#7b1806'
+												}, {
+													name: '강남0지점',
+													parent: 'area1',
+													value: 3
+												}, {
+													name: '강남1지점',
+													parent: 'area1',
+													value: 7
+												}, {
+													name: '강남2지점',
+													parent: 'area1',
+													value: 12
+												}, {
+													name: '강남3지점',
+													parent: 'area1',
+													value: 1
+												}, {
+													name: '강남4지점',
+													parent: 'area1',
+													value: 3
+												}, {
+													name: '강남5지점',
+													parent: 'area1',
+													value: 9
+												}, {
+													name: '강남6지점',
+													parent: 'area1',
+													value: 15
+												}, {
+													name: '강남7지점',
+													parent: 'area1',
+													value: 5
+												}, {
+													name: '강남8지점',
+													parent: 'area1',
+													value: 7
+												}, {
+													name: '강남9지점',
+													parent: 'area1',
+													value: 10
+												}, {
+													name: '강남98지점',
+													parent: 'area1',
+													value: 33
+												}, {
+													name: '강남99지점',
+													parent: 'area1',
+													value: 4
+												}, {
+													name: '강남교차지점',
+													parent: 'area1',
+													value: 8
+												}, {
+													name: '경기0지점',
+													parent: 'area2',
+													value: 35
+												}, {
+													name: '경기1지점',
+													parent: 'area2',
+													value: 80
+												}, {
+													name: '경기0지점',
+													parent: 'area2',
+													value: 60
+												}, {
+													name: '경남1지점',
+													parent: 'area3',
+													value: 56
+												}, {
+													name: '경남2지점',
+													parent: 'area3',
+													value: 100
+												}, {
+													name: '드림3지점',
+													parent: 'area4',
+													value: 50
+												}, {
+													name: '드림4지점',
+													parent: 'area4',
+													value: 60
+												}, {
+													name: '드림5지점',
+													parent: 'area4',
+													value: 80
+												}, {
+													name: '리더스6지점',
+													parent: 'area5',
+													value: 50
+												}, {
+													name: '리더스7지점',
+													parent: 'area5',
+													value: 80
+												}, {
+													name: '미라클8지점',
+													parent: 'area6',
+													value: 20
+												}, {
+													name: '미라클9지점',
+													parent: 'area6',
+													value: 80
+												}, {
+													name: '미라클98지점',
+													parent: 'area6',
+													value: 33
+												}, {
+													name: '바른99지점',
+													parent: 'area7',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area8',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area9',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area10',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area11',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area12',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area13',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area14',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area15',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area16',
+													value: 100
+												}, {
+													name: '1지점',
+													parent: 'area17',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area18',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area19',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area20',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area21',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area22',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area23',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area24',
+													value: 130
+												}, {
+													name: '1지점',
+													parent: 'area25',
+													value: 130
+												}]
+											}],
+										});
+
+
+									</script>
+								</div>
+								<!-- [M : 2022-09-07 수정]
+									테이블 삭제
+								-->
+							</div>
+							<div class="more">
+								<a href="#"><span>자세히보기</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="inner">
+							<div class="head">
+								<div class="tit">
+									<h3>시간대 별 방문자수</h3>
+								</div>
+								<div class="sub">
+									<select name="" id="" class="report-sel w240">
+										<option value="">전체</option>
+										<option value="">가입/설계</option>
+										<option value="">계약관리</option>
+										<option value="">고객관리</option>
+										<option value="">교육</option>
+										<option value="">도입</option>
+										<option value="">도입관리</option>
+										<option value="">보상</option>
+										<option value="">보장분석</option>
+										<option value="">보험케어</option>
+										<option value="">설계청약</option>
+										<option value="">업무지원요청</option>
+										<option value="">업적</option>
+										<option value="">자금관리</option>
+										<option value="">커뮤니티</option>
+										<option value="">활동지원</option>
+									</select>
+								</div>
+							</div>
+							<div class="cont">
+								<div class="data" style="height:428px;">
+									<div id="activityChart4" data-chart="Heat-Map"></div>
+									<script>
+										Highcharts.chart("activityChart4", {
+											chart:{
+												type:"heatmap",
+											},
+											title:null,
+											xAxis:{
+												categories:["1일","2일","3일","4일","5일","6일","7일","8일","9일","10일","11일","12일","13일","14일","15일"]
+											},
+											yAxis:{
+												categories:["00시","02시","04시","06시","08시","10시","12시","14시","16시","18시","20시","22시"],
+												title:null
+											},
+											colorAxis:{
+												min:0,
+												minColor:"#FFFFFF",
+												maxColor: "#e84427"
+											},
+											legend:{
+												enabled:false
+											},
+											tooltip:{
+												formatter:function () {
+													return "<strong>" + this.point.value + "명 </strong>";
+												}
+											},
+											series:[{
+												name:null,
+												data:[
+													[0,0,10], [0,1,19], [0,2,8], [0,3,24], [0,4,67], [0,5,92], [0,6,58], [0,7,78], [0,8,117], [0,9,48], [0,10,35], [0,11,15],
+													[1,0,123], [1,1,64], [1,2,52], [1,3,72], [1,4,132], [1,5,114], [1,6,19], [1,7,16], [1,8,38], [1,9,5], [1,10,8], [1,11,117],
+													[2,0,115], [2,1,88], [2,2,32], [2,3,12], [2,4,6], [2,5,120], [2,6,13], [2,7,44], [2,8,88], [2,9,98], [2,10,96], [2,11,31],
+													[3,0,1], [3,1,82], [3,2,32], [3,3,30], [3,4,85], [3,5,97], [3,6,123], [3,7,64], [3,8,84], [3,9,47], [3,10,114], [3,11,31],
+													[4,0,10], [4,1,19], [4,2,8], [4,3,24], [4,4,67], [4,5,92], [4,6,58], [4,7,78], [4,8,117], [4,9,48], [4,10,35], [4,11,15],
+													[5,0,123], [5,1,64], [5,2,52], [5,3,72], [5,4,132], [5,5,114], [5,6,19], [5,7,16], [5,8,38], [5,9,5], [5,10,8], [5,11,117],
+													[6,0,115], [6,1,88], [6,2,32], [6,3,12], [6,4,6], [6,5,120], [6,6,13], [6,7,44], [6,8,88], [6,9,98], [6,10,96], [6,11,31],
+													[7,0,1], [7,1,82], [7,2,32], [7,3,30], [7,4,85], [7,5,97], [7,6,123], [7,7,64], [7,8,84], [7,9,47], [7,10,114], [7,11,31],
+													[8,0,115], [8,1,88], [8,2,32], [8,3,12], [8,4,6], [8,5,120], [8,6,13], [8,7,44], [8,8,88], [8,9,98], [8,10,96], [8,11,31],
+													[9,0,1], [9,1,82], [9,2,32], [9,3,30], [9,4,85], [9,5,97], [9,6,123], [9,7,64], [9,8,84], [9,9,47], [9,10,114], [9,11,31],
+													[10,0,10], [10,1,19], [10,2,8], [10,3,24], [10,4,67], [10,5,92], [10,6,58], [10,7,78], [10,8,117], [10,9,48], [10,10,35], [10,11,15],
+													[11,0,123], [11,1,64], [11,2,52], [11,3,72], [11,4,132], [11,5,114], [11,6,19], [11,7,16], [11,8,38], [11,9,5], [11,10,8], [11,11,117],
+													[12,0,1], [12,1,82], [12,2,32], [12,3,30], [12,4,85], [12,5,97], [12,6,123], [12,7,64], [12,8,84], [12,9,47], [12,10,114], [12,11,31],
+													[13,0,10], [13,1,19], [13,2,8], [13,3,24], [13,4,67], [13,5,92], [13,6,58], [13,7,78], [13,8,117], [13,9,48], [13,10,35], [13,11,15],
+													[14,0,16], [14,1,38], [14,2,5], [14,3,8], [14,4,117], [14,5,115], [14,6,88], [14,7,32], [14,8,12], [14,9,6], [14,10,120], [14,11,13],
+												]
+											}],
+										});
+									</script>
+								</div>
+							</div>
+							<div class="more">
+								<a href="#"><span>자세히보기</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="report-top"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

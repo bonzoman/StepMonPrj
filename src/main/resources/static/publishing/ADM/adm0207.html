@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>소득현황 | 활동 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-25]	1. 내용 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">소득현황</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1">
+
+				<div class="form-field">
+					<dl class="form w3">
+						<dt>기준월</dt>
+						<dd>
+							<div class="form-row">
+								<span class="date-range2">
+									<input type="text" data-role="start" placeholder="시작월 선택">
+									<span class="util">~</span>
+									<input type="text" data-role="end" placeholder="종료월 선택">
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w3">
+						<dt>지급유형</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="radio" name="fr2" checked="checked">
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="fr2">
+									<span>선지급</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="fr2">
+									<span>분급</span>
+								</label>
+								<!--[M : 2022-09-21 수정] -->
+								<label class="label-check">
+									<input type="radio" name="fr2">
+									<span>분급신청중</span>
+								</label>
+								<!--// [M : 2022-09-21 수정] -->
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w3">
+						<dt>조직구분</dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>본인 사업단</option>
+								</select>
+								<input type="text" name="" id="" class="text" value="D0312245" style="width:80px;" readonly>
+								<input type="text" name="" id="" class="text" value="강남사업단" style="width:120px;" disabled>
+								<button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w3">
+						<dt>저소득조회</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="checkbox" name="fc2" checked="checked">
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="fc2" checked="checked">
+									<span>0원</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="fc2" checked="checked">
+									<span>30만원 미만</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="fc2" checked="checked">
+									<span>50만원 미만</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="fc2" checked="checked">
+									<span>100만원 미만</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+			<div class="data-table1">
+				<table>
+					<colgroup>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">기준월</th>
+							<td>2022.04 ~ 2022.04</td>
+							<th scope="row">대상건</th>
+							<td>132</td>
+							<td colspan="4"></td>
+						</tr>
+						<tr>
+							<th scope="row">총소득</th>
+							<td>221,891,500원</td><!-- [M 2022-10-25] 내용 수정 -->
+							<th scope="row">실지급</th>
+							<td>221,891,500원</td><!-- [M 2022-10-25] 내용 수정 -->
+							<th scope="row">지급액</th>
+							<td>221,891,500원</td><!-- [M 2022-10-25] 내용 수정 -->
+							<th scope="row">공제액</th>
+							<td>221,891,500원</td><!-- [M 2022-10-25] 내용 수정 -->
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tit-sub2">
+				<h3 class="">조회 결과 <span>전체 4건</span></h3>
+			</div>
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<col style="width:60px">
+						<col style="width:80px">
+						<col style="width:100px">
+						<col style="width:100px">
+						<col style="width:100px">
+						<col style="width:80px">
+						<col style="width:100px">
+						<col style="width:100px">
+						<col style="width:150px">
+						<col style="width:100px">
+						<col style="width:100px">
+						<col style="width:100px">
+						<col style="width:100px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"><span class="sort">No</span></th>
+							<th scope="col"><span class="sort">기준월</span></th>
+							<th scope="col"><span class="sort">사업단</span></th>
+							<th scope="col"><span class="sort">팀</span></th>
+							<th scope="col">설계사명</th>
+							<th scope="col">설계사번</th>
+							<th scope="col"><span class="sort">지급유형</span></th>
+							<th scope="col"><span class="sort">지급상태</span></th>
+							<th scope="col"><span class="sort">이행보증기간</span></th>
+							<th scope="col">총소득</th>
+							<th scope="col">실지급</th>
+							<th scope="col">지급액</th>
+							<th scope="col">공제액</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!--분급신청중 case -->
+						<tr>
+							<!--[M : 2022-09-21 수정] -->
+							<td>
+								<label class="label-check t1">
+									<input type="checkbox" name="fc12" checked="checked">
+									<span>선택</span>
+								</label>
+								165
+							</td>
+							<!-- // [M : 2022-09-21 수정] -->
+							<td>22.04~22.05</td>
+							<td>강남사업단</td>
+							<td>강남1-1팀</td>
+							<td>임윤경</td>
+							<td>1313131</td>
+							<td>분급신청중</td>
+							<td>만료예정</td>
+							<td>2022.05.05~2022.05.05</td>
+							<td>1,111,111</td>
+							<td>1,111,111</td>
+							<td>1,111,111</td>
+							<td>50,000</td>
+						</tr>
+						<!-- default case -->
+						<tr>
+							<td>164</td>
+							<td>22.04~22.05</td>
+							<td>강남사업단</td>
+							<td>강남1-1팀</td>
+							<td>임윤경</td>
+							<td>1313131</td>
+							<td>분급신청중</td>
+							<td>만료예정</td>
+							<td>2022.05.05~2022.05.05</td>
+							<td>1,111,111</td>
+							<td>1,111,111</td>
+							<td>1,111,111</td>
+							<td>50,000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="paging">
+				<!--[M : 2022-09-21 수정] -->
+				<div class="btns1">
+					<button class="btn-sub1 c3">분급승인</button>
+				</div>
+				<!-- // [M : 2022-09-21 수정] -->
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

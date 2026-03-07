@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>데일리퀴즈 | 활동 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220513">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-08]	1. 노출일자 수정
+						2. 퀴즈내용 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">데일리퀴즈 상세정보</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="tit-sub2">
+				<h3 class="">데일리퀴즈 기본정보</h3>
+			</div>
+			<div class="tbl-write1">
+				<table>
+					<colgroup>
+						<col style="width:150px;">
+						<col>
+						<col style="width:150px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">코드</th>
+							<td>AD0000002</td>
+							<th scope="row">카테고리</th>
+							<td>유머</td>
+						</tr>
+						<tr>
+							<th scope="row">사용여부<em class="imp"><span>필수</span></em></th>
+							<td>
+								<label class="label-check">
+									<input type="radio" name="ct3" checked>
+									<span>사용</span>
+								</label>
+								<label class="label-check">
+									<input type="radio" name="ct3">
+									<span>사용안함</span>
+								</label>
+							</td>
+							<!-- [M 2022-11-08] 노출일자 수정 -->
+							<th scope="row">노출일자<em class="imp"><span>필수</span></em></th>
+							<td>
+								<div class="form-row">
+									<span class="date-range">
+										<input type="text" data-role="start" value="2022.02.22" disabled placeholder="노출일자 선택">
+									</span>
+								</div>
+							</td>
+							<!-- //[M 2022-11-08] 노출일자 수정 -->
+						</tr>
+						<tr>
+							<th scope="row">퀴즈 내용<em class="imp"><span>필수</span></em></th>
+							<td colspan="3">
+								<!-- [M 2022-11-08] 퀴즈내용 수정 -->
+								<div class="form-box1">
+									<div class="form-row">
+										<span class="form-tit">질문 첫째줄<em class="imp"><span>필수</span></em></span>
+										<input type="text" name="" id="" class="text" style="width:400px;" placeholder="질문 첫째줄 입력" value="건강해지는 비결!">
+									</div>
+									<div class="form-row">
+										<span class="form-tit">질문 둘째줄</span>
+										<input type="text" name="" id="" class="text" style="width:400px;" placeholder="질문 둘째줄 입력" value="어떤게 있을까요?">
+									</div>
+									<div class="form-row">
+										<span class="form-tit">질문 셋째줄</span>
+										<input type="text" name="" id="" class="text" style="width:400px;" placeholder="질문 셋째줄 입력" value="네? 어떤게 있을까요?">
+									</div>
+								</div>
+								<ul class="list-dot1">
+									<li>각 입력 필드에 띄어쓰기 포함 최대 14자 입력 가능합니다.</li>
+									<li>퀴즈 질문 글을 순차적으로 입력하세요.</li>
+									<li>각 입력 필드에서 줄 바꿈은 지원하지 않습니다. </li>
+								</ul>
+								<!-- [M 2022-11-08] 퀴즈내용 수정 -->
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">이미지 첨부
+								<div class="tooltip ">
+									<button type="button"></button>
+									<div class="tooltip-layer">
+										<ul class="list-dot1">
+											<li>첨부파일의 사이즈는 <b>000px X 000px</b> 사이즈를 준수해주세요.</li>
+											<li>첨부파일은 <b>png, jpg, jpeg, bmp, gif</b> 파일 1건만 등록이 가능합니다.  </li>
+											<li>첨부파일 용량은 <b>5M</b>를 넘을 수 없습니다. </li>
+											<li>첨부파일을 등록하면, 퀴즈 내용 하단에 자동으로 노출됩니다. </li>
+										</ul>
+									</div>
+								</div>
+							</th>
+							<td colspan="3">
+								<span class="wrap-file">
+									<input type="file" tabindex="-1">
+									<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic3">첨부하기</button>
+								</span>
+								<div class="file-div">
+									<span class="file-name">가나다라마바사.jpg(2mb) <button type="button" class="btn-del1">삭제</button></span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">정답알림<em class="imp"><span>필수</span></em></th>
+							<td colspan="3">
+								<div class="form-row">
+									<strong>정답</strong>
+									<textarea name="" id="" style="width:600px;height:60px;" class="textarea">정답일경우에는 이렇게 안내를 하고요</textarea>
+								</div>
+								<div class="form-row">
+									<strong>오답</strong>
+									<textarea name="" id="" style="width:600px;height:60px;" class="textarea">오답일경우에는 이렇게 안내를 하지요</textarea>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tit-sub2">
+				<h3 class="">퀴즈 방식</h3>
+			</div>
+			<div class="tbl-view1">
+				<table>
+					<colgroup>
+						<col style="width:150px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">퀴즈type</th>
+							<td>O/X</td>
+						</tr>
+						<tr>
+							<th scope="row">정답</th>
+							<td>O</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="tbl-view1">
+				<table>
+					<colgroup>
+						<col style="width:150px;">
+						<col>
+						<col style="width:150px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">최초 등록자</th>
+							<td>김그림(1021234)</td>
+							<th scope="row">최초 등록일시</th>
+							<td>2022.02.22 19:19:45</td>
+						</tr>
+						<tr>
+							<th scope="row">마지막 수정자</th>
+							<td>김그림(1021234)</td>
+							<th scope="row">마지막 수정일시</th>
+							<td>2022.02.22 19:19:45</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			
+			<div class="wrap-btn">
+				<div class="btns">
+					<button type="button" class="btn-action c3">목록</button>
+				</div>
+				<div class="btns">
+					<button type="button" class="btn-action c1">수정하기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

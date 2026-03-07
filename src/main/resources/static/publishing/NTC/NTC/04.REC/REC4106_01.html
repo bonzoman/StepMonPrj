@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>마케팅 활용정보 제공에 관한 사항 | 후보자등록 | 설계사모집 마케팅웹</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>후보자 등록</h1>
+		<a href="javascript:void(0);" class="icon-down">앱 다운로드</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [정보입력] 실명확인 -->
+		<!-- ######################### -->
+		<section class="wrap-section">
+			<h2 class="tit-section">실명확인을 위한<br>필수정보를 작성해주세요.</h2>
+
+			<!-- ### [입력폼] ### -->
+			<fieldset class="form-wrap1">
+				<legend>모든항목 필수입력</legend>
+
+				<!-- # 이름 # -->
+				<dl class="form">
+					<dt>이름 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- [CASE1] 정상 -->
+						<input type="text" class="text" title="이름" placeholder="이름을 입력해주세요.">
+
+						<!-- [CASE2] 오류 : 미입력시 -->
+						<input type="text" class="text" title="이름" placeholder="이름을 입력해주세요." aria-invalid="true">
+						<div class="validation">이름은 꼭 필요해요.</div>
+					</dd>
+				</dl>
+
+				<!-- # 주민등록번호 # -->
+				<dl class="form">
+					<dt>주민등록번호 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- [CASE1] 정상 -->
+						<div class="text">
+							<input type="tel" title="주민등록번호앞6자리" maxlength="6" placeholder="생년월일">
+							<span class="util">-</span>
+							<input type="password" title="주민등록번호뒷7자리" maxlength="7" placeholder="뒤 7자리">
+						</div>
+
+						<!-- [CASE2] 오류 : 실명인증 실패 -->
+						<div class="input-wrap1">
+							<div class="text">
+								<input type="tel" title="주민등록번호앞6자리" maxlength="6" value="770610" placeholder="생년월일" aria-invalid="true"> <!-- [D] 속성(aria-invalid="true") 추가 -->
+								<span class="util">-</span>
+								<input type="password" title="주민등록번호뒷7자리" maxlength="7" value="1234567" placeholder="뒤 7자리">
+							</div>
+						</div>
+						<div class="validation">실명인증에 실패했어요.</div>
+
+						<!-- [CASE3] 오류 : 미입력시 -->
+						<div class="input-wrap1">
+							<div class="text">
+								<input type="tel" title="주민등록번호앞6자리" maxlength="6" value="" placeholder="생년월일" aria-invalid="true"> <!-- [D] 속성(aria-invalid="true") 추가 -->
+								<span class="util">-</span>
+								<input type="password" title="주민등록번호뒷7자리" maxlength="7" value="" placeholder="뒤 7자리">
+							</div>
+						</div>
+						<div class="validation">주민등록번호는 꼭 필요해요.</div>
+					</dd>
+				</dl>
+
+				<!-- # 휴대폰번호 : [M 2022-06-30] 내용추가 # -->
+				<dl class="form">
+					<dt>휴대폰번호 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- [CASE1] 정상 -->
+						<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰 번호를 '-'없이 입력해주세요.">
+
+						<!-- [CASE2] 오류 -->
+						<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰 번호를 '-'없이 입력해주세요." value="0101234-5678" aria-invalid="true">
+						<div class="validation">숫자만 입력해주세요.</div>
+
+						<!-- [CASE3] 오류 : 미입력시 -->
+						<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰 번호를 '-'없이 입력해주세요." aria-invalid="true">
+						<div class="validation">휴대폰 번호는 꼭 필요해요.</div>
+					</dd>
+				</dl>
+				<!-- # // # -->
+			</fieldset>
+			<!-- ### [//] ### -->
+		</section>
+
+		<!-- ######################### -->
+		<!-- [약관동의] 서비스이용 -->
+		<!-- ######################### -->
+		<section class="wrap-section3">
+			<h2 class="tit-section">서비스 이용을 위한<br>약관에 동의해주세요.</h2>
+
+			<!-- ### [동의] ### -->
+			<div class="form-agree1">
+				<!-- # 전체동의 # -->
+				<div class="label-check1">
+					<button type="button">전체동의</button>
+					<button type="button" class="checked" title="동의함">전체동의</button>  <!-- [D] 팝업에서 동의 확인을 눌렀을 경우 : 클래스명(checked) 추가 -->
+				</div>
+
+				<!-- # [약관1] # -->
+				<fieldset>
+					<legend>개인(신용)정보 수집/이용&middot;제공&middot;조회 제공&middot;동의서 지원신청시</legend>
+					<!-- [전체동의] -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span><em class="icon-required">필수</em> 개인(신용)정보 수집/이용&middot;제공&middot;조회 제공&middot;동의서 지원신청시</span>
+							<a href="javascript:void(0);" class="btn">개인(신용)정보 수집/이용&middot;제공&middot;조회 제공&middot;동의서 지원신청시 내용보기</a>
+						</label>
+					</div>
+					<!-- [항목동의] -->
+					<div class="label-check2">
+						<label>
+							<input type="checkbox">
+							<span>개인(신용)정보의 조회에 관한 사항(조회)</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>개인(신용)정보의 조회에 관한 사항(수집&middot;이용)</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>개인(신용)정보의 제공에 관한 사항</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>민감정보 및 고유식별정보의 처리에 관한 사항</span>
+						</label>
+					</div>
+					<!-- [//] -->
+				</fieldset>
+
+				<!-- # [약관2] # -->
+				<fieldset>
+					<legend>모집경력 수집 이용&middot;제공&middot;조회 동의</legend>
+					<!-- [전체동의] -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span><em class="icon-required">필수</em> 모집경력 수집 이용&middot;제공&middot;조회 동의</span>
+							<a href="javascript:void(0);" class="btn">모집경력 수집 이용&middot;제공&middot;조회 동의 내용보기</a>
+						</label>
+					</div>
+					<!-- [항목동의] -->
+					<div class="label-check2">
+						<label>
+							<input type="checkbox">
+							<span>모집경력 수집&middot;이용에 관한 동의</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>모집경력 조회에 관한 동의</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>모집경력 제공에 관한 동의</span>
+						</label>
+					</div>
+					<!-- [//] -->
+				</fieldset>
+			</div>
+
+			<!-- ### [가입설계 동의] ### -->
+			<div class="form-agree1">
+				<h3 class="tit-sub3 t2">가입설계 동의</h3>
+
+				<div class="con-terms">
+					<dl>
+						<dt>소비자 권익 보호에 관한 사항</dt>
+						<dd>귀하는 개인(신용)정보의 수집&middot;이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기 위한 목적 이외의 개인(신용)정보 동의를 철회할 수 있습니다. 다만, 본 동의는 '고객정보 관리 및 가입설계'를 위해 필수적인 사항이므로 동의를 거부하시는 경우 관련 업무수행이 불가능 합니다.</dd>
+					</dl>
+				</div>
+
+				<!-- # [약관3] # -->
+
+				<!-- # [약관4] # -->
+				<fieldset>
+					<legend>수집&middot;이용에 관한 사항</legend>
+					<!-- [전체동의] -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span><em class="icon-required">필수</em> 수집&middot;이용에 관한 사항</span>
+							<a href="javascript:void(0);" class="btn">수집&middot;이용에 관한 사항 내용보기</a>
+						</label>
+					</div>
+					<!-- [항목동의] -->
+					<div class="label-check2">
+						<label>
+							<input type="checkbox">
+							<span>고유식별정보 수집&middot;이용에 동의</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>민감정보 수집&middot;이용에 동의</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>개인신용정보 수집&middot;이용에 동의</span>
+						</label>
+					</div>
+					<!-- [//] -->
+				</fieldset>
+
+				<!-- # [약관5] # -->
+				<fieldset>
+					<legend>제공에 관한 사항</legend>
+					<!-- [전체동의] -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span><em class="icon-required">필수</em> 제공에 관한 사항</span>
+							<a href="javascript:void(0);" class="btn">제공에 관한 사항 내용보기</a>
+						</label>
+					</div>
+					<!-- [항목동의] 국내제공 -->
+					<div class="label-check2">
+						<strong>국내제공</strong>
+						<label>
+							<input type="checkbox">
+							<span>고유식별정보 제공에 동의</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>민감정보 제공에 동의</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>개인신용정보 제공에 동의</span>
+						</label>
+					</div>
+					<!-- [항목동의] 국외제공 -->
+					<div class="label-check2">
+						<strong>국외제공</strong>
+						<label>
+							<input type="checkbox">
+							<span>고유식별정보 제공에 동의</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>민감정보 제공에 동의</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>개인신용정보 제공에 동의</span>
+						</label>
+					</div>
+					<!-- [//] -->
+				</fieldset>
+
+				<!-- # [약관6] # -->
+				<fieldset>
+					<legend>조회에 관한 사항</legend>
+					<!-- [전체동의] -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox">
+							<span><em class="icon-required">필수</em> 조회에 관한 사항</span>
+							<a href="javascript:void(0);" class="btn">조회에 관한 사항 내용보기</a>
+						</label>
+					</div>
+					<!-- [항목동의] -->
+					<div class="label-check2">
+						<label>
+							<input type="checkbox">
+							<span>고유식별정보 조회에 동의</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>민감정보 조회에 동의</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>개인신용정보 조회에 동의</span>
+						</label>
+					</div>
+					<!-- [//] -->
+				</fieldset>
+			</div>
+			<!-- ### [//] ### -->
+		</section>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">다음</button>
+			<!-- <button type="button" class="btn-action c1" disabled>다음</button> : 비활성화 -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+//-->
+</script>
+</body>
+</html>

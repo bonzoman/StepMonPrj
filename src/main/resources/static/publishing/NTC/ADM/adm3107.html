@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>미리보기 팝업 | 모의고사 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>미리보기</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<ul class="list-dot1">
+			<li>해당 화면은 <strong>(가로)375 x (세로)812</strong> 기준의 화면입니다.</li>
+			<li>디스플레이 크기에 따라 차이가 있을 수 있습니다.</li>
+		</ul>
+		<div class="phone-view">
+			<div class="preview-wrap">
+				<div class="popup-mockexam">
+					<article>
+						<div class="container">
+							<div>
+								<div class="example-problem">
+									<p>다음 중 운전자 연령한정운전특약 위반 시에도 보상되는 담보를 모두 고른 것은? [3점]</p>
+									<ul class="tag">
+										<li>#손해보험</li>
+										<li>#자주 출제되는 문제</li>
+									</ul>
+								</div>
+
+								<div class="example-sentence">
+									<ul class="disc">
+										<li>대인배상1</li>
+										<li>대인배상2</li>
+										<li>대물배상 (가입금액 2천만원)</li>
+										<li>자기신체사고</li>
+										<li>자기차량손해</li>
+									</ul>
+								</div>
+
+								<!-- 정답 입력란 -->
+								<div class="answer-choice">
+									<!-- 객관식 선택 -->
+									<label>
+										<input type="radio" name="radio-item">
+										<span>폭발에 따른 직접손해 및 화재진압과정에서 발생하는 손해</span>
+									</label>
+									<label>
+										<input type="radio" name="radio-item">
+										<span>변압기, 배전반 등 전기장치의 전기적 사고로 생긴 손해</span>
+									</label>
+									<label>
+										<input type="radio" name="radio-item">
+										<span>보험목적물의 자연발화로 생긴 손해</span>
+									</label>
+									<label>
+										<input type="radio" name="radio-item">
+										<span>폭발사고 시 발생한 도난 또는 분실로 생긴 손해</span>
+									</label>
+
+									<!-- 주관식 입력 -->
+									<input type="text" aria-placeholder="답을 입력해 주세요." placeholder="답을 입력해 주세요." readonly>
+								</div>
+
+
+							</div>
+
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

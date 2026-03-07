@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 필터 | 만기대상 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>필터</h1>
+			<button type="button" data-btn="pop-close">필터 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- // -->
+			<fieldset class="form-wrap1">
+				<legend>필터 선택</legend>
+
+				<dl class="form">
+					<dt>만기상태</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio1" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>만기임박</span>
+							</label>
+
+							<!-- [D] 장기는 미노출 -->
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>미갱신</span>
+							</label>
+							<!-- // -->
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>키워드</dt>
+					<dd>
+						<div class="label-btn1" data-autoset="form">
+							<label>
+								<input type="radio" name="uiFormRadio2" checked>
+								<span>전체</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio2" data-tabcon="uiFormCont1">
+								<span>계약자</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio2" data-tabcon="uiFormCont2">
+								<span>증권번호</span>
+							</label>
+						</div>
+
+						<!-- [D] 계약자 선택 시 노출 -->
+						<div class="ui-tabcon" data-id="uiFormCont1">
+							<input type="text" class="text" title="계약자이름" placeholder="계약자이름을 입력해주세요.">
+						</div>
+
+						<!-- [D] 증권번호 선택 시 노출 -->
+						<div class="ui-tabcon" data-id="uiFormCont2">
+							<input type="tel" class="text" placeholder="증권번호를 입력해주세요.">
+						</div>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- // -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">초기화</button>
+				<button type="button" class="btn-action c1" ontouchstart="test()">적용</button>
+			</div>
+			<!-- // -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+	function test(){
+		console.log('click');
+		$('.text').blur();
+		document.activeElement.blur();
+	}
+</script>
+</body>
+</html>

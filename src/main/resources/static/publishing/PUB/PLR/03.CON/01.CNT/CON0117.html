@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>배서유형선택 | 계약변경 | 자동차 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>배서유형선택</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [기본정보] -->
+		<!-- ######################### -->
+		<h2 class="tit-sub1">기본정보</h2>
+		<div class="info-con1">
+			<dl>
+				<dt>증권번호</dt>
+				<dd>CA12345678901</dd>
+			</dl>
+			<dl>
+				<dt>피보험자</dt>
+				<dd>하다미</dd>
+			</dl>
+			<dl>
+				<dt>차량번호</dt>
+				<dd><span data-masking="true">****2134</span></dd>
+			</dl>
+			<dl>
+				<dt>보험기간</dt>
+				<dd>2021.05.20~2022.05.20</dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li class="active"><a href="#uiTabSection1">변경</a></li>
+				<li><a href="#uiTabSection2">해지/취소</a></li>
+				<li><a href="#uiTabSection3">정산</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭컨텐츠] : 변경 -->
+		<!-- ######################### -->
+		<div id="uiTabSection1" class="ui-tabcon active">
+			<h3 class="hide">변경</h3>
+
+			<!-- ### 변경선택 ### -->
+			<fieldset class="form-wrap1">
+				<legend>정보선택</legend>
+
+				<dl class="form">
+					<dt>배서내용</dt>
+					<dd>
+						<!-- [CASE1] 기본 -->
+						<div class="label-check1 box t1">
+							<label>
+								<input type="checkbox">
+								<span>단기운전자확대특약가입</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>연령/운전변경</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>가입경력인정자변경</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>차량번호(확정/변경)</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>담보(추가/가입금액)변경</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>차량대체</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>차량사항변경</span>
+							</label>
+						</div>
+
+						<!-- [CASE2] 단일배서 -->
+						<div class="label-check1 box t1">
+							<label>
+								<input type="checkbox">
+								<span>단기운전자확대특약가입</span>
+							</label>
+							<label>
+								<input type="checkbox" disabled>
+								<span>연령/운전변경</span>
+							</label>
+							<label>
+								<input type="checkbox" disabled>
+								<span>가입경력인정자변경</span>
+							</label>
+							<label>
+								<input type="checkbox" disabled>
+								<span>차량번호(확정/변경)</span>
+							</label>
+							<label>
+								<input type="checkbox" disabled>
+								<span>담보(추가/가입금액)변경</span>
+							</label>
+							<label>
+								<input type="checkbox" disabled>
+								<span>차량대체</span>
+							</label>
+							<label>
+								<input type="checkbox" disabled>
+								<span>차량사항변경</span>
+							</label>
+						</div>
+
+						<!-- [CASE3] 동시배서 가능의 경우 -->
+						<div class="label-check1 box t1">
+							<label>
+								<input type="checkbox">
+								<span>단기운전자확대특약가입</span>
+							</label>
+							<label>
+								<input type="checkbox" disabled>
+								<span>연령/운전변경</span>
+							</label>
+							<label>
+								<input type="checkbox" disabled>
+								<span>가입경력인정자변경</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>차량번호(확정/변경)</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>담보(추가/가입금액)변경</span>
+							</label>
+							<label>
+								<input type="checkbox" disabled>
+								<span>차량대체</span>
+							</label>
+							<label>
+								<input type="checkbox">
+								<span>차량사항변경</span>
+							</label>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>배서기준일</dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+								<input type="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.04.06" readonly>
+							</span>
+						</div>
+						<div class="mes-info2"><p>변경기준일은 오늘 날짜부터 선택이 가능하며, 효력은 보험종료일까지 입니다.</p></div>
+					</dd>
+				</dl>
+
+			</fieldset>
+
+			<!-- ### 안내문구 ### -->
+			<div class="box-t1">
+				<p class="mes-t1">상기 배서 이외 업무는 <strong>업무요청</strong>으로 진행해주세요.</p>
+				<ul class="txt-bul1">
+					<li>배서기준일 24:00부터 효력발생<br>예시) 단기운전자확대특약: 실제 운행일 2022.05.01인 경우, 배서기준일은 2022.04.30으로 입력</li>
+					<li>차량번호(확정/변경)은 영수시점부터 효력 발생<br>(단, 차량번호(확정/변경)+연령변경+담보추가 시 동시 배서되는 연령변경, 추가담보의 경우 배서기준일 24:00부터 효력발생함에 주의)</li>
+				</ul>
+			</div>
+
+			<!-- ### 하단버튼 ### -->
+			<div class="area-action t1" data-sticky="bottom">
+				<a href="javascript:void(0);" class="btn-action">업무요청</a>
+				<a href="javascript:void(0);" class="btn-action c1">배서설계</a>
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭컨텐츠] : 해지/취소 -->
+		<!-- ######################### -->
+		<div id="uiTabSection2" class="ui-tabcon">
+			<h3 class="hide">해지/취소</h3>
+
+			<!-- ### 해지/취소 선택 ### -->
+			<fieldset class="form-wrap1">
+				<legend>정보선택</legend>
+
+				<dl class="form">
+					<dt>배서유형</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio1" checked>
+								<span>양도</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>말소</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>기타</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span>취소</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>배서기준일</dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+								<input type="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.04.06" readonly>
+							</span>
+						</div>
+						<div class="txt-bul4 t2">
+							배서(계약변경)기준일은 해지/취소 유형별에 따라 적용하세요.
+							<ul>
+								<li>- 양도해지 : 명의이전일</li>
+								<li>- 말소해지 : 폐차일</li>
+								<li>- 기타해지 : 중복일 또는 현재일(접수일)</li>
+								<li>- 취소배서 : 보험시기</li>
+							</ul>
+						</div>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ### 하단버튼 ### -->
+			<div class="area-action" data-fixed="bottom">
+				<a href="javascript:void(0);" class="btn-action c1">업무요청</a>
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭컨텐츠] : 정산 -->
+		<!-- ######################### -->
+		<div id="uiTabSection3" class="ui-tabcon">
+			<h3 class="hide">정산</h3>
+
+			<!-- ### 배서기준일 ### -->
+			<fieldset class="form-wrap1">
+				<legend>정보선택</legend>
+
+				<dl class="form">
+					<dt>배서기준일</dt>
+					<dd>
+						<div class="input-date1 text">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+								<input type="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.04.06" readonly>
+							</span>
+						</div>
+						<div class="mes-info2"><p>변경기준일은 오늘 날짜부터 선택이 가능하며, 효력은 보험종료일까지 입니다.</p></div>
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ### 하단버튼 ### -->
+			<div class="area-action" data-fixed="bottom">
+				<a href="javascript:void(0);" class="btn-action c1">업무요청</a>
+			</div>
+			<!-- ### // ### -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	$plugin.togglecon('.nav-tab1',{
+		toggle_type : 'tab',
+		selector : '.nav-tab1 > ul > li',
+		selector_btn : 'a',
+		selector_con : '#href',
+		callback_load : function(e){
+			console.log('탭오픈후');
+		}
+	});
+//-->
+</script>
+</body>
+</html>

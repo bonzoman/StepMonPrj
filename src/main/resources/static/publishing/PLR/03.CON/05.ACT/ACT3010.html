@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>데일리 퀴즈 목록 | 데일리 퀴즈 | 수수료 관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220513">
+<link rel="stylesheet" href="../../resource/css/content.css?20220513">
+<link rel="stylesheet" href="../../resource/css/page.css?20220513">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220513"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>데일리퀴즈</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단문구] -->
+		<!-- ######################### -->
+		<div class="mes-headline2">
+			<p class="tit">매주 하루 한 번<br><strong>퀴즈 풀고<br>2,500 포인트</strong> 받으세요!</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [누적 포인트] -->
+		<!-- ######################### -->
+		<dl class="dailey-point">
+			<dt>이번주 누적 포인트</dt>
+			<dd><strong>1,000P</strong><span>/ 2,500P</span></dd>
+		</dl>
+
+		<!-- ######################### -->
+		<!-- [주간 참여] -->
+		<!-- ######################### -->
+		<ul class="dailey-week">
+			<!-- [CASE] 포인트 적립 성공 -->
+			<li class="on">
+				<p class="week">월</p>
+				<div class="day">
+					<span>5월3일</span>
+					<i class="point">500P</i>
+				</div>
+				<button type="button">퀴즈 풀기</button>
+			</li>
+			<!-- [CASE] 포인트 적립 실패 -->
+			<li class="on">
+				<p class="week">화</p>
+				<div class="day">
+					<span>5월4일</span>
+					<i class="fail">포인트 적립 실패</i>
+				</div>
+				<button type="button">퀴즈 풀기</button>
+			</li>
+			<!-- [CASE] 휴일 -->
+			<li>
+				<p class="week">수</p>
+				<div class="day">
+					<span>5월5일</span>
+					<i class="holiday">휴일</i>
+				</div>
+				<button type="button">퀴즈 풀기</button>
+			</li>
+			<!-- [CASE] 오늘 -->
+			<li class="on today">
+				<p class="week">목</p>
+				<div class="day">
+					<span>5월6일</span>
+					<i class="point">500P</i>
+					<strong>오늘 참여</strong>
+				</div>
+				<button type="button">퀴즈 풀기</button>
+			</li>
+			<!-- [CASE] 오늘 이후 -->
+			<li>
+				<p class="week">금</p>
+				<div class="day">
+					<span>5월7일</span>
+				</div>
+				<button type="button">퀴즈 풀기</button>
+			</li>
+			<!-- // -->
+		</ul>
+		
+		<!-- ######################### -->
+		<!-- [안내문구] -->
+		<!-- ######################### -->
+		<ul class="txt-bul1 box-t1">
+			<li>데일리퀴즈는 매주 새로운 퀴즈를 확인할 수 있습니다. </li>
+			<li>데일리퀴즈는 1일 1회 참여할 수 있으며, 주말 또는 휴일에는 도전할 수 없습니다. </li>
+			<li>1회 도전에 성공할 경우 포인트를 바로 제공합니다. </li>
+			<li>1회 도전이 오답인 경우 재도전은 할 수 없습니다. </li>
+			<li>당일이 경과된 도전을 안한 퀴즈는 풀어볼 수는 있지만 포인트를 제공하지 않습니다. </li>
+		</ul>
+		<!-- ######################### -->
+	</div>
+</main>
+</body>
+</html>

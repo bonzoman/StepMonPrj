@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>상세보기 | 리포트 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+
+
+<!-- 하이차트 라이브러리 -->
+<link rel="stylesheet" href="../resource/css/content_chart.css">
+<script src="../resource/js/chart/highcharts.js"></script>
+<script src="../resource/js/chart/data.js"></script>
+
+<!-- 차트 솔리드 게이지용 js 모듈 -->
+<script src="../resource/js/chart/highcharts-more.js"></script>
+<script src="../resource/js/chart/solid-gauge.js"></script>
+
+<!-- 차트 Heat Map 모듈 -->
+<script src="../resource/js/chart/heatmap.js"></script>
+
+<!-- 차트 Large tree map -->
+<script src="../resource/js/chart/treemap.js"></script>
+
+</head>
+<body>
+
+<div id="popup">
+	<div class="pop-header">
+		<h1>조직 별 로그인 수</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="report-wrap">
+
+			<div class="search-condition">
+				<span>강남사업단</span>
+				<span>강1지점</span>
+				<span>기준일자 2022.02.22 ~ 2022.02.28</span>
+			</div>
+			<div class="data">
+				<div id="activityChart3" data-chart="Large-tree-Map"></div>
+				<script>
+
+					Highcharts.chart("activityChart3", {
+						chart:{
+							type:"column",
+							height:400,
+						},
+						title: null,
+						series: [{
+							title:null,
+							name: '',
+							type: "treemap",
+							layoutAlgorithm: 'squarified',
+							allowDrillToNode: true,
+							animationLimit: 1000,
+							levelIsConstant: false,
+							borderWidth:2,
+							borderColor:"#000",
+							levels: [{
+								level: 1,
+								dataLabels: {
+									enabled: true
+								}
+							}, {
+								level: 2,
+								borderWidth: 0,
+								dataLabels: {
+									enabled: false
+								}
+							}],
+							data: [{
+								id: 'area1',
+								name: '강남사업단',
+								color: "#006e7f"
+							}, {
+								id: 'area2',
+								name: '경기사업단',
+								color: "#117e88"
+							}, {
+								id: 'area3',
+								name: '경남사업단',
+								color: '#148888'
+							}, {
+								id: 'area4',
+								name: '드림사업단',
+								color: '#21947c'
+							}, {
+								id: 'area5',
+								name: '리더스사업단',
+								color: '#29a77b'
+							}, {
+								id: 'area6',
+								name: '미라클사업단',
+								color: '#51bb65'
+							}, {
+								id: 'area7',
+								name: '미래사업단',
+								color: '#6fbe53'
+							}, {
+								id: 'area8',
+								name: '바른사업단',
+								color: '#9bc33b'
+							}, {
+								id: 'area9',
+								name: '베스트사업단',
+								color: '#c4c823'
+							}, {
+								id: 'area10',
+								name: '부산사업단',
+								color: '#e3e310'
+							}, {
+								id: 'area11',
+								name: '서울사업단',
+								color: '#ffdd03'
+							}, {
+								id: 'area12',
+								name: '센트럴사업단',
+								color: '#fdcd03'
+							}, {
+								id: 'area13',
+								name: '스마트사업단',
+								color: '#fdba03'
+							}, {
+								id: 'area14',
+								name: '스타사업단',
+								color: '#fd9d03'
+							}, {
+								id: 'area15',
+								name: '영남사업단',
+								color: '#fc8903'
+							}, {
+								id: 'area16',
+								name: '전남사업단',
+								color: '#fc7603'
+							}, {
+								id: 'area17',
+								name: '전속지원팀',
+								color: '#ed611f'
+							}, {
+								id: 'area18',
+								name: '중부사업단',
+								color: '#ed561f'
+							}, {
+								id: 'area19',
+								name: '퍼스트사업단',
+								color: '#d5361a'
+							}, {
+								id: 'area20',
+								name: '한결사업단',
+								color: '#ac2811'
+							}, {
+								id: 'area21',
+								name: '호남사업단',
+								color: '#7b1806'
+							}, {
+								name: '강남0지점',
+								parent: 'area1',
+								value: 3
+							}, {
+								name: '강남1지점',
+								parent: 'area1',
+								value: 7
+							}, {
+								name: '강남2지점',
+								parent: 'area1',
+								value: 12
+							}, {
+								name: '강남3지점',
+								parent: 'area1',
+								value: 1
+							}, {
+								name: '강남4지점',
+								parent: 'area1',
+								value: 3
+							}, {
+								name: '강남5지점',
+								parent: 'area1',
+								value: 9
+							}, {
+								name: '강남6지점',
+								parent: 'area1',
+								value: 15
+							}, {
+								name: '강남7지점',
+								parent: 'area1',
+								value: 5
+							}, {
+								name: '강남8지점',
+								parent: 'area1',
+								value: 7
+							}, {
+								name: '강남9지점',
+								parent: 'area1',
+								value: 10
+							}, {
+								name: '강남98지점',
+								parent: 'area1',
+								value: 33
+							}, {
+								name: '강남99지점',
+								parent: 'area1',
+								value: 4
+							}, {
+								name: '강남교차지점',
+								parent: 'area1',
+								value: 8
+							}, {
+								name: '경기0지점',
+								parent: 'area2',
+								value: 35
+							}, {
+								name: '경기1지점',
+								parent: 'area2',
+								value: 80
+							}, {
+								name: '경기0지점',
+								parent: 'area2',
+								value: 60
+							}, {
+								name: '경남1지점',
+								parent: 'area3',
+								value: 56
+							}, {
+								name: '경남2지점',
+								parent: 'area3',
+								value: 100
+							}, {
+								name: '드림3지점',
+								parent: 'area4',
+								value: 50
+							}, {
+								name: '드림4지점',
+								parent: 'area4',
+								value: 60
+							}, {
+								name: '드림5지점',
+								parent: 'area4',
+								value: 80
+							}, {
+								name: '리더스6지점',
+								parent: 'area5',
+								value: 50
+							}, {
+								name: '리더스7지점',
+								parent: 'area5',
+								value: 80
+							}, {
+								name: '미라클8지점',
+								parent: 'area6',
+								value: 20
+							}, {
+								name: '미라클9지점',
+								parent: 'area6',
+								value: 80
+							}, {
+								name: '미라클98지점',
+								parent: 'area6',
+								value: 33
+							}, {
+								name: '바른99지점',
+								parent: 'area7',
+								value: 130
+							}, {
+								name: '1지점',
+								parent: 'area8',
+								value: 130
+							}, {
+								name: '1지점',
+								parent: 'area9',
+								value: 130
+							}, {
+								name: '1지점',
+								parent: 'area10',
+								value: 130
+							}, {
+								name: '1지점',
+								parent: 'area11',
+								value: 130
+							}, {
+								name: '1지점',
+								parent: 'area12',
+								value: 130
+							}, {
+								name: '1지점',
+								parent: 'area13',
+								value: 130
+							}, {
+								name: '1지점',
+								parent: 'area14',
+								value: 130
+							}, {
+								name: '1지점',
+								parent: 'area15',
+								value: 130
+							}, {
+								name: '1지점',
+								parent: 'area16',
+								value: 100
+							}, {
+								name: '1지점',
+								parent: 'area17',
+								value: 130
+							}, {
+								name: '1지점',
+								parent: 'area18',
+								value: 130
+							}, {
+								name: '1지점',
+								parent: 'area19',
+								value: 130
+							}, {
+								name: '1지점',
+								parent: 'area20',
+								value: 130
+							}, {
+								name: '1지점',
+								parent: 'area21',
+								value: 130
+							}]
+						}],
+					});
+
+				</script>
+			</div>
+			<div class="data-table1">
+				<table>
+					<colgroup>
+						<col>
+						<col>
+						<col>
+						<col style="width:20%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">사업단이름</th>
+							<th scope="col">지점명</th>
+							<th scope="col">방문자수</th>
+							<th scope="col">인당 평균 체류시간</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>10,111</td>
+							<td>00:00:00</td>
+						</tr>
+						<tr>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>10,111</td>
+							<td>00:00:00</td>
+						</tr>
+						<tr>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>10,111</td>
+							<td>00:00:00</td>
+						</tr>
+						<tr>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>10,111</td>
+							<td>00:00:00</td>
+						</tr>
+						<tr>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>10,111</td>
+							<td>00:00:00</td>
+						</tr>
+						<tr>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>10,111</td>
+							<td>00:00:00</td>
+						</tr>
+						<tr>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>10,111</td>
+							<td>00:00:00</td>
+						</tr>
+						<tr>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>10,111</td>
+							<td>00:00:00</td>
+						</tr>
+						<tr>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>10,111</td>
+							<td>00:00:00</td>
+						</tr>
+						<tr>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>10,111</td>
+							<td>00:00:00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="paging">
+				<div class="btns1">
+					<button type="button" class="btn-action c3">엑셀 다운로드</button>
+				</div>
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c2">닫기</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

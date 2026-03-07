@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L]목적물내역-재물(기술외)패턴 | 계약상세 | 일반 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<div class="container">
+		<div class="area-btn4"><a href="#uiPOPCONCON0145L01" class="btn-sub3 c2">상세보기</a></div> <!-- [레이어팝업 호출 샘플] -->
+	</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] : 목적물내역 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCONCON0145L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>목적물내역</h1>
+			<button type="button" data-btn="pop-close">목적물내역 닫기</button>
+		</header>
+		<div class="content">
+			<ul class="mes-t1">
+				<li>구매국가 : 한국</li>
+				<li>제조사 : 삼성</li>
+				<li>제품군 : TV</li>
+				<li>시리얼넘버 :</li>
+				<li>공제비율 : 0%</li>
+				<li>구매일자 : 2022.01.06</li>
+				<li>구매금액 : 4,211,572원</li>
+				<li>원화환산 구매금액 : 4,211,572원</li>
+			</ul>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1" >확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCONCON0145L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPCONCON0145L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

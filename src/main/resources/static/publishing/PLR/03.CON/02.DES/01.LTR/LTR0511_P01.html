@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 지침체크 요약 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>지침체크 요약</h1>
+			<button type="button" data-btn="pop-close">지침체크 요약 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ### 지침체크 요약 ### -->
+			<div class="info-data1 t2">
+				<ul>
+					<!-- [위배내용있을시] -->
+					<li class="invalid">
+						<strong class="tit">피보험자명</strong>
+						<div class="txt">내용</div>
+						<a href="javascript:void(0);" class="link">지침체크상세</a>
+					</li>
+					<!-- // -->
+					<li class="invalid">
+						<strong class="tit">하미소</strong>
+						<div class="txt">[플랜]상해후유장해 누적 전 연령: 1억원, 3급(영): 5천만원 한도</div>
+						<p class="txt-c1">* 해당 인수기준은 설계화면에서 수정이 가능해요.</p> <!-- 2022-10-20 안내문구 추가 -->
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">강다니엘</strong>
+						<div class="txt">(교통+비운전교통+업무중)상해후유장해 1급: 1억원, 3급(영): 5천만원 한도</div>
+						<p class="txt-c1">* 해당 인수기준은 설계화면에서 수정이 가능해요.</p> <!-- 2022-10-20 안내문구 추가 -->
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<!-- 2022-10-21 삭제 -->
+			<!-- <div class="info-con3">
+				<dl>
+					<dt>콜적부대상: 공지철</dt>
+					<dd>(교통+비운전+업무 중)상해사망 급수별 합산 5&middot;4&middot;3&middot;2억원 한도</dd>
+					<dd class="link"><button type="button">지침체크상세</button></dd>
+				</dl>
+				<dl>
+					<dt>자동심사: 하다미</dt>
+					<dd>[플랜] 상해후유장해 누적 전 연령: 1억원, 3급(영): 5천만원 한도</dd>
+					<dd class="link"><button type="button">지침체크상세</button></dd>
+				</dl>
+				<dl>
+					<dt>자동심사: 송혜교</dt>
+					<dd>[플랜] 상해후유장해 합산 50세 이하: 3천만원, 60세 이하: 2천만원, 61세 이상: 1천만원 누적 한도</dd>
+					<dd class="link"><button type="button">지침체크상세</button></dd>
+				</dl>
+				<dl>
+					<dt>인수제한: 하다미</dt>
+					<dd>(교통+비운전+업무 중)상해사망  급수별 합산 5&middot;4&middot;3&middot;2억원 한도</dd>
+					<dd class="link"><button type="button">지침체크상세</button></dd>
+				</dl>
+			</div> -->
+			<!-- //2022-10-21 삭제 -->
+
+			<!-- ### 하단영역 ### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ### // ### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

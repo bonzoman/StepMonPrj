@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>상태별 | 목록 | 미수납조회 | 실적관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-05]	1. ‘계속분’ → ‘수금액’ 텍스트 수정
+	*	[M 2022-10-18]	1. 검색결과 결과 없음 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>미수납조회</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">상태별</a></li>
+				<li><a href="javascript:void(0);">회차별</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [소팅영역] -->
+		<!-- ######################### -->
+		<div class="area-btn4" data-scroll="btn">
+			<button type="button" class="btn-t1 c2 active" title="선택됨">전체</button> <!-- 선택됨 -->
+			<button type="button" class="btn-t1 c2">1~25일</button>
+			<button type="button" class="btn-t1 c2">25일 이후</button>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [필터 영역] -->
+		<!-- ######################### -->
+		<div class="wrap-section">
+			<div class="area-info1">
+				<p>2022.03</p>
+				<div class="side">
+					<button type="button" class="icon-com1 ic18 right">필터</button>
+				</div>
+			</div>
+
+			<div class="info-data2">
+				<dl>
+					<dt class="tit">전속지원팀</dt>
+					<!-- [CASE] 설계사 <dt class="tit">하다미<span class="sub">(658602)</span></dt> -->
+
+					<dd class="info-con2 t2">
+						<dl>
+							<dt>미수납건수합계</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>건</span></dd>
+						</dl>
+						<dl>
+							<dt>미수납금액합계</dt>
+							<dd class="data-num1"><strong>000,000,000</strong><span>천원</span></dd>
+						</dl>
+						<dl>
+							<dt>미수납률(금액)</dt>
+							<dd class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></dd>
+						</dl>
+					</dd>
+					<dd class="area-btn1">
+						<a href="javascript:void(0);" class="btn-com1">장기수금액현황​</a><!-- [M 2022-10-05] 텍스트 수정 -->
+						<a href="javascript:void(0);" class="btn-com1">수금 관리</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div class="wrap-section1">
+			<div class="area-info1">
+				<p>총 <strong>00건</strong></p>
+			</div>
+			<div class="info-data1">
+				<ul>
+					<li>
+						<strong class="tit">강남사업단</strong>
+						<div class="info-con2 t2">
+							<dl>
+								<dt>미수납건</dt>
+								<dd class="data-num1"><strong>000,000,000</strong>건</dd>
+							</dl>
+							<dl>
+								<dt>미수납률(건)</dt>
+								<dd class="data-num1"><strong>00.00</strong>%</dd>
+							</dl>
+							<dl>
+								<dt>미수납금액</dt>
+								<dd class="data-num1 txt-c1"><strong>000,000,000</strong>천원</dd>
+							</dl>
+							<dl>
+								<dt>미수납률(금액)</dt>
+								<dd class="data-num1 txt-c1"><strong>00.00</strong>%</dd>
+							</dl>
+						</div>
+						<a href="javascript:void(0);" class="link">상세보기</a> <!-- [M 2022-07-25] 상세보기 추가 -->
+					</li>
+					<li>
+						<strong class="tit">부산사업단</strong>
+						<div class="info-con2 t2">
+							<dl>
+								<dt>미수납건</dt>
+								<dd class="data-num1"><strong>000,000,000</strong>건</dd>
+							</dl>
+							<dl>
+								<dt>미수납률(건)</dt>
+								<dd class="data-num1"><strong>00.00</strong>%</dd>
+							</dl>
+							<dl>
+								<dt>미수납금액</dt>
+								<dd class="data-num1 txt-c1"><strong>000,000,000</strong>천원</dd>
+							</dl>
+							<dl>
+								<dt>미수납률(금액)</dt>
+								<dd class="data-num1 txt-c1"><strong>00.00</strong>%</dd>
+							</dl>
+						</div>
+						<a href="javascript:void(0);" class="link">상세보기</a> <!-- [M 2022-07-25] 상세보기 추가 -->
+					</li>
+				</ul>
+
+				<!-- # 더보기 버튼 # -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+			</div>
+		</div>
+
+		<!-- [M 2022-10-18] 검색결과 결과 없음 추가 -->
+		<!-- ######################### -->
+		<!-- [검색결과] 결과없음 -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<!-- [CASE1] 화면 진입 시 데이터 없는 경우 -->
+				<strong>아직 실적이 없어요.</strong>
+				<!-- // -->
+				<!-- [CASE2] 필터 검색 시 데이터 없는 경우  -->
+				<strong>해당하는 자료가 없어요.</strong>
+				<!-- // -->
+				<span>조건을 변경해보세요.</span>
+			</p>
+		</div>
+		<!-- //[M 2022-10-18] 검색결과 결과 없음 추가 -->
+
+	</div>
+</main>
+</body>
+</html>

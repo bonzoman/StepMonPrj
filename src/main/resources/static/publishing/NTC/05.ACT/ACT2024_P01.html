@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 소득조회상세-관리소득 | 수수료 조회 | 수수료 관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>지급액 상세내역</h1>
+			<button type="button" data-btn="pop-close">지급액 상세내역 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [탭버튼] -->
+			<!-- ######################### -->
+			<div class="nav-tab1" data-sticky="top" data-scroll="true">
+				<ul>
+					<li><a href="javascript:void(0);">계약소득</a></li>
+					<li><a href="javascript:void(0);">초대소득</a></li>
+					<li class="active"><a href="javascript:void(0);" aria-current="page">관리소득</a></li>
+					<li><a href="javascript:void(0);">기타</a></li>
+					<li><a href="javascript:void(0);">포인트</a></li>
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] : 관리소득 -->
+			<!-- ######################### -->
+			<div>
+				<h2 class="hide">관리소득</h2>
+
+				<!-- ### 간부수수료 ### -->
+				<div class="wrap-section3 line">
+					<h3 class="hide">간부수수료</h3>
+
+					<!-- [간부수수료 합계] -->
+					<div class="area-info2">
+						<dl>
+							<dt>간부수수료 합계</dt>
+							<dd class="data-num1"><strong>1,166,600</strong><span>원</span></dd>
+						</dl>
+					</div>
+
+					<!-- [정보영역] -->
+					<div class="info-con2">
+						<dl>
+							<dt>기본수수료</dt>
+							<dd class="data-num1"><strong>125,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>조직운영수수료</dt>
+							<dd class="data-num1"><strong>385,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>자동차보험<br>관리수수료</dt>
+							<dd class="data-num1"><strong>125,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>조직관리성과<br>수수료</dt>
+							<dd class="data-num1"><strong>385,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>조직분할성과<br>수수료</dt>
+							<dd class="data-num1"><strong>125,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>조직분할축하<br>수수료</dt>
+							<dd class="data-num1"><strong>385,000</strong><span>원</span></dd>
+						</dl>
+						<dl>
+							<dt>직책수수료</dt>
+							<dd class="data-num1"><strong>125,000</strong><span>원</span></dd>
+						</dl>
+					</div>
+					<!-- // -->
+				</div>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

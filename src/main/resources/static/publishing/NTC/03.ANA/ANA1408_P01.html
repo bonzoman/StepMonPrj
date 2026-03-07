@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 설계적용 | 보장분석 결과 | 고객목록 | 보장분석</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1> 설계 선택 및 적용</h1>
+			<button type="button" data-btn="pop-close"> 설계 선택 및 적용 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [조회기간 선택] -->
+			<!-- ######################### -->
+			<fieldset class="form-search1 t1"> <!-- [M 2022-09-26] 클래스명 변경 -->
+				<legend>조회기간 선택</legend>
+				<dl class="form">
+					<dt>조회기간</dt>
+					<dd>
+						<!-- [날짜선택] -->
+						<div class="input-date1 text disabled">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>시작날짜 선택</button>
+								<input type="text" title="시작날짜 선택" data-dateform="start2" value="2022.03.09" placeholder="YYYY.MM.DD" readonly>
+							</span>
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>종료날짜 선택</button>
+								<input type="text" title="종료날짜 선택" data-dateform="end2" value="2022.03.09" placeholder="YYYY.MM.DD" readonly>
+							</span>
+						</div>
+						<!-- [기간선택] -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span >당일</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span >1주일</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1" checked>
+								<span >1개월</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio1">
+								<span >당월</span>
+							</label>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [설계목록] -->
+			<!-- ######################### -->
+			<div class="area-info1">
+				<p>총 <strong>000건</strong></p>
+			</div>
+			<div class="info-data2">
+				<ul>
+					<!-- // -->
+					<li>
+						<!-- [상품명] -->
+						<div class="tit">
+							<input type="radio" name="infoRadio1">
+							<span>상품명</span>
+						</div>
+						<!-- [상태 / 증권번호] -->
+						<div class="info">
+							<span class="hide">증권번호</span>
+							<span>LA12345678901</span>
+						</div>
+						<!-- [고객정보] -->
+						<div class="data1">
+							<dl>
+								<dt>피보험자</dt>
+								<dd>계약자명</dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt>납입만기</dt>
+								<dd>00년(000세)</dd>
+							</dl>
+							<dl>
+								<dt>청약일</dt>
+								<dd>2000.00.00</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<input type="radio" name="infoRadio1">
+							<span>무배당롯데힐링케어건강보험</span>
+						</div>
+						<div class="info">
+							<span class="hide">증권번호</span>
+							<span>LA12345678901</span>
+						</div>
+						<div class="data1">
+							<dl>
+								<dt>피보험자</dt>
+								<dd>하다미</dd>
+							</dl>
+							<dl>
+								<dt>보험료</dt>
+								<dd class="data-num1"><strong>00.00</strong><span>%</span></dd>
+							</dl>
+							<dl>
+								<dt>납입만기</dt>
+								<dd>20년(100세)</dd>
+							</dl>
+							<dl>
+								<dt>청약일</dt>
+								<dd>2022.01.01</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+
+				<!-- # 더보기(현재페이지/총페이지) # -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">설계적용</button>
+				<!-- <button type="button" class="btn-action c1" disabled>설계적용</button> : 비활성화 -->
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+</body>
+</html>

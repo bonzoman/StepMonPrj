@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>등록 | 미성년자/법정대리인 | 고객등록</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>법정대리인 등록</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [고객검색] -->
+		<!-- ######################### -->
+		<fieldset class="form-search1">
+			<legend>고객검색</legend>
+
+			<!-- # 미성년자 고객 검색 # -->
+			<div class="text">
+				<input type="search" title="미성년자 고객 검색" placeholder="미성년자 고객님을 검색해주세요.">
+				<button type="button" class="icon-com1 ic2">검색하기</button>
+			</div>
+
+			<!-- # 관계 유형 선택 # -->
+			<div class="select-wrap" data-autoset="select">
+				<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+					<span data-select="title">관계 유형을 선택해주세요.</span>
+					<span data-select="text"></span>
+				</button>
+				<div class="list">
+					<div data-label="관계 유형 선택">
+						<div class="option">
+							<label><input type="radio" name="selectOpeion" value="1"><span>미성년자/배우자</span></label>
+							<label><input type="radio" name="selectOpeion" value="2"><span>미성년자/법정대리인</span></label>
+						</div>
+						<button type="button" data-toggle="closebtn">확인</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- # [CASE] 법정대리인이 없을 경우 # -->
+			<div class="area-btn1">
+				<button type="button" class="btn-com1 ic3">법정대리인 추가</button>
+			</div>
+
+			<!-- # [CASE] 법정대리인이 있읅 경우 # -->
+			<div class="area-btn1">
+				<button type="button" class="btn-com1 ic3">법정대리인 추가 등록</button>
+			</div>
+			<!-- # // # -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [법정대리인 있음] -->
+		<!-- ######################### -->
+		<div class="form-wrap1 line2">
+			<!-- // -->
+			<fieldset>
+				<legend class="tit">법정대리인</legend>
+				<div class="side"><button type="button" class="btn-sub2 c2">지우기</button></div>
+				<div class="info-con1">
+					<dl>
+						<dt>이름</dt>
+						<dd>안예신</dd>
+					</dl>
+					<dl>
+						<dt>생년월일/성별</dt>
+						<dd>2006.08.19·여</dd>
+					</dl>
+					<dl>
+						<dt>휴대폰번호</dt>
+						<dd data-masking="true">010-****-1234</dd>
+					</dl>
+					<dl>
+						<dt>주소</dt>
+						<dd data-masking="true">(04528)서울 영등포구 여의대로 ****, ***</dd>
+					</dl>
+					<dl>
+						<dt>유형</dt>
+						<dd>조부모</dd>
+					</dl>
+				</div>
+
+				<!-- # 대표자여부 : [샘플] 아니요 선택시  # -->
+				<dl class="form line">
+					<dt>대표자여부 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="form-radio1" aria-invalid="true"> <!-- [D] 오류시 : aria-invalid="true" 추가후 ui.initReload() 재호출 -->
+								<span>예</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio1" checked>
+								<span>아니요</span>
+							</label>
+						</div>
+						<div class="validation">대표자를 반드시 한 명 이상 지정해주세요.</div>
+					</dd>
+				</dl>
+
+				<!-- # 법정대리인 1인일 경우 노출 # -->
+				<dl class="form line3">
+					<dt>법정대리인이 1명인 사유</dt>
+					<dd>
+						<input type="text" class="text" title="법정대리인이 1명인 사유" placeholder="사유를 입력해주세요." aria-invalid="true"> <!-- [D] 오류시 : aria-invalid="true" 추가후 ui.initReload() 재호출 -->
+						<div class="validation">사유를 반드시 입력해주세요.</div>
+					</dd>
+				</dl>
+				<!-- # // # -->
+			</fieldset>
+			<!-- // -->
+			<fieldset>
+				<legend class="tit">법정대리인</legend>
+				<div class="side"><button type="button" class="btn-sub2 c2">지우기</button></div>
+				<div class="info-con1">
+					<dl>
+						<dt>이름</dt>
+						<dd>안예신</dd>
+					</dl>
+					<dl>
+						<dt>생년월일/성별</dt>
+						<dd>2006.08.19·여</dd>
+					</dl>
+					<dl>
+						<dt>휴대폰번호</dt>
+						<dd data-masking="true">010-****-1234</dd>
+					</dl>
+					<dl>
+						<dt>주소</dt>
+						<dd data-masking="true">(04528)서울 영등포구 여의대로 ****, ***</dd>
+					</dl>
+					<dl>
+						<dt>유형</dt>
+						<dd>조부모</dd>
+					</dl>
+				</div>
+
+				<dl class="form line">
+					<dt>대표자여부 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="form-radio1">
+								<span>예</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio1">
+								<span>아니요</span>
+							</label>
+						</div>
+						<div class="validation">대표자를 반드시 한 명 이상 지목해주세요.</div>
+					</dd>
+				</dl>
+			</fieldset>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [법정대리인 없음] -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>등록된 법정대리인이 없어요.</strong>
+				<span>[법정대리인 추가] 버튼을 누르고 법정대리인을 등록해주세요.</span>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">저장</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L]가능한업무 | 인수심사요청및결과 | 인수심사요청및결과</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+	<main id="wrapper">
+		<div class="container">
+			<div class="area-action t1" data-sticky="bottom">
+				<button type="button" aria-controls="uiPOPLTR0105L01" class="btn-action ic4 simple">가능한 업무<i class="icon-invalid">등록필요</i></button> <!-- [레이어팝업 호출 버튼] -->
+				<button type="button" class="btn-action c1">서류발송</button>
+			</div>
+		</div>
+	</main>
+
+	<!-- ################################################### -->
+	<!-- ### [레이어팝업] : 가능한 업무 ### -->
+	<!-- ################################################### -->
+	<div id="uiPOPLTR0105L01" class="pop-modal1" data-popmodal="true">
+		<article>
+			<header>
+				<h1>가능한 업무</h1>
+				<button type="button" data-btn="pop-close">가능한 업무 닫기</button>
+			</header>
+			<div class="content">
+				<div class="label-check2">
+					<label>
+						<input type="radio" name="form-radio1" checked>
+						<span>사진촬영SMS</span>
+					</label>
+					<label>
+						<input type="radio" name="form-radio1">
+						<span>건축물대장조회</span>
+					</label>
+					<label>
+						<input type="radio" name="form-radio1">
+						<span>검진결과 조회</span>
+					</label>
+					<label>
+						<input type="radio" name="form-radio1">
+						<span>콜적부 결과<i class="icon-invalid">등록필요</i></span> <!-- [D] 등록이 필요한 경우 추가 : <i class="icon-invalid">등록필요</i> -->
+					</label>
+				</div>
+			</div>
+			<footer class="area-action">
+				<button type="button" class="btn-action c1">확인</button>
+			</footer>
+		</article>
+	</div>
+	<!-- ################################################### -->
+
+	<script>
+	//<!--
+		//레이어팝업 선언
+		$plugin.popmodal('#uiPOPLTR0105L01');
+
+		//레이어팝업 강제오픈
+		$('#uiPOPLTR0105L01').trigger('outputOpen');
+	//-->
+	</script>
+</body>
+</html>

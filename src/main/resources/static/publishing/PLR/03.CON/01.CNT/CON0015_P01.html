@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 납입면제조건 | [T] 계약기본 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>납입면제조건</h1>
+			<button type="button" data-btn="pop-close">납입면제조건 닫기</button>
+		</header>
+	
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 계약정보 -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+				<div class="info">
+					<dl>
+						<dt>증권번호</dt>
+						<dd>LA123456789</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [컨텐츠영역] -->
+			<!-- ######################### -->
+			<div class="area-toggle1" data-autoset="toggle">
+				<!-- # [계약납입면제조건] # -->
+				<section class="active">
+					<header class="tit">
+						<h3>계약 납입면제 조건</h3>
+						<button type="button" data-toggle="btn" aria-expanded="true">계약 납입면제 조건 상세보기</button>
+					</header>
+					<div data-toggle="content">
+						<!-- [사고담보코드명] -->
+						<dl class="txt-bul1">
+							<dt>사고담보코드명</dt>
+
+							<!-- // -->
+							<dd>(간편)일반상해 80%이상 후유장해발생율(연령별)</dd>
+							<dd>CI(치명적질병)진단비(말기간경화)</dd>
+							<dd>CI(치명적질병)진단비(말기신부전)</dd>
+							<dd>갱)급성심근경색증진단비(간편)</dd>
+							<dd>자녀)질병80%이상후유장해</dd>
+							<dd>암진단비(일반암)</dd>
+							<!-- // -->
+						</dl>
+
+						<!-- [안내사항] -->
+						<div class="mes-info2 box">
+							<p>계약 납입면제에 해당하는 특약을 담보하고 있지 않더라도 진단확정 시 납입면제 됨</p>
+						</div>
+			
+						<!-- [조건없음] -->
+						<div class="mes-result1">
+							<p><strong>납입면제 조건이 없습니다.</strong></p>
+						</div>
+						<!-- // -->
+					</div>
+				</section>
+
+				<!-- # [담보별납입면제조건] # -->
+				<section>
+					<header class="tit">
+						<h3>담보별 납입면제 조건</h3>
+						<button type="button" data-toggle="btn" aria-expanded="false">담보별 납입면제 조건 상세보기</button>
+					</header>
+					<div data-toggle="content">
+						<!-- [담보목록] -->
+						<div class="info-con1">
+							<!-- // -->
+							<ul>
+								<li>
+									<div>담보명</div>
+									<div>담보명</div>
+								</li>
+								<li>
+									<div>납입면제 조건</div>
+									<div>납입면제 조건</div>
+								</li>
+							</ul>
+							<!-- // -->
+							<ul>
+								<li>
+									<div>담보명</div>
+									<div>4대 장애</div>
+								</li>
+								<li>
+									<div>납입면제 조건</div>
+									<div>4대 장애(시각장애), 4대 장애(언어장애), 4대 장애(지체장애), 4대 장애(청각장애) 중 1개 이상 지급한 경우</div>
+								</li>
+							</ul>
+							<!-- // -->
+						</div>
+
+						<!-- [안내사항] -->
+						<div class="mes-info2 box">
+							<p>보험료 납입이 면제된 이후 해당 보험기간의 만기가 도래하여 새롭게 갱신되는 계약에서는 갱신전 보험사고로 인한 보험료 납입 면제를 적용하지 않으며, 갱신된 계약의 보험료를 납입하여야 함</p>
+						</div>
+
+						<!-- [조건없음] -->
+						<div class="mes-result1">
+							<p><strong>납입면제 조건이 없습니다.</strong></p>
+							<!-- 2023-01-02 추가 -->
+							<div class="mes-info2 box">
+								<p>갱신형 담보는 납입면제에서 제외됩니다.</p>
+							</div>
+							<!-- //2023-01-02 추가 -->
+						</div>
+						<!-- // -->
+					</div>
+				</section>
+				<!-- # // # -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단문구] -->
+			<!-- ######################### -->
+			<p class="mes-t1">2019년 이전 판매 상품은 약관 확인</p>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</html>

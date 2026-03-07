@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>일정검색 | 캘린더 | 일정관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>일정 검색</h1>
+			<button type="button" data-btn="pop-close">일정 검색 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [검색영역] 일정 검색 -->
+			<!-- ######################### -->
+			<fieldset class="form-search1" data-sticky="top">
+				<legend>일정 검색</legend>
+				<div class="text">
+					<input type="search" title="일정 검색" placeholder="제목 또는 태그를 입력해주세요.">
+					<button type="button" class="icon-com1 ic2">조회</button>
+				</div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [검색결과] 결과없음 -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p>
+					<strong>검색 결과가 없습니다.</strong>
+				</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [검색결과] -->
+			<!-- ######################### -->
+			<!-- # 총 건수 : 총 00건 # -->
+			<div class="area-info1">
+				<p>총 <strong>40건</strong></p>
+			</div>
+
+			<div class="list-data4">
+				<!-- // -->
+				<dl>
+					<dt>2022.04.19</dt>
+					<dd>
+						<strong>김강남 고객님 <em class="txt-c1">생일</em></strong>
+						<div class="data-word2">
+							<span>#60대이상</span>
+							<span>#기혼</span>
+							<span>#10만원이하</span>
+							<span>#실손</span>
+						</div>
+					</dd>
+					<dd>
+						<strong>아코디 고객님 <em class="txt-c1">생일</em></strong>
+						<div class="data-word2">
+							<span>#60대이상</span>
+							<span>#기혼</span>
+							<span>#10만원이하</span>
+							<span>#실손</span>
+						</div>
+					</dd>
+					<dd>
+						<strong>강현종 고객님 <em class="txt-c1">생일</em></strong>
+						<div class="data-word2">
+							<span>#60대이상</span>
+							<span>#기혼</span>
+							<span>#10만원이하</span>
+							<span>#실손</span>
+						</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>2022.04.19</dt>
+					<dd>
+						<strong>한과장 고객님 <em class="txt-c1">생일</em></strong>
+						<div class="data-word2">
+							<span>#60대이상</span>
+							<span>#기혼</span>
+							<span>#10만원이하</span>
+							<span>#실손</span>
+						</div>
+					</dd>
+					<dd>
+						<strong>엄마 <em class="txt-c1">생일</em></strong>
+						<div class="data-word2">
+							<span>#60대이상</span>
+							<span>#기혼</span>
+							<span>#10만원이하</span>
+							<span>#실손</span>
+						</div>
+					</dd>
+					<dd>
+						<strong>MOM <em class="txt-c1">생일</em>파티</strong>
+						<div class="data-word2">
+							<span>#60대이상</span>
+							<span>#기혼</span>
+							<span>#10만원이하</span>
+							<span>#실손</span>
+						</div>
+					</dd>
+				</dl>
+			</div>
+
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

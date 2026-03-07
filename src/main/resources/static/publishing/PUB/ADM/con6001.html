@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>케어전담설계사 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220418">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">케어 리스트</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<dl class="form w3">
+						<dt>핧당일</dt>
+						<dd>
+							<span class="date-range">
+								<input type="text" data-role="start" value="" placeholder="시작일 선택">
+								<span class="util">~</span>
+								<input type="text" data-role="end" placeholder="종료일 선택">
+							</span>
+						</dd>
+					</dl>
+					<dl class="form w3">
+						<dt>통화여부</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="checkbox" name="ct1" checked>
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="ct1">
+									<span>미통화</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="ct1">
+									<span>통화</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w3">
+						<dt>상품명</dt>
+						<dd>
+							<div class="form-row">
+								<input type="text" name="" id="" class="text" style="width:80%;" placeholder="상품명을 입력해주세요.">
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w3">
+						<dt>상태</dt>
+						<dd>
+							<div class="form-row">
+								<label class="label-check">
+									<input type="checkbox" name="ct2" checked>
+									<span>전체</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="ct2">
+									<span>연체</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="ct2">
+									<span>실효</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="ct2">
+									<span>미동의</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" name="ct2">
+									<span>정상</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w3">
+						<dt>캠페인명</dt>
+						<dd>
+							<div class="form-row">
+								<input type="text" name="" id="" class="text" style="width:80%;" placeholder="캠페인명을 입력해주세요.">
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+
+			
+			<div class="tit-sub2">
+				<h3 class="">전체 1200건</h3>
+				<div class="sub">
+					<button type="button" class="btn-action c3">엑셀다운로드</button>
+					<button type="button" class="btn-action c3">데이터 새로고침</button>
+				</div>
+			</div>
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<col style="width:60px;">
+						<col style="width:120px;">
+						<col>
+						<col style="width:100px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+						<col style="width:150px;">
+						<col style="width:100px;">
+						<col style="width:160px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">할당일</th>
+							<th scope="col">상품명(증권번호)</th>
+							<th scope="col">고객명</th>
+							<th scope="col">통화여부</th>
+							<th scope="col">상태</th>
+							<th scope="col">재배분여부</th>
+							<th scope="col">캠페인명</th>
+							<th scope="col">상담원</th>
+							<th scope="col">비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="10">
+								<div class="nodata">
+									등록된 정보가 없습니다.
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>2022.02.22</td>
+							<td>let:care종합건강보험 <br>(LA00012345)</td>
+							<td>하다미</td>
+							<td>성공</td>
+							<td>연체</td>
+							<td>Y</td>
+							<td>전속 미납해지 <br>(부활대상계약)</td>
+							<td>홍길동 <br>(3415080_001)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>2022.02.22</td>
+							<td>let:care종합건강보험 <br>(LA00012345)</td>
+							<td>하다미</td>
+							<td>미통화</td>
+							<td>연체</td>
+							<td>Y</td>
+							<td>전속 미납해지 <br>(부활대상계약)</td>
+							<td>홍길동 <br>(3415080_001)</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+
+			<div class="paging">
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+</script>
+</body>
+</html>

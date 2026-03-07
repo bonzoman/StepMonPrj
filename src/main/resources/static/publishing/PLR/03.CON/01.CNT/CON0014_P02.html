@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 우편물받는곳 | [T] 계약기본 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>우편물받는곳</h1>
+			<button type="button" data-btn="pop-close">우편물받는곳 선택 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ### 선택 목록 ### -->
+			<div class="con-t1">
+				<!-- // -->
+				<label>
+					<input type="radio" name="ad1" checked>
+					<strong class="tit">집</strong>
+					<span class="txt">
+						<span>(08214) 서울특별시 강남구 논현동 20-9</span>
+						<span>상세주소 123</span>
+					</span>
+				</label>
+				<!-- // -->
+				<label>
+					<input type="radio" name="ad1">
+					<strong class="tit">직장</strong>
+					<span class="txt">
+						<span>(08214) 서울 강남구 강남대로 136길 5-4</span>
+						<span>상세주소 123</span>
+					</span>
+				</label>
+				<!-- // -->
+				<label>
+					<input type="radio" name="ad1">
+					<strong class="tit">기타</strong>
+					<span class="txt">
+						<span>(08214) 서울 강남구 강남대로 136길 5-4</span>
+						<span>상세주소 123</span>
+					</span>
+				</label>
+				<!-- // -->
+				<label>
+					<input type="radio" name="ad1">
+					<strong class="tit">기타1</strong>
+					<span class="txt">
+						<span>(08214) 서울 강남구 강남대로 136길 5-4</span>
+						<span>상세주소 123</span>
+					</span>
+				</label>
+				<!-- // -->
+				<label>
+					<input type="radio" name="ad1">
+					<strong class="tit">기타2</strong>
+					<span class="txt">
+						<span>(08214) 서울 강남구 강남대로 136길 5-4</span>
+						<span>상세주소 123</span>
+					</span>
+				</label>
+				<!-- // -->
+			</div>
+			<!-- ######################### -->
+			<!-- [검색결과] 결과없음 -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p>
+					<strong>주소지 정보가 없어요.</strong>
+				</p>
+			</div>
+			<!-- ### 하단 버튼 ### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ### // ### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

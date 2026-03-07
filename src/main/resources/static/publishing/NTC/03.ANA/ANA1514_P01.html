@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 담보별 상세분석 | 보장상세내역 | 셀프 보장분석</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-07]	① 담보니즈 알아보기 삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>담보별 상세분석</h1>
+			<button type="button" data-btn="pop-close">담보별 상세분석 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [안내문구] -->
+			<!-- ######################### -->
+			<div class="tit-section2 t1">
+				<p>
+					<strong>@고객명@</strong>님의<br>
+					<strong>@담보유형@</strong>은<br>
+					<strong class="icon-state4 t1 ic1">가입안함</strong>
+					<strong class="icon-state4 t1 ic2">충분</strong>
+					<strong class="icon-state4 t1 ic3">부족</strong>상태입니다.
+				</p>
+				<!-- 2022-10-07 삭제 -->
+				<!-- <div class="area-btn4">
+					<a href="javascript:void(0);" class="icon-com2 right ic1">담보 니즈 알아보기</a>
+				</div> -->
+				<!-- //2022-10-07 삭제 -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭버튼] -->
+			<!-- [D] 클릭한 담보명이 노출된 상태로 팝업 호출 -->
+			<!-- [D] href="컨테츠ID" -->
+			<!-- ######################### -->
+			<div class="tab-sub2" data-autoset="tab">
+				<ul>
+					<li class="active"><a href="#UITABCON1">담보명1</a></li>
+					<li><a href="#UITABCON2">담보명2</a></li>
+					<li><a href="#UITABCON3">담보명3</a></li>
+					<li><a href="#UITABCON4">담보명4</a></li>
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 담보내용 -->
+			<!-- ######################### -->
+			<div id="UITABCON1" class="ui-tabcon active">
+				<!-- ### 담보명 ### -->
+				<div class="tit-sub1">
+					<h2>담보명1</h2>
+					<div class="side">
+						<i class="icon-state4 ic1">미가입</i>
+						<i class="icon-state4 ic2">충분</i>
+						<i class="icon-state4 ic3">부족</i>
+					</div>
+				</div>
+
+				<!-- ### 납입현황 ### -->
+				<div class="wrap-progress">
+					<!-- ### 보험료납입율 ###
+						제어 부분
+						* style="--el-progress:00;"
+						* <em>00</em>
+					-->
+					<div class="area-progress2" style="--el-progress:77;">
+						<span><em>77</em>%</span>
+					</div>
+					<div class="label t1">
+						<dl>
+							<dt>가입금액</dt>
+							<dd><div class="data-num1"><strong>0,000</strong><span>만원</span></div></dd>
+						</dl>
+						<dl>
+							<dt>권장금액</dt>
+							<dd><div class="data-num1"><strong>0,000</strong><span>억원</span></div></dd>
+						</dl>
+					</div>
+				</div>
+
+				<!-- ### 보험내역 ### -->
+				<div class="area-info1"><p>가입된 보험 <strong>2건</strong></p></div>
+				<div class="list-con1 box">
+					<ul>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<strong>보험명</strong>
+								<span class="sub">보험사</span>
+								<span>담보명</span>
+								<span>보장금액 000만원</span>
+							</a>
+						</li>
+						<!-- // -->
+						<li>
+							<a href="javascript:void(0);">
+								<strong>(무)베스트변액유니버셜종신보험(월납)</strong>
+								<span class="sub">KDB생명</span>
+								<span>질병사망</span>
+								<span>보장금액 300만원</span>
+							</a>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 담보내용 -->
+			<!-- ######################### -->
+			<div id="UITABCON2" class="ui-tabcon">
+				<div class="tit-sub1">
+					<h2>담보명2</h2>
+					<div class="side">
+						<i class="icon-state4 ic2">충분</i>
+					</div>
+				</div>
+				<div class="wrap-progress">
+					<div class="area-progress2" style="--el-progress:77;">
+						<span><em>77</em>%</span>
+					</div>
+					<div class="label t1">
+						<dl>
+							<dt>가입금액</dt>
+							<dd><div class="data-num1"><strong>0,000</strong><span>만원</span></div></dd>
+						</dl>
+						<dl>
+							<dt>권장금액</dt>
+							<dd><div class="data-num1"><strong>0,000</strong><span>억원</span></div></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="area-info1"><p>가입된 보험 <strong>2건</strong></p></div>
+				<div class="list-con1 box">
+					<ul>
+						<li>
+							<a href="javascript:void(0);">
+								<strong>보험명</strong>
+								<span class="sub">보험사</span>
+								<span>담보명</span>
+								<span>보장금액 000만원</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">
+								<strong>(무)베스트변액유니버셜종신보험(월납)</strong>
+								<span class="sub">KDB생명</span>
+								<span>질병사망</span>
+								<span>보장금액 300만원</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 담보내용 -->
+			<!-- ######################### -->
+			<div id="UITABCON3" class="ui-tabcon">
+				<div class="tit-sub1">
+					<h2>담보명3</h2>
+					<div class="side">
+						<i class="icon-state4 ic3">부족</i>
+					</div>
+				</div>
+				<div class="wrap-progress">
+					<div class="area-progress2" style="--el-progress:77;">
+						<span><em>77</em>%</span>
+					</div>
+					<div class="label t1">
+						<dl>
+							<dt>가입금액</dt>
+							<dd><div class="data-num1"><strong>0,000</strong><span>만원</span></div></dd>
+						</dl>
+						<dl>
+							<dt>권장금액</dt>
+							<dd><div class="data-num1"><strong>0,000</strong><span>억원</span></div></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="area-info1"><p>가입된 보험 <strong>2건</strong></p></div>
+				<div class="list-con1 box">
+					<ul>
+						<li>
+							<a href="javascript:void(0);">
+								<strong>보험명</strong>
+								<span class="sub">보험사</span>
+								<span>담보명</span>
+								<span>보장금액 000만원</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">
+								<strong>(무)베스트변액유니버셜종신보험(월납)</strong>
+								<span class="sub">KDB생명</span>
+								<span>질병사망</span>
+								<span>보장금액 300만원</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 담보내용 -->
+			<!-- ######################### -->
+			<div id="UITABCON4" class="ui-tabcon">
+				<div class="tit-sub1">
+					<h2>담보명4</h2>
+					<div class="side"><i class="icon-state4 ic1">가입안함</i></div>
+				</div>
+				<div class="wrap-progress">
+					<div class="area-progress2" style="--el-progress:77;">
+						<span><em>77</em>%</span>
+					</div>
+					<div class="label t1">
+						<dl>
+							<dt>가입금액</dt>
+							<dd><div class="data-num1"><strong>0,000</strong><span>만원</span></div></dd>
+						</dl>
+						<dl>
+							<dt>권장금액</dt>
+							<dd><div class="data-num1"><strong>0,000</strong><span>억원</span></div></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="area-info1"><p>가입된 보험 <strong>2건</strong></p></div>
+				<div class="list-con1 box">
+					<ul>
+						<li>
+							<a href="javascript:void(0);">
+								<strong>보험명</strong>
+								<span class="sub">보험사</span>
+								<span>담보명</span>
+								<span>보장금액 000만원</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">
+								<strong>(무)베스트변액유니버셜종신보험(월납)</strong>
+								<span class="sub">KDB생명</span>
+								<span>질병사망</span>
+								<span>보장금액 300만원</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+</body>
+</html>

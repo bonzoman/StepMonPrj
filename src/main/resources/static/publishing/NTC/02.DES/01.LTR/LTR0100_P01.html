@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 설계비교 | 가입설계조회 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>설계비교</h1>
+			<button type="button" data-btn="pop-close">설계비교 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [설계비교] -->
+			<!-- ######################### -->
+			<!-- # 상품 정보 # -->
+			<section class="wrap-section4">
+				<h2 class="tit-sub1">상품 정보</h2>
+				<div class="list-t2 info">
+					<ul>
+						<li>
+							<!-- 상품1 -->
+							<dl class="area">
+								<dt>설계번호</dt>
+								<dd>LA220307111541</dd>
+							</dl>
+							<!-- 상품2 -->
+							<dl class="area">
+								<dt>설계번호</dt>
+								<dd>LA220307111541</dd>
+							</dl>
+						</li>
+						<li>
+							<!-- 상품1 -->
+							<dl class="area">
+								<dt>상품</dt>
+								<dd>무배당 롯데 let:care 실손의료보험 IV(계약전환용)(2107)</dd>
+							</dl>
+							<!-- 상품2 -->
+							<dl class="area">
+								<dt>상품</dt>
+								<dd>무배당 let:smile 종합건강유사암보험(더끌림 플러스)(2201)</dd>
+							</dl>
+						</li>
+						<li>
+							<!-- 상품1 -->
+							<dl class="area">
+								<dt>플랜</dt>
+								<dd>전략플랜</dd>
+							</dl>
+							<!-- 상품2 -->
+							<dl class="area">
+								<dt>플랜</dt>
+								<dd>암종합플랜</dd>
+							</dl>
+						</li>
+						<li>
+							<!-- 상품1 -->
+							<dl class="area">
+								<dt>보험기간</dt>
+								<dd>100세만기</dd>
+							</dl>
+							<!-- 상품2 -->
+							<dl class="area">
+								<dt>보험기간</dt>
+								<dd>100세만기</dd>
+							</dl>
+						</li>
+						<li>
+							<!-- 상품1 -->
+							<dl class="area">
+								<dt>납입기간</dt>
+								<dd>20년납</dd>
+							</dl>
+							<!-- 상품2 -->
+							<dl class="area">
+								<dt>납입기간</dt>
+								<dd>전기납</dd>
+							</dl>
+							<!-- // -->
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- # 피보험자 정보 # -->
+			<section class="wrap-section4">
+				<h2 class="tit-sub1">피보험자 정보</h2>
+				<div class="list-t2 info">
+					<ul>
+						<li>
+							<!-- 상품1 -->
+							<dl class="area">
+								<dt>피보험자</dt>
+								<dd>
+									<!-- // -->
+									<div class="select-wrap" data-autoset="select">
+										<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+											<span data-select="title">피보험자 선택</span>
+											<span data-select="text" data-value="1">하다미</span>
+										</button>
+										<div class="list">
+											<div data-label="피보험자 선택">
+												<div class="option">
+													<label><input type="radio" name="selectOpeion1" value="1"><span>하다미</span></label>
+													<label><input type="radio" name="selectOpeion1" value="2"><span>하미미</span></label>
+													<label><input type="radio" name="selectOpeion1" value="3"><span>하마마</span></label>
+												</div>
+												<button type="button" data-toggle="closebtn">확인</button>
+											</div>
+										</div>
+									</div>
+									<!-- // -->
+								</dd>
+							</dl>
+							<!-- 상품2 -->
+							<dl class="area">
+								<dt>피보험자</dt>
+								<dd>
+									<!-- // -->
+									<div class="select-wrap" data-autoset="select">
+										<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+											<span data-select="title">피보험자 선택</span>
+											<span data-select="text" data-value="1">공지철</span>
+										</button>
+										<div class="list">
+											<div data-label="피보험자 선택">
+												<div class="option">
+													<label><input type="radio" name="selectOpeion2" value="1"><span>공지철</span></label>
+													<label><input type="radio" name="selectOpeion2" value="2"><span>공유</span></label>
+													<label><input type="radio" name="selectOpeion2" value="3"><span>공지천</span></label>
+												</div>
+												<button type="button" data-toggle="closebtn">확인</button>
+											</div>
+										</div>
+									</div>
+									<!-- // -->
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<!-- 상품1 -->
+							<dl class="area">
+								<dt>성별/나이</dt>
+								<dd>여자/30세</dd>
+							</dl>
+							<!-- 상품2 -->
+							<dl class="area">
+								<dt>성별/나이</dt>
+								<dd>남자/41세</dd>
+							</dl>
+						</li>
+						<li>
+							<!-- 상품1 -->
+							<dl class="area">
+								<dt>직업(급수)</dt>
+								<dd>번역 및 통역가(1급/A등급)</dd>
+							</dl>
+							<!-- 상품2 -->
+							<dl class="area">
+								<dt>직업(급수)</dt>
+								<dd>제품 및 광고 영업원(2급/B등급)</dd>
+							</dl>
+						</li>
+						<li>
+							<!-- 상품1 -->
+							<dl class="area">
+								<dt>차량용도</dt>
+								<dd>자가용</dd>
+							</dl>
+							<!-- 상품2 -->
+							<dl class="area">
+								<dt>차량용도</dt>
+								<dd>자가용</dd>
+							</dl>
+						</li>
+						<li>
+							<!-- 상품1 -->
+							<dl class="area">
+								<dt>담보보험료</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+							<!-- 상품2 -->
+							<dl class="area">
+								<dt>담보보험료</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+						</li>
+						<li>
+							<!-- 상품1 -->
+							<dl class="area">
+								<dt>적립보험료</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+							<!-- 상품2 -->
+							<dl class="area">
+								<dt>적립보험료</dt>
+								<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+							</dl>
+							<!-- // -->
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- # 담보유형 # -->
+			<div class="wrap-section4">
+				<h2 class="hide">담보유형</h2>
+				<div>
+					<!-- // -->
+					<section>
+						<h3 class="tit-sub1">담보분류명</h3>
+						<div class="list-t2 info">
+							<ul>
+								<li>
+									<dl class="area">
+										<dt>담보명</dt>
+										<dd>담보명</dd>
+									</dl>
+									<dl class="area">
+										<dt>담보명</dt>
+										<dd>담보명</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="area">
+										<dt>가입금액</dt>
+										<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+									</dl>
+									<dl class="area">
+										<dt>가입금액</dt>
+										<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="area">
+										<dt>보험료</dt>
+										<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+									</dl>
+									<dl class="area">
+										<dt>보험료</dt>
+										<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<!-- // -->
+					<section>
+						<h3 class="tit-sub1">상해후유장애</h3>
+						<div class="list-t2 info">
+							<ul>
+								<li>
+									<!-- 상품1 -->
+									<dl class="area">
+										<dt>담보명</dt>
+										<dd>상해후유장애(3~100%)</dd>
+									</dl>
+									<dl class="area">
+										<dt>담보명</dt>
+										<dd>상해후유장애(3~100%)</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="area">
+										<dt>가입금액</dt>
+										<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+									</dl>
+									<dl class="area">
+										<dt>가입금액</dt>
+										<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="area">
+										<dt>보험료</dt>
+										<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+									</dl>
+									<dl class="area">
+										<dt>보험료</dt>
+										<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<!-- // -->
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

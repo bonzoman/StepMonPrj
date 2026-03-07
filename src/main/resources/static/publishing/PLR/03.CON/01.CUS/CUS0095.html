@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>문자인증 | 마케팅활용동의 | 고객동의</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>상품소개동의</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>상품소개동의를 위해<br>고객님께 인증번호를 발송해주세요.</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [정보입력] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend>고객 정보 입력</legend>
+
+			<!-- # [CASE1] 기본 입력 시 # -->
+			<!-- # 고객이름 # -->
+			<dl class="form">
+				<dt>고객이름</dt>
+				<dd><input type="text" class="text" title="고객이름" placeholder="이름을 입력해주세요." value="하다미"></dd>
+				<dd class="side"><a href="javascript:void(0);" class="btn-sub3 c2">고객찾기</a></dd>
+			</dl>
+
+			<!-- # 생년월일/성별 # -->
+			<dl class="form">
+				<dt>생년월일/성별</dt>
+				<dd>
+					<div class="text">
+						<input type="tel" title="주민등록번호앞6자리" maxlength="6" placeholder="생년월일" value="900101">
+						<span class="util">-</span>
+						<input type="tel" title="주민등록번호뒷첫자리" maxlength="1" placeholder="성별" value="2">
+						<span class="util" data-masking="true">******</span>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 고객이름 : [CASE2] 고객찾기 팝업에서 고객정보를 가져온 상태 # -->
+			<dl class="form">
+				<dt>고객이름</dt>
+				<dd>
+					<!-- // -->
+					<div class="info-data3 info">
+						<div class="data-info2" data-value="102702"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<strong>하다미</strong>
+							<span>
+								<span>0000.00.00</span>
+								<span>성별</span>
+							</span>
+						</div>
+						<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					</div>
+					<!-- // -->
+				</dd>
+				<dd class="side"><a href="javascript:void(0);" class="btn-sub3 c2">고객찾기</a></dd>
+			</dl>
+
+			<!-- # 고객이름 : [CASE3] 고객정보를 물고 들어온 화면 # -->
+			<dl class="form">
+				<dt>고객이름</dt>
+				<dd>
+					<!-- // -->
+					<div class="info-data3 info">
+						<div class="data-info2" data-value="102701">
+							<strong>공지철</strong>
+							<span>
+								<span>1990.01.01</span>
+								<span>남</span>
+							</span>
+						</div>
+					</div>
+					<!-- // -->
+				</dd>
+			</dl>
+
+			<!-- # 휴대폰번호 # -->
+			<dl class="form">
+				<dt>휴대폰번호</dt>
+
+				<!-- [CASE1] 기본 -->
+				<dd>
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">통신사 선택</span>
+							<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+						</button>
+						<div class="list">
+							<div data-label="통신사 선택">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_1"><span>SKT</span></label>
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_2"><span>KT</span></label>
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_3"><span>LG U+</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<div class="input-wrap1">
+						<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요." value="01012345567">
+						<button type="button" class="btn-sub1">발송하기</button>
+					</div>
+					<div class="input-wrap1">
+						<div class="text">
+							<input type="tel" title="인증번호" placeholder="인증번호 입력하기" disabled>
+						</div>
+						<button type="button" class="btn-sub1" disabled>인증확인</button>
+					</div>
+					<div class="mes2">고객님 본인 명의의 휴대폰번호만 입력해주세요.</div>
+				</dd>
+
+				<!-- [CASE2] 인증번호 발송 후 -->
+				<dd>
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">통신사 선택</span>
+							<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+						</button>
+						<div class="list">
+							<div data-label="통신사 선택">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_1"><span>SKT</span></label>
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_2"><span>KT</span></label>
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_3"><span>LG U+</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<div class="input-wrap1">
+						<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요." value="01012345567" >
+						<button type="button" class="btn-sub1">발송하기</button>
+					</div>
+					<div class="input-wrap1">
+						<div class="text">
+							<input type="tel" title="인증번호" placeholder="인증번호 입력하기" value="111" aria-invalid="true">
+							<span class="util2">02:59</span>
+						</div>
+						<button type="button" class="btn-sub1">인증확인</button>
+					</div>
+					<div class="mes2">고객님 본인 명의의 휴대폰번호만 입력해주세요.</div>
+				</dd>
+
+				<!-- [CASE3] 오류 : 휴대폰번호/생년월일(성별) 불일치 -->
+				<dd>
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">통신사 선택</span>
+							<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+						</button>
+						<div class="list">
+							<div data-label="통신사 선택">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_1"><span>SKT</span></label>
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_2"><span>KT</span></label>
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_3"><span>LG U+</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<div class="input-wrap1">
+						<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요." value="01012345567" aria-invalid="true">
+						<button type="button" class="btn-sub1">재발송</button>
+					</div>
+					<div class="input-wrap1">
+						<div class="text">
+							<input type="tel" title="인증번호" placeholder="인증번호 입력하기" disabled>
+						</div>
+						<button type="button" class="btn-sub1">인증확인</button>
+					</div>
+					<div class="validation">휴대폰번호와 생년월일/성별이 불일치합니다.</div>
+					<div class="mes2">고객님 본인 명의의 휴대폰번호만 입력해주세요.</div>
+				</dd>
+
+				<!-- [CASE4] 오류 : 인증번호 불일치 -->
+				<dd>
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">통신사 선택</span>
+							<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+						</button>
+						<div class="list">
+							<div data-label="통신사 선택">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_1"><span>SKT</span></label>
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_2"><span>KT</span></label>
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_3"><span>LG U+</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<div class="input-wrap1">
+						<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요." value="01012345567" >
+						<button type="button" class="btn-sub1">재발송</button>
+					</div>
+					<div class="input-wrap1">
+						<div class="text">
+							<input type="tel" title="인증번호 입력" value="12345" placeholder="인증번호 입력하기" aria-invalid="true">
+						</div>
+						<button type="button" class="btn-sub1 w1">인증확인</button>
+					</div>
+					<div class="validation">인증번호를 정확하게 입력해주세요.</div>
+					<div class="mes2">고객님 본인 명의의 휴대폰번호만 입력해주세요.</div>
+				</dd>
+
+				<!-- [CASE5] 완료 -->
+				<dd>
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">통신사 선택</span>
+							<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+						</button>
+						<div class="list">
+							<div data-label="통신사 선택">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_1"><span>SKT</span></label>
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_2"><span>KT</span></label>
+									<label><input type="radio" name="selectOpeion1" value="selectOpeion1_3"><span>LG U+</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<div class="input-wrap1">
+						<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요." value="01012345567" >
+						<button type="button" class="btn-sub1">재발송</button>
+					</div>
+					<div class="input-wrap1">
+						<div class="text">
+							<input type="tel" title="인증번호" placeholder="인증번호 입력하기" value="12345" aria-invalid="false">
+							<span class="util2">03:00</span>
+						</div>
+						<button type="button" class="btn-sub1" disabled>인증완료</button>
+					</div>
+					<div class="validation">인증이 완료되었습니다.</div>
+					<div class="mes2">고객님 본인 명의의 휴대폰번호만 입력해주세요.</div>
+				</dd>
+			</dl>
+
+			<!-- # [CASE3] 미성년자 케이스 화면 # -->
+			<div>
+				<!-- # 친권자이름 # -->
+				<dl class="form line">
+					<dt>친권자이름</dt>
+					<dd><input type="text" class="text" title="친권자이름" placeholder="이름을 입력해주세요." value="하라미"></dd>
+				</dl>
+
+				<!-- # 친권자 생년월일/성별 # -->
+				<dl class="form">
+					<dt>친권자 생년월일/성별</dt>
+					<dd>
+						<div class="text">
+							<input type="tel" title="주민등록번호앞6자리" maxlength="6" placeholder="생년월일" value="900101">
+							<span class="util">-</span>
+							<input type="tel" title="주민등록번호뒷첫자리" maxlength="1" placeholder="성별" value="2">
+							<span class="util" data-masking="true">******</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 친권자 휴대폰번호 # -->
+				<dl class="form">
+					<dt>친권자 휴대폰번호</dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">통신사 선택</span>
+								<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+							</button>
+							<div class="list">
+								<div data-label="통신사 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1_1"><span>SKT</span></label>
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1_2"><span>KT</span></label>
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1_3"><span>LG U+</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrap1">
+							<input type="tel" class="text" title="친권자 휴대폰번호" placeholder="휴대폰번호를 입력해주세요." value="01012345567">
+							<button type="button" class="btn-sub1">발송하기</button>
+						</div>
+						<div class="input-wrap1">
+							<div class="text">
+								<input type="tel" title="인증번호" placeholder="인증번호 입력하기" disabled>
+							</div>
+							<button type="button" class="btn-sub1" disabled>인증확인</button>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!-- // -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1" disabled>다음</button>
+			<!-- <button type="button" class="btn-action c1">다음</button> : 활성화 -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

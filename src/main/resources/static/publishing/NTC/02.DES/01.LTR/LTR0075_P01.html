@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] FATCA (개인) | 일반사항 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>FATCA(개인)</h1>
+			<button type="button" data-btn="pop-close">FATCA(개인) 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단정보] -->
+			<!-- ######################### -->
+			<div class="info-summary2"> <!-- [M 2022-10-23] -->
+				<div class="info-con1">
+					<dl>
+						<dt>고객이름</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+					<dl>
+						<dt>발행 후 변경순서</dt>
+						<dd>1</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [고객정보] -->
+			<!-- ######################### -->
+			<section class="wrap-section"> <!-- [M 2022-10-23] -->
+				<h2 class="tit-sub1">고객정보</h2>
+				<!-- // -->
+				<div class="info-con1">
+					<dl>
+						<dt>고객유형</dt>
+						<dd>개인</dd>
+					</dl>
+					<dl>
+						<dt>내외국 구분</dt>
+						<dd>내국</dd>
+					</dl>
+					<dl>
+						<dt>이름</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>생년월일</dt>
+						<dd>1988.12.05</dd>
+					</dl>
+					<dl>
+						<dt>전화번호</dt>
+						<dd>010-1234-5678</dd>
+					</dl>
+					<dl>
+						<dt>주소</dt>
+						<dd>
+							<div>(12345)</div>
+							<div>서울 용산구 소월로 178 1번지 (용산동 2가)</div>
+						</dd>
+					</dl>
+				</div>
+				<!-- // -->
+			</section>
+			
+			<!-- ######################### -->
+			<!-- [정보입력] -->
+			<!-- ######################### -->
+			<div class="form-wrap1 line2">
+				<!-- ### 해외거주자 정보 ### -->
+				<fieldset>
+					<legend class="tit">해외거주자정보</legend>
+	
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>미국거주자에 해당하는 경우</dt>
+						<dd>
+							<div class="label-btn1 col2">
+								<label>
+									<input type="radio" name="uiRadio1" checked>
+									<span>미국시민권자</span>
+								</label>
+								<label>
+									<input type="radio" name="uiRadio1">
+									<span>미국영주권자</span>
+								</label>
+								<label>
+									<input type="radio" name="uiRadio1">
+									<span>미국세법상 미국거주</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<div class="label-check1">
+						<label>
+							<input type="checkbox" checked>
+							<span>한국이외의 조세목정상 해외 거주자</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>위의 사항 모두 해당 없음</span>
+						</label>
+					</div>
+	
+					<!-- # 항목하나 # -->
+					<dl class="form line">
+						<dt>영문 성/영문 명 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="input-wrap1">
+								<input type="text" class="text" title="영문 성" placeholder="영문 성" value="Grande">
+								<input type="text" class="text" title="영문 명" placeholder="영문 명" value="Ariana">
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>영문주소 <em class="icon-required2">필수</em></dt>
+						<dd><input type="text" class="text" title="영문주소" placeholder="영문주소" value="NW Washington, D.C. 20500, U.S."></dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- ### 납세정보 ### -->
+				<fieldset>
+					<legend class="tit">납세정보</legend>
+					<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>조세목적상 국가</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">조세목적상 국가</span>
+									<span data-select="text" data-value="null">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="조세목적상 국가">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion" value=""><span>선택</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>납세자번호</dt>
+						<dd><input type="tel" class="text" title="납세자번호" placeholder="납세자번호를 입력해주세요." value=""></dd>
+					</dl>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>납세자번호 미기재 사유</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiRadio2" checked>
+									<span>미발급국가</span>
+								</label>
+								<label>
+									<input type="radio" name="uiRadio2">
+									<span>미요구국가</span>
+								</label>
+								<label>
+									<input type="radio" name="uiRadio2">
+									<span>미취득</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>미기재 사유</dt>
+						<dd><input type="tel" class="text" title="미기재사유" placeholder="미기재 사유를 입력해주세요." value=""></dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- ### 납세정보 추가 버튼 ### -->
+				<div class="area-btn1 line">
+					<button type="button" class="btn-com1 ic3">납세정보 추가</button>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">초기화</button>
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>현금화신청목록 | 퀘스트/혜택 관리 | 활동 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">현금화신청목록</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<dl class="form w3">
+						<dt>조회기간</dt>
+						<dd>
+							<div class="form-row">
+								<select name="" id="" class="selectbox" style="width:100px;">
+									<option value="">신청일시</option>
+									<option value="">이관처리일</option>
+								</select>
+								<span class="date-range2"> <!-- 2022-12-28 클래스 변경 -->
+									<input type="text" data-role="start" value="2022.02" placeholder="시작일 선택">
+									<span class="util">~</span>
+									<input type="text" data-role="end" value="2022.02" placeholder="종료일 선택">
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w3">
+						<dt>신청대상 필터</dt>
+						<dd>
+							<label class="label-check">
+								<input type="radio" name="fr2" checked="checked">
+								<span>전체</span>
+							</label>
+							<label class="label-check">
+								<input type="radio" name="fr2">
+								<span>포인트신청 제외</span>
+							</label>
+							<label class="label-check">
+								<input type="radio" name="fr2">
+								<span>포인트신청 만</span>
+							</label>
+						</dd>
+					</dl>
+					<dl class="form w3">
+						<dt>조직구분</dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>취급자</option>
+								</select>
+								<input type="text" name="" id="" class="text" style="width:80px;">
+								<input type="text" name="" id="" class="text" style="width:120px;" disabled>
+								<button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w3">
+						<dt>상태</dt>
+						<dd>
+							<label class="label-check">
+								<input type="radio" name="fr3" checked="checked">
+								<span>전체</span>
+							</label>
+							<label class="label-check">
+								<input type="radio" name="fr3">
+								<span>신청</span>
+							</label>
+							<label class="label-check">
+								<input type="radio" name="fr3">
+								<span>정산</span>
+							</label>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+			<!--[M : 2022-08-03 포인트 정책 변경]-->
+			<div class="data-table1">
+				<table>
+					<colgroup>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">기준기간</th>
+							<td>2022.04.01 <br> ~ 2022.04.22</td>
+							<th scope="row">대상건</th>
+							<td><strong>132</strong></td>
+							<th scope="row">신청건</th>
+							<td>22</td>
+							<th scope="row">현금화 신청액</th>
+							<td>11P</td>
+						</tr>
+						<tr>
+							<th scope="row">정산건</th>
+							<td>11</td>
+							<th scope="row">현금화 정산액</th>
+							<td>11P</td>
+							<th scope="row">정산 오차액</th>
+							<td>+11P</td>
+							<th scope="row">기본신청</th>
+							<td>11P</td>
+						</tr>
+						<tr>
+							<th scope="row">현금화 신청 기준 <br> - 기본(가동)</th>
+							<td colspan="3">
+								<div class="input-btn1">
+									<input type="text" name="" id="" class="text" style="width:100px;">
+									<span>P</span>
+									<button type="button" class="btn-sub1 c3">적용</button>
+								</div>
+							</td>
+							<th scope="row">현금화 신청 기준 <br> - 연속가동</th>
+							<td colspan="3">
+								<div class="input-btn1">
+									<input type="text" name="" id="" class="text" style="width:100px;">
+									<span>P</span>
+									<button type="button" class="btn-sub1 c3">적용</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!--// [M : 2022-08-03 포인트 정책 변경]-->
+			<div class="tit-sub2">
+				<h3 class="">전체<span>총 21건</span></h3>
+			</div>
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<col style="width:80px;">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col style="width:80px;">
+						<col>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"><span class="sort">번호</span></th>
+							<th scope="col"><span class="sort">사업단</span></th>
+							<th scope="col"><span class="sort">지점</span></th>
+							<th scope="col">설계사명</th>
+							<!--[M : 2022-08-03 포인트 정책 변경]-->
+							<th scope="col">신청 포인트</th>
+							<th scope="col">연속가동 포인트</th>
+							<!-- // [M : 2022-08-03 포인트 정책 변경]-->
+							<th scope="col"><span class="sort">상태</span></th>
+							<th scope="col">신청일시</th>
+							<th scope="col">이관 처리일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>98</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>김다미(1111111)</td>
+							<td>78,000</td>
+							<td>2,000</td>
+							<td>신청</td>
+							<td>2022.02.22 22:22:22</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>97</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>김다미(1111111)</td>
+							<td>78,000</td>
+							<td>-</td>
+							<td>정산</td>
+							<td>2022.02.22 22:22:22</td>
+							<td>2022.02.22 22:22:22</td>
+						</tr>
+						<tr>
+							<td>97</td>
+							<td>강남사업단</td>
+							<td>강남1지점</td>
+							<td>제이라이프대리점(1111111)</td>
+							<td>78,000</td>
+							<td>-</td>
+							<td>정산</td>
+							<td>2022.02.22 22:22:22</td>
+							<td>2022.02.22 22:22:22</td>
+						</tr>
+						<tr>
+							<td colspan="9" class="nodata">조회결과가 없습니다.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="paging">
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 계약체결이행동의 | 일반사항 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>계약체결이행동의</h1>
+			<button type="button" data-btn="pop-close">계약체결이행동의 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ### 전체동의 ### -->
+			<div class="label-check1">
+				<label>
+					<input type="checkbox">
+					<strong>전체동의</strong>
+				</label>
+			</div>
+
+			<!-- ### 개별동의 ### -->
+			<div class="form-agree3" data-autoset="toggle">
+				<!-- [계약자] -->
+				<fieldset>
+					<legend>계약자 약관동의</legend>
+
+					<dl class="info">
+						<dt>계약자</dt>
+						<dd class="data-info2 label-check1" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<label>
+								<input type="checkbox">
+								<strong>하다미</strong>
+								<span><span>1964.08.09</span><span>남</span></span>
+							</label>
+							<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+						</dd>
+					</dl>
+
+					<div data-toggle="content">
+						<!-- # 계약체결이행동의 # -->
+						<fieldset>
+							<legend class="tit">계약체결이행동의</legend>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormAgreePopup1" checked>
+									<span>동의</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormAgreePopup1">
+									<span>미동의</span>
+								</label>
+							</div>
+						</fieldset>
+
+						<!-- # 상품소개동의 # -->
+						<fieldset>
+							<legend class="tit">상품소개동의</legend>
+							<dl class="form">
+								<dt>수집이용</dt>
+								<dd class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup2" checked>
+										<span>동의</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup2">
+										<span>미동의</span>
+									</label>
+								</dd>
+							</dl>
+							<dl class="form">
+								<dt>제공</dt>
+								<dd class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup3" checked>
+										<span>동의</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup3">
+										<span>미동의</span>
+									</label>
+								</dd>
+							</dl>
+							<dl class="form">
+								<dt>조회</dt>
+								<dd class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup4" checked>
+										<span>동의</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup4">
+										<span>미동의</span>
+									</label>
+								</dd>
+							</dl>
+							<dl class="form">
+								<dt>광고성정보 수신동의</dt>
+								<dd class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup5" checked>
+										<span>동의</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup5">
+										<span>미동의</span>
+									</label>
+								</dd>
+							</dl>
+
+							<!-- # 광고성정보 수신방법 # -->
+							<dl class="form">
+								<dt class="label-check1">
+									<label>
+										<input type="checkbox" checked>
+										<span>광고성정보 수신방법</span>
+									</label>
+								</dt>
+								<dd class="label-check1 col2">
+									<label>
+										<input type="checkbox" checked>
+										<span>전화</span>
+									</label>
+									<label>
+										<input type="checkbox" checked>
+										<span>SMS</span>
+									</label>
+									<label>
+										<input type="checkbox" checked>
+										<span>이메일</span>
+									</label>
+									<label>
+										<input type="checkbox" checked>
+										<span>우편</span>
+									</label>
+								</dd>
+							</dl>
+							<!-- # // # -->
+						</fieldset>
+					</div>
+				</fieldset>
+
+				<!-- [피보험자] -->
+				<fieldset>
+					<legend>피보험자 약관동의</legend>
+
+					<dl class="info">
+						<dt>피보험자</dt>
+						<dd class="data-info2 label-check1" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<label>
+								<input type="checkbox">
+								<strong>하다미</strong>
+								<span><span>1980.08.09</span><span>남</span></span>
+							</label>
+							<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+						</dd>
+					</dl>
+
+					<div data-toggle="content">
+						<!-- # 계약체결이행동의 # -->
+						<fieldset>
+							<legend class="tit">계약체결이행동의</legend>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormAgreePopup6">
+									<span>동의</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormAgreePopup6" checked>
+									<span>미동의</span>
+								</label>
+							</div>
+						</fieldset>
+
+						<!-- # 상품소개동의 # -->
+						<fieldset>
+							<legend class="tit">상품소개동의</legend>
+							<dl class="form">
+								<dt>수집이용</dt>
+								<dd class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup7">
+										<span>동의</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup7" checked>
+										<span>미동의</span>
+									</label>
+								</dd>
+							</dl>
+							<dl class="form">
+								<dt>제공</dt>
+								<dd class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup8" checked>
+										<span>동의</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup8">
+										<span>미동의</span>
+									</label>
+								</dd>
+							</dl>
+							<dl class="form">
+								<dt>조회</dt>
+								<dd class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup9" checked>
+										<span>동의</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup9">
+										<span>미동의</span>
+									</label>
+								</dd>
+							</dl>
+							<dl class="form">
+								<dt>광고성정보 수신동의</dt>
+								<dd class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup10" checked>
+										<span>동의</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup10">
+										<span>미동의</span>
+									</label>
+								</dd>
+							</dl>
+
+							<!-- # 광고성정보 수신방법 # -->
+							<dl class="form">
+								<dt class="label-check1">
+									<label>
+										<input type="checkbox">
+										<span>광고성정보 수신방법</span>
+									</label>
+								</dt>
+								<dd class="label-check1 col2">
+									<label>
+										<input type="checkbox" checked>
+										<span>전화</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span>SMS</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span>이메일</span>
+									</label>
+									<label>
+										<input type="checkbox" checked>
+										<span>우편</span>
+									</label>
+								</dd>
+							</dl>
+							<!-- # // # -->
+						</fieldset>
+					</div>
+				</fieldset>
+
+				<!-- [수익자] -->
+				<fieldset>
+					<legend>수익자 약관동의</legend>
+
+					<dl class="info">
+						<dt>수익자</dt>
+						<dd class="data-info2 label-check1" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+							<label>
+								<input type="checkbox">
+								<strong>하다미</strong>
+								<span><span>1964.08.09</span><span>남</span></span>
+							</label>
+							<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+						</dd>
+					</dl>
+
+					<div data-toggle="content">
+						<!-- # 계약체결이행동의 # -->
+						<fieldset>
+							<legend class="tit">계약체결이행동의</legend>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormAgreePopup11">
+									<span>동의</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormAgreePopup11">
+									<span>미동의</span>
+								</label>
+							</div>
+						</fieldset>
+
+						<!-- # 상품소개동의 # -->
+						<fieldset>
+							<legend class="tit">상품소개동의</legend>
+							<dl class="form">
+								<dt>수집이용</dt>
+								<dd class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup12">
+										<span>동의</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup12">
+										<span>미동의</span>
+									</label>
+								</dd>
+							</dl>
+							<dl class="form">
+								<dt>제공</dt>
+								<dd class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup13">
+										<span>동의</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup13">
+										<span>미동의</span>
+									</label>
+								</dd>
+							</dl>
+							<dl class="form">
+								<dt>조회</dt>
+								<dd class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup14">
+										<span>동의</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup14">
+										<span>미동의</span>
+									</label>
+								</dd>
+							</dl>
+							<dl class="form">
+								<dt>광고성정보 수신동의</dt>
+								<dd class="label-btn1">
+									<label>
+										<input type="radio" name="uiFormAgreePopup15">
+										<span>동의</span>
+									</label>
+									<label>
+										<input type="radio" name="uiFormAgreePopup15">
+										<span>미동의</span>
+									</label>
+								</dd>
+							</dl>
+
+							<!-- # 광고성정보 수신방법 # -->
+							<dl class="form">
+								<dt class="label-check1">
+									<label>
+										<input type="checkbox">
+										<span>광고성정보 수신방법</span>
+									</label>
+								</dt>
+								<dd class="label-check1 col2">
+									<label>
+										<input type="checkbox">
+										<span>전화</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span>SMS</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span>이메일</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span>우편</span>
+									</label>
+								</dd>
+							</dl>
+							<!-- # // # -->
+						</fieldset>
+					</div>
+				</fieldset>
+				<!-- // -->
+			</div>
+
+			<!-- ### 하단버튼 ### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ### // ### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

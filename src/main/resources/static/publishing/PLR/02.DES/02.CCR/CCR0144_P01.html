@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 영업담당자 이행사항 확인 | 청약(개인/업무/영업) | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>영업담당자 이행사항 확인</h1>
+			<button type="button" data-btn="pop-close">영업담당자 이행사항 확인 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- # 안내문구 # -->
+			<div class="tit-section2 t1"><p>모바일 전자서명 발송 전<br>아래 내용을 확인해주세요.</p></div>
+
+			<!-- # 필수 안내사항 확인여부 선택 # -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">고객에게 청약서, 상품설명서의 주요내용 설명을 이행하셨습니까? <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="radio1">
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="radio1">
+						<span>아니오</span>
+					</label>
+				</div>
+			</fieldset>
+			<!-- // -->
+			<fieldset class="form-wrap4">
+				<legend class="tit">고객에게 계약 전 알릴의무에 대한 주요내용 설명을 이행하셨습니까? <em class="icon-required2">필수</em></legend>
+				<div class="label-btn1">
+					<label>
+						<input type="radio" name="radio2">
+						<span>예</span>
+					</label>
+					<label>
+						<input type="radio" name="radio2">
+						<span>아니오</span>
+					</label>
+				</div>
+			</fieldset>
+			<!-- # // # -->
+
+			<!-- # 안내사항 # -->
+			<div class="mes-info2 box">
+				<p>
+					보험모집인 본인은 계약자에게 해당 보험상품의 주요내용에 대해 충분히 설명하였음을 확인합니다.
+					또한 모바일 전자서명을 완료한 후 청약서 부본 및 약관을 계약자에게 전달할 것을 확인합니다.
+					이에 대한 모든 책임은 본인에게 있음을 확인합니다.
+				</p>
+			</div>
+
+			<!-- # 하단버튼 # -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- # // # -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

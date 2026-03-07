@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 개인고객등록 | 가입설계청약</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>개인고객 등록</h1>
+			<button type="button" data-btn="pop-close">개인고객 등록 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [가입설계동의] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend class="tit">가입설계동의 입력</legend>
+
+				<!-- # 고객이름 # -->
+				<dl class="form">
+					<dt>고객이름 <i class="icon-required2">필수</i></dt>
+					<dd>
+                        <input type="text" class="text" title="고객이름" placeholder="고객이름을 입력해주세요.">
+                        <input type="text" class="text" title="고객이름" placeholder="고객이름을 입력해주세요." value="하다미" aria-invalid="true">
+                        <!-- [D] aria-invalid="true" 추가 -->
+					    <div class="validation">고객이름을 입력해주세요.</div>
+                    </dd>
+				</dl>
+
+				<!-- # 생년월일/성별 # -->
+				<dl class="form">
+					<dt>생년월일/성별 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="text">
+                            <input type="tel" title="주민등록번호앞6자리" maxlength="6" placeholder="생년월일 6자리">
+                            <span class="util">-</span>
+                            <input type="tel" title="주민등록번호뒷첫자리" maxlength="1" placeholder="성별">
+                            <span class="util" data-masking="true">******</span>
+                        </div>
+                        <div class="text" aria-invalid="true">
+                            <input type="tel" title="주민등록번호앞6자리" maxlength="6" placeholder="생년월일 6자리">
+                            <span class="util">-</span>
+                            <input type="tel" title="주민등록번호뒷첫자리" maxlength="1" placeholder="성별">
+                            <span class="util" data-masking="true">******</span>
+                        </div>
+                        <!-- [D] aria-invalid="true" 추가 -->
+					    <div class="validation">생년월일/성별을 입력해주세요.</div>
+					</dd>
+				</dl>
+
+				<!-- # 휴대폰번호 # -->
+				<dl class="form">
+					<dt>휴대폰번호 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">통신사 선택</span>
+								<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+							</button>
+							<div class="list">
+								<div data-label="통신사 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion1_1"><span>SKT</span></label>
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion1_2"><span>KT</span></label>
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion1_3"><span>LG U+</span></label>
+                                        <label><input type="radio" name="selectOpeion2" value="selectOpeion1_4"><span>SKT 알뜰폰</span></label>
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion1_5"><span>KT 알뜰폰</span></label>
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion1_6"><span>LG U+ 알뜰폰</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrap1">
+							<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요." value="01012345678" aria-invalid="true"> <!-- [D] 속성: aria-invalid="true" 추가 -->
+							<button type="button" class="btn-sub1">발송하기</button>
+						</div>
+						<div class="input-wrap1">
+							<div class="text">
+								<input type="tel" title="인증번호 입력" value="46365" placeholder="인증번호" aria-invalid="true"> <!-- [D] 속성: aria-invalid="true" 추가 -->
+								<span class="util2">01:00</span>
+							</div>
+							<button type="button" class="btn-sub1">인증확인</button>
+						</div>
+						<div class="validation">휴대폰번호 입력 및 인증절차를 진행해주세요.</div>
+					</dd>
+                    <dd class="mes2">고객님 본인 명의의 휴대전화번호만 입력해주세요.</dd>
+				</dl>
+
+                <!-- 친권자 CASE -->
+                <dl class="form line">
+                    <dt>친권자명 <i class="icon-required2">필수</i></dt>
+					<dd>
+                        <input type="text" class="text" title="친권자명" placeholder="친권자명을 입력해주세요.">
+                        <input type="text" class="text" title="친권자명" placeholder="친권자명을 입력해주세요." value="하다미" aria-invalid="true">
+                        <!-- [D] aria-invalid="true" 추가 -->
+					    <div class="validation">친권자명을 입력해주세요.</div>
+                    </dd>
+                </dl>
+
+                <dl class="form">
+                    <dt>친권자 생년월일/성별 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="text">
+                            <input type="tel" title="주민등록번호앞6자리" maxlength="6" placeholder="생년월일 6자리">
+                            <span class="util">-</span>
+                            <input type="tel" title="주민등록번호뒷첫자리" maxlength="1" placeholder="성별">
+                            <span class="util" data-masking="true">******</span>
+                        </div>
+                        <div class="text" aria-invalid="true">
+                            <input type="tel" title="주민등록번호앞6자리" maxlength="6" placeholder="생년월일 6자리">
+                            <span class="util">-</span>
+                            <input type="tel" title="주민등록번호뒷첫자리" maxlength="1" placeholder="성별">
+                            <span class="util" data-masking="true">******</span>
+                        </div>
+                        <!-- [D] aria-invalid="true" 추가 -->
+					    <div class="validation">친권자 생년월일/성별을 입력해주세요.</div>
+					</dd>
+                </dl>
+
+                <dl class="form">
+                    <dt>친권자 휴대폰번호 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">통신사 선택</span>
+								<span data-select="text" data-value="selectOpeion1_1">SKT</span>
+							</button>
+							<div class="list">
+								<div data-label="통신사 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion2_1"><span>SKT</span></label>
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion2_2"><span>KT</span></label>
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion2_3"><span>LG U+</span></label>
+                                        <label><input type="radio" name="selectOpeion3" value="selectOpeion2_4"><span>SKT 알뜰폰</span></label>
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion2_5"><span>KT 알뜰폰</span></label>
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion2_6"><span>LG U+ 알뜰폰</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrap1">
+							<input type="tel" class="text" title="휴대폰번호" placeholder="휴대폰번호를 입력해주세요." value="01012345678" aria-invalid="true"> <!-- [D] 속성: aria-invalid="true" 추가 -->
+							<button type="button" class="btn-sub1">발송하기</button>
+						</div>
+						<div class="input-wrap1">
+							<div class="text">
+								<input type="tel" title="인증번호 입력" value="46365" placeholder="인증번호" aria-invalid="true"> <!-- [D] 속성: aria-invalid="true" 추가 -->
+								<span class="util2">01:00</span>
+							</div>
+							<button type="button" class="btn-sub1">인증확인</button>
+						</div>
+						<div class="validation">휴대폰번호 입력 및 인증절차를 진행해주세요.</div>
+                        <div class="validation" style="display: block;">전화번호와 생년월일/성별이 불일치합니다.</div> <!-- 임시 inline-style 개발시 삭제 -->
+                        <div class="validation" style="display: block;">유효시간이 경과하였습니다.</div> <!-- 임시 inline-style 개발시 삭제 -->
+                        <div class="validation" style="display: block;">인증번호를 정확하게 입력해주세요.</div> <!-- 임시 inline-style 개발시 삭제 -->
+					</dd>
+                    <dd class="mes2">고객님 본인 명의의 휴대전화번호만 입력해주세요.</dd>
+                </dl>
+			</fieldset>
+
+            <!-- ######################### -->
+			<!-- [가입설계동의 확인사항] -->
+			<!-- ######################### -->
+            <fieldset class="form-wrap1 line2">
+                <legend class="tit">가입설계동의 확인사항</legend>
+
+                <!-- # 친권자 cASE # -->
+                <dl class="form">
+					<dt>친권자 주민등록번호 또는 외국인등록번호 <i class="icon-required2">필수</i></dt>
+					<!-- [CASE1] 기본 -->
+					<dd>
+						<div class="input-wrap1">
+							<div class="text">
+								<input type="tel" title="생년월일 6자리" maxlength="6" placeholder="생년월일 6자리" aria-invalid="false"> <!-- [D] 속성(aria-invalid="false") 추가 -->
+								<span class="util">-</span>
+								<input type="password" title="주민번호뒤6자리" maxlength="7" placeholder="주민번호뒤6자리" aria-invalid="false"> <!-- [D] 속성(aria-invalid="false") 추가 -->
+							</div>
+						</div>
+					</dd>
+				</dl>
+                
+                <!-- # 외국인등록번호 : [CASE] 외국인 # -->
+				<dl class="form">
+					<dt>주민등록번호 또는 외국인등록번호 <i class="icon-required2">필수</i></dt>
+					<!-- [CASE1] 기본 -->
+					<dd>
+						<div class="input-wrap1">
+							<div class="text valid">
+								<input type="tel" title="생년월일" maxlength="7" placeholder="생년월일">
+								<span class="util">-</span>
+								<input type="password" title="생년월일 뒤7자리" maxlength="7" placeholder="뒤7자리">
+							</div>
+							<button type="button" class="btn-sub1">실명 인증</button>
+						</div>
+						<div class="validation"></div>
+					</dd>
+                    <dd class="mes2">주민번호 뒷자리는 중요 정보이므로 고객님께서  직접 입력하실 수 있도록 요청해 주세요.</dd>
+					<!-- [CASE2] 비활성화 -->
+					<dd>
+						<div class="input-wrap1 valid">
+							<div class="text valid">
+								<input type="tel" title="생년월일" maxlength="7" placeholder="생년월일" aria-invalid="false"> <!-- [D] 속성(aria-invalid="false") 추가 -->
+								<span class="util">-</span>
+								<input type="password" title="생년월일 뒤7자리" maxlength="7" placeholder="뒤7자리" aria-invalid="false"> <!-- [D] 속성(aria-invalid="false") 추가 -->
+							</div>
+							<button type="button" class="btn-sub1" disabled>실명 인증</button> <!-- 비활성화 disabled -->
+						</div>
+						<div class="validation">실명인증이 완료되었습니다.</div>
+					</dd>
+					<!-- [CASE3] 오류 -->
+					<dd>
+						<div class="input-wrap1">
+							<div class="text valid">
+								<input type="tel" title="생년월일" maxlength="7" placeholder="생년월일" aria-invalid="true">
+								<span class="util">-</span>
+								<input type="password" title="생년월일 뒤7자리" maxlength="7" placeholder="뒤7자리" aria-invalid="true">
+							</div>
+							<button type="button" class="btn-sub1">실명 인증</button>
+						</div>
+						<div class="validation">주민등록번호를 정확하게 입력해주세요.</div>
+                        <div class="validation" style="display: block;">실명인증 여부를 확인해주세요.</div> <!-- 개발시 inline-style 삭제 -->
+                        <div class="validation" style="display: block;">실명인증에 실패했습니다.</div> <!-- 개발시 inline-style 삭제 -->
+                        <div class="validation" style="display: block;">실명확인이 불가한 고객님입니다.</div> <!-- 개발시 inline-style 삭제 -->
+                        <div class="validation" style="display: block;">명의도용차단서비스 신청으로 실명인증이 불가한 고객님입니다.</div> <!-- 개발시 inline-style 삭제 -->
+                        <div class="validation" style="display: block;">성명과 외국인등록번호가 일치하지 않습니다.</div> <!-- 개발시 inline-style 삭제 -->
+                        <div class="txt-bul4">
+							실명인증 확인 값이 일치하지 않습니다. 입력하신 내용을 다시 확인해주세요.
+							<div class="area-btn4">
+								<a href="javascript:void(0);" class="btn-sub3 c2">실명인증 확인요청</a>
+							</div>
+						</div>
+                        <div class="txt-bul4">
+							해당 고객님은 실명인증 실패고객으로「실명인증 확인요청」버튼을 통해 증명서 접수 후 고객등록을 진행해야 합니다.
+							<div class="area-btn4">
+								<a href="javascript:void(0);" class="btn-sub3 c2">실명인증 확인요청</a>
+							</div>
+						</div>
+					</dd>
+                    <dd class="mes2">주민번호 뒷자리는 중요 정보이므로 고객님께서  직접 입력하실 수 있도록 요청해 주세요.</dd>
+				</dl>
+
+            </fieldset>
+
+            <!-- ######################### -->
+			<!-- [고객정보입력 내국인] -->
+			<!-- ######################### -->
+            <fieldset class="form-wrap1 line2">
+                <legend class="tit">고객정보입력</legend>
+
+                <!-- # 국적 분류 # -->
+                <dl class="form">
+                    <dt>국적분류 <i class="icon-required2">필수</i></dt>
+                    <dd>
+                        <div class="label-btn1">
+							<label>
+								<input type="radio" name="formRadio1-1">
+								<span>내국인</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio1-1">
+								<span>외국인</span>
+							</label>
+                        </div>
+                    </dd>
+                </dl>
+
+                <!-- 고객명(영문) -->
+                <dl class="form">
+					<dt>고객명(영문) <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="text">
+							<input type="text" title="고객명(영문)" placeholder="영문 이름을 입력해주세요." value="MOHAMED">
+							<button type="button" data-btn="delete">입력내용삭제</button>
+						</div>
+					</dd>
+				</dl>
+
+                <!-- 국정정보 -->
+                <dl class="form">
+					<dt>국적정보 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<!-- [CASE1] 국적찾기 후 -->
+						<div class="input-btn1">
+							<data class="text" data-label="국적찾기" value=""></data>
+							<button type="button" class="icon-com1 ic2">국적찾기</button>
+						</div>
+						<!-- [CASE2] 국적찾기 후 -->
+						<div class="input-btn1">
+							<data class="text" data-label="국적찾기" value="아랍에미리트">아랍에미리트</data>
+							<button type="button" class="icon-com1 ic2">국적찾기</button>
+						</div>
+					</dd>
+				</dl>
+
+                <!-- 고객심사대상 -->
+                <dl class="form">
+					<dt>고객심사대상 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="input-wrap1">
+							<data class="text info" data-label="인물조회를 진행해 주세요." aria-invalid="true"></data>
+							<button type="button" class="btn-sub1">조회</button>
+						</div>
+                        <div class="validation">고객심사대상 여부를 확인해주세요.</div>
+                        <div class="input-wrap1">
+							<data class="text info" data-label="심사요청" aria-invalid="true"></data>
+							<button type="button" class="btn-sub1">조회</button>
+						</div>
+                        <div class="validation">심사 미대상자 또는 승인된 고객님만 등록 가능합니다.</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+                <!-- # 직업 # -->
+                <dl class="form">
+                    <dt>직업 <i class="icon-required2">필수</i></dt>
+                    <!-- 찾기전 -->
+                    <dd class="area-btn1">
+                        <button type="button" class="btn-com1 ic2">직업찾기</button>
+                    </dd>
+                    <!-- 찾기후 -->
+                    <dd class="info-data1">
+                        <dl>
+                            <dt class="tit">초급군장교(대위~소위, 특수병과 군인 제외)</dt>
+                            <dd class="txt">대위 · 중위 · 소위 / [제외] 의무복무중인 장교 육 · 해 · 공군의 소위, 중위 및 대위를 포함한다.</dd>
+                            <dd class="info-con1 t1 w1">
+                                <dl>
+                                    <dt>직업 코드</dt>
+                                    <dd>A1120</dd>
+                                </dl>
+                                <dl>
+                                    <dt>상해급수</dt>
+                                    <dd>2C</dd>
+                                </dl>
+                            </dd>
+                            <dd class="area-btn1"><button type="button" class="btn-com1">직업변경</button></dd>
+                        </dl>
+                    </dd>
+                </dl>
+
+                <!-- # 업종 # -->
+                <dl class="form">
+                    <dt>업종</dt>
+                    <dd>
+                        <input type="text" class="text" title="업종 입력" placeholder="예) 서비스업, 금융업, 제조업">
+                    </dd>
+                </dl>
+
+                <!-- # 직장명 # -->
+                <dl class="form">
+                    <dt>직장명</dt>
+                    <dd>
+                        <input type="text" class="text" title="직장명 입력" placeholder="직장명을 입력해 주세요.">
+                    </dd>
+                </dl>
+
+                <!-- # 직무 # -->
+                <dl class="form">
+                    <dt>직무(하시는 일)</dt>
+                    <dd>
+                        <input type="text" class="text" title="직무(하시는 일) 입력" placeholder="예) 영업, 마케팅, 사업관리">
+                    </dd>
+                </dl>
+
+                <!-- # 주소 # -->
+                <dl class="form line">
+                    <dt>주소 <i class="icon-required2">필수</i></dt>
+                    <dd>
+                        <!-- [주소지분류] -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="formRadio01" checked>
+								<span>자택</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio01">
+								<span>직장</span>
+							</label>
+							<!-- [M 2022-07-27] 거주지 추가 -->
+							<label>
+								<input type="radio" name="formRadio01">
+								<span>거주지</span>
+							</label>
+							<!-- // -->
+							<label>
+								<input type="radio" name="formRadio01">
+								<span>기타</span>
+							</label>
+						</div>
+						<!-- [시/군/구] 검색 : 후 -->
+						<div class="input-btn1">
+							<data class="text" value="" data-label="주소를 검색해주세요.">서울특별시 화양구 125-3</data>
+							<button type="button" class="icon-com1 ic2">주소검색</button>
+						</div>
+						<!-- [상세주소] -->
+						<input type="text" class="text" placeholder="상세주소를 입력해주세요." value="3층"> <!-- [D] aria-invalid 유효성 -->
+                        <div class="validation">주소를 다시 확인해주세요.</div>
+						<!-- // -->
+                    </dd>
+                </dl>
+
+                <dl class="form line">
+                    <dt>주소</dt>
+                    <dd>
+                        <!-- [주소지분류] -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="formRadio01-1" checked="">
+								<span>자택</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio01-1">
+								<span>직장</span>
+							</label>
+							<!-- [M 2022-07-27] 거주지 추가 -->
+							<label>
+								<input type="radio" name="formRadio01-1">
+								<span>거주지</span>
+							</label>
+							<!-- // -->
+							<label>
+								<input type="radio" name="formRadio01-1">
+								<span>기타</span>
+							</label>
+						</div>
+						<!-- [시/군/구] 검색 : 전 -->
+						<div class="input-btn1">
+							<data class="text" value="" data-label="주소를 검색해주세요." aria-invalid="true"></data> <!-- [D] aria-invalid 유효성 -->
+							<button type="button" class="icon-com1 ic2">주소검색</button>
+						</div>
+                        <div class="validation">주소를 다시 확인해주세요.</div>
+						<!-- [시/군/구] 검색 : 후 -->
+						<div class="input-btn1">
+							<data class="text" value="" data-label="주소를 검색해주세요.">서울특별시 화양구 125-3</data>
+							<button type="button" class="icon-com1 ic2">주소검색</button>
+						</div>
+						<!-- [상세주소] -->
+						<input type="text" class="text" placeholder="상세주소를 입력해주세요." aria-invalid="true"> <!-- [D] aria-invalid 유효성 -->
+                        <div class="validation">주소를 다시 확인해주세요.</div>
+						<!-- // -->
+                    </dd>
+                    <dd class="side">
+                        <button type="button" class="btn-sub3 c2">지우기</button>
+                    </dd>
+                </dl>
+                <div class="area-btn1">
+					<button type="button" class="btn-com1 ic3">주소지 추가</button>
+				</div>
+
+                <!-- # 발굴경로 # -->
+                <dl class="form line">
+                    <dt>발굴경로 <i class="icon-required2">필수</i></dt>
+                    <dd>
+                        <!-- [발굴경로 분류] -->
+                        <div class="select-wrap invalid" data-autoset="select" data-callback="uiFunction"> <!-- [D] 하단 uiFunction(); 참고 : 함수명 변경 필요 --> <!-- 유효성체크시 invalid 클래스 추가 -->
+                            <button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false">
+                                <span data-select="title">선택해주세요.</span>
+                                <span data-select="text"></span>
+                            </button>
+                            <div class="list">
+                                <div data-label="발굴경로">
+                                    <div class="option">
+                                        <label><input type="radio" name="selectOpeion" value="1"><span>소개</span></label>
+                                        <label><input type="radio" name="selectOpeion" value="2"><span>개척</span></label>
+                                        <label><input type="radio" name="selectOpeion" value="3"><span>기타</span></label>
+                                        <label><input type="radio" name="selectOpeion" value="4"><span>지인</span></label>
+                                        <label><input type="radio" name="selectOpeion" value="5"><span>단종보험</span></label>
+                                    </div>
+                                    <button type="button" data-toggle="closebtn">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="validation">발굴경로를 다시 확인해주세요.</div>
+    
+                        <!-- [CASE1] 소개 선택 경우 : 고객찾기 전 -->
+                        <div class="input-btn1 ui-tabcon" data-select-con="1">
+                            <data class="text" data-label="고객님을 검색해주세요." value=""></data>
+                            <button type="button" class="icon-com1 ic2">고객검색</button>
+                        </div>
+    
+                        <!-- [CASE2] 지인 선택 경우 -->
+                        <div class="select-wrap ui-tabcon" data-autoset="select" data-select-con="2">
+                            <button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+                                <span data-select="title">지인선택</span>
+                                <span data-select="text" data-value="1">전체</span>
+                            </button>
+                            <div class="list">
+                                <div data-label="지인선택">
+                                    <div class="option">
+                                        <label><input type="radio" name="selectOpeion1" value="1"><span>전체</span></label>
+                                        <label><input type="radio" name="selectOpeion1" value="2"><span>지연</span></label>
+                                        <label><input type="radio" name="selectOpeion1" value="3"><span>혈연</span></label>
+                                        <label><input type="radio" name="selectOpeion1" value="4"><span>학연</span></label>
+                                        <label><input type="radio" name="selectOpeion1" value="5"><span>기타</span></label>
+                                    </div>
+                                    <button type="button" data-toggle="closebtn">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // -->
+                    </dd>
+                </dl>
+
+                <!-- # 발굴경로 : 소개해준분 관계 : [CASE1] 소개 선택 경우 # -->
+                <dl class="form ui-tabcon" data-select-con="1">
+                    <dt>소개해준분 관계</dt>
+                    <dd>
+                        <div class="select-wrap" data-autoset="select">
+                            <button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+                                <span data-select="title">소개해준분 관계</span>
+                                <span data-select="text" data-value="1">전체</span>
+                            </button>
+                            <div class="list">
+                                <div data-label="소개해준분 관계">
+                                    <div class="option">
+                                        <label><input type="radio" name="selectOpeion2" value="1"><span>전체</span></label>
+                                        <label><input type="radio" name="selectOpeion2" value="2"><span>기계약자</span></label>
+                                        <label><input type="radio" name="selectOpeion2" value="3"><span>가족</span></label>
+                                        <label><input type="radio" name="selectOpeion2" value="4"><span>친구</span></label>
+                                        <label><input type="radio" name="selectOpeion2" value="5"><span>지인(이웃)</span></label>
+                                        <label><input type="radio" name="selectOpeion2" value="6"><span>지인(동호회)</span></label>
+                                        <label><input type="radio" name="selectOpeion2" value="7"><span>지인(종교활동)</span></label>
+                                        <label><input type="radio" name="selectOpeion2" value="8"><span>지인(전직장)</span></label>
+                                    </div>
+                                    <button type="button" data-toggle="closebtn">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [CASE1] 소개 선택 경우 : 고객찾기 후 -->
+                        <div class="info-data3 ui-tabcon" data-select-con="1">
+                            <dl>
+                                <dt class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+                                    <strong>하다미</strong>
+                                    <span>
+                                        <span>0000.00.00</span>
+                                        <span>여</span>
+                                    </span>
+                                </dt>
+                                <dd class="side"><button type="button" class="btn-sub3 c2">삭제</button></dd>
+                            </dl>
+                        </div>
+                    </dd>
+                </dl>
+
+                <!-- # 이메일 # -->
+                <dl class="form line">
+                    <dt>이메일</dt>
+                    <dd>
+                        <!-- // -->
+                        <input type="text" class="text" title="아이디 입력" placeholder="아이디를 입력해주세요.">
+                        <!-- // -->
+                        <div class="select-wrap" data-autoset="select" data-callback="uiFunction2"> <!-- [D] 하단 uiFunction2(); 참고 : 함수명 변경 필요 -->
+                            <button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false">
+                                <span data-select="title">선택해주세요.</span>
+                                <span data-select="text"></span>
+                            </button>
+                            <div class="list">
+                                <div data-label="이메일 주소">
+                                    <div class="option">
+                                        <label><input type="radio" name="selectOpeion3" value="1"><span>직접입력</span></label>
+                                        <label><input type="radio" name="selectOpeion3" value="2"><span>naver.com</span></label>
+                                        <label><input type="radio" name="selectOpeion3" value="3"><span>kakao.com</span></label>
+                                        <label><input type="radio" name="selectOpeion3" value="4"><span>gmail.com</span></label>
+                                        <label><input type="radio" name="selectOpeion3" value="5"><span>lotteins.co.kr</span></label>
+                                        <label><input type="radio" name="selectOpeion3" value="6"><span>hanmail.net</span></label>
+                                        <label><input type="radio" name="selectOpeion3" value="7"><span>daum.net</span></label>
+                                    </div>
+                                    <button type="button" data-toggle="closebtn">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // -->
+                        <div class="ui-tabcon" data-select-con="3">
+                            <input type="text" class="text" placeholder="도메인 주소를 입력해주세요.">
+                        </div>
+                        <!-- // -->
+                    </dd>
+                </dl>
+            </fieldset>
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">등록 및 적용</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+<script>
+    //<!--
+        /* ******************************
+        * 샘플 : 발굴경로 선택 예시
+        * uiFunction() 함수명 변경 필요
+        * data-select-con : 보여줄 컨텐츠
+        ****************************** */
+        function uiFunction(e){
+            $('[data-select-con="1"], [data-select-con="2"]').addClass('ui-tabcon'); //초기화
+            if(e.val() == 1) {
+                $('[data-select-con="1"]').removeClass('ui-tabcon');
+            }else if(e.val() == 4) {
+                $('[data-select-con="2"]').removeClass('ui-tabcon');
+            }
+        }
+    
+        /* ******************************
+        * 샘플 : 이메일 선택 예시
+        * uiFunction2() 함수명 변경 필요
+        * data-select-con : 보여줄 컨텐츠
+        ****************************** */
+        function uiFunction2(e){
+            if(e.val() == 1) $('[data-select-con="3"]').removeClass('ui-tabcon');
+            else $('[data-select-con="3"]').addClass('ui-tabcon');
+        }
+    //-->
+    </script>
+</body>
+</html>

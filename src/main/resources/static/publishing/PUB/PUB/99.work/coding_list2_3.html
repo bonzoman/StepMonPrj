@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>PUBLISHING GUIDE</title>
+<link rel="stylesheet" href="../../resource/css/publish.css?20220913">
+</head>
+<body>
+<div class="guide-wrap">
+	<header>
+		<h1>
+			<i>롯데손해보험</i> <strong>MARS</strong> PUBLISHING LIST
+			<a href="coding_list1.html" class="guide-btn1">작업목록</a>
+		</h1>
+		<nav>
+			<ul>
+				<li><a href="coding_list2_1.html">GUIDE</a></li>
+				<li><a href="coding_list2_2.html">RULE</a></li>
+				<li class="active"><a href="coding_list2_3.html" aria-current="page">DEV</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<article class="guide-container">
+		<h1 class="hide">작업가이드</h1>
+
+		<!-- ############################## -->
+		<!-- [개발참고사항] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">개발참고사항</h2>
+
+			<h3 class="guide-tit2">퍼블리싱 작업공유</h3>
+			<div class="guide-area">
+				<ul class="txt-bul1">
+					<!-- <li>퍼블리싱 작업공유는 <a href="" target="_blank" title="새창">개발전달URL</a> 을 통해 공유</li> -->
+					<li>로컬에서 <em class="txt-c1">/html/99.work/coding_list1.html</em> 을 통해서도 열람가능.</li>
+					<li>작업목록의 완료일이 표기된 페이지의 경우 개발진행가능.</li>
+					<li>완료일 이후 수정발생시 수정일에 날짜가 표기되며, 수정일을 클릭하면 상세수정내역 확인이 가능(소스상에는 해당수정일로 주석검색)</li>
+				</ul>
+			</div>
+
+			<h3 class="guide-tit2">스크립트1 : 레이어팝업</h3>
+			<div class="guide-area">
+				<ul class="txt-bul1">
+					<li>레이어는 별도 페이지 퍼블리싱 작업하며, 호출샘플도 함께 제공</li>
+					<li>참고 : <a href="script_guide1.html" target="_blank" title="새창">/html/99.work/script_guide1.html</a></li>
+				</ul>
+			</div>
+
+			<h3 class="guide-tit2">스크립트2 : 탭, 아코디언</h3>
+			<div class="guide-area">
+				<ul class="txt-bul1">
+					<li>탭, 토글등 공통 UI 스크립트는 [data-autoset="toggle"] [data-autoset="tab"] 등 [data-autoset] 속성을 통해 퍼블리싱에서 공통선언</li>
+					<li>별도 개발에서 제어할 경우 [data-autoset] 을 제거한 후 별도 선언하여 사용.</li>
+					<li>참고 : <a href="script_guide2.html" target="_blank" title="새창">/html/99.work/script_guide2.html</a></li>
+				</ul>
+			</div>
+
+			<h3 class="guide-tit2">기타 : 디스플레이</h3>
+			<div class="guide-area">
+				<ul class="txt-bul1">
+					<li>개발 조건에 따라 일부 컨텐츠를 숨김처리해야할 경우 인라인스타일로 display:none 처리하는것 보다는 none 클래스 추가/삭제를 통하여 디스플레이 조정</li>
+					<li>display none 의 경우는 다시 보여줘야 할 경우, display 속성은 inline, block, inline-block, table, flex 등 해당객체 UI에 따라 다양하게 변경되므로, 가급적 none 클래스로 제어한다.</li>
+					<li>클래스로 제어할 경우 간격조정등 변동되는 ui컨트롤가능</li>
+				</ul>
+			</div>
+
+		</section>
+		<!-- ############################## -->
+	</article>
+</div>
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<script src="../../resource/js/publish.plugin.js"></script>
+<script src="../../resource/js/publish.common.js"></script>
+</body>
+</html>

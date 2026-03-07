@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>TAB/TOGGLE | CONTENTS | PUBLISHING GUIDE</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<link rel="stylesheet" href="../../resource/css/publish.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+	<div class="guide-wrap">
+		<header>
+			<h1>
+				<i>롯데손해보험</i> CONTENTS <strong>TAB/TOGGLE</strong>
+				<a href="../99.work/coding_list1.html" class="guide-btn1">작업목록</a>
+			</h1>
+			<nav>
+				<ul>
+					<li><a href="content_basic.html">INFO</a></li>
+					<li><a href="content_txt.html">TITLE/TXT</a></li>
+					<li><a href="content_btn.html">BUTTON</a></li>
+					<li><a href="content_icon.html">ICON</a></li>
+					<li><a href="content_form.html">FORM ELEMENT</a></li>
+					<li><a href="content_formarea.html">FORM 약관/검색</a></li>
+					<li><a href="content_formarea2.html">FORM 입력</a></li>
+					<li class="active"><a href="content_tab.html" aria-current="page">TAB/TOGGLE</a></li>
+					<li><a href="content_tbl.html">TABLE</a></li>
+					<li><a href="content_box.html">BOX/BANNER</a></li>
+					<li><a href="content_info.html">INFO/DATA</a></li>
+					<li><a href="content_list.html">LIST</a></li>
+					<li><a href="content_bbs.html">BOARD</a></li>
+				</ul>
+			</nav>
+		</header>
+		<article class="guide-container">
+			<h1 class="hide">탭/토글 작업 가이드</h1>
+
+			<!-- ############################## -->
+			<!-- [진행상태 STEP] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">진행상태</h2>
+				<h3 class="guide-tit2">유형1 : .info-step1</h3>
+			</section>
+
+			<!-- ############################## -->
+			<!-- [탭] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">탭</h2>
+				<h3 class="guide-tit2">탭 공통사항</h3>
+<pre><code class="html">&lt;!-- 페이지이동형 : 탭 UI 중 동적 디스플레이 조절이 아닌 단순 네비게이션 요소로 사용될 경우 현재페이지에 대한 추가 정보제공 --&gt;
+&lt;nav class="클래스명" aria-label="네비게이션설명"&gt;
+    &lt;ul&gt;
+        &lt;li class="active"&gt;&lt;a href="/URL" aria-current="page"&gt;메뉴명1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/URL"&gt;메뉴명2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+				<h3 class="guide-tit2">네비게이션 탭 : nav-tab1</h3>
+				<div class="nav-tab1" aria-label="네비게이션설명">
+					<ul>
+						<li class="active"><a href="javascript:void(0);" aria-current="page">메뉴명1</a></li>
+						<li><a href="javascript:void(0);">메뉴명2</a></li>
+					</ul>
+				</div>
+
+				<div class="guide-area body">
+					<div class="nav-tab1" data-autoset="tab"  data-scroll="true">
+						<ul>
+							<li><a href="#uiTabSection1" aria-current="page">메뉴명1</a></li>
+							<li><a href="#uiTabSection2">메뉴명2</a></li>
+							<li class="active"><a href="#uiTabSection3">메뉴명3</a></li>
+							<li><a href="#uiTabSection4">메뉴명4</a></li>
+							<li><a href="#uiTabSection4">메뉴명5</a></li>
+							<li><a href="#uiTabSection4">메뉴명6</a></li>
+						</ul>
+					</div>
+					<div id="uiTabSection1" class="ui-tabcon">
+						<p class="area-temp">탭1 컨텐츠</p>
+					</div>
+					<div id="uiTabSection2" class="ui-tabcon">
+						<p class="area-temp" style="background:rgba(255,145,2,0.3);">탭2 컨텐츠</p>
+					</div>
+					<div id="uiTabSection3" class="ui-tabcon active">
+						<p class="area-temp" style="background:rgba(78, 2, 255, 0.3);">탭3 컨텐츠</p>
+					</div>
+					<div id="uiTabSection4" class="ui-tabcon">
+						<p class="area-temp" style="background:rgb(2 176 255 / 30%);">탭4 컨텐츠</p>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">컨텐츠 탭 : tab-sub1</h3>
+				<div class="guide-area body">
+					<div class="tab-sub1" aria-label="네비게이션설명">
+						<ul>
+							<li class="active"><a href="javascript:void(0);" aria-current="page">메뉴명1</a></li>
+							<li><a href="javascript:void(0);">메뉴명2</a></li>
+							<li><a href="javascript:void(0);">메뉴명3</a></li>
+						</ul>
+					</div>
+				</div>
+
+
+				<div class="guide-area body">
+					<div class="tab-sub1" data-autoset="tab">
+						<ul>
+							<li><a href="#uiTab2Section1" aria-current="page">메뉴명1</a></li>
+							<li><a href="#uiTab2Section2">메뉴명2</a></li>
+							<li class="active"><a href="#uiTab2Section3">메뉴명3</a></li>
+							<li><a href="#uiTab2Section4">메뉴명4</a></li>
+						</ul>
+					</div>
+					<div id="uiTab2Section1" class="ui-tabcon">
+						<p class="area-temp">탭1 컨텐츠</p>
+					</div>
+					<div id="uiTab2Section2" class="ui-tabcon">
+						<p class="area-temp" style="background:rgba(255,145,2,0.3);">탭2 컨텐츠</p>
+					</div>
+					<div id="uiTab2Section3" class="ui-tabcon active">
+						<p class="area-temp" style="background:rgba(78, 2, 255, 0.3);">탭3 컨텐츠</p>
+					</div>
+					<div id="uiTab2Section4" class="ui-tabcon">
+						<p class="area-temp" style="background:rgb(2 176 255 / 30%);">탭4 컨텐츠</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- ############################## -->
+			<!-- [토글] -->
+			<!-- ############################## -->
+			<section class="guide-section">
+				<h2 class="guide-tit">토글</h2>
+				<h3 class="guide-tit2">유형1 : .area-toggle1</h3>
+				<div class="guide-area popup">
+					<!-- ### [섹션구조] ### -->
+					<div class="area-toggle1">
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h4>섹션구조 : 기본정보 .info-con1 사용</h4>
+								<button type="button" data-toggle="btn" aria-expanded="false">섹션구조 : 타이틀 상세보기</button>
+							</header>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>항목명</dt>
+									<dd>내용</dd>
+								</dl>
+								<dl>
+									<dt>항목명</dt>
+									<dd>내용</dd>
+								</dl>
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h4>섹션구조 : 안내문구 추가</h4>
+								<button type="button" data-toggle="btn" aria-expanded="false">섹션구조 : 타이틀 상세보기</button>
+							</header>
+							<div data-toggle="content">
+								<div class="info-con1">
+									<dl>
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+									<dl>
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+								</div>
+								<div class="mes-info2 box">
+									<p>안내문구노출</p>
+								</div>
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h4>섹션구조 : 안내문구 추가2</h4>
+								<button type="button" data-toggle="btn" aria-expanded="false">섹션구조 : 타이틀 상세보기</button>
+							</header>
+							<div data-toggle="content">
+								<dl class="txt-bul1">
+									<dt>타이틀</dt>
+									<dd>내용</dd>
+									<dd>내용</dd>
+									<dd>내용</dd>
+								</dl>
+								<div class="mes-info2 box">
+									<p>안내문구노출</p>
+								</div>
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<em class="icon-state2 ic1">상태</em>
+								<h4>섹션구조 : 반복내용</h4>
+								<dl class="data1">
+									<dt>항목명</dt>
+									<dd>내용</dd>
+									<dt>항목명</dt>
+									<dd>내용</dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">섹션구조 : 타이틀 상세보기</button>
+							</header>
+							<div data-toggle="content">
+								<!-- // -->
+								<div class="info-con2">
+									<dl>
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+									<dl>
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+								</div>
+								<!-- // -->
+								<div class="info-con2">
+									<dl>
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+									<dl>
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+								</div>
+								<!-- // -->
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h4>섹션구조 : 링크컨텐츠 형태</h4>
+								<dl class="data2">
+									<dt>항목명</dt>
+									<dd>내용</dd>
+								</dl>
+								<dl class="data2">
+									<dt>항목명</dt>
+									<dd>내용</dd>
+								</dl>
+								<dl class="data2">
+									<dt>항목명</dt>
+									<dd>내용</dd>
+									<dt>항목명</dt>
+									<dd>내용</dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">섹션구조 : 타이틀 상세보기</button>
+							</header>
+							<div data-toggle="content" class="list-con1">
+								<ul>
+									<!-- // -->
+									<li>
+										<a href="javascript:void(0);">
+											<strong>항목명</strong>
+											<span>내용</span>
+										</a>
+									</li>
+									<!-- // -->
+									<li>
+										<a href="javascript:void(0);">
+											<strong>항목명</strong>
+											<span>내용</span>
+											<span>내용</span>
+										</a>
+									</li>
+									<!-- // -->
+									<li>
+										<a href="javascript:void(0);">
+											<strong>항목명</strong>
+											<div>
+												<span>내용</span>
+												<span>내용</span>
+											</div>
+											<div>
+												<span>내용</span>
+												<span>내용</span>
+											</div>
+										</a>
+									</li>
+									<!-- // -->
+								</ul>
+								<!-- // -->
+								<div class="area-btn1">
+									<a href="javascript:void(0);" class="btn-com1">버튼명</a>
+								</div>
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h4 class="ellipsis">섹션구조 : 말줄임이 필요한 타이틀일 경우 추가합니다.</h4>
+								<dl class="data1">
+									<dt>항목명</dt>
+									<dd>내용</dd>
+									<dt>항목명</dt>
+									<dd>내용</dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">섹션구조 : 타이틀 상세보기</button>
+							</header>
+							<div data-toggle="content">
+								<h5 class="tit-sub1">타이틀</h5>
+								<div class="list-con1">
+									<ul>
+										<!-- // -->
+										<li>
+											<a href="javascript:void(0);">
+												<strong>항목명</strong>
+												<span>내용</span>
+											</a>
+										</li>
+										<!-- // -->
+										<li>
+											<a href="javascript:void(0);">
+												<strong>항목명</strong>
+												<span>내용</span>
+												<span>내용</span>
+											</a>
+										</li>
+										<!-- // -->
+										<li>
+											<a href="javascript:void(0);">
+												<strong>항목명</strong>
+												<div>
+													<span>내용</span>
+													<span>내용</span>
+												</div>
+												<div>
+													<span>내용</span>
+													<span>내용</span>
+												</div>
+											</a>
+										</li>
+										<!-- // -->
+									</ul>
+								</div>
+
+								<h5 class="tit-sub1">타이틀</h5>
+								<div class="list-con1">
+									<ul>
+										<!-- // -->
+										<li>
+											<a href="javascript:void(0);">
+												<strong>항목명</strong>
+												<span>내용</span>
+											</a>
+										</li>
+										<!-- // -->
+										<li>
+											<a href="javascript:void(0);">
+												<strong>항목명</strong>
+												<span>내용</span>
+												<span>내용</span>
+											</a>
+										</li>
+										<!-- // -->
+										<li>
+											<a href="javascript:void(0);">
+												<strong>항목명</strong>
+												<div>
+													<span>내용</span>
+													<span>내용</span>
+												</div>
+												<div>
+													<span>내용</span>
+													<span>내용</span>
+												</div>
+											</a>
+										</li>
+										<!-- // -->
+									</ul>
+								</div>
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h4>섹션구조 : 주소선택</h4>
+								<dl class="data2">
+									<dt>피보험자</dt>
+									<dd class="data-info2">
+										<strong>하다미</strong>
+										<span>
+											<span>1990.01.01</span>
+											<span>남</span>
+										</span>
+									</dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">섹션구조 : 타이틀 상세보기</button>
+							</header>
+							<div data-toggle="content" class="con-t1 label-check1">
+								<!-- // -->
+								<label>
+									<input type="checkbox" checked>
+									<strong class="tit">타이틀</strong>
+									<span class="sub">내용</span>
+								</label>
+								<!-- // -->
+								<label>
+									<input type="checkbox">
+									<strong class="tit">자택</strong>
+									<span class="sub">서울특별시 강남구 논현동 20-9</span>
+								</label>
+								<!-- // -->
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h4>섹션구조 : 주소선택</h4>
+								<dl class="data2">
+									<dt>[하다미]의 사망외보험금수익자 </dt>
+									<dd class="data-info2">
+										<strong>하다미</strong>
+										<span>
+											<span>1990.01.01</span>
+											<span>남</span>
+										</span>
+									</dd>
+								</dl>
+								<button type="button" data-toggle="btn" aria-expanded="false">섹션구조 : 타이틀 상세보기</button>
+							</header>
+							<div data-toggle="content" class="con-t1 label-check1">
+								<!-- // -->
+								<label>
+									<input type="checkbox" checked>
+									<strong class="tit">타이틀</strong>
+									<span class="sub">내용</span>
+								</label>
+								<!-- // -->
+								<label>
+									<input type="checkbox">
+									<strong class="tit">자택</strong>
+									<span class="sub">서울특별시 강남구 논현동 20-9</span>
+								</label>
+								<!-- // -->
+							</div>
+						</section>
+						<!-- // -->
+					</div>
+				</div>
+				<div class="guide-area popup">
+					<!-- ### [UL구조] ### -->
+					<div class="area-toggle1">
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>UL구조 : 테이블구조</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div data-toggle="content" class="info-con4">
+									<dl>
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+									<dl>
+										<dt>항목명</dt>
+										<dd>내용
+											<div class="area-btn4">
+												<a href="javascript:void(0);" class="btn-sub3 c2">내역</a>
+											</div>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>UL구조 : 타이틀</strong>
+									<dl class="data1">
+										<dt>항목명</dt>
+										<dd>내용</dd>
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+									<button type="button" data-toggle="btn" aria-expanded="false">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<!-- // -->
+									<div class="area-info2 c1">
+										<dl>
+											<dt>항목명</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+										</dl>
+									</div>
+									<!-- // -->
+									<div class="info-con2">
+										<dl>
+											<dt>항목명</dt>
+											<dd>
+												<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+											</dd>
+										</dl>
+										<dl>
+											<dt>항목명</dt>
+											<dd>
+												<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+											</dd>
+										</dl>
+										<dl>
+											<dt>항목명</dt>
+											<dd>
+												<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+												<div class="area-btn3">
+													<button type="button" class="btn-sub3 c2">버튼명</button>
+												</div>
+											</dd>
+										</dl>
+									</div>
+									<!-- // -->
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>UL구조 : 타이틀</strong>
+									<dl class="data2">
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+									<dl class="data2">
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+									<dl class="data2">
+										<dt>항목명</dt>
+										<dd>내용</dd>
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+									<button type="button" data-toggle="btn" aria-expanded="false">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<p class="area-temp">토글 컨텐츠3</p>
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>UL구조 : 타이틀</strong>
+									<dl class="data3">
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+									<button type="button" data-toggle="btn" aria-expanded="false">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<p class="area-temp">토글 컨텐츠3</p>
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>UL구조 : 타이틀</strong>
+									<span class="data1">내용</span>
+									<button type="button" data-toggle="btn" aria-expanded="false">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<p class="area-temp">토글 컨텐츠3</p>
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>UL구조 : 타이틀</strong>
+									<div class="data2">
+										<dl>
+											<dt>항목명</dt>
+											<dd>내용</dd>
+										</dl>
+										<dl>
+											<dt>항목명</dt>
+											<dd>내용</dd>
+										</dl>
+										<dl>
+											<dt>항목명</dt>
+											<dd class="data-num1"><strong>000,000</strong><span>천원</span><em class="txt-c1">(00%)</em></dd>
+										</dl>
+									</div>
+									<button type="button" data-toggle="btn" aria-expanded="false">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<div class="info-con2 t2">
+										<dl>
+											<dt>항목명</dt>
+											<dd>내용</dd>
+										</dl>
+										<dl>
+											<dt>항목명</dt>
+											<dd class="data-num1"><strong>000,000,000</strong><span>천원</span><em class="txt-c1">00.00%</em></dd>
+										</dl>
+									</div>
+
+									<div class="wrap-section line">
+										<section>
+											<h4 class="tit-sub2 t1">타이틀</h4>
+											<div class="info-con2 t2">
+												<dl>
+													<dt>항목명</dt>
+													<dd>내용</dd>
+												</dl>
+												<dl>
+													<dt>항목명</dt>
+													<dd class="data-num1"><strong>000,000,000</strong><span>천원</span><em class="txt-c1">00.00%</em></dd>
+												</dl>
+											</div>
+										</section>
+										<section>
+											<h4 class="tit-sub2 t1">타이틀</h4>
+											<div class="info-con2 t2">
+												<dl>
+													<dt>항목명</dt>
+													<dd>내용</dd>
+												</dl>
+												<dl>
+													<dt>항목명</dt>
+													<dd>내용</dd>
+												</dl>
+											</div>
+										</section>
+									</div>
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<em class="icon-state2 ic1">상태</em>
+									<strong>UL구조 : 타이틀</strong>
+									<dl class="data2">
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+									<dl class="data2 side">
+										<dt>항목명</dt>
+										<dd>내용</dd>
+									</dl>
+									<button type="button" data-toggle="btn" aria-expanded="false">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<p class="area-temp">토글 컨텐츠3</p>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+				</div>
+				<div class="guide-area body">
+					<!-- ### [DL구조] ### -->
+					<div class="area-toggle1">
+						<!-- // -->
+						<dl>
+							<dt class="tit">
+								<strong>DL구조 : 타이틀</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">DL구조 : 타이틀 상세보기</button>
+							</dt>
+							<dd data-toggle="content">
+								<ul class="txt-bul1">
+									<li>내용</li>
+									<li>내용</li>
+									<li>내용</li>
+								</ul>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl>
+							<dt class="tit">
+								<strong>DL구조 : 타이틀</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">DL구조 : 타이틀 상세보기</button>
+							</dt>
+							<dd data-toggle="content">
+								<p class="area-temp">토글 컨텐츠6</p>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+				</div>
+				<div class="guide-area popup">
+					<!-- ### [FIELDSET 구조] ### -->
+					<div class="area-toggle1">
+						<fieldset>
+							<legend class="tit">
+								<strong>FIELDSET 구조 : 타이틀</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">FIELDSET 구조 : 타이틀 상세보기</button>
+							</legend>
+
+							<div data-toggle="content">
+								<p class="area-temp">토글 컨텐츠6</p>
+							</div>
+						</fieldset>
+
+						<fieldset>
+							<legend class="tit">
+								<strong>FIELDSET 구조 : 타이틀</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">FIELDSET 구조 : 타이틀 상세보기</button>
+							</legend>
+
+							<div data-toggle="content">
+								<p class="area-temp">토글 컨텐츠6</p>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형2 : .area-toggle2</h3>
+				<div class="guide-area body">
+					<div class="area-toggle2">
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h4>섹션구조 : 타이틀 </h4>
+								<button type="button" data-toggle="btn" aria-expanded="false">@타이틀 상세보기</button>
+							</header>
+							<div class="info-con1" data-toggle="content">
+								<p class="area-temp">토글 컨텐츠2-1</p>
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h4>섹션구조 : 타이틀 </h4>
+								<button type="button" data-toggle="btn" aria-expanded="false">@타이틀 상세보기</button>
+							</header>
+							<div class="info-con1" data-toggle="content">
+								<p class="area-temp">토글 컨텐츠2-2</p>
+							</div>
+						</section>
+						<!-- // -->
+					</div>
+
+					<div class="area-toggle2">
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>UL구조 : 타이틀</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<p class="area-temp">토글 컨텐츠2-3</p>
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>UL구조 : 타이틀</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<p class="area-temp">토글 컨텐츠2-4</p>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+
+					<div class="area-toggle2">
+						<!-- // -->
+						<dl>
+							<dt class="tit">
+								<strong>DL구조 : 타이틀 </strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">@타이틀 상세보기</button>
+							</dt>
+							<dd class="info-con1" data-toggle="content">
+								<p class="area-temp">토글 컨텐츠2-5</p>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl>
+							<dt class="tit">
+								<strong>DL구조 : 타이틀 </strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">@타이틀 상세보기</button>
+							</dt>
+							<dd class="info-con1" data-toggle="content">
+								<p class="area-temp">토글 컨텐츠2-6</p>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+				</div>
+
+				<div class="guide-area body">
+					<div class="area-toggle2 t1">
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<em class="icon-state2 ic1">상태</em>
+								<h4>섹션구조 : 타이틀 </h4>
+								<button type="button" data-toggle="btn" aria-expanded="false">@타이틀 상세보기</button>
+							</header>
+							<div class="info-con1" data-toggle="content">
+								<p>가입 설계를 위해 수강해야 하는 교육이에요.</p>
+								<div class="list-data2">
+									<ul>
+										<li>
+											<a href="javascript:void(0);" class="ic1">
+												<strong class="data1">강의명</strong>
+												<span class="data2">수강완료</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="ic1">
+												<strong class="data1">강의명이 길어질 경우 말줄임이 됩니다.</strong>
+												<span class="data2">수강완료</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="ic1">
+												<strong class="data1">강의명</strong>
+												<span class="data2"></span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="ic1"> <!-- 동영상 아이콘 -->
+												<strong class="data1">강의명</strong>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<em class="icon-state2 ic1">상태</em>
+								<h4>섹션구조 : 타이틀 </h4>
+								<button type="button" data-toggle="btn" aria-expanded="false">@타이틀 상세보기</button>
+							</header>
+							<div class="info-con1" data-toggle="content">
+								<p>가입 설계를 위해 수강해야 하는 교육이에요.</p>
+								<div class="list-data2">
+									<ul>
+										<li>
+											<a href="javascript:void(0);" class="ic1">
+												<strong class="data1">강의명</strong>
+												<span class="data2">수강완료</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="ic1">
+												<strong class="data1">강의명이 길어질 경우 말줄임이 됩니다.</strong>
+												<span class="data2">수강완료</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="ic1">
+												<strong class="data1">강의명</strong>
+												<span class="data2"></span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="ic1"> <!-- 동영상 아이콘 -->
+												<strong class="data1">강의명</strong>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<!-- // -->
+					</div>
+
+					<div class="area-toggle2 t1">
+						<ul>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<em class="icon-state2 ic1">상태</em>
+									<strong>UL구조 : 타이틀</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div class="info-con1" data-toggle="content">
+									<p>가입 설계를 위해 수강해야 하는 교육이에요.</p>
+									<div class="list-data2">
+										<ul>
+											<li>
+												<a href="javascript:void(0);" class="ic1">
+													<strong class="data1">강의명</strong>
+													<span class="data2">수강완료</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" class="ic1">
+													<strong class="data1">강의명이 길어질 경우 말줄임이 됩니다.</strong>
+													<span class="data2">수강완료</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" class="ic1">
+													<strong class="data1">강의명</strong>
+													<span class="data2"></span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" class="ic1"> <!-- 동영상 아이콘 -->
+													<strong class="data1">강의명</strong>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<em class="icon-state2 ic1">상태</em>
+									<strong>UL구조 : 타이틀</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div class="info-con1" data-toggle="content">
+									<p>가입 설계를 위해 수강해야 하는 교육이에요.</p>
+									<div class="list-data2">
+										<ul>
+											<li>
+												<a href="javascript:void(0);" class="ic1">
+													<strong class="data1">강의명</strong>
+													<span class="data2">수강완료</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" class="ic1">
+													<strong class="data1">강의명이 길어질 경우 말줄임이 됩니다.</strong>
+													<span class="data2">수강완료</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" class="ic1">
+													<strong class="data1">강의명</strong>
+													<span class="data2"></span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" class="ic1"> <!-- 동영상 아이콘 -->
+													<strong class="data1">강의명</strong>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+
+					<div class="area-toggle2 t1">
+						<!-- // -->
+						<dl>
+							<dt class="tit">
+								<em class="icon-state2 ic1">상태</em>
+								<strong>DL구조 : 타이틀 </strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">@타이틀 상세보기</button>
+							</dt>
+							<dd class="info-con1" data-toggle="content">
+								<p>가입 설계를 위해 수강해야 하는 교육이에요.</p>
+								<div class="list-data2">
+									<ul>
+										<li>
+											<a href="javascript:void(0);" class="ic1">
+												<strong class="data1">강의명</strong>
+												<span class="data2">수강완료</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="ic1">
+												<strong class="data1">강의명이 길어질 경우 말줄임이 됩니다.</strong>
+												<span class="data2">수강완료</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="ic1">
+												<strong class="data1">강의명</strong>
+												<span class="data2"></span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="ic1"> <!-- 동영상 아이콘 -->
+												<strong class="data1">강의명</strong>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl>
+							<dt class="tit">
+								<em class="icon-state2 ic1">상태</em>
+								<strong>DL구조 : 타이틀 </strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">@타이틀 상세보기</button>
+							</dt>
+							<dd class="info-con1" data-toggle="content">
+								<p>가입 설계를 위해 수강해야 하는 교육이에요.</p>
+								<div class="list-data2">
+									<ul>
+										<li>
+											<a href="javascript:void(0);" class="ic1">
+												<strong class="data1">강의명</strong>
+												<span class="data2">수강완료</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="ic1">
+												<strong class="data1">강의명이 길어질 경우 말줄임이 됩니다.</strong>
+												<span class="data2">수강완료</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="ic1">
+												<strong class="data1">강의명</strong>
+												<span class="data2"></span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="ic1"> <!-- 동영상 아이콘 -->
+												<strong class="data1">강의명</strong>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+				</div>
+
+				<div class="guide-area popup">
+					<div class="area-toggle2">
+						<ul>
+							<li>
+								<div class="tit">
+									<label>
+										<input type="checkbox">
+										<em class="icon-noti1 ic2">NEW</em>
+										<strong>타이틀</strong>
+									</label>
+									<button type="button" data-toggle="btn" aria-expanded="false">@타이틀 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<p class="mes-t1">내용</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형3 : .area-toggle3</h3>
+				<div class="guide-area body">
+					<div class="area-toggle3" data-autoset="toggle">
+						<!-- // -->
+						<section class="active">
+							<header class="tit">
+								<h4>섹션구조 : 타이틀 </h4>
+								<button type="button" data-toggle="btn" aria-expanded="true">@타이틀 상세보기</button>
+							</header>
+							<div class="info-con1" data-toggle="content">
+								<p class="area-temp">토글 컨텐츠3-1</p>
+							</div>
+						</section>
+						<!-- // -->
+						<section>
+							<header class="tit">
+								<h4>섹션구조 : 타이틀 </h4>
+								<button type="button" data-toggle="btn" aria-expanded="false">@타이틀 상세보기</button>
+							</header>
+							<div class="info-con1" data-toggle="content">
+								<p class="area-temp">토글 컨텐츠3-2</p>
+							</div>
+						</section>
+						<!-- // -->
+					</div>
+
+					<div class="area-toggle3" data-autoset="toggle">
+						<ul>
+							<!-- // -->
+							<li class="active">
+								<div class="tit">
+									<strong>UL구조 : 타이틀</strong>
+									<button type="button" data-toggle="btn" aria-expanded="true">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<p class="area-temp">토글 컨텐츠3-3</p>
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="tit">
+									<strong>UL구조 : 타이틀</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<p class="area-temp">토글 컨텐츠3-4</p>
+								</div>
+							</li>
+							<!-- // -->
+							<li>
+								<div class="sub">
+
+								</div>
+								<div class="info-data3 t3">
+									<dl>
+										<dt class="data-info1">
+											<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+											<span><strong>공지철</strong><span>00000000</span></span>
+										</dt>
+										<dd class="data1">
+											<span>항목명</span>
+											<strong>내용</strong>
+										</dd>
+										<dd class="data2">
+											<span>항목명</span>
+											<strong>내용</strong>
+										</dd>
+									</dl>
+								</div>
+								<div class="tit">
+									<strong>UL구조 : 타이틀</strong>
+									<button type="button" data-toggle="btn" aria-expanded="false">UL구조 : 타이틀 상세보기</button>
+								</div>
+								<div data-toggle="content">
+									<p class="area-temp">토글 컨텐츠3-4</p>
+								</div>
+							</li>
+							<!-- // -->
+						</ul>
+					</div>
+
+					<div class="area-toggle3" data-autoset="toggle">
+						<!-- // -->
+						<dl class="active">
+							<dt class="tit">
+								<strong>DL구조 : 타이틀 </strong>
+								<button type="button" data-toggle="btn" aria-expanded="true">@타이틀 상세보기</button>
+							</dt>
+							<dd class="info-con1" data-toggle="content">
+								<p class="area-temp">토글 컨텐츠3-5</p>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl>
+							<dt class="tit">
+								<strong>DL구조 : 타이틀 </strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">@타이틀 상세보기</button>
+							</dt>
+							<dd class="info-con1" data-toggle="content">
+								<p class="area-temp">토글 컨텐츠3-6</p>
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+				</div>
+			</section>
+			<!-- ############################## -->
+		</article>
+	</div>
+	<script src="../../resource/js/publish.plugin.js"></script>
+	<script src="../../resource/js/publish.common.js"></script>
+	<script>
+	//<!--
+		$plugin.togglecon('#uiNavi', {
+			toggle_type : 'tab',
+			selector : '#uiNavi > ul > li',
+			selector_btn : '> a',
+			selector_con : '#href',
+		});
+
+		$plugin.togglecon('.area-toggle1 > section');
+		$plugin.togglecon('.area-toggle1 > ul > li');
+		$plugin.togglecon('.area-toggle1 > dl');
+		$plugin.togglecon('.area-toggle1 > fieldset');
+
+
+		$plugin.togglecon('.area-toggle2 > section',{
+			selector_group : false
+		});
+		$plugin.togglecon('.area-toggle2 > ul > li',{
+			selector_group : false
+		});
+		$plugin.togglecon('.area-toggle2 > dl',{
+			selector_group : false
+		});
+
+	//-->
+	</script>
+</body>
+</html>

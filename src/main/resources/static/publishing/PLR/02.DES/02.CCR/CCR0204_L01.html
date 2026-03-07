@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title> [L] 부속사항/부속가액 | 설계(이륜) | 가입설계 | 자동차보험 | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-14]	① 클래스명 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+<div class="container">
+	<!-- [정보영역] -->
+	<div class="info-con1">
+		<dl>
+			<dt>부속사항</dt>
+			<dd><button type="button" aria-controls="uiPOPCCR0204L01" class="btn-sub3 c2">상세보기</button></dd><!-- [레이어팝업 샘플] -->
+		</dl>
+	</div>
+	<!-- [//] -->
+</div>
+</main>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] :부속사항 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCCR0204L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>부속사항</h1>
+			<button type="button" data-btn="pop-close">부속사항 닫기</button>
+		</header>
+		<div class="content">
+			<div class="list-data7">
+				<ul>
+					<li>블랙박스 2022 (10만원)</li>
+					<li>위성추적장치 2022 (20만원)</li>
+				</ul>
+			</div>
+		</div>
+		<footer class="area-action col"> <!-- [M 2022-09-14] 클래스명 추가 -->
+			<button type="button" class="btn-action">부속품추가</button>
+			<button type="button" class="btn-action c1">확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPCCR0204L01');
+
+	//레이어팝업 강제오픈
+	$('[aria-controls="uiPOPCCR0204L01"]').trigger('click');
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>모바일 전자배서_납부정보 및 납부방법 확인 | 모바일 계약변경 | 자동차</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>롯데손해보험<br>계약변경 전자서명</h1>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="1 top1">
+		<!-- ######################### -->
+		<!-- [진행상태] STEP 04 -->
+		<!-- ######################### -->
+		<div class="info-step1" data-autoset="toggle" data-sticky="top">
+			<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+			<ol data-toggle="content">
+				<li><button type="button">01. 유의사항 확인</button><button type="button" class="btn-sub3 c2">수정</button></li>
+				<li><button type="button">02. 계약변경신청서 확인</button><button type="button" class="btn-sub3 c2">수정</button></li>
+				<li aria-current="step"><button type="button">03. 납부정보 및 납부방법 확인</button></li>
+				<li><button type="button" disabled>04. 전자서명</button></li>
+			</ol>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [상단영역]  -->
+		<!-- ######################### -->
+		<div class="tit-section">
+			<p>납부정보를<br>확인해주세요.</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [납부하기] -->
+		<!-- ######################### -->
+		<div class="wrap-section">
+			<h3 class="hide">납부하기</h3>
+
+			<!-- # 납부금액 # -->
+			<div class="area-info2">
+				<dl>
+					<dt>납부금액</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+			</div>
+
+			<fieldset class="form-wrap1">
+				<legend> 납부방법 선택 및 입력 </legend>
+
+				<!-- # 납부방법 # -->
+				<dl class="form">
+					<dt>납부방법 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select" data-callback="uiFunction"> <!-- [D] 하단 uiFunction(); 참고 : 함수명 변경 필요 -->
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="1">즉시출금</span>
+							</button>
+							<div class="list">
+								<div data-label="납부방법">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="1"><span>즉시출금</span></label>
+										<label><input type="radio" name="selectOpeion1" value="2"><span>카드결제</span></label>
+										<label><input type="radio" name="selectOpeion1" value="3"><span>영업담당자 수납</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<!-- # [납부방법_즉시출금] # -->
+				<div class="ui-tabcon active" data-select-con="1">
+					<dl class="form">
+						<dt>은행/계좌번호 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- [CASE1] 기본 -->
+							<div class="input-btn1">
+								<data class="selectbox" value="" data-label="은행 선택"></data>
+								<button type="button">은행 선택</button> <!-- [D] /00.COM/DPCOM0000_P01.html : 은행선택 팝업  -->
+							</div>
+							<div class="validation">은행을 선택해주세요.</div>
+							<div class="input-wrap1">
+								<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요">
+								<button type="button" class="btn-sub1">계좌확인</button>
+							</div>
+							<div class="validation">계좌번호 입력 및 계좌확인을 해주세요.</div>
+
+							<!-- [CASE1] 은행 오류 -->
+							<div class="input-btn1">
+								<data class="selectbox" value="" data-label="은행 선택" aria-invalid="true"></data>
+								<button type="button">은행 선택</button>
+							</div>
+							<div class="validation">은행을 선택해주세요.</div>
+							<div class="input-wrap1">
+								<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요">
+								<button type="button" class="btn-sub1">계좌확인</button>
+							</div>
+							<div class="validation">계좌번호 입력 및 계좌확인을 해주세요.</div>
+
+							<!-- [CASE2] 계좌 오류 -->
+							<div class="input-btn1">
+								<data class="selectbox" value="" data-label="은행 선택"></data>
+								<button type="button">은행 선택</button>
+							</div>
+							<div class="validation">은행을 선택해주세요.</div>
+							<div class="input-wrap1">
+								<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 입력해주세요" aria-invalid="true">
+								<button type="button" class="btn-sub1">계좌확인</button>
+							</div>
+							<div class="validation">계좌번호 입력 및 계좌확인을 해주세요.</div>
+						</dd>
+
+						<!-- # 예금주 # -->
+						<dd>
+							<!-- [CASE1] 기본-->
+							<div class="data1">
+								<div>예금주:</div>
+								<div class="info"><strong>홍두한</strong><span><span>1965.03.21</span><span>남</span></span></div>
+								<!-- [D] 계좌 확인 후 노출 -->
+								<div class="txt">
+									<strong class="txt-c1">불일치</strong> <!-- [D] 예금주 일치 -->
+									<strong class="txt-c2">확인완료</strong> <!-- [D] 예금주 불일치 -->
+								</div>
+								<!-- // -->
+							</div>
+							<div class="validation">예금주 확인을 진행해주세요.</div>
+
+							<!-- [CASE1] 오류 : 클래스(invalid)명 추가 -->
+							<div class="data1 invalid">
+								<div>예금주:</div>
+								<div class="info"><strong>홍두한</strong><span><span>1965.03.21</span><span>남</span></span></div>
+							</div>
+							<div class="validation">예금주 확인을 진행해주세요.</div>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- # [납부방법_카드결제] # -->
+				<div class="ui-tabcon" data-select-con="2">
+					<!-- # // # -->
+					<dl class="form">
+						<dt>카드번호 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- [CASE] 기본 -->
+							<div class="text num2">
+								<input type="tel" title="카드번호 첫번째" maxlength="4" value="1111">
+								<span class="util1">-</span>
+								<input type="tel" title="카드번호 두번째" maxlength="4" value="2222">
+								<span class="util1">-</span>
+								<input type="tel" title="카드번호 세번째" maxlength="4" value="3333">
+								<span class="util1">-</span>
+								<input type="tel" title="카드번호 네번째" maxlength="4" value="4444">
+							</div>
+							<div class="validation">카드번호 입력 및 카드확인을 해주세요.</div>
+
+							<!-- [CASE] 오류 -->
+							<div class="text num2">
+								<input type="tel" title="카드번호 첫번째" maxlength="4" value="1111" aria-invalid="true">
+								<span class="util1">-</span>
+								<input type="tel" title="카드번호 두번째" maxlength="4" value="2222">
+								<span class="util1">-</span>
+								<input type="tel" title="카드번호 세번째" maxlength="4" value="3333">
+								<span class="util1">-</span>
+								<input type="tel" title="카드번호 네번째" maxlength="4" value="4444">
+							</div>
+							<div class="validation">카드번호를 확인해 주세요.</div>
+
+                            <!-- [CASE] 오류2 -->
+							<div class="text num2">
+								<input type="tel" title="카드번호 첫번째" maxlength="4" value="1111" aria-invalid="true">
+								<span class="util1">-</span>
+								<input type="tel" title="카드번호 두번째" maxlength="4" value="2222">
+								<span class="util1">-</span>
+								<input type="tel" title="카드번호 세번째" maxlength="4" value="3333">
+								<span class="util1">-</span>
+								<input type="tel" title="카드번호 네번째" maxlength="4" value="4444">
+							</div>
+							<div class="validation">유효기간 입력 및 카드확인을 진행해 주세요.</div>
+
+                            <!-- [CASE] 오류3 -->
+							<div class="text num2">
+								<input type="tel" title="카드번호 첫번째" maxlength="4" value="1111" aria-invalid="true">
+								<span class="util1">-</span>
+								<input type="tel" title="카드번호 두번째" maxlength="4" value="2222">
+								<span class="util1">-</span>
+								<input type="tel" title="카드번호 세번째" maxlength="4" value="3333">
+								<span class="util1">-</span>
+								<input type="tel" title="카드번호 네번째" maxlength="4" value="4444">
+							</div>
+							<div class="validation">카드확인을 진행해 주세요.</div>
+						</dd>
+					</dl>
+
+					<!-- # // # -->
+					<dl class="form">
+						<dt>유효기간 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- [CASE] 기본 -->
+							<div class="input-wrap1">
+								<input type="tel" class="text" title="유효기간(월/년)" placeholder="MMYY(월/년)">
+								<button type="button" class="btn-sub1">카드확인</button>
+							</div>
+							<div class="validation">유효기간을 입력해주세요.</div>
+
+							<!-- [CASE] 오류 -->
+							<div class="input-wrap1">
+								<input type="tel" class="text" title="유효기간(월/년)" placeholder="MMYY(월/년)" aria-invalid="true">
+								<button type="button" class="btn-sub1">카드확인</button>
+							</div>
+							<div class="validation">유효기간을 입력해주세요.</div>
+						</dd>
+						<dd class="data1">
+							<div>카드주:</div>
+							<div class="info"><strong>홍두한</strong><span><span>1965.03.21</span><span>남</span></span></div>
+							<div class="info"><strong>삼성카드(신용)</strong></div>
+							<!-- [D] 카드 확인 후 노출 -->
+							<div class="txt">
+								<strong class="txt-c1">불일치</strong> <!-- [D] 예금주 일치  -->
+								<strong class="txt-c2">확인완료</strong> <!-- [D] 예금주 불일치  -->
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # // # -->
+					<dl class="form">
+						<dt>할부 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">할부</span>
+									<span data-select="text" data-value="1">일시불</span>
+								</button>
+								<div class="list">
+									<div data-label="할부">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion" value="1"><span>일시불</span></label>
+											<label><input type="radio" name="selectOpeion" value="2"><span>1개월</span></label>
+											<label><input type="radio" name="selectOpeion" value="3"><span>2개월</span></label>
+											<label><input type="radio" name="selectOpeion" value="4"><span>3개월</span></label>
+											<label><input type="radio" name="selectOpeion" value="5"><span>4개월</span></label>
+											<label><input type="radio" name="selectOpeion" value="6"><span>5개월</span></label>
+											<label><input type="radio" name="selectOpeion" value="7"><span>6개월</span></label>
+											<label><input type="radio" name="selectOpeion" value="8"><span>7개월</span></label>
+											<label><input type="radio" name="selectOpeion" value="9"><span>8개월</span></label>
+											<label><input type="radio" name="selectOpeion" value="10"><span>9개월</span></label>
+											<label><input type="radio" name="selectOpeion" value="11"><span>10개월</span></label>
+											<label><input type="radio" name="selectOpeion" value="12"><span>11개월</span></label>
+											<label><input type="radio" name="selectOpeion" value="13"><span>12개월</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</fieldset>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">다음</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+//<!--
+	/* ******************************
+	* 샘플 : 납부방법 선택 예시
+	* uiFunction() 함수명 변경 필요
+	* data-select-con : 보여줄 컨텐츠
+	****************************** */
+	function uiFunction(e){
+		$('[data-select-con]').removeClass('active');
+		if(e.val() != 3) $('[data-select-con="'+e.val()+'"]').addClass('active');
+	}
+//-->
+</script>
+</body>
+</html>

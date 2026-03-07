@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>동의안내 | 마케팅활용동의 | 후보자등록</title>
+<link rel="stylesheet" href="../../resource/css/common.css">
+<link rel="stylesheet" href="../../resource/css/content.css">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+</head>
+<body>
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 마케팅활용정보 동의 안내 ### -->
+<!-- ################################################### -->
+<div id="uiPOPREC4052L01" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>마케팅활용정보 동의 안내</dt>
+		<dd>이벤트 및 포인트 혜택을 받아보세요!</dd>
+		<!-- // -->
+		<dd class="area-action col">
+			<button type="button" class="btn-action" data-btn="pop-close">건너뛰기</button>
+			<button type="button" class="btn-action c1">확인하기</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	var _popmodal = $plugin.popmodal('#uiPOPREC4052L01',{
+		callback_after : function(e){
+			ui.alert('건너뛰기 클릭시 이벤트 처리') // 건너뛰기 클릭 후 이벤트 처리 샘플
+		}
+	});
+
+	//레이어팝업 닫기 샘플
+	$('.btn-action.c1').on('click',function(){
+		_popmodal.outputClose();//팝업닫기함수
+	})
+
+	//레이어팝업 강제오픈
+	$('#uiPOPREC4052L01').trigger('outputOpen');
+//-->
+</script>
+<!-- ################################################### -->
+</body>
+</html>

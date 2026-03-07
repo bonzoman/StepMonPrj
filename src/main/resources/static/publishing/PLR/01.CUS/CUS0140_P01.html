@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 고객 추가하기 | 고객목록선택모드 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>그룹 찾기</h1>
+			<button type="button" data-btn="pop-close">그룹 찾기 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 그룹검색 -->
+			<!-- ######################### -->
+			<div class="form-search1" data-sticky="top">
+				<!-- # 그룹검색 # -->
+				<div class="text">
+					<input type="search" title="그룹검색" placeholder="그룹명으로 검색해주세요.">
+					<button type="button" class="icon-com1 ic2">검색하기</button>
+				</div>
+				<!-- # 그룹만들기 # -->
+				<div class="area-btn1">
+					<a href="javascript:void(0);" class="btn-com1 ic3">새로운 그룹 만들기</a>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [그룹목록] -->
+			<!-- ######################### -->
+			<!-- [총 명수/정렬] -->
+			<div class="area-info1">
+				<p>총 <strong>00개 그룹</strong></p>
+				<div class="side">
+					<!-- // -->
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">정렬</span>
+							<span data-select="text" data-value="selectOpeion1">등록순</span>
+						</button>
+						<div class="list">
+							<div data-label="정렬">
+								<div class="option">
+									<label><input type="radio" name="selectOpeion0" value="selectOpeion1"><span>등록순</span></label>
+									<label><input type="radio" name="selectOpeion0" value="selectOpeion2"><span>그룹명 가나다순</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+					<!-- // -->
+				</div>
+			</div>
+
+			<!-- [목록] -->
+			<div class="info-data3">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<strong>그룹명</strong>
+							<span class="txt-c1">00명</span>
+						</div>
+						<dl class="data1">
+							<dt>상세메모</dt>
+							<dd><span>상세메모 내용</span></dd>
+						</dl>
+						<button type="button" data-btn="selection" value="1" class="selected" title="선택됨">선택</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<strong>미정씨지인들</strong>
+							<span class="txt-c1">15명</span>
+						</div>
+						<dl class="data1">
+							<dt>상세메모</dt>
+							<dd><span>미정씨가 소개해준 분</span></dd>
+						</dl>
+						<button type="button" data-btn="selection" value="2">선택</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<strong>미주 싸이클 동호회</strong>
+							<span class="txt-c1">20명</span>
+						</div>
+						<dl class="data1">
+							<dt>상세메모</dt>
+							<dd><span>동호회사람들</span></dd>
+						</dl>
+						<button type="button" data-btn="selection" value="3">선택</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<strong>아랫마을 이장님</strong>
+							<span class="txt-c1">25명</span>
+						</div>
+						<dl class="data1">
+							<dt>상세메모</dt>
+							<dd><span>단골가게 주인</span></dd>
+						</dl>
+						<button type="button" data-btn="selection" value="4">선택</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<strong>김씨네 편의점</strong>
+							<span class="txt-c1">150명</span>
+						</div>
+						<dl class="data1">
+							<dt>상세메모</dt>
+							<dd><span>캐나다 아저씨</span></dd>
+						</dl>
+						<button type="button" data-btn="selection" value="4">선택</button>
+					</li>
+					<!-- [데이터없음] -->
+					<li class="nodata">
+						<strong>조회된 그룹이 없어요</strong>
+						<span>"그룹 등록하기" 버튼을 눌러<br>특징별로 고객님을 모아보세요!</span>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+				<!-- <button type="button" class="btn-action c1" disabled>확인</button> : 비활성화 -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

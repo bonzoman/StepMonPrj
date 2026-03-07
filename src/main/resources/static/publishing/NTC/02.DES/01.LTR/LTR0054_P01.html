@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 알릴사항(간편고지) | 장기보험 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>알릴사항</h1>
+			<button type="button" data-btn="pop-close">알릴사항 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 피보험자 정보영역 -->
+			<!-- ######################### -->
+			<div class="tit-section">
+				<!-- // -->
+				<p>하다미(35세/여/1급 사무직) <br> 고객님의 알릴사항을 입력해주세요.</p>
+				<!-- [M 2022-07-06] 삭제
+				<div class="label-check1">
+					<label>
+						<input type="checkbox">
+						<span>모두 아니요</span>
+					</label>
+				</div>
+				 -->
+				<div class="area-btn4">
+					<button type="button" class="btn-sub3 c2">알릴사항 가져오기</button>
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [STEP영역] 답변상태 -->
+			<!-- ######################### -->
+			<div class="info-step1 t1" data-sticky="top" data-autoset="toggle" data-scroll-tab="true">
+				<button type="button" data-toggle="btn" aria-expanded="false">진행상태 상세보기</button>
+				<ol data-toggle="content">
+					<li aria-current="step">
+						<a href="#uiSTEPSECTION01">기본사항</a>
+						<!--
+							[D] 상태에 따른 li에 클래스 추가 : 하단 스크립트 참고
+							li class="current" : 현재 입력한 답변 상태 표시
+							li class="invalid" : 오류 상태 표시
+						-->
+						<ol>
+							<li><span>01. 직업확인 여부</span><a href="#uiSTEPCONT01" class="btn-sub3 c2">이동</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#uiSTEPSECTION02">질병 및 현재상태</a>
+						<ol>
+							<li><span>02. 최근 3개월이내 필요소견 받은 사실</span><a href="#uiSTEPCONT02" class="btn-sub3 c2">이동</a></li>
+							<li><span>03. 최근 2년이내 의료행위 받은 사실</span><a href="#uiSTEPCONT03" class="btn-sub3 c2">이동</a></li>
+							<li><span>04. 최근 2년이내 입원/수술 받은 사실</span><a href="#uiSTEPCONT04" class="btn-sub3 c2">이동</a></li>
+							<li><span>05. 최근 3년이내 입원/수술 받은 사실</span><a href="#uiSTEPCONT05" class="btn-sub3 c2">이동</a></li>
+							<li><span>06. 최근 4년이내 입원/수술 받은 사실</span><a href="#uiSTEPCONT06" class="btn-sub3 c2">이동</a></li>
+							<li><span>07. 최근 5년 이내 암 진단/입원/수술 사실</span><a href="#uiSTEPCONT07" class="btn-sub3 c2">이동</a></li>
+							<li><span>08. 최근 5년 이내 의료행위 받은 사실</span><a href="#uiSTEPCONT08" class="btn-sub3 c2">이동</a></li>
+							<li><span>09. 최근 5년 이내 3대질병 입원/수술 사실</span><a href="#uiSTEPCONT09" class="btn-sub3 c2">이동</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#uiSTEPSECTION03">외부환경</a>
+						<ol>
+							<li><span>10. 운전여부</span><a href="#uiSTEPCONT10" class="btn-sub3 c2">이동</a></li>
+							<li><span>11. 월 소득</span><a href="#uiSTEPCONT11" class="btn-sub3 c2">이동</a></li>
+						</ol>
+					</li>
+				</ol>
+			</div>
+
+			<!-- ######################### -->
+			<!--[정보입력] 기본사항-->
+			<!-- ######################### -->
+			<section class="wrap-section" id="uiSTEPSECTION01" data-scroll-con>
+				<h2 class="tit-sub1">기본사항</h2>
+
+				<!-- ### [질문1] 직업확인 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT01">
+					<legend class="tit">1. 직업을 확인하셨습니까?</legend>
+					<p class="txt">고객으로부터 접수한 사항과 고객정보의 등록사항이 일치하는지 확인 후 체크하세요.</p>
+
+					<!-- # 직업정보 # -->
+					<div class="info-con1 box">
+						<ul>
+							<li>
+								<div>직업정보</div>
+								<div>(42234) 보험설계사</div>
+							</li>
+							<li>
+								<div>직장명</div>
+								<div>롯데손해보험</div>
+							</li>
+							<li>
+								<div>업종</div>
+								<div>보험설계사</div>
+							</li>
+							<li>
+								<div>직무(하는 일)</div>
+								<div>보험설계사</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- # 직업정보 동의 # -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd" required>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- # // # -->
+				</fieldset>
+				<!--//-->
+			</section>
+
+			<!-- ######################### -->
+			<!--[정보입력] 질병 및 현재상태-->
+			<!-- ######################### -->
+			<section class="wrap-section" id="uiSTEPSECTION02" data-scroll-con>
+				<h2 class="tit-sub1">질병 및 현재상태</h2>
+
+				<!-- ### [질문2] 최근 3개월이내 필요소견 받은 사실 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT02">
+					<legend class="tit">2. 최근 3개월 이내에 진찰 또는 검사를 통하여 다음과 같은 필요소견을 받은 사실이 있습니까?</legend>
+					<!-- # 여부선택 # -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd2" required>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd2">
+							<span>아니요</span>
+						</label>
+					</div>
+
+					<!-- # 소견선택 # -->
+					<div class="label-check1 box col2">
+						<label>
+							<input type="checkbox">
+							<span>입원 필요소견</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>수술 필요소견</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>추가검사(재검사)</span>
+						</label>
+					</div>
+					<!-- # // # -->
+
+					<p class="mes">필요소견이란 의사로부터 진단서, 소견서를 발급받은 경우 또는 의사가 진료기록부 등에 기재하고 이를 환자에게 설명하거나 권유한 경우를 말합니다.</p>
+				</fieldset>
+
+				<!-- ### [질문3]  최근 2년이내 의료행위 받은 사실 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT03">
+					<legend class="tit">3. 최근 2년 이내에 질병이나 상해사고로 인하여 다음과 같은 의료행위를 받은 사실이 있습니까?</legend>
+
+					<!-- # 여부선택 # -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd3" required>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd3">
+							<span>아니요</span>
+						</label>
+					</div>
+
+					<!-- # 의료행위선택 # -->
+					<div class="label-check1 box">
+						<label>
+							<input type="checkbox">
+							<span>계속하여 6일 이상 입원</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>계속하여 30일 이상 투약</span>
+						</label>
+					</div>
+					<!-- # // # -->
+
+					<p class="mes">여기서 '계속하여'란 란 같은 원인으로 치료 시작 후 완료일까지 실제 치료&middot;투약받은 날의 수를 말합니다.</p>
+				</fieldset>
+
+				<!-- ### [질문4]  최근 2년이내 입원/수술 받은 사실 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT04">
+					<legend class="tit">4. 최근 2년 이내에 질병이나 상해사고로 인하여 입원 또는 수술(제왕절개 포함)을 받은 사실이 있습니까?</legend>
+
+					<!-- // -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd4" required>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd4">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문5]  최근 3년이내 입원/수술 받은 사실 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT05">
+					<legend class="tit">5. 최근 3년 이내에 질병이나 상해사고로 인하여 입원 또는 수술(제왕절개 포함)을 받은 사실이 있습니까?</legend>
+
+					<!-- // -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd5" required>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd5">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+				<!-- // -->
+
+				<!-- ### [질문6] 최근 4년이내 입원/수술 받은 사실 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT06">
+					<legend class="tit">6. 최근 4년 이내 질병이나 상해 사고로 인하여 입원 또는 수술(제왕절개 포함)을 받은 사실이 있습니까?</legend>
+
+					<!-- // -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd6" required>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd6">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문7] 최근 5년 이내 암 진단/입원/수술 사실 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT07">
+					<legend class="tit">7. 최근 5년 이내에 암으로 진단받거나 암으로 입원 또는 수술을 받은 사실이 있습니까?</legend>
+					<p class="txt">암 진단비, 암직접치료입원비, 암수술비 특별약관의 보험금 지급사유에 해당하는 질병</p>
+
+					<!-- // -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd7" required>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd7">
+							<span>아니요</span>
+						</label>
+					</div>
+					<!-- // -->
+				</fieldset>
+
+				<!-- ### [질문8] 최근 5년 이내 의료행위 받은 사실 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT08">
+					<legend class="tit">8. 최근 5년 이내에 아래의 질병으로 의사로부터 진찰 또는 검사를 통하여 다음과 같은 의료행위를 받은 사실이 있습니까?</legend>
+
+					<!-- # 여부선택 # -->
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd8" required>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd8">
+							<span>아니요</span>
+						</label>
+					</div>
+
+					<!-- # 잘병선택 # -->
+					<div class="label-check1 box col2">
+						<strong>질병</strong>
+						<label>
+							<input type="checkbox">
+							<span>암</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>협심증</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>심근경색</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>간경화증</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>뇌졸중증 (뇌출혈, 뇌경색)</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>심장판막증</span>
+						</label>
+						<strong>의료행위</strong>
+						<label>
+							<input type="checkbox">
+							<span>질병확정진단</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>입원</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<span>수술</span>
+						</label>
+					</div>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- ### [질문9] 최근 5년 이내 3대질병 입원/수술 사실 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT09">
+					<legend class="tit">9. 최근 5년 이내에 3대 질병(암, 간경화증, 심장판막증)으로 진단받거나 입원 또는 수술을 받은 사실이 있습니까?</legend>
+
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="dd9" required>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd9">
+							<span>아니요</span>
+						</label>
+					</div>
+				</fieldset>
+				<!-- ### // ### -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [정보입력] 외부환경 -->
+			<!-- ######################### -->
+			<section class="wrap-section" id="uiSTEPSECTION03" data-scroll-con>
+				<h2 class="tit-sub1">외부환경</h2>
+
+				<!-- ### [질문10] 운전차종 선택 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT10">
+					<legend class="tit">10. 현재 운전을 하고 있습니까?</legend>
+
+					<!-- # 여부선택 # -->
+					<div class="label-btn1" data-autoset="form">
+						<label>
+							<input type="radio" name="dd10" data-tabcon="uiFormTabCon1" required>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="dd10">
+							<span>아니요</span>
+						</label>
+					</div>
+
+					<!-- # 운전차종 선택 : 예 선택시 노출  # -->
+					<div class="ui-tabcon" data-id="uiFormTabCon1">
+						<!-- // -->
+						<dl class="form">
+							<dt>승용차</dt>
+							<dd>
+								<div class="label-btn1 col3">
+									<label>
+										<input type="radio" name="dd10-1">
+										<span>자가용</span>
+									</label>
+									<label>
+										<input type="radio" name="dd10-1">
+										<span>영업용</span>
+									</label>
+									<label>
+										<input type="radio" name="dd10-1">
+										<span>운전안함</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>승합차</dt>
+							<dd>
+								<div class="label-btn1 col3">
+									<label>
+										<input type="radio" name="dd10-2">
+										<span>자가용</span>
+									</label>
+									<label>
+										<input type="radio" name="dd10-2">
+										<span>영업용</span>
+									</label>
+									<label>
+										<input type="radio" name="dd10-2">
+										<span>운전안함</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>화물차</dt>
+							<dd>
+								<div class="label-btn1 col3">
+									<label>
+										<input type="radio" name="dd10-3">
+										<span>자가용</span>
+									</label>
+									<label>
+										<input type="radio" name="dd10-3">
+										<span>영업용</span>
+									</label>
+									<label>
+										<input type="radio" name="dd10-3">
+										<span>운전안함</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>오토바이 (50cc 미만 포함)</dt>
+							<dd>
+								<div class="label-btn1 col3">
+									<label>
+										<input type="radio" name="dd10-4">
+										<span>자가용</span>
+									</label>
+									<label>
+										<input type="radio" name="dd10-4">
+										<span>영업용</span>
+									</label>
+									<label>
+										<input type="radio" name="dd10-4">
+										<span>운전안함</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<!-- // -->
+						<dl class="form">
+							<dt>기타</dt>
+							<dd>
+								<div class="label-check1 col3">
+									<label>
+										<input type="checkbox">
+										<span>건설기계</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span>농기계</span>
+									</label>
+									<label>
+										<input type="checkbox">
+										<span>기타</span>
+									</label>
+								</div>
+								<input type="text" class="text" placeholder="기타 이동수단을 입력해주세요.">
+							</dd>
+						</dl>
+						<!-- // -->
+					</div>
+
+					<!-- # 이동장치 사용 여부 # -->
+					<dl class="form">
+						<dt>개인형 이동장치(전동킥보드, 전동휠 등을 포함)를 사용하고 있습니까?</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="dd10-5" required>
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="dd10-5">
+									<span>아니요</span>
+								</label>
+							</div>
+							<ul class="txt-bul2">
+								<li>장애인 또는 교통약자가 사용하는 보행보조용 의자차인 전동휠체어,의료용 스쿠터 등은 제외</li>
+								<li>계속적으로 사용(직업, 직무 또는 동호회 활동과 출퇴근용도 등으로 주로 사용하는 경우에 한함)하는 경우 기재</li>
+							</ul>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- ### [질문11] 월 소득 ### -->
+				<fieldset class="form-wrap4" id="uiSTEPCONT11">
+					<legend class="tit">11. 월 소득을 입력해주세요.</legend>
+
+					<dl class="form">
+						<dt>월 평균 소득 (계약자 기준)</dt>
+						<dd>
+							<div class="text">
+								<input type="tel" class="" title="월 평균 소득" value="" placeholder="계약자 월 평균 소득을 입력해주세요." required>
+								<span class="util">만원</span>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+				<!-- # // # -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c3">임시저장</button>
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<script>
+//<!--
+	/* ******************************************************************
+	* [샘플] STEP 영역 제어 : UI 동작을 위한 샘플 스크립트이며, 동작만 참고 바랍니다.
+	* 1) 질문에 대한 답변 작성 중인 경우 클래스명 변경 : li.current
+	* 2) [저장] 버튼 이벤트 : validation 체크 후 오류 상태 표시 : li.invalid
+	* 	ㄴ 함수 제시 : _setInvalid(el) : 오류가 있는 input 적용
+	* 	ㄴ 함수 호출 예시 : _setInvalid($('#ID')) 또는 _setInvalid($('name="NAME"'));
+	******************************************************************* */
+
+	/* [샘플1] 현재 작성중인 답변 상태 표시 : li.current */
+	$('.form-wrap4').each(function(){
+		var _box = $(this).attr('id')
+		$(this).find('input:visible').on('change',function(){
+			if($(this).is('[type="text"],[type="tel"]') && $.trim($(this).val())===''){
+				$('a[href="#'+_box+'"]').parent().removeClass('current');
+			}else{
+				$('a[href="#'+_box+'"]').parent().addClass('current');
+			};
+		});
+	});
+
+	/* [샘플2] 오류 상태 함수 호출 예시 */
+	$('.area-action .btn-action:last').on('click',function(){
+		$('.info-step1.t1 li li').removeClass('invalid');
+		$('.form-wrap4').each(function(){
+			if($(this).find('input:invalid').length > 0){
+				_setInvalid($(this).find('input:invalid')) //함수 호출 예시
+			};
+		});
+	});
+
+	/* 오류 상태 표시 : li.invalid */
+	function _setInvalid(el){
+		var _selector = el.parents('.form-wrap4').attr('id')
+		$('[href="#'+_selector+'"]').parent().addClass('invalid');
+	};
+//-->
+</script>
+</body>
+</html>

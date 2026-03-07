@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>전화팝업 | 이탈방지 대상 설계사 리스트 | 조직관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>전화하기</h1>
+			<button type="button" data-btn="pop-close">전화하기 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<div class="info-data3 line">
+				<ul>
+					<!-- [D] 지점장이 없는 경우 노출 -->
+					<li>
+						<strong class="tit2">지점장</strong>
+						<div class="info2 ic0 t1">
+							<span>현재 설계사는 설정된 지점장이 없습니다.</span>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit2">지점장</strong>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user2.png" alt=""></span>
+							<span><strong>하다미</strong><span>154674</span></span>
+						</div>
+						<div class="data-word3">
+							<span>강남 02지점</span>
+							<span>010-2345-7890</span>
+						</div>
+						<div class="side"><a href="tel:000-0000-0000" class="btn-util1 t2 ic7">전화걸기</a></div>
+					</li>
+					<li>
+						<strong class="tit2">이탈예상설계사</strong>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+							<span><strong>공지철</strong><span>154674</span></span>
+						</div>
+						<div class="data-word3">
+							<span>강남 02지점</span>
+							<span>010-2345-7890</span>
+						</div>
+						<div class="side"><a href="tel:000-0000-0000" class="btn-util1 t2 ic7">전화걸기</a></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

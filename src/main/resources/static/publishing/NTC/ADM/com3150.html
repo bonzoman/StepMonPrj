@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>이용자 리스트 | 이용자 관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220418">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-03]	1. 타이틀 수정
+						2. 검색 조건 부서 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">사용자 현황</h2><!-- [M 2022-11-03] 타이틀 수정 -->
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<dl class="form w1">
+						<dt>권한</dt>
+						<dd>
+							<select name="" id="" class="selectbox" style="width:90%;">
+								<option value="">전체</option>
+								<option value="">정상</option>
+								<option value="">차단</option>
+							</select>
+						</dd>
+					</dl>
+					<dl class="form w1">
+						<dt>OS</dt>
+						<dd>
+							<select name="" id="" class="selectbox" style="width:90%;">
+								<option value="">전체</option>
+								<option value="">Android</option>
+								<option value="">IOS</option>
+							</select>
+						</dd>
+					</dl>
+					<!-- [M 2022-11-03] 부서 추가 -->
+					<dl class="form w1">
+						<dt>부서</dt>
+						<dd>
+							<input type="text" name="" id="" class="text" style="width:200px;" disabled>
+							<button type="button" class="btn-sub1 ic4">검색</button>
+						</dd>
+					</dl>
+					<!-- //[M 2022-11-03] 부서 추가 -->
+					<dl class="form w1">
+						<dt>이름</dt>
+						<dd>
+							<div class="form-row">
+								<input type="text" name="" id="" class="text" style="width:100%;" placeholder="이름을 입력해 주세요.">
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+			<div class="tit-sub2">
+				<h3 class="">전체 135</h3>
+				<div class="sub">
+					<button class="btn-sub1 c3">엑셀 다운로드</button>
+				</div>
+			</div>
+			<div class="tbl-list1">
+				<table>
+					<colgroup>
+						<col style="width:60px">
+						<col style="width:100px">
+						<col style="width:60px">
+						<col style="width:100px">
+						<col style="width:140px">
+						<col style="width:140px">
+						<col style="width:140px">
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">이름</th>
+							<th scope="col">접속제한</th>
+							<th scope="col">사번</th>
+							<th scope="col">부서</th>
+							<th scope="col">OS</th>
+							<th scope="col">OS 버전</th>
+							<th scope="col">모델명</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>김크림</td>
+							<td>
+								<button type="button" class="btn-sub1 c1">정상</button>
+							</td>
+							<td>13456576</td>
+							<td>소속명</td>
+							<td>김관리(123123123)</td>
+							<td>14</td>
+							<td>iPhone 13, SM-N950N, iPhone 12, …</td>
+						</tr>
+						<tr class="row-point3">
+							<td>1</td>
+							<td>김크림</td>
+							<td>
+								<button type="button" class="btn-sub1 c2">차단</button>
+							</td>
+							<td>13456576</td>
+							<td>소속명</td>
+							<td>김관리(123123123)</td>
+							<td>14</td>
+							<td>3개이상 말줄임 처리시 개발쪽에서 처리하고</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>김크림</td>
+							<td>
+								<button type="button" class="btn-sub1 c1">정상</button>
+							</td>
+							<td>13456576</td>
+							<td>소속명</td>
+							<td>김관리(123123123)</td>
+							<td>14</td>
+							<td>그냥 css 로 텍스트 길 경우 말줄임 처리 할거면 span.sub  하단 참조</td>
+						</tr>
+						<tr class="row-point3">
+							<td>1</td>
+							<td>김크림</td>
+							<td>
+								<button type="button" class="btn-sub1 c2">차단</button>
+							</td>
+							<td>13456576</td>
+							<td>소속명</td>
+							<td>김관리(123123123)</td>
+							<td>14</td>
+							<td><span class="sub">길면 말줄임 처리한다 이거지!길면 말줄임 처리한다 이거지!길면 말줄임 처리한다 이거지!</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="paging">
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

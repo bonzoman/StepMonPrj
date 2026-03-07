@@ -1,0 +1,3119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>CHART | SCRIPT | PUBLISHING GUIDE</title>
+	<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/publish.css?20220913">
+	<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/ui.plugin.js"></script>
+	<script src="../../resource/js/ui.common.js?20220913"></script>
+	<script src="../../resource/js/publish.plugin.js"></script>
+	<script src="../../resource/js/publish.common.js"></script>
+
+	<!-- 하이차트 라이브러리 -->
+	<script src="../../resource/js/chart/highcharts.js"></script>
+	<script src="../../resource/js/chart/data.js"></script>
+
+	<!-- 차트 솔리드 게이지용 js 모듈 -->
+	<script src="../../resource/js/chart/highcharts-more.js"></script>
+	<script src="../../resource/js/chart/solid-gauge.js"></script>
+
+	<!-- 차트 Heat Map 모듈 -->
+	<script src="../../resource/js/chart/heatmap.js"></script>
+
+	<!-- 차트 Large tree map -->
+	<script src="../../resource/js/chart/treemap.js"></script>
+
+
+	<style>
+		body {background:#000}
+		@media (max-width:1000px) {body {background:#292929}}
+		body .wt {background:#f7f7f7}
+		body .gray {background:#eee}
+		h2 {background:#ddd; color:var(--color1); padding:0.6rem 1.6rem}
+	</style>
+</head>
+<body>
+	<div class="guide-wrap">
+		<header>
+			<h1><i>롯데손해보험</i> SCRIPT <strong>CHART</strong> GUIDE</h1>
+		</header>
+		<article class="guide-container">
+			<h1 class="hide">하이차트 작업 가이드</h1>
+			<!-- [Solid-Gauge1] -->
+			<section>
+				<h2>Solid-Gauge1</h2>
+				<div id="Solid-Gauge1" data-chart="Solid-Gauge1"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Solid-Gauge2 - 모바일] -->
+			<section>
+				<h2>Solid-Gauge2 - 모바일</h2>
+				<div id="Solid-Gauge2" data-chart="Solid-Gauge2"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Donut-Line1] -->
+			<section>
+				<h2>Donut-Line1</h2>
+				<div id="Donut-Line1" data-chart="Donut-Line1"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Donut-Line1-2 - 모바일] -->
+			<section>
+				<h2>Donut-Line1-2 - 모바일</h2>
+				<div id="Donut-Line1-2" data-chart="Donut-Line1-2"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Donut-Line2] -->
+			<section>
+				<h2>Donut-Line2</h2>
+				<div id="Donut-Line2" data-chart="Donut-Line2"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Donut-Line2-2 - 모바일] -->
+			<section>
+				<h2>Donut-Line2-2 - 모바일</h2>
+				<div id="Donut-Line2-2" data-chart="Donut-Line2-2"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Donut-Line3] -->
+			<section>
+				<h2>Donut-Line3</h2>
+				<div id="Donut-Line3" data-chart="Donut-Line3"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Donut-Line4] -->
+			<section>
+				<h2>Donut-Line4</h2>
+				<div id="Donut-Line4" data-chart="Donut-Line4"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Donut-Line4-2 - 모바일] -->
+			<section>
+				<h2>Donut-Line4-2 - 모바일</h2>
+				<div id="Donut-Line4-2" data-chart="Donut-Line4-2"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column1] -->
+			<section>
+				<h2>Basic-Column1</h2>
+				<div id="Basic-Column1" data-chart="Basic-Column1"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column2] -->
+			<section>
+				<h2>Basic-Column2</h2>
+				<div id="Basic-Column2" data-chart="Basic-Column2"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column2-1 - 범례 하단] -->
+			<section>
+				<h2>Basic-Column2-1 범례 하단</h2>
+				<div id="Basic-Column2-1" data-chart="Basic-Column2"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column2-2 - 모바일 ( 범례 상단) ] -->
+			<section>
+				<h2>Basic-Column2-2 - 모바일 ( 범례 상단)</h2>
+				<div id="Basic-Column2-2" data-chart="Basic-Column2"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column3] -->
+			<section>
+				<h2>Basic-Column3</h2>
+				<div id="Basic-Column3" data-chart="Basic-Column3"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column3-1 - 평균] -->
+			<section>
+				<h2>Basic-Column3-1 - 평균</h2>
+				<div id="Basic-Column3-1" data-chart="Basic-Column3"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column3-2] - 모바일 (범례 상단) -->
+			<section>
+				<h2>Basic-Column3-2 - 모바일 (범례 상단)</h2>
+				<div id="Basic-Column3-2" data-chart="Basic-Column3"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column4] -->
+			<section>
+				<h2>Basic-Column4</h2>
+				<div id="Basic-Column4" data-chart="Basic-Column4"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column4-2 - 모바일] -->
+			<section>
+				<h2>Basic-Column4-2 - 모바일</h2>
+				<div id="Basic-Column4-2" data-chart="Basic-Column4"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column5] -->
+			<section>
+				<h2>Basic-Column5</h2>
+				<div id="Basic-Column5" data-chart="Basic-Column5"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column6] -->
+			<section>
+				<h2>Basic-Column6</h2>
+				<div id="Basic-Column6" data-chart="Basic-Column6"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column6-1 - 범례 하단 ] -->
+			<section>
+				<h2>Basic-Column6-1 - 범례 하단 </h2>
+				<div id="Basic-Column6-1" data-chart="Basic-Column6"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column7] -->
+			<section>
+				<h2>Basic-Column7</h2>
+				<div id="Basic-Column7" data-chart="Basic-Column7"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column7-2 - 모바일] -->
+			<section>
+				<h2>Basic-Column7-2 - 모바일</h2>
+				<div id="Basic-Column7-2" data-chart="Basic-Column7"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column8 - Negative Values] -->
+			<!-- <section>
+				<h2>Basic-Column8 - Negative Values</h2>
+				<div id="Basic-Column8" data-chart="Basic-Column8"></div>
+			</section> -->
+			<!-- // -->
+
+			<!-- [Basic-Column8] -->
+			<section>
+				<h2>Basic-Column8-1</h2>
+				<div id="Basic-Column8-1" data-chart="Basic-Column8"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column9] -->
+			<section>
+				<h2>Basic-Column9</h2>
+				<div id="Basic-Column9" data-chart="Basic-Column9"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column10] -->
+			<section class="gray">
+				<h2>Basic-Column10</h2>
+				<div id="Basic-Column10" data-chart="Basic-Column10"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Column11] -->
+			<section>
+				<h2>Basic-Column11</h2>
+				<div id="Basic-Column11" data-chart="Basic-Column11"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Bar1] -->
+			<section>
+				<h2>Basic-Bar1</h2>
+				<div id="Basic-Bar1" data-chart="Basic-Bar1"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Bar1-2] - 모바일 (범례 상단) -->
+			<section>
+				<h2>Basic-Bar1-2 - 모바일 (범례 상단)</h2>
+				<div id="Basic-Bar1-2" data-chart="Basic-Bar1"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Bar2] -->
+			<section>
+				<h2>Basic-Bar2</h2>
+				<div id="Basic-Bar2" data-chart="Basic-Bar2"></div>
+			</section>
+
+			<!-- [Basic-Bar3] -->
+			<section>
+				<h2>Basic-Bar3</h2>
+				<div id="Basic-Bar3" data-chart="Basic-Bar3"></div>
+			</section>
+
+			<!-- [Basic-Bar4] -->
+			<section>
+				<h2>Basic-Bar4</h2>
+				<div id="Basic-Bar4" data-chart="Basic-Bar4"></div>
+			</section>
+
+			<!-- [Basic-Bar5] -->
+			<section>
+				<h2>Basic-Bar5</h2>
+				<div id="Basic-Bar5" data-chart="Basic-Bar5"></div>
+			</section>
+
+			<!-- [Basic-Bar6] -->
+			<section class="gray">
+				<h2>Basic-Bar6</h2>
+				<div id="Basic-Bar6" data-chart="Basic-Bar6" style="height:486px;"></div>
+			</section>
+
+			<!-- [Basic-Line1] -->
+			<section>
+				<h2>Basic-Line1</h2>
+				<div id="Basic-Line1" data-chart="Basic-Line1"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Line1-1] -->
+			<section>
+				<h2>Basic-Line1-1 -plotLines</h2>
+				<div id="Basic-Line1-1" data-chart="Basic-Line1"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Line2] -->
+			<section>
+				<h2>Basic-Line2</h2>
+				<div id="Basic-Line2" data-chart="Basic-Line2"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Line3] -->
+			<section>
+				<h2>Basic-Line3</h2>
+				<div id="Basic-Line3" data-chart="Basic-Line3"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Line3-1 - 목표] -->
+			<section>
+				<h2>Basic-Line3-1 -  목표</h2>
+				<div id="Basic-Line3-1" data-chart="Basic-Line3"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Line4] -->
+			<section>
+				<h2>Basic-Line4</h2>
+				<div id="Basic-Line4" data-chart="Basic-Line4"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Basic-Line5] -->
+			<section>
+				<h2>Basic-Line5</h2>
+				<div id="Basic-Line5" data-chart="Basic-Line5"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Pareto-chart1] -->
+			<section>
+				<h2>Pareto-chart1</h2>
+				<div id="Pareto-chart1" data-chart="Pareto-chart1"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Pareto-chart1-2 -  모바일 (범례 상단)] -->
+			<section>
+				<h2>Pareto-chart1-2 -  모바일 (범례 상단)</h2>
+				<div id="Pareto-chart1-2" data-chart="Pareto-chart1"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Pareto-chart2] -->
+			<section>
+				<h2>Pareto-chart2</h2>
+				<div id="Pareto-chart2" data-chart="Pareto-chart2"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Pareto-chart3] -->
+			<section>
+				<h2>Pareto-chart3</h2>
+				<div id="Pareto-chart3" data-chart="Pareto-chart3"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Pareto-chart3-1] -->
+			<section>
+				<h2>Pareto-chart3-1 - Y값 별도 적용</h2>
+				<div id="Pareto-chart3-1" data-chart="Pareto-chart3"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Pareto-chart4] -->
+			<section>
+				<h2>Pareto-chart4</h2>
+				<div id="Pareto-chart4" data-chart="Pareto-chart4"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Pareto-chart4 - 모바일 (범례 - 상단)] -->
+			<section>
+				<h2>Pareto-chart4 - 모바일 (범례 - 상단)</h2>
+				<div id="Pareto-chart4-1" data-chart="Pareto-chart4"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Pareto-chart5] -->
+			<section>
+				<h2>Pareto-chart5</h2>
+				<div id="Pareto-chart5" data-chart="Pareto-chart5"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Spider Web white] -->
+			<section class="wt">
+				<h2>Spider Web</h2>
+				<div id="SpiderWeb_wt" data-chart="Spider-Web"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Spider-Web1] -->
+			<section class="wt">
+				<h2>사망후유장해(6각)</h2>
+				<div id="Spider-Web1" data-chart="Spider-Web2" class="area-chart active"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Spider-Web2] -->
+			<section class="wt">
+				<h2>암(4각)</h2>
+				<div id="Spider-Web2" data-chart="Spider-Web2" class="area-chart active"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Spider-Web3] -->
+			<section class="wt">
+				<h2>뇌혈관질환/심장질환(7각)</h2>
+				<div id="Spider-Web3" data-chart="Spider-Web2" class="area-chart active"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Spider-Web4] -->
+			<section class="wt">
+				<h2>실손의료비/수술비(6각)</h2>
+				<div id="Spider-Web4" data-chart="Spider-Web2" class="area-chart active"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Spider-Web5] -->
+			<section class="wt">
+				<h2>입원비(6각)</h2>
+				<div id="Spider-Web5" data-chart="Spider-Web2" class="area-chart active"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Spider-Web6] -->
+			<section class="wt">
+				<h2>운전자(5각)</h2>
+				<div id="Spider-Web6" data-chart="Spider-Web2" class="area-chart active"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Spider-Web7] -->
+			<section class="wt">
+				<h2>생활보장(6각)</h2>
+				<div id="Spider-Web7" data-chart="Spider-Web2" class="area-chart active"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Spider-Web8] -->
+			<section class="wt">
+				<h2>요양/치매(4각)</h2>
+				<div id="Spider-Web8" data-chart="Spider-Web2" class="area-chart active"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Spider-Web9] -->
+			<!-- <section class="wt">
+				<h2>Spider-Web9</h2>
+				<div id="Spider-Web9" data-chart="Spider-Web2"></div>
+			</section> -->
+			<!-- // -->
+
+			<!-- [Heat Map] -->
+			<section>
+				<h2>Heat Map</h2>
+				<div id="HeatMap" data-chart="Heat-Map"></div>
+			</section>
+			<!-- // -->
+
+			<!-- [Large tree Map] -->
+			<section>
+				<h2>Large tree Map</h2>
+				<div id="LargeTreeMap" data-chart="Large-tree-Map"></div>
+			</section>
+			<!-- // -->
+		</article>
+	</div>
+
+	<script>
+		// Solid-Gauge1
+		Highcharts.chart("Solid-Gauge1", {
+			chart:{
+				type:"solidgauge",
+				margin:[0,0,0,0]
+			},
+			title:null,
+			pane:{
+				center:["50%", "85%"],
+				size:"100%",
+				startAngle:-90,
+				endAngle:90,
+				background:{
+					innerRadius:"97%",
+					outerRadius:"100%",
+					shape:"arc"
+				}
+			},
+			yAxis:{
+				min:0,
+				max:100,
+				minorTickInterval:null,
+				labels:{
+					enabled:false
+				}
+			},
+			plotOptions:{
+				solidgauge:{
+					innerRadius:"97%",
+					dataLabels:{
+						enabled:true,
+						format:"{point.y:f}%",
+						y:-20
+					},
+					enableMouseTracking:false //툴팁
+				}
+			},
+			series:[{
+				data:[80]
+			}]
+		});
+
+		// Solid-Gauge2 - 모바일
+		Highcharts.chart("Solid-Gauge2", {
+			chart:{
+				type:"solidgauge",
+				margin:[0,0,0,0]
+			},
+			title:null,
+			pane:{
+				center:["50%", "85%"],
+				size:"100%",
+				startAngle:-90,
+				endAngle:90,
+				background:{
+					innerRadius:"98%",
+					outerRadius:"100%",
+					shape:"arc"
+				}
+			},
+			yAxis:{
+				min:0,
+				max:100,
+				minorTickInterval:null,
+				labels:{
+					enabled:false
+				}
+			},
+			plotOptions:{
+				solidgauge:{
+					innerRadius:"98%",
+					dataLabels:{
+						enabled:true,
+						format:"{point.y:f}%",
+						y:-20
+					},
+					enableMouseTracking:false //툴팁
+				}
+			},
+			series:[{
+				data:[80]
+			}]
+		});
+
+		// Donut-Line1
+		Highcharts.chart("Donut-Line1", {
+			chart:{
+				type:"pie",
+				margin:[0,0,0,0],
+			},
+			title:{
+				text:"전체",
+				y:52,
+			},
+			subtitle:{
+				text:"48명",
+				y:75,
+			},
+			legend:{
+				enabled:false
+			},
+			plotOptions:{
+				pie:{
+					dataLabels:{
+						enabled:false
+					},
+					innerSize:"90%",
+				},
+			},
+			series:[{
+				name:'대상자',
+				data:[
+					{
+						name:"충분",
+						y:24
+					},{
+						name:"100만원미만 소득",
+						y:56
+					}
+				]
+			}]
+		});
+
+		// Donut-Line1-2 -모바일
+		Highcharts.chart("Donut-Line1-2", {
+			chart:{
+				type:"pie",
+				margin:[0,0,0,0],
+			},
+			title:{
+				text:"전체 LP",
+				y:62,
+			},
+			subtitle:{
+				text:"48명",
+				y:85,
+			},
+			legend:{
+				enabled:false
+			},
+			plotOptions:{
+				pie:{
+					dataLabels:{
+						enabled:false,
+					},
+					innerSize:"91%",
+				},
+			},
+			series:[{
+				data:[
+					{
+						y:78,
+						name:"비가동"
+					},{
+						y:39,
+						name:"실가동"
+					}
+				]
+			}]
+		});
+
+		// Donut-Line2
+		Highcharts.chart("Donut-Line2", {
+			chart:{
+				type:"pie",
+				margin:[0,0,0,0],
+			},
+			title:{
+				text:"전체 LP",
+				y:52,
+			},
+			subtitle:{
+				text:"48명",
+				y:75,
+			},
+			legend:{
+				enabled:false
+			},
+			plotOptions:{
+				pie:{
+					dataLabels:{
+						enabled:false,
+					},
+					innerSize:"90%",
+				},
+			},
+			series:[{
+				data:[
+					{
+						y:78,
+						name:"비가동"
+					},{
+						y:39,
+						name:"실가동"
+					}
+				]
+			}]
+		});
+
+		// Donut-Line2-2 -모바일
+		Highcharts.chart("Donut-Line2-2", {
+			chart:{
+				type:"pie",
+				margin:[0,0,0,0],
+			},
+			title:{
+				text:"전체 LP",
+				y:62,
+			},
+			subtitle:{
+				text:"48명",
+				y:85,
+			},
+			legend:{
+				enabled:false
+			},
+			plotOptions:{
+				pie:{
+					dataLabels:{
+						enabled:false,
+					},
+					innerSize:"91%",
+				},
+			},
+			series:[{
+				data:[
+					{
+						y:78,
+						name:"비가동"
+					},{
+						y:39,
+						name:"실가동"
+					}
+				]
+			}]
+		});
+
+		// Donut-Line3
+		Highcharts.chart("Donut-Line3", {
+			chart:{
+				type:"pie",
+				margin:[0,0,0,0],
+			},
+			title:{
+				text:"전체",
+				y:52,
+			},
+			subtitle:{
+				text:"48개",
+				y:75,
+			},
+			legend:{
+				enabled:false
+			},
+			plotOptions:{
+				pie:{
+					dataLabels:{
+						enabled:false
+					},
+					innerSize:"90%",
+				}
+			},
+			series:[{
+				data:[
+					{
+						y:20,
+						name:"기타"
+					},
+					{
+						y:24,
+						name:"소멸"
+					},
+					{
+						y:56,
+						name:"현금화"
+					}
+				]
+			}]
+		});
+
+		// Donut-Line4
+		Highcharts.chart("Donut-Line4", {
+			chart:{
+				type:"pie",
+				margin:[0,0,0,0],
+			},
+			title:{
+				text:"장기(보장)",
+				y:52,
+			},
+			subtitle:{
+				text:"28,043",
+				y:75,
+			},
+			legend:{
+				enabled:false
+			},
+			plotOptions:{
+				pie:{
+					dataLabels:{
+						enabled:true,
+						format: '{point.percentage:.1f}',
+						distance: 1
+					},
+					showInLegend:true,
+					innerSize:"90%",
+				}
+			},
+			series:[{
+				data:[{
+						y:56,
+						name:"종합"
+					},{
+						y:24,
+						name:"자녀"
+					},{
+						y:20,
+						name:"간편"
+					},{
+						y:24,
+						name:"운전자"
+					},{
+						y:20,
+						name:"기타"
+					}
+				]
+			}]
+		});
+
+		// Donut-Line4-2
+		Highcharts.chart("Donut-Line4-2", {
+			chart:{
+				type:"pie",
+				margin:[0,0,0,0],
+			},
+			title:{
+				text:"장기(보장)",
+				y:62,
+			},
+			subtitle:{
+				text:"28,043",
+				y:85,
+			},
+			legend:{
+				enabled:false
+			},
+			plotOptions:{
+				pie:{
+					dataLabels:{
+						enabled:true,
+						format: '{point.percentage:.1f}',
+						distance: 1
+					},
+					showInLegend:true,
+					innerSize:"91%",
+				}
+			},
+			series:[{
+				data:[{
+						y:56,
+						name:"종합"
+					},{
+						y:24,
+						name:"자녀"
+					},{
+						y:20,
+						name:"간편"
+					},{
+						y:24,
+						name:"운전자"
+					},{
+						y:20,
+						name:"기타"
+					}
+				]
+			}]
+		});
+
+		// Basic Column
+		Highcharts.chart("Basic-Column1",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+			},
+			title:null,
+			legend:{
+				enabled:false
+			},
+			xAxis:{
+				categories:["가입/설계", "계약관리", "고객관리","교육","도입"]
+			},
+			yAxis:{
+				labels : {
+					format: '{value:,.0f}'// 천단위
+				}
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:false,
+					}
+				}
+			},
+			series:[
+				{
+					name:"화면 조회 수",
+					data:[320,420,100,80,1100],
+				}
+			]
+		})
+
+		// Basic-Column2
+		Highcharts.chart("Basic-Column2",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			legend:{
+				enabled:false,
+			},
+			xAxis:{
+				categories:["전전월", "전월", "당월"]
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true,
+						// format:"{point.y:f}%",
+					}
+				}
+			},
+			series:[{
+				// colorByPoint:true,
+				name:"실적",
+				data:[16,50,70,]
+			}]
+		})
+
+		// Basic-Column2-1 - 범례 하단
+		Highcharts.chart("Basic-Column2-1",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			xAxis:{
+				categories:["전전월", "전월", "당월"]
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true,
+					}
+				}
+			},
+			series:[{
+				// colorByPoint:true,
+				name:"실적",
+				data:[16,1,70000]
+			}]
+		})
+
+		// Basic-Column2-2 - 모바일 (범례 상단)
+		Highcharts.chart("Basic-Column2-2",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			},
+			xAxis:{
+				categories:["전전월", "전월", "당월"]
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true,
+					}
+				}
+			},
+			series:[{
+				// colorByPoint:true,
+				name:"실적",
+				data:[7.3,103.5,7.9]
+			}]
+		})
+
+		// Basic-Column3
+		Highcharts.chart("Basic-Column3",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0,
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			xAxis:{
+				categories:["전전월", "전월", "당월"]
+			},
+			yAxis:{},
+			plotOptions:{
+				column:{
+					groupPadding : 0.4,//그래프 간격
+					dataLabels:{
+						enabled:true
+					},
+				}
+			},
+			series:[{
+					name:"목표",
+					data:[95,50,70]
+				},{
+					name:"실적",
+					data:[30,60,50]
+				}
+			]
+		})
+
+		// Basic-Column3-1 - 평균
+		Highcharts.chart("Basic-Column3-1",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0,
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			xAxis:{
+				categories:["전월 평균", "4월 1주차", "4월 2주차","4월 3주차","4월 4주차"]
+			},
+			yAxis:{
+				labels:{
+					// enabled:false
+				},
+				plotLines:[{
+					value:50.4,	// 크로스라인 위치
+					label: {
+						text: '평균 45',
+						y:-5,
+						x:0
+					}
+				}]
+			},
+			plotOptions:{
+				column:{
+					groupPadding : 0.4,//그래프 간격
+					dataLabels:{
+						enabled:true,
+						format:"{point.y:f}%"
+					},
+				}
+			},
+			series:[
+				{
+					name:"달성률",
+					data:[30.3,30.3,30.3,30.3,30.3]
+				},
+				{
+					name:"참여율",
+					data:[70.4,70.4,70.4,70.4,75.4]
+				}
+			]
+		})
+
+		// Basic-Column3-2 - 모바일 (범례 상단)
+		Highcharts.chart("Basic-Column3-2",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0,
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			},
+			xAxis:{
+				categories:["전전월", "전월", "당월"]
+			},
+			yAxis:{
+				// max:100,
+			},
+			plotOptions:{
+				column:{
+					groupPadding : 0.35,//그래프 간격
+					dataLabels:{
+						enabled:true,
+						format:"{point.y:f}%"
+					}
+				}
+			},
+			series:[
+				{
+					name:"목표",
+					data:[100,50,70]
+				},{
+					name:"실적",
+					data:[125,60,50]
+				}
+			]
+		})
+
+		// Basic-Column4
+		Highcharts.chart("Basic-Column4",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0,
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			xAxis:{
+				categories:["계약소득", "초대소득", "관리소득","기타","포인트","공제","기지급"]
+			},
+			yAxis:{
+				// min:-30000
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true
+					},
+				}
+			},
+			series:[
+				{
+					name:"전전월",
+					data:[16914,18914,1914,16914,16914,19914,20296]
+				},{
+					name:"전월",
+					data:[20296,20296,20296,20296,20296,20296,23809]
+				}
+			]
+		})
+
+		// Basic-Column4-2 모바일
+		Highcharts.chart("Basic-Column4-2",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			},
+			xAxis:{
+				categories:["참여자", "미참여자", "중도포기자","달성자"]
+			},
+			yAxis:{
+				labels:{
+					enabled:false
+				},
+			},
+			plotOptions:{
+				column:{
+					groupPadding : 0.35,//그래프 간격
+					dataLabels:{
+						enabled:true
+					},
+				}
+			},
+			series:[{
+				dataLabels:{
+					enabled:false,
+				},
+				name:"사업단평균",
+				data:[72,68.0,23,73]
+			},{
+				name:"강남1지점",
+				data:[1000,50,70,75],
+			}]
+		})
+
+		// Basic-Column5
+		Highcharts.chart("Basic-Column5",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0,
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			xAxis:{
+				categories:["전전월", "전월", "당월"]
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true
+					},
+				}
+			},
+			series:[
+				{
+					name:"달성률",
+					data:[100,50,70]
+				}
+			]
+		})
+
+		// Basic-Column6
+		Highcharts.chart("Basic-Column6",{
+			chart:{
+				type:"column"
+			},
+			title:null,
+			legend:{
+				enabled:false
+			},
+			xAxis:{
+				categories:["서울사업단", "한빛사업단", "베스트사업단","드림사업단","스마트사업단","바른사업단","미래사업단","스타사업단","전남사업단","한결사업단","호남사업단","중부사업단"]
+			},
+			yAxis:{
+				labels:{
+					enabled:false
+				}
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true
+					},
+				}
+			},
+			series:[
+				{
+					name:"",
+					data:[3,0,1,1,0,2,6,3,2,1,1,5]
+				}
+			]
+		})
+
+		// Basic-Column6-1 - 범례 하단
+		Highcharts.chart("Basic-Column6-1",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0,
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			xAxis:{
+				categories:["22.04", "22.05", "22.06"]
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true
+					},
+				}
+			},
+			series:[
+				{
+					name:"실적",
+					data:[100,50,70]
+				}
+			]
+		})
+
+		// Basic-Column7
+		Highcharts.chart("Basic-Column7",{
+			chart:{
+				type:"column",
+				marginLeft:0
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'left',
+				layout:"horizontal"
+			},
+			xAxis:{
+				categories:["전전월", "전월", "당월"]
+			},
+			plotOptions:{
+				column:{
+					groupPadding : 0.4,//그래프 간격
+					dataLabels:{
+						enabled:true
+					}
+				}
+			},
+			series:[
+				{
+					name:"해제",
+					data:[12,14,13]
+				},{
+					name:"동일",
+					data:[5,2,4]
+				},{
+					name:"당월",
+					data:[3,4,4]
+				}
+			]
+		})
+
+		// Basic-Column7-2
+		Highcharts.chart("Basic-Column7-2",{
+			chart:{
+				type:"column",
+				marginLeft:0
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			},
+			xAxis:{
+				categories:["전전월", "전월", "당월"]
+			},
+			plotOptions:{
+				column:{
+					groupPadding : 0.3,//그래프 간격
+					dataLabels:{
+						enabled:true
+					}
+				}
+			},
+			series:[
+				{
+					name:"해제",
+					data:[12,14,13]
+				},{
+					name:"동일",
+					data:[5,2,4]
+				},{
+					name:"당월",
+					data:[3,4,4]
+				}
+			]
+		})
+
+		// Basic-Column8-1
+		Highcharts.chart("Basic-Column8-1",{
+			chart:{
+				type:"column",
+				// marginTop:40,
+				marginLeft:0
+			},
+			title:null,
+			legend:{
+				enabled:false
+			},
+			xAxis:{
+				categories:["1월","2월","3월","4월","5월"]
+			},
+			// yAxis:{
+			// 	max:2000
+			// },
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true
+					}
+				}
+			},
+			series:[
+				{
+					name:"John",
+					data:[50,3,4,7,2000]
+				}
+			]
+		})
+
+		// Basic-Column9
+		Highcharts.chart("Basic-Column9",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0,
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			xAxis:{
+				categories:["전전월", "전월", "당월"]
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true
+					},
+				}
+			},
+			series:[
+				{
+					name:"달성률",
+					data:[1000,50,70]
+				}
+			]
+		})
+
+		// Basic-Column10
+		Highcharts.chart("Basic-Column10",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			legend:{
+				enabled:false
+			},
+			xAxis:{
+				categories:["1년", "2년", "3년", "5년", "7년", "10년", "만기"]
+			},
+			yAxis:{
+				labels:{
+					// enabled:false
+				}
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true,
+						format:"{point.y:.1f}%"	//소수점 1자리
+					},
+				}
+			},
+			tooltip: {
+				valueSuffix: '%'
+			},
+			series:[
+				{
+					name:"",
+					data:[3.75,2.0,2.0,1.0,1.0,1.0],
+					colorByPoint:true,
+				}
+			]
+		})
+
+		//
+		Highcharts.chart("Basic-Column11",{
+			chart:{
+				type:"column",
+				marginTop:30,
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			xAxis:{
+				categories:["전전월", "전월", "당월"]
+			},
+			yAxis:{
+				plotLines:[{
+					value:0,	// 크로스라인 위치
+				}]
+			},
+			plotOptions:{
+				column:{
+					groupPadding : 0.4,//그래프 간격
+					dataLabels:{
+						enabled:true,
+					},
+				}
+			},
+			tooltip: {
+				//valueSuffix: ' %'
+			},
+			series:[
+				{
+					name:"보장성실적",
+					data:[10000,-30003,20020],
+				},{
+					name:"장기수수료환산실적",
+					data:[-34000,-45000,45000]
+				}
+			]
+		});
+
+
+		// Basic-Bar1
+		Highcharts.chart('Basic-Bar1', {
+			chart: {
+				type: 'bar',
+				marginTop:0
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'left',
+				layout:"horizontal"
+			},
+			xAxis: {
+				categories: ['교육', '업적', '로그인', '커뮤니티']
+			},
+			yAxis: {
+				labels:{
+					enabled:false
+				}
+			},
+			plotOptions:{
+				bar:{
+					dataLabels:{
+						enabled:true,
+						format: '{point.y:,.1f}'// 소수점
+					},
+				}
+			},
+			series: [{
+				name: '퀘스트',
+				data: [85, 75, 55, 35]
+			}, {
+				name: '혜택',
+				data: [15, 25, 45, 65]
+			}]
+		});
+
+		// Basic-Bar1-2 - 모바일 (범례 상단)
+		Highcharts.chart('Basic-Bar1-2', {
+			chart: {
+				type: 'bar',
+				marginTop:60,
+				marginBottom:0,
+				marginRight:40
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			},
+			xAxis: {
+				categories: ['교육', '업적', '로그인', '커뮤니티']
+			},
+			yAxis: {
+				labels:{
+					enabled:false
+				}
+			},
+			tooltip: {
+				valueSuffix: ' %'
+			},
+			plotOptions:{
+				bar:{
+					groupPadding : 0.25,//그래프 간격
+					dataLabels:{
+						enabled:true
+					},
+				}
+			},
+			series: [{
+				name: '미달성자',
+				data: [85, 75, 55, 35]
+			}, {
+				name: '달성자',
+				data: [15, 25, 45, 65]
+			}]
+		});
+
+		// Basic-Bar2
+		Highcharts.chart('Basic-Bar2', {
+			chart: {
+				type: 'bar',
+				marginTop:[0],
+				marginBottom:[0]
+			},
+			title:null,
+			legend:{
+				enabled:false
+			},
+			xAxis: {
+				categories: ['당월', '전월', '전년']
+			},
+			plotOptions:{
+				bar:{
+					dataLabels:{
+						enabled:true
+					},
+				}
+			},
+			series: [{
+				colorByPoint:true,
+				name: '실적',
+				data: [19965,238650,21310]
+			}]
+		});
+
+		// Basic-Bar3
+		Highcharts.chart('Basic-Bar3', {
+			chart: {
+				type: 'bar',
+				marginTop:0,
+				marginBottom:0,
+				marginRight:80
+			},
+			title:null,
+			legend:{
+				enabled:false
+			},
+			xAxis: {
+				categories: ['달성률', '참여율']
+			},
+			yAxis: {
+				max:100
+			},
+			plotOptions:{
+				bar:{
+					dataLabels:{
+						enabled:true
+					}
+				}
+			},
+			series: [{
+				colorByPoint:true,
+				name:"",
+				data: [100,69.9]
+			}]
+		});
+
+		// Basic-Bar4
+		Highcharts.chart('Basic-Bar4', {
+			chart: {
+				type: 'bar',
+				marginTop:[0],
+				marginBottom:[0]
+			},
+			title:null,
+			legend:{
+				enabled:false
+			},
+			xAxis: {
+				categories: ['강남사업단', '전속그룹']
+			},
+			plotOptions:{
+				bar:{
+					dataLabels:{
+						enabled:true
+					}
+				}
+			},
+			series: [{
+				colorByPoint:true,
+				name:'',
+				data: [60.8,69.9]
+			}]
+		});
+
+		// Basic-Bar5
+		Highcharts.chart('Basic-Bar5', {
+			chart: {
+				type: 'bar',
+				marginTop:0
+			},
+			title:null,
+			legend:{
+				enabled:false
+			},
+			xAxis: {
+				categories: ['강남사업단', '호남사업단', '한결사업단', '전남사업단','스타사업단','미래사업단','바른사업단','스마트사업단','드림사업단','베스트사업단','한빛사업단','서울사업단']
+			},
+			yAxis: {
+				labels:{
+					enabled:false
+				}
+			},
+			plotOptions:{
+				bar:{
+					dataLabels:{
+						enabled:true
+					},
+				}
+			},
+			series: [{
+				name: '',
+				data: [5, 1, 1, 2, 1, 6, 2, 1, 1, 2, 1, 8]
+			}]
+		});
+
+		// Basic-Bar6
+		Highcharts.chart('Basic-Bar6', {
+			chart: {
+				type: 'bar',
+				marginTop:60,
+				marginRight:100,
+				marginBottom:0
+			},
+			title:null,
+			legend:{
+				enabled:true,
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			},
+			xAxis: {
+				categories: ['1년','2년','3년','5년','7년','10년','만기']
+			},
+			yAxis: {
+				labels:{
+					enabled:false
+				}
+			},
+			tooltip: {
+				valueSuffix: '원'
+			},
+			plotOptions:{
+				bar:{
+					groupPadding : 0.2,//그래프 간격
+					dataLabels:{
+						enabled:true,
+						formatter: function() {
+							return Highcharts.numberFormat(this.y,0) + "명";
+						}
+					},
+				}
+			},
+			series: [{
+				name: '납입보험료',
+				data: [99999999, 99999999, 99999999, 99999999, 99999999, 99999999, 99999999]
+			}, {
+				name: '예상환급금(환급률)',
+				data: [199999999, 299999999, 399999999, 399999999, 599999999, 699999999, 999999999],
+				dataLabels:{
+					enabled:true,
+					formatter: function() {
+						return Highcharts.numberFormat(this.y,0) + "원"+"<span class='normal'>(32.5%)</span>";
+					}
+				},
+			}]
+		});
+
+		// Basic-Line1
+		Highcharts.chart("Basic-Line1",{
+			chart:{
+				type:"line",
+				marginLeft:0,
+				marginRight:0,
+			},
+			title:null,
+			xAxis:{
+				categories:["4월 3주", "4월 4주", "4월 4주", "4월 5주"],
+				plotLines: [{
+					value: 3,	// 크로스라인 위치
+					className : 'xLine'
+				}],
+			},
+			legend:{
+				enabled:false
+			},
+			series:[
+				{
+					name:'포인트',
+					data:[500,400,700, 550]
+				}
+			]
+		});
+
+		// Basic-Line1-1
+		Highcharts.chart("Basic-Line1-1",{
+			chart:{
+				type:"line",
+				marginLeft:0,
+				marginRight:0,
+			},
+			title:null,
+			xAxis:{
+				categories:["4월 3주", "4월 4주", "4월 4주", "4월 5주"],
+				plotLines: [{
+					value: 3,	// 크로스라인 위치
+					className : 'xLine'
+				}],
+			},
+			yAxis:{
+				plotLines: [{
+					value: 9000,	//  y 크로스라인 위치
+					label: {
+						text: '평균 9,000',
+						y:-5,
+						x:0
+					}
+				}],
+			},
+			legend:{
+				enabled:false
+			},
+			series:[
+				{
+					name:'누적포인트',
+					data:[
+						{ y:8000 },
+						{ y:6000 },
+						{
+							y:10914,	//제일 높은 수치 보임
+							dataLabels:{
+								enabled:true
+							}
+						},
+						{ y:9914 }
+					]
+
+				}
+			]
+		});
+
+		// Basic-Line2
+		Highcharts.chart("Basic-Line2",{
+			chart:{
+				type:"line",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			xAxis:{
+				categories:["전전월", "전월", "당월"],
+				plotLines: [{
+					value: 2,	// 크로스라인 위치
+					className : 'xLine'
+				}],
+			},
+			legend:{
+				enabled:false
+			},
+			plotOptions:{
+				line:{
+					dataLabels:{
+						enabled:true
+					}
+				}
+			},
+			series:[
+				{
+					name:'',
+					data:[80,90, 130]
+				}
+			]
+		});
+
+		// Basic-Line3
+		Highcharts.chart("Basic-Line3",{
+			chart:{
+				type:"line",
+				marginLeft:0
+			},
+			title:null,
+			xAxis:{
+				categories:["5월2일","5월4일","5월6일","5월8일","5월10일","5월12일","5월14일","5월16일","5월18일","5월20일","5월22일","5월244일","5월26일","5월28일","5월30일"],
+			},
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'left',
+				layout:"horizontal"
+			},
+			plotOptions:{
+				line:{
+					dataLabels:{
+						enabled:true
+					},
+				}
+			},
+			series:[
+				{
+					name:'장기신규(보장)',
+					data:[300,400,100,450,5400,700,1200,1500,4000,6500,5000,6000,7000,7900,8450]
+				}
+			]
+		});
+
+		// Basic-Line3-1 -  목표
+		Highcharts.chart("Basic-Line3-1",{
+			chart:{
+				type:"line",
+				marginLeft:0
+			},
+			title:null,
+			xAxis:{
+				categories:["5월2일","5월4일","5월6일","5월8일","5월10일","5월12일","5월14일","5월16일","5월18일","5월20일","5월22일","5월244일","5월26일","5월28일","5월30일"],
+			},
+			yAxis:{
+				plotLines:[{
+					value:1250000,	// 크로스라인 위치
+					label: {
+						text: '목표 12,500',
+						y:18,
+						x:0
+					}
+				}]
+			},
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'left',
+				layout:"horizontal"
+			},
+			plotOptions:{
+				line:{
+					dataLabels:{
+						enabled:true
+					}
+				}
+			},
+			series:[
+				{
+					name:'장기신규(보장)',
+					data:[300,400,100,450,5400,700,1200,1500,4000,6500,5000,6000,7000,7900,8450]
+				}
+			]
+		});
+
+		// Basic-Line4
+		Highcharts.chart("Basic-Line4",{
+			chart:{
+				type:"line",
+				marginLeft:0
+			},
+			title:null,
+			xAxis:{
+				categories:["2일","3일","4일","5일","6일","7일","8일","9일","10일","11일","12일"],
+			},
+			legend:{
+				enabled:false
+			},
+			series:[
+				{
+					name:'화면 조회 수',
+					data:[
+						5000,2600,1400,1800,
+						{y:6100, dataLabels:{enabled:true},}//제일 높은 수치 보임
+						,2500,1800,2600,3700,4000,4500
+					]
+				}
+			]
+		});
+
+		// Basic-Line5
+		Highcharts.chart("Basic-Line5",{
+			chart:{
+				type:"line",
+				marginLeft:0
+			},
+			title:null,
+			xAxis:{
+				categories:["전전월", "전월", "당월"]
+			},
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			series:[
+				{
+					name:"신입",
+					data:[80,90, 130]
+				},
+				{
+					name:"경력",
+					data:[3,4,5]
+				},
+				{
+					name:"전체",
+					data:[83,94,135]
+				}
+			]
+		});
+
+		// Pareto-chart1
+		Highcharts.chart("Pareto-chart1",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			xAxis:{
+				categories:["전전월", "전월", "당월"],
+			},
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			plotOptions:{
+				line:{
+					dataLabels:{
+						enabled:true
+					},
+				},
+			},
+			series:[{
+				name:"홍길동",
+				data:[90,50,70]
+			},
+			{
+				type:"line",
+				name:"사업단 평균",
+				data:[70,40,80]
+			}]
+		});
+
+		// Pareto-chart1-2 모바일 (범례 상단)
+		Highcharts.chart("Pareto-chart1-2",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			xAxis:{
+				categories:["전전월", "전월", "당월"],
+			},
+			legend:{
+				enabled:true,
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			},
+			plotOptions:{
+				line:{
+					dataLabels:{
+						enabled:true
+					},
+				},
+			},
+			series:[{
+				name:"홍길동",
+				data:[90,50,70]
+			},{
+				type:"line",
+				name:"사업단 평균",
+				data:[70,40,80]
+			}]
+		});
+
+		// Pareto-chart2
+		Highcharts.chart("Pareto-chart2",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			xAxis:{
+				categories:["참여자", "미참여자", "중도실패","달성률"],
+			},
+			yAxis:{
+				max:100
+			},
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true,
+						format:"{point.y:f}%",
+					},
+				},
+				line:{
+					dataLabels:{
+						enabled:true,
+						format:"{point.y:f}%"
+					},
+				},
+			},
+			series:[{
+				name:"강남1지점",
+				data:[90.3,50,70,75.3],
+			},{
+				type:"line",
+				name:"지점평균",
+				data:[72.5,68.0,26.3,75.3]
+			}]
+		});
+
+		// Pareto-chart3
+		Highcharts.chart("Pareto-chart3",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			xAxis:{
+				categories:["전전월", "전월", "당월"],
+			},
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true
+					},
+				},
+				line:{
+					dataLabels:{
+						enabled:true
+					},
+				},
+			},
+			series:[{
+				name:"응시인원",
+				data:[39,54,39]
+			},{
+				name:"합격인원",
+				data:[25,40,25]
+			},{
+				type:"line",
+				name:"합격률",
+				data:[90.5,100,80]
+			}]
+		});
+
+		// Pareto-chart3-1 - Y값 별도 적용
+		Highcharts.chart("Pareto-chart3-1",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			xAxis:{
+				categories:["전전월", "전월", "당월"],
+			},
+			yAxis: [{ // Primary yAxis
+			}, { // Secondary yAxis
+			}],
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true
+					},
+				},
+				line:{
+					dataLabels:{
+						enabled:true
+					},
+				},
+			},
+			series:[{
+				name:"응시인원",
+				data:[39,54,39]
+			},{
+				name:"합격인원",
+				data:[25,40,25]
+			},{
+				yAxis: 1, // Secondary yAxis
+				type:"line",
+				name:"합격률",
+				data:[90.5,100,80]
+			}]
+		});
+
+		// Pareto-chart4
+		Highcharts.chart("Pareto-chart4",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			xAxis:{
+				categories:["전전월", "전월", "당월"],
+			},
+			legend:{
+				enabled:true,
+				verticalAlign:"bottom",
+				align:'center',
+				layout:"horizontal"
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true
+					},
+				},
+				line:{
+					dataLabels:{
+						enabled:true
+					},
+				},
+			},
+			series:[{
+				name:"신인",
+				data:[39,54,39]
+			},{
+				name:"기존",
+				data:[25,40,25]
+			},{
+				type:"line",
+				name:"합계",
+				data:[64,79,46]
+			},{
+				type:"line",
+				name:"전체 재적",
+				data:[90.5,100,80]
+			}]
+		});
+
+		// Pareto-chart4 - 모바일 (범례 상단)
+		Highcharts.chart("Pareto-chart4-1",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			xAxis:{
+				categories:["전전월", "전월", "당월"],
+			},
+			legend:{
+				enabled:true,
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			},
+			plotOptions:{
+				column:{
+					dataLabels:{
+						enabled:true
+					},
+				},
+				line:{
+					dataLabels:{
+						enabled:true
+					},
+				},
+			},
+			series:[{
+				name:"신인",
+				data:[39,54,39]
+			},{
+				name:"기존",
+				data:[25,40,25]
+			},{
+				type:"line",
+				name:"합계",
+				data:[64,79,46]
+			},{
+				type:"line",
+				name:"전체 재적",
+				data:[90.5,100,80]
+			}]
+		});
+
+		// Pareto-chart5
+		Highcharts.chart("Pareto-chart5",{
+			chart:{
+				type:"column",
+				marginLeft:0,
+				marginRight:0
+			},
+			title:null,
+			legend:{
+				enabled:false
+			},
+			xAxis:{
+				categories:["1년", "2년", "3년", "5년", "7년", "10년", "만기"]
+			},
+			yAxis:[{
+				title: null
+			}, {
+				title: null,
+				max: 110,
+				min: 0,
+				opposite: true,
+				labels: {
+					format: "{value}%"
+				}
+			}],
+			plotOptions:{
+				line:{
+					dataLabels:{
+						enabled:true,
+						format:"{point.y:.1f}%"	//소수점 1자리
+					},
+				}
+			},
+			tooltip: {
+				valueSuffix: '원'
+			},
+			series:[{
+				name:"",
+				data:[423456,123456,158562,185258,212585,258631,100000]
+			},{
+				type: 'line',
+				name:"",
+				data:[78,100,64,78,57,100,78],
+				zIndex: 10,
+				yAxis: 1,
+				tooltip: {
+					valueDecimals: 2,
+					valueSuffix: '%'
+				}
+			}]
+		});
+
+		// Spider Web white
+		Highcharts.chart("SpiderWeb_wt", {
+			chart:{
+				polar:true, //극선
+			},
+			xAxis:{
+				tickmarkPlacement:'on',
+				categories:["보험료","수수료","인기도","납입기간","보장기간"],
+			},
+			yAxis:{
+				gridLineInterpolation:"polygon", //다각형 모양 지정
+				tickInterval:16, //다각형 라인 간격
+			},
+			series:[{
+				name:"해당상품",
+				data:[43, 19, 60, 35, 17],
+				zIndex:1, //제일위에 위치
+				pointPlacement:"on"
+			}, {
+				name:"상품평균",
+				data:[50, 39, 42, 31, 26],
+				pointPlacement:"on",
+			}],
+			responsive:{
+				rules: [{
+					condition:{maxWidth: 720}, //차트 최대사이즈
+					chartOptions:{
+						pane:{size:'50%'} //차트영역 사이즈 : label이 짤림을 막기 위해 적용
+					}
+				}]
+			}
+		})
+
+		//Spider-Web1 사망후유장해(6각)
+		Highcharts.chart("Spider-Web1", {
+			chart:{
+				polar:true, //극선
+				marginLeft:30,
+				marginRight:30
+			},
+			xAxis:{
+				tickmarkPlacement:'on',
+				categories:["상해사망","질병사망","상해후유장해 3%이상","상해후유장해 80%이상","질병후유장해 3%이상","질병후유장해 80%이상"],
+			},
+			yAxis:{
+				gridLineInterpolation:"polygon", //다각형 모양 지정
+				tickInterval:10, //다각형 라인 간격
+			},
+			legend:{
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			}, //범례 상단 왼쪽 정렬
+			series:[{
+				name:"충분가입금액",
+				data:[60, 59, 52, 51, 66, 66],
+				pointPlacement:"on"
+			}, {
+				name:"기존가입금액",
+				data:[50, 39, 42, 51, 46, 46],
+				zIndex:1, //zIndex 위치
+				pointPlacement:"on",
+			}, {
+				name:"컨설팅 금액",
+				data:[30, 29, 32, 41, 36, 32],
+				zIndex:2, //zIndex 위치
+				pointPlacement:"on",
+			}],
+			responsive:{
+				rules: [{
+					condition:{maxWidth: 720}, //차트 최대사이즈
+					chartOptions:{
+						pane:{size:'50%'} //차트영역 사이즈 : label이 짤림을 막기 위해 적용
+					}
+				}]
+			}
+		})
+
+		//Spider-Web2 암(4각)
+		Highcharts.chart("Spider-Web2", {
+			chart:{
+				polar:true, //극선
+			},
+			xAxis:{
+				tickmarkPlacement:'on',
+				categories:["일반암 진단비","고액암 진단비","암수술비","고액항암<br>치료비"],
+			},
+			yAxis:{
+				gridLineInterpolation:"polygon", //다각형 모양 지정
+				tickInterval:10, //다각형 라인 간격
+			},
+			legend:{
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			}, //범례 상단 왼쪽 정렬
+			series:[{
+				name:"충분가입금액",
+				data:[60, 59, 52, 51],
+				pointPlacement:"on"
+			}, {
+				name:"기존가입금액",
+				data:[50, 39, 42, 51],
+				zIndex:1, //제일위에 위치
+				pointPlacement:"on",
+			}, {
+				name:"컨설팅 금액",
+				data:[30, 29, 32, 41],
+				zIndex:2, //zIndex 위치
+				pointPlacement:"on",
+			}],
+			responsive:{
+				rules: [{
+					condition:{maxWidth: 720}, //차트 최대사이즈
+					chartOptions:{
+						pane:{size:'50%'} //차트영역 사이즈 : label이 짤림을 막기 위해 적용
+					}
+				}]
+			}
+		})
+
+		//Spider-Web3 뇌혈관질환/심장질환(7각)
+		Highcharts.chart("Spider-Web3", {
+			chart:{
+				polar:true, //극선
+			},
+			xAxis:{
+				tickmarkPlacement:'on',
+				categories:["뇌혈관 진단비","뇌졸중 진단비","뇌출혈 진단비","뇌혈관 수술비","허혈성심장질환 진단비","급성심근경색 진단비","심장질환 수술비"],
+			},
+			yAxis:{
+				gridLineInterpolation:"polygon", //다각형 모양 지정
+				tickInterval:10, //다각형 라인 간격
+			},
+			legend:{
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			}, //범례 상단 왼쪽 정렬
+			series:[{
+				name:"충분가입금액",
+				data:[60, 59, 52, 51, 66, 52, 51],
+				pointPlacement:"on"
+			}, {
+				name:"기존가입금액",
+				data:[50, 39, 42, 55, 46, 42, 51],
+				zIndex:1, //zIndex 위치
+				pointPlacement:"on",
+			}, {
+				name:"컨설팅 금액",
+				data:[30, 29, 32, 41, 36, 32, 41],
+				zIndex:2, //zIndex 위치
+				pointPlacement:"on",
+			}],
+			responsive:{
+				rules: [{
+					condition:{maxWidth: 720}, //차트 최대사이즈
+					chartOptions:{
+						pane:{size:'50%'} //차트영역 사이즈 : label이 짤림을 막기 위해 적용
+					}
+				}]
+			}
+		})
+
+		//Spider-Web4 실손의료비/수술비(6각)
+		Highcharts.chart("Spider-Web4", {
+			chart:{
+				polar:true, //극선
+			},
+			xAxis:{
+				tickmarkPlacement:'on',
+				categories:["상해입원<br>의료비","상해통원<br>의료비","질병입원<br>의료비","질병통원<br>의료비","상해수술비","질병수술비"],
+			},
+			yAxis:{
+				gridLineInterpolation:"polygon", //다각형 모양 지정
+				tickInterval:10, //다각형 라인 간격
+			},
+			legend:{
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			}, //범례 상단 왼쪽 정렬
+			series:[{
+				name:"충분가입금액",
+				data:[60, 59, 52, 51, 66, 66],
+				pointPlacement:"on"
+			}, {
+				name:"기존가입금액",
+				data:[50, 39, 42, 51, 46, 46],
+				zIndex:1, //제일위에 위치
+				pointPlacement:"on",
+			}, {
+				name:"컨설팅 금액",
+				data:[30, 29, 32, 41, 36, 32],
+				zIndex:2, //zIndex 위치
+				pointPlacement:"on",
+			}],
+			responsive:{
+				rules: [{
+					condition:{maxWidth: 720}, //차트 최대사이즈
+					chartOptions:{
+						pane:{size:'50%'} //차트영역 사이즈 : label이 짤림을 막기 위해 적용
+					}
+				}]
+			}
+		})
+
+		//Spider-Web5 입원비(6각)
+		Highcharts.chart("Spider-Web5", {
+			chart:{
+				polar:true, //극선
+			},
+			xAxis:{
+				tickmarkPlacement:'on',
+				categories:["상해입원비","상해중환자실<br>입원비","질병입원비","질병중환자실<br>입원비","간병인<br>사용/지원<br>질병입원비","간병인<br>사용/지원<br>상해입원비"],
+			},
+			yAxis:{
+				gridLineInterpolation:"polygon", //다각형 모양 지정
+				tickInterval:10, //다각형 라인 간격
+			},
+			legend:{
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			}, //범례 상단 왼쪽 정렬
+			series:[{
+				name:"충분가입금액",
+				data:[60, 59, 52, 51, 66, 66],
+				pointPlacement:"on"
+			}, {
+				name:"기존가입금액",
+				data:[50, 39, 42, 51, 46, 46],
+				zIndex:1, //제일위에 위치
+				pointPlacement:"on",
+			}, {
+				name:"컨설팅 금액",
+				data:[30, 29, 32, 41, 36, 32],
+				zIndex:2, //zIndex 위치
+				pointPlacement:"on",
+			}],
+			responsive:{
+				rules: [{
+					condition:{maxWidth: 720}, //차트 최대사이즈
+					chartOptions:{
+						pane:{size:'50%'} //차트영역 사이즈 : label이 짤림을 막기 위해 적용
+					}
+				}]
+			}
+		})
+
+		//Spider-Web6 운전자(5각)
+		Highcharts.chart("Spider-Web6", {
+			chart:{
+				polar:true, //극선
+			},
+			xAxis:{
+				tickmarkPlacement:'on',
+				categories:["교통사고<br>처리지원금","교통사고 벌금(대인)","교통사고 벌금(대물)","자동차사고 변호사 선임비용","자통차사고 부상위로금"],
+			},
+			yAxis:{
+				gridLineInterpolation:"polygon", //다각형 모양 지정
+				tickInterval:10, //다각형 라인 간격
+			},
+			legend:{
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			}, //범례 상단 왼쪽 정렬
+			series:[{
+				name:"충분가입금액",
+				data:[60, 59, 52, 51, 66],
+				pointPlacement:"on"
+			}, {
+				name:"기존가입금액",
+				data:[50, 39, 42, 51, 46],
+				zIndex:1, //제일위에 위치
+				pointPlacement:"on",
+			}, {
+				name:"컨설팅 금액",
+				data:[30, 29, 32, 41, 36],
+				zIndex:2, //zIndex 위치
+				pointPlacement:"on",
+			}],
+			responsive:{
+				rules: [{
+					condition:{maxWidth: 720}, //차트 최대사이즈
+					chartOptions:{
+						pane:{size:'50%'} //차트영역 사이즈 : label이 짤림을 막기 위해 적용
+					}
+				}]
+			}
+		})
+
+		//Spider-Web7 생활보장(6각)
+		Highcharts.chart("Spider-Web7", {
+			chart:{
+				polar:true, //극선
+			},
+			xAxis:{
+				tickmarkPlacement:'on',
+				categories:["골전진단비","깁스치료비","응급실내원비","화상진단비","화재벌금","일상생활 배상책임"],
+			},
+			yAxis:{
+				gridLineInterpolation:"polygon", //다각형 모양 지정
+				tickInterval:10, //다각형 라인 간격
+			},
+			legend:{
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			}, //범례 상단 왼쪽 정렬
+			series:[{
+				name:"충분가입금액",
+				data:[60, 59, 52, 51, 66],
+				pointPlacement:"on"
+			}, {
+				name:"기존가입금액",
+				data:[50, 39, 42, 51, 46],
+				zIndex:1, //제일위에 위치
+				pointPlacement:"on",
+			}, {
+				name:"컨설팅 금액",
+				data:[30, 29, 32, 41, 36],
+				zIndex:2, //zIndex 위치
+				pointPlacement:"on",
+			}],
+			responsive:{
+				rules: [{
+					condition:{maxWidth: 720}, //차트 최대사이즈
+					chartOptions:{
+						pane:{size:'50%'} //차트영역 사이즈 : label이 짤림을 막기 위해 적용
+					}
+				}]
+			}
+		})
+
+		//Spider-Web8 요양/치매(4각)
+		Highcharts.chart("Spider-Web8", {
+			chart:{
+				polar:true, //극선
+			},
+			xAxis:{
+				tickmarkPlacement:'on',
+				categories:["경증이상<br>치매진단비","장기요양자금<br>(1, 2, 4급)","장기요양자금<br>(1, 2급)","장기요양자금<br>(1급)"],
+			},
+			yAxis:{
+				gridLineInterpolation:"polygon", //다각형 모양 지정
+				tickInterval:10, //다각형 라인 간격
+			},
+			legend:{
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			}, //범례 상단 왼쪽 정렬
+			series:[{
+				name:"충분가입금액",
+				data:[60, 59, 52, 51],
+				pointPlacement:"on"
+			}, {
+				name:"기존가입금액",
+				data:[50, 39, 42, 51],
+				zIndex:1, //제일위에 위치
+				pointPlacement:"on",
+			}, {
+				name:"컨설팅 금액",
+				data:[30, 29, 32, 41],
+				zIndex:2, //zIndex 위치
+				pointPlacement:"on",
+			}],
+			responsive:{
+				rules: [{
+					condition:{maxWidth: 720}, //차트 최대사이즈
+					chartOptions:{
+						pane:{size:'50%'} //차트영역 사이즈 : label이 짤림을 막기 위해 적용
+					}
+				}]
+			}
+		})
+/*
+		//Spider-Web9
+		Highcharts.chart("Spider-Web9", {
+			chart:{
+				polar:true, //극선
+			},
+			xAxis:{
+				tickmarkPlacement:'on',
+				categories:["뇌출혈진단비","뇌졸중 진단비","뇌혈관질환진단비","뇌졸중진단비","암입원비"],
+			},
+			yAxis:{
+				gridLineInterpolation:"polygon", //다각형 모양 지정
+				tickInterval:10, //다각형 라인 간격
+			},
+			legend:{
+				verticalAlign:"top",
+				align:'left',
+				layout:"horizontal"
+			}, //범례 상단 왼쪽 정렬
+			series:[{
+				name:"충분가입금액",
+				data:[60, 59, 52, 51, 66],
+				pointPlacement:"on"
+			}, {
+				name:"기존가입금액",
+				data:[50, 39, 42, 51, 46],
+				zIndex:1, //제일위에 위치
+				pointPlacement:"on",
+			}],
+			responsive:{
+				rules: [{
+					condition:{maxWidth: 720}, //차트 최대사이즈
+					chartOptions:{
+						pane:{size:'50%'} //차트영역 사이즈 : label이 짤림을 막기 위해 적용
+					}
+				}]
+			}
+		})
+
+		*/
+		// Heat Map
+		Highcharts.chart("HeatMap", {
+			chart:{
+				type:"heatmap",
+			},
+			title:null,
+			xAxis:{
+				categories:["1일","2일","3일","4일","5일","6일","7일","8일","9일","10일","11일","12일","13일","14일","15일"]
+			},
+			yAxis:{
+				categories:["00시","02시","04시","06시","08시","10시","12시","14시","16시","18시","20시","22시"],
+			},
+			colorAxis:{
+				min:0,
+				minColor:"#FFFFFF",
+				maxColor: "#e84427"
+			},
+			legend:{
+				enabled:false
+			},
+			tooltip:{
+				formatter:function () {
+					return "<strong>" + this.point.value + "명 </strong>";
+				}
+			},
+			series:[{
+				name:null,
+				data:[
+						[0,0,10], [0,1,19], [0,2,8], [0,3,24], [0,4,67], [0,5,92], [0,6,58], [0,7,78], [0,8,117], [0,9,48], [0,10,35], [0,11,15],
+						[1,0,123], [1,1,64], [1,2,52], [1,3,72], [1,4,132], [1,5,114], [1,6,19], [1,7,16], [1,8,38], [1,9,5], [1,10,8], [1,11,117],
+						[2,0,115], [2,1,88], [2,2,32], [2,3,12], [2,4,6], [2,5,120], [2,6,13], [2,7,44], [2,8,88], [2,9,98], [2,10,96], [2,11,31],
+						[3,0,1], [3,1,82], [3,2,32], [3,3,30], [3,4,85], [3,5,97], [3,6,123], [3,7,64], [3,8,84], [3,9,47], [3,10,114], [3,11,31],
+						[4,0,10], [4,1,19], [4,2,8], [4,3,24], [4,4,67], [4,5,92], [4,6,58], [4,7,78], [4,8,117], [4,9,48], [4,10,35], [4,11,15],
+						[5,0,123], [5,1,64], [5,2,52], [5,3,72], [5,4,132], [5,5,114], [5,6,19], [5,7,16], [5,8,38], [5,9,5], [5,10,8], [5,11,117],
+						[6,0,115], [6,1,88], [6,2,32], [6,3,12], [6,4,6], [6,5,120], [6,6,13], [6,7,44], [6,8,88], [6,9,98], [6,10,96], [6,11,31],
+						[7,0,1], [7,1,82], [7,2,32], [7,3,30], [7,4,85], [7,5,97], [7,6,123], [7,7,64], [7,8,84], [7,9,47], [7,10,114], [7,11,31],
+						[8,0,115], [8,1,88], [8,2,32], [8,3,12], [8,4,6], [8,5,120], [8,6,13], [8,7,44], [8,8,88], [8,9,98], [8,10,96], [8,11,31],
+						[9,0,1], [9,1,82], [9,2,32], [9,3,30], [9,4,85], [9,5,97], [9,6,123], [9,7,64], [9,8,84], [9,9,47], [9,10,114], [9,11,31],
+						[10,0,10], [10,1,19], [10,2,8], [10,3,24], [10,4,67], [10,5,92], [10,6,58], [10,7,78], [10,8,117], [10,9,48], [10,10,35], [10,11,15],
+						[11,0,123], [11,1,64], [11,2,52], [11,3,72], [11,4,132], [11,5,114], [11,6,19], [11,7,16], [11,8,38], [11,9,5], [11,10,8], [11,11,117],
+						[12,0,1], [12,1,82], [12,2,32], [12,3,30], [12,4,85], [12,5,97], [12,6,123], [12,7,64], [12,8,84], [12,9,47], [12,10,114], [12,11,31],
+						[13,0,10], [13,1,19], [13,2,8], [13,3,24], [13,4,67], [13,5,92], [13,6,58], [13,7,78], [13,8,117], [13,9,48], [13,10,35], [13,11,15],
+						[14,0,16], [14,1,38], [14,2,5], [14,3,8], [14,4,117], [14,5,115], [14,6,88], [14,7,32], [14,8,12], [14,9,6], [14,10,120], [14,11,13],
+					]
+			}],
+		});
+
+		//Large Tree Map
+		Highcharts.chart("LargeTreeMap", {
+			title: null,
+			series: [{
+				title:null,
+				name: '사업단장',
+				type: "treemap",
+				layoutAlgorithm: 'squarified',
+				allowDrillToNode: true,
+				animationLimit: 1000,
+				levelIsConstant: false,
+				borderWidth:2,
+				borderColor:"#000",
+				levels: [{
+					level: 1,
+					dataLabels: {
+						enabled: true
+					}
+				}, {
+					level: 2,
+					borderWidth: 0,
+					dataLabels: {
+						enabled: false
+					}
+				}],
+				data: [{
+					id: 'area1',
+					name: '강남사업단',
+					color: "#006e7f"
+				}, {
+					id: 'area2',
+					name: '경기사업단',
+					color: "#117e88"
+				}, {
+					id: 'area3',
+					name: '경남사업단',
+					color: '#148888'
+				}, {
+					id: 'area4',
+					name: '드림사업단',
+					color: '#21947c'
+				}, {
+					id: 'area5',
+					name: '리더스사업단',
+					color: '#29a77b'
+				}, {
+					id: 'area6',
+					name: '미라클사업단',
+					color: '#51bb65'
+				}, {
+					id: 'area7',
+					name: '미래사업단',
+					color: '#6fbe53'
+				}, {
+					id: 'area8',
+					name: '바른사업단',
+					color: '#9bc33b'
+				}, {
+					id: 'area9',
+					name: '베스트사업단',
+					color: '#c4c823'
+				}, {
+					id: 'area10',
+					name: '부산사업단',
+					color: '#e3e310'
+				}, {
+					id: 'area11',
+					name: '서울사업단',
+					color: '#ffdd03'
+				}, {
+					id: 'area12',
+					name: '센트럴사업단',
+					color: '#fdcd03'
+				}, {
+					id: 'area13',
+					name: '스마트사업단',
+					color: '#fdba03'
+				}, {
+					id: 'area14',
+					name: '스타사업단',
+					color: '#fd9d03'
+				}, {
+					id: 'area15',
+					name: '영남사업단',
+					color: '#fc8903'
+				}, {
+					id: 'area16',
+					name: '전남사업단',
+					color: '#fc7603'
+				}, {
+					id: 'area17',
+					name: '전속지원팀',
+					color: '#ed611f'
+				}, {
+					id: 'area18',
+					name: '중부사업단',
+					color: '#f17f16'
+				}, {
+					id: 'area19',
+					name: '퍼스트사업단',
+					color: '#ed561f'
+				}, {
+					id: 'area20',
+					name: '한결사업단',
+					color: '#e84427'
+				}, {
+					id: 'area21',
+					name: '사업단21',
+					color: '#d5361a'
+				}, {
+					id: 'area22',
+					name: '사업단22',
+					color: '#c43117'
+				}, {
+					id: 'area23',
+					name: '사업단23',
+					color: '#ac2811'
+				}, {
+					id: 'area24',
+					name: '사업단24',
+					color: '#9b200a'
+				}, {
+					id: 'area25',
+					name: '사업단25',
+					color: '#7b1806'
+				}, {
+					name: '강남0지점',
+					parent: 'area1',
+					value: 3
+				}, {
+					name: '강남1지점',
+					parent: 'area1',
+					value: 7
+				}, {
+					name: '강남2지점',
+					parent: 'area1',
+					value: 12
+				}, {
+					name: '강남3지점',
+					parent: 'area1',
+					value: 1
+				}, {
+					name: '강남4지점',
+					parent: 'area1',
+					value: 3
+				}, {
+					name: '강남5지점',
+					parent: 'area1',
+					value: 9
+				}, {
+					name: '강남6지점',
+					parent: 'area1',
+					value: 15
+				}, {
+					name: '강남7지점',
+					parent: 'area1',
+					value: 5
+				}, {
+					name: '강남8지점',
+					parent: 'area1',
+					value: 7
+				}, {
+					name: '강남9지점',
+					parent: 'area1',
+					value: 10
+				}, {
+					name: '강남98지점',
+					parent: 'area1',
+					value: 33
+				}, {
+					name: '강남99지점',
+					parent: 'area1',
+					value: 4
+				}, {
+					name: '강남교차지점',
+					parent: 'area1',
+					value: 8
+				}, {
+					name: '경기0지점',
+					parent: 'area2',
+					value: 35
+				}, {
+					name: '경기1지점',
+					parent: 'area2',
+					value: 80
+				}, {
+					name: '경기0지점',
+					parent: 'area2',
+					value: 60
+				}, {
+					name: '경남1지점',
+					parent: 'area3',
+					value: 56
+				}, {
+					name: '경남2지점',
+					parent: 'area3',
+					value: 100
+				}, {
+					name: '드림3지점',
+					parent: 'area4',
+					value: 50
+				}, {
+					name: '드림4지점',
+					parent: 'area4',
+					value: 60
+				}, {
+					name: '드림5지점',
+					parent: 'area4',
+					value: 80
+				}, {
+					name: '리더스6지점',
+					parent: 'area5',
+					value: 50
+				}, {
+					name: '리더스7지점',
+					parent: 'area5',
+					value: 80
+				}, {
+					name: '미라클8지점',
+					parent: 'area6',
+					value: 20
+				}, {
+					name: '미라클9지점',
+					parent: 'area6',
+					value: 80
+				}, {
+					name: '미라클98지점',
+					parent: 'area6',
+					value: 33
+				}, {
+					name: '바른99지점',
+					parent: 'area7',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area8',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area9',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area10',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area11',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area12',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area13',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area14',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area15',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area16',
+					value: 100
+				}, {
+					name: '1지점',
+					parent: 'area17',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area18',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area19',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area20',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area21',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area22',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area23',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area24',
+					value: 130
+				}, {
+					name: '1지점',
+					parent: 'area25',
+					value: 130
+				}]
+			}],
+		});
+
+	</script>
+</body>
+</html>

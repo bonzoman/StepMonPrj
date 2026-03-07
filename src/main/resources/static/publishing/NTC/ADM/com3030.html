@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>화면 ID 검색 | 메뉴관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+	<!--
+		이 팝업은 오픈시 사이즈는 최소 450 * 280  으로 진행 요청 드립니다.
+
+	-->
+<div id="popup">
+	<div class="pop-header">
+		<h1>화면ID 검색</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<fieldset class="form-search1">
+			<div class="form-field">
+				<dl class="form">
+					<dt>화면명</dt>
+					<dd>
+						<div class="form-row">
+							<input type="text" name="" id="" class="text" style="width:300px;" placeholder="화면명을 입력해주세요.">
+						</div>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="area-action">
+				<button type="button" class="btn-action c1">검색</button>
+			</div>
+		</fieldset>
+		<h3 class="tit-sub2">화면 목록</h3>
+		<!--[M : 2022-08-24 테이블 구조 수정]-->
+		<div class="tbl-list1 t1">
+			<div class="t-header">
+				<table>
+					<colgroup>
+						<col style="width:80px;">
+						<col >
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">타입</th>
+							<th scope="col">화면명</th>
+							<th scope="col">화면ID</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<div class="t-body" style="max-height:380px;">
+
+				<table>
+					<colgroup>
+						<col style="width:80px;">
+						<col >
+					</colgroup>
+					<tbody>
+						<tr>
+							<td>타입</td>
+							<td>화면명</td>
+							<td>화면ID</td>
+						</tr>
+						<tr>
+							<td>타입</td>
+							<td>화면명</td>
+							<td>화면ID</td>
+						</tr>
+						<!--선택시-->
+						<tr class="current">
+							<td>타입</td>
+							<td>화면명</td>
+							<td>화면ID</td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<div class="nodata">
+									일치하는 내용이 없습니다. <br> 검색 내용을 다시 확인해주세요.
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- // [M : 2022-08-24 테이블 구조 수정]-->
+		<div class="area-action">
+			<button type="button" class="btn-action c1">확인</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

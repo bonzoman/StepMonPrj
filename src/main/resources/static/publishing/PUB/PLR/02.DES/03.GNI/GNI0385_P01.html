@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 건물대장조회 상세 | 신규설계 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>건축물대장조회상세</h1>
+			<button type="button" data-btn="pop-close">건축물대장조회상세 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역]  -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit"><span class="hide">관리건축물대장번호</span>11680-17369</h2>
+				<div class="info">
+					<!-- <i class="icon-txt2 t1 ic1">일반</i> -->
+					<i class="icon-txt2 t1 ic1">집합</i>
+					<i class="icon-txt2 ic1">총괄표제부</i>
+					<!-- <i class="icon-txt2 ic1">일반건축물</i> -->
+					<!-- <i class="icon-txt2 ic1">표제부</i> -->
+					<!-- <i class="icon-txt2 ic1">전유부</i> -->
+				</div>
+				<div class="info-con1">
+					<dl>
+						<dt>연면적</dt>
+						<dd>1,781.11m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>건물명</dt>
+						<dd>퍼시픽타워</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [조회영역] 일반 / 총괄표제부 -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<h3 class="tit-sub1">총괄표제부</h3>
+				<div class="info-con1">
+					<dl>
+						<dt>대지위치</dt>
+						<dd>서울특별시 성동구 응봉동</dd>
+					</dl>
+					<dl>
+						<dt>지번</dt>
+						<dd>12434</dd>
+					</dl>
+					<dl>
+						<dt>건축물명칭</dt>
+						<dd>서울특별시 성동구 독서당로 434</dd>
+					</dl>
+					<dl>
+						<dt>대지면적</dt>
+						<dd>576.6m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>연면적</dt>
+						<dd>1,781.11m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>지역</dt>
+						<dd>일반거주지역</dd>
+					</dl>
+					<dl>
+						<dt>지구</dt>
+						<dd>공용시설보호지구</dd>
+					</dl>
+					<dl>
+						<dt>구역</dt>
+						<dd>근린생활시설</dd>
+					</dl>
+					<dl>
+						<dt>건축면적</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>용적률산정용<br>연면적</dt>
+						<dd>철근콘크리트</dd>
+					</dl>
+					<dl>
+						<dt>주 건축물 수</dt>
+						<dd>지하 1층/지상 5층</dd>
+					</dl>
+					<dl>
+						<dt>주용도</dt>
+						<dd>16.4m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>총 호수</dt>
+						<dd>슬라브</dd>
+					</dl>
+					<dl>
+						<dt>총 주차 대수</dt>
+						<dd>1대</dd>
+					</dl>
+					<dl>
+						<dt>부속건축물 동수/면적</dt>
+						<dd>0동/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥내 기계식 대수/면적</dt>
+						<dd>0대/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥외 기계식 대수/면적</dt>
+						<dd>0대/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥내 자주식 대수/면적</dt>
+						<dd>4대/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥외 자주식 대수/면적</dt>
+						<dd>4대/0m&sup2;</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [조회영역] 일반 / 일반건축물 -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<h3 class="tit-sub1">표제부</h3>
+				<!-- // -->
+				<div class="info-con1">
+					<dl>
+						<dt>대지위치</dt>
+						<dd>서울특별시 성동구 응봉동</dd>
+					</dl>
+					<dl>
+						<dt>지번</dt>
+						<dd>12434</dd>
+					</dl>
+					<dl>
+						<dt>건축물명칭</dt>
+						<dd>서울특별시 성동구 독서당로 434</dd>
+					</dl>
+					<dl>
+						<dt>대지면적</dt>
+						<dd>576.6m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>연면적</dt>
+						<dd>1,781.11m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>지역</dt>
+						<dd>일반거주지역</dd>
+					</dl>
+					<dl>
+						<dt>지구</dt>
+						<dd>공용시설보호지구</dd>
+					</dl>
+					<dl>
+						<dt>구역</dt>
+						<dd>근린생활시설</dd>
+					</dl>
+					<dl>
+						<dt>건축면적</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>용적률산정용<br>연면적</dt>
+						<dd>철근콘크리트</dd>
+					</dl>
+					<dl>
+						<dt>주 건축물 수</dt>
+						<dd>지하 1층/지상 5층</dd>
+					</dl>
+					<dl>
+						<dt>주용도</dt>
+						<dd>16.4m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>총 호수</dt>
+						<dd>슬라브</dd>
+					</dl>
+					<dl>
+						<dt>총 주차 대수</dt>
+						<dd>1대</dd>
+					</dl>
+					<dl>
+						<dt>부속 건축물 동수/면적</dt>
+						<dd>0동/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥내 기계식 대수/면적</dt>
+						<dd>0대/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥외 기계식 대수/면적</dt>
+						<dd>0대/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥내 자주식 대수/면적</dt>
+						<dd>4대/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥외 자주식 대수/면적</dt>
+						<dd>4대/0m&sup2;</dd>
+					</dl>
+				</div>
+				<!-- // -->
+
+				<!-- # [건축물현황] # -->
+				<h4 class="tit-sub1">건축물현황</h4>
+				<div class="area-toggle1" data-autoset="toggle">
+					<ul>                                           
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/지하 1층/철근콘크리트조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/지하 1층/철근콘크리트조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>일반음식점</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>부동산중개업소</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>단독주택</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/지하 1층/슬라브조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/지하 1층/슬라브조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>일반음식점</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>부동산중개업소</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>단독주택</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/1층/철근콘크리트조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/1층/철근콘크리트조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>일반음식점</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>부동산중개업소</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>단독주택</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/2층/철근콘크리트조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/2층/철근콘크리트조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>일반음식점</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>부동산중개업소</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>단독주택</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/3층/철근콘크리트조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/3층/철근콘크리트조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>일반음식점</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>부동산중개업소</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>단독주택</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/4층/철근콘크리트조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/4층/철근콘크리트조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>일반음식점</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>부동산중개업소</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>단독주택</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>                           
+						<!-- // -->
+					</ul>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [조회영역] 집합 / 총괄표제부 -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<h3 class="tit-sub1">총괄표제부</h3>
+				<div class="info-con1">
+					<dl>
+						<dt>대지위치</dt>
+						<dd>서울특별시 성동구 응봉동</dd>
+					</dl>
+					<dl>
+						<dt>지번</dt>
+						<dd>12434</dd>
+					</dl>
+					<dl>
+						<dt>건축물명칭</dt>
+						<dd>서울특별시 성동구 독서당로 434</dd>
+					</dl>
+					<dl>
+						<dt>대지면적</dt>
+						<dd>576.6m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>연면적</dt>
+						<dd>1,781.11m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>지역</dt>
+						<dd>일반거주지역</dd>
+					</dl>
+					<dl>
+						<dt>지구</dt>
+						<dd>공용시설보호지구</dd>
+					</dl>
+					<dl>
+						<dt>구역</dt>
+						<dd>근린생활시설</dd>
+					</dl>
+					<dl>
+						<dt>건축면적</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>용적률산정용<br>연면적</dt>
+						<dd>철근콘크리트</dd>
+					</dl>
+					<dl>
+						<dt>주 건축물 수</dt>
+						<dd>지하 1층/지상 5층</dd>
+					</dl>
+					<dl>
+						<dt>주용도</dt>
+						<dd>16.4m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>총 호수</dt>
+						<dd>슬라브</dd>
+					</dl>
+					<dl>
+						<dt>총 주차 대수</dt>
+						<dd>1대</dd>
+					</dl>
+					<dl>
+						<dt>부속건축물 동수/면적</dt>
+						<dd>0동/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥내 기계식 대수/면적</dt>
+						<dd>0동/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥외 기계식 대수/면적</dt>
+						<dd>0동/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥내 자주식 대수/면적</dt>
+						<dd>4대/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥외 자주식 대수/면적</dt>
+						<dd>4대/0m&sup2;</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [조회영역] 일반 / 표제부 -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<h3 class="tit-sub1">표제부</h3>
+				<!-- // -->
+				<div class="info-con1">
+					<dl>
+						<dt>대지위치</dt>
+						<dd>서울특별시 성동구 응봉동</dd>
+					</dl>
+					<dl>
+						<dt>지번</dt>
+						<dd>12434</dd>
+					</dl>
+					<dl>
+						<dt>건축물명칭</dt>
+						<dd>서울특별시 성동구 독서당로 434</dd>
+					</dl>
+					<dl>
+						<dt>대지면적</dt>
+						<dd>576.6m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>연면적</dt>
+						<dd>1,781.11m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>지역</dt>
+						<dd>일반거주지역</dd>
+					</dl>
+					<dl>
+						<dt>지구</dt>
+						<dd>공용시설보호지구</dd>
+					</dl>
+					<dl>
+						<dt>구역</dt>
+						<dd>근린생활시설</dd>
+					</dl>
+					<dl>
+						<dt>건축면적</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>용적률산정용<br>연면적</dt>
+						<dd>철근콘크리트</dd>
+					</dl>
+					<dl>
+						<dt>주 건축물 수</dt>
+						<dd>지하 1층/지상 5층</dd>
+					</dl>
+					<dl>
+						<dt>주용도</dt>
+						<dd>16.4m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>총 호수</dt>
+						<dd>슬라브</dd>
+					</dl>
+					<dl>
+						<dt>총 주차 대수</dt>
+						<dd>1대</dd>
+					</dl>
+					<dl>
+						<dt>부속 건축물 동수/면적</dt>
+						<dd>0동/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥내 기계식 대수/면적</dt>
+						<dd>0대/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥외 기계식 대수/면적</dt>
+						<dd>0대/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥내 자주식 대수/면적</dt>
+						<dd>4대/0m&sup2;</dd>
+					</dl>
+					<dl>
+						<dt>옥외 자주식 대수/면적</dt>
+						<dd>4대/0m&sup2;</dd>
+					</dl>
+				</div>
+				<!-- // -->
+
+				<!-- # [건축물현황] # -->
+				<h4 class="tit-sub1">건축물현황</h4>
+				<div class="area-toggle1" data-autoset="toggle">
+					<ul>                                           
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/지하 1층/철근콘크리트조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/지하 1층/철근콘크리트조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>일반음식점</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>부동산중개업소</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>단독주택</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/지하 1층/슬라브조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/지하 1층/슬라브조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>일반음식점</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>부동산중개업소</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>단독주택</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/1층/철근콘크리트조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/1층/철근콘크리트조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>일반음식점</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>부동산중개업소</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>단독주택</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/2층/철근콘크리트조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/2층/철근콘크리트조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>일반음식점</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>부동산중개업소</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>단독주택</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/3층/철근콘크리트조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/3층/철근콘크리트조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>일반음식점</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>부동산중개업소</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>단독주택</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<strong>주/4층/철근콘크리트조</strong>
+								<button type="button" data-toggle="btn" aria-expanded="false">주/4층/철근콘크리트조 상세보기</button>
+							</div>
+							<div data-toggle="content" class="info-con1">
+								<dl>
+									<dt>일반음식점</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>부동산중개업소</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>단독주택</dt>
+									<dd>214.71m&sup2;</dd>
+								</dl>
+							</div>
+						</li>                           
+						<!-- // -->
+					</ul>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [조회영역] 일반 / 전유부 -->
+			<!-- ######################### -->
+			<div class="wrap-section1">
+				<h3 class="tit-sub1">전유부 목록</h3>
+				<div class="info-data1">
+					<ul>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="radio1" checked>
+									<span>
+										<span class="icon-txt2 t1 ic1">일반</span>
+										<span class="icon-txt2 ic1">일번건축물</span>
+										<strong><span class="hide">관리건축물대장번호</span>11680-17369</strong>
+									</span>
+								</label>
+							</div>
+							<div class="info-con1">
+								<dl>
+									<dt>연면적</dt>
+									<dd>7,231.5m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>건물명</dt>
+									<dd>퍼시픽 타워 601동</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+						<li>
+							<div class="tit">
+								<label>
+									<input type="radio" name="radio1">
+									<span>
+										<span class="icon-txt2 t1 ic1">일반</span>
+										<span class="icon-txt2 ic1">일반건축물</span>
+										<strong><span class="hide">관리건축물대장번호</span>21680-52860</strong>
+									</span>
+								</label>
+							</div>
+							<div class="info-con1">
+								<dl>
+									<dt>연면적</dt>
+									<dd>8,325.2m&sup2;</dd>
+								</dl>
+								<dl>
+									<dt>건물명</dt>
+									<dd>시그니엘빌딩</dd>
+								</dl>
+							</div>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c3">이전</button>
+				<button type="button" class="btn-action c1">적용</button>
+
+				<!-- [CASE] 전유부 목록일 경우 
+				<button type="button" class="btn-action c1">확인</button>
+				-->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

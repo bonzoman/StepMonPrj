@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 담보종류상세 | [T] 피보험자 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>담보명</h1>
+			<button type="button" data-btn="pop-close">@담보명@ 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [가입금액] -->
+			<!-- ######################### -->
+			<div class="area-info2">
+				<dl>
+					<dt>담보가입금액</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보영역] -->
+			<!-- ######################### -->
+			<div class="info-con1">
+				<dl>
+					<dt>상태</dt>
+					<dd>정상</dd>
+				</dl>
+				<dl>
+					<dt>보험시기</dt>
+					<dd>2022.10.17</dd>
+				</dl>
+				<dl>
+					<dt>보험종기</dt>
+					<dd>2042.10.17</dd>
+				</dl>
+				<dl>
+					<dt>보험기간</dt>
+					<dd>100세 만기</dd>
+				</dl>
+				<dl>
+					<dt>납입기간</dt>
+					<dd>보험료 추가납입</dd>
+				</dl>
+				<dl>
+					<dt>갱신종료일</dt>
+					<dd>2042.10.17</dd>
+				</dl>
+				<dl>
+					<dt>보험료</dt>
+					<dd class="data-num1"><strong>000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>담보안내</dt>
+					<dd>
+						<div>상해사고로 후유장해가 발생한 경우</div>
+						<div>80% 이상 후유장애시: 보험가입금액 지급</div>
+						<div>80% 미만 후유장애시: 보험가입금액 x 지급률지급</div>
+					</dd>
+				</dl>
+
+				<!-- [D] 담보속성 팝업이 존재할 경우 노출 -->
+				<div class="area-btn1"><a href="javascript:void(0);" class="btn-com1">담보속성보기</a></div>
+				<!-- // -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

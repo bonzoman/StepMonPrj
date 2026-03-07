@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title> [P] 기타특약 | 설계(개인/업무/영업) | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>기타 특약</h1>
+			<button type="button" data-btn="pop-close">기타 특약 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [기타특약] 가입만 보기 -->
+			<!-- ######################### -->
+			<div class="label-check1 t1">
+				<label>
+					<input type="checkbox">
+					<span>가입만 보기</span>
+				</label>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [기타특약] 특약내용 -->
+			<!-- ######################### -->
+			<div class="area-toggle1" data-autoset="toggle">
+				<!-- ### [할인형] ### -->
+				<fieldset>
+					<legend class="tit">
+						<strong>할인형</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</legend>
+					<div data-toggle="content" class="form-wrap1 t1">
+						<!-- # [CASE] 필수선택 특약 : checked disabled  # -->
+						<div class="area1 current">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox" disabled checked>
+									<span>특약명 <i class="icon-required2">필수</i></span>
+								</label>
+							</div>
+							<div class="side"><a href="javascript:void(0);" class="icon-com2 ic1">도움말 보기</a></div>
+						</div>
+
+						<!-- # [CASE] 필수선택 특약 + 추가입력정보 : checked disabled # -->
+						<div class="area1 current">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox" disabled checked>
+									<span>특약명 <i class="icon-required2">필수</i></span>
+								</label>
+							</div>
+							<div class="side"><a href="javascript:void(0);" class="icon-com2 ic1">도움말 보기</a></div>
+							<div class="cont">
+								<dl class="form">
+									<dt>항목명</dt>
+									<dd><input type="text" class="text" placeholder="내용" value="내용" disabled></dd>
+								</dl>
+							</div>
+						</div>
+
+						<!-- # 필수 : 만57세 이하 연령한정 추가 # -->
+						<div class="area1 current">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox" checked disabled>
+									<span>만57세 이하 연령한정 추가</span>
+								</label>
+							</div>
+							<div class="side"><a href="javascript:void(0);" class="icon-com2 ic1">도움말 보기</a></div>
+						</div>
+
+						<!-- # 차선이탈방지장치 장착할인 특별약관 # -->
+						<div class="area1">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox" checked>
+									<span>차선이탈방지장치 장착할인 특별약관</span>
+								</label>
+							</div>
+							<div class="side"><a href="javascript:void(0);" class="icon-com2 ic1">도움말 보기</a></div>
+						</div>
+
+						<!-- # 필수 : 전방충돌방지장치 장착할인 특별약관 # -->
+						<div class="area1 current">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox" checked disabled>
+									<span>전방충돌방지장치 장착할인 특별약관</span>
+								</label>
+							</div>
+							<div class="cont">
+								<dl class="form">
+									<dt>특약세부구분</dt>
+									<dd><input type="text" class="text" placeholder="특약세부구분" value="전방경고 및 제동" disabled></dd>
+								</dl>
+							</div>
+						</div>
+
+						<!-- # 후할인 주행거리 특별약관 # -->
+						<div class="area1 current">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox" checked>
+									<span>후할인 주행거리 특별약관</span>
+								</label>
+							</div>
+							<div class="cont">
+								<!-- // -->
+								<dl class="form">
+									<dt>약정/과거 운행거리 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<div class="select-wrap" data-autoset="select">
+											<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+												<span data-select="title">선택</span>
+												<span data-select="text" data-value="5">후할인 주행거리 특약 1만</span>
+											</button>
+											<div class="list">
+												<div data-label="약정/과거 운행거리">
+													<div class="option">
+														<label><input type="radio" name="selectOpeion1" value="1"><span>후할인 주행거리 특약 2천</span></label>
+														<label><input type="radio" name="selectOpeion1" value="2"><span>후할인 주행거리 특약 3천</span></label>
+														<label><input type="radio" name="selectOpeion1" value="3"><span>후할인 주행거리 특약 5천</span></label>
+														<label><input type="radio" name="selectOpeion1" value="4"><span>후할인 주행거리 특약 7천</span></label>
+														<label><input type="radio" name="selectOpeion1" value="5"><span>후할인 주행거리 특약 1만</span></label>
+														<label><input type="radio" name="selectOpeion1" value="6"><span>후할인 주행거리 특약 1만 2천</span></label>
+														<label><input type="radio" name="selectOpeion1" value="7"><span>후할인 주행거리 특약 1만 5천</span></label>
+													</div>
+													<button type="button" data-toggle="closebtn">확인</button>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>차량등록일 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<div class="input-date1">
+											<span>
+												<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>날짜 선택</button>
+												<input type="text" class="text" title="날짜 선택" value="2022.03.25" placeholder="날짜를 선택해주세요." readonly>
+											</span>
+										</div>
+									</dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>계기판운행거리/평균연간 주행거리 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<div class="input-wrap1">
+											<input type="tel" class="text" title="계기판운행거리" value="0" readonly>
+											<input type="tel" class="text" title="평균연간 주행거리" value="0" readonly>
+										</div>
+									</dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>서울시</dt>
+									<dd>
+										<div class="label-btn1">
+											<label>
+												<input type="radio" name="uiFormRadio">
+												<span>예</span>
+											</label>
+											<label>
+												<input type="radio" name="uiFormRadio">
+												<span>아니요</span>
+											</label>
+										</div>
+									</dd>
+								</dl>
+								<!-- // -->
+							</div>
+						</div>
+
+						<!-- # 선택불가 : 선할인 주행거리 특별약관 # -->
+						<div class="area1">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox" disabled>
+									<span>선할인 주행거리 특별약관</span>
+								</label>
+							</div>
+						</div>
+
+						<!-- # 자녀할인 특별약관 # -->
+						<div class="area1 current">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox" checked>
+									<span>자녀할인 특별약관</span>
+								</label>
+							</div>
+							<div class="side"><a href="javascript:void(0);" class="icon-com2 ic1">도움말 보기</a></div>
+							<div class="cont">
+								<!-- // -->
+								<dl class="form">
+									<dt>자녀/태아 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<!-- 기본 -->
+										<div class="label-btn1">
+											<label>
+												<input type="radio" name="uiFormRadio">
+												<span>자녀</span>
+											</label>
+											<label>
+												<input type="radio" name="uiFormRadio">
+												<span>태아</span>
+											</label>
+										</div>
+										<div class="validation">자녀 혹은 태아를 선택해주세요.</div>
+
+										<!-- 오류 -->
+										<div class="label-btn1">
+											<label>
+												<input type="radio" name="uiFormRadio" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+												<span>자녀</span>
+											</label>
+											<label>
+												<input type="radio" name="uiFormRadio">
+												<span>태아</span>
+											</label>
+										</div>
+										<div class="validation">자녀 혹은 태아를 선택해주세요.</div>
+										<!-- // -->
+									</dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>이름 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<!-- 기본 -->
+										<input type="text" class="text" placeholder="이름을 입력해주세요.">
+										<div class="validation">이름을 입력해주세요.</div>
+
+										<!-- 오류 -->
+										<input type="text" class="text" placeholder="이름을 입력해주세요." aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+										<div class="validation">이름을 입력해주세요.</div>
+									</dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>출산예정일/생년월일 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<div class="input-wrap1">
+											<div class="input-date1">
+												<span>
+													<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+													<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.08.26" readonly aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+												</span>
+											</div>
+											<div class="text w1">
+												<input type="text" title="나이" value="30" readonly>
+												<span class="util1">세</span>
+											</div>
+										</div>
+										<div class="validation">출산예정일 혹은 생년월일을 입력해주세요.</div>
+									</dd>
+								</dl>
+								<!-- // -->
+							</div>
+						</div>
+						<!-- # // # -->
+					</div>
+				</fieldset>
+
+				<!-- ### [기타특약] ### -->
+				<fieldset>
+					<legend class="tit">
+						<strong>기타특약</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</legend>
+					<div data-toggle="content" class="form-wrap1 t1">
+						<!-- # 대리운전 위험담보 특별약관 # -->
+						<div class="area1">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>대리운전 위험담보 특별약관</span>
+								</label>
+							</div>
+						</div>
+
+						<!-- # 유상운송 위험담보 특별약관 # -->
+						<div class="area1">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>유상운송 위험담보 특별약관</span>
+								</label>
+							</div>
+							<div class="cont">
+								<dl class="form">
+									<dt>특약세부구분 <em class="icon-required2">필수</em></dt>
+									<!-- // -->
+									<dd>
+										<div class="select-wrap" data-autoset="select">
+											<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+												<span data-select="title">선택</span>
+												<span data-select="text" data-value="1">여객운송용도</span>
+											</button>
+											<div class="list">
+												<div data-label="특약세부구분"><button type="button" data-toggle="close">닫기</button>
+													<div class="option">
+														<label><input type="radio" name="selectOpeion2" value="1"><span>여객운송용도</span></label>
+													</div>
+													<button type="button" data-toggle="closebtn">확인</button>
+												</div>
+											</div>
+										</div>
+									</dd>
+									<!-- // -->
+								</dl>
+							</div>
+						</div>
+						<!-- # // # -->
+
+						<!-- # [CASE] 가입만 보기 : 가입한 특약이 없을 경우 # -->
+						<div class="mes-result1">
+							<p>
+								<strong>가입한 특약이 없습니다.</strong>
+								<span>가입만 보기를 풀고 확인하세요.</span>
+							</p>
+						</div>
+						<!-- # // # -->
+					</div>
+				</fieldset>
+
+				<!-- ### [특약보장(담보)] ### -->
+				<fieldset>
+					<legend class="tit">
+						<strong>특약보장(담보)</strong>
+						<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+					</legend>
+					<div data-toggle="content" class="form-wrap1 t1">
+						<!-- # [대인] 신법률비용지원서비스 특별약관(형사합의 지원금) # -->
+						<div class="area1">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>[대인] 신법률비용지원서비스 특별약관(형사합의 지원금)</span>
+								</label>
+							</div>
+							<div class="cont">
+								<!-- // -->
+								<dl class="form">
+									<dt>특약세부구분 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<div class="select-wrap" data-autoset="select">
+											<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+												<span data-select="title">선택</span>
+												<span data-select="text" data-value="1">기본형</span>
+											</button>
+											<div class="list">
+												<div data-label="특약세부구분"><button type="button" data-toggle="close">닫기</button>
+													<div class="option">
+														<label><input type="radio" name="selectOpeion3" value="1"><span>기본형</span></label>
+													</div>
+													<button type="button" data-toggle="closebtn">확인</button>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>요율/보험료 <em class="icon-required2">필수</em></dt>
+									<dd>
+										<div class="input-wrap1">
+											<div class="text">
+												<input type="tel" title="요율" disabled>
+												<span class="util1">%</span>
+											</div>
+											<div class="text">
+												<input type="tel" title="보험료" disabled>
+												<span class="util1">원</span>
+											</div>
+										</div>
+									</dd>
+								</dl>
+								<!-- // -->
+								<dl class="form">
+									<dt>비고</dt>
+									<dd>
+										<input type="text" class="text" placeholder="비고" value="자차담보에 포함" disabled>
+									</dd>
+								</dl>
+								<!-- // -->
+							</div>
+						</div>
+
+						<!-- # [대인] 신법률비용지원서비스 특별약관(변호사선임비용) # -->
+						<div class="area1">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>[대인] 신법률비용지원서비스 특별약관(변호사선임비용)</span>
+								</label>
+							</div>
+						</div>
+
+						<!-- # [대인] 신법률비용지원서비스 특별약관(벌금) # -->
+						<div class="area1">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>[대인] 신법률비용지원서비스 특별약관(벌금)</span>
+								</label>
+							</div>
+						</div>
+
+						<!-- # [기타] 장애인 전용 보장성보험 전환 특약 # -->
+						<div class="area1">
+							<div class="label-check1">
+								<label>
+									<input type="checkbox">
+									<span>[기타] 장애인 전용 보장성보험 전환 특약</span>
+								</label>
+							</div>
+						</div>
+						<!-- # // # -->
+
+						<!-- # [CASE] 가입만 보기 : 가입한 특약이 없을 경우 # -->
+						<div class="mes-result1">
+							<p>
+								<strong>가입한 특약이 없습니다.</strong>
+								<span>가입만 보기를 풀고 확인하세요.</span>
+							</p>
+						</div>
+						<!-- # // # -->
+					</div>
+				</fieldset>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">적용</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	// 체크박스 선택시 활성화 예시
+	$(document).on('change','.form-wrap1.t1 .label-check1 input[type="checkbox"]',function(){
+		if($(this).prop('checked')===true){
+			$(this).parents('.area1').addClass('current');
+		}else{
+			$(this).parents('.area1').removeClass('current');
+		}
+	});
+//-->
+</script>
+</body>
+</html>

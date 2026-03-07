@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 지급제한/질권채권조회 | [T] 계약기본 | 계약상세 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>지급제한/질권채권조회</h1>
+			<button type="button" data-btn="pop-close">지급제한/질권채권조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [계약정보]  -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+				<div class="info">
+					<dl>
+						<dt>증권번호</dt>
+						<dd>LA123456789</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [지급제한/질권채권 목록] -->
+			<!-- ######################### -->
+			<div class="area-toggle1" data-autoset="toggle">
+				<ul>
+					<!-- // -->
+					<li>
+						<!-- # 고정 노출 항목 # -->
+						<div class="tit">
+							<!-- [상태] -->
+							<em class="icon-state2 ic3">정상</em>
+							<em class="icon-state2 ic2">해지</em>
+							<!-- [구분] -->
+							<strong>구분</strong>
+							<!-- [설정금액] -->
+							<dl class="data2">
+								<dt>설정금액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<!-- [설정일자] -->
+							<dl class="data2">
+								<dt>설정일자</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<!-- [질권/채권자] -->
+							<dl class="data2">
+								<dt>질권/채권자</dt>
+								<dd>질권/채권자명</dd>
+							</dl>
+							<!-- [버튼] -->
+							<button type="button" data-toggle="btn" aria-expanded="false">@구분@ 상세보기</button>
+						</div>
+
+						<!-- # 상세정보 # -->
+						<div data-toggle="content" class="info-con1">
+							<dl>
+								<dt>종료일자</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<dl>
+								<dt>해지일자</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+							<dl>
+								<dt>승인기관</dt>
+								<dd>기관명</dd>
+							</dl>
+							<dl>
+								<dt>승인입력자</dt>
+								<dd>입력자명</dd>
+							</dl>
+							<dl>
+								<dt>입력일자</dt>
+								<dd>0000.00.00</dd>
+							</dl>
+						</div>
+						<!-- # // # -->
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<em class="icon-state2 ic3">정상</em>
+							<strong>(질권)환급금</strong>
+							<dl class="data2">
+								<dt>설정금액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<dl class="data2">
+								<dt>설정일자</dt>
+								<dd>2022.10.20</dd>
+							</dl>
+							<dl class="data2">
+								<dt>질권/채권자</dt>
+								<dd>하다미</dd>
+							</dl>
+							<button type="button" data-toggle="btn" aria-expanded="false">(질권)환급금 상세보기</button>
+						</div>
+						<div data-toggle="content" class="info-con1">
+							<dl>
+								<dt>종료일자</dt>
+								<dd>2022.10.15</dd>
+							</dl>
+							<dl>
+								<dt>해지일자</dt>
+								<dd>2022.10.20</dd>
+							</dl>
+							<dl>
+								<dt>승인기관</dt>
+								<dd>서울사업단</dd>
+							</dl>
+							<dl>
+								<dt>승인입력자</dt>
+								<dd>김무명</dd>
+							</dl>
+							<dl>
+								<dt>입력일자</dt>
+								<dd>2022.10.15</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="tit">
+							<em class="icon-state2 ic2">해지</em>
+							<strong>(질권)환급금</strong>
+							<dl class="data2">
+								<dt>설정금액</dt>
+								<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+							<dl class="data2">
+								<dt>설정일자</dt>
+								<dd>2022.10.20</dd>
+							</dl>
+							<dl class="data2">
+								<dt>질권/채권자</dt>
+								<dd>송유미남말봄</dd>
+							</dl>
+							<button type="button" data-toggle="btn" aria-expanded="false">(질권)환급금 상세보기</button>
+						</div>
+						<div data-toggle="content" class="info-con1">
+							<dl>
+								<dt>종료일자</dt>
+								<dd>2022.10.15</dd>
+							</dl>
+							<dl>
+								<dt>해지일자</dt>
+								<dd>2022.10.20</dd>
+							</dl>
+							<dl>
+								<dt>승인기관</dt>
+								<dd>서울사업단</dd>
+							</dl>
+							<dl>
+								<dt>승인입력자</dt>
+								<dd>김무명</dd>
+							</dl>
+							<dl>
+								<dt>입력일자</dt>
+								<dd>2022.10.15</dd>
+							</dl>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- 더보기(현재페이지/총페이지) -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

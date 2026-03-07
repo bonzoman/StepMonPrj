@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 가망후보자 정보 수정 | 가망후보자등록 | 가망후보자관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>가망후보자 정보 수정</h1>
+			<button type="button" data-btn="pop-close">가망후보자 정보 수정 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [정보입력] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>가망후보자 정보 수정</legend>
+
+				<!-- # 후보자이름 # -->
+				<dl class="form">
+					<dt>후보자이름</dt>
+					<dd><input type="text" class="text" title="후보자이름" placeholder="후보자이름을 입력해주세요." value="하다미"></dd>
+				</dl>
+
+				<!-- # 생년월일/성별 # -->
+				<dl class="form">
+					<dt>생년월일/성별</dt>
+					<dd>
+						<div class="text">
+							<input type="tel" title="주민등록번호앞6자리" maxlength="6" placeholder="생년월일" value="790318">
+							<span class="util">-</span>
+							<input type="tel" title="주민등록번호뒷첫자리" maxlength="1" placeholder="성별" value="2">
+							<span class="util" data-masking="true">******</span>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 도입자 # -->
+				<dl class="form">
+					<dt>도입자</dt>
+					<dd>
+						<div class="input-btn1">
+							<data class="text" value="홍길동">홍길동</data>
+							<button type="button" class="icon-com1 ic2">직원조회</button>
+						</div>
+						<data class="text disabled" data-label="소속" value="강남제3사업단 강남01지점">강남제3사업단 강남01지점</data>
+					</dd>
+				</dl>
+
+				<!-- # 경력구분 # -->
+				<dl class="form">
+					<dt>경력구분</dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택해주세요.</span>
+								<span data-select="text" data-value="1">신인</span>
+							</button>
+							<div class="list">
+								<div data-label="경력구분 선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion" value="1"><span>신인</span></label>
+										<label><input type="radio" name="selectOpeion" value="2"><span>경력(3년이내 1년이상)</span></label>
+										<label><input type="radio" name="selectOpeion" value="3"><span>교차모집</span></label>
+										<label><input type="radio" name="selectOpeion" value="4"><span>기타</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action">삭제</button>
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

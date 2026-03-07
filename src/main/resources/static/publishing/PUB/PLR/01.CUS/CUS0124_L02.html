@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L]우편물수령지 확인안내 | 고객주소관리 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [레이어팝업] 우편물수령지 확인안내 ### -->
+<!-- ################################################### -->
+<div id="uiPOPDPCUS0124L01" class="pop-mes2" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>우편물수령지 확인안내</dt>
+		<dd>
+            <div><strong>‘자택’</strong> 주소를 우편물 수령지로 등록한 계약이 있어요.</div>
+            <div>우편물수령지로 등록한 주소는 삭제할 수 없어요.</div>
+            <div>해당 계약에 대한 우편물 수령지를 다른 주소로 수정할까요?</div>
+        </dd>
+		<!-- // -->
+		<dd class="area-action">
+            <button type="button" class="btn-action" data-btn="pop-close">취소</button>
+			<button type="button" class="btn-action c1">확인</button>
+		</dd>
+		<!-- // -->
+	</dl>
+</div>
+<!-- ##################################### -->
+<script>
+//<!--
+	//레이어팝업 선언
+	$plugin.popmodal('#uiPOPDPCUS0124L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPDPCUS0124L01').trigger('outputOpen');
+//-->
+</script>
+</body>
+</html>

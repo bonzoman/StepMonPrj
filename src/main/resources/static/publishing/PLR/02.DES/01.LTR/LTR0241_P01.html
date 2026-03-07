@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 나만의 플랜 관리 | 담보설정 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>나만의 플랜 관리</h1>
+			<button type="button" data-btn="pop-close">나만의 플랜 관리 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<h2 class="tit2">let:smile 종합건강보험(더끌림 플러스)(2201)_납입면제적용형</h2>
+
+				<!-- # 추가하기 버튼 [M 2022-08-12] # -->
+				<div class="area-btn1">
+					<button type="button" class="btn-com1 ic3">추가하기</button>
+				</div>
+			</div>
+
+			<!-- # 안내문구 [M 2022-08-12] # -->
+			<div class="mes-info2"><p>가지고 있는 나만의 플랜에도 저장할 수 있습니다.</p></div>
+
+			<!-- ######################### -->
+			<!-- [플랜목록] -->
+			<!-- ######################### -->
+			<div class="info-data1">
+				<ul>
+					<!-- // -->
+					<li>
+						<strong class="tit">플랜명</strong>
+						<div class="side">
+							<button type="button" class="btn-sub3 c2">수정</button>
+							<button type="button" class="btn-sub3 c2">삭제</button>
+						</div>
+						<button type="button" data-btn="selection" class="selected">선택</button> <!-- [D] 선택되었을 경우 : 클래스명(.selected) 추가 -->
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">실버 플랜</strong>
+						<div class="side">
+							<button type="button" class="btn-sub3 c2">수정</button>
+							<button type="button" class="btn-sub3 c2">삭제</button>
+						</div>
+						<button type="button" data-btn="selection">선택</button>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">에메랄드 플랜</strong>
+						<div class="side">
+							<button type="button" class="btn-sub3 c2">수정</button>
+							<button type="button" class="btn-sub3 c2">삭제</button>
+						</div>
+						<button type="button" data-btn="selection">선택</button>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit">사파이어 플랜</strong>
+						<div class="side">
+							<button type="button" class="btn-sub3 c2">수정</button>
+							<button type="button" class="btn-sub3 c2">삭제</button>
+						</div>
+						<button type="button" data-btn="selection">선택</button>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단버튼] -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

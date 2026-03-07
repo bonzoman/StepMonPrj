@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 건물구조 선택 | 재물보험 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-10]	① 이전버튼 삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>건물구조 선택</h1>
+			<button type="button" data-btn="pop-close">건물구조 선택 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [탭버튼] -->
+			<!-- [D] 탭버튼 호출 샘플 하단 참고 -->
+			<!-- ######################### -->
+			<div class="nav-tab1" data-sticky="top">
+				<ul>
+					<li class="active"><a href="#uiTabSection1">기둥</a></li>
+					<li><a href="#uiTabSection2">지붕</a></li>
+					<li><a href="#uiTabSection3">외벽</a></li>
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 기둥 -->
+			<!-- ######################### -->
+			<div id="uiTabSection1" class="ui-tabcon active">
+				<h2 class="hide">기둥</h2>
+
+				<!-- ### 목록 ### -->
+				<div class="list-t4 t1">
+					<ul>
+						<li>
+							<!-- [D] DB에 등록된 이미지 노출
+								이미지 없을 경우 : /resource/img/com/noimg3.png
+							-->
+							<span class="img"><img src="../../../resource/img/com/noimg3.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio1">
+								<span>조적조</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/com/noimg2.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio1">
+								<span>무근콘크리트조</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_banner10.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio1">
+								<span>철골콘크리트조</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio1">
+								<span>프리스트레스트콘크리트조</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio1">
+								<span>프리스트레스트콘크리트조</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio1">
+								<span>철근콘크리트조</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio1">
+								<span>철골철근 콘크리트조</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio1">
+								<span>경량철골조</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio1">
+								<span>벽돌조</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+
+				<!-- ### 버튼 ### -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action c1" onclick="uiFunction('#uiTabSection2')">확인</button> <!-- [D] uiFunction 샘플 -->
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 지붕 -->
+			<!-- ######################### -->
+			<div id="uiTabSection2" class="ui-tabcon">
+				<h2 class="hide">지붕</h2>
+
+				<!-- ### 목록 ### -->
+				<div class="list-t4 t1">
+					<ul>
+						<li>
+							<!-- [D] DB에 등록된 이미지 노출
+								이미지 없을 경우 : /resource/img/com/noimg3.png
+							-->
+							<span class="img"><img src="../../../resource/img/com/noimg3.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio2">
+								<span>슬래브즙</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio2">
+								<span>철골철판즙</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio2">
+								<span>슬레이트즙</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio2">
+								<span>철골지붕틀 천막잇기</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio2">
+								<span>샌드위치판넬즙</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio2">
+								<span>4급기타</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio2">
+								<span>목조지붕틀 슬레이트즙</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio2">
+								<span>철골기붕틀 칼라피복철판즙</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio2">
+								<span>목조지붕틀 기와즙</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+
+				<!-- ### 버튼 ### -->
+				<div class="area-action" data-fixed="bottom">
+					<!-- <button type="button" class="btn-action" onclick="uiFunction('#uiTabSection1')">이전</button> --> <!-- 2022-11-10 삭제 -->
+					<button type="button" class="btn-action c1" onclick="uiFunction('#uiTabSection3')">확인</button> <!-- [D] uiFunction 샘플 -->
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [탭컨텐츠] 외벽 -->
+			<!-- ######################### -->
+			<div id="uiTabSection3" class="ui-tabcon">
+				<h2 class="hide">외벽</h2>
+
+				<!-- ### 목록 ### -->
+				<div class="list-t4 t1">
+					<ul>
+						<li>
+							<!-- [D] DB에 등록된 이미지 노출
+								이미지 없을 경우 : /resource/img/com/noimg3.png
+							-->
+							<span class="img"><img src="../../../resource/img/com/noimg3.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio3">
+								<span>치장벽돌</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio3">
+								<span>치장벽돌</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio3">
+								<span>시멘트몰탈</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio3">
+								<span>프리캐스트판넬</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio3">
+								<span>칼라피복철판</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio3">
+								<span>블록벽</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio3">
+								<span>샌드위치판넬</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio3">
+								<span>천막구조</span>
+							</label>
+						</li>
+						<li>
+							<span class="img"><img src="../../../resource/img/temp/@img_img.png" alt=""></span>
+							<label>
+								<input type="radio" name="radio3">
+								<span>금속판</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+
+				<!-- ### 버튼 ### -->
+				<div class="area-action" data-fixed="bottom">
+					<!-- <button type="button" class="btn-action" onclick="uiFunction('#uiTabSection2')">이전</button> --> <!-- 2022-11-10 삭제 -->
+					<button type="button" class="btn-action c1">확인</button>
+				</div>
+				<!-- ### // ### -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	// 탭버튼 호출
+	$plugin.togglecon('.nav-tab1', {
+		toggle_type : 'tab',
+		selector : '.nav-tab1 > ul > li',
+		selector_btn : '> a',
+		selector_con : '#href'
+	});
+
+	//[샘플] 다음탭 이동
+	function uiFunction(id){
+		$('[href="'+id+'"]').trigger('click');
+	}
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LAYOUT | PUBLISHING GUIDE</title>
+	<link rel="stylesheet" href="../../resource/css/common.css?20220914">
+	<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+	<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/ui.plugin.js"></script>
+	<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] #popup (상세페이지 참고) ### -->
+<!-- ################################################### -->
+
+<!-- ################################################### -->
+<!-- ### [바닥페이지] #wrapper ### -->
+<!-- ################################################### -->
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>페이지 타이틀</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<p class="area-temp">컨텐츠영역</p>
+	</div>
+
+	<!-- # 임시메뉴
+	<div class="area-temp2">
+		<button type="button" class="btn-sub4 c1">주소복사</button>
+		<strong>개 발</strong>
+	</div>
+	# // # -->
+
+	<!-- -------------------------------------- -->
+	<!-- # [FOOTER] 하단 네비게이션 -->
+	<!-- -------------------------------------- -->
+	<footer class="footer">
+		<a href="javascript:void(0);" class="icon-com1 ic-cnd1"><span>플레이</span></a>
+		<a href="javascript:void(0);" class="icon-com1 ic-cnd2"><span>커뮤니티</span></a>
+		<a href="javascript:void(0);" class="icon-com1 ic-cnd3"><span>스터디</span></a>
+		<a href="javascript:void(0);" class="icon-com1 ic-cnd4 current"><span>알림</span><em class="icon-noti1 ic1">미확인 알림 있음</em></a>
+		<a href="javascript:void(0);" class="icon-com1 ic-cnd5"><span>내정보</span></a>
+	</footer>
+</main>
+
+<!-- -------------------------------------- -->
+<!-- # [ASIDE_MENU] 전체메뉴 -->
+<!-- -------------------------------------- -->
+<aside id="asideTotalMenu" class="aside-menu" data-popmodal="true" aria-label="전체메뉴">
+	<div>전체메뉴영역<button type="button" data-btn="pop-close">전체메뉴닫기</button></div>
+</aside>
+<!-- -------------------------------------- -->
+
+<!-- ################################################### -->
+<!-- ### [레이어팝업] .pop-modal (상세페이지 참고) ### -->
+<!-- ################################################### -->
+
+<!-- ################################################### -->
+<script>
+//<!--
+    $('.footer .icon-com1').on('click',function(){
+        $(this).addClass('current').siblings().removeClass('current');
+    });
+//-->
+</script>
+</body>
+</html>

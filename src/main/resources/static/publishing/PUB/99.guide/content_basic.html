@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>INFO | CONTENTS | PUBLISHING GUIDE</title>
+	<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/publish.css?20220913">
+	<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/ui.plugin.js"></script>
+	<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<div class="guide-wrap">
+	<header>
+		<h1>
+			<i>롯데손해보험</i> CONTENTS <strong>BASIC</strong>
+			<a href="../99.work/coding_list1.html" class="guide-btn1">작업목록</a>
+		</h1>
+		<nav>
+			<ul>
+				<li class="active"><a href="content_basic.html" aria-current="page">INFO</a></li>
+				<li><a href="content_txt.html">TITLE/TXT</a></li>
+				<li><a href="content_btn.html">BUTTON</a></li>
+				<li><a href="content_icon.html">ICON</a></li>
+				<li><a href="content_form.html">FORM ELEMENT</a></li>
+				<li><a href="content_formarea.html">FORM 약관/검색</a></li>
+				<li><a href="content_formarea2.html">FORM 입력</a></li>
+				<li><a href="content_tab.html">TAB/TOGGLE</a></li>
+				<li><a href="content_tbl.html">TABLE</a></li>
+				<li><a href="content_box.html">BOX/BANNER</a></li>
+				<li><a href="content_info.html">INFO/DATA</a></li>
+				<li><a href="content_list.html">LIST</a></li>
+				<li><a href="content_bbs.html">BOARD</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<article class="guide-container">
+		<h1 class="hide">작업 가이드</h1>
+
+		<!-- ############################## -->
+		<!-- [기본] -->
+		<!-- ############################## -->
+		<section class="guide-section">
+			<h2 class="guide-tit">기본</h2>
+			<h3 class="guide-tit2">폰트</h3>
+<pre><code class="css">/* 웹폰트 */
+@font-face {
+	font-family:'NotoSansKr';font-weight:normal;font-style:normal;
+	src:url('../font/NotoSansKR-Regular.woff2');
+}
+
+@font-face {
+	font-family:'NotoSansKr';font-weight:600;font-style:normal;
+	src:url('../font/NotoSansKR-Medium.woff2');
+}
+
+@font-face {
+	font-family:'NotoSansKr';font-weight:700;font-style:normal;
+	src:url('../font/NotoSansKR-Bold.woff2');
+}</code></pre>
+<pre><code class="css">/* 기본:10px */
+html {font-size:62.5%;}
+
+/* 360px 이하 : 360해상도 기준 10px */
+@media (max-width:359px) {html {font-size:2.777777777777778vw;}}
+
+/* 본문 */
+body {font-family:'NotoSansKr', sans-serif;font-size:1.5rem;line-height:1.6;}</code></pre>
+			<div class="guide-area popup">
+				<div class="guide-tbl">
+					<table>
+						<caption>사이즈별 폰트</caption>
+						<colgroup><col style="width:10%;"/><col style="width:8%;"/><col></colgroup>
+						<thead>
+							<tr>
+								<th scope="col" colspan="2">구분</th>
+								<th scope="col">내용</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="rowgroup" rowspan="3">NotoSansKr</th>
+								<th scope="row">Regular</th>
+								<td>기본텍스트</td>
+							</tr>
+							<tr>
+								<th scope="row">Medium</th>
+								<td>font-weight:600</td>
+							</tr>
+							<tr>
+								<th scope="row">Bold</th>
+								<td>font-weight:700 / bold</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">CSS변수</h3>
+			<p class="guide-txt">CSS 변수는 사이트 전체 디자인 가이드에 공통적으로 사용되는 속성에 한하여 사용한다.</p>
+			<div class="guide-area popup">
+				<h4 class="guide-tit3">기본 :root</h4>
+				<div class="guide-tbl">
+					<table>
+						<caption>CSS변수(수치)</caption>
+						<colgroup><col style="width:20%;"/><col style="width:30%;"/><col/></colgroup>
+						<thead>
+							<tr>
+								<th scope="col">속성</th>
+								<th scope="col">값</th>
+								<th scope="col">내용</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">--space1</th>
+								<td>2.4rem</td>
+								<td><span class="guide-icon1">여백</span></td>
+							</tr>
+							<tr>
+								<th scope="row">--space2</th>
+								<td>2.0rem</td>
+								<td><span class="guide-icon1">여백</span> 레이아웃 좌우 공통 여백</td>
+							</tr>
+							<tr>
+								<th scope="row">--space3</th>
+								<td>1.6rem</td>
+								<td><span class="guide-icon1">여백</span> 영역별 공통 간격</td>
+							</tr>
+							<tr>
+								<th scope="row">--space4</th>
+								<td>1.2rem</td>
+								<td><span class="guide-icon1">여백</span></td>
+							</tr>
+							<tr>
+								<th scope="row">--space5</th>
+								<td>0.8rem</td>
+								<td><span class="guide-icon1">여백</span> 요소별 공통 간격</td>
+							</tr>
+							<tr>
+								<th scope="row">--space6</th>
+								<td>0.4rem</td>
+								<td><span class="guide-icon1">여백</span></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<th scope="row">--com1</th>
+								<td>5.6rem</td>
+								<td><span class="guide-icon1">높이</span> 세로기준 높이1 : 액션버튼의 높이와 동일</td>
+							</tr>
+							<tr>
+								<th scope="row">--com2</th>
+								<td>4.8rem</td>
+								<td><span class="guide-icon1">높이</span></td>
+							</tr>
+							<tr>
+								<th scope="row">--com3</th>
+								<td>3.6rem</td>
+								<td><span class="guide-icon1">높이</span></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<th scope="row">--border-radius1</th>
+								<td>0.4rem</td>
+								<td><span class="guide-icon1">라운드</span></td>
+							</tr>
+							<tr>
+								<th scope="row">--border-radius2</th>
+								<td>1.6rem</td>
+								<td><span class="guide-icon1">라운드</span></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<th scope="row">--bgImg1</th>
+								<td>icon_set1.png</td>
+								<td><span class="guide-icon1">이미지1</span> 경로</td>
+							</tr>
+							<tr>
+								<th scope="row">--bgImg2</th>
+								<td>icon_set2.png</td>
+								<td><span class="guide-icon1">이미지2</span> 경로</td>
+							</tr>
+							<tr>
+								<th scope="row">--bgSize1</th>
+								<td>60.0rem auto</td>
+								<td><span class="guide-icon1">이미지</span>사이즈1 : 1/2</td>
+							</tr>
+							<tr>
+								<th scope="row">--bgSize2</th>
+								<td>40.0rem auto</td>
+								<td><span class="guide-icon1">이미지</span>사이즈1 : 1/3</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="guide-tbl">
+					<table>
+						<caption>CSS변수(색상)</caption>
+						<colgroup><col style="width:20%;"/><col style="width:30%;"/><col/></colgroup>
+						<thead>
+							<tr>
+								<th scope="col">속성</th>
+								<th scope="col">값</th>
+								<th scope="col">내용</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">--color1</th>
+								<td><span class="guide-color1" style="--el-bg:var(--color1)">#292929</span></td>
+								<td><span class="guide-icon1">폰트</span>기본</td>
+							</tr>
+							<tr>
+								<th scope="row">--color2</th>
+								<td><span class="guide-color1" style="--el-bg:var(--color2)">#666666</span></td>
+								<td><span class="guide-icon1">폰트</span>부가설명</td>
+							</tr>
+							<tr>
+								<th scope="row">--color3</th>
+								<td><span class="guide-color1" style="--el-bg:var(--color3)">#999999</span></td>
+								<td><span class="guide-icon1">폰트</span>비활성화</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<th scope="row">--point1</th>
+								<td><span class="guide-color1" style="--el-bg:var(--point1)">#E84427</span></td>
+								<td><span class="guide-icon1">포인트</span>컬러1</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<th scope="row">--bg1</th>
+								<td><span class="guide-color2" style="--el-bg:var(--bg1)">#F7F7F7</span></td>
+								<td><span class="guide-icon1">배경</span>컬러1</td>
+							</tr>
+							<tr>
+								<th scope="row">--bg2</th>
+								<td><span class="guide-color2" style="--el-bg:var(--bg2)">#dddddd</span></td>
+								<td><span class="guide-icon1">배경</span>컬러2</td>
+							</tr>
+							<tr>
+								<th scope="row">--bg3</th>
+								<td><span class="guide-color2" style="--el-bg:var(--bg3)">#eeeeee</span></td>
+								<td><span class="guide-icon1">배경</span>컬러3</td>
+							</tr>
+							<tr>
+								<th scope="row">--bg4</th>
+								<td><span class="guide-color1" style="--el-bg:var(--bg4)">#444444</span></td>
+								<td><span class="guide-icon1">배경</span>컬러4</td>
+							</tr>
+							<tr>
+								<th scope="row">--bg5</th>
+								<td><span class="guide-color1" style="--el-bg:var(--bg5)">#292929</span></td>
+								<td><span class="guide-icon1">배경</span>컬러5</td>
+							</tr>
+							<tr>
+								<th scope="row">--bg6</th>
+								<td><span class="guide-color2" style="--el-bg:var(--bg6)">#F8E9E9</span></td>
+								<td><span class="guide-icon1">배경</span>컬러6</td>
+							</tr>
+							<tr>
+								<th scope="row">--bg7</th>
+								<td><span class="guide-color2" style="--el-bg:var(--bg7)">#D9EEFF</span></td>
+								<td><span class="guide-icon1">배경</span>컬러7</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<th scope="row">--line1</th>
+								<td><span class="guide-color2" style="--el-bg:var(--line1)">#dddddd</span></td>
+								<td><span class="guide-icon1">라인</span>컬러1</td>
+							</tr>
+							<tr>
+								<th scope="row">--line2</th>
+								<td><span class="guide-color2" style="--el-bg:var(--line2)">#E6E6E6</span></td>
+								<td><span class="guide-icon1">라인</span>컬러2</td>
+							</tr>
+							<tr>
+								<th scope="row">--line3</th>
+								<td><span class="guide-color1" style="--el-bg:var(--line3)">#444444</span></td>
+								<td><span class="guide-icon1">라인</span>컬러3</td>
+							</tr>
+							<tr>
+								<th scope="row">--line4</th>
+								<td><span class="guide-color1" style="--el-bg:var(--line4)">#777777</span></td>
+								<td><span class="guide-icon1">라인</span>점선</td>
+							</tr>
+							<tr>
+								<th scope="row">--line5</th>
+								<td><span class="guide-color1" style="--el-bg:var(--line5)">#883627</span></td>
+								<td><span class="guide-icon1">라인</span>다크모드</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<hr class="guide-line2">
+
+				<h4 class="guide-tit3">페이지유형에 따른 속성</h4>
+				<div class="guide-tbl">
+					<table>
+						<caption>CSS변수(수치)</caption>
+						<colgroup><col style="width:20%;"/><col/><col style="width:20%;"/><col style="width:20%;"/></colgroup>
+						<thead>
+							<tr>
+								<th scope="col">속성</th>
+								<th scope="col">내용</th>
+								<th scope="col">바닥페이지</th>
+								<th scope="col">팝업페이지</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">--page-container-padding-top</th>
+								<td><span class="guide-icon1">여백</span> 컨테이너 상단여백</td>
+								<td>1.2rem</td>
+								<td>4.8rem</td>
+							</tr>
+							<tr>
+								<th scope="row" rowspan="2">--page-wrap-padding-bottom</th>
+								<td><span class="guide-icon1">여백</span> 페이지 하단여백</td>
+								<td>5.6rem</td>
+								<td>5.6rem</td>
+							</tr>
+							<tr>
+								<td><span class="guide-icon1">여백</span> CTA버튼이 있을 경우</td>
+								<td>15.2rem</td>
+								<td>15.2rem</td>
+							</tr>
+							<tr>
+								<th scope="row">--page-bg</th>
+								<td><span class="guide-icon1">배경</span> 페이지 BG</td>
+								<td><span class="guide-color2" style="--el-bg:var(--bg1)">#F7F7F7</span></td>
+								<td><span class="guide-color2">#FFFFFF</span></td>
+							</tr>
+							<tr>
+								<th scope="row">--page-bg-color</th>
+								<td><span class="guide-icon1">배경</span> 박스 BG</td>
+								<td><span class="guide-color2">#FFFFFF</span></td>
+								<td><span class="guide-color2" style="--el-bg:var(--bg1)">#F7F7F7</span></td>
+							</tr>
+							<tr>
+								<th scope="row">--page-bg-color2</th>
+								<td><span class="guide-icon1">배경</span> 박스 BG</td>
+								<td><span class="guide-color2" style="--el-bg:var(--bg3)">#EEEEEE</span></td>
+								<td><span class="guide-color2" style="--el-bg:var(--bg1)">#F7F7F7</span></td>
+							</tr>
+							<tr>
+								<td><span class="guide-icon1">배경</span> 다크모드</td>
+								<td colspan="2"><span class="guide-color1" style="--el-bg:var(--bg5)">#292929</span></td>
+							</tr>
+							<tr>
+								<th scope="row">--page-bg-color4</th>
+								<td><span class="guide-icon1">배경</span> 박스 BG</td>
+								<td><span class="guide-color2">#FFFFFF</span></td>
+								<td><span class="guide-color2" style="--el-bg:var(--bg1)">#F7F7F7</span></td>
+							</tr>
+							<tr>
+								<th scope="row" rowspan="2">--page-bg-color5</th>
+								<td><span class="guide-icon1">배경</span> 박스 BG</td>
+								<td><span class="guide-color2">#FFFFFF</span></td>
+								<td><span class="guide-color2">#FFFFFF</span></td>
+							</tr>
+							<tr>
+								<td><span class="guide-icon1">배경</span> 다크모드</td>
+								<td colspan="2"><span class="guide-color1" style="--el-bg:var(--bg5)">#292929</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<h3 class="guide-tit2">기타</h3>
+			<p class="guide-txt">하단 클래스는 기본 선언은 되어있으나 개별사용은 지양, 부모 클래스를 통해 스타일 선언하되 예외상황에서 사용</p>
+			<div class="guide-area popup">
+				<div class="guide-tbl">
+					<table>
+						<caption>공통클래스(클래스명, 내용, 기타)</caption>
+						<colgroup><col style="width:20%;"/><col style="width:30%;"/><col></colgroup>
+						<thead>
+							<tr>
+								<th scope="col">클래스명</th>
+								<th scope="col">내용</th>
+								<th scope="col">기타</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>.hide / .hidden</td>
+								<td><span class="guide-icon1">DISPLAY</span>숨김요소</td>
+								<td>시각적으로만 숨김처리되는 요소로, 스크린리더를 통해서는 정보제공되는 대상</td>
+							</tr>
+							<tr>
+								<td>.none</td>
+								<td><span class="guide-icon1">DISPLAY</span>숨김요소</td>
+								<td>시각, 청각요소 모두 숨김처리대상. 주로 UI동작관련 하여 필요시 사용</td>
+							</tr>
+							<tr>
+								<td>.nodata</td>
+								<td><span class="guide-icon1">NODATA</span>상위 클래스 상속 스타일</td>
+								<td></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td>.txt-align1</td>
+								<td><span class="guide-icon1">정렬</span>텍스트중앙정렬</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>.txt-align2</td>
+								<td><span class="guide-icon1">정렬</span>텍스트좌측정렬</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>.txt-align3</td>
+								<td><span class="guide-icon1">정렬</span>텍스트우측정렬</td>
+								<td></td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td>.sub-con0</td>
+								<td><span class="guide-icon1">여백</span>상단 0</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>.sub-con1</td>
+								<td><span class="guide-icon1">여백</span>상단 24</td>
+								<td>--space1</td>
+							</tr>
+							<tr>
+								<td>.sub-con2</td>
+								<td><span class="guide-icon1">여백</span>상단 20</td>
+								<td>--space2</td>
+							</tr>
+							<tr>
+								<td>.sub-con3</td>
+								<td><span class="guide-icon1">여백</span>상단 16</td>
+								<td>--space3</td>
+							</tr>
+							<tr>
+								<td>.sub-con4</td>
+								<td><span class="guide-icon1">여백</span>상단 12</td>
+								<td>--space4</td>
+							</tr>
+							<tr>
+								<td>.sub-con5</td>
+								<td><span class="guide-icon1">여백</span>상단 8</td>
+								<td>--space5</td>
+							</tr>
+							<tr>
+								<td>.sub-con6</td>
+								<td><span class="guide-icon1">여백</span>상단 4</td>
+								<td>--space6</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!-- ############################## -->
+	</article>
+</div>
+<script src="../../resource/js/publish.plugin.js"></script>
+<script src="../../resource/js/publish.common.js"></script>
+<script>
+//<!--
+
+//-->
+</script>
+</body>
+</html>

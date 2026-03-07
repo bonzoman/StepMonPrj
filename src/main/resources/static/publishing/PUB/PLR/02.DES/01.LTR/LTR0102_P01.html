@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 설계메모 관리 | 가입설계조회 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>설계메모 관리</h1>
+			<button type="button" data-btn="pop-close">설계메모 관리 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [설계정보] -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">Let:smile 종합건강보험(더끌림 플러스) (22 01)_납입면제적용형</h2>
+				<div class="info">
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+				</div>
+				<div class="area-btn1"><button class="btn-com1 ic3">메모 등록하기</button></div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [메모영역] -->
+			<!-- ######################### -->
+			<!-- # 메모 건수 표기 : 메모 총 00건 # -->
+			<div class="area-info1">
+				<p>메모 총 <strong>3건</strong></p>
+			</div>
+
+			<!-- # 목록 # -->
+			<div class="board-list2">
+				<ul>
+					<!-- // -->
+					<li>
+						<dl class="info2">
+							<dt>등록자</dt>
+							<dd class="data-info1">
+								<span><strong>이름</strong><span>(소속기관)</span></span>
+								<span>사번</span>
+							</dd>
+							<dt>등록일자</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<div class="cont">메모내용</div>
+						<div class="area-btn4"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					</li>
+					<!-- // -->
+					<li>
+						<dl class="info2">
+							<dt>등록자</dt>
+							<dd class="data-info1">
+								<span><strong>하다미</strong><span>(장기지원팀)</span></span>
+								<span>1111123</span>
+							</dd>
+							<dt>등록일자</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<div class="cont">다른 보험 설계사에게서 못들어본 상품이라며 관심을 표하셨음. 추후 연락하기로 함</div>
+						<div class="area-btn4">
+							<button type="button" class="btn-sub3 c2">삭제</button>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<dl class="info2">
+							<dt>등록자</dt>
+							<dd class="data-info1">
+								<span><strong>하다미</strong><span>(장기지원팀)</span></span>
+								<span>1111123</span>
+							</dd>
+							<dt>등록일자</dt>
+							<dd><time datetime="2022-02-05">2022.02.05</time></dd>
+						</dl>
+						<div class="cont">
+							종신보험 상품 중 질병 진단보험을 미리 지급하는 구조로 상품 설계 변경 후,
+							질병 진단 시 보험금이 어떻게 지급되는지 피보험자에게 설명
+						</div>
+						<div class="area-btn4">
+							<button type="button" class="btn-sub3 c2">삭제</button>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+
+				<!-- 더보기(현재페이지/총페이지) -->
+				<div class="area-btn2">
+					<button type="button" class="btn-util2">더보기 <span>(2/10)</span></button>
+				</div>
+				<!-- // -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

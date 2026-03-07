@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[L] 이미지 편집 | 나의정보</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<div class="popup-wrapper">
+	<article>
+		<header class="header">
+			<h1>나의 정보</h1>
+			<button type="button" data-btn="pop-close">나의 정보 닫기</button>
+		</header>
+		<div class="container">
+			<section class="info-summary3 t1">
+				<h2 class="data-info1">
+					<span class="img">
+						<img src="../../resource/img/temp/@img_user1.png" alt="">
+						<a href="#uiPOPCOM1260L01">프로필 사진 변경</a> <!-- [레이어팝업 호출 샘플] -->
+					</span>
+					<strong>하다미 LP님</strong>
+				</h2>
+				<div class="data1">
+					<dl>
+						<dt>소속</dt>
+						<dd>강남사업단</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="wrap-section1"></section>
+			<section class="wrap-section3"></section>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+
+<!-- ################################################### -->
+<!-- ### [레이어 팝업] 이미지 편집 ### -->
+<!-- ################################################### -->
+<div id="uiPOPCOM1260L01" class="pop-modal1" data-popmodal="true">
+	<article>
+		<header>
+			<h1>이미지 편집</h1>
+			<button type="button" data-btn="pop-close">이미지 편집 닫기</button>
+		</header>
+		<div class="content">
+			<div class="label-check2">
+				<label>
+					<input type="radio" name="form-radio" checked>
+					<span>기본 이미지로 변경</span>
+				</label>
+				<label>
+					<input type="radio" name="form-radio">
+					<span>사진 변경</span>
+				</label>
+			</div>
+		</div>
+		<footer class="area-action">
+			<button type="button" class="btn-action c1">확인</button>
+		</footer>
+	</article>
+</div>
+<!-- ################################################### -->
+
+<script>
+//<!--
+	//레이어팝업 선언
+	var _popmodal = $plugin.popmodal('#uiPOPCOM1260L01');
+
+	//레이어팝업 강제오픈
+	$('#uiPOPCOM1260L01').trigger('outputOpen');
+
+	//[샘플] 레이어팝업 닫기
+	$('#uiPOPCOM1260L01 .btn-action.c1').on('click',function(){
+		_popmodal.outputClose();//팝업닫기
+		//이벤트 처리
+	});
+//-->
+</script>
+</body>
+</html>

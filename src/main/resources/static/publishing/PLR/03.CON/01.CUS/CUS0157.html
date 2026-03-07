@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 고객그룹관리 | 가족정보 관리 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>고객그룹관리</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [고객정보] -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<h2 class="data-info2 t2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+				<strong>고객명</strong>
+				<span>
+					<span>생년월일</span>
+					<span>성별</span>
+				</span>
+			</h2>
+			<div class="area-btn1">
+				<a href="javascript:void(0);" class="btn-com1 ic3">그룹 추가하기</a>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [그룹목록] -->
+		<!-- ######################### -->
+		<!-- [총 명수/정렬] -->
+		<div class="area-info1">
+			<p>총 <strong>17명</strong></p>
+			<div class="side">
+				<!-- // -->
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">정렬</span>
+						<span data-select="text" data-value="selectOpeion1">등록순</span>
+					</button>
+					<div class="list">
+						<div data-label="정렬">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion0" value="selectOpeion1"><span>등록순</span></label>
+								<label><input type="radio" name="selectOpeion0" value="selectOpeion2"><span>그룹명 가나다순</span></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- // -->
+			</div>
+		</div>
+
+		<!-- [목록] -->
+		<div class="info-data3">
+			<ul>
+				<!-- // -->
+				<li>
+					<div class="tit">
+						<strong>그룹명</strong>
+						<span>00명</span>
+					</div>
+					<div class="txt">상세메모</div>
+					<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					<a href="javascript:void(0);" class="link">상세보기</a>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="tit">
+						<strong>미정씨지인들</strong>
+						<span>15명</span>
+					</div>
+					<div class="txt">미정씨가 소개해준 분</div>
+					<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					<a href="javascript:void(0);" class="link">상세보기</a>
+				</li>
+				<!-- // -->
+				<li>
+					<div class="tit">
+						<strong>00싸이클동호회</strong>
+						<span>15명</span>
+					</div>
+					<div class="txt">매주 토요일 오후 2시 상암동 정기모임 매주 토요일 오후 2시 상암동 정기모임</div>
+					<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+					<a href="javascript:void(0);" class="link">상세보기</a>
+				</li>
+				<!-- // -->
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [조회된 그룹 없음] -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>조회된 그룹이 없어요</strong>
+				<span>"그룹 추가하기" 버튼을 눌러<br>특징별로 고객님을 모아보세요!</span>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<!-- <button type="button" class="btn-action c1" disabled>저장</button> : 비활성화 -->
+			<button type="button" class="btn-action c1">저장</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 확인사항 | 계약변경 업무요청작성 | 통합계약조회 | 계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>확인사항</h1>
+			<button type="button" data-btn="pop-close">확인사항 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [내용] -->
+			<!-- ######################### -->
+			<!-- [CASE] 일반부활 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>일반부활</strong> 요청 시 미리 확인해 주세요.</p> <!-- 2022-11-24 텍스트 변경 -->
+				<ul class="txt-bul1">
+					<li>질문서에 입력하셨나요?</li>
+					<li>부활 시 직업이 변경되면 부활 이후 변경이 필요하며, 책임준비금의 추징/환급이 발생할 수 있습니다. 또한 보장(담보) 및 보험료가 변경될 수 있습니다.</li>
+					<li>미성년자인 경우 대표친권자 지정 여부 및 필요서류를 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>가족관계증명서(상세)</li>
+							<li>기본증명서(상세/특정)</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 제지급(해약, 철회, 만기) -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>제지급(해약, 철회, 만기)</strong> 업무 요청 시 미리 확인해 주세요.</p> <!-- 2022-11-24 텍스트 변경 -->
+				<ul class="txt-bul1">
+					<li>의무보험(다중이용업소) 해약 시, 필요서류를 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>폐업: 페업사실확인서</li>
+							<li>중복가입: 타사 가입증빙서류</li>
+						</ul>
+					</li>
+					<li>환급금이 발생하면 계약자 본인 계좌로만 환급이 가능합니다. 타인 계좌로 환급금 지급을 요청하려면 영업점을 방문, 처리해 주세요.</li> <!-- 2022-11-24 텍스트 변경 -->
+					<li>미성년자인 경우 대표친권자 지정 여부 및 필요서류를 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>가족관계증명서(상세)</li>
+							<li>기본증명서(상세/특정)</li>
+						</ul>
+					</li>
+					<li>압류, 지급제한 등의 사항으로 제지급 처리가 불가능 할 수 있습니다. 이 경우 영업점을 방문해 주세요.</li> <!-- 2022-11-24 텍스트 변경 -->
+					<li>진단계약 등 철회 제지급 처리가 불가능할 수  있습니다. 이 경우 영업점을 방문해 주세요.</li> <!-- 2022-11-24 텍스트 변경 -->
+				</ul>
+			</div>
+
+			<!-- [CASE] 계약자/수익자변경 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>계약자/수익자변경</strong> 요청 시 미리 확인해 주세요.</p> <!-- 2022-11-24 텍스트 변경 -->
+				<ul class="txt-bul1">
+					<li>변경하려는 계약자/수익자가 고객등록 되어 있나요?</li>
+					<li>미성년자인 경우 대표친권자 지정 여부 및 필요서류를 확인하셨나요?</li>
+					<li>채권가압류, 질권설정계약, 대출계약, 전손계약, 연금보험계약, 선납계약, 실효계약, 연체계약, 갱신응당월 등은 변경 불가능합니다.</li> <!-- 2022-12-09 변경 -->
+					<li>LP가 2명 이상인 고객이 계약변경을 여러 개 요청할 경우 영업점 방문 안내 또는 콜센터 이용 안내를 해주세요.
+						<ul class="txt-bul2">
+							<li>콜센터: 1588-3344,  1600-3434</li>
+							<li>콜센터 운영시간:<br>
+								평일 9:00~21:00<br>
+								토/일/공휴일: 9:00~18:00</li>
+						</ul>
+						<div class="txt-bul4">평일 18:00 이후, 토/일/공휴일은 일부 업무 제한</div>
+					</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 피보험자 직업, 운전차종변경 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>피보험자 직업, 운전차종변경</strong> 요청 시<br>미리 확인해 주세요.</p> <!-- 2022-11-24 텍스트 변경 -->
+				<ul class="txt-bul1">
+					<li>질문서에 입력하셨나요? </li>
+					<li>직업 급수가 변경되면 책임준비금의 추징/환급이 발생할 수 있으며, 보장(담보) 및 보험료가 변경될 수 있습니다.</li>
+					<li>정상 계약만 변경할 수 있습니다.<br>(채권가압류, 질권설정계약, 전손계약, 선납계약, 실효계약, 연체계약, 갱신응당월 등은 변경할 수 없음)</li>
+					<li>환급금이 발생하면 계약자 본인 계좌로만 환급이 가능합니다. 타인 계좌로 환급금 지급을 요청하려면 영업점을 방문, 처리해 주세요.</li> <!-- 2022-11-24 텍스트 변경 -->
+					<li>미성년자인 경우 대표친권자 지정 여부 및 필요서류를 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>가족관계증명서(상세)</li>
+							<li>기본증명서(상세/특정)</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 납입기간, 보장(담보), 보험료 변경 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>납입기간, 보장(담보), 보험료 변경</strong> 요청 시 미리 확인해 주세요.</p> <!-- 2022-11-24 텍스트 변경 -->
+				<ul class="txt-bul1">
+					<li>무해지형 상품은 보장(담보)을 변경하지 못할 수 있습니다.</li>
+					<li>질병보장(담보) 삭제 시 추후 증액/추가를 할 수 없으니 확인해주세요.</li>
+					<li>변경 내용에 따라 책임준비금이 환급/추징될 수 있으며, 보험료가 달라질 수 있습니다.</li>
+					<li>전/후 내용을 정확하게 입력해 주세요.</li> <!-- 2022-11-24 텍스트 변경 -->
+					<li>환급금이 발생하면 계약자 본인 계좌로만 환급이 가능합니다. 타인 계좌로 환급금 지급을 요청하려면 영업점을 방문, 처리해 주세요.</li> <!-- 2022-11-24 텍스트 변경 -->
+					<li>정상 계약만 변경할 수 있습니다.<br>(채권가압류, 질권설정계약, 전손계약, 선납계약, 실효계약, 연체계약, 갱신응당월 등은 변경할 수 없음)</li>
+					<li>미성년자인 경우 대표친권자 지정 여부 및 필요서류를 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>가족관계증명서(상세)</li>
+							<li>기본증명서(상세/특정)</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 출생후확정 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>출생후등록</strong> 요청 시 미리 확인해 주세요.</p> <!-- 2022-12-09 텍스트 변경 -->
+				<ul class="txt-bul1">
+					<li>출생자녀는 고객등록이 되어 있나요?</li>
+					<li>출생자녀는 대표친권자가 지정되어 있나요?</li>
+					<li>필요서류는 확인하셨나요? (가족관계증명서)</li>
+					<li>환급금이 발생하면 계약자 본인 계좌로만 환급이 가능합니다. 타인 계좌로 환급금 지급을 요청하려면 영업점을 방문, 처리해 주세요.</li> <!-- 2022-11-24 텍스트 변경 -->
+					<li>정상 계약만 변경이 가능합니다.<br>(채권가압류, 질권설정계약, 전손계약, 선납계약, 실효계약, 연체계약, 갱신응당월, 등은 변경 불가능)</li> <!-- 2022-12-09 추가 -->
+				</ul>
+			</div>
+
+			<!-- [CASE] 소재지변경 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>소재지변경</strong> 요청 시 미리 확인해 주세요.</p> <!-- 2022-11-24 텍스트 변경 -->
+				<ul class="txt-bul1">
+					<li>변경 대상<br>①주소 ②면적(평, m<sup>2</sup>) ③업종(예: 아파트, 오피스텔 등)을 정확하게 입력해 주세요.</li> <!-- 2022-11-24 텍스트 변경 -->
+					<li>심사 대상의 경우 건축물대장, 사업자등록증, 건물 내/외부 사진이 필요합니다.</li>
+					<li>책임준비금의 추징/환급이 발생할 수 있으며, 보험료가 변경될 수 있습니다.</li>
+					<li>미성년자인 경우 대표친권자 지정 여부 및 필요서류를 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>가족관계증명서(상세)</li>
+							<li>기본증명서(상세/특정)</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단버튼] -->
+			<!-- ######################### -->
+			<!-- [CASE] 하단버튼 : 소재지변경 -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">건축물대장조회</button>
+				<button type="button" class="btn-action c1">미성년자/법정대리인등록</button>
+			</div>
+
+			<!-- [CASE] 하단버튼 : 일반부활/피보험자 직업, 운전차종변경 -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">질문서입력</button>
+				<button type="button" class="btn-action c1">미성년자/법정대리인등록</button>
+			</div>
+
+			<!-- [CASE] 하단버튼 : 계약자/수익자변경 / 출생후확정 -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">고객등록</button>
+				<button type="button" class="btn-action c1">미성년자/법정대리인등록</button>
+			</div>
+
+			<!-- [CASE] 하단버튼 : 제지급 / 납입기간, 보장(담보), 보험료 변경 -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">미성년자/법정대리인등록</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 국내여행 보장내용 | 신규설계 | 일반보험설계 요청</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>보장내용</h1>
+			<button type="button" data-btn="pop-close">보장내용 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [탭영역] -->
+			<!-- ######################### -->
+			<div class="label-btn1">
+				<label>
+					<input type="radio" name="radio1" value="1" checked>
+					<span>기본형</span>
+				</label>
+				<label>
+					<input type="radio" name="radio1" value="2">
+					<span>안심형</span>
+				</label>
+				<label>
+					<input type="radio" name="radio1" value="3">
+					<span>고급형</span>
+				</label>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [보장내용] -->
+			<!-- ######################### -->
+			<div class="list-data8">
+				<!-- // -->
+				<dl>
+					<dt>상해사망</dt>
+					<dd class="active" data-value="1">1억원</dd>
+					<dd data-value="2">2억원</dd>
+					<dd data-value="3">3억원</dd>
+				</dl>
+				<!-- // -->
+				<dl>
+					<dt>상해후유장해</dt>
+					<dd class="active" data-value="1">1억원</dd>
+					<dd data-value="2">2억원</dd>
+					<dd data-value="3">3억원</dd>
+				</dl>
+				<!-- // -->
+				<dl>
+					<dt>질병사망 및 80%이상 후유장해</dt>
+					<dd class="active" data-value="1">1천만원</dd>
+					<dd data-value="2">2천만원</dd>
+					<dd data-value="3">3천만원</dd>
+				</dl>
+				<!-- // -->
+				<dl>
+					<dt>배상책임</dt>
+					<dd class="active" data-value="1">100만원</dd>
+					<dd data-value="2">500만원</dd>
+					<dd data-value="3">1천만원</dd>
+				</dl>
+				<!-- // -->
+				<dl>
+					<dt>휴대품손해</dt>
+					<dd class="active" data-value="1">50만원</dd>
+					<dd data-value="2">70만원</dd>
+					<dd data-value="3">100만원</dd>
+				</dl>
+				<!-- // -->
+				<dl>
+					<dt>특별비용</dt>
+					<dd class="active" data-value="1">100만원</dd>
+					<dd data-value="2">1천만원</dd>
+					<dd data-value="3">1천만원</dd>
+				</dl>
+				<!-- // -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">적용</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+
+	//샘플: 선택시 active 추가
+	$(document).on('change','[name="radio1"]',function(el){
+		var _val = $(el)[0].target.value;
+		$('[data-value]').removeClass('active');
+		$('[data-value="'+_val+'"]').addClass('active')
+	});
+//-->
+</script>
+</body>
+</html>

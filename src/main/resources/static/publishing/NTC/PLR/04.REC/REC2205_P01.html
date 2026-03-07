@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 후보자경력상세보기 | 상세 | 후보자관리 | 도입</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>후보자 경력 조회</h1>
+			<button type="button" data-btn="pop-close">후보자 경력 조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [후보자 경력 내역] -->
+			<!-- ######################### -->
+			<div class="wrap-section">
+				<h2 class="hide">후보자 경력 내역</h2>
+
+				<!-- // -->
+				<section>
+					<h3 class="tit-sub1">보험회사명</h3>
+					<div class="info-con1">
+						<dl>
+							<dt>점포명</dt>
+							<dd>점포명</dd>
+						</dl>
+						<dl>
+							<dt>등록일자</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<dl>
+							<dt>말소일자</dt>
+							<dd>0000.00.00</dd>
+						</dl>
+						<dl>
+							<dt>사유</dt>
+							<dd>사유</dd>
+						</dl>
+						<dl>
+							<dt>자격</dt>
+							<dd>
+								<div>자격1</div>
+								<div>자격2</div>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<!-- // -->
+				<section>
+					<h3 class="tit-sub1">롯데손보</h3>
+					<div class="info-con1">
+						<dl>
+							<dt>점포명</dt>
+							<dd>강남사업단 1지점</dd>
+						</dl>
+						<dl>
+							<dt>등록일자</dt>
+							<dd>2019.07.24</dd>
+						</dl>
+						<dl>
+							<dt>말소일자</dt>
+							<dd>2021.08.20</dd>
+						</dl>
+						<dl>
+							<dt>사유</dt>
+							<dd>말소</dd>
+						</dl>
+						<dl>
+							<dt>자격</dt>
+							<dd>
+								<div>손보설계사 말소</div>
+								<div>손보(전속)</div>
+							</dd>
+						</dl>
+					</div>
+				</section>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [조회결과] 결과없음 -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p>
+					<strong>해당 후보자는<br>경력이 없네요.</strong>
+				</p>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

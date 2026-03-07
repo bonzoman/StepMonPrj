@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 수납대기 취소 | 수납관리 | 자금관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-04]	1. 텍스트 변경
+	*					2. 총건수 삭제
+	*					3. 클래스 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>수납대기 취소</h1>
+			<button type="button" data-btn="pop-close">수납대기 취소 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 안내문구 -->
+			<!-- ######################### -->
+			<div class="tit-section t4"> <!-- 2022-11-04 클래스 변경 -->
+				<!-- 2022-11-04 텍스트 변경 -->
+				<p>선택하신 계약자는 해당 계약 이외에도 수납대기 상태인 계약이 있습니다.<br>수납대기를 취소 시, 계약자의 기존 수납대기 상태 계약이 모두 취소됩니다.</p>
+				<!-- //2022-11-04 텍스트 변경 -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [목록] -->
+			<!-- ######################### -->
+			<h2 class="hide">수납 계약 정보</h2>
+			<!-- <div class="area-info1"><p>총 <strong>00건</strong></p></div> -->
+			<div class="area-toggle1 t3" data-autoset="toggle"> <!-- 2022-11-04 클래스 추가 -->
+				<!-- ### 단건 ### -->
+				<section class="active">
+					<header class="tit">
+						<h2 class="data-info2">
+							<strong>고객명</strong>
+							<span>
+								<span>생년월일</span>
+								<span>성별</span>
+							</span>
+						</h2>
+						<!-- 2022-11-04 삭제 -->
+						<!-- <div class="data4">
+							<dl>
+								<dt>수납방식</dt>
+								<dd>카드</dd>
+							</dl>
+							<dl>
+								<dt>수납번호</dt>
+								<dd>202200000000</dd>
+							</dl>
+						</div> -->
+						<!-- //2022-11-04 삭제 -->
+					</header>
+					<div data-toggle="content">
+						<div class="info-con2 t1">
+							<dl>
+								<dt>수납대기 계약건</dt>
+								<dd>총 00건</dd>
+							</dl>
+							<dl>
+								<dt>총 수납보험료</dt>
+								<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+							</dl>
+						</div>
+						<div class="info-con2 t2 line2 box">
+							<h3 class="tit-sub2">수납대기 계약목록</h3>
+							<ul>
+								<!-- // -->
+								<li>
+									<div data-select="true"><i class="icon-txt2 t1 ic5">선택한 계약</i></div>
+									<div><strong>상품명</strong><span>202200000000</span></div>
+									<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+								</li>
+								<!-- // -->
+								<li>
+									<div><strong>[연체] 무배당치아보험</strong><span>202200000000</span></div>
+									<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+								</li>
+								<!-- // -->
+								<li>
+									<div><strong>[연체] 무배당치아보험</strong><span>202200000000</span></div>
+									<div class="data-num1"><strong>000,000,000</strong><span>원</span></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">수납대기 취소</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

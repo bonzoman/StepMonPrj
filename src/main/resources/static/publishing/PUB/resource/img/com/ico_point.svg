@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g data-name="타원 1975" style="stroke:#292929;stroke-width:1.65px;fill:none">
+        <circle cx="8" cy="8" r="8" style="stroke:none"/>
+        <circle cx="8" cy="8" r="7.175" style="fill:none"/>
+    </g>
+    <path data-name="패스 8513" d="M1.362 12.45h1.312v-2.33h.877c1.409 0 2.534-.673 2.534-2.171 0-1.551-1.116-2.064-2.569-2.064H1.362zm1.312-3.366V6.93h.744c.9 0 1.382.257 1.382 1.019s-.434 1.135-1.338 1.135z" transform="translate(4.638 -.885)" style="fill:#292929"/>
+</svg>

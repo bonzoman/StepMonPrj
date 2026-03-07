@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 예상소득조회-검색 | 소득 시뮬레이션 | 수수료 관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-14]	1. 문구수정 : 취급자 강북사업단 > (사번번호로 변경)
+	**************************************************************************
+-->
+</head>
+<body>
+	<!-- ################################################### -->
+	<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+	<!-- ### [D] main태그 위에 위치 ### -->
+	<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+	<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+	<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+	<!-- ################################################### -->
+	<div class="popup-wrapper">
+		<article>
+			<!-- -------------------------------------- -->
+			<!-- # [HEADER] 팝업 타이틀 -->
+			<!-- -------------------------------------- -->
+			<header class="header">
+				<h1>필터</h1>
+				<button type="button" data-btn="pop-close">필터 닫기</button>
+			</header>
+
+			<!-- -------------------------------------- -->
+			<!-- # [CONTAINER] 컨텐츠 -->
+			<!-- -------------------------------------- -->
+			<div class="container">
+				<!-- // -->
+				<fieldset class="form-wrap1">
+					<legend>필터 선택</legend>
+
+					<!-- # 조회방법 # -->
+					<dl class="form">
+						<dt>조회방법<em class="icon-required2">필수</em></dt>
+						<dd>
+							<!-- // -->
+							<div class="label-btn1" data-autoset="form">
+								<label>
+									<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont1" checked>
+									<span>조직</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont2" >
+									<span>취급자</span>
+								</label>
+							</div>
+							<!-- [CASE] 조직 -->
+							<div class="ui-tabcon active" data-id="uiFormCont1">
+								<!-- // -->
+								<div class="input-btn1">
+									<data class="text" data-label="조직을 검색해주세요." value=""></data>
+									<button type="button" class="icon-com1 ic2">조직찾기</button>
+								</div>
+								<!-- [D] 검색결과 : 조직 -->
+								<div class="info-data3 info">
+									<div class="info2 ic1">
+										<strong>장기지원팀</strong>
+										<span>A1234566</span>
+									</div>
+									<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+								</div>
+							</div>
+
+							<!-- [CASE] 취급자 -->
+							<div class="ui-tabcon" data-id="uiFormCont2">
+								<!-- // -->
+								<div class="input-btn1">
+									<data class="text" data-label="취급자를 검색해주세요." value=""></data>
+									<button type="button" class="icon-com1 ic2">취급자찾기</button>
+								</div>
+								<!-- [D] 검색결과 : 취급자 -->
+								<div class="info-data3 info">
+									<div class="data-info1">
+										<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+										<span><strong>공지철</strong><span>111111</span></span> <!-- 2022-10-14 사번으로 변경 -->
+									</div>
+									<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+								</div>
+								<!-- // -->
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+				</fieldset>
+
+				<!-- // -->
+				<div class="area-action" data-sticky="bottom">
+					<button type="button" class="btn-action">초기화</button>
+					<button type="button" class="btn-action c1">적용</button>
+				</div>
+				<!-- // -->
+			</div>
+			<!-- -------------------------------------- -->
+		</article>
+	</div>
+	<!-- ################################################### -->
+</body>
+</html>

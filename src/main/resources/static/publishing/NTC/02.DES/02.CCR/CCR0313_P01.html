@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 납입방법 회차별 보험료 조회 | 설계(개인/업무/영업) | 가입설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-31]	1. 하단 버튼 삭제
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>납입방법 회차별 보험료 조회</h1>
+			<button type="button" data-btn="pop-close">납입방법 회차별 보험료 조회 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [납입 선택] -->
+			<!-- ######################### -->
+			<div class="area-btn4" data-sticky="top">
+				<button type="button" class="btn-t1 c2 active">일시납</button>
+				<button type="button" class="btn-t1 c2">2회납</button>
+				<button type="button" class="btn-t1 c2">연속 2회납</button>
+				<button type="button" class="btn-t1 c2">연속 3회납</button>
+				<button type="button" class="btn-t1 c2">연속 4회납</button>
+				<button type="button" class="btn-t1 c2">연속 5회납</button>
+				<button type="button" class="btn-t1 c2">연속 6회납</button>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [보험료 확인] -->
+			<!-- ######################### -->
+			<div class="tbl-data1">
+				<table>
+					<caption>납입방법별 보험료 확인</caption>
+					<colgroup>
+						<col style="width:40%">
+						<col style="width:60%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">납입방법</th>
+							<th scope="col">총 보험료</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>총보험료</td>
+							<td class="right"><div class="data-num1"><strong>000,000,000</strong><span>원</span></div></td>
+						</tr>
+						<tr>
+							<td>1회차</td>
+							<td class="right"><div class="data-num1"><strong>000,000,000</strong><span>원</span></div></td>
+						</tr>
+						<tr>
+							<td>2회차</td>
+							<td class="right">-</td>
+						</tr>
+						<tr>
+							<td>3회차</td>
+							<td class="right">-</td>
+						</tr>
+						<tr>
+							<td>4회차</td>
+							<td class="right">-</td>
+						</tr>
+						<tr>
+							<td>5회차</td>
+							<td class="right">-</td>
+						</tr>
+						<tr>
+							<td>6회차</td>
+							<td class="right">-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<!-- 2022-10-31 삭제 -->
+			<!-- <div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div> -->
+			<!-- //2022-10-31 삭제 -->
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+<script>
+//<!--
+	// 샘플 : 버튼 스크롤 이벤트 : 공통 스크립트 정의
+	/*
+	$(document).on('click','.area-btn4 > button',function(){
+		var _btn_wrap = $(this).parents('.area-btn4');
+		$(this).addClass('active').siblings().removeClass('active')
+		ui.setTabMove(_btn_wrap[0], 'active', 'button');
+	});
+	*/
+//-->
+</script>
+</body>
+</html>

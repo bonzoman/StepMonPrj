@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 재난배상책임 | 담보추가속성 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>담보추가속성</h1>
+			<button type="button" data-btn="pop-close">담보추가속성 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 보험정보 -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">let:care 재물종합보험(2201)</h2>
+				<div class="info">
+					<dl>
+						<dt>설계/증권번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [담보추가속성] 재난배상책임 -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend class="tit">재난배상책임<a href="javascript:void(0);" class="icon-com2 ic1">안내</a></legend> <!-- 2022-12-02 링크추가 -->
+
+				<!-- // -->
+				<dl class="form">
+					<dt>업종구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="selectOpeion1-1">기술학원</span>
+							</button>
+							<div class="list">
+								<div data-label="업종구분">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="selectOpeion1-1"><span>기술학원</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl class="form">
+					<dt>면적(옥외시설면적포함) <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="input-wrap1">
+							<div class="text">
+								<input type="tel" title="면적" value="9,915">
+								<span class="util1">m²</span>
+							</div>
+							<span class="util1">=</span>
+							<div class="text">
+								<input type="tel" title="면적(평)" value="3,000">
+								<span class="util1">평</span>
+							</div>
+						</div>
+					</dd>
+					<dd class="mes2">해당업종의 면적은 m²단위(1평=3.3m²)로 입력해주세요.</dd>
+				</dl>
+				<!-- // -->
+				<dl class="form">
+					<dt>종업원배상책임제외 특별약관 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="selectOpeion2-1">가입안함</span>
+							</button>
+							<div class="list">
+								<div data-label="종업원배상책임제외 특별약관">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion2" value="selectOpeion2-1"><span>가입안함</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl class="form">
+					<dt>시설일련번호 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="input-wrap1">
+							<input type="tel" class="text" title="시설일련번호" placeholder="시설일련번호" value="2345678789">
+							<button type="button" class="btn-sub1">대상시설조회</button>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl class="form">
+					<dt>대인보상한도 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="selectOpeion3-1">부상3천만원/사망1억5천만원</span>
+							</button>
+							<div class="list">
+								<div data-label="대인보상한도">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion3" value="selectOpeion3-1"><span>부상3천만원/사망1억5천만원</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl class="form">
+					<dt>대물보상한도 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">선택</span>
+								<span data-select="text" data-value="selectOpeion4-1">10억원</span>
+							</button>
+							<div class="list">
+								<div data-label="대물보상한도">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion4" value="selectOpeion4-1"><span>10억원</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<!-- // -->
+				<dl class="form">
+					<dt>상호명 <em class="icon-required2">필수</em></dt>
+					<dd><input type="text" class="text" title="상호명" placeholder="상호명을 입력해주세요"></dd>
+				</dl>
+
+				<!-- # 종업원배상책임 담보 제외 특별약관 # -->
+				<div class="mes-info2 box">
+					<dl>
+						<dt>종업원배상책임 담보 제외 특별약관</dt>
+						<dd>가입: 화재(폭발포함)로 종업원이 사망하거나 다칠 경우, 피보험자가 법률상의 배상책임에 따라 부담할 손해를 보상하지 않습니다.(단, 할인한 보험요율 적용)</dd>
+						<dd>가입안함: 화재(폭발포함)로 종업원이 사망하거나 다칠 경우, 피보험자가 법률상의 배상책임에 따라 부담할 손해를 보상합니다.</dd>
+					</dl>
+				</div>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<!-- [CASE1] 최초 진입 -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action c1">다음</button>
+			</div>
+
+			<!-- [CASE2] 중간 진입 -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action">이전</button>
+				<button type="button" class="btn-action c1">다음</button>
+			</div>
+
+			<!-- [CASE3] 마지막 단계 -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action c1">확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

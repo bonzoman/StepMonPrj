@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]보유차량조회 | 설계(개인/업무/영업) | 가입설계 | 자동차보험 | 가입/설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>자동차 선택</h1>
+			<button type="button" data-btn="pop-close">자동차 선택 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 안내문구 -->
+			<!-- ######################### -->
+			<div class="tit-section">
+				<p>보험료를 계산할 자동차를 선택하세요.</p>
+				<p class="txt-bul4">자동차를 새로 구입하였거나 구입할 예정인 경우 버튼을 클릭해주세요.</p>
+				<div class="area-btn1"><a href="javascript:void(0);" class="btn-com1 ic3">자동차 추가하기</a></div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [차량목록] -->
+			<!-- ######################### -->
+			<div class="wrap-section">
+				<!-- # [총 건수] # -->
+				<div class="area-info1"><p>총 <strong>00건</strong></p></div>
+
+				<!-- # [목록] # -->
+				<div class="info-data1">
+					<ul>
+						<!-- // -->
+						<li>
+							<label class="tit">
+								<input type="radio" name="uiFormRadio">
+								<strong data-masking="true">차량번호</strong>
+							</label>
+							<div class="txt">0000.00.00~0000.00.00(만기 000일전)</div>
+							<div class="data1">보험사</div>
+						</li>
+						<!-- // -->
+						<li>
+							<label class="tit">
+								<input type="radio" name="uiFormRadio">
+								<strong data-masking="true">***1238</strong>
+							</label>
+							<div class="txt">0000.00.00 ~0000.00.00(만기 120일전)</div>
+							<div class="data1">롯데손해보험</div>
+						</li>
+						<!-- [D] 산출불가능 -->
+						<li>
+							<label class="tit">
+								<input type="radio" name="uiFormRadio" disabled>
+								<strong data-masking="true">***1238</strong>
+							</label>
+							<div class="txt">0000.00.00 ~0000.00.00(만기 120일전)</div>
+							<div class="data1">롯데손해보험</div>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+				<!-- # // # -->
+			</div>
+
+			<!-- ######################### -->
+			<!-- [계약정보 없음] -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p><strong>조회된 보유차량이 없습니다.</strong></p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [10대 초과] -->
+			<!-- ######################### -->
+			<div class="mes-result1">
+				<p>
+					<strong>다수 차량 (10대 초과) 보유 고객입니다.</strong>
+					<span>갱신 설계 진행시 개발원 조회 화면을 통해 보험설계를 진행해주세요.</span>
+				</p>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">다음</button>
+				<!-- <button type="button" class="btn-action c1">개발원 조회</button> : 10대 초과시 노출 -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

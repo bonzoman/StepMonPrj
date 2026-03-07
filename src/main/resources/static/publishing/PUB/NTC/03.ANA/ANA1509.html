@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[T] 전체현황 | 보장분석 결과 | 셀프 보장분석</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-16]	1. 그래프 점수 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- 2022-12-23 : 카톡브라우저 대응 수정 -->
+<main id="wrapper" style="overflow-y:auto;position:fixed;left:0;top:0;width:100%;height:100%;z-index:50;">
+<!-- // 2022-12-23 : 카톡브라우저 대응 수정 -->
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>롯데손해보험 보장분석</h1>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단 타이틀] -->
+		<!-- ######################### -->
+		<h2 class="tit-sub1 t1"><em>하다미님</em>의 보장분석 결과</h2> <!-- [M 2022-10-25] 클래스명 변경 -->
+
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="tab-sub1" data-sticky="top">
+			<ul>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">요약</a></li>
+				<li><a href="javascript:void(0);">계약별 현황</a></li>
+				<li><a href="javascript:void(0);">보장/담보별 현황</a></li>
+				<li><a href="javascript:void(0);">큰질병 테마분석</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [보장진단 종합점수] -->
+		<!-- ######################### -->
+		<div class="wrap-section">
+			<h3 class="hide">보장진단 종합점수</h3>
+
+			<!-- ### 종합점수 ###
+				점수 제어 부분
+				* data-value="00"
+				* style="--el-progress:00;"
+				* <em>00</em>
+			-->
+			<!-- [샘플] 0 ~ 39 : 부족해요 -->
+			<div class="area-progress1" data-value="4" style="--el-progress:4;">
+				<strong>하다미님의<br>보험진단 종합점수는?</strong>
+				<!-- 2022-11-16 점수 추가 -->
+				<div>
+					<span>0</span>
+					<span>100</span>
+				</div>
+				<!-- //2022-11-16 점수 추가 -->
+				<span><em>4</em>점</span>
+			</div>
+
+			<!-- [샘플] 40 ~ 59 : 아쉬워요 -->
+			<div class="area-progress1" data-value="50" style="--el-progress:50;">
+				<strong>하다미님의<br>보험진단 종합점수는?</strong>
+				<!-- 2022-11-16 점수 추가 -->
+				<div>
+					<span>0</span>
+					<span>100</span>
+				</div>
+				<!-- //2022-11-16 점수 추가 -->
+				<span><em>50</em>점</span>
+			</div>
+
+			<!-- [샘플] 60 ~ 79 : 좋아요 -->
+			<div class="area-progress1" data-value="76" style="--el-progress:76;">
+				<strong>하다미님의<br>보험진단 종합점수는?</strong>
+				<!-- 2022-11-16 점수 추가 -->
+				<div>
+					<span>0</span>
+					<span>100</span>
+				</div>
+				<!-- //2022-11-16 점수 추가 -->
+				<span><em>76</em>점</span>
+			</div>
+
+			<!-- [샘플] 80 ~ 100 : 훌륭해요 -->
+			<div class="area-progress1" data-value="92" style="--el-progress:92;">
+				<strong>하다미님의<br>보험진단 종합점수는?</strong>
+				<!-- 2022-11-16 점수 추가 -->
+				<div>
+					<span>0</span>
+					<span>100</span>
+				</div>
+				<!-- //2022-11-16 점수 추가 -->
+				<span><em>92</em>점</span>
+			</div>
+
+			<!-- ### 담보별 현황 ### -->
+			<section>
+				<h4 class="hide">담보별 현황</h4>
+				<div class="area-info1 t1">
+					<p><strong>전체 46개 보장 중</strong><a href="javascript:void(0);" class="icon-com1 ic3 right simple">담보별 현황 상세</a></p>
+				</div>
+				<div class="data-info4 t1">
+					<ul>
+						<li>
+							<em class="icon-state4 ic1">미가입</em>
+							<div class="data-num1"><strong>11</strong></div>
+						</li>
+						<li>
+							<em class="icon-state4 ic2">충분</em>
+							<div class="data-num1"><strong>29</strong></div>
+						</li>
+						<li>
+							<em class="icon-state4 ic3">부족</em>
+							<div class="data-num1"><strong>6</strong></div>
+						</li>
+					</ul>
+				</div>
+				<div class="area-info1 t2">
+					<dl class="data1">
+						<dt>보험진단일</dt>
+						<dd>2022.03.01</dd>
+					</dl>
+					<div class="side"><a href="#uiTOOLTIPINFO1" class="icon-com2 ic2 right"  data-btn="tooltip" aria-haspopup="dialog">보험진단 대상 안내</a></div>
+				</div>
+			</section>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [보험계약현황] -->
+		<!-- ######################### -->
+		<div class="wrap-section1">
+			<h3 class="hide">보험계약현황</h3>
+			<!-- // -->
+			<div class="area-info2">
+				<dl>
+					<dt>정상 계약 수</dt>
+					<dd class="data-num1"><strong>000,000</strong><span>건</span></dd>
+				</dl>
+				<dl>
+					<dt>월 보험료</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+			</div>
+			<!-- // -->
+			<div class="info-con2">
+				<dl>
+					<dt>손해보험</dt>
+					<dd class="data-num1"><strong>000,000</strong><span>건</span></dd>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>생명보험</dt>
+					<dd class="data-num1"><strong>000,000</strong><span>건</span></dd>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>공제보험</dt>
+					<dd class="data-num1"><strong>000,000</strong><span>건</span></dd>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [보험료 납입 현황] -->
+		<!-- ######################### -->
+		<div class="wrap-section1">
+			<h3 class="tit-sub1">보험료 납입 현황</h3>
+			<div class="wrap-progress">
+				<!-- ### 보험료납입율 ###
+					제어 부분
+					* style="--el-progress:00;"
+					* <em>00</em>
+				-->
+				<div class="area-progress2" style="--el-progress:77;">
+					<span><em>77</em>%</span>
+				</div>
+				<!-- // -->
+				<div class="txt">
+					<dl>
+						<dt>납입완료</dt>
+						<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+					<dl>
+						<dt>납입예정</dt>
+						<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+					</dl>
+				</div>
+				<!-- // -->
+			</div>
+		</div>
+
+		<!-- ### 안내문구 ### -->
+		<p class="mes-info2 box">더 자세한 상담을 원하시면 아래의 <strong>상담신청</strong> 버튼을 눌러주세요.</p>
+		<!-- ### // ### -->
+
+		<!-- ######################### -->
+		<!-- [분석결과] 기록없음 -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p><strong>보장분석 기록이 없습니다!</strong></p>
+			<div class="area-btn2">
+				<a href="javascript:void(0);" class="btn-com1">모바일 보장분석 발송</a>
+				<a href="javascript:void(0);" class="btn-com1">보장분석 시작</a>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action col t1" data-sticky="bottom">
+			<button type="button" class="btn-action">상담신청</button>
+			<button type="button" class="btn-action c1">리포트 결과보기</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ######################### -->
+<!-- [툴팁영역] 보험진단 분석 대상 -->
+<!-- ######################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>보험진단 분석 대상</dt>
+		<dd>회사별 계약 및 담보현황은 한국신용정보원 기준 생명보험 2000년 4월, 손해보험 2002년 12월 이후 정상계약에 한하여 조회되며, 보험진단 종합점수는 당사의 보장분석 담보 기준으로 산출 되었습니다.</dd>
+		<dd><button type="button" data-btn="pop-close">보험진단 분석 대상 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]메인 화면 설정 | 모든꿀팁 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="popup">
+	<div class="pop-header">
+		<h1>메인 화면 설정</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="page-con1">
+			<div class="detail1 img-cont">
+
+				<div class="img-area">
+					<img src="">
+					[임시]이미지 view 영역
+				</div>
+                <span class="wrap-file">
+                    <input type="file" tabindex="-1" accept="image/*">
+                    <button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic3">첨부하기</button>
+                </span>
+				<p class="list-dot1">App 디자인 스타일과 해상도 유지를 위하여 가로 해상도 최소 1400px로 업로드 부탁드립니다. </p>
+			</div>
+			<div class="detail2">
+				<div class="tbl-write1">
+					<table>
+						<colgroup>
+							<col style="width:80px">
+							<col>
+							<col style="width:80px">
+							<col>
+							<col style="width:80px">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">No.</th>
+								<td><input type="text" name="" id="" class="text" style="width:60px;"></td>
+								<th scope="row">Name</th>
+								<td>데일리퀴즈</td>
+								<th scope="row">영역ID</th>
+								<td>??</td>
+							</tr>
+							<tr>
+								<th scope="row">내용</th>
+								<td colspan="5">
+									<ul class="list-dot1">
+										<li class="point1">[소분류], [타이틀 첫쨰줄]은 필수입력 사항입니다.</li>
+										<li>하얀 배경에 검은 글씨로 들어가는 작은 글씨 영역은 [소분류]에, <br>
+                                            하얀 글씨로 두껍게 들어가는 타이틀 영역은 [타이틀 n쨰줄]에 입력해주세요.<br>
+                                            줄 바꿈은 지원하지 않으므로 줄 바꿈이 필요할 시 둘째줄, 셋째줄에 각각 입력합니다.
+                                         </li>
+									</ul>
+
+									<div class="form-box1">
+										<div class="form-row">
+											<span class="form-tit">소분류</span>
+											<input type="text" name="" id="" class="text" style="width:280px;" readonly value="데일리퀴즈">
+										</div>
+										<div class="form-row">
+											<span class="form-tit">질문 첫째줄</span>
+											<input type="text" name="" id="" class="text" style="width:280px;" readonly value="건강해지는 비결!">
+										</div>
+										<div class="form-row">
+											<span class="form-tit">질문 둘째줄</span>
+											<input type="text" name="" id="" class="text" style="width:280px;" readonly value="어떤게 있을까요?">
+										</div>
+										<div class="form-row">
+											<span class="form-tit">질문 셋째줄</span>
+											<input type="text" name="" id="" class="text" style="width:280px;" readonly value="네? 어떤게 있을까요?">
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="area-action">
+			<button type="button" class="btn-action c3">닫기</button>
+			<button type="button" class="btn-action c2">메인화면 미리보기</button>
+			<button type="button" class="btn-action c1">메인화면 등록</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

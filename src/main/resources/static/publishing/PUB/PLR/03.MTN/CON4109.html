@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>담보별 보험금청구 구비서류 | 통합사고조회 | 보상 | 유지관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>보상청구 담보 선택</h1>
+			<button type="button" data-btn="pop-close">보상청구 담보 선택 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [계약정보] -->
+			<!-- ######################### -->
+			<section class="info-summary2">
+				<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+				<div class="info">
+					<dl>
+						<dt>증권번호</dt>
+						<dd>LA123456789 </dd>
+					</dl>
+				</div>
+
+				<!-- [피보험자] -->
+				<div class="area1">
+					<dl class="info2">
+						<dt>피보험자</dt>
+						<dd class="data-info2" data-value="102701">
+							<strong>하다미</strong><span><span>생년월일</span><span>성별</span></span>
+						</dd>
+					</dl>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [체크영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend>담보선택</legend>
+
+				<div class="label-check1">
+					<label>
+						<input type="checkbox">
+						<span>전체</span>
+					</label>
+					<div class="side"><button type="button" class="btn-sub2 ic8">초기화</button></div>
+				</div>
+
+				<!-- 담보 선택 목록 -->
+				<div class="label-check1 block">
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>상해후유장해</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>상해사망</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>상해80이상후유장해</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>상해추상장해</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>질병80%이상후유장해</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>질병50%이상후유장해Ⅱ(10년간매년지급)(80)</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>질병사망(80)</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>벌금</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>교통사로처리지원금(동승자포함)</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>자동차사로변호사선임비용</span>
+					</label>
+					<!-- // -->
+					<label>
+						<input type="checkbox">
+						<span>갱신형실손의료비(질병입원형)(선택형)</span>
+					</label>
+				</div>
+				<!-- // -->
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">선택완료</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

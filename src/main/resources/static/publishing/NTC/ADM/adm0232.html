@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>실시간총실적조회 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-19]	1. 타이틀 수정
+	*	[M 2022-11-01]	1. 표 상단 틀고정
+						2. 당일 수납 dl 태그로 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">실시간실적조회</h2><!-- [M 2022-10-19] 타이틀 수정 -->
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<button class="more-search" type="button"></button>
+					<dl class="form w1">
+						<dt>기준일자<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<span class="date-range">
+									<input type="text" data-role="start" placeholder="시작일 선택">
+									<span class="util">~</span>
+									<input type="text" data-role="end" placeholder="종료일 선택">
+								</span>
+							</div>
+						</dd>
+					</dl>
+					<dl class="form w2"> <!-- 숨길때 hide-->
+						<dt>조직구분<em class="imp"><span>필수</span></em></dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>조직</option>
+									<option>취급자</option>
+								</select>
+								<input type="text" name="" id="" class="text" style="width:80px;">
+								<input type="text" name="" id="" class="text" style="width:120px;" disabled>
+								<button type="button" class="btn-sub1 ic4">검색</button>
+							</div>
+						</dd>
+					</dl>
+					<div class="search-cont">
+						<dl class="form w1">
+							<dt>조회구분</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr2" checked="checked">
+										<span>원수</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr2">
+										<span>수입</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr2">
+										<span>수납</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr2">
+										<span>수수료환산</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w1">
+							<dt>조회형태</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr1" checked="checked">
+										<span>하위조직</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr1">
+										<span>월별</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w3">
+							<dt>채널구분</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr3" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr3">
+										<span>전통</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr3">
+										<span>전문</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr3">
+										<span>신채널</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr3">
+										<span>방카슈랑스</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr3">
+										<span>기타</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w3 hide"><!-- 보여야할때 hide 제거-->
+							<dt>전통</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr4" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr4">
+										<span>교차제외</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr4">
+										<span>교차</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+						<dl class="form w3 hide"><!-- 보여야할때 hide 제거-->
+							<dt>전문</dt>
+							<dd>
+								<div class="form-row">
+									<label class="label-check">
+										<input type="radio" name="fr5" checked="checked">
+										<span>전체</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr5">
+										<span>자동차</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr5">
+										<span>장기</span>
+									</label>
+									<label class="label-check">
+										<input type="radio" name="fr5">
+										<span>총판</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+                        <dl class="form w-check hide"><!-- [M 2022-11-02] dl 태그로 수정 -->
+                            <dt>당일수납</dt>
+                            <dd>
+                                <label class="label-check t1">
+                                    <input type="checkbox" name="l100" checked="checked">
+                                    <span></span>
+                                </label>
+                            </dd>
+                        </dl>
+					</div>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c3">초기화</button>
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+			<div class="tab-wrap">
+				<ul class="tab1">
+					<li class=""><a href="#tab1-1" class="">총괄조회</a></li>
+					<li><a href="#tab1-2" class="">장기</a></li>
+					<li><a href="#tab1-3" class="current">일반</a></li>
+					<li><a href="#tab1-4" class="">자동차</a></li>
+					<li><a href="#tab1-5" class="">일자별</a></li>
+				</ul>
+				<div id="tab1-1" class="tab-cont" style="display:block;">
+					<div class="data-table1">
+						<div class="info1">단위: 천원, %
+							<div class="tooltip right2">
+								<button type="button"></button>
+								<div class="tooltip-layer">
+									<ul class="list-dot1">
+										<li>전월실적: 전월마감일기준</li>
+										<li>전월동영업일: 영업일기준</li>
+										<li>전년실적: 전년동월마감일기준</li> <!-- 2022-11-30 추가 -->
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-thead" data-pos="thead">
+							<table>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2">조직</th>
+										<th scope="col" rowspan="2" colspan="2">구분</th>
+										<th scope="col" rowspan="2">목표</th>
+										<th scope="col" colspan="2">당월</th>
+										<th scope="col" colspan="2">전월동영업일</th>
+										<th scope="col" colspan="2">전월</th>
+										<th scope="col" colspan="2">전년</th>
+									</tr>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">달성률</th>
+										<th scope="col"></th>
+										<th scope="col">차이</th>
+										<th scope="col"></th>
+										<th scope="col">차이</th>
+										<th scope="col"></th>
+										<th scope="col">신장률</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-table" data-pos="top">
+							<!--최초 접근시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								아직 실적이 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--조회시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								해당하는 자료가 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!-- 총괄조회 Default -->
+							<table>
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+								</colgroup>
+								<!-- <thead>
+									<tr>
+										<th scope="col" rowspan="2">조직</th>
+										<th scope="col" rowspan="2" colspan="2">구분</th>
+										<th scope="col" rowspan="2">목표</th>
+										<th scope="col" colspan="2">당월</th>
+										<th scope="col" colspan="2">전월동영업일</th>
+										<th scope="col" colspan="2">전월</th>
+										<th scope="col" colspan="2">전년</th>
+									</tr>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">달성률</th>
+										<th scope="col"></th>
+										<th scope="col">차이</th>
+										<th scope="col"></th>
+										<th scope="col">차이</th>
+										<th scope="col"></th>
+										<th scope="col">신장률</th>
+									</tr>
+								</thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="8">
+											<a href="#" class="btn-link1">강남사업단<br>(E001239)</a>
+										</th>
+										<th scope="row" colspan="2">총량</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+										<!--
+											+실적 경우<span class="num-inc">11</span>
+											-실적 경우<span class="num-dec">11</span>
+										-->
+									</tr>
+									<tr>
+										<th scope="row" rowspan="4">장기신규</th>
+										<th scope="row">월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">보장성</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">재물</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">비월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">장기계속</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">일반</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">자동차</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+								</tbody>
+							</table>
+
+							<!-- 총괄조회 당일수납 체크 -->
+							<table class="hide">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2">조직</th>
+										<th scope="col" rowspan="2" colspan="2">구분</th>
+										<th scope="col" rowspan="2">목표</th>
+										<th scope="col" colspan="4">당월</th>
+										<th scope="col" colspan="2">전년</th>
+									</tr>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">당일</th>
+										<th scope="col">미수납</th>
+										<th scope="col">달성률</th>
+										<th scope="col"></th>
+										<th scope="col">신장률</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="8">
+											<a href="#" class="btn-link1">강남사업단<br>(E001239)</a>
+										</th>
+										<th scope="row" colspan="2">총량</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+										<!--
+											+신장률 경우<span class="num-inc">11</span>
+											-신장률 경우<span class="num-dec">11</span>
+										-->
+									</tr>
+									<tr>
+										<th scope="row" rowspan="4">장기신규</th>
+										<th scope="row">월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">보장성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">재물</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">비월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">장기계속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">일반</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">자동차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<!-- 총괄조회 Default -->
+							<table>
+								<tbody>
+
+									<tr>
+										<th scope="row" rowspan="8">합계</th>
+										<th scope="row" colspan="2">총량</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="4">장기신규</th>
+										<th scope="row">월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">보장성</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">재물</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">비월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">장기계속</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">일반</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">자동차</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+								</tbody>
+							</table>
+
+							<!-- 총괄조회 당일수납 체크 -->
+							<table class="hide">
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="8">
+											<a href="#" class="btn-link1">강남사업단<br>(E001239)</a>
+										</th>
+										<th scope="row" colspan="2">총량</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+										<!--
+											+신장률 경우<span class="num-inc">11</span>
+											-신장률 경우<span class="num-dec">11</span>
+										-->
+									</tr>
+									<tr>
+										<th scope="row" rowspan="4">장기신규</th>
+										<th scope="row">월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">보장성</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">재물</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">비월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">장기계속</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">일반</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">자동차</th>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="tab1-2" class="tab-cont">
+					<div class="data-table1">
+						<div class="info1">단위: 천원, %
+							<div class="tooltip right2">
+								<button type="button"></button>
+								<div class="tooltip-layer">
+									<ul class="list-dot1">
+										<li>전월실적: 전월마감일기준</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-thead" data-pos="thead">
+							<table>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2">조직</th>
+										<th scope="col" rowspan="2" colspan="3">구분</th>
+										<th scope="col" rowspan="2">목표</th>
+										<th scope="col" colspan="2">당월</th>
+										<th scope="col" colspan="2">전월</th>
+										<th scope="col" colspan="2">전년</th>
+									</tr>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">달성률</th>
+										<th scope="col"></th>
+										<th scope="col">차이</th>
+										<th scope="col"></th>
+										<th scope="col">신장률</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-table" data-pos="top">
+							<!--최초 접근시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								아직 실적이 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--조회시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								해당하는 자료가 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<table>
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+								</colgroup>
+								<!-- <thead>
+									<tr>
+										<th scope="col" rowspan="2">조직</th>
+										<th scope="col" rowspan="2" colspan="3">구분</th>
+										<th scope="col" rowspan="2">목표</th>
+										<th scope="col" colspan="2">당월</th>
+										<th scope="col" colspan="2">전월</th>
+										<th scope="col" colspan="2">전년</th>
+									</tr>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">달성률</th>
+										<th scope="col"></th>
+										<th scope="col">차이</th>
+										<th scope="col"></th>
+										<th scope="col">신장률</th>
+									</tr>
+								</thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+								<tbody>
+									<!-- // -->
+									<tr>
+										<th scope="row" rowspan="10">
+											<a href="#" class="btn-link1">강남사업단<br>(E001239)</a>
+										</th>
+										<th scope="row" colspan="3">장기합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+										<!--
+											+실적 경우<span class="num-inc">11</span>
+											-실적 경우<span class="num-dec">11</span>
+										-->
+									</tr>
+									<tr>
+										<th scope="row" rowspan="4">신규상세</th>
+										<th scope="row" rowspan="4">구성별</th>
+										<th scope="row">보장</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">재물</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">비월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="5">계속상세</th>
+										<th scope="row" rowspan="5">수납방법</th>
+										<th scope="row">자동이체</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">직수현금</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">직수카드</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">전자청구</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">카드이체</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<!-- // -->
+									<tr>
+										<th scope="row" rowspan="10">
+											<a href="#" class="btn-link1">강남사업단<br>(E001239)</a>
+										</th>
+										<th scope="row" colspan="3">장기합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+										<!--
+											+실적 경우<span class="num-inc">11</span>
+											-실적 경우<span class="num-dec">11</span>
+										-->
+									</tr>
+									<tr>
+										<th scope="row" rowspan="4">신규상세</th>
+										<th scope="row" rowspan="4">구성별</th>
+										<th scope="row">보장</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">재물</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">비월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="5">계속상세</th>
+										<th scope="row" rowspan="5">수납방법</th>
+										<th scope="row">자동이체</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">직수현금</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">직수카드</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">전자청구</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">카드이체</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<!-- // -->
+								</tbody>
+							</table>
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<table>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="10">합계</th>
+										<th scope="row" colspan="3">장기합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="4">신규상세</th>
+										<th scope="row" rowspan="4">구성별</th>
+										<th scope="row">보장</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">재물</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">비월납</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="5">계속상세</th>
+										<th scope="row" rowspan="5">수납방법</th>
+										<th scope="row">자동이체</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">직수현금</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">직수카드</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">전자청구</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">카드이체</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="tab1-3" class="tab-cont">
+					<div class="data-table1">
+						<div class="info1">단위: 천원, %
+							<div class="tooltip right2">
+								<button type="button"></button>
+								<div class="tooltip-layer">
+									<ul class="list-dot1">
+										<li>전월실적: 전월마감일기준</li>
+										<li>전년실적: 전년동월마감일기준</li> <!-- 2022-11-30 추가 -->
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-thead" data-pos="thead">
+							<table>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2">조직</th>
+										<th scope="col" rowspan="2" colspan="2">구분</th>
+										<th scope="col" rowspan="2">목표</th>
+										<th scope="col" colspan="2">당월</th>
+										<th scope="col" colspan="2">전월</th>
+										<th scope="col" colspan="2">전년</th>
+									</tr>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">달성률</th>
+										<th scope="col"></th>
+										<th scope="col">차이</th>
+										<th scope="col"></th>
+										<th scope="col">신장률</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-table" data-pos="top">
+							<!--최초 접근시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								아직 실적이 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--조회시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								해당하는 자료가 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<table>
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+								</colgroup>
+								<!-- <thead>
+									<tr>
+										<th scope="col" rowspan="2">조직</th>
+										<th scope="col" rowspan="2" colspan="2">구분</th>
+										<th scope="col" rowspan="2">목표</th>
+										<th scope="col" colspan="2">당월</th>
+										<th scope="col" colspan="2">전월</th>
+										<th scope="col" colspan="2">전년</th>
+									</tr>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">달성률</th>
+										<th scope="col"></th>
+										<th scope="col">차이</th>
+										<th scope="col"></th>
+										<th scope="col">신장률</th>
+									</tr>
+								</thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="7">
+											<a href="#" class="btn-link1">강남사업단<br>(E001239)</a>
+										</th>
+										<th scope="row" colspan="2">일반합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+										<!--
+											+실적 경우<span class="num-inc">11</span>
+											-실적 경우<span class="num-dec">11</span>
+										-->
+									</tr>
+									<tr>
+										<th scope="row" rowspan="4">구성별</th>
+										<th scope="row">화재</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">적하</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">선박</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">특종</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="2">상태별</th>
+										<th scope="row">신규</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">갱신</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="7">
+											<a href="#" class="btn-link1">강북사업단<br>(E001239)</a>
+										</th>
+										<th scope="row" colspan="2">일반합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+										<!--
+											+실적 경우<span class="num-inc">11</span>
+											-실적 경우<span class="num-dec">11</span>
+										-->
+									</tr>
+									<tr>
+										<th scope="row" rowspan="4">구성별</th>
+										<th scope="row">화재</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">적하</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">선박</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">특종</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="2">상태별</th>
+										<th scope="row">신규</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">갱신</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<table>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="7">
+											합계
+										</th>
+										<th scope="row" colspan="2">일반합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+										<!--
+											+실적 경우<span class="num-inc">11</span>
+											-실적 경우<span class="num-dec">11</span>
+										-->
+									</tr>
+									<tr>
+										<th scope="row" rowspan="4">구성별</th>
+										<th scope="row">화재</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">적하</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">선박</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">특종</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="2">상태별</th>
+										<th scope="row">신규</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">갱신</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="tab1-4" class="tab-cont">
+					<div class="data-table1">
+						<div class="info1">단위: 천원, %
+							<div class="tooltip right2">
+								<button type="button"></button>
+								<div class="tooltip-layer">
+									<ul class="list-dot1">
+										<li>전월실적: 전월마감일기준</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-thead" data-pos="thead">
+							<table>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2">조직</th>
+										<th scope="col" rowspan="2" colspan="2">구분</th>
+										<th scope="col" rowspan="2">목표</th>
+										<th scope="col" colspan="2">당월</th>
+										<th scope="col" colspan="2">전월</th>
+										<th scope="col" colspan="2">전년</th>
+									</tr>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">달성률</th>
+										<th scope="col"></th>
+										<th scope="col">차이</th>
+										<th scope="col"></th>
+										<th scope="col">신장률</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-table" data-pos="top">
+							<!--최초 접근시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								아직 실적이 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--조회시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								해당하는 자료가 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<table>
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:80px;">
+									<col style="width:80px;">
+								</colgroup>
+								<!-- <thead>
+									<tr>
+										<th scope="col" rowspan="2">조직</th>
+										<th scope="col" rowspan="2" colspan="2">구분</th>
+										<th scope="col" rowspan="2">목표</th>
+										<th scope="col" colspan="2">당월</th>
+										<th scope="col" colspan="2">전월</th>
+										<th scope="col" colspan="2">전년</th>
+									</tr>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">달성률</th>
+										<th scope="col"></th>
+										<th scope="col">차이</th>
+										<th scope="col"></th>
+										<th scope="col">신장률</th>
+									</tr>
+								</thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="10">
+											<a href="#" class="btn-link1">강남사업단<br>(E001239)</a>
+										</th>
+										<th scope="row" colspan="2">자동차합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+										<!--
+											+실적 경우<span class="num-inc">11</span>
+											-실적 경우<span class="num-dec">11</span>
+										-->
+									</tr>
+									<tr>
+										<th scope="row" rowspan="3">비사업</th>
+										<th scope="row">소계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">타깃</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">타깃외</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="5">사업</th>
+										<th scope="row">소계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">우량</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">일반</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">관리</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">고위험</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">기타</th>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<table>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="10">합계</th>
+										<th scope="row" colspan="2">자동차합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+										<!--
+											+실적 경우<span class="num-inc">11</span>
+											-실적 경우<span class="num-dec">11</span>
+										-->
+									</tr>
+									<tr>
+										<th scope="row" rowspan="3">비사업</th>
+										<th scope="row">소계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">타깃</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">타깃외</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="5">사업</th>
+										<th scope="row">소계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">우량</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">일반</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">관리</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">고위험</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+									<tr>
+										<th scope="row">기타</th>
+										<th scope="row">합계</th>
+										<td>0</td>
+										<td>0</td>
+										<td class="point1">0</td>
+										<td>0</td>
+										<td><span class="num-dec">11</span></td>
+										<td>0</td>
+										<td><span class="num-inc">11</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="tab1-5" class="tab-cont">
+					<div class="data-table1">
+						<div class="info1">단위: 천원, %
+							<div class="tooltip right2">
+								<button type="button"></button>
+								<div class="tooltip-layer">
+									<ul class="list-dot1">
+										<li>전월실적: 전월마감일기준</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- [M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-thead" data-pos="thead">
+							<table>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2">영업일</th>
+										<th scope="col" colspan="2">영업일자</th>
+										<th scope="col" colspan="2">전체합계</th>
+										<th scope="col" colspan="2">장기신규월납</th>
+										<th scope="col" colspan="2">장기신규보장성</th>
+										<th scope="col" colspan="2">장기계속</th>
+										<th scope="col" colspan="2">자동차</th>
+										<th scope="col" colspan="2">일반</th>
+									</tr>
+									<tr>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<!-- //[M 2022-11-01] 표 상단 틀고정 -->
+						<div class="list-table" data-pos="top">
+							<!--최초 접근시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								아직 실적이 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<!--조회시 DATA 없음-->
+							<div class="nodata" style="display:none;">
+								해당하는 자료가 없어요. <br>
+								조건을 변경해보세요
+							</div>
+							<table>
+								<colgroup>
+									<col style="width:50px;">
+									<col style="width:50px;">
+									<col style="width:50px;">
+								</colgroup>
+								<!-- <thead>
+									<tr>
+										<th scope="col" rowspan="2">영업일</th>
+										<th scope="col" colspan="2">영업일자</th>
+										<th scope="col" colspan="2">전체합계</th>
+										<th scope="col" colspan="2">장기신규월납</th>
+										<th scope="col" colspan="2">장기신규보장성</th>
+										<th scope="col" colspan="2">장기계속</th>
+										<th scope="col" colspan="2">자동차</th>
+										<th scope="col" colspan="2">일반</th>
+									</tr>
+									<tr>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+										<th scope="col">당월</th>
+										<th scope="col">전월</th>
+									</tr>
+								</thead> --><!-- [M 2022-11-01] 표 상단 틀고정 -->
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<th scope="row">01</th>
+										<th scope="row">02</th>
+										<td>100,000,000</td>
+										<td>0</td>
+										<td>0</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+									</tr>
+									<tr>
+										<th scope="row">1</th>
+										<th scope="row">03</th>
+										<th scope="row">03</th>
+										<td>100,000,000</td>
+										<td>0</td>
+										<td>0</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+									</tr>
+									<tr>
+										<th scope="row">1</th>
+										<th scope="row">07</th>
+										<th scope="row">04</th>
+										<td>100,000,000</td>
+										<td>0</td>
+										<td>0</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+									</tr>
+									<tr>
+										<th scope="row">1</th>
+										<th scope="row">07</th>
+										<th scope="row">04</th>
+										<td>100,000,000</td>
+										<td>0</td>
+										<td>0</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="3">영업일외</th>
+										<td>100,000,000</td>
+										<td>0</td>
+										<td>0</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="total-div" data-pos="bottom">
+							<table>
+								<tbody>
+									<tr>
+										<th colspan="3" scope="row">합계</th>
+										<td>100,000,000</td>
+										<td>0</td>
+										<td>0</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+										<td>000,000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		_fixTable.init();
+	</script>
+</div>
+</body>
+</html>

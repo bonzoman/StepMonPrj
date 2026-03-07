@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>상세 | 시체설계사 리스트 | 조직관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-09-22]	① 탐지기간삭제
+	*					② 목록 선택 아님 형태 추가 : button disabled 된 버튼 추가
+	*	[M 2022-09-29]	① [CASE] 보유계약이 없을 경우 추가
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>휴면설계사 상세</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [설계사 정보] -->
+		<!-- ######################### -->
+		<section class="info-summary2">
+			<h2 class="hide">설계사 정보</h2>
+			<div class="info-data3 t1">
+				<ul>
+					<!-- // -->
+					<li>
+						<strong class="tit2">휴면설계사</strong>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user2.png" alt=""></span>
+							<span><strong>하다미</strong><span>154674</span></span>
+						</div>
+						<div class="data-word3">
+							<span>강남 02지점</span>
+							<span>13차월</span>
+							<!-- [M 2022-09-22] 삭제
+							<span>탐지기간<strong> 6개월</strong></span>
+							-->
+						</div>
+						<div class="data2">
+							<span>도입자</span>
+							<strong>이수만(154674)</strong>
+						</div>
+					</li>
+					<!-- // -->
+					<li>
+						<strong class="tit2">담당관리 설계사</strong>
+						<div class="data-info1">
+							<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+							<span><strong>강지훈</strong><span>154674</span></span>
+						</div>
+						<div class="data-word3">
+							<span>강남 02지점</span>
+							<span>174차월</span>
+						</div>
+						<div class="data2">
+							<span>관리종료기간</span>
+							<strong>~2022.03.15(경과일도래)</strong>
+						</div>
+					</li>
+					<!-- [D] 담당 설계사 없는 경우 -->
+					<li>
+						<strong class="tit2">담당관리 설계사</strong>
+						<div class="info2 ic0 t1">
+							<span>담당관리 설계사 설정이 필요합니다.</span>
+						</div>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+		</section>
+
+		<!-- ######################### -->
+		<!-- [마지막 경과 정보] -->
+		<!-- ######################### -->
+		<div class="wrap-section">
+			<h3 class="tit-sub1">마지막 경과 정보</h3>
+			<div class="info-data8">
+				<!-- # 활동지표 # -->
+				<dl class="data1 ic1">
+					<dt class="tit">로그인</dt>
+					<dd>평균 00일 전</dd>
+					<dd class="data-num1">
+						<strong>000</strong><span>일 전</span>
+						<em>0000.00.00</em>
+					</dd>
+				</dl>
+				<dl class="data1 ic4">
+					<dt class="tit">실적</dt>
+					<dd>평균 00일 전</dd>
+					<dd class="data-num1">
+						<strong>000</strong><span>일 전</span>
+						<em>0000.00.00</em>
+					</dd>
+				</dl>
+				<dl class="data1 ic5">
+					<dt class="tit">고객등록</dt>
+					<dd>평균 00일 전</dd>
+					<dd class="data-num1">
+						<strong>000</strong><span>일 전</span>
+						<em>0000.00.00</em>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [보유 계약] -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<div class="tit-sub1">
+				<h4>보유 계약</h4>
+				<p class="sub2">최신계약 1건만 노출됩니다.</p>
+			</div>
+
+			<!-- // -->
+			<section>
+				<h5 class="tit-sub2">장기보험</h5>
+				<div class="info-data2">
+					<dl>
+						<dt class="tit">롯데힐링케어 건강보험</dt>
+						<dd class="info">
+							<i class="icon-state2 ic3">정상</i>
+							<span class="hide">증권번호</span>
+							<span>LA123456789</span>
+						</dd>
+						<dd class="data1">
+							<dl>
+								<dt>계약자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.10</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.10</span>
+									<span>여</span>
+									외 3명
+								</dd>
+							</dl>
+							<dl>
+								<dt>계약기간</dt>
+								<dd>2020.01.30~2022.02.22</dd>
+							</dl>
+						</dd>
+
+						<!-- [D] 사업단장일 경우 버튼 노출 -->
+						<dd><button type="button" class="link">상세보기</button></dd>
+						<!-- // -->
+					</dl>
+				</div>
+			</section>
+
+			<section>
+				<h5 class="tit-sub2">자동차보험</h5>
+				<div class="info-data2">
+					<dl>
+						<dt class="tit">롯데힐링케어 건강보험</dt>
+						<dd class="info">
+							<i class="icon-state2 ic3">정상</i>
+							<span class="hide">증권번호</span>
+							<span>LA123456789</span>
+						</dd>
+						<dd class="data1">
+							<dl>
+								<dt>계약자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.10</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.10</span>
+									<span>여</span>
+									외 3명
+								</dd>
+							</dl>
+							<dl>
+								<dt>계약기간</dt>
+								<dd>2020.01.30~2022.02.22</dd>
+							</dl>
+						</dd>
+						<dd><button type="button" class="link" disabled>상세보기</button></dd> <!-- [M 2022-09-22] 이동안되는 버튼 추가 -->
+					</dl>
+				</div>
+			</section>
+
+			<section>
+				<h5 class="tit-sub2">일반보험</h5>
+				<!-- [CASE] 보유계약이 있을 경우 -->
+				<div class="info-data2">
+					<dl>
+						<dt class="tit">롯데힐링케어 건강보험</dt>
+						<dd class="info">
+							<i class="icon-state2 ic3">정상</i>
+							<span class="hide">증권번호</span>
+							<span>LA123456789</span>
+						</dd>
+						<dd class="data1">
+							<dl>
+								<dt>계약자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.10</span>
+									<span>여</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd class="info2">
+									<strong data-masking="true">하*미</strong>
+									<span>1990.01.10</span>
+									<span>여</span>
+									외 3명
+								</dd>
+							</dl>
+							<dl>
+								<dt>계약기간</dt>
+								<dd>2020.01.30~2022.02.22</dd>
+							</dl>
+						</dd>
+						<dd><button type="button" class="link" disabled>상세보기</button></dd> <!-- [M 2022-09-22] 이동안되는 버튼 추가 -->
+					</dl>
+				</div>
+				<!-- [M 2022-09-29] [CASE] 보유계약이 없을 경우 추가 -->
+				<div class="mes-result1 t1">
+					<p>보유계약이 없습니다.</p>
+				</div>
+				<!-- // -->
+			</section>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [교육 수강내역] -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<h4 class="tit-sub1">꼭 들어야 하는 최근 교육수강 목록</h4>
+			<div class="info-data4 t3">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="info">
+							<em class="icon-state1 ic1">미수강</em>
+							<em class="icon-state1 ic2">수강완료</em>
+						</div>
+						<strong class="tit">강의명</strong>
+						<button type="button" class="btn">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="info">
+							<em class="icon-state1 ic2">수강완료</em>
+						</div>
+						<strong class="tit">설계사 시험 한번에 합격하는 베테랑 설계사의 시험 합격 노하우</strong>
+						<button type="button" class="btn">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="info">
+							<em class="icon-state1 ic1">미수강</em>
+						</div>
+						<strong class="tit">신입 설계사를 위한 쉬운 설계 교육</strong>
+						<button type="button" class="btn">상세보기</button>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [컨텐츠 수신목록] -->
+		<!-- ######################### -->
+		<div class="wrap-section3">
+			<h4 class="tit-sub1">컨텐츠 수신목록</h4>
+			<div class="info-data4 t3">
+				<ul>
+					<!-- // -->
+					<li>
+						<div class="cate">
+							<span>교육</span>
+							<span>교육어드밴스</span>
+						</div>
+						<strong class="tit">컨텐츠명</strong>
+						<button type="button" class="btn">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="cate">
+							<span>교육</span>
+							<span>교육어드밴스</span>
+						</div>
+						<strong class="tit">let:simple 간편 3·4·5 건강보험</strong>
+						<button type="button" class="btn">상세보기</button>
+					</li>
+					<!-- // -->
+					<li>
+						<div class="cate">
+							<span>교육</span>
+							<span>교육어드밴스</span>
+						</div>
+						<strong class="tit">나는 포기하지 않았다 - KFC의 성공신화</strong>
+						<button type="button" class="btn">상세보기</button>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action t1 col" data-sticky="bottom">
+			<button type="button" class="btn-action c1">컨텐츠발송</button>
+			<button type="button" class="btn-action c1">전화하기</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<script>
+//<!--
+	//동적생성 컨텐츠중 재호출이 필요한 함수 : ui.initReload();
+//-->
+</script>
+</body>
+</html>

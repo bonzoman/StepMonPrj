@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>그룹상세 | 그룹상세 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>그룹 상세</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [검색영역] -->
+		<!-- ######################### -->
+		<fieldset class="form-search1">
+			<legend>그룹검색</legend>
+
+			<!-- # 검색영역 # -->
+			<div class="input-btn1">
+				<data class="text" data-label="그룹을 검색해주세요." value="미정씨네지인들">미정씨네지인들</data>
+				<button type="button" class="icon-com1 ic2">검색하기</button>
+			</div>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [그룹정보] -->
+		<!-- ######################### -->
+		<div class="info-con1">
+			<dl>
+				<dt>인원수</dt>
+				<dd>15명</dd>
+			</dl>
+			<dl>
+				<dt>상세메모</dt>
+				<dd>미정씨가 소개해주신 분들</dd>
+			</dl>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [버튼영역] -->
+		<!-- ######################### -->
+		<div class="area-btn1">
+			<button type="button" class="btn-com1">그룹정보 수정하기</button>
+			<button type="button" class="btn-com1 ic3">고객 추가하기</button>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과] -->
+		<!-- ######################### -->
+		<!-- # 총 00명 # -->
+		<div class="area-info1">
+			<p>총 <strong>00명</strong></p>
+			<div class="side">
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox2" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">정렬</span>
+						<span data-select="text" data-value="selectOpeion1">등록순</span>
+					</button>
+					<div class="list">
+						<div data-label="정렬">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion0" value="selectOpeion1"><span>등록순</span></label>
+								<label><input type="radio" name="selectOpeion0" value="selectOpeion2"><span>고객이름 가나다순</span></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- # 고객 목록 # -->
+		<div class="info-data3 t3">
+			<ul>
+				<!-- [고객] -->
+				<li>
+					<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+						<strong data-masking="true">하*미</strong>
+						<span>
+							<span>1997.01.01</span>
+							<span>남</span>
+						</span>
+					</div>
+					<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+				</li>
+				<!-- [사업자] -->
+				<li>
+					<div class="info2 ic2">
+						<strong>한빛소프트웨어</strong>
+						<span>714-88-00112</span>
+					</div>
+					<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+				</li>
+				<!-- [단체] -->
+				<li>
+					<div class="info2 ic3">
+						<strong>나주박씨종친회</strong>
+						<span>714-88-00112</span>
+					</div>
+					<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+				</li>
+				<!-- // -->
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색결과없음] -->
+		<!-- ######################### -->
+		<div class="mes-result1">
+			<p>
+				<strong>조회된 고객님이 없어요.</strong>
+				<span>"고객 추가하기" 버튼을 눌러<br> 특징별로 고객님을 모아보세요!</span>
+			</p>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<!-- <button type="button" class="btn-action c1" disabled>저장</button> : 비활성화 -->
+			<button type="button" class="btn-action c1">저장</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+</body>
+</html>

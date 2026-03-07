@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>배너 관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220418">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-11-16]	도입 APP 탭 삭제로, 설계사 APP 배너관리로 수정.
+	*	[M 2022-11-23]	추가버튼 위치 변경
+	*	[M 2022-11-25]	검색 위치 옵션값 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">설계사 APP 배너 관리</h2><!-- [M 2022-11-16] 타이틀 수정 -->
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+			<div class="tab-wrap">
+				<!-- <ul class="tab2">
+					<li><a href="#tab2-1" class="current">설계사 APP</a></li>
+					<li><a href="#tab2-2">도입 APP</a></li>
+				</ul> --><!-- [M 2022-11-16] 탭 삭제 -->
+				<div id="tab2-1" class="tab-cont">
+					
+					
+					<fieldset class="form-search1">
+						<div class="form-field">
+							<dl class="form w1">
+								<dt>배너ID</dt>
+								<dd><input type="text" class="text" style="width:100%;" name="" id="" placeholder="배너ID를 입력해주세요."></dd>
+							</dl>
+							<dl class="form w1">
+								<dt>등록자</dt>
+								<dd><input type="text" class="text" style="width:100%;" name="" id="" placeholder="등록자명을 입력해주세요."></dd>
+							</dl>
+							<dl class="form w1">
+								<dt>노출여부</dt>
+								<dd>
+                                    <div class="form-row">
+                                        <label class="label-check">
+                                            <input type="radio" name="fr1" checked="checked">
+                                            <span>Y</span>
+                                        </label>
+                                        <label class="label-check">
+                                            <input type="radio" name="fr1">
+                                            <span>N</span>
+                                        </label>
+                                    </div>
+                                </dd>
+							</dl>
+							<dl class="form w1">
+								<dt>위치</dt>
+								<dd><!-- [M 2022-11-25] 위치 옵션값 변경 -->
+                                    <select name="" id="" class="selectbox" style="width:100%;">
+										<option value="">전체</option>
+                                        <option value="">모아보기</option>
+                                        <option value="">모두의 톡 리스트</option>
+                                        <option value="">포인트 조회</option>
+                                        <option value="">노하우공유</option>
+                                        <option value="">크루게시판</option>
+                                    </select>
+                                </dd><!-- //[M 2022-11-25] 위치 옵션값 변경 -->
+							</dl>
+							<dl class="form w2">
+								<dt>배너명</dt>
+								<dd><input type="text" class="text" style="width:100%;" name="" id="" placeholder="배너명을 입력해주세요."></dd>
+							</dl>
+						</div>
+
+						<div class="area-action">
+							<button type="button" class="btn-action c1">검색</button>
+						</div>
+					</fieldset>
+
+
+					
+					<div class="tit-sub2">
+						<h3 class="">전체 1200개</h3>
+						<!-- 2022-11-23 추가버튼 위치변경 -->
+						<div class="sub">
+							<button type="button" class="btn-action c1">추가</button>
+						</div>
+						<!-- //2022-11-23 추가버튼 위치변경 -->
+					</div>
+
+					<div class="tbl-list1">
+						<table>
+							<colgroup>
+								<col style="width:60px;">
+								<col style="width:100px;">
+								<col style="width:200px;">
+								<col style="width:60px;">
+								<col>
+								<col style="width:120px;">
+								<col style="width:150px;">
+								<col style="width:100px;">
+								<col style="width:60px;">
+								<col style="width:60px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">배너ID</th>
+									<th scope="col">위치</th>
+									<th scope="col">순서</th>
+									<th scope="col">배너명</th>
+									<th scope="col">등록자</th>
+									<th scope="col">노출기간</th>
+									<th scope="col">등록일</th>
+									<th scope="col">클릭수</th>
+									<th scope="col">노출</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>커뮤니티(상)</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>커뮤니티(하)</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr class="row-point1">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr class="row-point2">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>N</td>
+								</tr>
+								<tr class="row-point3">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr class="row-point3">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr class="row-point3">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="paging">
+						<a class="ic_first disabled"></a>
+						<a class="ic_prev disabled"></a>
+						<span class="num current">1</span>
+						<a href="#" class="num">2</a>
+						<a href="#" class="num">3</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="num">9</a>
+						<a href="#" class="num">10</a>
+						<a href="#" class="ic_next"></a>
+						<a href="#" class="ic_last"></a>
+					</div>
+				</div>
+				<!-- <div id="tab2-2" class="tab-cont">
+					
+					
+					<fieldset class="form-search1">
+						<div class="form-field">
+							<dl class="form w1">
+								<dt>배너ID</dt>
+								<dd><input type="text" class="text" style="width:100%;" name="" id="" placeholder="배너ID를 입력해주세요."></dd>
+							</dl>
+							<dl class="form w1">
+								<dt>등록자</dt>
+								<dd><input type="text" class="text" style="width:100%;" name="" id="" placeholder="등록자명을 입력해주세요."></dd>
+							</dl>
+							<dl class="form w1">
+								<dt>노출여부</dt>
+								<dd>
+                                    <div class="form-row">
+                                        <label class="label-check">
+                                            <input type="radio" name="fr2" checked="checked">
+                                            <span>Y</span>
+                                        </label>
+                                        <label class="label-check">
+                                            <input type="radio" name="fr2">
+                                            <span>N</span>
+                                        </label>
+                                    </div>
+                                </dd>
+							</dl>
+							<dl class="form w1">
+								<dt>위치</dt>
+								<dd>
+                                    <select name="" id="" class="selectbox" style="width:100%;">
+                                        <option value="">전체</option>
+                                        <option value="">메인</option>
+                                        <option value="">커뮤니티(상)</option>
+                                        <option value="">커뮤니티(하)</option>
+                                    </select>
+                                </dd>
+							</dl>
+							<dl class="form w2">
+								<dt>배너명</dt>
+								<dd><input type="text" class="text" style="width:100%;" name="" id="" placeholder="배너명을 입력해주세요."></dd>
+							</dl>
+						</div>
+
+						<div class="area-action">
+							<button type="button" class="btn-action c1">검색</button>
+						</div>
+					</fieldset>
+
+
+					
+					<div class="tit-sub2">
+						<h3 class="">전체 1200개</h3>
+					</div>
+
+					<div class="tbl-list1">
+						<table>
+							<colgroup>
+								<col style="width:60px;">
+								<col style="width:100px;">
+								<col style="width:200px;">
+								<col style="width:60px;">
+								<col>
+								<col style="width:120px;">
+								<col style="width:150px;">
+								<col style="width:100px;">
+								<col style="width:60px;">
+								<col style="width:60px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">배너ID</th>
+									<th scope="col">위치</th>
+									<th scope="col">순서</th>
+									<th scope="col">배너명</th>
+									<th scope="col">등록자</th>
+									<th scope="col">노출기간</th>
+									<th scope="col">등록일</th>
+									<th scope="col">클릭수</th>
+									<th scope="col">노출</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>커뮤니티(상)</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>커뮤니티(하)</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr class="row-point1">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr class="row-point2">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>N</td>
+								</tr>
+								<tr class="row-point3">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr class="row-point3">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+								<tr class="row-point3">
+									<td>1</td>
+									<td>POP0101010</td>
+									<td>메인</td>
+									<td>1</td>
+									<td>신규 가입 이벤트</td>
+									<td>김크림(****57)</td>
+									<td>2022.02.22~2022.02.22</td>
+									<td>2022.02.22</td>
+									<td>500/1222</td>
+									<td>Y</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="paging">
+						<a class="ic_first disabled"></a>
+						<a class="ic_prev disabled"></a>
+						<span class="num current">1</span>
+						<a href="#" class="num">2</a>
+						<a href="#" class="num">3</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="num">9</a>
+						<a href="#" class="num">10</a>
+						<a href="#" class="ic_next"></a>
+						<a href="#" class="ic_last"></a>
+					</div>
+                </div> --><!-- [M 2022-11-16] 도입 APP 내용 삭제 -->
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+</script>
+</body>
+</html>

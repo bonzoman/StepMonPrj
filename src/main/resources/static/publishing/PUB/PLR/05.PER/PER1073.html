@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[T] 장기 | 상세 | 수금률조회 | 실적관리</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-05]	1. ‘계속분’ → ‘수금액’ 텍스트 수정
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>수금률조회 상세</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- [M 2022-07-22] 탭버튼 순서 변경 : 일반 - 자동차 -->
+		<!-- ######################### -->
+		<div class="nav-tab1">
+			<ul>
+				<li class="active"><a href="javascript:void(0);" aria-current="page">장기</a></li>
+				<li><a href="javascript:void(0);">일반</a></li>
+				<li><a href="javascript:void(0);">자동차</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [솔팅영역] -->
+		<!-- ######################### -->
+		<div class="tab-sub1" data-autoset="tab">
+			<ul>
+				<li class="active"><a href="#uiTab2Section1">납입방식별</a></li>
+				<li><a href="#uiTab2Section2">군별</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [납입방식별 합계 리스트] -->
+		<!-- ######################### -->
+		<div id="uiTab2Section1" class="ui-tabcon active">
+			<h2 class="hide">납입방식별</h2>
+			<strong class="tit-sub1">강남사업단</strong>
+			<!-- [CASE] 월별 합계 : <strong class="tit-sub1">2022.04</strong> -->
+
+			<div class="tbl-data1">
+				<table>
+					<caption class="tit">합계 (직접수금+자동이체+카드이체+지로)</caption>
+					<colgroup>
+						<col style="width:33%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="left">구분</th>
+							<th scope="col" class="right">건수(건)</th>
+							<th scope="col" class="right">금액(천원)</th>
+						</tr>
+					</thead>
+					<tbody class="right">
+						<tr>
+							<th>수금목표액</th>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금률</th>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<caption class="tit">직접수금 총계 (현금+카드)</caption>
+					<colgroup>
+						<col style="width:33%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="left">구분</th>
+							<th scope="col" class="right">건수(건)</th>
+							<th scope="col" class="right">금액(천원)</th>
+						</tr>
+					</thead>
+					<tbody class="right">
+						<tr>
+							<th>수금목표액</th>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금률</th>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<caption class="tit">현금</caption>
+					<colgroup>
+						<col style="width:33%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="left">구분</th>
+							<th scope="col" class="right">건수(건)</th>
+							<th scope="col" class="right">금액(천원)</th>
+						</tr>
+					</thead>
+					<tbody class="right">
+						<tr>
+							<th>수금목표액</th>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금률</th>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<caption class="tit">카드</caption>
+					<colgroup>
+						<col style="width:33%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="left">구분</th>
+							<th scope="col" class="right">건수(건)</th>
+							<th scope="col" class="right">금액(천원)</th>
+						</tr>
+					</thead>
+					<tbody class="right">
+						<tr>
+							<th>수금목표액</th>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금률</th>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<caption class="tit">자동이체</caption>
+					<colgroup>
+						<col style="width:33%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="left">구분</th>
+							<th scope="col" class="right">건수(건)</th>
+							<th scope="col" class="right">금액(천원)</th>
+						</tr>
+					</thead>
+					<tbody class="right">
+						<tr>
+							<th>수금목표액</th>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금률</th>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<caption class="tit">카드이체</caption>
+					<colgroup>
+						<col style="width:33%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="left">구분</th>
+							<th scope="col" class="right">건수(건)</th>
+							<th scope="col" class="right">금액(천원)</th>
+						</tr>
+					</thead>
+					<tbody class="right">
+						<tr>
+							<th>수금목표액</th>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금률</th>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<caption class="tit">롯데카드(전자청구)</caption>
+					<colgroup>
+						<col style="width:33%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="left">구분</th>
+							<th scope="col" class="right">건수(건)</th>
+							<th scope="col" class="right">금액(천원)</th>
+						</tr>
+					</thead>
+					<tbody class="right">
+						<tr>
+							<th>수금목표액</th>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금률</th>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<caption class="tit">기타카드</caption>
+					<colgroup>
+						<col style="width:33%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="left">구분</th>
+							<th scope="col" class="right">건수(건)</th>
+							<th scope="col" class="right">금액(천원)</th>
+						</tr>
+					</thead>
+					<tbody class="right">
+						<tr>
+							<th>수금목표액</th>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금률</th>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<caption class="tit">지로</caption>
+					<colgroup>
+						<col style="width:33%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="left">구분</th>
+							<th scope="col" class="right">건수(건)</th>
+							<th scope="col" class="right">금액(천원)</th>
+						</tr>
+					</thead>
+					<tbody class="right">
+						<tr>
+							<th>수금목표액</th>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금률</th>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [군별 합계 리스트] -->
+		<!-- ######################### -->
+		<div id="uiTab2Section2" class="ui-tabcon">
+			<h2 class="hide">군별</h2>
+			<strong class="tit-sub1">강남사업단</strong>
+			<!-- [CASE] 월별 <strong class="tit-sub1">2022.04</strong> -->
+
+			<div class="tbl-data1">
+				<table>
+					<caption class="tit">합계 (보장+재물+저축)</caption>
+					<colgroup>
+						<col style="width:33%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="left">구분</th>
+							<th scope="col" class="right">건수(건)</th>
+							<th scope="col" class="right">금액(천원)</th>
+						</tr>
+					</thead>
+					<tbody class="right">
+						<tr>
+							<th>수금목표액</th>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금률</th>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<caption class="tit">보장</caption>
+					<colgroup>
+						<col style="width:33%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="left">구분</th>
+							<th scope="col" class="right">건수(건)</th>
+							<th scope="col" class="right">금액(천원)</th>
+						</tr>
+					</thead>
+					<tbody class="right">
+						<tr>
+							<th>수금목표액</th>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금률</th>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<caption class="tit">재물</caption>
+					<colgroup>
+						<col style="width:33%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="left">구분</th>
+							<th scope="col" class="right">건수(건)</th>
+							<th scope="col" class="right">금액(천원)</th>
+						</tr>
+					</thead>
+					<tbody class="right">
+						<tr>
+							<th>수금목표액</th>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금률</th>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<caption class="tit">저축</caption>
+					<colgroup>
+						<col style="width:33%">
+						<col style="width:33%">
+						<col style="width:33%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="left">구분</th>
+							<th scope="col" class="right">건수(건)</th>
+							<th scope="col" class="right">금액(천원)</th>
+						</tr>
+					</thead>
+					<tbody class="right">
+						<tr>
+							<th>수금목표액</th>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금액</th><!-- [M 2022-10-05] 텍스트 수정 -->
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+							<td><div class="data-num1"><strong>000,000,000</strong></div></td>
+						</tr>
+						<tr>
+							<th>수금률</th>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+							<td><div class="data-num1 txt-c1"><strong>00.00</strong><span>%</span></div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">수금관리</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+</main>
+</body>
+</html>

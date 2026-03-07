@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 사진검증특약 | 특약정보 | 계약상세 | 자동차 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>사진검증특약</h1>
+			<button type="button" data-btn="pop-close">사진검증특약 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 증권번호 -->
+			<!-- ######################### -->
+			<div class="info-summary2">
+				<dl class="info2">
+					<dt>증권번호</dt>
+					<dd class="ic1"><strong>LA11111111111111</strong></dd>
+				</dl>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보영역] -->
+			<!-- ######################### -->
+			<fieldset class="form-wrap1">
+				<legend class="tit">주행거리(최종) 등록 안내</legend>
+
+				<dl class="form">
+					<dt>고객선택 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="select-wrap" data-autoset="select">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">고객선택</span>
+								<span data-select="text" data-value="1">계약자</span>
+							</button>
+							<div class="list">
+								<div data-label="고객선택">
+									<div class="option">
+										<label><input type="radio" name="selectOpeion1" value="1"><span>계약자</span></label>
+										<label><input type="radio" name="selectOpeion1" value="2"><span>피보험자</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</dd>
+				</dl>
+
+				<dl class="form">
+					<dt>휴대폰 번호</dt>
+					<dd><data class="text disabled">010-1234-1234</data></dd>
+				</dl>
+			</fieldset>
+
+			<!-- ######################### -->
+			<!-- [안내사항] -->
+			<!-- ######################### -->
+			<dl class="txt-bul1 t1 line2">
+				<dt>필수 안내사항</dt>
+				<dd>
+					<em>특약사진 첨부방법</em>
+					<ul class="txt-bul2">
+						<li>1단계: 계약자 또는 피보험자에게 알림톡 발송</li>
+						<li>2단계: 계약자 또는 피보험자 수신 받은 알림톡 URL 클릭</li>
+						<li>3단계: 가입특약에 따른 사진등록
+							<div class="txt-mark"><i>*</i> 주행거리특약 : 차량계기판 사진1매, 차량번호판 사진 1매 첨부</div>
+						</li>
+						<li>4단계: 등록</li>
+					</ul>
+				</dd>
+				<dd>
+					<em>유의사항</em>
+					<ul class="txt-bul2">
+						<li>알림톡 발송 한달 경과 후 사진 등록 불가</li>
+						<li>2G핸드폰인 경우 사용 불가하오니 영업담당자 및 본사콜센터로 안내해 주시기 바랍니다.</li>
+						<li>전송된 URL 주소로만 특약사진 등록이 가능합니다.</li>
+						<li>전송된 사진 식별이 어려울 경우 사진 재등록을 요청할 수 있습니다.</li>
+					</ul>
+				</dd>
+			</dl>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">취소</button>
+				<button type="button" class="btn-action c1">전송</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

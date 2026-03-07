@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] FATCA (법인) | 일반사항 | 표준설계</title>
+<link rel="stylesheet" href="../../../resource/css/common.css">
+<link rel="stylesheet" href="../../../resource/css/content.css">
+<link rel="stylesheet" href="../../../resource/css/page.css">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>FATCA(법인)</h1>
+			<button type="button" data-btn="pop-close">FATCA(법인) 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단정보] -->
+			<!-- ######################### -->
+			<div class="info-summary2"> <!-- [M 2022-10-23] -->
+				<div class="info-con1">
+					<dl>
+						<dt>고객이름</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>설계번호</dt>
+						<dd>LA220304111127-1</dd>
+					</dl>
+					<dl>
+						<dt>발행 후 변경순서</dt>
+						<dd>1</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [고객정보] -->
+			<!-- ######################### -->
+			<section class="wrap-section"> <!-- [M 2022-10-23] -->
+				<h2 class="tit-sub1">고객정보</h2>
+				<!-- // -->
+				<div class="info-con1">
+					<dl>
+						<dt>고객이름(국문)</dt>
+						<dd>하다미</dd>
+					</dl>
+					<dl>
+						<dt>고객이름(영문)</dt>
+						<dd>Ha dami</dd>
+					</dl>
+					<dl>
+						<dt>고객유형</dt>
+						<dd>법인사업자</dd>
+					</dl>
+					<dl>
+						<dt>사업자번호</dt>
+						<dd>123-45-78950</dd>
+					</dl>
+					<dl>
+						<dt>법인번호</dt>
+						<dd>456789-8565486</dd>
+					</dl>
+					<dl>
+						<dt>연락처</dt>
+						<dd>010-1234-5678</dd>
+					</dl>
+					<dl>
+						<dt>소재지 주소</dt>
+						<dd>
+							<div>(12345)</div>
+							<div>서울 용산구 소월로 178 1번지(용산동 2가)</div>
+						</dd>
+					</dl>
+					<dl class="form">
+						<dt>주소(본점)<br>영문</dt>
+						<dd><input type="text" class="text" title="영문 주소 입력" placeholder="주소입력"></dd>
+					</dl>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ######################### -->
+			<!-- [정보입력] -->
+			<!-- ######################### -->
+			<div class="form-wrap1 line2">
+				<!-- ### 해외납세자 정보 ### -->
+				<fieldset>
+					<legend class="tit">해외납세자 정보</legend>
+					<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>조세목적상 국가</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">조세목적상 국가</span>
+									<span data-select="text" data-value="null">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="조세목적상 국가">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion" value=""><span>선택</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>납세자번호</dt>
+						<dd><input type="tel" class="text" title="납세자번호" placeholder="납세자번호를 입력해주세요." value=""></dd>
+					</dl>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>납세자번호 미기재 사유</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiRadio2" checked>
+									<span>미발급국가</span>
+								</label>
+								<label>
+									<input type="radio" name="uiRadio2">
+									<span>미요구국가</span>
+								</label>
+								<label>
+									<input type="radio" name="uiRadio2">
+									<span>미취득</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- # 항목하나 # -->
+					<dl class="form">
+						<dt>미기재 사유</dt>
+						<dd><input type="tel" class="text" title="미기재사유" placeholder="미기재 사유를 입력해주세요." value=""></dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- ### 납세정보 추가 버튼 ### -->
+				<div class="area-btn1 line">
+					<button type="button" class="btn-com1 ic3">납세정보 추가</button>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [확인사항] -->
+			<!-- ######################### -->
+			<div class="form-wrap4 line2">
+				<h3 class="tit-sub1">확인사항</h3>
+
+				<!-- # 1. 미국법인 또는 미국기관 해당 여부 # -->
+				<fieldset>
+					<legend class="tit">1. 미국법인 또는 미국기관 해당 여부 <em class="icon-required2">필수</em></legend>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="uiFormRadio1-1" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio1-1">
+							<span>아니요</span>
+						</label>
+					</div>
+
+					<!-- # [CASE] 미국법인/미국기관 해당 여부 : 예 # -->
+					<dl class="form">
+						<dt>[추가확인] 보고제외 미국법인 유형 여부</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio1-2" checked>
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio1-2">
+									<span>아니요</span>
+								</label>
+							</div>
+
+							<!-- [CASE] 추가확인 : 예 선택시 -->
+							<div>
+								<div class="select-wrap" data-autoset="select">
+									<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false">
+										<span data-select="title">보고제외 미국법인 유형 여부</span>
+										<span data-select="text" data-value="null">선택</span>
+									</button>
+									<div class="list">
+										<div data-label="보고제외 미국법인 유형 여부">
+											<div class="option">
+												<label><input type="radio" name="selectOpeion1" value=""><span>선택</span></label>
+											</div>
+											<button type="button" data-toggle="closebtn">확인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- # 2. 금융회사 여부 # -->
+				<fieldset>
+					<legend class="tit">2. 금융회사 여부</legend>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="uiFormRadio2-1" checked>
+							<span>예</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio2-1">
+							<span>아니요</span>
+						</label>
+					</div>
+
+					<!-- # [CASE] 금융회사 여부 : 예 # -->
+					<dl class="form">
+						<dt>[추가확인] 금융회사 유형 선택</dt>
+						<dd>
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">금융회사 유형 선택</span>
+									<span data-select="text" data-value="null">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="금융회사 유형 선택">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion2" value=""><span>선택</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>a. 보고대상관할권이 아닌 국가, 다른 금융회사가 관리하는 투자법인 여부</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio2-2" checked>
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio2-2">
+									<span>아니요</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>b. 해당여부</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio2-3" checked>
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio2-3">
+									<span>아니요</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<ul class="txt-bul1 box">
+						<li>국내 또는 해외자산신고(FATCA) 협력관할권 금융회사&미국국세청(IRS) 비참여 금융회사로 분류 안됨</li>
+						<li>해외자산신고(FATCA) 협력관할권 아닌 국가 금융회사&미국국세청 글로벌금융회사등록번호 (IRS GIIN)에 등록되어있음</li>
+					</ul>
+					<!-- // -->
+					<dl class="form">
+						<dt>c. 미국국세청(IRS)에 등록된 글로벌금융회사<br>등록번호(GIIN)</dt>
+						<dd><input type="text" class="text" title="GIIN 입력" placeholder="등록번호를 입력해주세요." value="123456-12345-12"></dd>
+					</dl>
+					<!-- # // # -->
+
+					<!-- # [CASE] GIIN 입력하지 않은 경우 활성화 # -->
+					<dl class="form">
+						<dt>d. GIIN이 없는 경우, 비보고 금융회사 중 해당하는 유형 여부</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio2-4" checked>
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio2-4">
+									<span>아니요</span>
+								</label>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+
+					<!-- # [CASE] 비보고 금융회사 중 해당하는 유형 여부 : 예 # -->
+					<dl class="form">
+						<dt>FATCA/CRS 공통 비보고 금융회사</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">FATCA/CRS 공통 비보고 금융회사</span>
+									<span data-select="text" data-value="null">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="FATCA/CRS 공통 비보고 금융회사">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion3" value=""><span>선택</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>자동정보교환 공통보고기준(CRS) 비보고 금융회사</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">자동정보교환 공통보고기준(CRS) 비보고 금융회사</span>
+									<span data-select="text" data-value="null">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="자동정보교환 공통보고기준(CRS) 비보고 금융회사">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion4" value=""><span>선택</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- // -->
+					<dl class="form">
+						<dt>해외자산신고(FATCA) 비보고 금융회사</dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">해외자산신고(FATCA) 비보고 금융회사</span>
+									<span data-select="text" data-value="null">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="해외자산신고(FATCA) 비보고 금융회사">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion5" value=""><span>선택</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!-- # // # -->
+				</fieldset>
+
+				<!-- # 3. 보고제외 법인 여부 # -->
+				<fieldset>
+					<legend class="tit">3. 보고제외 법인 여부 <em class="icon-required2">필수</em></legend>
+					<dl class="form">
+						<dt class="hide">보고제외 법인 여부</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio3-1" checked>
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio3-1">
+									<span>아니요</span>
+								</label>
+							</div>
+						</dd>
+						<dd>
+							<!-- # [CASE] 보고제외 법인 여부 : 예 # -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">보고제외 법인 여부</span>
+									<span data-select="text" data-value="null">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="보고제외 법인 여부">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion6" value=""><span>선택</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- # // # -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- # 4. 능동적 비금융법인 여부 # -->
+				<fieldset>
+					<legend class="tit">4. 능동적 비금융법인 여부 <em class="icon-required2">필수</em></legend>
+					<dl class="form">
+						<dt class="hide">능동적 비금융법인 여부</dt>
+						<dd>
+							<div class="label-btn1">
+								<label>
+									<input type="radio" name="uiFormRadio4-1" checked>
+									<span>예</span>
+								</label>
+								<label>
+									<input type="radio" name="uiFormRadio4-1">
+									<span>아니요</span>
+								</label>
+							</div>
+						</dd>
+						<dd>
+							<!-- # [CASE] 능동적 비금융법인 여부 : 예 # -->
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox empty" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">능동적 비금융법인 여부</span>
+									<span data-select="text" data-value="null">선택</span>
+								</button>
+								<div class="list">
+									<div data-label="능동적 비금융법인 여부">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion6" value=""><span>선택</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- # // # -->
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- # 5. 실질적인 지배력을 행사하는 해외 납세자 유무 # -->
+				<fieldset>
+					<legend class="tit">5. 실질적인 지배력을 행사하는 해외 납세자 유무 <em class="icon-required2">필수</em></legend>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="uiFormRadio5-1" checked>
+							<span>예(유)</span>
+						</label>
+						<label>
+							<input type="radio" name="uiFormRadio5-1">
+							<span>아니요(무)</span>
+						</label>
+					</div>
+				</fieldset>
+
+				<!-- # 6. 대상정보 # -->
+				<fieldset>
+					<legend class="tit">6. 대상정보</legend>
+					<div class="area-btn1">
+						<button type="button" class="btn-com1 ic3">대상 추가</button>
+					</div>
+
+					<!-- # 대상정보 추가 영역 # -->
+					<div class="form-wrap1 line">
+						<div class="tit-sub2">
+							<div>대상정보</div>
+							<div class="side">
+								<button type="button" class="btn-sub3 c2">삭제</button>
+							</div>
+						</div>
+
+						<!-- # 영문 이름 # -->
+						<dl class="form">
+							<dt>영문 성/영문 명</dt>
+							<dd>
+								<div class="input-wrap1">
+									<div class="text">
+										<input type="text" title="영문 성" placeholder="영문 성" value="HA">
+									</div>
+									<div class="text">
+										<input type="text" title="영문 명" placeholder="영문 명" value="DAMI">
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- # 생년월일 # -->
+						<dl class="form">
+							<dt>생년월일</dt>
+							<dd><input type="tel" class="text" title="생년월일 입력" placeholder="생년월일을 입력해주세요." value="0000.00.00"></dd>
+						</dl>
+
+						<!-- # 조세국가 추가 # -->
+						<dl class="form">
+							<dt>조세국가 추가</dt>
+							<dd class="area-btn1">
+								<button type="button" class="btn-com1 ic3">조세국가 추가</button>
+							</dd>
+							<dd class="mes txt-c2"><span>추가국가:</span><strong> 미국, 그리스, 노르웨이, 네덜란드, 독일</strong></dd>
+						</dl>
+
+						<!-- # 영문주소 # -->
+						<dl class="form">
+							<dt>영문주소</dt>
+							<dd><input type="text" class="text" title="영문주소 입력" placeholder="영문주소를 입력해주세요." value="NW Washington, D.C. 20500, U.S."></dd>
+						</dl>
+					</div>
+				</fieldset>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action">초기화</button>
+				<button type="button" class="btn-action c1">저장</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

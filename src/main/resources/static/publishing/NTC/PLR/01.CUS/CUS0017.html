@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>고객정보등록 | 단체등록 | 고객등록</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>고객등록</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] 안내문구 -->
+		<!-- ######################### -->
+		<div class="tit-section"><p>등록하실 단체 정보를<br>입력해주세요.</p></div>
+
+		<!-- ######################### -->
+		<!-- [정보입력] 기본정보 -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend>기본정보입력</legend>
+
+			<dl class="form">
+				<dt>단체명 <i class="icon-required2">필수</i></dt>
+				<dd>
+					<input type="text" class="text" title="사업자명" placeholder="단체명을 입력해주세요.">
+					<!-- [오류시] -->
+					<input type="text" class="text" title="사업자명" placeholder="단체명을 입력해주세요." aria-invalid="true"> <!-- [D] 오류시 : aria-invalid="true" 추가후 ui.initReload() 재호출 -->
+					<div class="validation">[단체명]을/를 다시 확인해주세요.</div>
+				</dd>
+				<dd class="side"><button type="button" class="btn-sub3 c2">고객찾기</button></dd>
+			</dl>
+
+			<dl class="form">
+				<dt>단체유형 <i class="icon-required2">필수</i></dt>
+				<dd>
+					<div class="label-btn1 col2">
+						<label>
+							<input type="radio" name="form-radio01" checked>
+							<span>고유번호</span>
+						</label>
+						<label>
+							<input type="radio" name="form-radio01">
+							<span>임의</span>
+						</label>
+						<label>
+							<input type="radio" name="form-radio01">
+							<span>외국인사업자</span>
+						</label>
+						<label>
+							<input type="radio" name="form-radio01">
+							<span>임의(해상)</span>
+						</label>
+					</div>
+				</dd>
+			</dl>
+
+			<dl class="form ui-tabcon active" data-id="uiFormTabCon1">
+				<dt>단체번호 <i class="icon-required2">필수</i></dt>
+				<dd>
+					<!-- [D] 단체유형의 임의, 외국인사업자 선택 경우 readonly 추가 -->
+					<input type="tel" class="text" title="단체번호" placeholder="단체번호를 입력해주세요." value="930007381">
+
+					<!-- [오류시] -->
+					<input type="tel" class="text" title="단체번호" placeholder="단체번호를 입력해주세요." aria-invalid="true"> <!-- [D] 오류시 : aria-invalid="true" 추가후 ui.initReload() 재호출 -->
+					<div class="validation">[단체번호]을/를 다시 확인해주세요.</div>
+				</dd>
+			</dl>
+
+			<dl class="form">
+				<dt>단체구분 <i class="icon-required2">필수</i></dt>
+				<dd>
+					<div class="label-btn1">
+						<label>
+							<input type="radio" name="form-radio02" checked>
+							<span>급여</span>
+						</label>
+						<label>
+							<input type="radio" name="form-radio02">
+							<span>법정</span>
+						</label>
+						<label>
+							<input type="radio" name="form-radio02">
+							<span>규약</span>
+						</label>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 연락처 # -->
+			<div>
+				<dl class="form">
+					<dt>연락처 <i class="icon-required2">필수</i></dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="formRadio03" checked>
+								<span>휴대폰</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio03">
+								<span>소재지</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio03">
+								<span>본사</span>
+							</label>
+						</div>
+						<div class="text">
+							<input type="tel" title="연락처(통신사 및 국번)" placeholder="010">
+							<span class="util1">-</span>
+							<input type="tel" title="연락처(가운데번호)" placeholder="1234">
+							<span class="util1">-</span>
+							<input type="tel" title="연락처(끝번호)" placeholder="1234">
+						</div>
+
+						<!-- [오류시] -->
+						<div class="text">
+							<input type="tel" title="연락처(통신사 및 국번)" placeholder="010" aria-invalid="true"> <!-- [D] 오류시 : aria-invalid="true" 추가후 ui.initReload() 재호출 -->
+							<span class="util1">-</span>
+							<input type="tel" title="연락처(가운데번호)" placeholder="1234">
+							<span class="util1">-</span>
+							<input type="tel" title="연락처(끝번호)" placeholder="1234">
+						</div>
+						<div class="validation">[연락처]을/를 다시 확인해주세요.</div>
+					</dd>
+				</dl>
+
+				<!-- [추가 연락처]  -->
+				<dl class="form">
+					<dt>연락처</dt>
+					<dd>
+						<div class="label-btn1" data-autoset="form">
+							<label>
+								<input type="radio" name="formRadio031" data-tabcon="uiFormTabCon2" checked> <!-- [D] data-tabcon="uiFormTabCon2" : 휴대폰 선택시 하단 문자메시지(SMS) 수신 영역 노출 -->
+								<span>휴대폰</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio031">
+								<span>소재지</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio031">
+								<span>본사</span>
+							</label>
+						</div>
+						<div class="text">
+							<input type="tel" title="연락처(통신사 및 국번)" placeholder="010">
+							<span class="util1">-</span>
+							<input type="tel" title="연락처(가운데번호)" placeholder="1234">
+							<span class="util1">-</span>
+							<input type="tel" title="연락처(끝번호)" placeholder="1234">
+						</div>
+					</dd>
+					<dd class="side"><button type="button" class="btn-sub3 c2">지우기</button></dd>
+				</dl>
+
+				<!-- 연락처 추가 버튼  -->
+				<div class="area-btn1"><button type="button" class="btn-com1 ic3">연락처 추가</button></div>
+				<!-- //  -->
+			</div>
+
+			<!-- 휴대폰 체크 시 노출 영역  -->
+			<div class="ui-tabcon active" data-id="uiFormTabCon2">
+				<dl class="form">
+					<dt>문자메시지(SMS) 수신</dt>
+					<dd>
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="form-radio05" checked>
+								<span>동의</span>
+							</label>
+							<label>
+								<input type="radio" name="form-radio05">
+								<span>동의안함</span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!-- // -->
+
+			<!-- # 주소 # -->
+			<div>
+				<dl class="form">
+					<dt>주소<i class="icon-required2">필수</i></dt>
+					<dd>
+						<!-- [주소지분류] -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="formRadio06" checked="">
+								<span>소재지</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio06">
+								<span>본사</span>
+							</label>
+						</div>
+						<!-- [시/군/구] 검색 : 전 -->
+						<div class="input-btn1">
+							<data class="text" value="" data-label="주소를 검색해주세요."></data>
+							<button type="button" class="icon-com1 ic2">주소검색</button>
+						</div>
+						<input type="text" class="text" placeholder="상세주소를 입력해주세요.">
+
+						<!-- [오류시] -->
+						<div class="input-btn1">
+							<data class="text" value="" data-label="주소를 검색해주세요." aria-invalid="true"></data><!-- [D] 오류시 : aria-invalid="true" 추가후 ui.initReload() 재호출 -->
+							<button type="button" class="icon-com1 ic2">주소검색</button>
+						</div>
+						<input type="text" class="text" placeholder="상세주소를 입력해주세요." aria-invalid="true">
+						<div class="validation">[주소]을/를 다시 확인해주세요.</div>
+
+						<!-- [시/군/구] 검색 : 후 -->
+						<div class="input-btn1">
+							<data class="text" value="" data-label="주소를 검색해주세요.">서울특별시 화양구 125-3</data>
+							<button type="button" class="icon-com1 ic2">주소검색</button>
+						</div>
+						<input type="text" class="text" placeholder="상세주소를 입력해주세요." value="3층">
+					</dd>
+				</dl>
+
+				<!-- [추가 주소] -->
+				<dl class="form">
+					<dt>주소</dt>
+					<dd>
+						<!-- [주소지분류] -->
+						<div class="label-btn1">
+							<label>
+								<input type="radio" name="formRadio07" checked="">
+								<span>소재지</span>
+							</label>
+							<label>
+								<input type="radio" name="formRadio07">
+								<span>본사</span>
+							</label>
+						</div>
+						<!-- [시/군/구] 검색 : 전 -->
+						<div class="input-btn1">
+							<data class="text" value="" data-label="주소를 검색해주세요."></data>
+							<button type="button" class="icon-com1 ic2">주소검색</button>
+						</div>
+						<input type="text" class="text" placeholder="상세주소를 입력해주세요.">
+						<!-- [시/군/구] 검색 : 후 -->
+						<div class="input-btn1">
+							<data class="text" value="" data-label="주소를 검색해주세요.">서울특별시 화양구 125-3</data>
+							<button type="button" class="icon-com1 ic2">주소검색</button>
+						</div>
+						<input type="text" class="text" placeholder="상세주소를 입력해주세요." value="3층">
+					</dd>
+					<dd class="side"><button type="button" class="btn-sub3 c2">지우기</button></dd>
+				</dl>
+
+				<!-- [추가 버튼] -->
+				<div class="area-btn1"><button type="button" class="btn-com1 ic3">주소지 추가</button></div>
+				<!-- // -->
+			</div>
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [정보입력] 추가정보 입력하기 -->
+		<!-- ######################### -->
+		<div class="area-toggle1" data-autoset="toggle">
+			<fieldset>
+				<legend class="tit">
+					<strong>추가정보 입력하기</strong>
+					<button type="button" data-toggle="btn" aria-expanded="false">추가정보 상세보기</button>
+				</legend>
+
+				<div data-toggle="content" class="form-wrap1">
+					<!-- # 팩스 # -->
+					<div>
+						<dl class="form">
+							<dt>팩스</dt>
+							<dd>
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="formRadio08">
+										<span>소재지</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio08">
+										<span>본사</span>
+									</label>
+								</div>
+								<div class="text">
+									<input type="tel" title="연락처(국번)" placeholder="02">
+									<span class="util1">-</span>
+									<input type="tel" title="연락처(가운데번호)" placeholder="1234">
+									<span class="util1">-</span>
+									<input type="tel" title="연락처(끝번호)" placeholder="1234">
+								</div>
+							</dd>
+						</dl>
+
+						<!-- [팩스추가] -->
+						<dl class="form">
+							<dt>팩스</dt>
+							<dd>
+								<div class="label-btn1">
+									<label>
+										<input type="radio" name="formRadio080">
+										<span>소재지</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio080">
+										<span>본사</span>
+									</label>
+								</div>
+								<div class="text">
+									<input type="tel" title="연락처(국번)" placeholder="02">
+									<span class="util1">-</span>
+									<input type="tel" title="연락처(가운데번호)" placeholder="1234">
+									<span class="util1">-</span>
+									<input type="tel" title="연락처(끝번호)" placeholder="1234">
+								</div>
+							</dd>
+							<dd class="side"><button type="button" class="btn-sub3 c2">지우기</button></dd>
+						</dl>
+
+						<!-- [추가버튼] -->
+						<div class="area-btn1"><button type="button" class="btn-com1 ic3">팩스 추가</button></div>
+						<!-- // -->
+					</div>
+
+					<dl class="form">
+						<dt>단체이름(영문)</dt>
+						<dd><input type="text" class="text" title="단체이름(영문)" placeholder="단체이름(영문)을 입력해주세요."></dd>
+					</dl>
+
+					<dl class="form">
+						<dt>대표자명</dt>
+						<dd>
+							<!-- [CASE1] 검색전 -->
+							<div class="text">
+								<input type="search" title="대표자명" placeholder="고객님을 선택해주세요.">
+								<button type="button" class="icon-com1 ic2">대표자명 검색하기</button>
+							</div>
+							<!-- [CASE2] 검색후 -->
+							<div class="info-data3 info">
+								<div class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+									<strong>하다미</strong>
+									<span>
+										<span>1997.01.01</span>
+										<span>남</span>
+									</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<dl class="form">
+						<dt>설립일자</dt>
+						<dd><input type="text" class="text" title="설립 일자" placeholder="연월일을 이어서 입력해주세요. 예) 20281215"></dd>
+					</dl>
+
+					<dl class="form">
+						<dt>폐쇄일자</dt>
+						<dd><input type="text" class="text" title="폐쇄 일자" placeholder="연월일을 이어서 입력해주세요. 예) 20281215"></dd>
+					</dl>
+
+					<dl class="form line">
+						<dt>이메일</dt>
+						<dd>
+							<!-- // -->
+							<input type="text" class="text" title="아이디 입력" placeholder="아이디를 입력해주세요.">
+							<!-- // -->
+							<div class="select-wrap" data-autoset="select" data-callback="uiFunction2"> <!-- [D] 하단 uiFunction2(); 참고 : 함수명 변경 필요 -->
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">선택해주세요.</span>
+									<span data-select="text"></span>
+								</button>
+								<div class="list">
+									<div data-label="이메일 주소">
+										<div class="option">
+											<label><input type="radio" name="selectOpeion" value="1"><span>직접입력</span></label>
+											<label><input type="radio" name="selectOpeion" value="2"><span>naver.com</span></label>
+											<label><input type="radio" name="selectOpeion" value="3"><span>kakao.com</span></label>
+											<label><input type="radio" name="selectOpeion" value="4"><span>gmail.com</span></label>
+											<label><input type="radio" name="selectOpeion" value="5"><span>lotteins.co.kr</span></label>
+											<label><input type="radio" name="selectOpeion" value="6"><span>hanmail.net</span></label>
+											<label><input type="radio" name="selectOpeion" value="7"><span>daum.net</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+							<!-- // -->
+							<div class="ui-tabcon" data-select-con="3">
+								<input type="text" class="text" placeholder="도메인 주소를 입력해주세요.">
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+
+					<dl class="form line">
+						<dt>홈페이지</dt>
+						<dd><input class="text" type="text" title="홈페이지 주소" placeholder="홈페이지 주소를 입력해주세요." value="www.homepage.co.kr"></dd>
+					</dl>
+				</div>
+			</fieldset>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">완료</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<script>
+//<!--
+	/* ******************************
+	* 샘플 : 이메일 선택 예시
+	* uiFunction2() 함수명 변경 필요
+	* data-select-con : 보여줄 컨텐츠
+	****************************** */
+	function uiFunction2(e){
+		if(e.val() == 1) $('[data-select-con="3"]').removeClass('ui-tabcon');
+		else $('[data-select-con="3"]').addClass('ui-tabcon');
+	}
+//-->
+</script>
+</body>
+</html>

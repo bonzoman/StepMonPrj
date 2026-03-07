@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>정산계약변경신청 | 계약변경 | 자동차 | 통합계약조회 | 계약관리</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-08-31]	① 영수취급자 영역 노출 방식 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>정산계약변경신청</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] 증권번호 -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<dl class="info2">
+				<dt>증권번호</dt>
+				<dd class="ic1"><strong>LA11111111111111</strong></dd>
+			</dl>
+
+			<!-- ### 변경기준일 ### -->
+			<div class="form-wrap1">
+				<dl class="form">
+					<dt>변경기준일 <em class="icon-required2">필수</em></dt>
+					<dd class="input-date1">
+						<span>
+							<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>날짜 선택</button>
+							<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.03.09" readonly>
+						</span>
+					</dd>
+				</dl>
+			</div>
+			<!-- ### // ### -->
+		</div>
+
+		<div class="area-toggle1" data-autoset="toggle">
+			<!-- ######################### -->
+			<!-- [토글영역] 주행거리 내역 -->
+			<!-- ######################### -->
+			<section class="active">
+				<header class="tit">
+					<h2>주행거리 변경내역</h2>
+					<button type="button" data-toggle="btn" aria-expanded="true">상세보기</button>
+				</header>
+				<div data-toggle="content" class="info-con1">
+					<dl>
+						<dt>차량/차대</dt>
+						<dd data-masking="true">****7241</dd>
+					</dl>
+					<dl>
+						<dt>최초등록일</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>최종등록일</dt>
+						<dd>2022.11.23</dd>
+					</dl>
+					<dl>
+						<dt>운행일수(일)</dt>
+						<dd>23일</dd>
+					</dl>
+					<dl>
+						<dt>가입시<br>주행거리</dt>
+						<dd>000,000km</dd>
+					</dl>
+					<dl>
+						<dt>정산시<br>주행거리</dt>
+						<dd>000,000km</dd>
+					</dl>
+					<dl>
+						<dt>운행거리</dt>
+						<dd>000,000km</dd>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ######################### -->
+			<!-- [토글영역] 주행거리 정산내역 -->
+			<!-- ######################### -->
+			<section>
+				<header class="tit">
+					<h2>주행거리 정산내역</h2>
+					<button type="button" data-toggle="btn" aria-expanded="false">상세보기</button>
+				</header>
+				<div data-toggle="content">
+					<!-- // -->
+					<div class="area">
+						<h3 class="tit-sub2">후할인주행거리 특약</h3>
+						<div class="info-con1">
+							<dl>
+								<dt>최초가입시</dt>
+								<dd>후할인 주행거리특약 1만</dd>
+							</dl>
+							<dl>
+								<dt>최종정산시</dt>
+								<dd>후할인 주행거리특약 5천</dd>
+							</dl>
+						</div>
+					</div>
+					<!-- // -->
+					<div class="area">
+						<h3 class="tit-sub2">계기판주행거리</h3>
+						<div class="info-con1">
+							<dl>
+								<dt>최초가입시</dt>
+								<dd>21,566km</dd>
+							</dl>
+							<dl>
+								<dt>최종정산시</dt>
+								<dd>25,566km</dd>
+							</dl>
+							<dl>
+								<dt>특약가입기간 내운행거리</dt>
+								<dd>000,000,000km</dd>
+							</dl>
+							<dl>
+								<dt>연간주행거리</dt>
+								<dd>000,000,000km <a href="#uiTOOLTIPINFO1" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">계산방식 안내</a></dd>
+							</dl>
+						</div>
+					</div>
+					<!-- // -->
+					<div class="area">
+						<div class="tit-sub2">할인율</div>
+						<div class="info-con1">
+							<dl>
+								<dt>최초가입시</dt>
+								<dd class="data-num1"><strong>00.00</strong><span>%</span></dd>
+							</dl>
+							<dl>
+								<dt>최종정산시</dt>
+								<dd class="data-num1"><strong>00.00</strong><span>%</span></dd>
+							</dl>
+						</div>
+					</div>
+					<!-- // -->
+				</div>
+			</section>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [보험료 산출내역] -->
+		<!-- ######################### -->
+		<section class="wrap-section3"> <!-- [M 2022-10-25] 클래스명 수정 -->
+			<h3 class="tit-sub1">보험료 산출내역</h3>
+			<div class="info-con1">
+				<dl>
+					<dt>특약가입기간</dt>
+					<dd>
+						<div>2020.03.23~2021.03.31</div>
+						<div>(365일)</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>받은보험료</dt>
+					<dd class="data-num1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>내줄보험료 or 받을보험료</dt>
+					<dd class="data-num1 txt-c1"><strong>000,000,000</strong><span>원</span></dd>
+				</dl>
+				<dl>
+					<dt>정산기준일</dt>
+					<dd>2021.03.31</dd>
+				</dl>
+				<dl>
+					<dt>정산계좌</dt>
+					<dd>-</dd>
+				</dl>
+			</div>
+
+			<!-- # 신청 정보입력 # -->
+			<fieldset class="form-wrap1 line">
+				<legend>신청 정보입력</legend>
+
+				<dl class="form">
+					<dt>경리이체 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<div class="select-wrap" data-autoset="select" data-callback="uiSampleCallback">
+							<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+								<span data-select="title">경리이체 구분 선택</span>
+								<span data-select="text" data-value="1">온라인이체</span>
+							</button>
+							<div class="list">
+								<div data-label="경리이체 선택">
+									<div class="option">
+										<label><input type="radio" name="select1" value="1"><span>온라인이체</span></label>
+										<label><input type="radio" name="select1" value="2"><span>창구지급</span></label>
+										<label><input type="radio" name="select1" value="4"><span>재수납전환</span></label>
+										<label><input type="radio" name="select1" value="3"><span>카드부분취소</span></label>
+									</div>
+									<button type="button" data-toggle="closebtn">확인</button>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- [D] 경리이체 선택 구분: 온라인이체 선택 시 노출 -->
+				<div class="ui-tabcon active" data-select-con="1">
+					<dl class="form">
+						<dt>계약자와 예금주관계 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select" data-callback="uiSampleCallback">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">예금주와의 관계 선택</span>
+									<span data-select="text" data-value="11">본인</span>
+								</button>
+								<div class="list">
+									<div data-label="예금주와의 관계 선택">
+										<div class="option">
+											<label><input type="radio" name="select2" value="11"><span>본인</span></label>
+											<label><input type="radio" name="select2" value="12"><span>본인(예금주상이)</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- [D] 게약자와 예금주관계 선택 구분: 본인(예금주상이) 선택 시 노출 -->
+					<div class="ui-tabcon" data-select-con="12">
+						<dl class="form">
+							<dt>예금주명/예금주코드 <em class="icon-required2">필수</em></dt>
+							<dd>
+								<div class="input-wrap1">
+									<input type="text" class="text" title="예금주명" placeholder="예금주명">
+									<input type="tel" class="text" title="예금주코드" placeholder="예금주코드">
+								</div>
+								<div class="validation">예금주명 및 예금주코드를 입력해주세요.</div>
+
+								<!-- [오류시] -->
+								<div class="input-wrap1">
+									<input type="text" class="text" title="예금주명" placeholder="예금주명" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+									<input type="tel" class="text" title="예금주코드" placeholder="예금주코드" aria-invalid="true"><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+								</div>
+								<div class="validation">예금주명 및 예금주코드를 입력해주세요.</div>
+							</dd>
+						</dl>
+					</div>
+
+					<dl class="form">
+						<dt>은행/계좌번호 <em class="icon-required2">필수</em></dt>
+						<dd class="side"><button type="button" class="btn-sub3 c2">계좌조회</button></dd> <!-- [D] CON0000_P01.html 참조 -->
+						<dd>
+							<!-- [CASE1] 기본 -->
+							<div class="input-btn1">
+								<data class="selectbox" value="" data-label="은행 선택"></data>
+								<button type="button">은행 선택</button>
+							</div>
+							<div class="input-wrap1">
+								<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 ‘-’ 없이 입력">
+								<button type="button" class="btn-sub1">계좌확인</button>
+							</div>
+							<div class="validation"></div>
+
+							<!-- [CASE1] 은행 오류 -->
+							<div class="input-btn1">
+								<data class="selectbox" value="" data-label="은행 선택" aria-invalid="true"></data><!-- [D] 오류시 : 속성(aria-invalid="true") 추가 후 ui.initReload(); 호출 -->
+								<button type="button">은행 선택</button>
+							</div>
+							<div class="input-wrap1">
+								<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 ‘-’ 없이 입력">
+								<button type="button" class="btn-sub1">계좌확인</button>
+							</div>
+							<div class="validation">은행을 선택해주세요.</div>
+
+							<!-- [CASE1] 계좌 오류 -->
+							<div class="input-btn1">
+								<data class="selectbox" value="" data-label="은행 선택"></data>
+								<button type="button">은행 선택</button>
+							</div>
+							<div class="input-wrap1">
+								<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 ‘-’ 없이 입력" aria-invalid="true">
+								<button type="button" class="btn-sub1">계좌확인</button>
+							</div>
+							<div class="validation">계좌번호를 입력해 주세요.</div>
+
+                            <!-- [CASE1] 계좌 확인 -->
+							<div class="input-btn1">
+								<data class="selectbox" value="" data-label="은행 선택"></data>
+								<button type="button">은행 선택</button>
+							</div>
+							<div class="input-wrap1">
+								<input type="tel" class="text" title="계좌번호" placeholder="계좌번호 ‘-’ 없이 입력" aria-invalid="true">
+								<button type="button" class="btn-sub1">계좌확인</button>
+							</div>
+							<div class="validation">계좌확인을 진행해 주세요.</div>
+							<!-- // -->
+						</dd>
+						<dd class="data1">
+							<div>예금주:</div>
+							<div class="info"><strong>롯데렌트카</strong><span>111-22-333333</span></div>
+							<!-- [D] 계좌 확인 후 노출 -->
+							<div class="txt">
+								<strong class="txt-c1">불일치</strong> <!-- [D] 예금주 일치 -->
+								<strong class="txt-c2">확인완료</strong> <!-- [D] 예금주 불일치 -->
+							</div>
+							<!-- // -->
+						</dd>
+					</dl>
+				</div>
+
+				<!-- [D] 경리이체 선택 구분: 창구지급 선택 시 노출 -->
+				<div class="ui-tabcon" data-select-con="2">
+					<!-- // -->
+					<dl class="form">
+						<dt>영수증 <em class="icon-required2">필수</em></dt>
+						<dd>
+							<div class="select-wrap" data-autoset="select">
+								<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+									<span data-select="title">영수증 발급방식 선택 구분</span>
+									<span data-select="text" data-value="1">영수증 발행안함</span>
+								</button>
+								<div class="list">
+									<div data-label="발급방식 선택">
+										<div class="option">
+											<label><input type="radio" name="select3" value="1"><span>영수증 발행안함</span></label>
+											<label><input type="radio" name="select3" value="2"><span>전자영수증 발행</span></label>
+										</div>
+										<button type="button" data-toggle="closebtn">확인</button>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- // -->
+					<dl class="form">
+						<dt>영수일시 <em class="icon-required2">필수</em></dt>
+						<dd class="input-date1">
+							<span>
+								<button type="button" data-btn="picker" class="icon-com1 ic4" disabled>날짜 선택</button>
+								<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.03.09" readonly>
+							</span>
+						</dd>
+					</dl>
+
+					<!-- // -->
+					<dl class="form">
+						<dt>영수취급자 <em class="icon-required2">필수</em></dt>
+						<dd><data class="text disabled" value="하다미(1098063)" data-label="영수취급자">하다미(1098063)</data></dd> <!-- [M 2022-08-31] 출력영역 변경 -->
+					</dl>
+					<!-- // -->
+				</div>
+			</fieldset>
+		</section>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<!-- [CASE] 카드부분취소/재수납전환/창구지급의 경우 -->
+		<div class="area-action col t1" data-sticky="bottom">
+			<button type="button" class="btn-action ic4 simple">메뉴 더보기</button> <!-- [D] CON0119_L01 -->
+			<button type="button" class="btn-action c1">계약변경저장</button>
+			<button type="button" class="btn-action c1">계약변경완료</button>
+		</div>
+
+		<!-- [CASE] 온라인이체 발생의 경우 -->
+		<div class="area-action col t1" data-sticky="bottom">
+			<button type="button" class="btn-action ic4 simple">메뉴 더보기</button> <!-- [D] CON0119_L01 -->
+			<button type="button" class="btn-action c1">계약변경저장</button>
+			<button type="button" class="btn-action c1">업무요청</button>
+		</div>
+
+		<!-- [CASE] -->
+		<div class="area-action col t1" data-sticky="bottom">
+			<button type="button" class="btn-action ic4 simple">메뉴 더보기</button> <!-- [D] CON0119_L01 -->
+			<button type="button" class="btn-action c1">계약변경완료</button>
+		</div>
+
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ######################### -->
+<!-- [툴팁영역] 계산방식 안내 -->
+<!-- ######################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt>[계산방식]</dt>
+		<dd>연간 주행거리=최종 주행거리 - 최초 주행거리)÷사진등록일차이x365일(윤년366일)</dd>
+		<dd><button type="button" data-btn="pop-close">산출방식 안내 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+
+<script>
+//<!--
+	//[샘플] 셀렉트박스 닫을 때 실행
+	function uiSampleCallback(e){
+		var _select_val = e.val();
+		var _select_con = $(e).parents('.form').siblings('[data-select-con]');
+
+		if($('[data-select-con="'+_select_val+'"]').length > 0) $('[data-select-con="'+_select_val+'"]').addClass('active').siblings().removeClass('active');
+		else _select_con.removeClass('active');
+	}
+//-->
+</script>
+</body>
+</html>

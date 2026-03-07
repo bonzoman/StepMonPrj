@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>컨텐츠 태그 매칭 | 교육관리 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">컨텐츠 태그 매칭</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+
+			<fieldset class="form-search1">
+				<div class="form-field">
+					<dl class="form">
+						<dt>컨텐츠 검색</dt>
+						<dd>
+							<div class="form-row">
+								<select class="selectbox" style="width:100px;">
+									<option>대분류</option>
+									<option>인큐베이팅</option>
+									<option>어드밴스드</option>
+									<option>Youtube 컨텐츠</option>
+								</select>
+								<input type="text" name="" id="" class="text" style="width:400px" placeholder="컨텐츠 명을 입력해 주세요.">
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-action">
+					<button type="button" class="btn-action c1">검색</button>
+				</div>
+			</fieldset>
+
+			<div class="tbl-wrap1 tag">
+				<div>
+					<h3 class="tit-sub2">컨텐츠 목록 <span>전체 4</span></h3>
+					<!-- [M : 2022-09-14 수정]  
+						매칭 태그 수  cell 추가
+					-->
+					<div class="tbl-list1">
+						<table>
+							<colgroup>
+								<col style="width:60px;">
+								<col style="width:100px;">
+								<col style="width:120px;">
+								<col>
+								<col style="width:120px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">중분류</th>
+									<th scope="col">소분류</th>
+									<th scope="col">컨텐츠 명</th>
+									<th scope="col">매칭 태그 수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!--
+									tr에 적용할 class
+									완료시 : complete
+									선택시 : current
+								-->
+								<tr class="complete">
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>나는 포기하지 않았다- KFC의 성공신화</td>
+									<td>10</td>
+								</tr>
+								<tr class="current">
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>140대 질병 수술비</td>
+									<td>20</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명  컨텐츠명 컨텐츠명 </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명    </td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>정규</td>
+									<td>내 Flex</td>
+									<td>컨텐츠명 컨텐츠명 컨텐츠명    </td>
+									<td>10</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="paging">
+						<a class="ic_first disabled"></a>
+						<a class="ic_prev disabled"></a>
+						<span class="num current">1</span>
+						<a href="#" class="num">2</a>
+						<a href="#" class="num">3</a>
+						<a href="#" class="num">4</a>
+						<a href="#" class="num">5</a>
+						<a href="#" class="num">6</a>
+						<a href="#" class="num">7</a>
+						<a href="#" class="num">8</a>
+						<a href="#" class="num">9</a>
+						<a href="#" class="num">10</a>
+						<a href="#" class="ic_next"></a>
+						<a href="#" class="ic_last"></a>
+					</div>
+				</div>
+				<div>
+					<h3 class="tit-sub2">태그 목록</h3>
+					<div class="view-list1">
+						<div class="tit">
+							<h4>전체 태그(50)</h4>
+							<span class="side">0/5</span>
+						</div>
+						<div class="list">
+							<!--
+								체크박스
+								좌측 목록에서 선택 전(default) : disabled
+								좌측 목록에서 선택 후(current) : disabled 해제
+							-->
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>좌측목록선택시활성화</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>기본은비활성화</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명최대10글자요</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" disabled>
+								<span>태그명</span>
+							</label>
+						</div>
+						<div class="area-btn2">
+							<button type="button" class="btn-action c1">저장</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

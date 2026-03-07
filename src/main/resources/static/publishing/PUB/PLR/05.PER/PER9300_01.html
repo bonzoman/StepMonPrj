@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>조직 | 리포트</title>
+	<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+	<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+	<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/ui.plugin.js"></script>
+	<script src="../../resource/js/ui.common.js?20220913"></script>
+
+	<!-- 하이차트 라이브러리 -->
+	<script src="../../resource/js/chart/highcharts.js"></script>
+	<script src="../../resource/js/chart/data.js"></script>
+	<!--
+		**************************************************************************
+		*	수정일			수정내역
+		*	-------------- 	------------------------------------------------------
+		*	[M 2022-10-14]	1. 문구수정 : 취급자 강북사업단 > (사번번호로 변경)
+		*	[M 2022-11-07]	1. No Data 안내문구가 추가
+		**************************************************************************
+	-->
+</head>
+<body>
+
+<!-- ################################################### -->
+<!-- ### [바닥페이지] #wrapper ### -->
+<!-- ################################################### -->
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<h1>조직</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container" data-page="4">
+		<!-- ######################### -->
+		<!-- [메뉴영역] -->
+		<!-- ######################### -->
+		<nav class="area-nav" data-autoset="toggle">
+			<button type="button" data-toggle="btn" aria-expanded="false">메뉴더보기</button>
+			<div data-toggle="content">
+				<strong class="tit">조직</strong>
+				<ul>
+					<li><button type="button">혜택</button></li> <!-- [D] 현재페이지 class="active" 추가 -->
+					<li><button type="button">업적</button></li>
+					<li class="active"><button type="button">조직</button></li>
+					<li><button type="button">코칭</button></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- ######################### -->
+		<!-- [탭영역] -->
+		<!-- ######################### -->
+		<div class="nav-tab1" data-sticky="top">
+			<ul>
+				<li class="active"><a href="#uiTabSection1">후보자</a></li>
+				<li><a href="#uiTabSection2">교육</a></li>
+			</ul>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [검색영역] 조회검색 -->
+		<!-- [토글정의]
+			 * [조회정보보기] [조회조건 재검색] 버튼 클릭시 (load)클래스 자동 추가 삭제 됨
+			 * [조회] 버튼 클릭시
+			 	ㄴ 기본 : _toggleSearch.outputClose(); // 토글 닫기
+				ㄴ 결과 있을 경우에만 : (active)클래스 추가
+			* 조회조건 샘플 : /PLR/02.DES/01.LTR/LTR0097.html 참고
+				ㄴ 조회구분 > 설계번호 선택 후 > 입력폼에 입력 후 조회 클릭시 목록이 보임.
+		-->
+		<!-- ######################### -->
+		<div id="uiFormSearch" class="form-search2" data-scroll-bg="1" data-togglecon="true">
+			<!-- ### [상단문구] ### -->
+			<div class="tit-section2">
+				<p>조직을 조회해보세요.</p>
+				<button type="button" data-toggle="btn" aria-expanded="false">조회정보보기</button>
+			</div>
+
+			<!-- ### [조회영역] ### -->
+			<fieldset class="form-wrap1">
+				<legend>조회정보 입력</legend>
+
+				<!-- # 조직구분 # -->
+				<dl class="form">
+					<dt>조직구분 <em class="icon-required2">필수</em></dt>
+					<dd>
+						<!-- // -->
+						<div class="label-btn1" data-autoset="form">
+							<label>
+								<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont1" checked>
+								<span>조직</span>
+							</label>
+							<label>
+								<input type="radio" name="uiFormRadio0" data-tabcon="uiFormCont2" >
+								<span>취급자</span>
+							</label>
+						</div>
+
+						<!-- [CASE] 조직 -->
+						<div class="ui-tabcon active" data-id="uiFormCont1">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="조직을 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">조직찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 조직 -->
+							<div class="info-data3 info">
+								<div class="info2 ic1">
+									<strong>장기지원팀</strong>
+									<span>A1234566</span>
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+						</div>
+
+						<!-- [CASE] 취급자 -->
+						<div class="ui-tabcon" data-id="uiFormCont2">
+							<!-- // -->
+							<div class="input-btn1">
+								<data class="text" data-label="취급자를 검색해주세요." value=""></data>
+								<button type="button" class="icon-com1 ic2">취급자찾기</button>
+							</div>
+							<!-- [D] 검색결과 : 취급자 -->
+							<div class="info-data3 info">
+								<div class="data-info1">
+									<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+									<span><strong>공지철</strong><span>111111</span></span> <!-- 2022-10-14 사번으로 변경 -->
+								</div>
+								<div class="side"><button type="button" class="btn-sub3 c2">삭제</button></div>
+							</div>
+							<!-- // -->
+						</div>
+					</dd>
+				</dl>
+
+				<!-- # 검색버튼 # -->
+				<div class="area-btn1 col">
+					<button type="button" class="btn-com1 ic8 c3">초기화</button>
+					<button type="button" class="btn-com1 c1">조회</button>
+				</div>
+				<!-- # // # -->
+			</fieldset>
+			<!-- ### // ### -->
+		</div>
+
+		<!-- # [CASE] 조직 # -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조직구분</dt>
+				<dd class="ic3"><strong>강남사업단</strong></dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+
+		<!-- # [CASE] 설계사 # -->
+		<div class="info-summary1">
+			<dl class="info">
+				<dt>조직구분</dt>
+				<dd class="data-info1">
+					<span class="img"><img src="../../resource/img/temp/@img_user3.png" alt=""></span>
+					<span><strong>공지철</strong><span>658602</span></span>
+				</dd>
+			</dl>
+			<a href="#uiFormSearch" class="icon-com1 ic2 simple">조회조건 재검색</a>
+		</div>
+		<!-- // -->
+
+		<!-- ######################### -->
+		<!-- [탭영역] : 후보자 -->
+		<!-- ######################### -->
+		<div id="uiTabSection1" class="ui-tabcon active">
+			<!-- # 당월 후보자 진행 현황 # -->
+			<div class="wrap-section">
+				<h2 class="tit-sub1">당월 후보자 진행 현황</h2>
+
+				<div class="area-info6 t1 tline"><!-- [M 2022-11-30] class 추가 -->
+					<dl class="ic1">
+						<dt>후보자등록</dt>
+						<dd>
+							<strong>100</strong><span>명</span>
+							<button type="button" class="link">상세보기</button><!-- [M 2022-11-30] 버튼 추가-->
+						</dd>
+					</dl>
+					<dl class="ic4">
+						<dt>시험신청</dt>
+						<dd>
+							<strong>00</strong><span>명</span>
+							<button type="button" class="link">상세보기</button><!-- [M 2022-11-30] 버튼 추가-->
+						</dd>
+					</dl>
+					<dl class="ic6">
+						<dt>시험합격</dt>
+						<dd>
+							<strong>00</strong><span>명</span>
+							<button type="button" class="link">상세보기</button><!-- [M 2022-11-30] 버튼 추가-->
+						</dd>
+					</dl>
+					<dl class="ic5">
+						<dt>시험불합격</dt>
+						<dd>
+							<strong>00</strong><span>명</span><span>(미응시 10명)</span>
+							<button type="button" class="link">상세보기</button><!-- [M 2022-11-30] 버튼 추가-->
+						</dd>
+					</dl>
+					<dl class="ic2">
+						<dt>위촉대상자</dt>
+						<dd>
+							<strong>00</strong><span>명</span>
+							<button type="button" class="link">상세보기</button><!-- [M 2022-11-30] 버튼 추가-->
+						</dd>
+					</dl>
+					<dl class="ic7">
+						<dt>위촉진행중</dt>
+						<dd>
+							<strong>00</strong><span>명</span>
+							<button type="button" class="link">상세보기</button><!-- [M 2022-11-30] 버튼 추가-->
+						</dd>
+					</dl>
+					<dl class="ic3">
+						<dt>전자서명완료</dt>
+						<dd>
+							<strong>00</strong><span>명</span>
+							<button type="button" class="link">상세보기</button><!-- [M 2022-11-30] 버튼 추가-->
+						</dd>
+					</dl>
+					<dl class="ic8">
+						<dt>위촉완료</dt>
+						<dd>
+							<strong>00</strong><span>명</span>
+							<button type="button" class="link">상세보기</button><!-- [M 2022-11-30] 버튼 추가-->
+						</dd>
+					</dl>
+				</div>
+
+				<div class="area-btn2">
+					<button class="btn-t1 icon-com1 right ic3">전체 현황 확인하기</button>
+				</div>
+			</div>
+
+			<!-- # 후보자 구성 # -->
+			<div class="wrap-section3 line">
+				<div class="area-btn1">
+					<button class="btn-sub2 active">전체</button>
+					<button class="btn-sub2">전속</button>
+					<button class="btn-sub2">교차</button>
+				</div>
+
+				<!-- 후보자 구성(신입/경력) -->
+				<div class="wrap-chart1 t1">
+					<div class="tit-sub1">
+						<h2>후보자 구성(신입/경력)</h2>
+						<div class="side">(단위 명)</div>
+					</div>
+					
+					<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+					<div class="area-chart mes-result1">
+						<p>
+							<strong>기간 내 해당 항목에 대한 실적이 없어,<br>표기할 사항이 없습니다.</strong>
+							<span>조건을 변경해보세요.</span>
+						</p>
+					</div>
+					<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+					<!-- [CASE] 자료가 있을 경우 -->
+					<!-- <div class="area-chart">
+						<div id="Basic-Line5" class="nolegend" data-chart="Basic-Line5"></div>
+						<script>
+							// 후보자 구성(신입/경력)
+							Highcharts.chart("Basic-Line5",{
+								chart:{
+									type:"line",
+									marginLeft:0
+								},
+								title:null,
+								xAxis:{
+									categories:["전전월", "전월", "당월"]
+								},
+								legend:{
+									enabled:false
+								},
+								series:[
+									{
+										name:"신입",
+										data:[60,40, 80]
+									},
+									{
+										name:"경력",
+										data:[20,90,60]
+									},
+									{
+										name:"전체",
+										data:[80,100, 130]
+									}
+								]
+							});
+
+						</script>
+					</div>
+
+					<div class="area-info6 t3">
+						<dl class="data-num1">
+							<dt class="icon-chart1 ico1">신입</dt>
+							<dd><strong>155</strong><span>명</span></dd>
+							<dd class="icon-state5 t1 ic3"><strong>13</strong><span>명</span></dd>
+						</dl>
+						<dl class="data-num1">
+							<dt class="icon-chart1 ico4">경력</dt>
+							<dd><strong>155</strong><span>명</span></dd>
+							<dd class="icon-state5 t1 ic4"><strong>13</strong><span>명</span></dd>
+						</dl>
+						<dl class="data-num1">
+							<dt class="icon-chart1 ico6">전체</dt>
+							<dd><strong>155</strong><span>명</span></dd>
+							<dd class="icon-state5 t1 ic4"><strong>13</strong><span>명</span></dd>
+						</dl>
+					</div> -->
+					<!-- //[CASE] 자료가 있을 경우 -->
+				</div>
+
+				<!-- 후보자 구성(성별) -->
+				<div class="wrap-chart1 t1">
+					<div class="tit-sub1">
+						<h2>후보자 구성(성별)</h2>
+						<div class="side">(단위 명)</div>
+					</div>
+
+					<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+					<div class="area-chart mes-result1">
+						<p>
+							<strong>기간 내 해당 항목에 대한 실적이 없어,<br>표기할 사항이 없습니다.</strong>
+							<span>조건을 변경해보세요.</span>
+						</p>
+					</div>
+					<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+					<!-- [CASE] 자료가 있을 경우 -->
+					<!-- <div class="area-chart">
+						<div id="Donut-Line2-1" data-chart="Donut-Line1-2"></div>
+						<script>
+							// 후보자 구성(성별)
+							Highcharts.chart("Donut-Line2-1", {
+								chart:{
+									type:"pie",
+									margin:[0,0,0,0],
+								},
+								title:{
+									text:"전체",
+									y:62,
+								},
+								subtitle:{
+									text:"48명",
+									y:85,
+								},
+								legend:{
+									enabled:false
+								},
+								plotOptions:{
+									pie:{
+										dataLabels:{
+											enabled:false,
+										},
+										innerSize:"91%",
+									},
+								},
+								series:[{
+									name:'후보자',
+									data:[
+										{
+											y:78,
+											name:"남성"
+										},{
+											y:39,
+											name:"여성"
+										}
+									]
+								}]
+							});
+
+						</script>
+					</div>
+
+					<div class="area-info6 t1">
+						<dl class="data-num1">
+							<dt class="icon-chart1 ico1">여성</dt>
+							<dd><strong>155</strong><span>명</span></dd>
+							<dd class="icon-state5 t1 ic3"><strong>13</strong><span>명</span></dd>
+						</dl>
+						<dl class="data-num1">
+							<dt class="icon-chart1 ico7">남성</dt>
+							<dd><strong>155</strong><span>명</span></dd>
+							<dd class="icon-state5 t1 ic4"><strong>13</strong><span>명</span></dd>
+						</dl>
+					</div> -->
+					<!-- //[CASE] 자료가 있을 경우 -->
+				</div>
+
+				<!-- 후보자 구성(나이별) -->
+				<div class="wrap-chart1 t1">
+					<div class="tit-sub1">
+						<h2>후보자 구성(나이별)</h2>
+						<div class="side">(단위 명)</div>
+					</div>
+
+					<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+					<div class="area-chart mes-result1">
+						<p>
+							<strong>기간 내 해당 항목에 대한 실적이 없어,<br>표기할 사항이 없습니다.</strong>
+							<span>조건을 변경해보세요.</span>
+						</p>
+					</div>
+					<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+					<!-- [CASE] 자료가 있을 경우 -->
+					<!-- <div class="area-chart">
+						<div id="Basic-Column8-1" data-chart="Basic-Column8"></div>
+						<script>
+							// 후보자 구성(나이별)
+							Highcharts.chart("Basic-Column8-1",{
+								chart:{
+									type:"column",
+									mrginTop:30,
+									marginLeft:0
+								},
+								title:null,
+								legend:{
+									enabled:false
+								},
+								xAxis:{
+									categories:["20대","30대","40대","50대","60대<br>이상"]
+								},
+								plotOptions:{
+									column:{
+										dataLabels:{
+											enabled:true
+										}
+									}
+								},
+								series:[
+									{
+										name:"John",
+										data:[5,3,4,7,2]
+									}
+								]
+							})
+
+						</script>
+					</div>
+
+					<div class="info-con2 box">
+						<dl>
+							<dt>20대</dt>
+							<dd class="data-num1"><strong>36</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>30대</dt>
+							<dd class="data-num1"><strong>42</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>40대</dt>
+							<dd class="data-num1"><strong>36</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>50대</dt>
+							<dd class="data-num1"><strong>42</strong><span>명</span></dd>
+						</dl>
+						<dl>
+							<dt>60대 이상</dt>
+							<dd class="data-num1"><strong>36</strong><span>명</span></dd>
+						</dl>
+					</div> -->
+					<!-- //[CASE] 자료가 있을 경우 -->
+				</div>
+				<!-- // -->
+			</div>
+
+			<!-- # 시험 신청 현황 # -->
+			<div class="wrap-section3">
+				<h2 class="tit-sub1">시험 신청 현황</h2>
+
+				<dl class="data-num1">
+					<dt>총 신청자</dt>
+					<dd><strong>-</strong><span>명</span></dd>
+					<dt class="icon-state5 t1 ic5">전월대비</dt>
+					<dd><strong>-</strong><span>명</span></dd>
+				</dl>
+
+				<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+				<div class="area-chart mes-result1">
+					<p>
+						<strong>기간 내 해당 항목에 대한 실적이 없어,<br>표기할 사항이 없습니다.</strong>
+						<span>조건을 변경해보세요.</span>
+					</p>
+				</div>
+				<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+				<!-- [CASE] 자료가 있을 경우 -->
+				<!-- <div class="area-chart">
+					<div class="unit">(단위 명)</div>
+					<div id="Basic-Column2" class="nolegend" data-chart="Basic-Column2"></div>
+					<script>
+						// 시험 신청 현황
+						Highcharts.chart("Basic-Column2",{
+							chart:{
+								type:"column",
+								marginLeft:0,
+								marginRight:0
+							},
+							title:null,
+							legend:{
+								enabled:false,
+							},
+							xAxis:{
+								categories:["전전월", "전월", "당월"]
+							},
+							plotOptions:{
+								column:{
+									dataLabels:{
+										enabled:true
+									}
+								}
+							},
+							series:[{
+								colorByPoint:true,
+								name:"신청자",
+								data:[127,98,150]
+							}]
+						})
+
+					</script>
+				</div>
+
+				<div class="area-btn2">
+					<button class="btn-t1 icon-com1 right ic3">시험 신청 현황 확인하기</button>
+				</div> -->
+				<!-- //[CASE] 자료가 있을 경우 -->
+			</div>
+
+			<!-- # 최근 시험결과 # -->
+			<div class="wrap-section3">
+				<h2 class="tit-sub1">최근 시험결과</h2>
+
+				<dl class="data-num1">
+					<dt>응시자 10명 중 -명 합격</dt>
+					<dd class="sub"><strong>합격률 -</strong><span>%</span></dd>
+					<dt class="icon-state5 t1 ic5">전월대비</dt>
+					<dd><strong>-</strong><span>%</span></dd>
+				</dl>
+
+				<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+				<div class="area-chart mes-result1">
+					<p>
+						<strong>기간 내 해당 항목에 대한 실적이 없어,<br>표기할 사항이 없습니다.</strong>
+						<span>조건을 변경해보세요.</span>
+					</p>
+				</div>
+				<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+				<!-- [CASE] 자료가 있을 경우 -->
+				<!-- <div class="area-chart">
+					<div class="unit-t1">(단위 명, %)</div>
+					<div id="Pareto-chart3" data-chart="Pareto-chart3"></div>
+					<script>
+						// 최근 시험결과
+						Highcharts.chart("Pareto-chart3",{
+							chart:{
+								type:"column",
+								marginLeft:0,
+								marginRight:0
+							},
+							title:null,
+							xAxis:{
+								categories:["전전월", "전월", "당월"],
+							},
+							legend:{
+								enabled:true,
+								verticalAlign:"top",
+								align:'left',
+								layout:"horizontal"
+							},
+							plotOptions:{
+								column:{
+									groupPadding : 0.35,//그래프 간격
+									dataLabels:{
+										enabled:true
+									},
+								},
+								line:{
+									dataLabels:{
+										enabled:true
+									},
+								},
+							},
+							series:[{
+								name:"응시인원",
+								data:[39,54,39]
+							},{
+								name:"합격인원",
+								data:[25,40,25]
+							},{
+								type:"line",
+								name:"합격률",
+								data:[90.5,100,80]
+							}]
+						});
+
+					</script>
+				</div>
+
+				<div class="area-btn2">
+					<button class="btn-t1 icon-com1 right ic3">최근 시험결과 확인하기</button>
+				</div> -->
+				<!-- //[CASE] 자료가 있을 경우 -->
+			</div>
+
+			<!-- # 위촉현황 # -->
+			<div class="wrap-section3">
+				<h2 class="tit-sub1">위촉현황</h2>
+
+				<dl class="data-num1">
+					<dt>위촉완료</dt>
+					<dd><strong>-</strong><span>명</span></dd>
+					<dt class="icon-state5 t1 ic5">전월대비</dt>
+					<dd><strong>-</strong><span>명</span></dd>
+				</dl>
+
+				<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+				<div class="area-chart mes-result1">
+					<p>
+						<strong>기간 내 해당 항목에 대한 실적이 없어,<br>표기할 사항이 없습니다.</strong>
+						<span>조건을 변경해보세요.</span>
+					</p>
+				</div>
+				<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+				<!-- [CASE] 자료가 있을 경우 -->
+				<!-- <div class="area-chart">
+					<div class="unit-t1">(단위 명)</div>
+					<div id="Pareto-chart3-2" data-chart="Pareto-chart3"></div>
+					<script>
+						// 위촉현황
+						Highcharts.chart("Pareto-chart3-2",{
+							chart:{
+								type:"column",
+								marginLeft:0,
+								marginRight:0
+							},
+							title:null,
+							xAxis:{
+								categories:["전전월", "전월", "당월"],
+							},
+							legend:{
+								enabled:true,
+								verticalAlign:"top",
+								align:'left',
+								layout:"horizontal"
+							},
+							plotOptions:{
+								column:{
+									groupPadding : 0.35,//그래프 간격
+									dataLabels:{
+										enabled:true
+									},
+								},
+								line:{
+									dataLabels:{
+										enabled:true
+									},
+								},
+							},
+							series:[{
+								name:"교차",
+								data:[39,54,39]
+							},{
+								name:"전속",
+								data:[25,40,25]
+							},{
+								type:"line",
+								name:"전체",
+								data:[90.5,100,80]
+							}]
+						});
+
+					</script>
+				</div>
+
+				<div class="info-con2 box">
+					<h3 class="tit-sub3">위촉완료 전체</h3>
+					<dl>
+						<dt>전전월</dt>
+						<dd class="data-num1"><strong>76</strong><span>%</span></dd>
+					</dl>
+					<dl>
+						<dt>전월</dt>
+						<dd class="data-num1"><strong>68</strong><span>%</span></dd>
+					</dl>
+					<dl>
+						<dt class="txt-c3">당월</dt>
+						<dd class="data-num1"><strong>62</strong><span>%</span></dd>
+					</dl>
+				</div>
+
+				<div class="area-btn2">
+					<button class="btn-t1 icon-com1 right ic3">전체 현황 확인하기 </button>
+					<button class="btn-t1 icon-com1 right ic3">위촉 순위 확인하기 </button>
+				</div> -->
+				<!-- //[CASE] 자료가 있을 경우 -->
+			</div>
+			<!-- // -->
+		</div>
+
+		<!-- ######################### -->
+		<!-- [탭영역] : 교육 -->
+		<!-- ######################### -->
+		<div id="uiTabSection2" class="ui-tabcon">
+			<!-- # 인큐베이팅 교육 대상자 # -->
+			<div class="wrap-section">
+				<h2 class="tit-sub1">인큐베이팅 교육 대상자 <a href="#uiTOOLTIPINFO1" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">안내</a></h2>
+				<dl class="data-num1">
+					<dt>총 대상자</dt>
+					<dd><strong>-</strong><span>명</span></dd>
+					<dt class="icon-state5 t1 ic5">전월대비</dt>
+					<dd><strong>-</strong><span>명</span></dd>
+				</dl>
+				
+				<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+				<div class="area-chart mes-result1">
+					<p>
+						<strong>기간 내 해당 항목에 대한 실적이 없어,<br>표기할 사항이 없습니다.</strong>
+						<span>조건을 변경해보세요.</span>
+					</p>
+				</div>
+				<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+				<!-- [CASE] 자료가 있을 경우 -->
+				<!-- <div class="area-chart">
+					<div class="unit-t1">(단위 명)</div>
+					<div id="Basic-Column3-2" data-chart="Basic-Column3"></div>
+					<script>
+						// 인큐베이팅 교육 대상자
+						Highcharts.chart("Basic-Column3-2",{
+							chart:{
+								type:"column",
+								marginLeft:0,
+								marginRight:0,
+							},
+							title:null,
+							legend:{
+								enabled:true,
+								verticalAlign:"top",
+								align:'left',
+								layout:"horizontal"
+							},
+							xAxis:{
+								categories:["전전월", "전월", "당월"]
+							},
+							yAxis:{
+								// max:100,
+							},
+							plotOptions:{
+								column:{
+									groupPadding : 0.35,//그래프 간격
+									dataLabels:{
+										enabled:true
+									}
+								}
+							},
+							series:[
+								{
+									name:"수강자",
+									data:[100,50,70]
+								},{
+									name:"미수강자",
+									data:[125,60,50]
+								}
+							]
+						})
+
+					</script>
+				</div>
+
+				<div class="area-btn2">
+					<button class="btn-t1 icon-com1 right ic3">대상자 확인하기</button>
+				</div> -->
+				<!-- //[CASE] 자료가 있을 경우 -->
+			</div>
+
+			<!-- # 어드밴스드 교육 대상자 # -->
+			<div class="wrap-section">
+				<h2 class="tit-sub1">어드밴스드 교육 대상자 <a href="#uiTOOLTIPINFO2" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">안내</a></h2>
+				<dl class="data-num1">
+					<dt>총 대상자</dt>
+					<dd><strong>-</strong><span>명</span></dd>
+					<dt class="icon-state5 t1 ic5">전월대비</dt>
+					<dd><strong>-</strong><span>명</span></dd>
+				</dl>
+
+				<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+				<div class="area-chart mes-result1">
+					<p>
+						<strong>기간 내 해당 항목에 대한 실적이 없어,<br>표기할 사항이 없습니다.</strong>
+						<span>조건을 변경해보세요.</span>
+					</p>
+				</div>
+				<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+				<!-- [CASE] 자료가 있을 경우 -->
+				<!-- <div class="area-chart">
+					<div class="unit-t1">(단위 명)</div>
+					<div id="Basic-Column3-3" data-chart="Basic-Column3"></div>
+					<script>
+						// 어드밴스드 교육 대상자
+						Highcharts.chart("Basic-Column3-3",{
+							chart:{
+								type:"column",
+								marginLeft:0,
+								marginRight:0,
+							},
+							title:null,
+							legend:{
+								enabled:true,
+								verticalAlign:"top",
+								align:'left',
+								layout:"horizontal"
+							},
+							xAxis:{
+								categories:["전전월", "전월", "당월"]
+							},
+							yAxis:{
+								// max:100,
+							},
+							plotOptions:{
+								column:{
+									groupPadding : 0.35,//그래프 간격
+									dataLabels:{
+										enabled:true
+									}
+								}
+							},
+							series:[
+								{
+									name:"수강자",
+									data:[100,50,70]
+								},{
+									name:"미수강자",
+									data:[125,60,50]
+								}
+							]
+						})
+
+					</script>
+				</div>
+
+				<div class="area-btn2">
+					<button class="btn-t1 icon-com1 right ic3">대상자 확인하기</button>
+				</div> -->
+				<!-- //[CASE] 자료가 있을 경우 -->
+			</div>
+
+			<!-- # 역량강화 대상자 # -->
+			<div class="wrap-section">
+				<h2 class="tit-sub1">역량강화 대상자 <a href="#uiTOOLTIPINFO3" data-btn="tooltip" class="icon-com2 ic2" aria-haspopup="dialog">안내</a></h2>
+				<dl class="data-num1">
+					<dt>어드밴스드 인원 중</dt>
+					<dd><strong>-</strong><span>명</span></dd>
+					<dt class="icon-state5 t1 ic5">전월대비</dt>
+					<dd><strong>-</strong><span>명</span></dd>
+				</dl>
+
+				<!-- [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+				<div class="area-chart mes-result1">
+					<p>
+						<strong>기간 내 해당 항목에 대한 실적이 없어,<br>표기할 사항이 없습니다.</strong>
+						<span>조건을 변경해보세요.</span>
+					</p>
+				</div>
+				<!-- // [M 2022-11-07] [CASE] 자료가 없을 경우 -->
+
+				<!-- [CASE] 자료가 있을 경우 -->
+				<!-- <div class="area-chart">
+					<div class="unit-t1">(단위 명)</div>
+					<div id="Pareto-chart3-3" data-chart="Pareto-chart3"></div>
+					<script>
+						// 역량강화 대상자
+						Highcharts.chart("Pareto-chart3-3",{
+							chart:{
+								type:"column",
+								marginLeft:0,
+								marginRight:0
+							},
+							title:null,
+							xAxis:{
+								categories:["전전월", "전월", "당월"],
+							},
+							legend:{
+								enabled:true,
+								verticalAlign:'top',
+								align:'left',
+								layout:"horizontal"
+							},
+							plotOptions:{
+								column:{
+									groupPadding : 0.35,//그래프 간격
+									dataLabels:{
+										enabled:true
+									},
+								},
+								line:{
+									dataLabels:{
+										enabled:true
+									},
+								},
+							},
+							series:[{
+								name:"동일",
+								data:[39,54,39]
+							},{
+								name:"신규",
+								data:[25,40,25]
+							},{
+								type:"line",
+								name:"전체",
+								data:[90.5,100,80]
+							}]
+						});
+
+					</script>
+				</div>
+
+				<div class="info-con2 box">
+					<h3 class="tit-sub3">역량강화 대상자 전체</h3>
+					<dl>
+						<dt>전전월</dt>
+						<dd class="data-num1"><strong>76</strong><span>%</span></dd>
+					</dl>
+					<dl>
+						<dt>전월</dt>
+						<dd class="data-num1"><strong>68</strong><span>%</span></dd>
+					</dl>
+					<dl>
+						<dt class="txt-c3">당월</dt>
+						<dd class="data-num1"><strong>62</strong><span>%</span></dd>
+					</dl>
+				</div>
+
+				<div class="area-btn2">
+					<button class="btn-t1 icon-com1 right ic3">대상자 확인하기</button>
+				</div> -->
+				<!-- //[CASE] 자료가 있을 경우 -->
+			</div>
+			<!-- // -->
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ######################### -->
+<!-- [툴팁영역] -->
+<!-- ######################### -->
+<!-- 인큐베이팅 교육 대상자 -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">인큐베이팅 교육 대상자</dt>
+		<dd>입과 후 교육진행을 한번도 진행하지 않은 대상자가 미수강자에 포함됩니다.​</dd>
+		<dd><button type="button" data-btn="pop-close">인큐베이팅 교육 대상자 닫기</button></dd>
+	</dl>
+</div>
+<!-- 어드밴스드 교육 대상자 -->
+<div id="uiTOOLTIPINFO2" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">어드밴스드 교육 대상자</dt>
+		<dd>입과 후 교육진행을 한번도 진행하지 않은 대상자가 미수강자에 포함됩니다.</dd>
+		<dd><button type="button" data-btn="pop-close">어드밴스드 교육 대상자 닫기</button></dd>
+	</dl>
+</div>
+<!-- 역량강화 대상자 -->
+<div id="uiTOOLTIPINFO3" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">역량강화 대상자</dt>
+		<dd>사업단장이 선정한 역량강화 인원 현황을 보여줍니다.​</dd>
+		<dd><button type="button" data-btn="pop-close">역량강화 대상자 닫기</button></dd>
+	</dl>
+</div>
+<!-- ######################### -->
+
+<script>
+//<!--
+	/* ************************************
+	* 토글 호출
+	************************************ */
+	var _toggleSearch = $plugin.togglecon('#uiFormSearch', {
+		selector_group : false,
+		callback_load :function(e){
+			//오픈이벤트
+		},
+		callback_after : function(e){
+			//닫기이벤트
+		}
+	});
+
+	//토글컨텐츠 강제 오픈
+	_toggleSearch.outputOpen();
+
+	/* ************************************
+	* 탭버튼 호출
+	************************************ */
+	$plugin.togglecon('.nav-tab1',{
+		toggle_type : 'tab',
+		selector : '.nav-tab1 > ul > li',
+		selector_btn : '> a',
+		selector_con : '#href',
+		callback_load : function(e){
+			//오픈이벤트
+			ui.initReload();
+		}
+	});
+
+//-->
+</script>
+</body>
+</html>

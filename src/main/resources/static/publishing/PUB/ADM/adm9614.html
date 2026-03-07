@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>상세보기 | 리포트 | 업적 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+
+
+<!-- 하이차트 라이브러리 -->
+<link rel="stylesheet" href="../resource/css/content_chart.css">
+<script src="../resource/js/chart/highcharts.js"></script>
+<script src="../resource/js/chart/data.js"></script>
+
+<!-- 차트 솔리드 게이지용 js 모듈 -->
+<script src="../resource/js/chart/highcharts-more.js"></script>
+<script src="../resource/js/chart/solid-gauge.js"></script>
+
+<!-- 차트 Heat Map 모듈 -->
+<script src="../resource/js/chart/heatmap.js"></script>
+
+<!-- 차트 Large tree map -->
+<script src="../resource/js/chart/treemap.js"></script>
+
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-06]	① 항목 수정
+	**************************************************************************
+-->
+</head>
+<body>
+
+<div id="popup">
+	<div class="pop-header">
+		<h1>메뉴별 로그인 수</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="report-wrap">
+			<div class="search-condition">
+				<span>강남사업단</span>
+				<span>강1지점</span>
+				<span>기준일자 2022.02.22 ~ 2022.02.28</span>
+			</div>
+			<div class="data">
+				<div id="activityChart2" data-chart="Basic-Column1"></div>
+				<script>
+					Highcharts.chart("activityChart2",{
+						chart:{
+							type:"column",
+							marginLeft:0,
+						},
+						title:null,
+						legend:{
+							enabled:false
+						},
+						xAxis:{
+
+							categories:["활동지원","커뮤니티","자금관리","업적","업무지원요청","설계청약","보험케어","보장분석","보상","도입관리","교육","고객관리","계약관리","가입/설계"]
+						},
+						yAxis:{
+							title: null,
+							opposite: true,
+							min:0,
+							labels: {
+								formatter: function() {
+									return this.value;
+								}
+							}
+						},
+						plotOptions:{
+							column:{
+								pointWidth:4,
+								dataLabels:{
+									enabled:false,
+								}
+							}
+						},
+						series:[
+							{
+								name:"메뉴별 로그인 수",
+								data:[320,420,100,80,1900,320,420,100,80,900,320,420,100,80],
+							}
+						]
+					})
+
+				</script>
+			</div>
+			<div class="data-table1">
+				<div class="list-table" data-pos="top">
+					<table>
+						<colgroup>
+							<col style="width:100px;"><!-- [M 2022-10-06] 항목 추가 -->
+							<col style="width:100px;"><!-- [M 2022-10-06] 항목 수정 (사이즈 변경)-->
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">사업단</th><!-- [M 2022-10-06] 항목 추가 -->
+								<th scope="col">지점</th><!-- [M 2022-10-06] 항목 수정 (no.를 변경)-->
+								<th scope="col">설계사명</th>
+								<th scope="col">설계사코드</th>
+								<th scope="col">활동지원</th>
+								<th scope="col">커뮤니티</th>
+								<th scope="col">자금관리</th>
+								<th scope="col">업적</th>
+								<th scope="col">업무지원요청</th>
+								<th scope="col">설계청약</th>
+								<th scope="col">보험케어</th>
+								<th scope="col">보장분석</th>
+								<th scope="col">보상</th>
+								<th scope="col">도입관리</th>
+								<th scope="col">교육</th>
+								<th scope="col">고객관리</th>
+								<th scope="col">계약관리</th>
+								<th scope="col">가입/설계</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>강남사업단</td><!-- [M 2022-10-06] 항목 추가 -->
+								<td>강남지점</td><!-- [M 2022-10-06] 항목 수정 (no.를 변경)-->
+								<td>김길동</td>
+								<td>1111111</td>
+								<td>222</td>
+								<td>222</td>
+								<td>2,222</td>
+								<td>2323</td>
+								<td>2222</td>
+								<td>2222</td>
+								<td>1234</td>
+								<td>11</td>
+								<td>11</td>
+								<td>23</td>
+								<td>12</td>
+								<td>22</td>
+								<td>22</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>강남사업단</td><!-- [M 2022-10-06] 항목 추가 -->
+								<td>강남지점</td><!-- [M 2022-10-06] 항목 수정 (no.를 변경)-->
+								<td>김길동</td>
+								<td>1111111</td>
+								<td>222</td>
+								<td>222</td>
+								<td>2,222</td>
+								<td>2323</td>
+								<td>2222</td>
+								<td>2222</td>
+								<td>1234</td>
+								<td>11</td>
+								<td>11</td>
+								<td>23</td>
+								<td>12</td>
+								<td>22</td>
+								<td>22</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>강남사업단</td><!-- [M 2022-10-06] 항목 추가 -->
+								<td>강남지점</td><!-- [M 2022-10-06] 항목 수정 (no.를 변경)-->
+								<td>김길동</td>
+								<td>1111111</td>
+								<td>222</td>
+								<td>222</td>
+								<td>2,222</td>
+								<td>2323</td>
+								<td>2222</td>
+								<td>2222</td>
+								<td>1234</td>
+								<td>11</td>
+								<td>11</td>
+								<td>23</td>
+								<td>12</td>
+								<td>22</td>
+								<td>22</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>강남사업단</td><!-- [M 2022-10-06] 항목 추가 -->
+								<td>강남지점</td><!-- [M 2022-10-06] 항목 수정 (no.를 변경)-->
+								<td>김길동</td>
+								<td>1111111</td>
+								<td>222</td>
+								<td>222</td>
+								<td>2,222</td>
+								<td>2323</td>
+								<td>2222</td>
+								<td>2222</td>
+								<td>1234</td>
+								<td>11</td>
+								<td>11</td>
+								<td>23</td>
+								<td>12</td>
+								<td>22</td>
+								<td>22</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>강남사업단</td><!-- [M 2022-10-06] 항목 추가 -->
+								<td>강남지점</td><!-- [M 2022-10-06] 항목 수정 (no.를 변경)-->
+								<td>김길동</td>
+								<td>1111111</td>
+								<td>222</td>
+								<td>222</td>
+								<td>2,222</td>
+								<td>2323</td>
+								<td>2222</td>
+								<td>2222</td>
+								<td>1234</td>
+								<td>11</td>
+								<td>11</td>
+								<td>23</td>
+								<td>12</td>
+								<td>22</td>
+								<td>22</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>강남사업단</td><!-- [M 2022-10-06] 항목 추가 -->
+								<td>강남지점</td><!-- [M 2022-10-06] 항목 수정 (no.를 변경)-->
+								<td>김길동</td>
+								<td>1111111</td>
+								<td>222</td>
+								<td>222</td>
+								<td>2,222</td>
+								<td>2323</td>
+								<td>2222</td>
+								<td>2222</td>
+								<td>1234</td>
+								<td>11</td>
+								<td>11</td>
+								<td>23</td>
+								<td>12</td>
+								<td>22</td>
+								<td>22</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>강남사업단</td><!-- [M 2022-10-06] 항목 추가 -->
+								<td>강남지점</td><!-- [M 2022-10-06] 항목 수정 (no.를 변경)-->
+								<td>김길동</td>
+								<td>1111111</td>
+								<td>222</td>
+								<td>222</td>
+								<td>2,222</td>
+								<td>2323</td>
+								<td>2222</td>
+								<td>2222</td>
+								<td>1234</td>
+								<td>11</td>
+								<td>11</td>
+								<td>23</td>
+								<td>12</td>
+								<td>22</td>
+								<td>22</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>강남사업단</td><!-- [M 2022-10-06] 항목 추가 -->
+								<td>강남지점</td><!-- [M 2022-10-06] 항목 수정 (no.를 변경)-->
+								<td>김길동</td>
+								<td>1111111</td>
+								<td>222</td>
+								<td>222</td>
+								<td>2,222</td>
+								<td>2323</td>
+								<td>2222</td>
+								<td>2222</td>
+								<td>1234</td>
+								<td>11</td>
+								<td>11</td>
+								<td>23</td>
+								<td>12</td>
+								<td>22</td>
+								<td>22</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>강남사업단</td><!-- [M 2022-10-06] 항목 추가 -->
+								<td>강남지점</td><!-- [M 2022-10-06] 항목 수정 (no.를 변경)-->
+								<td>김길동</td>
+								<td>1111111</td>
+								<td>222</td>
+								<td>222</td>
+								<td>2,222</td>
+								<td>2323</td>
+								<td>2222</td>
+								<td>2222</td>
+								<td>1234</td>
+								<td>11</td>
+								<td>11</td>
+								<td>23</td>
+								<td>12</td>
+								<td>22</td>
+								<td>22</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>강남사업단</td><!-- [M 2022-10-06] 항목 추가 -->
+								<td>강남지점</td><!-- [M 2022-10-06] 항목 수정 (no.를 변경)-->
+								<td>김길동</td>
+								<td>1111111</td>
+								<td>222</td>
+								<td>222</td>
+								<td>2,222</td>
+								<td>2323</td>
+								<td>2222</td>
+								<td>2222</td>
+								<td>1234</td>
+								<td>11</td>
+								<td>11</td>
+								<td>23</td>
+								<td>12</td>
+								<td>22</td>
+								<td>22</td>
+								<td>22</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="paging">
+				<div class="btns1">
+					<button type="button" class="btn-action c3">엑셀 다운로드</button>
+				</div>
+				<a class="ic_first disabled"></a>
+				<a class="ic_prev disabled"></a>
+				<span class="num current">1</span>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">9</a>
+				<a href="#" class="num">10</a>
+				<a href="#" class="ic_next"></a>
+				<a href="#" class="ic_last"></a>
+			</div>
+		</div>
+		<script>
+
+			_fixTable.init({
+				fixColumn : 3
+			});
+			_fixTable.update(); // 테이블 내용 변경 후 호출 해야 틀고정 영역 내용이 변경됨
+		</script>
+		<div class="area-action">
+			<button type="button" class="btn-action c2">닫기</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

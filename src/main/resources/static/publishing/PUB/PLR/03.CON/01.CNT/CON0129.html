@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 계약변경내역 | 목록 | 일반 | 통합계약조회</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<header class="header">
+		<a href="javascript:void(0);" class="icon-prev">이전페이지</a>
+		<h1>계약변경설계요청</h1>
+		<a href="#asideTotalMenu" class="icon-menu">전체메뉴</a>
+	</header>
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<div class="container">
+		<!-- ######################### -->
+		<!-- [상단영역] 계약정보 -->
+		<!-- ######################### -->
+		<div class="info-summary2">
+			<h2 class="tit">무배당 롯데손해보험 힐링케어 건강보험 1210 2종</h2>
+			<div class="info">
+				<dl>
+					<dt>증권번호</dt>
+					<dd>LA123456789</dd>
+				</dl>
+			</div>
+
+			<div class="area1">
+				<dl class="info2">
+					<dt>계약자</dt>
+					<dd class="data-info2" data-value="102701"> <!-- [D] 고객 아이콘 노출 정의 : data-value="내국인/외국인(1/9)나이(000)성별(01/02)" -->
+						<strong>하다미</strong>
+						<span>
+							<span>1990.01.01</span>
+							<span>남</span>
+						</span>
+					</dd>
+				</dl>
+				<dl class="info2">
+					<dt>피보험자</dt>
+					<dd class="data-info2" data-value="102702">
+						<strong>이자녀</strong>
+						<span>
+							<span>1990.01.01</span>
+							<span>여</span>
+						</span>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<!-- ######################### -->
+		<!-- [정보입력] -->
+		<!-- ######################### -->
+		<fieldset class="form-wrap1">
+			<legend>요청업무 입력</legend>
+
+			<!-- # 요청업무 구분 선택 # -->
+			<dl class="form">
+				<dt>요청업무</dt>
+				<dd>
+					<div class="select-wrap" data-autoset="select">
+						<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+							<span data-select="title">선택</span>
+							<span data-select="text" data-value="1">일반변경</span>
+						</button>
+						<div class="list">
+							<div data-label="요청업무선택">
+								<div class="option">
+									<label><input type="radio" name="selectOpetion" value="1"><span>일반변경</span></label>
+									<label><input type="radio" name="selectOpetion" value="2"><span>계약취소(쳥약철회)</span></label>
+									<label><input type="radio" name="selectOpetion" value="3"><span>계약해지</span></label>
+									<label><input type="radio" name="selectOpetion" value="4"><span>기타요청</span></label>
+								</div>
+								<button type="button" data-toggle="closebtn">확인</button>
+							</div>
+						</div>
+					</div>
+				</dd>
+			</dl>
+
+			<dl class="form">
+				<dt>기준일</dt>
+				<dd>
+					<div class="input-date1">
+						<span>
+							<button type="button" data-btn="picker" class="icon-com1 ic4">날짜 선택</button>
+							<input type="text" class="text" title="날짜 선택" placeholder="YYYY.MM.DD" value="2022.02.18" readonly>
+						</span>
+					</div>
+				</dd>
+			</dl>
+
+			<!-- # 내용 입력 # -->
+			<dl class="form">
+				<dt>내용</dt>
+				<dd>
+					<div class="textarea">
+						<textarea cols="50" rows="3" title="등록내용" placeholder="업무요청 시 사전 업무처리 및 확인사항이 있습니다. 페이지 아래를 확인해주세요.&#10;&#10;요청내역에는 개인정보 입력을 삼가해주세요." required></textarea>
+						<span class="util2"><strong>0</strong>/1,000자</span>
+					</div>
+				</dd>
+				<dd class="mes-info2 box">영업일 09~17시 접수 건 외 익영업일 처리됩니다</dd>
+			</dl>
+
+			<!-- # 파일첨부 # -->
+			<dl class="form">
+				<dt>파일첨부 <a href="#uiTOOLTIPINFO1" class="icon-com2 ic2" data-btn="tooltip">안내사항</a></dt>
+				<dd>
+					<!-- 파일첨부 -->
+					<div class="data-file1">
+						<ul>
+							<li>
+								<span>담보확인 첨부화면내용 캡쳐.png 담보확인 첨부화면내용 캡쳐.png</span>
+								<span class="sub">46.3KB</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+							<li>
+								<span>건물사진1.jpg</span>
+								<span class="sub">56KB</span>
+								<button type="button" class="icon-com1 ic6">삭제</button>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 버튼 -->
+					<div class="area-btn1">
+						<button class="btn-com1 ic3">파일첨부</button>
+					</div>
+				</dd>
+			</dl>
+			<!-- // -->
+		</fieldset>
+
+		<!-- ######################### -->
+		<!-- [하단영역] 액션버튼 -->
+		<!-- ######################### -->
+		<div class="area-action" data-sticky="bottom">
+			<button type="button" class="btn-action c1">요청하기</button>
+		</div>
+		<!-- ######################### -->
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+
+<!-- ##################################### -->
+<!-- # [툴팁 영역] 파일 첨부 안내 -->
+<!-- ##################################### -->
+<div id="uiTOOLTIPINFO1" class="pop-mes4" data-popmodal="true" role="alertdialog">
+	<dl>
+		<dt class="hide">파일 첨부 안내사항</dt>
+		<dd>
+			<ul class="txt-bul3">
+				<li>첨부파일의 사이즈는 <strong>000px X 000px</strong> 사이즈를 준수해주세요.</li>
+				<li>첨부파일은 <strong>png, jpg, jpeg, bmp, gif</strong> 파일만 등록이 가능합니다.</li>
+				<li>첨부파일 용량은 <strong>5M</strong>를 넘을 수 없습니다.</li>
+			</ul>
+		</dd>
+		<dd><button type="button" data-btn="pop-close">파일 첨부 안내사항 닫기</button></dd>
+	</dl>
+</div>
+<!-- ##################################### -->
+</body>
+</html>

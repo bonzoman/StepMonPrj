@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 법정대리인 추가 | 등록 | 미성년자/법정대리인 | 고객등록</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>법정대리인 추가</h1>
+			<button type="button" data-btn="pop-close">법정대리인 추가 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [상단영역] 안내문구 -->
+			<!-- ######################### -->
+			<div class="tit-section">
+				<p>조유아 고객님에 대해<br>추가하실 법정대리인을 등록해주세요.</p>
+				<div class="area-btn1"><button type="button" class="btn-com1 ic2">고객찾기</button></div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [정보영역] 고객정보 -->
+			<!-- ######################### -->
+			<div class="wrap-section">
+				<!-- # 고객정보 # -->
+				<div class="info-data5">
+					<dl>
+						<dt class="tit">
+							<strong>인서연</strong>
+							<span class="sub">개인</span>
+						</dt>
+						<dd class="info-con1">
+							<ul>
+								<li>
+									<div>생년월일/성별</div>
+									<div><strong>1994.03.11·여</strong></div>
+								</li>
+								<li>
+									<div>휴대폰번호</div>
+									<div data-masking="true"><strong>010 - **** - 1234</strong></div>
+								</li>
+								<li>
+									<div>주소</div>
+									<div data-masking="true"><strong>(04528)서울 영등포구 여의대로 *****, ***</strong></div>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- # 법정대리인유형 선택 # -->
+				<div class="select-wrap" data-autoset="select">
+					<button type="button" class="selectbox" data-toggle="selectbtn" aria-expanded="false">
+						<span data-select="title">법정대리인유형을 선택해주세요.</span>
+						<span data-select="text"></span>
+					</button>
+					<div class="list">
+						<div data-label="법정대리인유형을 선택">
+							<div class="option">
+								<label><input type="radio" name="selectOpeion" value="1"><span>부모</span></label>
+								<label><input type="radio" name="selectOpeion" value="2"><span>조부모</span></label>
+								<label><input type="radio" name="selectOpeion" value="3"><span>친척</span></label>
+								<label><input type="radio" name="selectOpeion" value="4"><span>기타</span></label>
+							</div>
+							<button type="button" data-toggle="closebtn">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">등록</button>
+				<!-- <button type="button" class="btn-action c1" disabled>등록</button> : 비 활성화 시 -->
+			</div>
+			<!-- ######################### -->
+		</div>
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

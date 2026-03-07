@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>업무 TIP 보기 | 고객상세(채팅UI) | 고객상세 | 고객조회</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>업무 TIP 보기</h1>
+			<button type="button" data-btn="pop-close">업무 TIP 보기 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<div class="wrap-section1">
+				<section>
+					<!-- case7 -->
+					<dl class="mes-t3">
+						<dt>자동이체 미입금이란 무엇일까요?</dt>
+						<dd class="txt-bul2 t2">계약자가 자동이체로 해당 이체일에 납입해야할 보험료가 출금되지 않은 상태를 의미해요.</dd>
+					</dl>
+					<!-- //case7 -->
+				</section>
+
+				<section>
+					<!-- case7 -->
+					<dl class="mes-t5">
+						<dt class="ic1">여기서 업무 팁!<br>자동이체 미입금 건들은 어떻게 진행하면 될까요?</dt>
+						<dd><em>사전준비</em>
+							<ul class="txt-mark2">
+								<li>고객님에게 보험료 지동이체 미입금 상태를 미리 알려주세요.</li>
+								<li>계좌오류 또는 잔액부족 등의 미입금 사유를 확인해보세요.</li>
+							</ul>
+						</dd>
+						<dd><em>자동이체 미입금 진행방법</em>
+							<ul class="txt-mark2">
+								<li>다음 이체일에 보험료가 입금될 수 있도록 고객에게 알려주세요.<br>자동이체의 경우 5일마다 재출금처리가 됩니다.</li>
+								<li>2달보험료를 납부 하지 않으면 계약이 해지상태로 변경되어 보장을 받을수가 없어요.</li>
+								<li>자동이체 실패사유는 [계약조회-이체내역조회] 에서 확인할수 있어요 (계약상세 화면의 좌측 하단 더보기 버튼 탭>이체내역조회)</li>
+								<li>수금관리 화면에서 계약자가 직접 보험료를 납부 할 수 있는 '셀프수납알림톡'을 발송하세요. 단, 발송한 당일만 납부가 가능합니다.</li>
+							</ul>
+						</dd>
+					</dl>
+					<!-- //case7 -->
+				</section>
+			</div>
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>
