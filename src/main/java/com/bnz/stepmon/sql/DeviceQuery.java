@@ -62,7 +62,8 @@ public interface DeviceQuery {
             SET is_notification_enabled = #{isNotificationEnabled},
                 start_minutes = #{startMinutes},
                 end_minutes = #{endMinutes},
-                time_zone = #{timeZone}
+                time_zone = #{timeZone},
+                last_seen_at = UTC_TIMESTAMP(3)
             WHERE install_id = #{installId}
             """)
     int updateSettings(@Param("installId") String installId,
@@ -74,7 +75,8 @@ public interface DeviceQuery {
     // ✅ 푸시 발송 성공 시 last_push_at 갱신
     @Update("""
             UPDATE device_registration
-            SET last_push_at = UTC_TIMESTAMP(3)
+            SET last_push_at = UTC_TIMESTAMP(3),
+            push_fail_count = 0
             WHERE device_token = #{deviceToken}
               AND is_active = 1
             """)
@@ -93,7 +95,8 @@ public interface DeviceQuery {
     @Update("""
             <script>
             UPDATE device_registration
-            SET last_push_at = UTC_TIMESTAMP(3)
+            SET last_push_at = UTC_TIMESTAMP(3),
+            push_fail_count = 0
             WHERE is_active = 1
               AND device_token IN
               <foreach item='token' collection='tokens' open='(' separator=',' close=')'>
@@ -116,6 +119,33 @@ public interface DeviceQuery {
             </script>
             """)
     int incrementPushFailCountBatch(@Param("tokens") List<String> tokens);
+
+    // ✅ BadDeviceToken / Unregistered 토큰 즉시 비활성 처리 (벌크)
+    @Update("""
+            <script>
+            UPDATE device_registration
+            SET is_active = 0,
+                deactivated_at = UTC_TIMESTAMP(3),
+                deactivated_reason = 'BAD_TOKEN'
+            WHERE is_active = 1
+              AND device_token IN
+              <foreach item='token' collection='tokens' open='(' separator=',' close=')'>
+                  #{token}
+              </foreach>
+            </script>
+            """)
+    int deactivateByTokensBatch(@Param("tokens") List<String> tokens);
+
+    // ✅ 90일 이상 미접속 기기 일괄 비활성 처리 (배치 스케줄러용)
+    @Update("""
+            UPDATE device_registration
+            SET is_active = 0,
+                deactivated_at = UTC_TIMESTAMP(3),
+                deactivated_reason = 'INACTIVE'
+            WHERE is_active = 1
+              AND last_seen_at < UTC_TIMESTAMP(3) - INTERVAL 90 DAY
+            """)
+    int deactivateInactiveDevices();
 
     // ✅ 검색 조회
     @Select("""

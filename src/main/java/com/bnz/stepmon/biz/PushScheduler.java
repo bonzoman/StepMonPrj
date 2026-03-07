@@ -30,12 +30,12 @@ public class PushScheduler {
     private volatile Instant lastRunTime = null;
 
     /**
-     * 20분 후 매 1분마다 실행
+     * 5분 후 매 5분마다 실행
      * - 발송 대상 기기 조회 후 Silent Push 전송
      * - 성공: last_push_at 갱신
      * - 실패: push_fail_count 증가
      */
-    @Scheduled(initialDelayString = "PT20M", fixedDelayString = "PT1M")
+    @Scheduled(initialDelayString = "PT5M", fixedDelayString = "PT5M")
     public void schedulePush() {
         // 이미 실행 중이면 스킵 (중복 실행 방어)
         if (!isRunning.compareAndSet(false, true)) {
@@ -68,11 +68,11 @@ public class PushScheduler {
     }
 
     /**
-     * 스케줄러 헬스 체크 및 자동 복구 (5분마다 실행)
-     * 만약 메인 스케줄러(schedulePush)가 3분 이상 실행되지 않았다면
+     * 스케줄러 헬스 체크 및 자동 복구 (10분 후 5분마다 실행)
+     * 만약 메인 스케줄러(schedulePush)가 10분 이상 실행되지 않았다면
      * 런타임 예외 등으로 스레드가 멈춘 것으로 간주하고 강제로 일깨움
      */
-    @Scheduled(initialDelayString = "PT25M", fixedDelayString = "PT5M")
+    @Scheduled(initialDelayString = "PT10M", fixedDelayString = "PT5M")
     public void healthCheckAndRecover() {
         // 메인 스케줄러가 한 번도 실행되지 않았다면 경보를 울리지 않음
         if (lastRunTime == null) {
@@ -82,7 +82,7 @@ public class PushScheduler {
 
         long minutesSinceLastRun = ChronoUnit.MINUTES.between(lastRunTime, Instant.now());
 
-        if (minutesSinceLastRun >= 3) {
+        if (minutesSinceLastRun >= 10) {
             log.error("[PushScheduler-Monitor] 🚨 메인 스케줄러가 {}분 동안 실행되지 않았습니다! 강제 복구(수동 실행)를 시도합니다.",
                     minutesSinceLastRun);
             myTelegramBot
@@ -90,6 +90,24 @@ public class PushScheduler {
             schedulePush();
         } else {
             log.debug("[PushScheduler-Monitor] ✅ 메인 스케줄러 정상 동작 중 (마지막 실행: {}분 전)", minutesSinceLastRun);
+        }
+    }
+
+    /**
+     * 매일 새벽 3시(UTC) - 90일 이상 미접속 기기 일괄 비활성 처리
+     */
+    @Scheduled(cron = "0 0 3 * * *")
+    public void dailyCleanup() {
+        log.info("[DailyCleanup] 미접속 기기 비활성 처리 시작");
+        try {
+            int count = apnsService.deactivateInactiveDevices();
+            log.info("[DailyCleanup] 비활성 처리 완료: {}건 (90일 이상 미접속)", count);
+            if (count > 0) {
+                myTelegramBot.send("🧹 [DailyCleanup] 미접속 기기 " + count + "건을 비활성 처리했습니다. (기준: 90일)");
+            }
+        } catch (Exception e) {
+            log.error("[DailyCleanup] 미접속 기기 비활성 처리 오류", e);
+            myTelegramBot.send("🚨 [DailyCleanup] 미접속 기기 비활성 처리 오류: " + getErrorMessage(e));
         }
     }
 

@@ -61,9 +61,20 @@ public class ApnsService {
     }
 
     /**
+     * 90일 이상 미접속 기기 비활성 처리 (DailyCleanup 배치용)
+     */
+    public int deactivateInactiveDevices() {
+        return deviceQuery.deactivateInactiveDevices();
+    }
+
+    /**
      * 배치용 - 발송 대상 전체에 Silent Push 발송
      * push_fail_count < 5 인 is_active=1, is_notification_enabled=1 기기 대상
      */
+    // APNs 즉시 비활성 처리 대상 rejectionReason
+    private static final java.util.Set<String> BAD_TOKEN_REASONS =
+            java.util.Set.of("BadDeviceToken", "Unregistered");
+
     public void sendSilentToAll(Map<String, Object> customData) {
         List<PushTargetDto> targets = deviceQuery.findPushTargets();
         log.info("[배치] 발송 대상 {}건", targets.size());
@@ -79,13 +90,13 @@ public class ApnsService {
                     .handle((res, ex) -> {
                         if (ex != null) {
                             log.error("[배치] APNs 오류 installId={}", target.installId(), ex);
-                            return new PushResult(target.deviceToken(), false);
+                            return new PushResult(target.deviceToken(), false, null);
                         } else if (res.isAccepted()) {
-                            return new PushResult(target.deviceToken(), true);
+                            return new PushResult(target.deviceToken(), true, null);
                         } else {
                             String reason = res.getRejectionReason().orElse("unknown");
                             log.warn("[배치] 실패 installId={} reason={}", target.installId(), reason);
-                            return new PushResult(target.deviceToken(), false);
+                            return new PushResult(target.deviceToken(), false, reason);
                         }
                     });
             futures.add(future);
@@ -106,9 +117,9 @@ public class ApnsService {
                 .filter(CompletableFuture::isDone)
                 .map(f -> {
                     try {
-                        return f.getNow(new PushResult(null, false));
+                        return f.getNow(new PushResult(null, false, null));
                     } catch (Exception e) {
-                        return new PushResult(null, false);
+                        return new PushResult(null, false, null);
                     }
                 })
                 .filter(r -> r.token() != null)
@@ -119,14 +130,22 @@ public class ApnsService {
                 .map(PushResult::token)
                 .toList();
 
-        List<String> failTokens = results.stream()
-                .filter(r -> !r.success())
+        // BadDeviceToken / Unregistered → 즉시 비활성 처리
+        List<String> badTokens = results.stream()
+                .filter(r -> !r.success() && BAD_TOKEN_REASONS.contains(r.reason()))
                 .map(PushResult::token)
                 .toList();
 
-        log.info("[배치] 응답 수신 완료. 성공: {}건, 실패: {}건", successTokens.size(), failTokens.size());
+        // 일반 실패 (네트워크 오류 등) → fail_count 누적
+        List<String> failTokens = results.stream()
+                .filter(r -> !r.success() && !BAD_TOKEN_REASONS.contains(r.reason()))
+                .map(PushResult::token)
+                .toList();
 
-        // DB 벌크 업데이트 (IN 쿼리가 너무 길어지는 것을 방지하기 위해 chunkSize 1000개 단위 분할)
+        log.info("[배치] 응답 수신 완료. 성공: {}건, 불량토큰: {}건, 일반실패: {}건",
+                successTokens.size(), badTokens.size(), failTokens.size());
+
+        // DB 벌크 업데이트 (IN 쿼리가 너무 길어지는 것을 방지하기 위해 1000개 단위 분할)
         final int batchSize = 1000;
 
         for (int i = 0; i < successTokens.size(); i += batchSize) {
@@ -134,12 +153,20 @@ public class ApnsService {
             deviceQuery.updateLastPushAtBatch(batch);
         }
 
+        // 불량 토큰 즉시 비활성 (BAD_TOKEN)
+        for (int i = 0; i < badTokens.size(); i += batchSize) {
+            List<String> batch = badTokens.subList(i, Math.min(badTokens.size(), i + batchSize));
+            deviceQuery.deactivateByTokensBatch(batch);
+            log.info("[배치] BAD_TOKEN 비활성 처리 {}건", batch.size());
+        }
+
+        // 일반 실패 → fail_count 증가
         for (int i = 0; i < failTokens.size(); i += batchSize) {
             List<String> batch = failTokens.subList(i, Math.min(failTokens.size(), i + batchSize));
             deviceQuery.incrementPushFailCountBatch(batch);
         }
     }
 
-    private record PushResult(String token, boolean success) {
+    private record PushResult(String token, boolean success, String reason) {
     }
 }
