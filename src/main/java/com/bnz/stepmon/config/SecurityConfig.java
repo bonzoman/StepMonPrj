@@ -35,6 +35,16 @@ public class SecurityConfig {
                 )
                 .headers(headers -> headers
                         .frameOptions(frame -> frame.sameOrigin()) // H2 콘솔이나 iFrame 사용 대비
+                )
+                .exceptionHandling(exceptions -> exceptions
+                        .authenticationEntryPoint((request, response, authException) -> {
+                            // HTMX 요청인 경우 전체 페이지 리다이렉트를 위해 HX-Redirect 헤더 사용
+                            if ("true".equals(request.getHeader("HX-Request"))) {
+                                response.setHeader("HX-Redirect", "/login");
+                            } else {
+                                response.sendRedirect("/login");
+                            }
+                        })
                 );
 
         return http.build();
