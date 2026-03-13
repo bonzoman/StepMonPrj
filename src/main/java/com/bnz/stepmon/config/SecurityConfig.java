@@ -21,9 +21,9 @@ public class SecurityConfig {
                         .requestMatchers("/", "/login", "/css/**", "/js/**", "/images/**", "/webjars/**", "/favicon.ico").permitAll()
                         .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html", "/health").permitAll() // Swagger 허용
                         .requestMatchers("/app-ads.txt").permitAll() // admob 광고
+                        .requestMatchers("/stepmon/app-ads.txt").permitAll() // admob 광고
                         .requestMatchers("/api/**").permitAll() // Xcode(iOS) API 요청 허용
-//                        .anyRequest().authenticated() // 그 외 모든 요청은 인증 필요
-                        .anyRequest().permitAll() // 그 외 모든 요청은 인증 필요
+                        .anyRequest().authenticated() // 그 외 모든 요청은 인증 필요
                 )
                 .formLogin(form -> form
                         .loginPage("/login")
