@@ -10,6 +10,13 @@ spring:
     url: jdbc:mysql://mysql-db:3306/g2mDB?serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
     username: g2m
     # password는 CI 환경변수(SPRING_DATASOURCE_PASSWORD)로 주입됨
+    # 커넥션 풀 (HikariCP) 설정 (선택)
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      connection-timeout: 20000
+      max-lifetime: 1800000
 
 mybatis:
   mapper-locations: classpath:mapper/*Query.xml

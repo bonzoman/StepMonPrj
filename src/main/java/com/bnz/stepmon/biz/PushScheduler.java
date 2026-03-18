@@ -1,5 +1,6 @@
 package com.bnz.stepmon.biz;
 
+import com.bnz.stepmon.biz.spec.MyTelegramBot;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -21,7 +22,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class PushScheduler {
 
     private final ApnsService apnsService;
-    private final com.bnz.stepmon.biz.spec.MyTelegramBot myTelegramBot;
+    private final MyTelegramBot myTelegramBot;
     // ✅ 동시 실행 방지 플래그
     private final AtomicBoolean isRunning = new AtomicBoolean(false);
     // ✅ 최초 1회 실행 확인용 플래그

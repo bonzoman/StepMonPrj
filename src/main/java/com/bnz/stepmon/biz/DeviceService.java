@@ -2,6 +2,7 @@ package com.bnz.stepmon.biz;
 
 import com.bnz.stepmon.biz.spec.DeviceRegisterReqDto;
 import com.bnz.stepmon.biz.spec.DeviceSettingsReqDto;
+import com.bnz.stepmon.biz.spec.MyTelegramBot;
 import com.bnz.stepmon.sql.DeviceQuery;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -10,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 public class DeviceService {
+    private final MyTelegramBot myTelegramBot;
     private final DeviceQuery deviceQuery;
 
     @Transactional
@@ -18,6 +20,7 @@ public class DeviceService {
 
         // ✅ 1) 같은 토큰이 다른 install_id에 있으면 비활성 처리
         deviceQuery.deactivateSameTokenOtherInstall(req.deviceToken(), req.installId());
+
 
         // ✅ 2) 내 install_id 행 업서트(활성화 포함)
         deviceQuery.upsert(
@@ -28,6 +31,9 @@ public class DeviceService {
                 req.endMinutes(),
                 req.timeZone(),
                 appVersion);
+
+        myTelegramBot.send("New User : " + req.timeZone());
+
     }
 
     @Transactional
