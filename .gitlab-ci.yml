@@ -24,4 +24,24 @@ deploy-job:
       -v /home/ubuntu/stepmon/keys:/keys
       --restart always
       stepmon-api
+
+    # ─────────────────────────────────────────────────────────────
+    # 디스크 자동 정리
+    # 배포마다 이전 버전 이미지 + 오래된 빌드 캐시가 쌓여서 주기적으로
+    # 수동 `docker system prune` 하지 않으면 디스크가 수십 GB씩 누적됨.
+    # 아래 2개만 실행 — 현재 실행 중인 컨테이너/이미지는 절대 건드리지 않음.
+    # 참고: stimicreator-api 쪽과 Docker daemon을 공유하므로
+    # 어느 쪽이든 배포가 돌면 둘 다 정리됨 (중복 실행은 무해).
+    # ─────────────────────────────────────────────────────────────
+
+    # 1) dangling 이미지 제거
+    #    - 교체된 이전 `stepmon-api:latest` 이미지가 <none>:<none>으로 남음
+    #    - -f : 확인 프롬프트 생략
+    - docker image prune -f
+
+    # 2) 72시간 초과된 빌드 캐시 제거
+    #    - 레이어 캐시는 보존해서 다음 빌드 속도는 유지
+    #    - 하지만 3일 이상 안 쓰인 캐시는 회수
+    #    - `|| true` : prune 실패해도 배포는 성공으로 유지 (선택적 정리)
+    - docker builder prune -f --filter until=72h || true
   when: manual # 수동배포: GitLab의 [Build > Pipelines] 옆에 재생(▶️) 버튼 클릭
