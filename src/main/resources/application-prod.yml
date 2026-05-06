@@ -28,9 +28,9 @@ mybatis:
 telegram:
   bot:
     token: ${TELEGRAM_BOT_TOKEN}
-    username: bzNotiBot
+    username: StimiStepmonAdminBot
   chat:
-    # @stepmonxyz 채널
+    # stepmonxyz 채널 (비공개 전환)
     id: -1003320387761
 
 apns:
